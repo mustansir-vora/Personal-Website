@@ -16,7 +16,7 @@
             --sky-color-bottom: #f9a602;
             --sun-color: #f9a602;
             --text-color: #000000;
-            --project-card-text-color: #000000; /* New variable for project card text */
+            
             --sun-x: 0%;
         --sun-y: 50%;
         --sun-glare-opacity: 0;
@@ -73,11 +73,28 @@
             cursor: pointer;
         }
 
+        /* Custom scrollbar for modal */
+        #project-modal > div::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        #project-modal > div::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #project-modal > div::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 5px;
+        }
+
+        #project-modal > div::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
         /* Project Card Text Color Fix */
         .project-card h3,
         .project-card p {
-            color: var(--project-card-text-color); /* Use new variable */
-            transition: color 0.5s ease; /* Smooth transition for project card text */
+            color: var(--text-color);
         }
     </style>
 </head>
@@ -138,15 +155,15 @@
 
                 <h3 class="text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Professional Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Rogers and Shaw Communications Inc." data-project-description="Architected and developed core IVR components leveraging the Microsoft Bot Framework (Copilot Studio LLM), resulting in seamless IVR integration and more natural, Al-driven user interactions.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Rogers and Shaw Communications Inc." data-project-description="This project focused on the end-to-end architecture, development, and deployment of a highly integrated and intelligent Interactive Voice Response (IVR) system, leveraging the Microsoft Cloud ecosystem, particularly Microsoft Copilot Studio. The core objective was to create a seamless, data-driven, and natural language-enabled IVR experience for users." data-project-detailed-description="<ul class='list-disc list-inside'><li class='mb-2'><strong>Core IVR System Architecture and Development with Microsoft Copilot Studio:</strong> <ul class='list-none list-inside ml-12'><li class='mb-2'>The foundational element of the project involved architecting and developing the core IVR components directly within Microsoft Copilot Studio. This encompassed the design and implementation of conversational flows, topic management, and intent recognition, forming the backbone of the interactive voice experience.</li><li class='mb-2'>To ensure seamless integration of the IVR with various enterprise systems and data sources, significant effort was dedicated to designing and building custom connectors. These connectors acted as bridges, allowing Copilot Studio to communicate effectively with external applications and databases.</li><li class='mb-2'>Complex business logic and data orchestration were implemented using Power Automate flows. These flows were crucial for routing calls, retrieving and updating information, triggering actions in other systems, and managing the overall call journey based on user input.</li><li class='mb-2'>Power Apps were developed to provide intuitive interfaces for managing IVR configurations, data, and potentially for agents to interact with call-related information. This likely included custom UIs for content management or real-time monitoring.</li><li class='mb-2'>Azure Trigger Functions (serverless compute) were strategically utilized to execute specific pieces of code in response to events within the IVR or external systems. This enabled highly scalable and event-driven processing, such as data validation or triggering external APIs based on IVR interactions.</li><li class='mb-2'>Azure SQL DB connectors were established to facilitate robust data storage and retrieval for the IVR. This involved designing database schemas, managing data persistence for call logs, user preferences, and potentially dynamic content displayed or used within the IVR.</li></ul></li><li class='mb-2'><strong>Robust API Integrations using Azure HTTP Trigger Functions:</strong><ul class='list-none list-inside ml-12'><li class='mb-2'>To ensure the IVR system could interact with a wide array of internal and external services, robust API integrations were built using Azure HTTP Trigger Functions. These functions acted as secure and scalable endpoints, enabling the IVR to send and receive data from various systems.</li><li class='mb-2'>This involved developing the necessary logic within the functions to transform data, handle authentication, and manage error conditions for seamless communication between the IVR and diverse application programming interfaces (APIs). These integrations were critical for functionalities like retrieving customer information, processing transactions, or accessing knowledge bases.</li></ul></li><li class='mb-2'><strong>Automated IVR Reporting and Analytics:</strong><ul class='list-none list-inside ml-12'><li class='mb-2'>A significant focus was placed on enabling data-driven insights into IVR performance and user behavior. This was achieved by implementing custom Power Automate trigger flows designed to extract and process IVR data. These flows likely captured metrics such as call volume, resolution rates, user journey paths, and common user intents.</li><li class='mb-2'>The processed data was then fed into Power BI dashboards, providing a comprehensive and visually rich representation of IVR performance. These dashboards enabled stakeholders to monitor key performance indicators (KPIs), identify trends, and make informed decisions for continuous improvement of the IVR system. This automation significantly reduced manual effort in data collection and analysis.</li></ul></li><li class='mb-2'><strong>Natural Language Communication and Response Accuracy:</strong><ul class='list-disc list-inside ml-12'><li class='mb-2'>A key innovation involved developing custom logic within the Microsoft Cloud environment specifically to enhance natural language communication between the IVR and users. This went beyond standard intent recognition and likely involved sophisticated techniques to interpret complex user queries and nuances in language.</li></ul></li></ul>
                         <h3 class="text-xl font-bold">Rogers and Shaw Communications Inc.</h3>
                         <p class="mt-2">Architected and developed core IVR components leveraging the Microsoft Bot Framework (Copilot Studio LLM), resulting in seamless IVR integration and more natural, Al-driven user interactions.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Farmers Insurance Group" data-project-description="Designed and developed a conversational Al solution for the CLAIMS IVR using Google's Dialogflow CX to enhance speech recognition and natural language processing.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Farmers Insurance Group" data-project-description="Designed and developed a conversational Al solution for the CLAIMS IVR using Google's Dialogflow CX to enhance speech recognition and natural language processing." data-project-detailed-description="You can write a more detailed description of your work on the Farmers Insurance Group project here.">
                         <h3 class="text-xl font-bold">Farmers Insurance Group</h3>
                         <p class="mt-2">Designed and developed a conversational Al solution for the CLAIMS IVR using Google's Dialogflow CX to enhance speech recognition and natural language processing.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="ADCB Bank" data-project-description="Contributed to the design of a high-performance IVR system using Genesys PureCloud for front-end orchestration and AWS for back-end integration.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="ADCB Bank" data-project-description="Contributed to the design of a high-performance IVR system using Genesys PureCloud for front-end orchestration and AWS for back-end integration." data-project-detailed-description="You can write a more detailed description of your work on the ADCB Bank project here.">
                         <h3 class="text-xl font-bold">ADCB Bank</h3>
                         <p class="mt-2">Contributed to the design of a high-performance IVR system using Genesys PureCloud for front-end orchestration and AWS for back-end integration.</p>
                     </div>
@@ -154,11 +171,11 @@
 
                 <h3 class="text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Personal Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 1 (Placeholder)" data-project-description="Description of your personal project 1. You can add details about the technologies used and what you learned.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 1 (Placeholder)" data-project-description="Description of your personal project 1. You can add details about the technologies used and what you learned." data-project-detailed-description="You can write a more detailed description of your work on Project Title 1 (Placeholder) here.">
                         <h3 class="text-xl font-bold">Project Title 1 (Placeholder)</h3>
                         <p class="mt-2">Description of your personal project 1. You can add details about the technologies used and what you learned.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 2 (Placeholder)" data-project-description="Description of your personal project 2. Feel free to add more projects as needed.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 2 (Placeholder)" data-project-description="Description of your personal project 2. Feel free to add more projects as needed." data-project-detailed-description="You can write a more detailed description of your work on Project Title 2 (Placeholder) here.">
                         <h3 class="text-xl font-bold">Project Title 2 (Placeholder)</h3>
                         <p class="mt-2">Description of your personal project 2. Feel free to add more projects as needed.</p>
                     </div>
@@ -194,10 +211,12 @@
 
     <!-- Project Modal -->
     <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="bg-white/10 backdrop-blur-md p-8 rounded-xl max-w-3xl w-full mx-4 relative">
+        <div class="bg-white/10 backdrop-blur-md p-8 rounded-xl max-w-5xl w-full mx-4 relative">
             <button id="close-modal" class="absolute top-4 right-4 text-white text-2xl font-bold">&times;</button>
             <h3 id="modal-project-title" class="text-3xl font-bold mb-4"></h3>
             <p id="modal-project-description" class="text-lg"></p>
+            <h4 class="text-xl font-bold mt-6 mb-2">Key Contributions:</h4>
+            <p id="modal-project-detailed-description" class="text-lg"></p>
         </div>
     </div>
 
@@ -265,7 +284,7 @@
                         skyTop: interpolateColor(hexToRgb(colors.sunrise.skyTop), hexToRgb(colors.day.skyTop), factor),
                         skyBottom: interpolateColor(hexToRgb(colors.sunrise.skyBottom), hexToRgb(colors.day.skyBottom), factor),
                         sun: interpolateColor(hexToRgb(colors.sunrise.sun), hexToRgb(colors.day.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.sunrise.text), hexToRgb(colors.day.text), globalTextFactor)
+                        text: interpolateColor(hexToRgb(colors.sunrise.text), hexToRg(colors.day.text), globalTextFactor)
                     };
                 } else if (scrollProgress < 0.5) {
                     factor = (scrollProgress - 0.25) / 0.25;
@@ -309,19 +328,7 @@
                 document.documentElement.style.setProperty('--sun-y', `${sunY}%`);
                 document.documentElement.style.setProperty('--sun-glare-opacity', glareOpacity);
 
-                // Project Card Text Color Transition
-                const projectCardTextTransitionStart = 0.5; // Start project card text transition at 50% scroll
-                const projectCardTextTransitionEnd = 0.8; // End project card text transition at 80% scroll
-                let projectCardTextFactor = 0;
-
-                if (scrollProgress >= projectCardTextTransitionStart && scrollProgress <= projectCardTextTransitionEnd) {
-                    projectCardTextFactor = (scrollProgress - projectCardTextTransitionStart) / (projectCardTextTransitionEnd - projectCardTextTransitionStart);
-                } else if (scrollProgress > projectCardTextTransitionEnd) {
-                    projectCardTextFactor = 1; // Text is fully white
-                } else {
-                    projectCardTextFactor = 0; // Text is fully black
-                }
-                document.documentElement.style.setProperty('--project-card-text-color', interpolateColor(hexToRgb(colors.sunrise.text), hexToRgb(colors.night.text), projectCardTextFactor));
+                
             });
 
             document.getElementById('learn-more-btn').addEventListener('click', function(e) {
@@ -345,15 +352,18 @@
             const closeModalBtn = document.getElementById('close-modal');
             const modalProjectTitle = document.getElementById('modal-project-title');
             const modalProjectDescription = document.getElementById('modal-project-description');
+            const modalProjectDetailedDescription = document.getElementById('modal-project-detailed-description');
             const projectCards = document.querySelectorAll('.project-card');
 
             projectCards.forEach(card => {
                 card.addEventListener('click', () => {
                     const title = card.dataset.projectTitle;
                     const description = card.dataset.projectDescription;
+                    const detailedDescription = card.dataset.projectDetailedDescription;
 
                     modalProjectTitle.textContent = title;
                     modalProjectDescription.textContent = description;
+                    modalProjectDetailedDescription.innerHTML = detailedDescription;
                     projectModal.classList.remove('hidden');
                 });
             });
