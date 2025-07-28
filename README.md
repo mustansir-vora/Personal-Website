@@ -24,7 +24,7 @@ This is a single-page, responsive portfolio website designed to showcase my skil
 ## How to Use
 
 1.  Clone the repository:
-	git clone https://github.com/your-username/your-repository.git
+	git clone (https://github.com/mustansir-vora/Personal-Website.git)
 
 2.  Open `index.html` in your web browser to view the portfolio.
 
