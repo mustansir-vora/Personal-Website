@@ -16,6 +16,7 @@
             --sky-color-bottom: #f9a602;
             --sun-color: #f9a602;
             --text-color: #000000;
+            --project-card-text-color: #000000; /* New variable for project card text */
             --sun-x: 0%;
         --sun-y: 50%;
         --sun-glare-opacity: 0;
@@ -24,7 +25,7 @@
             font-family: 'Google Sans Text', sans-serif;
             background: linear-gradient(to bottom, var(--sky-color-top), var(--sky-color-bottom));
             color: var(--text-color);
-            transition: background 1.5s ease, color 1.5s ease;
+            transition: background 1.5s ease, color 0.5s ease;
         }
         #sun-moon {
             position: fixed;
@@ -71,15 +72,22 @@
         #close-modal {
             cursor: pointer;
         }
+
+        /* Project Card Text Color Fix */
+        .project-card h3,
+        .project-card p {
+            color: var(--project-card-text-color); /* Use new variable */
+            transition: color 0.5s ease; /* Smooth transition for project card text */
+        }
     </style>
 </head>
 <body class="bg-gray-900">
 
     <header class="fixed top-0 p-4 z-30 w-full md:right-0 md:w-auto">
         <nav class="flex flex-wrap justify-center md:justify-end">
-            <a href="#about" class="nav-link font-bold bg-white/20 backdrop-blur-xl px-4 py-2 rounded-full hover:bg-white/30 transform translate-z-0 inline-block">About Me</a> 
-            <a href="#portfolio" class="nav-link font-bold bg-white/20 backdrop-blur-xl px-4 py-2 rounded-full hover:bg-white/30 transform translate-z-0 inline-block">My Work</a>
-            <a href="#contact" class="nav-link font-bold bg-white/20 backdrop-blur-xl px-4 py-2 rounded-full hover:bg-white/30 transform translate-z-0 inline-block">Get in Touch</a> 
+            <a href="#about" class="nav-link font-bold bg-white/50 backdrop-blur-xl px-4 py-2 rounded-full hover:bg-white/30 transform translate-z-0 inline-block">About Me</a> 
+            <a href="#portfolio" class="nav-link font-bold bg-white/50 backdrop-blur-xl px-4 py-2 rounded-full hover:bg-white/30 transform translate-z-0 inline-block">My Work</a>
+            <a href="#contact" class="nav-link font-bold bg-white/50 backdrop-blur-xl px-4 py-2 rounded-full hover:bg-white/30 transform translate-z-0 inline-block">Get in Touch</a> 
         </nav>
     </header>
 
@@ -89,8 +97,8 @@
         <section id="home" class="h-screen flex items-center justify-center text-center">
             <div>
                 <h1 class="text-5xl md:text-7xl font-bold">Hello, I'm Mustansir Vora</h1>
-                <p class="text-xl md:text-2xl mt-4">A Software Developer</p>
-                <a href="#about" id="learn-more-btn" class="mt-8 inline-block bg-white/20 backdrop-blur-sm text-white font-bold py-3 px-6 rounded-xl hover:bg-white/30 transition-colors">
+                <p class="text-xl md:text-4xl mt-4 font-bold">A Software Developer</p>
+                <a href="#about" id="learn-more-btn" class="mt-8 inline-block bg-white/50 backdrop-blur-sm text-black font-bold py-3 px-6 rounded-full hover:bg-white/30 transition-colors">
                     Learn More
                 </a>
             </div>
@@ -100,22 +108,22 @@
             <div class="text-center sticky top-16 z-20">
             <h2 class="text-6xl font-bold mb-6 py-4 bg-white/20 backdrop-blur-md px-4 rounded-full inline-block mx-auto">About Me</h2>
             </div>
-            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-xl mb-8">
+            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
                 <p class="text-lg">
                     My journey into tech began not with a clear path, but with a formidable challenge. The initial months were a crucible, forging my sense of adaptability and a passion for rapid, continuous learning. It taught me that a person's true measure isn't just their knowledge, but their ability to acquire and master new skills efficiently. This foundation has been my launchpad, enabling me to turn challenges into opportunities and lead complex, high-stakes client integrations.
                 </p>
             </div>
-            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-xl mb-8">
+            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
                 <p class="text-lg">
                     I'm fluent in core backend technologies like Java, Spring Boot, and Python, comfortable on the frontend with React.js, and adept at building systems with RESTful APIs, SQL, and NoSQL. I confidently navigate multi-cloud environments, leveraging AWS, Azure, and Google Cloud Platform to architect robust solutions. This comprehensive skill set allows me to lead end-to-end development of sophisticated software systems.
                 </p>
             </div>
-            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-xl mb-8">
+            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
                 <p class="text-lg">
                     While versatile, my true passion lies at the frontier of Artificial Intelligence. I'm captivated by AI's potential to create intuitive human-computer interactions. I specialize in designing and deploying advanced conversational AI systems using platforms like Google Dialogflow (ES/CX), Genesys, and Microsoft Copilot Studio. My work goes beyond simple chatbots/IVR systems; I have engineered complex CX solutions incorporating Large Language Models (LLMs), Retrieval Augmented Generation (RAG) patterns, and Voice Biometrics for truly context-aware and personalized user experiences. I approach every project with personal ownership, upholding my work to high standards.
                 </p>
             </div>
-            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-xl">
+            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
                 <p class="text-lg">
                     Looking ahead, my ambitions extend beyond mere financial success; it is to establish a thriving career that operates with some level of autonomy, giving me the freedom to pursue my passion for global travel and adrenaline-fueled adventures. Ultimately, I seek a future where professional success serves as a means to an end, enabling me to a life rich in experiences, not just professional commitments/obligations. This chase for a balance—where professional achievement enables personal exploration—is what I would define as my ultimate goal.
                 </p>
@@ -130,15 +138,15 @@
 
                 <h3 class="text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Professional Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Rogers and Shaw Communications Inc." data-project-description="Architected and developed core IVR components leveraging the Microsoft Bot Framework (Copilot Studio LLM), resulting in seamless IVR integration and more natural, Al-driven user interactions.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Rogers and Shaw Communications Inc." data-project-description="Architected and developed core IVR components leveraging the Microsoft Bot Framework (Copilot Studio LLM), resulting in seamless IVR integration and more natural, Al-driven user interactions.">
                         <h3 class="text-xl font-bold">Rogers and Shaw Communications Inc.</h3>
                         <p class="mt-2">Architected and developed core IVR components leveraging the Microsoft Bot Framework (Copilot Studio LLM), resulting in seamless IVR integration and more natural, Al-driven user interactions.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Farmers Insurance Group" data-project-description="Designed and developed a conversational Al solution for the CLAIMS IVR using Google's Dialogflow CX to enhance speech recognition and natural language processing.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Farmers Insurance Group" data-project-description="Designed and developed a conversational Al solution for the CLAIMS IVR using Google's Dialogflow CX to enhance speech recognition and natural language processing.">
                         <h3 class="text-xl font-bold">Farmers Insurance Group</h3>
                         <p class="mt-2">Designed and developed a conversational Al solution for the CLAIMS IVR using Google's Dialogflow CX to enhance speech recognition and natural language processing.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="ADCB Bank" data-project-description="Contributed to the design of a high-performance IVR system using Genesys PureCloud for front-end orchestration and AWS for back-end integration.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="ADCB Bank" data-project-description="Contributed to the design of a high-performance IVR system using Genesys PureCloud for front-end orchestration and AWS for back-end integration.">
                         <h3 class="text-xl font-bold">ADCB Bank</h3>
                         <p class="mt-2">Contributed to the design of a high-performance IVR system using Genesys PureCloud for front-end orchestration and AWS for back-end integration.</p>
                     </div>
@@ -146,11 +154,11 @@
 
                 <h3 class="text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Personal Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 1 (Placeholder)" data-project-description="Description of your personal project 1. You can add details about the technologies used and what you learned.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 1 (Placeholder)" data-project-description="Description of your personal project 1. You can add details about the technologies used and what you learned.">
                         <h3 class="text-xl font-bold">Project Title 1 (Placeholder)</h3>
                         <p class="mt-2">Description of your personal project 1. You can add details about the technologies used and what you learned.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 2 (Placeholder)" data-project-description="Description of your personal project 2. Feel free to add more projects as needed.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 2 (Placeholder)" data-project-description="Description of your personal project 2. Feel free to add more projects as needed.">
                         <h3 class="text-xl font-bold">Project Title 2 (Placeholder)</h3>
                         <p class="mt-2">Description of your personal project 2. Feel free to add more projects as needed.</p>
                     </div>
@@ -239,6 +247,17 @@
 
                 let currentColors;
                 let factor;
+                const textTransitionStart = 0.60; // Start text transition at 60% of total scroll
+                const textTransitionEnd = 0.65; // End text transition at 65% of total scroll
+
+                let globalTextFactor = 0;
+                if (scrollProgress >= textTransitionStart && scrollProgress <= textTransitionEnd) {
+                    globalTextFactor = (scrollProgress - textTransitionStart) / (textTransitionEnd - textTransitionStart);
+                } else if (scrollProgress > textTransitionEnd) {
+                    globalTextFactor = 1; // Text is fully white
+                } else {
+                    globalTextFactor = 0; // Text is fully black
+                }
 
                 if (scrollProgress < 0.25) {
                     factor = scrollProgress / 0.25;
@@ -246,7 +265,7 @@
                         skyTop: interpolateColor(hexToRgb(colors.sunrise.skyTop), hexToRgb(colors.day.skyTop), factor),
                         skyBottom: interpolateColor(hexToRgb(colors.sunrise.skyBottom), hexToRgb(colors.day.skyBottom), factor),
                         sun: interpolateColor(hexToRgb(colors.sunrise.sun), hexToRgb(colors.day.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.sunrise.text), hexToRgb(colors.day.text), factor)
+                        text: interpolateColor(hexToRgb(colors.sunrise.text), hexToRgb(colors.day.text), globalTextFactor)
                     };
                 } else if (scrollProgress < 0.5) {
                     factor = (scrollProgress - 0.25) / 0.25;
@@ -254,28 +273,16 @@
                         skyTop: interpolateColor(hexToRgb(colors.day.skyTop), hexToRgb(colors.sunset.skyTop), factor),
                         skyBottom: interpolateColor(hexToRgb(colors.day.skyBottom), hexToRgb(colors.sunset.skyBottom), factor),
                         sun: interpolateColor(hexToRgb(colors.day.sun), hexToRgb(colors.sunset.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.day.text), hexToRgb(colors.sunset.text), factor)
+                        text: interpolateColor(hexToRgb(colors.day.text), hexToRgb(colors.sunset.text), globalTextFactor)
                     };
                 } else if (scrollProgress < 0.75) {
                     factor = (scrollProgress - 0.5) / 0.25; // Factor for sky and sun
-
-                    let textFactor = 0;
-                    const textTransitionStart = 0.6; // Start text transition at 60% of total scroll
-                    const textTransitionEnd = 0.605; // End text transition at 60.5% of total scroll (very fast)
-
-                    if (scrollProgress >= textTransitionStart && scrollProgress <= textTransitionEnd) {
-                        textFactor = (scrollProgress - textTransitionStart) / (textTransitionEnd - textTransitionStart);
-                    } else if (scrollProgress > textTransitionEnd) {
-                        textFactor = 1; // Text is fully white
-                    } else {
-                        textFactor = 0; // Text is fully black
-                    }
 
                     currentColors = {
                         skyTop: interpolateColor(hexToRgb(colors.sunset.skyTop), hexToRgb(colors.night.skyTop), factor),
                         skyBottom: interpolateColor(hexToRgb(colors.sunset.skyBottom), hexToRgb(colors.night.skyBottom), factor),
                         sun: interpolateColor(hexToRgb(colors.sunset.sun), hexToRgb(colors.night.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.sunset.text), hexToRgb(colors.night.text), textFactor)
+                        text: interpolateColor(hexToRgb(colors.sunset.text), hexToRgb(colors.night.text), globalTextFactor)
                     };
                 } else {
                      factor = (scrollProgress - 0.75) / 0.25;
@@ -283,7 +290,7 @@
                         skyTop: interpolateColor(hexToRgb(colors.night.skyTop), hexToRgb(colors.night.skyTop), factor),
                         skyBottom: interpolateColor(hexToRgb(colors.night.skyBottom), hexToRgb(colors.night.skyBottom), factor),
                         sun: interpolateColor(hexToRgb(colors.night.sun), hexToRgb(colors.night.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.night.text), hexToRgb(colors.night.text), factor)
+                        text: interpolateColor(hexToRgb(colors.night.text), hexToRgb(colors.night.text), globalTextFactor)
                     };
                 }
                 
@@ -301,6 +308,20 @@
                 document.documentElement.style.setProperty('--sun-x', `${sunX}%`);
                 document.documentElement.style.setProperty('--sun-y', `${sunY}%`);
                 document.documentElement.style.setProperty('--sun-glare-opacity', glareOpacity);
+
+                // Project Card Text Color Transition
+                const projectCardTextTransitionStart = 0.5; // Start project card text transition at 50% scroll
+                const projectCardTextTransitionEnd = 0.8; // End project card text transition at 80% scroll
+                let projectCardTextFactor = 0;
+
+                if (scrollProgress >= projectCardTextTransitionStart && scrollProgress <= projectCardTextTransitionEnd) {
+                    projectCardTextFactor = (scrollProgress - projectCardTextTransitionStart) / (projectCardTextTransitionEnd - projectCardTextTransitionStart);
+                } else if (scrollProgress > projectCardTextTransitionEnd) {
+                    projectCardTextFactor = 1; // Text is fully white
+                } else {
+                    projectCardTextFactor = 0; // Text is fully black
+                }
+                document.documentElement.style.setProperty('--project-card-text-color', interpolateColor(hexToRgb(colors.sunrise.text), hexToRgb(colors.night.text), projectCardTextFactor));
             });
 
             document.getElementById('learn-more-btn').addEventListener('click', function(e) {
