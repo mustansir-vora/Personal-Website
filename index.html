@@ -221,7 +221,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+         document.addEventListener('DOMContentLoaded', () => {
             const sunMoon = document.getElementById('sun-moon');
             const body = document.body;
 
@@ -284,7 +284,7 @@
                         skyTop: interpolateColor(hexToRgb(colors.sunrise.skyTop), hexToRgb(colors.day.skyTop), factor),
                         skyBottom: interpolateColor(hexToRgb(colors.sunrise.skyBottom), hexToRgb(colors.day.skyBottom), factor),
                         sun: interpolateColor(hexToRgb(colors.sunrise.sun), hexToRgb(colors.day.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.sunrise.text), hexToRg(colors.day.text), globalTextFactor)
+                        text: interpolateColor(hexToRgb(colors.sunrise.text), hexToRgb(colors.day.text), globalTextFactor)
                     };
                 } else if (scrollProgress < 0.5) {
                     factor = (scrollProgress - 0.25) / 0.25;
