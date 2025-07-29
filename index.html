@@ -211,7 +211,7 @@
 
     <!-- Project Modal -->
     <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="bg-black/65 backdrop-blur-xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative">
+        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative">
             <button id="close-modal" class="absolute top-4 right-4 text-white text-2xl font-bold">&times;</button>
             <h3 id="modal-project-title" class="text-3xl font-bold mb-4"></h3>
             <p id="modal-project-description" class="text-lg"></p>
@@ -235,11 +235,11 @@
 
             // Function to interpolate between two colors
             function interpolateColor(color1, color2, factor) {
-                let result = color1.slice();
-                for (let i = 0; i < 3; i++) {
-                    result[i] = Math.round(result[i] + factor * (color2[i] - color1[i]));
-                }
-                return `rgb(${result[0]}, ${result[1]}, ${result[2]})`;
+                const r = Math.round(color1[0] + factor * (color2[0] - color1[0]));
+                const g = Math.round(color1[1] + factor * (color2[1] - color1[1]));
+                const b = Math.round(color1[2] + factor * (color2[2] - color1[2]));
+                const a = (color1[3] + factor * (color2[3] - color1[3])).toFixed(2); // Interpolate alpha and fix to 2 decimal places
+                return `rgba(${r}, ${g}, ${b}, ${a})`;
             }
             
             function hexToRgb(hex) {
@@ -255,7 +255,7 @@
                     g = "0x" + hex[3] + hex[4];
                     b = "0x" + hex[5] + hex[6];
                 }
-                return [+r, +g, +b];
+                return [+r, +g, +b, 1]; // Add default alpha of 1 (fully opaque)
             }
 
 
@@ -266,8 +266,8 @@
 
                 let currentColors;
                 let factor;
-                const textTransitionStart = 0.60; // Start text transition at 60% of total scroll
-                const textTransitionEnd = 0.68; // End text transition at 65% of total scroll
+                const textTransitionStart = 0.58; // Start text transition at 60% of total scroll
+                const textTransitionEnd = 0.64; // End text transition at 65% of total scroll
 
                 let globalTextFactor = 0;
                 if (scrollProgress >= textTransitionStart && scrollProgress <= textTransitionEnd) {
@@ -328,7 +328,11 @@
                 document.documentElement.style.setProperty('--sun-y', `${sunY}%`);
                 document.documentElement.style.setProperty('--sun-glare-opacity', glareOpacity);
 
-                
+                // Modal Background Color Transition
+                const modalDayBg = [255, 255, 255, 0.3]; // Slightly black for day (10% opaque black)
+                const modalNightBg = [0, 0, 0, 0.3]; // Slightly white for night (10% opaque white)
+                const modalInnerBgColor = interpolateColor(modalDayBg, modalNightBg, globalTextFactor);
+                document.documentElement.style.setProperty('--modal-inner-bg', modalInnerBgColor);
             });
 
             document.getElementById('learn-more-btn').addEventListener('click', function(e) {
