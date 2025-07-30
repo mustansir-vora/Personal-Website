@@ -29,8 +29,8 @@
         }
         #sun-moon {
             position: fixed;
-            width: 184px; /* 105px * 1.75 = 183.75px */
-            height: 184px;
+            width: 130px; /* 105px * 1.75 = 183.75px */
+            height: 130px;
             background-color: var(--sun-color);
             border-radius: 50%;
             left: var(--sun-x);
@@ -315,7 +315,7 @@
                 
                 // Sun path - a simple arc
                 const sunX = scrollProgress * 100;
-                const sunY = 50 + Math.sin(scrollProgress * Math.PI) * 40; // Arcs up and down
+                const sunY = 50 - Math.sin(scrollProgress * Math.PI) * 40; // Arcs up and down
 
                 // Sun glare opacity - peaks at midday
                 const glareOpacity = Math.sin(scrollProgress * Math.PI) * 1.0; // 0 -> 1.0 -> 0
