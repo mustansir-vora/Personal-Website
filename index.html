@@ -20,7 +20,15 @@
             --sun-x: 0%;
         --sun-y: 50%;
         --sun-glare-opacity: 0;
+		--sun-size: 110px;
         }
+
+		@media (min-width: 768px) { /* For medium screens and up (desktop) */
+			:root {
+				--sun-size: 184px;  /* Larger size for desktop (e.g., 184px) */
+			}
+		}
+
         body {
             font-family: 'Google Sans Text', sans-serif;
             background: linear-gradient(to bottom, var(--sky-color-top), var(--sky-color-bottom));
@@ -29,8 +37,8 @@
         }
         #sun-moon {
             position: fixed;
-            width: 130px; /* 105px * 1.75 = 183.75px */
-            height: 130px;
+            width: var(--sun-size); /* 105px * 1.75 = 183.75px */
+            height: var(--sun-size);
             background-color: var(--sun-color);
             border-radius: 50%;
             left: var(--sun-x);
