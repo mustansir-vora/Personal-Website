@@ -114,6 +114,40 @@
         #personal-modal-project-description a:hover {
             opacity: 0.8;
         }
+
+        @media (max-width: 767px) {
+            body {
+                font-size: 14px;
+            }
+
+            .modal-container > div {
+                padding: 1.5rem;
+            }
+
+            #modal-project-title,
+            #personal-modal-project-title {
+                font-size: 1.5rem;
+            }
+
+            #modal-project-description,
+            #personal-modal-project-description,
+            #modal-project-detailed-description,
+            #personal-modal-project-detailed-description {
+                font-size: 0.875rem;
+            }
+
+            #about .text-lg {
+                font-size: 0.875rem;
+            }
+
+            .project-card {
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .project-card:active {
+                transform: scale(0.95);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-900">
@@ -296,7 +330,7 @@
                 let currentColors;
                 let factor;
                 const textTransitionStart = 0.58; // Start text transition at 60% of total scroll
-                const textTransitionEnd = 0.64; // End text transition at 65% of total scroll
+                const textTransitionEnd = 0.59; // End text transition at 65% of total scroll
 
                 let globalTextFactor = 0;
                 if (scrollProgress >= textTransitionStart && scrollProgress <= textTransitionEnd) {
