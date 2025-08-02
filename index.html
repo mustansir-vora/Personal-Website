@@ -61,41 +61,41 @@
         }
 
         /* Modal Styles */
-        #project-modal {
+        .modal-container {
             background-color: transparent; /* Removed dark overlay */
             transition: opacity 0.3s ease-in-out;
         }
 
-        #project-modal > div {
+        .modal-container > div {
             max-height: 90vh; /* Limit height to prevent overflow */
             overflow-y: auto; /* Enable scrolling for long content */
             transform: translateY(0); /* Initial position for animation */
             transition: transform 0.3s ease-in-out;
         }
 
-        #project-modal.hidden > div {
+        .modal-container.hidden > div {
             transform: translateY(-50px); /* Move up when hidden */
         }
 
-        #close-modal {
+        .close-modal-btn {
             cursor: pointer;
         }
 
         /* Custom scrollbar for modal */
-        #project-modal > div::-webkit-scrollbar {
+        .modal-container > div::-webkit-scrollbar {
             width: 10px;
         }
 
-        #project-modal > div::-webkit-scrollbar-track {
+        .modal-container > div::-webkit-scrollbar-track {
             background: transparent;
         }
 
-        #project-modal > div::-webkit-scrollbar-thumb {
+        .modal-container > div::-webkit-scrollbar-thumb {
             background: rgba(255, 255, 255, 0.25);
             border-radius: 5px;
         }
 
-        #project-modal > div::-webkit-scrollbar-thumb:hover {
+        .modal-container > div::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.4);
         }
 
@@ -103,6 +103,16 @@
         .project-card h3,
         .project-card p {
             color: var(--text-color);
+        }
+
+        #personal-modal-project-description a {
+            color: #87ceeb;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        #personal-modal-project-description a:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -179,9 +189,9 @@
 
                 <h3 class="text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Personal Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="AI Resume Optimizer" data-project-description="Description of your personal project 1. You can add details about the technologies used and what you learned." data-project-detailed-description="You can write a more detailed description of your work on Project Title 1 (Placeholder) here.">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="AI Resume Optimizer" data-project-description="The primary goal was to create a system that could not only optimize the content of a resume to align with a job description but also do so without destroying the document's original formatting—a common failure point for text-based resume tools. The implementation leverages a powerful combination of Python for the backend logic, Streamlit for the interactive web interface, and the Google Gemini LLM as the core intelligence.<p><br>Experience the application directly here: <a href='ai-resume-optimizer-covxskfybhkh5vnecsvyxr.streamlit.app' target='_blank' rel='noopener noreferrer'>AI-Resume-Optimizer</a></p><p>For those interested in the project's architecture, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/AI-Resume-Optimizer.git' target='_blank' rel='noopener noreferrer'>Optimizer Repo</a></p>" data-project-detailed-description="The core of the implementation revolves around treating a .docx file not as a simple text document, but as a structured XML file, which is key to preserving its formatting. The workflow is initiated when a user uploads their resume and provides a job description. Here’s how the AI-driven process unfolds: <ul class='list-decimal list-inside ml-12'><li class='mb-2'><strong>Document Deconstruction & Parsing: </strong>When a user uploads their resume, the application doesn’t just extract the text. It unzips the .docx file in memory and accesses the word/document.xml file within. Using the lxml library, it meticulously parses this XML tree, iterating through every text-containing element. For each piece of text it finds, it records both the content and its unique XPath—a specific address that pinpoints its exact location within the document's complex structure. This creates a detailed map of the entire resume's content.</li><li class='mb-2'><strong>Intelligent Prompt Engineering: </strong>The project's effectiveness is powered by dynamic prompt engineering. A meticulously crafted prompt is constructed with clear instructions for the Google Gemini LLM to adopt the persona of an expert career coach. By providing the AI with the user's resume content, annotated with its structural XPath reference, along with the target job description, the system ensures the AI has all the necessary context to perform a highly specific and targeted optimization. This method guides the AI to produce a structured JSON object, which is critical for the next stage of the process.</li><li class='mb-2'><strong>AI-Driven Resume Optimization: </strong>Leveraging the Google Gemini LLM, the application performs a deep-level content analysis and generation process. The AI's task is to analyze job requirements, identify critical keywords, and then rewrite the user's resume content. This multi-step AI workflow uses the provided XPath references to ensure the output is not just new text but a structured response. This structured output allows for the precise and lossless reconstruction of the document, resulting in a more impactful and perfectly tailored resume that significantly improves a user's chances of passing applicant tracking systems and capturing a recruiter's attention.</li><li class='mb-2'><strong>Ensuring Reliability with Structured Data: </strong>A critical aspect of the implementation is forcing the AI to return its response in a structured JSON format. This is a key design choice that ensures system reliability. The JSON object contains two primary components: 1) an array of objects, where each object holds a snippet of optimized text and its original XPath, and 2) a detailed analysis section, which includes the resume's strong points, weak points, and a summary of the changes made. This machine-readable format eliminates the ambiguity of parsing a free-form text response.</li><li class='mb-2'><strong>High-Fidelity Reconstruction: </strong>Once the JSON response is received, the application begins the reconstruction process. It creates a new, empty .docx document and copies over all the original styling and metadata. Then, it iterates through the optimized text snippets from the AI's response. For each snippet, it uses the provided XPath to navigate to the exact location in the new document and inserts the optimized text. This ensures that every change is precise, preserving the original layout, fonts, and spacing down to the smallest detail.</li></ul>">
                         <h3 class="text-xl font-bold">AI Resume Optimizer</h3>
-                        <p class="mt-2">This AI-powered web app optimizes resumes for specific job applications. Built with Python and Streamlit, it leverages the Google Gemini API to analyze a user's .docx resume against a job description. The application intelligently rewrites the content to better match the desired role, then reconstructs the document, preserving all original formatting.</p>
+                        <p class="mt-2">This AI-powered web app optimizes resumes for specific jobs by leveraging the Google Gemini API. It analyzes a user's resume against a job description, intelligently rewriting content for a strong keyword match. Built with Python and Streamlit, the system meticulously preserves the document's original formatting, providing a seamless experience from analysis to a perfectly reconstructed document to get noticed by recruiters and applicant tracking system (ATS).</p>
                     </div>
                     <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg project-card" data-project-title="Project Title 2 (Placeholder)" data-project-description="Description of your personal project 2. Feel free to add more projects as needed." data-project-detailed-description="You can write a more detailed description of your work on Project Title 2 (Placeholder) here.">
                         <h3 class="text-xl font-bold">Project Title 2 (Placeholder)</h3>
@@ -218,13 +228,24 @@
     </main>
 
     <!-- Project Modal -->
-    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-container">
         <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative">
-            <button id="close-modal" class="absolute top-4 right-4 text-white text-2xl font-bold">&times;</button>
+            <button id="close-modal" class="absolute top-4 right-4 text-white text-2xl font-bold close-modal-btn">&times;</button>
             <h3 id="modal-project-title" class="text-3xl font-bold mb-4"></h3>
             <p id="modal-project-description" class="text-lg"></p>
             <h4 class="text-xl font-bold mt-6 mb-2">Key Contributions:</h4>
             <p id="modal-project-detailed-description" class="text-lg"></p>
+        </div>
+    </div>
+
+    <!-- Personal Project Modal -->
+    <div id="personal-project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-container">
+        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative">
+            <button id="close-personal-modal" class="absolute top-4 right-4 text-white text-2xl font-bold close-modal-btn">&times;</button>
+            <h3 id="personal-modal-project-title" class="text-3xl font-bold mb-4"></h3>
+            <p id="personal-modal-project-description" class="text-lg"></p>
+            <h4 class="text-xl font-bold mt-6 mb-2">About the Project</h4>
+            <p id="personal-modal-project-detailed-description" class="text-lg"></p>
         </div>
     </div>
 
@@ -337,8 +358,8 @@
                 document.documentElement.style.setProperty('--sun-glare-opacity', glareOpacity);
 
                 // Modal Background Color Transition
-                const modalDayBg = [255, 255, 255, 0.3]; // Slightly black for day (10% opaque black)
-                const modalNightBg = [0, 0, 0, 0.3]; // Slightly white for night (10% opaque white)
+                const modalDayBg = [255, 255, 255, 0.3]; // Slightly white for day (30% opaque white)
+                const modalNightBg = [255, 255, 255, 0.3]; // Slightly white for night (30% opaque white)
                 const modalInnerBgColor = interpolateColor(modalDayBg, modalNightBg, globalTextFactor);
                 document.documentElement.style.setProperty('--modal-inner-bg', modalInnerBgColor);
             });
@@ -365,6 +386,13 @@
             const modalProjectTitle = document.getElementById('modal-project-title');
             const modalProjectDescription = document.getElementById('modal-project-description');
             const modalProjectDetailedDescription = document.getElementById('modal-project-detailed-description');
+
+            const personalProjectModal = document.getElementById('personal-project-modal');
+            const closePersonalModalBtn = document.getElementById('close-personal-modal');
+            const personalModalProjectTitle = document.getElementById('personal-modal-project-title');
+            const personalModalProjectDescription = document.getElementById('personal-modal-project-description');
+            const personalModalProjectDetailedDescription = document.getElementById('personal-modal-project-detailed-description');
+
             const projectCards = document.querySelectorAll('.project-card');
 
             projectCards.forEach(card => {
@@ -372,11 +400,19 @@
                     const title = card.dataset.projectTitle;
                     const description = card.dataset.projectDescription;
                     const detailedDescription = card.dataset.projectDetailedDescription;
+                    const isPersonal = card.closest('.grid').previousElementSibling.textContent.includes('Personal Projects');
 
-                    modalProjectTitle.textContent = title;
-                    modalProjectDescription.textContent = description;
-                    modalProjectDetailedDescription.innerHTML = detailedDescription;
-                    projectModal.classList.remove('hidden');
+                    if (isPersonal) {
+                        personalModalProjectTitle.textContent = title;
+                        personalModalProjectDescription.innerHTML = description;
+                        personalModalProjectDetailedDescription.innerHTML = detailedDescription;
+                        personalProjectModal.classList.remove('hidden');
+                    } else {
+                        modalProjectTitle.textContent = title;
+                        modalProjectDescription.textContent = description;
+                        modalProjectDetailedDescription.innerHTML = detailedDescription;
+                        projectModal.classList.remove('hidden');
+                    }
                 });
             });
 
@@ -384,9 +420,19 @@
                 projectModal.classList.add('hidden');
             });
 
+            closePersonalModalBtn.addEventListener('click', () => {
+                personalProjectModal.classList.add('hidden');
+            });
+
             projectModal.addEventListener('click', (e) => {
                 if (e.target === projectModal) {
                     projectModal.classList.add('hidden');
+                }
+            });
+
+            personalProjectModal.addEventListener('click', (e) => {
+                if (e.target === personalProjectModal) {
+                    personalProjectModal.classList.add('hidden');
                 }
             });
         });
