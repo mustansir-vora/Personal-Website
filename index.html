@@ -118,6 +118,11 @@
         }
 
         @media (max-width: 767px) {
+            #tech-skills {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
             .project-card {
                 transition: transform 0.1s ease-out;
             }
@@ -179,12 +184,12 @@
             <div class="flex justify-end p-4">
                 <button id="close-menu-btn" class="text-white text-2xl font-bold">&times;</button>
             </div>
-            <a href="#home" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Home</a>
-            <a href="#about" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">About</a>
-            <a href="#tech-skills" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Skills</a>
-            <a href="#work-experience" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Experience</a>
-            <a href="#portfolio" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Projects</a>
-            <a href="#contact" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Get in Touch</a>
+            <a href="#home" class="block text-center nav-link font-bold text-xl px-5 py-3 rounded-full hover:bg-white/30 border border-white/30 mb-2 mx-4">Home</a>
+            <a href="#about" class="block text-center nav-link font-bold text-xl px-5 py-3 rounded-full hover:bg-white/30 border border-white/30 mb-2 mx-4">About</a>
+            <a href="#tech-skills" class="block text-center nav-link font-bold text-xl px-5 py-3 rounded-full hover:bg-white/30 border border-white/30 mb-2 mx-4">Skills</a>
+            <a href="#work-experience" class="block text-center nav-link font-bold text-xl px-5 py-3 rounded-full hover:bg-white/30 border border-white/30 mb-2 mx-4">Experience</a>
+            <a href="#portfolio" class="block text-center nav-link font-bold text-xl px-5 py-3 rounded-full hover:bg-white/30 border border-white/30 mb-2 mx-4">Projects</a>
+            <a href="#contact" class="block text-center nav-link font-bold text-xl px-5 py-3 rounded-full hover:bg-white/30 border border-white/30 mb-2 mx-4">Get in Touch</a>
         </div>
     </header>
 
@@ -659,7 +664,7 @@
                 skillIcon.src = skill.icon;
 
                 const skillName = document.createElement('span');
-                skillName.classList.add('text-lg', 'font-bold', 'ml-4', 'flex-1', 'text-center');
+                skillName.classList.add('text-sm', 'md:text-lg', 'font-bold', 'ml-4', 'flex-1', 'text-center');
                 skillName.textContent = skill.name;
 
                 skillCard.appendChild(skillIcon);
