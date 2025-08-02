@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         /* Using a style block for CSS variables and base styles for simplicity */
         :root {
             --sky-color-top: #f9d89c;
@@ -34,6 +37,7 @@
             background: linear-gradient(to bottom, var(--sky-color-top), var(--sky-color-bottom));
             color: var(--text-color);
             transition: background 1.5s ease, color 0.5s ease;
+            overflow-x: hidden;
         }
         #sun-moon {
             position: fixed;
@@ -52,7 +56,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             padding: 2rem;
         }
         .nav-link {
@@ -116,30 +119,6 @@
         }
 
         @media (max-width: 767px) {
-            body {
-                font-size: 16px;
-            }
-
-            .modal-container > div {
-                padding: 1.5rem;
-            }
-
-            #modal-project-title,
-            #personal-modal-project-title {
-                font-size: 1.5rem;
-            }
-
-            #modal-project-description,
-            #personal-modal-project-description,
-            #modal-project-detailed-description,
-            #personal-modal-project-detailed-description {
-                font-size: 0.875rem;
-            }
-
-            #about .text-lg {
-                font-size: 0.950rem;
-            }
-
             .project-card {
                 transition: transform 0.1s ease-out;
             }
@@ -147,17 +126,67 @@
             .project-card:active {
                 transform: scale(0.95);
             }
+
+            #tech-skills .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            #tech-skills .group .md\:group-hover\:opacity-0 {
+                opacity: 1 !important;
+            }
+
+            #tech-skills .group .md\:hidden {
+                display: flex;
+            }
+
+            #tech-skills .group .absolute {
+                display: none;
+            }
+
+            section > div.sticky {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 1rem;
+                z-index: 20;
+            }
+
+            
+        }
+
+        @media (min-width: 768px) {
+            #tech-skills .grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
         }
     </style>
 </head>
 <body class="bg-gray-900">
 
-    <header class="fixed top-0 p-4 z-30 w-full md:right-0 md:w-auto">
-        <nav class="flex justify-center md:justify-end space-x-1">
-            <a href="#about" class="nav-link font-bold bg-white/50 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">About Me</a> 
-            <a href="#portfolio" class="nav-link font-bold bg-white/50 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">My Work</a>
-            <a href="#contact" class="nav-link font-bold bg-white/50 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">Get in Touch</a> 
+    <header class="fixed top-0 p-4 z-30 w-full">
+        <nav class="flex justify-between items-center">
+            <div class="hidden md:flex justify-center space-x-4 w-full">
+                <a href="#home" class="nav-link font-bold bg-white/30 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">Home</a>
+                <a href="#about" class="nav-link font-bold bg-white/30 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">About</a>
+                <a href="#tech-skills" class="nav-link font-bold bg-white/30 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">Skills</a>
+                <a href="#work-experience" class="nav-link font-bold bg-white/30 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">Experience</a>
+                <a href="#portfolio" class="nav-link font-bold bg-white/30 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">Projects</a>
+                <a href="#contact" class="nav-link font-bold bg-white/30 backdrop-blur-xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-full hover:bg-white/30 transform translate-z-0 inline-block">Get in Touch</a>
+            </div>
+            <div class="md:hidden flex justify-end w-full">
+                <button id="hamburger-btn" class="text-white text-2xl font-bold">&#9776;</button>
+            </div>
         </nav>
+        <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white/10 backdrop-blur-md transition-transform duration-300 ease-in-out transform translate-x-full">
+            <div class="flex justify-end p-4">
+                <button id="close-menu-btn" class="text-white text-2xl font-bold">&times;</button>
+            </div>
+            <a href="#home" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Home</a>
+            <a href="#about" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">About</a>
+            <a href="#tech-skills" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Skills</a>
+            <a href="#work-experience" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Experience</a>
+            <a href="#portfolio" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Projects</a>
+            <a href="#contact" class="block text-center nav-link font-bold px-4 py-2 rounded-full hover:bg-white/30">Get in Touch</a>
+        </div>
     </header>
 
     <div id="sun-moon"></div>
@@ -166,43 +195,83 @@
         <section id="home" class="h-screen flex items-center justify-center text-center">
             <div>
                 <h1 class="text-5xl md:text-7xl font-bold">Hello, I'm Mustansir Vora</h1>
-            <!--<p class="text-xl md:text-4xl mt-4 font-bold">A Software Developer</p>-->
-                <a href="#about" id="learn-more-btn" class="mt-8 inline-block bg-white/50 backdrop-blur-sm text-black font-bold py-3 px-6 rounded-full hover:bg-white/30 transition-colors">
-                    Learn More
-                </a>
+                <div class="mt-8 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 justify-center">
+                    <a href="https://wa.me/918208928683?text=Hello%20there!" target="_blank" rel="noopener noreferrer" class="inline-block bg-white/30 backdrop-blur-sm text-black font-bold py-3 px-6 rounded-full hover:bg-white/30 transition-colors">Let's connect</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1E49zMuKNj9QgAAHkoFHGyz8JV0q7H73W" id="download-resume" class="inline-block bg-white/30 backdrop-blur-sm text-black font-bold py-3 px-6 rounded-full hover:bg-white/30 transition-colors" download>Download Resume</a>
+                </div>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
+                        <img src="Assets/GMAIL_BLACK.svg" alt="Gmail Icon" class="w-6 h-6 md:w-8 md:h-8">
+                    </a>
+                    <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
+                        <img src="Assets/LINKEDIN_BLACK.svg" alt="LinkedIn Icon" class="w-6 h-6 md:w-8 md:h-8">
+                    </a>
+                    <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
+                        <img src="Assets/GITHUB_BLACK.svg" alt="GitHub Icon" class="w-6 h-6 md:w-8 md:h-8">
+                    </a>
+                    <a href="https://www.instagram.com/mustansir_vora/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
+                        <img src="Assets/INSTAGRAM_BLACK.svg" alt="Instagram Icon" class="w-6 h-6 md:w-8 md:h-8">
+                    </a>
+                </div>
             </div>
         </section>
 
         <section id="about">
             <div class="text-center sticky top-16 z-20">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6 py-4 bg-white/20 backdrop-blur-md px-4 rounded-full inline-block mx-auto">About Me</h2>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">About Me</h2>
             </div>
             <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
                 <p class="text-lg">
-                    My journey into tech began not with a clear path, but with a formidable challenge. The initial months were a crucible, forging my sense of adaptability and a passion for rapid, continuous learning. It taught me that a person's true measure isn't just their knowledge, but their ability to acquire and master new skills efficiently. This foundation has been my launchpad, enabling me to turn challenges into opportunities and lead complex, high-stakes client integrations.
+                    A results-driven Conversational AI Developer with over 2.5 years of experience designing, developing, and deploying advanced chatbots and voicebots using the Google CCAI Bot framework. Proficient in Dialogflow ES/CX, Genesys, and Nuance Mix, Microsoft Copilot studio Tools, with a strong background in IVR application development and NLP/NLU integration. Expertise in integrating conversational AI systems with RESTful APIs and SQL databases to build scalable, high-performance solutions. Committed to writing clean, maintainable code and leveraging Agile/Scrum methodologies to deliver exceptional user experiences.
                 </p>
             </div>
-            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
-                <p class="text-lg">
-                    I'm fluent in core backend technologies like Java, Spring Boot, and Python, comfortable on the frontend with React.js, and adept at building systems with RESTful APIs, SQL, and NoSQL. I confidently navigate multi-cloud environments, leveraging AWS, Azure, and Google Cloud Platform to architect robust solutions. This comprehensive skill set allows me to lead end-to-end development of sophisticated software systems.
-                </p>
+        </section>
+
+        <section id="tech-skills">
+            <div class="text-center sticky top-16 z-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">Tech Skills</h2>
             </div>
-            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
-                <p class="text-lg">
-                    While versatile, my true passion lies at the frontier of Artificial Intelligence. I'm captivated by AI's potential to create intuitive human-computer interactions. I specialize in designing and deploying advanced conversational AI systems using platforms like Google Dialogflow (ES/CX), Genesys, and Microsoft Copilot Studio. My work goes beyond simple chatbots/IVR systems; I have engineered complex CX solutions incorporating Large Language Models (LLMs), Retrieval Augmented Generation (RAG) patterns, and Voice Biometrics for truly context-aware and personalized user experiences. I approach every project with personal ownership, upholding my work to high standards.
-                </p>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-8 gap-4">
+                    <!-- Skills will be dynamically added here -->
+                </div>
             </div>
-            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
-                <p class="text-lg">
-                    Looking ahead, my ambitions extend beyond mere financial success; it is to establish a thriving career that operates with some level of autonomy, giving me the freedom to pursue my passion for global travel and adrenaline-fueled adventures. Ultimately, I seek a future where professional success serves as a means to an end, enabling me to a life rich in experiences, not just professional commitments/obligations. This chase for a balance—where professional achievement enables personal exploration—is what I would define as my ultimate goal.
-                </p>
+        </section>
+
+        <section id="key-skills">
+            <div class="text-center sticky top-16 z-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">Key Skills</h2>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Key skills will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="work-experience">
+            <div class="text-center sticky top-16 z-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">Work Experience</h2>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
+                    <h3 class="text-2xl font-bold">Software Developer, Servion Global Solutions Pvt Ltd.</h3>
+                    <p class="text-lg font-bold">Nov 2022 – Present</p>
+                    <ul class="list-disc list-inside mt-4">
+                        <li>Worked in close partnership with functional analysts, QA teams, and other technical groups to ensure solutions were developed and tested according to business requirements.</li>
+                        <li>Wrote and executed a comprehensive suite of unit and integration tests to verify feature functionality and ensure the delivery of high-quality, reliable code.</li>
+                        <li>Actively participated in all Scrum ceremonies, including sprint planning, daily stand-ups, backlog refinement, and retrospectives, to ensure project alignment and continuous improvement.</li>
+                        <li>Adhered strictly to team-defined development standards and best practices, participating in code reviews and knowledge-sharing initiatives to maintain a high standard of quality.</li>
+                        <li>Created and maintained clear, detailed documentation for all code and technical solutions.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="portfolio">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center sticky top-16 z-20">
-                <h2 id="my-work-header" class="text-4xl md:text-6xl font-bold mb-12 py-4 bg-white/20 backdrop-blur-md px-4 rounded-full inline-block mx-auto">My Work</h2>
+                <h2 id="my-work-header" class="text-4xl md:text-6xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">My Work</h2>
                 </div>
 
                 <h3 class="text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Professional Projects</h3>
@@ -235,8 +304,30 @@
             </div>
         </section>
 
-        <section id="contact" class="text-center">
-             <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-xl">
+        <section id="keen-interests">
+            <div class="text-center sticky top-16 z-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">Keen Interests</h2>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center">
+                        <h3 class="text-2xl font-bold">Travel</h3>
+                        <p class="mt-2">Exploring new cultures and landscapes, from bustling cities to serene natural wonders.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center">
+                        <h3 class="text-2xl font-bold">Adventure Sports</h3>
+                        <p class="mt-2">Seeking thrills through activities like hiking, scuba diving, and paragliding.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center">
+                        <h3 class="text-2xl font-bold">Photography</h3>
+                        <p class="mt-2">Capturing the beauty of the world through my lens, from stunning landscapes to candid moments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+             <div class="max-w-4xl mx-auto bg-white/30 backdrop-blur-md p-8 rounded-xl">
                 <h2 class="text-3xl font-bold">Get in Touch</h2>
                 <div class="flex justify-center items-center space-x-6 mt-4">
                     <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
@@ -411,13 +502,6 @@
                 }
             });
 
-            document.getElementById('learn-more-btn').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-
             document.querySelectorAll('.nav-link').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -425,6 +509,38 @@
                         behavior: 'smooth'
                     });
                 });
+            });
+
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+
+            function openMenu() {
+                mobileMenu.classList.remove('translate-x-full');
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.add('translate-x-full');
+            }
+
+            hamburgerBtn.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('translate-x-full')) {
+                    openMenu();
+                } else {
+                    closeMenu();
+                }
+            });
+
+            closeMenuBtn.addEventListener('click', closeMenu);
+
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.classList.contains('translate-x-full') && !mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+
+            document.querySelectorAll('#mobile-menu a').forEach(anchor => {
+                anchor.addEventListener('click', closeMenu);
             });
 
             // Modal functionality
@@ -481,6 +597,90 @@
                 if (e.target === personalProjectModal) {
                     personalProjectModal.classList.add('hidden');
                 }
+            });
+
+            // Skills data
+            const techSkills = [
+                { name: 'Java', icon: 'Assets/JAVA.svg' },
+                { name: 'JavaScript', icon: 'Assets/JAVASCRIPT.svg' },
+                { name: 'Node.js', icon: 'Assets/NODEJS.svg' },
+                { name: 'React.js', icon: 'Assets/REACT.svg' },
+                { name: 'Python', icon: 'Assets/PYTHON.svg' },
+                { name: 'SQL', icon: 'Assets/SQL.svg' },
+                { name: 'NoSQL', icon: 'Assets/NOSQL.svg' },
+                { name: 'HTML', icon: 'Assets/HTML.svg' },
+                { name: 'CSS', icon: 'Assets/CSS.svg' },
+                { name: 'Bootstrap', icon: 'Assets/BOOTSTRAP.svg' },
+                { name: 'AWS', icon: 'Assets/AWS.svg' },
+                { name: 'GCP', icon: 'Assets/GCP.svg' },
+                { name: 'Azure', icon: 'Assets/AZURE.svg' },
+                { name: 'Dialogflow CX', icon: 'Assets/DIALOGFLOW.svg' },
+                { name: 'Copilot Studio', icon: 'Assets/COPILOTSTUDIO.svg' },
+                { name: 'Genesys Purecloud', icon: 'Assets/GENESYS.jpeg' },
+                { name: 'PowerBI', icon: 'Assets/POWERBI.svg' },
+                { name: 'Looker Studio', icon: 'Assets/LOOKER.svg' },
+                { name: 'LLM', icon: 'Assets/LLM.svg' },
+                { name: 'RAG', icon: 'Assets/RAG.svg' },
+                { name: 'Machine Learning', icon: 'Assets/MACHINELEARNING.svg' },
+                { name: 'Docker', icon: 'Assets/DOCKER.svg' },
+                { name: 'Kubernetes', icon: 'Assets/KUBERNETES.svg' },
+                { name: 'GIT', icon: 'Assets/GIT.svg' }
+            ];
+
+            const keySkills = [
+                {
+                    title: 'Bot Development',
+                    description: 'Designed, developed, and deployed enterprise-scale chatbots and voicebots using Google Dialogflow CX, Genesys, and Nuance, Microsoft copilot studio platforms focusing on creating intelligent and context-aware user interactions.',
+                },
+                {
+                    title: 'Code Quality',
+                    description: 'Wrote clean, efficient, and maintainable code following industry best practices. Developed custom components and tools to enhance chatbot functionality and performance.',
+                },
+                {
+                    title: 'Systems Integration',
+                    description: 'Integrated chatbot systems with backend infrastructure, including SQL databases and REST-based microservices, to ensure seamless data flow and functionality.',
+                },
+                {
+                    title: 'Agile/Scrum Practice',
+                    description: 'Actively participated in all Scrum ceremonies, collaborating with cross-functional teams to align solutions with project goals and user needs.',
+                },
+                {
+                    title: 'Troubleshooting',
+                    description: 'Analyzed logs, debugged code, and implemented continuous improvements to resolve technical issues in complex, distributed environments.',
+                },
+            ];
+
+            const techSkillsContainer = document.querySelector('#tech-skills .grid');
+            techSkills.forEach(skill => {
+                const skillCard = document.createElement('div');
+                skillCard.classList.add('relative', 'flex', 'items-center', 'p-4', 'rounded-xl', 'transition-all', 'duration-300', 'ease-in-out', 'hover:shadow-lg', 'group', 'md:w-full', 'hover:scale-105', 'bg-white/10', 'backdrop-blur-md');
+
+                const skillIcon = document.createElement('img');
+                skillIcon.classList.add('w-10', 'h-10', 'md:w-16', 'md:h-16', 'transition-all', 'duration-300', 'ease-in-out');
+                skillIcon.src = skill.icon;
+
+                const skillName = document.createElement('span');
+                skillName.classList.add('text-lg', 'font-bold', 'ml-4', 'flex-1', 'text-center');
+                skillName.textContent = skill.name;
+
+                skillCard.appendChild(skillIcon);
+                skillCard.appendChild(skillName);
+                techSkillsContainer.appendChild(skillCard);
+            });
+
+            const keySkillsContainer = document.querySelector('#key-skills .grid');
+            keySkills.forEach(skill => {
+                const skillCard = document.createElement('div');
+                skillCard.classList.add('bg-white/10', 'backdrop-blur-md', 'p-6', 'rounded-3xl', 'transition-all', 'duration-300', 'ease-in-out', 'hover:scale-105', 'hover:shadow-lg');
+                const skillTitle = document.createElement('h3');
+                skillTitle.classList.add('text-xl', 'font-bold');
+                skillTitle.textContent = skill.title;
+                const skillDescription = document.createElement('p');
+                skillDescription.classList.add('mt-2');
+                skillDescription.textContent = skill.description;
+                skillCard.appendChild(skillTitle);
+                skillCard.appendChild(skillDescription);
+                keySkillsContainer.appendChild(skillCard);
             });
         });
     </script>
