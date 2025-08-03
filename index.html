@@ -13,16 +13,33 @@
             scroll-behavior: smooth;
         }
         /* Using a style block for CSS variables and base styles for simplicity */
+        @property --sky-color-top {
+          syntax: '<color>';
+          inherits: true;
+          initial-value: #f9d89c;
+        }
+        @property --sky-color-bottom {
+          syntax: '<color>';
+          inherits: true;
+          initial-value: #f9a602;
+        }
+        @property --sun-color {
+          syntax: '<color>';
+          inherits: true;
+          initial-value: #f9a602;
+        }
+        @property --text-color {
+          syntax: '<color>';
+          inherits: true;
+          initial-value: #000000;
+        }
         :root {
             --sky-color-top: #f9d89c;
             --sky-color-bottom: #f9a602;
             --sun-color: #f9a602;
             --text-color: #000000;
-            
-            --sun-x: 0%;
-        --sun-y: 50%;
-        --sun-glare-opacity: 0;
-		--sun-size: 110px;
+            --modal-inner-bg: rgba(255, 255, 255, 0.3);
+		    --sun-size: 110px;
         }
 
 		@media (min-width: 768px) { /* For medium screens and up (desktop) */
@@ -31,24 +48,71 @@
 			}
 		}
 
+        @keyframes scroll-colors {
+            from {
+                --sky-color-top: #f9d89c;
+                --sky-color-bottom: #f9a602;
+                --sun-color: #f9a602;
+                --text-color: #000000;
+                --modal-inner-bg: rgba(255, 255, 255, 0.3);
+            }
+            25% {
+                --sky-color-top: #87ceeb;
+                --sky-color-bottom: #f0f8ff;
+                --sun-color: #ffcc00;
+            }
+            50% {
+                --sky-color-top: #ff7f50;
+                --sky-color-bottom: #ff4500;
+                --sun-color: #ff4500;
+            }
+            55% {
+                --text-color: #000000;
+                --modal-inner-bg: rgba(255, 255, 255, 0.3);
+            }
+            61% {
+                --text-color: #ffffff;
+                --modal-inner-bg: rgba(255, 255, 255, 0.3);
+            }
+            75% {
+                --sky-color-top: #000080;
+                --sky-color-bottom: #000000;
+                --sun-color: #f5f5f5;
+            }
+            to {
+                --sky-color-top: #000080;
+                --sky-color-bottom: #000000;
+                --sun-color: #f5f5f5;
+                --text-color: #ffffff;
+                --modal-inner-bg: rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        @keyframes sun-moon-animation {
+            0%   { left: 0%;   top: 50%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0); }
+            25%  { left: 25%;  top: 21.72%; }
+            50%  { left: 50%;  top: 10%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 1.0); }
+            75%  { left: 75%;  top: 21.72%; }
+            100% { left: 100%; top: 50%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0); }
+        }
+
         body {
             font-family: 'Google Sans Text', sans-serif;
             background: linear-gradient(to bottom, var(--sky-color-top), var(--sky-color-bottom));
             color: var(--text-color);
-            transition: background 1.5s ease, color 0.5s ease;
+            animation: scroll-colors linear forwards;
+            animation-timeline: scroll(root);
         }
         #sun-moon {
             position: fixed;
-            width: var(--sun-size); /* 105px * 1.75 = 183.75px */
+            width: var(--sun-size);
             height: var(--sun-size);
             background-color: var(--sun-color);
             border-radius: 50%;
-            left: var(--sun-x);
-            top: var(--sun-y);
             transform: translate(-50%, -50%);
-            box-shadow: 0 0 100px 40px rgba(255, 255, 255, var(--sun-glare-opacity));
-            transition: background-color 1.5s ease, left 0.1s linear, top 0.1s linear, box-shadow 1.5s ease;
             z-index: -1; /* Behind content */
+            animation: sun-moon-animation linear forwards;
+            animation-timeline: scroll(root);
         }
         section {
             min-height: 100vh;
@@ -533,121 +597,6 @@
 
     <script>
          document.addEventListener('DOMContentLoaded', () => {
-            const sunMoon = document.getElementById('sun-moon');
-            const body = document.body;
-
-            // Color definitions for different times of day
-            const colors = {
-                sunrise: { skyTop: '#f9d89c', skyBottom: '#f9a602', sun: '#f9a602', text: '#000000' },
-                day: { skyTop: '#87ceeb', skyBottom: '#f0f8ff', sun: '#ffcc00', text: '#000000' },
-                sunset: { skyTop: '#ff7f50', skyBottom: '#ff4500', sun: '#ff4500', text: '#000000' },
-                night: { skyTop: '#000080', skyBottom: '#000000', sun: '#f5f5f5', text: '#ffffff' }
-            };
-
-            // Function to interpolate between two colors
-            function interpolateColor(color1, color2, factor) {
-                const r = Math.round(color1[0] + factor * (color2[0] - color1[0]));
-                const g = Math.round(color1[1] + factor * (color2[1] - color1[1]));
-                const b = Math.round(color1[2] + factor * (color2[2] - color1[2]));
-                const a = (color1[3] + factor * (color2[3] - color1[3])).toFixed(2); // Interpolate alpha and fix to 2 decimal places
-                return `rgba(${r}, ${g}, ${b}, ${a})`;
-            }
-            
-            function hexToRgb(hex) {
-                let r = 0, g = 0, b = 0;
-                // 3 digits
-                if (hex.length == 4) {
-                    r = "0x" + hex[1] + hex[1];
-                    g = "0x" + hex[2] + hex[2];
-                    b = "0x" + hex[3] + hex[3];
-                // 6 digits
-                } else if (hex.length == 7) {
-                    r = "0x" + hex[1] + hex[2];
-                    g = "0x" + hex[3] + hex[4];
-                    b = "0x" + hex[5] + hex[6];
-                }
-                return [+r, +g, +b, 1]; // Add default alpha of 1 (fully opaque)
-            }
-
-
-            const mainScrollHandler = () => {
-                const scrollY = window.scrollY;
-                const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const scrollProgress = scrollY / documentHeight; // 0 to 1
-
-                let currentColors;
-                let factor;
-                const textTransitionStart = 0.55; // Start text transition at 60% of total scroll
-                const textTransitionEnd = 0.61; // End text transition at 65% of total scroll
-
-                let globalTextFactor = 0;
-                if (scrollProgress >= textTransitionStart && scrollProgress <= textTransitionEnd) {
-                    globalTextFactor = (scrollProgress - textTransitionStart) / (textTransitionEnd - textTransitionStart);
-                } else if (scrollProgress > textTransitionEnd) {
-                    globalTextFactor = 1; // Text is fully white
-                } else {
-                    globalTextFactor = 0; // Text is fully black
-                }
-
-                if (scrollProgress < 0.25) {
-                    factor = scrollProgress / 0.25;
-                    currentColors = {
-                        skyTop: interpolateColor(hexToRgb(colors.sunrise.skyTop), hexToRgb(colors.day.skyTop), factor),
-                        skyBottom: interpolateColor(hexToRgb(colors.sunrise.skyBottom), hexToRgb(colors.day.skyBottom), factor),
-                        sun: interpolateColor(hexToRgb(colors.sunrise.sun), hexToRgb(colors.day.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.sunrise.text), hexToRgb(colors.day.text), globalTextFactor)
-                    };
-                } else if (scrollProgress < 0.5) {
-                    factor = (scrollProgress - 0.25) / 0.25;
-                    currentColors = {
-                        skyTop: interpolateColor(hexToRgb(colors.day.skyTop), hexToRgb(colors.sunset.skyTop), factor),
-                        skyBottom: interpolateColor(hexToRgb(colors.day.skyBottom), hexToRgb(colors.sunset.skyBottom), factor),
-                        sun: interpolateColor(hexToRgb(colors.day.sun), hexToRgb(colors.sunset.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.day.text), hexToRgb(colors.sunset.text), globalTextFactor)
-                    };
-                } else if (scrollProgress < 0.75) {
-                    factor = (scrollProgress - 0.5) / 0.25; // Factor for sky and sun
-
-                    currentColors = {
-                        skyTop: interpolateColor(hexToRgb(colors.sunset.skyTop), hexToRgb(colors.night.skyTop), factor),
-                        skyBottom: interpolateColor(hexToRgb(colors.sunset.skyBottom), hexToRgb(colors.night.skyBottom), factor),
-                        sun: interpolateColor(hexToRgb(colors.sunset.sun), hexToRgb(colors.night.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.sunset.text), hexToRgb(colors.night.text), globalTextFactor)
-                    };
-                } else {
-                     factor = (scrollProgress - 0.75) / 0.25;
-                    currentColors = {
-                        skyTop: interpolateColor(hexToRgb(colors.night.skyTop), hexToRgb(colors.night.skyTop), factor),
-                        skyBottom: interpolateColor(hexToRgb(colors.night.skyBottom), hexToRgb(colors.night.skyBottom), factor),
-                        sun: interpolateColor(hexToRgb(colors.night.sun), hexToRgb(colors.night.sun), factor),
-                        text: interpolateColor(hexToRgb(colors.night.text), hexToRgb(colors.night.text), globalTextFactor)
-                    };
-                }
-                
-                // Sun path - a simple arc
-                const sunX = scrollProgress * 100;
-                const sunY = 50 - Math.sin(scrollProgress * Math.PI) * 40; // Arcs up and down
-
-                // Sun glare opacity - peaks at midday
-                const glareOpacity = Math.sin(scrollProgress * Math.PI) * 1.0; // 0 -> 1.0 -> 0
-
-                document.documentElement.style.setProperty('--sky-color-top', currentColors.skyTop);
-                document.documentElement.style.setProperty('--sky-color-bottom', currentColors.skyBottom);
-                document.documentElement.style.setProperty('--sun-color', currentColors.sun);
-                document.documentElement.style.setProperty('--text-color', currentColors.text);
-                document.documentElement.style.setProperty('--sun-x', `${sunX}%`);
-                document.documentElement.style.setProperty('--sun-y', `${sunY}%`);
-                document.documentElement.style.setProperty('--sun-glare-opacity', glareOpacity);
-
-                // Modal Background Color Transition
-                const modalDayBg = [255, 255, 255, 0.3]; // Slightly white for day (30% opaque white)
-                const modalNightBg = [255, 255, 255, 0.3]; // Slightly white for night (30% opaque white)
-                const modalInnerBgColor = interpolateColor(modalDayBg, modalNightBg, globalTextFactor);
-                document.documentElement.style.setProperty('--modal-inner-bg', modalInnerBgColor);
-            };
-
-            window.addEventListener('scroll', throttle(mainScrollHandler, 10));
-
             document.querySelectorAll('.nav-link').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
