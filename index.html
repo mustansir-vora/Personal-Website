@@ -199,9 +199,13 @@
                 transform: scale(0.95);
             }
 
-            #tech-skills {
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
+            #about,
+            #tech-skills,
+            #key-skills,
+            #work-experience,
+            #portfolio {
+                padding-left: 1rem;
+                padding-right: 1rem;
             }
 
             #tech-skills .grid {
@@ -247,6 +251,45 @@
                 transform: translateX(-50%);
             }
             #tech-skills .grid { grid-template-columns: repeat(2, 1fr); }
+
+            .timeline-content h3,
+            .project-card h3,
+            #key-skills .bg-white\/10 h3 {
+                font-size: 1.125rem; /* text-lg */
+                line-height: 1.75rem;
+            }
+
+            #keen-interests .bg-white\/10 h3 {
+                font-size: 1.25rem; /* text-xl */
+                line-height: 1.75rem;
+            }
+
+            #about p,
+            .timeline-content p,
+            .project-card p,
+            #key-skills .bg-white\/10 p,
+            #keen-interests .bg-white\/10 p {
+                font-size: 0.875rem; /* text-sm */
+            }
+
+            #work-experience .text-center h3 {
+                font-size: 1.25rem; /* text-xl */
+            }
+
+            #tech-skills .grid span {
+                font-size: 0.75rem; /* text-xs */
+            }
+
+            .modal-container h3 {
+                font-size: 1.25rem; /* text-xl */
+            }
+            .modal-container h4 {
+                font-size: 1.125rem; /* text-lg */
+            }
+            .modal-container p,
+            .modal-container li {
+                font-size: 0.875rem; /* text-sm */
+            }
         }
 
         @media (min-width: 768px) {
@@ -316,9 +359,9 @@
             <div class="text-center sticky top-16 z-20">
                 <h2 class="text-4xl md:text-6xl font-bold mb-6 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">About Me</h2>
             </div>
-            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
+            <div class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8 font-bold">
                 <p class="text-lg">
-                    A results-driven Conversational AI Developer with over 2.5 years of experience designing, developing, and deploying advanced chatbots and voicebots using the Google CCAI Bot framework. Proficient in Dialogflow ES/CX, Genesys, and Nuance Mix, Microsoft Copilot studio Tools, with a strong background in IVR application development and NLP/NLU integration. Expertise in integrating conversational AI systems with RESTful APIs and SQL databases to build scalable, high-performance solutions. Committed to writing clean, maintainable code and leveraging Agile/Scrum methodologies to deliver exceptional user experiences.
+                    I'm a results-driven professional with a proven track record of solving complex technical challenges and leading projects to successful completion. With over 3 years of experience, I excel at communicating effectively with both technical and non-technical teams, ensuring a cohesive and collaborative approach to every project. My commitment to continuous learning and adaptability allows me to thrive in fast-paced corporate environments. I am a proven team player who consistently delivers high-quality work, and I bring a proactive, problem-solving mindset to every challenge. My goal is to leverage my skills to contribute to innovative solutions and drive organizational success.
                 </p>
             </div>
         </section>
@@ -360,7 +403,7 @@
                         <h3 class="text-xl font-bold">Software Developer</h3>
                         <p class="font-semibold">Servion Global Solutions</p>
                         <p class="text-sm opacity-80">Dec 2023 - Present</p>
-                        <p class="mt-4 text-sm">Designed responsive interfaces with React.js, collaborated with designers, optimized performance, reviewed code, and mentored junior developers to ensure high-quality, scalable applications.</p>
+                        <p class="mt-4 text-sm">Rewarded with the ‘Client Appreciation Award’ and ‘ACE Award FY’24-25’ for significant contributions and excellent customer management.<p class="mt-4 text-sm">Awarded “Best new associate of FY’23-24” for consistently exceeding KPIs and making significant contributions.</p></p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -368,7 +411,7 @@
                         <h3 class="text-xl font-bold">Graduate Engineer Trainee</h3>
                         <p class="font-semibold">Servion Global Solutions</p>
                         <p class="text-sm opacity-80">Nov 2022 - Nov 2023</p>
-                        <p class="mt-4 text-sm">Developed RESTful APIs using Node.js, optimized databases, integrated third-party services, implemented secure authentication, and ensured robust performance for scalable back-end systems.</p>
+                        <p class="mt-4 text-sm">Received exceptional performance reviews, with the Director of Professional Services department describing me as a 'once in a generation find with the ability to lead complex integrations and teams,' which led to opportunities to design and lead complex customer integrations within my second year.</p>
                     </div>
                 </div>
             </div>
@@ -418,7 +461,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                         <h3 class="text-2xl font-bold">Travel</h3>
-                        <p class="mt-2">Exploring new cultures and landscapes, from bustling cities to serene natural wonders.</p>
+                        <p class="mt-2">I'm passionate about travel and adrenaline-fueled adventures. I am constantly seeking new and thrilling experiences, from exploring remote corners to pursuing thrilling activities like swimming with sharks and skydiving in the near future.</p>
                     </div>
                     <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                         <h3 class="text-2xl font-bold">Adventure Sports</h3>
@@ -737,25 +780,29 @@
 
             const keySkills = [
                 {
-                    title: 'Bot Development',
-                    description: 'Designed, developed, and deployed enterprise-scale chatbots and voicebots using Google Dialogflow CX, Genesys, and Nuance, Microsoft copilot studio platforms focusing on creating intelligent and context-aware user interactions.',
+                    title: 'Problem-Solving and Critical Thinking',
+                    description: 'I excel at breaking down complex technical problems to identify root causes and developing innovative, data-driven solutions. My approach involves systematically evaluating options to create effective and efficient strategies.',
                 },
                 {
-                    title: 'Code Quality',
-                    description: 'Wrote clean, efficient, and maintainable code following industry best practices. Developed custom components and tools to enhance chatbot functionality and performance.',
+                    title: 'Communication',
+                    description: 'I have a proven ability to translate complex technical information into clear, concise communications for a wide range of audiences, from non-technical stakeholders to senior leadership.',
                 },
                 {
-                    title: 'Systems Integration',
-                    description: 'Integrated chatbot systems with backend infrastructure, including SQL databases and REST-based microservices, to ensure seamless data flow and functionality.',
+                    title: 'Adaptability and Learning Agility',
+                    description: 'I am a quick-learning professional, always eager to acquire new technologies and stay current with industry trends to ensure my skills are at the cutting edge.',
                 },
                 {
                     title: 'Agile/Scrum Practice',
-                    description: 'Actively participated in all Scrum ceremonies, collaborating with cross-functional teams to align solutions with project goals and user needs.',
+                    description: 'I Actively participate in all Scrum ceremonies, collaborating with cross-functional teams to align solutions with project goals and user needs.',
                 },
                 {
-                    title: 'Troubleshooting',
-                    description: 'Analyzed logs, debugged code, and implemented continuous improvements to resolve technical issues in complex, distributed environments.',
+                    title: 'Time Management and Organization',
+                    description: 'I am an organized professional who thrives in fast-paced corporate environments. I have proved managing multiple priorities and consistently meeting deadlines while delivering high-quality work.',
                 },
+				{
+					title: 'Leadership',
+					description: 'I take initiative, mentor junior colleagues, and try to steer the team to successful outcomes, even without a managerial title.',
+				},
             ];
 
             const techSkillsContainer = document.querySelector('#tech-skills .grid');
