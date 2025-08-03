@@ -570,7 +570,7 @@
             }
 
 
-            window.addEventListener('scroll', () => {
+            const mainScrollHandler = () => {
                 const scrollY = window.scrollY;
                 const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
                 const scrollProgress = scrollY / documentHeight; // 0 to 1
@@ -644,9 +644,9 @@
                 const modalNightBg = [255, 255, 255, 0.3]; // Slightly white for night (30% opaque white)
                 const modalInnerBgColor = interpolateColor(modalDayBg, modalNightBg, globalTextFactor);
                 document.documentElement.style.setProperty('--modal-inner-bg', modalInnerBgColor);
+            };
 
-                
-            });
+            window.addEventListener('scroll', throttle(mainScrollHandler, 10));
 
             document.querySelectorAll('.nav-link').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
