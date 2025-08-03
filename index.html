@@ -115,6 +115,75 @@
         #personal-modal-project-description a:hover {
             opacity: 0.8;
         }
+		
+		.timeline-container {
+            position: relative;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--text-color);
+            transform: translateX(-50%);
+            opacity: 0.5;
+        }
+        #timeline-airplane {
+            position: absolute;
+            left: 50%;
+            top: 1rem;
+            width: 24px;
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M2.01 21L23 12 2.01 3 2 10l15 2-15 2z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translateX(-50%);
+            z-index: 3;
+            transition: top 0.5s cubic-bezier(0.65, 0, 0.35, 1), transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 0 2rem;
+            margin-bottom: 2rem;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-left: 4rem;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-right: 4rem;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-content {
+            position: relative;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--sun-color);
+            border: 3px solid var(--sky-color-top);
+            z-index: 1;
+        }
+        .timeline-item:nth-child(odd)::after {
+            right: -8px;
+            transform: translateX(50%);
+        }
+        .timeline-item:nth-child(even)::after {
+            left: -8px;
+            transform: translateX(-50%);
+        }
 
         @media (max-width: 767px) {
             #mobile-menu a {
@@ -151,6 +220,27 @@
                 top: 1rem;
                 z-index: 20;
             }
+			
+			.timeline-line {
+                left: 20px;
+                transform: translateX(0);
+            }
+            #timeline-airplane {
+                left: 20px;
+            }
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                left: 0;
+                padding-left: 4rem;
+                padding-right: 1rem;
+            }
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+            #tech-skills .grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (min-width: 768px) {
@@ -251,19 +341,29 @@
 
         <section id="work-experience">
             <div class="text-center sticky top-16 z-20">
-                <h2 class="text-4xl md:text-6xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">Work Experience</h2>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 py-4 bg-white/30 backdrop-blur-md px-4 rounded-full inline-block mx-auto">Experience</h2>
             </div>
-            <div class="max-w-6xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl mb-8">
-                    <h3 class="text-2xl font-bold">Software Developer, Servion Global Solutions Pvt Ltd.</h3>
-                    <p class="text-lg font-bold">Nov 2022 – Present</p>
-                    <ul class="list-disc list-inside mt-4">
-                        <li>Worked in close partnership with functional analysts, QA teams, and other technical groups to ensure solutions were developed and tested according to business requirements.</li>
-                        <li>Wrote and executed a comprehensive suite of unit and integration tests to verify feature functionality and ensure the delivery of high-quality, reliable code.</li>
-                        <li>Actively participated in all Scrum ceremonies, including sprint planning, daily stand-ups, backlog refinement, and retrospectives, to ensure project alignment and continuous improvement.</li>
-                        <li>Adhered strictly to team-defined development standards and best practices, participating in code reviews and knowledge-sharing initiatives to maintain a high standard of quality.</li>
-                        <li>Created and maintained clear, detailed documentation for all code and technical solutions.</li>
-                    </ul>
+            <div class="text-center mb-12">
+                 <h3 class="text-2xl md:text-3xl font-bold">Experience That Builds Future-Ready Digital Solutions.</h3>
+            </div>
+            <div class="timeline-container max-w-6xl mx-auto">
+                <div class="timeline-line"></div>
+                <div id="timeline-airplane"></div>
+                <div class="timeline-item">
+                    <div class="timeline-content bg-white/10 backdrop-blur-md p-6 rounded-3xl">
+                        <h3 class="text-xl font-bold">Software Developer</h3>
+                        <p class="font-semibold">Servion Global Solutions</p>
+                        <p class="text-sm opacity-80">Dec 2023 - Present</p>
+                        <p class="mt-4 text-sm">Designed responsive interfaces with React.js, collaborated with designers, optimized performance, reviewed code, and mentored junior developers to ensure high-quality, scalable applications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content bg-white/10 backdrop-blur-md p-6 rounded-3xl">
+                        <h3 class="text-xl font-bold">Graduate Engineer Trainee</h3>
+                        <p class="font-semibold">Servion Global Solutions</p>
+                        <p class="text-sm opacity-80">Nov 2022 - Nov 2023</p>
+                        <p class="mt-4 text-sm">Developed RESTful APIs using Node.js, optimized databases, integrated third-party services, implemented secure authentication, and ensured robust performance for scalable back-end systems.</p>
+                    </div>
                 </div>
             </div>
         </section>
