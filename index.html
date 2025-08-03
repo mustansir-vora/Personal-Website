@@ -416,15 +416,15 @@
             </div>
             <div class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                         <h3 class="text-2xl font-bold">Travel</h3>
                         <p class="mt-2">Exploring new cultures and landscapes, from bustling cities to serene natural wonders.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                         <h3 class="text-2xl font-bold">Adventure Sports</h3>
                         <p class="mt-2">Seeking thrills through activities like hiking, scuba diving, and paragliding.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                         <h3 class="text-2xl font-bold">Photography</h3>
                         <p class="mt-2">Capturing the beauty of the world through my lens, from stunning landscapes to candid moments.</p>
                     </div>
@@ -433,9 +433,9 @@
         </section>
 
         <section id="contact">
-             <div class="max-w-4xl mx-auto bg-white/30 backdrop-blur-md p-8 rounded-xl">
+             <div class="max-w-4xl mx-auto bg-white/30 backdrop-blur-md p-8 rounded-xl text-center">
                 <h2 class="text-3xl font-bold">Get in Touch</h2>
-                <div class="flex justify-center items-center space-x-6 mt-4">
+                <div class="flex justify-center items-center flex-wrap gap-6 mt-4">
                     <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
                         <img src="Assets/GMAIL.svg" alt="Gmail Icon" class="w-12 h-12">
                         <span class="text-sm mt-1">Email</span>
@@ -443,6 +443,14 @@
                     <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
                         <img src="Assets/LINKEDIN.svg" alt="LinkedIn Icon" class="w-12 h-12">
                         <span class="text-sm mt-1">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
+                        <img src="Assets/GITHUB_BLACK.svg" alt="GitHub Icon" class="w-12 h-12">
+                        <span class="text-sm mt-1">GitHub</span>
+                    </a>
+                    <a href="https://www.instagram.com/mustansir_vora/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
+                        <img src="Assets/INSTAGRAM.svg" alt="Instagram Icon" class="w-12 h-12">
+                        <span class="text-sm mt-1">Instagram</span>
                     </a>
                     <a href="tel:+918208928683" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-110">
                         <img src="Assets/MOBILE.svg" alt="Mobile Icon" class="w-12 h-12">
@@ -843,6 +851,13 @@
                 touchendX = e.changedTouches[0].screenX;
                 handleGesture();
             }, { passive: true });
+
+            projectCards.forEach(card => {
+                const p = document.createElement('p');
+                p.className = 'text-xs opacity-50 mt-4 text-center';
+                p.textContent = 'Tap to expand';
+                card.appendChild(p);
+            });
         });
     </script>
 </body>
