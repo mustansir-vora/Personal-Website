@@ -828,25 +828,58 @@
             window.addEventListener('scroll', throttle(scrollHandler, 10));
             updateTimelineAirplanePosition();
 
-            let touchstartX = 0;
-            let touchendX = 0;
+            // Seamless slide-to-open menu
+            const menu = document.getElementById('mobile-menu');
+            let isDragging = false;
+            let touchStartX = 0;
+            let menuStartX = 0;
 
-            function handleGesture() {
-                if (touchendX > touchstartX && touchendX - touchstartX > 100) {
-                    if (touchstartX < 50) { // If swipe starts from the left edge
-                        openMenu();
-                    }
+            document.addEventListener('touchstart', (e) => {
+                const isMenuOpen = !menu.classList.contains('-translate-x-full');
+                touchStartX = e.touches[0].clientX;
+
+                if ((!isMenuOpen && touchStartX < 40) || (isMenuOpen && menu.contains(e.target))) {
+                    isDragging = true;
+                    menu.style.transition = 'none';
+                    const transformMatrix = new DOMMatrix(window.getComputedStyle(menu).transform);
+                    menuStartX = transformMatrix.m41;
                 }
-            }
-
-            document.body.addEventListener('touchstart', e => {
-                touchstartX = e.changedTouches[0].screenX;
             }, { passive: true });
 
-            document.body.addEventListener('touchend', e => {
-                touchendX = e.changedTouches[0].screenX;
-                handleGesture();
+            document.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+
+                const touchCurrentX = e.touches[0].clientX;
+                const diffX = touchCurrentX - touchStartX;
+                let newX = menuStartX + diffX;
+
+                const menuWidth = menu.offsetWidth;
+                newX = Math.max(-menuWidth, Math.min(0, newX));
+
+                menu.style.transform = `translateX(${newX}px)`;
             }, { passive: true });
+
+            document.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+
+                menu.style.transition = ''; // Re-enable transitions
+
+                const transformMatrix = new DOMMatrix(window.getComputedStyle(menu).transform);
+                const currentX = transformMatrix.m41;
+                const menuWidth = menu.offsetWidth;
+
+                const threshold = -menuWidth / 2;
+                if (currentX < threshold) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+
+                setTimeout(() => {
+                    menu.style.transform = '';
+                }, 300); // Match transition duration
+            });
 
             projectCards.forEach(card => {
                 const p = document.createElement('p');
