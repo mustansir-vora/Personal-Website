@@ -965,6 +965,67 @@ body {
                 p.textContent = 'Tap to expand';
                 card.appendChild(p);
             });
+
+            // NEW: Logic to highlight the active navigation link on scroll for desktop view
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.md\\:flex a');
+            
+            // Function to remove all active classes from nav links
+            const removeActiveClasses = () => {
+                navLinks.forEach(link => {
+                    link.classList.remove('bg-white/60', 'scale-105');
+                });
+            };
+
+            // Function to set the active class on a specific link
+            const setActiveLink = (linkId) => {
+                removeActiveClasses();
+                // Select the link using its href attribute
+                const activeLink = document.querySelector(`.md\\:flex a[href="#${linkId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('bg-white/60', 'scale-105');
+                }
+            };
+
+            // Scroll event handler
+            const handleScroll = () => {
+                let currentSectionId = '';
+                const scrollY = window.scrollY;
+
+                // Set Home as active if at the very top of the page
+                if (scrollY < 100) {
+                    setActiveLink('home');
+                    return;
+                }
+                
+                // Loop through sections to find the one in view
+                sections.forEach(section => {
+                    // Check if the section's top is within the viewport, adjusting for the fixed header
+                    const sectionTop = section.offsetTop - 150; 
+                    const sectionHeight = section.offsetHeight;
+
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        currentSectionId = section.id;
+                    }
+                });
+
+                // Set the active link based on the current section ID
+                if (currentSectionId === 'tech-skills' || currentSectionId === 'key-skills') {
+                    // This handles the user request to highlight "Skills" for both tech and soft skills
+                    setActiveLink('tech-skills'); 
+                } else if (currentSectionId === 'portfolio') {
+                    // This handles the user request for "Projects" to highlight for the "portfolio" section
+                    setActiveLink('portfolio');
+                } else if (currentSectionId) {
+                    setActiveLink(currentSectionId);
+                }
+            };
+
+            // Add the scroll event listener
+            window.addEventListener('scroll', handleScroll);
+            
+            // Initial call to set the active link on page load
+            handleScroll();
         });
     </script>
 </body>
