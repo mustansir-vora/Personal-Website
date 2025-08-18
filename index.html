@@ -368,17 +368,17 @@ body {
 <body class="bg-gray-900">
 
     <header class="fixed top-0 p-4 z-30 w-full">
-        <nav class="flex justify-between items-center">
-            <div class="hidden md:flex justify-center space-x-4 w-full">
-                <a href="#home" class="text-color-change font-bold bg-white/30 backdrop-blur-2xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-3xl hover:bg-white/60 transform translate-z-0 inline-block transition-all ease-in-out hover:scale-105 hover:shadow-2xl">Home</a>
-                <a href="#about" class="text-color-change font-bold bg-white/30 backdrop-blur-2xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-3xl hover:bg-white/60 transform translate-z-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">About</a>
-                <a href="#tech-skills" class="text-color-change font-bold bg-white/30 backdrop-blur-2xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-3xl hover:bg-white/60 transform translate-z-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Skills</a>
-                <a href="#work-experience" class="text-color-change font-bold bg-white/30 backdrop-blur-2xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-3xl hover:bg-white/60 transform translate-z-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Experience</a>
-                <a href="#portfolio" class="text-color-change font-bold bg-white/30 backdrop-blur-2xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-3xl hover:bg-white/60 transform translate-z-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Projects</a>
-                <a href="#contact" class="text-color-change font-bold bg-white/30 backdrop-blur-2xl px-4 py-2 text-sm md:px-4 md:py-2 md:text-base rounded-3xl hover:bg-white/60 transform translate-z-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Get in Touch</a>
+        <nav class="fixed top-4 md:top-1 w-full z-50 flex justify-between items-center">
+            <div class="md:hidden flex justify-start pl-1 w-full">
+                <button id="hamburger-btn" class="text-xl font-bold bg-white/30 backdrop-blur-3xl p-2 rounded-xl text-color-change">&#9776;</button>
             </div>
-            <div class="md:hidden flex justify-start w-full">
-                <button id="hamburger-btn" class=" text-xl font-bold bg-white/30 backdrop-blur-3xl p-2 rounded-xl text-color-change">&#9776;</button>
+            <div class="hidden md:flex justify-center space-x-2 w-full bg-white/30 backdrop-blur-2xl p-2 rounded-full max-w-fit mx-auto">
+                <a href="#home" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block transition-colors duration-400 ease-in-out hover:scale-105">Home</a>
+                <a href="#about" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block transition-colors duration-400 ease-in-out hover:scale-105">About</a>
+                <a href="#tech-skills" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block transition-colors duration-400 ease-in-out hover:scale-105">Skills</a>
+                <a href="#work-experience" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block transition-colors duration-400 ease-in-out hover:scale-105">Experience</a>
+                <a href="#portfolio" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block transition-colors duration-400 ease-in-out hover:scale-105">Projects</a>
+                <a href="#contact" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block transition-colors duration-400 ease-in-out hover:scale-105">Get in Touch</a>
             </div>
         </nav>
         <div id="mobile-menu" class="md:hidden fixed top-0 left-0 h-full w-30 bg-white/30 backdrop-blur-3xl transition-transform duration-300 ease-in-out transform -translate-x-full rounded-r-3xl">
@@ -480,7 +480,7 @@ body {
             <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto  transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Tech Stack</h2>
         </div>
         <div class="max-w-7xl mx-auto">
-          <div class="grid grid-cols-2 md:grid-cols-7 gap-4 backdrop-blur-md">
+          <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
                 <!-- Skills will be dynamically added here -->
             </div>
         </div>
@@ -491,7 +491,7 @@ body {
            <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto  transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Soft Skills</h2>
         </div>
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 backdrop-blur-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Key skills will be dynamically added here -->
             </div>
         </div>
@@ -659,10 +659,14 @@ body {
 
             function openMenu() {
                 mobileMenu.classList.remove('-translate-x-full');
+                // Hides the hamburger button when the menu opens
+                hamburgerBtn.classList.add('hidden');
             }
 
             function closeMenu() {
                 mobileMenu.classList.add('-translate-x-full');
+                // Shows the hamburger button when the menu closes
+                hamburgerBtn.classList.remove('hidden');
             }
 
             hamburgerBtn.addEventListener('click', (e) => {
