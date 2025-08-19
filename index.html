@@ -130,12 +130,12 @@ body {
 
         /* Apply a smooth transition to common interactive elements - This will only cover scale in (Hover in) */
         .group:hover, button:hover, a:hover, div:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover {
-            transition: all 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out !important;
         }
 
         /* Apply a smooth transition to common interactive elements - This will only cover scale out (Hover out) */
         .group, button, a, div, h1, h2, h3, h4, h5, p {
-            transition-property: all !important;
+            transition-property: transform !important;
             transition-duration: 0.3s !important;
             transition-timing-function: ease-in-out !important;
         }
@@ -143,7 +143,7 @@ body {
         /* Text color transition - global property */
         .text-color-change, h1, h2, h3, h4, h5, a, p, button, hidden.md\:flex a {
             color: var(--text-color) !important;
-            transition: color 0.8s ease-in-out;
+            transition: color 0.8s ease-in-out !important;
         }
 
         /* Modal Styles */
