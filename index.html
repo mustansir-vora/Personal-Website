@@ -46,7 +46,7 @@
 			:root {
 				--sun-size: 184px;  /* Larger size for desktop (e.g., 184px) */
 			}
-		}
+        }
 
         @keyframes scroll-colors {
             from {
@@ -101,6 +101,97 @@
             75%  { left: 75%;  top: 21.72%; }
             100% { left: 100%; top: 50%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.5); }
         }
+
+        /* Animation for hero section elements */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes staggerFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation classes */
+        .animate-fade-in-scale {
+            animation: fadeInScale 1s ease-out forwards;
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        .animate-stagger-fade-in {
+            animation: staggerFadeIn 0.5s ease-out forwards;
+        }
+
+        /* Initial state for animations */
+        .hero-content > h1,
+        .hero-content > .subtitle,
+        .hero-content > .button-group,
+        .hero-content > .social-icons > * {
+            opacity: 0;
+        }
+
+        .hero-content.animate-in > h1 {
+            animation: fadeInScale 1s ease-out 0.2s forwards;
+        }
+
+        .hero-content.animate-in > .subtitle {
+            animation: slideInRight 0.8s ease-out 0.6s forwards;
+        }
+
+        .hero-content.animate-in > .button-group {
+            animation: slideUp 0.6s ease-out 1s forwards;
+        }
+
+        .hero-content.animate-in > .social-icons > * {
+            animation: staggerFadeIn 0.5s ease-out forwards;
+        }
+
+        .hero-content.animate-in > .social-icons > *:nth-child(1) { animation-delay: 1.4s; }
+        .hero-content.animate-in > .social-icons > *:nth-child(2) { animation-delay: 1.5s; }
+        .hero-content.animate-in > .social-icons > *:nth-child(3) { animation-delay: 1.6s; }
+        .hero-content.animate-in > .social-icons > *:nth-child(4) { animation-delay: 1.7s; }
 
 body {
             background-color: transparent; /* Ensure the background blends with the display */
@@ -417,13 +508,14 @@ body {
 
     <main class="relative z-10">
         <section id="home" class="h-screen flex items-center justify-center text-center">
-            <div>
+            <div class="hero-content">
                 <h1 class="text-5xl md:text-7xl font-bold">Hello, I'm Mustansir Vora</h1>
-                <div class="mt-8 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 justify-center">
+                <p class="subtitle text-xl md:text-2xl mt-4 opacity-80">Full Stack Developer & AI Research Enthusiast</p>
+                <div class="button-group mt-8 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 justify-center">
                     <a href="https://wa.me/918208928683?text=Hello%20there!" target="_blank" rel="noopener noreferrer" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4  ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Let's connect</a>
                     <a href="https://drive.google.com/uc?export=download&id=1E49zMuKNj9QgAAHkoFHGyz8JV0q7H73W" id="download-resume" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4  ease-in-out hover:scale-105 hover:shadow-2xl text-color-change" download>Download Resume</a>
                 </div>
-                <div class=" mt-8 flex justify-center space-x-6">
+                <div class="social-icons mt-8 flex justify-center space-x-6">
                     <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center ease-in-out hover:scale-110 hover:shadow-2xl">
                         <img src="Assets/GMAIL_TOP.svg" alt="Gmail Icon" class="w-5 h-6 md:w-7 md:h-8">
                     </a>
@@ -1005,6 +1097,29 @@ body {
                     activeLink.classList.add('bg-white/60', 'scale-105');
                 }
             };
+
+            // Hero section animations on page load
+            const heroContent = document.querySelector('.hero-content');
+            
+            // Trigger animations when page loads
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    heroContent.classList.add('animate-in');
+                }, 300);
+            });
+
+            // Also trigger when user scrolls back to top
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            if (heroContent) {
+                observer.observe(heroContent);
+            }
 
             // Scroll event handler
             const handleScroll = () => {
