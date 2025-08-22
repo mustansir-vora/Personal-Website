@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Mustansir Vora - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mustansir Vora - Full Stack Developer & AI Enthusiast</title>
+
+    <meta name="description" content="Portfolio of Mustansir Vora, a Full Stack Developer and AI Enthusiast with expertise in Java, Python, cloud platforms (AWS, Azure, GCP), and conversational AI systems.">
+    <meta name="keywords" content="Mustansir Vora, Full Stack Developer, AI Enthusiast, Java, Spring Boot, Python, React, AWS, Azure, GCP, Dialogflow, Portfolio, Software Developer">
+    <meta name="author" content="Mustansir Vora">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mustansir Vora - Portfolio">
+    <meta property="og:description" content="Explore the projects and experience of Mustansir Vora, a skilled Full Stack Developer and AI Enthusiast.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mustansir Vora - Portfolio">
+    <meta name="twitter:description" content="Explore the projects and experience of Mustansir Vora, a skilled Full Stack Developer and AI Enthusiast.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;700&display=swap">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mustansir Vora",
+      "jobTitle": "Full Stack Developer",
+      "url": "YOUR_WEBSITE_URL",
+      "sameAs": [
+        "https://linkedin.com/in/mustansir-vora-56128b216",
+        "https://github.com/mustansir-vora",
+        "https://www.instagram.com/mustansir_vora/"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Mumbai"
+      },
+      "knowsAbout": ["Java", "Python", "Spring Boot", "Artificial Intelligence", "Cloud Computing", "React.js", "SQL", "NoSQL"]
+    }
+    </script>
+    
     <style>
         html {
             scroll-behavior: smooth;
@@ -245,6 +278,7 @@
             z-index: -1; /* Behind content */
             animation: sun-moon-animation linear forwards;
             animation-timeline: scroll(root);
+            will-change: transform, background-color; /* Performance Optimization */
         }
         section {
             min-height: 100vh;
@@ -252,19 +286,12 @@
             flex-direction: column;
             padding: 2rem;
         }
-
-        /* Apply a smooth transition to common interactive elements - This will only cover scale in (Hover in) */
-        .group:hover, button:hover, a:hover, div:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover {
-            transition: transform 0.3s ease-in-out !important;
+        
+        /* Performance: Hint to the browser about upcoming transform changes */
+        .will-change-transform {
+            will-change: transform;
         }
-
-        /* Apply a smooth transition to common interactive elements - This will only cover scale out (Hover out) */
-        .group, button, a, div, h1, h2, h3, h4, h5, p {
-            transition-property: transform !important;
-            transition-duration: 0.3s !important;
-            transition-timing-function: ease-in-out !important;
-        }
-
+        
         /* Text color transition - global property */
         .text-color-change, h1, h2, h3, h4, h5, a, p, button, hidden.md\:flex a {
             color: var(--text-color) !important;
@@ -512,30 +539,29 @@
 <body class="bg-gray-900">
 
     <header class="fixed top-0 p-4 z-30 w-full">
-        <!-- ADDED ID: "main-nav" for animation targeting -->
         <nav id="main-nav" class="fixed top-4 md:top-1 w-full z-50 flex justify-between items-center">
             <div class="md:hidden flex justify-start pl-1 w-full">
-                <button id="hamburger-btn" class="text-xl font-bold bg-white/30 backdrop-blur-3xl p-2 rounded-xl text-color-change">&#9776;</button>
+                <button id="hamburger-btn" aria-label="Open menu" class="text-xl font-bold bg-white/30 backdrop-blur-3xl p-2 rounded-xl text-color-change">&#9776;</button>
             </div>
             <div class="hidden md:flex justify-center space-x-2 w-full bg-white/30 backdrop-blur-2xl p-2 rounded-full max-w-fit mx-auto">
-                <a href="#home" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105">Home</a>
-                <a href="#about" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105">About</a>
-                <a href="#tech-skills" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105">Skills</a>
-                <a href="#work-experience" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105">Experience</a>
-                <a href="#portfolio" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105">Projects</a>
-                <a href="#contact" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105">Get in Touch</a>
+                <a href="#home" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105 transition-all duration-300 ease-in-out will-change-transform">Home</a>
+                <a href="#about" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105 transition-all duration-300 ease-in-out will-change-transform">About</a>
+                <a href="#tech-skills" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105 transition-all duration-300 ease-in-out will-change-transform">Skills</a>
+                <a href="#work-experience" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105 transition-all duration-300 ease-in-out will-change-transform">Experience</a>
+                <a href="#portfolio" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105 transition-all duration-300 ease-in-out will-change-transform">Projects</a>
+                <a href="#contact" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105 transition-all duration-300 ease-in-out will-change-transform">Get in Touch</a>
             </div>
         </nav>
         <div id="mobile-menu" class="md:hidden fixed top-0 left-0 h-full w-30 bg-white/30 backdrop-blur-3xl transition-transform duration-300 ease-in-out transform -translate-x-full rounded-r-3xl">
             <div class="flex justify-end p-4 text-color-change">
-                <button id="close-menu-btn" class="text-2xl font-bold">&times;</button>
+                <button id="close-menu-btn" aria-label="Close menu" class="text-2xl font-bold">&times;</button>
             </div>
-            <a href="#home" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4  ease-in-out hover:scale-105 hover:shadow-2xl">Home</a>
-            <a href="#about" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4  ease-in-out hover:scale-105 hover:shadow-2xl">About</a>
-            <a href="#tech-skills" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4  ease-in-out hover:scale-105 hover:shadow-2xl">Skills</a>
-            <a href="#work-experience" class="block text-color-change text-center  font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4  ease-in-out hover:scale-105 hover:shadow-2xl">Experience</a>
-            <a href="#portfolio" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4  ease-in-out hover:scale-105 hover:shadow-2xl">Projects</a>
-            <a href="#contact" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4  ease-in-out hover:scale-105 hover:shadow-2xl">Get in Touch</a>
+            <a href="#home" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Home</a>
+            <a href="#about" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">About</a>
+            <a href="#tech-skills" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Skills</a>
+            <a href="#work-experience" class="block text-color-change text-center  font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Experience</a>
+            <a href="#portfolio" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Projects</a>
+            <a href="#contact" class="block text-color-change text-center font-bold text-xl px-5 py-3 rounded-full hover:bg-white/60 border mb-2 mx-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">Get in Touch</a>
         </div>
     </header>
 
@@ -547,75 +573,64 @@
                 <h1 class="text-5xl md:text-7xl font-bold terminal-typing" id="typing-name"></h1>
                 <p class="subtitle text-xl md:text-2xl mt-4 opacity-80 terminal-typing" id="typing-subtitle"></p>
                 <div class="button-group mt-8 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 justify-center">
-                    <!-- ADDED ID: "connect-btn" for animation targeting -->
-                    <a href="https://wa.me/918208928683?text=Hello%20there!" id="connect-btn" target="_blank" rel="noopener noreferrer" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4  ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Let's connect</a>
-                    <!-- CHANGED ID: for consistency -->
-                    <a href="https://drive.google.com/uc?export=download&id=1E49zMuKNj9QgAAHkoFHGyz8JV0q7H73W" id="download-resume-btn" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4  ease-in-out hover:scale-105 hover:shadow-2xl text-color-change" download>Download Resume</a>
+                    <a href="https://wa.me/918208928683?text=Hello%20there!" id="connect-btn" target="_blank" rel="noopener noreferrer" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Let's connect</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1E49zMuKNj9QgAAHkoFHGyz8JV0q7H73W" id="download-resume-btn" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change" download>Download Resume</a>
                 </div>
                 <div class="social-icons mt-8 flex justify-center space-x-6">
-                    <!-- FIXED: Removed invalid 'ease-in-out' class and added proper transition classes for hover effect -->
-                    <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-transform duration-300">
-                        <img src="Assets/GMAIL_TOP.svg" alt="Gmail Icon" class="w-5 h-6 md:w-7 md:h-8">
+                    <a href="mailto:voramustansir9278@gmail.com" aria-label="Send an email to Mustansir Vora" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                        <img src="Assets/GMAIL_TOP.svg" alt="Gmail Icon" class="w-5 h-6 md:w-7 md:h-8" width="28" height="32" loading="lazy" decoding="async">
                     </a>
-                    <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-transform duration-300">
-                        <img src="Assets/LINKEDIN_TOP.svg" alt="LinkedIn Icon" class="w-5 h-6 md:w-7 md:h-8">
+                    <a href="https://linkedin.com/in/mustansir-vora-56128b216" aria-label="View Mustansir Vora's LinkedIn profile" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                        <img src="Assets/LINKEDIN_TOP.svg" alt="LinkedIn Icon" class="w-5 h-6 md:w-7 md:h-8" width="28" height="32" loading="lazy" decoding="async">
                     </a>
-                    <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-transform duration-300">
-                        <img src="Assets/GITHUB_TOP.svg" alt="GitHub Icon" class="w-5 h-6 md:w-8 md:h-8">
+                    <a href="https://github.com/mustansir-vora" aria-label="View Mustansir Vora's GitHub profile" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                        <img src="Assets/GITHUB_TOP.svg" alt="GitHub Icon" class="w-5 h-6 md:w-8 md:h-8" width="32" height="32" loading="lazy" decoding="async">
                     </a>
-                    <a href="https://www.instagram.com/mustansir_vora/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-transform duration-300">
-                        <img src="Assets/INSTAGRAM_TOP.svg" alt="Instagram Icon" class="w-5 h-6 md:w-8 md:h-8">
+                    <a href="https://www.instagram.com/mustansir_vora/" aria-label="View Mustansir Vora's Instagram profile" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                        <img src="Assets/INSTAGRAM_TOP.svg" alt="Instagram Icon" class="w-5 h-6 md:w-8 md:h-8" width="32" height="32" loading="lazy" decoding="async">
                     </a>
+                </div>
             </div>
         </section>
 
         <section id="about" class="relative">
-        <!-- The "About Me" title remains sticky and at the top -->
         <div class="text-center sticky top-4 md:top-16 z-20">
-            <h2 class="text-2xl md:text-4xl font-bold mb-6 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">About Me</h2>
+            <h2 class="text-2xl md:text-4xl font-bold mb-6 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">About Me</h2>
         </div>
 
-        <div class="md:hidden max-w-7xl mx-auto bg-white/10 backdrop-blur-md p-4 rounded-3xl mb-8 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+        <div class="md:hidden max-w-7xl mx-auto bg-white/10 backdrop-blur-md p-4 rounded-3xl mb-8 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
             <p class="text-lg">
                 I'm an <strong>Efficacious professional</strong> with a track record of <strong>successfully completing projects</strong> and <strong>resolving challenging technical issues.</strong> With more than <strong>three years of experience,</strong> I am an excellent communicator with both technical and non-technical teams, ensuring a <strong>cooperative approach</strong> to each project. My commitment to continuous <strong>learning</strong> and <strong>adaptability</strong> allows me to thrive in fast-paced corporate environments. I am a <strong>dependable team player</strong> who consistently delivers excellent work, and I approach every challenge with a <strong>proactive, problem-solving mindset.</strong> My goal is to leverage my skills to contribute to <strong>innovative solutions</strong> and drive <strong>organizational success.</strong>
             </p>
         </div>
         
-        <!-- Main container for the cards, following the staggered pattern -->
         <div class="hidden md:flex relative max-w-7xl mx-auto flex flex-col md:flex-row md:items-start justify-center gap-8 md:gap-8 lg:gap-8">
             
-            <!-- Left column for cards 1, 3, and 5 -->
             <div class="flex flex-col gap-8 w-12 md:w-1/2 lg:w-1/1">
-                <!-- Card 1 -->
-                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                     <p class="text-md">
                         I'm an <strong>Efficacious professional</strong> with a track record of <strong>successfully completing projects</strong> and <strong>resolving challenging technical issues.</strong> With more than <strong>three years of experience,</strong> I am an excellent communicator with both technical and non-technical teams, ensuring a <strong>cooperative approach</strong> to each project. My commitment to continuous <strong>learning</strong> and <strong>adaptability</strong> allows me to thrive in fast-paced corporate environments. I am a <strong>dependable team player</strong> who consistently delivers excellent work, and I approach every challenge with a <strong>proactive, problem-solving mindset.</strong> My goal is to leverage my skills to contribute to <strong>innovative solutions</strong> and drive <strong>organizational success.</strong>
                     </p>
                 </div>
-                <!-- Card 3 -->
-                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                     <p class="text-md">
                         I'm fluent in core <strong>backend technologies like Java, Spring Boot, and Python,</strong> comfortable on the frontend with <strong></strong>React.js,</strong> and adept at building systems with <strong>RESTful APIs, SQL, and NoSQL.</strong> I confidently navigate multi-cloud environments, leveraging <strong>AWS, Azure, and Google Cloud Platform</strong> to architect robust solutions. This comprehensive skill set allows me to lead <strong>end-to-end development</strong> of sophisticated software systems.
                     </p>
                 </div>
-                <!-- Card 5 -->
-                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                     <p class="text-md">
                         Looking ahead, my ambitions extend beyond mere financial success; it is to establish a <strong>thriving career</strong> that operates with some level of <strong>autonomy,</strong> giving me the freedom to pursue my passion for <strong>global travel and adrenaline-fueled adventures.</strong> Ultimately, I seek a future where <strong>professional success serves as a means to an end,</strong> enabling me to a life rich in experiences, not just professional commitments/obligations. This chase for a <strong>balance</strong>—where <strong>professional achievement enables personal exploration</strong>—is what I would define as my <strong>ultimate goal.</strong>
                     </p>
                 </div>
             </div>
             
-            <!-- Right column for cards 2 and 4, with a top margin to create the staggered effect -->
             <div class="flex flex-col gap-8 w-full md:w-1/2 lg:w-1/1 mt-0 md:mt-24">
-                <!-- Card 2 -->
-                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                     <p class="text-md">
                         My journey into tech began not with a clear path, but with a <strong>formidable challenge.</strong> The initial months were a crucible, forging my sense of <strong>adaptability</strong> and a passion for <strong>rapid, continuous learning.</strong> It taught me that a person's true measure isn't just their knowledge, but their ability to acquire and <strong>master new skills efficiently.</strong> This foundation has been my launchpad, enabling me to turn challenges into opportunities and <strong>lead complex, high-stakes client integrations.</strong>
                     </p>
                 </div>
-                <!-- Card 4 -->
-                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                <div class="bg-white/20 backdrop-blur-md p-4 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                     <p class="text-md">
                         While versatile, my true passion lies at the frontier of <strong>Artificial Intelligence.</strong> I'm captivated by AI's potential to create <strong>intuitive human-computer interactions.</strong> I specialize in designing and deploying <strong>advanced conversational AI systems</strong> using platforms like <strong>Google Dialogflow (ES/CX), Genesys,</strong> and <strong>Microsoft Copilot Studio.</strong> My work goes beyond simple chatbots/IVR systems; I have engineered complex <strong>CX solutions</strong> incorporating <strong>Large Language Models (LLMs), Retrieval Augmented Generation (RAG) patterns,</strong> and <strong>Voice Biometrics</strong> for truly <strong>context-aware</strong> and <strong>personalized user experiences.</strong> I approach every project with <strong>personal ownership,</strong> upholding my work to <strong>high standards.</strong>
                     </p>
@@ -626,29 +641,57 @@
 
     <section id="tech-skills">
         <div class="text-center sticky top-16 z-20">
-            <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Tech Stack</h2>
+            <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Tech Stack</h2>
         </div>
         <div class="max-w-7xl mx-auto">
-          <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
-                <!-- Skills will be dynamically added here -->
+            <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/JAVA.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Java</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/JAVASCRIPT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">JavaScript</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/NODEJS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Node.js</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/REACT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">React.js</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/PYTHON.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Python</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/SQL.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">SQL</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/NOSQL.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">NoSQL</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/HTML.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">HTML</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/CSS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">CSS</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/BOOTSTRAP.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Bootstrap</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/AWS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">AWS</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/GCP.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">GCP</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/AZURE.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Azure</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/DIALOGFLOW.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Dialogflow CX</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/COPILOTSTUDIO.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Copilot Studio</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/GENESYS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Genesys</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/POWERBI.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">PowerBI</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/LOOKER.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Looker Studio</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/LLM.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">LLM</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/RAG.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">RAG</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/MACHINELEARNING.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">ML</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/DOCKER.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Docker</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/KUBERNETES.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Kubernetes</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/GIT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">GIT</span></div>
             </div>
         </div>
     </section>
 
     <section id="key-skills">
         <div class="text-center sticky top-16 z-20">
-           <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Soft Skills</h2>
+           <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Soft Skills</h2>
         </div>
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Key skills will be dynamically added here -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change"><h3 class="text-xl font-bold">Problem-Solving and Critical Thinking</h3><p class="mt-2">I am great at breaking down complex technical problems to find their root causes and coming up with new, data-driven solutions. My method involves carefully weighing all of the available choices in order to come up with strategies that work well and efficiently.</p></div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change"><h3 class="text-xl font-bold">Communication</h3><p class="mt-2">I have a track record of translating complex technical information into clear, concise communications for a wide range of audiences, from non-technical stakeholders to senior leadership.</p></div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change"><h3 class="text-xl font-bold">Adaptability and Learning Agility</h3><p class="mt-2">I am a quick-learner, always eager to acquire new technologies and keep up with industry trends to ensure my skills are at the cutting edge.</p></div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change"><h3 class="text-xl font-bold">Agile/Scrum Practice</h3><p class="mt-2">I actively participate in all Scrum ceremonies, collaborating with cross-functional teams to align solutions with project goals and user needs.</p></div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change"><h3 class="text-xl font-bold">Time Management and Organization</h3><p class="mt-2">I am a professional who likes to stay organized and does well in fast-paced work environments. I have proved managing multiple priorities and consistently meeting deadlines while delivering high-quality work.</p></div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change"><h3 class="text-xl font-bold">Leadership</h3><p class="mt-2">Even though I do not have a managerial title, I take the lead, help my less experienced coworkers, and try to steer the team to successful outcomes.</p></div>
             </div>
         </div>
     </section>
 
         <section id="work-experience">
             <div class="text-center sticky top-16 z-20">
-                <h2 class="text-2xl md:text-4xl font-bold mb-6 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Experience</h2>
+                <h2 class="text-2xl md:text-4xl font-bold mb-6 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Experience</h2>
             </div>
             <div class="text-center mb-12">
                  <h3 class="text-2xl md:text-3xl font-bold text-color-change">Experience That Builds Future-Ready Digital Solutions.</h3>
@@ -657,7 +700,7 @@
                 <div class="timeline-line"></div>
                 <div id="timeline-airplane"></div>
                 <div class="timeline-item">
-                    <div class="timeline-content bg-white/10 backdrop-blur-xl p-6 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                    <div class="timeline-content bg-white/10 backdrop-blur-xl p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                         <h3 class="text-xl font-bold">Software Developer</h3>
                         <p class="font-semibold">Servion Global Solutions</p>
                         <p class="text-sm opacity-80">Dec 2023 - Present</p>
@@ -665,7 +708,7 @@
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-content bg-white/10 backdrop-blur-xl p-6 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                    <div class="timeline-content bg-white/10 backdrop-blur-xl p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                         <h3 class="text-xl font-bold">Graduate Engineer Trainee</h3>
                         <p class="font-semibold">Servion Global Solutions</p>
                         <p class="text-sm opacity-80">Nov 2022 - Nov 2023</p>
@@ -677,21 +720,21 @@
 
         <section id="portfolio">
             <div class="text-center sticky top-16 z-20">
-            <h2 id="my-work-header" class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">My Work</h2>
+            <h2 id="my-work-header" class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">My Work</h2>
             </div>
             <div class="max-w-7xl mx-auto">
 
                 <h3 class="text-2xl md:text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Professional Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="Rogers and Shaw Communications Inc." data-project-description="This project focused on the end-to-end architecture, development, and deployment of a highly integrated and intelligent Interactive Voice Response (IVR) system, leveraging the Microsoft Cloud ecosystem, particularly Microsoft Copilot Studio. The core objective was to create a seamless, data-driven, and natural language-enabled IVR experience for users." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>Core IVR System Architecture and Development with Microsoft Copilot Studio:</strong> <ul class='list-disc list-inside ml-auto'><li class='mb-2'>The foundational element of the project involved <strong>architecting and developing the core IVR components directly within Microsoft Copilot Studio.</strong> This encompassed the design and implementation of conversational flows, topic management, and intent recognition, forming the backbone of the interactive voice experience.</li><li class='mb-2'>To ensure <strong>seamless integration of the IVR with various enterprise systems and data sources,</strong> significant effort was dedicated to designing and building custom connectors. These connectors acted as bridges, allowing Copilot Studio to communicate effectively with external applications and databases.</li><li class='mb-2'><strong>Complex business logic and data orchestration were implemented using Power Automate flows.</strong> These flows were crucial for routing calls, retrieving and updating information, triggering actions in other systems, and managing the overall call journey based on user input.</li><li class='mb-2'><strong>Power Apps were developed to provide intuitive interfaces for managing IVR configurations, data, and potentially for agents to interact with call-related information.</strong> This likely included custom UIs for content management or real-time monitoring.</li><li class='mb-2'><strong>Azure Trigger Functions (serverless compute) were strategically utilized to execute specific pieces of code in response to events within the IVR or external systems.</strong> This enabled highly scalable and event-driven processing, such as data validation or triggering external APIs based on IVR interactions.</li><li class='mb-2'><strong>Azure SQL DB connectors were established to facilitate robust data storage and retrieval for the IVR.</strong> This involved designing database schemas, managing data persistence for call logs, user preferences, and potentially dynamic content displayed or used within the IVR.</li></ul></li><li class='mb-2'><strong>Robust API Integrations using Azure HTTP Trigger Functions:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>To ensure the IVR system could interact with a wide array of internal and external services, <strong>robust API integrations were built using Azure HTTP Trigger Functions.</strong> These functions acted as secure and scalable endpoints, enabling the IVR to send and receive data from various systems.</li><li class='mb-2'>This involved developing the necessary logic within the functions to <strong>transform data, handle authentication, and manage error conditions</strong> for seamless communication between the IVR and diverse application programming interfaces (APIs). These integrations were critical for functionalities like retrieving customer information, processing transactions, or accessing knowledge bases.</li></ul></li><li class='mb-2'><strong>Automated IVR Reporting and Analytics:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>A significant focus was placed on enabling <strong>data-driven insights into IVR performance and user behavior.</strong> This was achieved by implementing <strong>custom Power Automate trigger flows</strong> designed to extract and process IVR data. These flows likely captured metrics such as call volume, resolution rates, user journey paths, and common user intents.</li><li class='mb-2'>The processed data was then fed into <strong>Power BI dashboards,</strong> providing a comprehensive and visually rich representation of IVR performance. These dashboards enabled stakeholders to monitor key performance indicators (KPIs), identify trends, and make informed decisions for continuous improvement of the IVR system. This automation significantly reduced manual effort in data collection and analysis.</li></ul></li><li class='mb-2'><strong>Natural Language Communication and Response Accuracy:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>A key innovation involved <strong>developing custom logic within the Microsoft Cloud environment specifically to enhance natural language communication between the IVR and users.</strong> This went beyond standard intent recognition and likely involved sophisticated techniques to interpret complex user queries and nuances in language.</li></ul></li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="Rogers and Shaw Communications Inc." data-project-description="This project focused on the end-to-end architecture, development, and deployment of a highly integrated and intelligent Interactive Voice Response (IVR) system, leveraging the Microsoft Cloud ecosystem, particularly Microsoft Copilot Studio. The core objective was to create a seamless, data-driven, and natural language-enabled IVR experience for users." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>Core IVR System Architecture and Development with Microsoft Copilot Studio:</strong> <ul class='list-disc list-inside ml-auto'><li class='mb-2'>The foundational element of the project involved <strong>architecting and developing the core IVR components directly within Microsoft Copilot Studio.</strong> This encompassed the design and implementation of conversational flows, topic management, and intent recognition, forming the backbone of the interactive voice experience.</li><li class='mb-2'>To ensure <strong>seamless integration of the IVR with various enterprise systems and data sources,</strong> significant effort was dedicated to designing and building custom connectors. These connectors acted as bridges, allowing Copilot Studio to communicate effectively with external applications and databases.</li><li class='mb-2'><strong>Complex business logic and data orchestration were implemented using Power Automate flows.</strong> These flows were crucial for routing calls, retrieving and updating information, triggering actions in other systems, and managing the overall call journey based on user input.</li><li class='mb-2'><strong>Power Apps were developed to provide intuitive interfaces for managing IVR configurations, data, and potentially for agents to interact with call-related information.</strong> This likely included custom UIs for content management or real-time monitoring.</li><li class='mb-2'><strong>Azure Trigger Functions (serverless compute) were strategically utilized to execute specific pieces of code in response to events within the IVR or external systems.</strong> This enabled highly scalable and event-driven processing, such as data validation or triggering external APIs based on IVR interactions.</li><li class='mb-2'><strong>Azure SQL DB connectors were established to facilitate robust data storage and retrieval for the IVR.</strong> This involved designing database schemas, managing data persistence for call logs, user preferences, and potentially dynamic content displayed or used within the IVR.</li></ul></li><li class='mb-2'><strong>Robust API Integrations using Azure HTTP Trigger Functions:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>To ensure the IVR system could interact with a wide array of internal and external services, <strong>robust API integrations were built using Azure HTTP Trigger Functions.</strong> These functions acted as secure and scalable endpoints, enabling the IVR to send and receive data from various systems.</li><li class='mb-2'>This involved developing the necessary logic within the functions to <strong>transform data, handle authentication, and manage error conditions</strong> for seamless communication between the IVR and diverse application programming interfaces (APIs). These integrations were critical for functionalities like retrieving customer information, processing transactions, or accessing knowledge bases.</li></ul></li><li class='mb-2'><strong>Automated IVR Reporting and Analytics:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>A significant focus was placed on enabling <strong>data-driven insights into IVR performance and user behavior.</strong> This was achieved by implementing <strong>custom Power Automate trigger flows</strong> designed to extract and process IVR data. These flows likely captured metrics such as call volume, resolution rates, user journey paths, and common user intents.</li><li class='mb-2'>The processed data was then fed into <strong>Power BI dashboards,</strong> providing a comprehensive and visually rich representation of IVR performance. These dashboards enabled stakeholders to monitor key performance indicators (KPIs), identify trends, and make informed decisions for continuous improvement of the IVR system. This automation significantly reduced manual effort in data collection and analysis.</li></ul></li><li class='mb-2'><strong>Natural Language Communication and Response Accuracy:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>A key innovation involved <strong>developing custom logic within the Microsoft Cloud environment specifically to enhance natural language communication between the IVR and users.</strong> This went beyond standard intent recognition and likely involved sophisticated techniques to interpret complex user queries and nuances in language.</li></ul></li></ul>">
                         <h3 class="text-xl font-bold">Rogers and Shaw Communications Inc.</h3>
                         <p class="mt-2">This project delivered an intelligent, end-to-end IVR system using Microsoft Copilot Studio and the Azure ecosystem. It featured custom connectors, Power Automate flows, Power Apps, and Azure Functions for seamless integration and robust API communication, resulting in seamless IVR integration and more natural, Al-driven user interactions.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="Farmers Insurance Group" data-project-description="This project encompassed the end-to-end design, development, and deployment of sophisticated IVR and conversational AI solutions, primarily for Farmers insurance group (CLAIMS and SERVICE OPs), with a strong emphasis on leveraging Google Cloud and Cisco technologies to enhance customer experience, streamline operations, and provide data-driven insights." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>Engineering a Retrieval Augmented Generation (RAG) Pattern for SERVICE OPs IVR:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Engineered a sophisticated Retrieval Augmented Generation (RAG) pattern for the SERVICE OPs IVR</strong> within the conversational AI framework. This was a critical innovation that allowed the Dialogflow agent to query backend systems in real-time.</li><li class='mb-2'>This RAG pattern enabled the IVR to retrieve <strong>accurate, context-specific information</strong> from various data sources, rather than relying solely on pre-programmed responses. This capability ensured that users received precise and up-to-date answers to their queries, significantly improving the quality and relevance of interactions.</li></ul></li><li class='mb-2'><strong>Conversational AI Solution Development for SERVICE OPs IVR using Google Dialogflow CX:</strong></li><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Designed and developed a comprehensive conversational AI solution</strong> specifically for the SERVICE OPs IVR, leveraging the advanced features of <strong>Google Dialogflow CX.</strong> This involved meticulous design of conversational flows, intent detection, entity extraction, and state management within the Dialogflow framework.</li><li class='mb-2'>This solution was instrumental in <strong>enhancing speech recognition and natural language understanding,</strong> allowing the IVR to process and respond to a wider range of customer inquiries related to claims with greater accuracy and efficiency.</li></ul><li class='mb-2'><strong>Team Collaboration on SERVICE OPs IVR for Farmers Insurance:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Contributed as part of a team to build the SERVICE OPs IVR for Farmers Insurance.</strong> This project utilized <strong>Cisco's Customer Voice Portal (CVP) framework,</strong> a robust platform for IVR development.</li><li class='mb-2'>The development involved extensive use of <strong>JAVA for both IVR development and the implementation of complex business logic.</strong> This included programming call flows, integrating with backend systems, and managing various service operation functionalities.</li></ul></li><li class='mb-2'><strong>Middleware Client Development for API Access and Data Persistence:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><string>Developed a critical middleware client using JAVA and Maven</strong> (for dependency management) to <strong>streamline API access for both the CLAIMS and SERVICE OPs IVR applications.</strong> This client acted as an abstraction layer, simplifying interactions with various internal and external APIs.</li><li class='mb-2'>For data persistence and enhanced API management, this middleware client was further developed using <strong>Java and Spring Data JPA/Hibernate.</strong> This ensured efficient data storage, retrieval, and object-relational mapping, crucial for managing data flow between the IVR and backend databases.</li></ul></li><li class='mb-2'><strong>Advanced Reporting and Data Optimization:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Designed and implemented advanced reporting solutions</strong> for both IVR systems using <strong>Google BigQuery and Google Looker Studio (formerly Data Studio).</strong></li><li class='mb-2'><strong>Managed and optimized large datasets within Google BigQuery</strong> to ensure efficient processing and querying of vast amounts of IVR interaction data. This involved understanding data warehousing principles and optimizing table structures.</li><li class='mb-2'><strong>Developed complex SQL queries</strong> within BigQuery to extract, transform, and load (ETL) specific data points crucial for performance analysis and user behavior insights.</li><li>These processed datasets were then used to create <strong>visual representations of customer interactions with the IVR system in Google Looker Studio.</strong> These dashboards provided key stakeholders with actionable insights into call volumes, resolution rates, user journeys, common intents, and areas for improvement.</li></ul></li><li class='mb-2'><strong>Architecting and Building the CLAIMS IVR Connector with Google Dialogflow Integration:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Single-handedly architected and built a critical CLAIMS IVR connector</strong> specifically designed for a Cisco-based cloud calling infrastructure. <strong>While another vendor was responsible for building the IVR within Google's Dialogflow, I specifically focused on developing the connector application</strong> to enable seamless communication between the traditional Cisco IVR environment and the Dialogflow agent.</li><li class='mb-2'>This integration significantly <strong>enhanced speech recognition and natural language processing (NLP)</strong> capabilities for the CLAIMS IVR. By routing user utterances through Dialogflow, the system gained the ability to understand complex queries and intents more accurately than a traditional IVR.</li><li class='mb-2'>This integration directly led to an <strong>improved overall user experience</strong> by allowing for more natural, free-flowing conversations with the IVR, reducing frustration often associated with rigid menu-driven systems.</li></ul></li><li class='mb-2'><strong>Customer Relationship Management and Quality Delivery:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Consistently maintained strong customer relationships</strong> through effective communication throughout the project lifecycle. This involved regular updates, requirements gathering, feedback incorporation, and proactive problem-solving.</li><li class='mb-2'><strong>Consistently delivered high-quality work,</strong> demonstrating a commitment to excellence in every phase of the project, from architecture to deployment and ongoing support.</li><li class='mb-2'>The dedication to quality and customer satisfaction was consistently reflected in achieving <strong>a CSAT (Customer Satisfaction) rating of 5,</strong> indicating exceptional client satisfaction with the delivered solutions.</li></ul></li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="Farmers Insurance Group" data-project-description="This project encompassed the end-to-end design, development, and deployment of sophisticated IVR and conversational AI solutions, primarily for Farmers insurance group (CLAIMS and SERVICE OPs), with a strong emphasis on leveraging Google Cloud and Cisco technologies to enhance customer experience, streamline operations, and provide data-driven insights." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>Engineering a Retrieval Augmented Generation (RAG) Pattern for SERVICE OPs IVR:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Engineered a sophisticated Retrieval Augmented Generation (RAG) pattern for the SERVICE OPs IVR</strong> within the conversational AI framework. This was a critical innovation that allowed the Dialogflow agent to query backend systems in real-time.</li><li class='mb-2'>This RAG pattern enabled the IVR to retrieve <strong>accurate, context-specific information</strong> from various data sources, rather than relying solely on pre-programmed responses. This capability ensured that users received precise and up-to-date answers to their queries, significantly improving the quality and relevance of interactions.</li></ul></li><li class='mb-2'><strong>Conversational AI Solution Development for SERVICE OPs IVR using Google Dialogflow CX:</strong></li><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Designed and developed a comprehensive conversational AI solution</strong> specifically for the SERVICE OPs IVR, leveraging the advanced features of <strong>Google Dialogflow CX.</strong> This involved meticulous design of conversational flows, intent detection, entity extraction, and state management within the Dialogflow framework.</li><li class='mb-2'>This solution was instrumental in <strong>enhancing speech recognition and natural language understanding,</strong> allowing the IVR to process and respond to a wider range of customer inquiries related to claims with greater accuracy and efficiency.</li></ul><li class='mb-2'><strong>Team Collaboration on SERVICE OPs IVR for Farmers Insurance:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Contributed as part of a team to build the SERVICE OPs IVR for Farmers Insurance.</strong> This project utilized <strong>Cisco's Customer Voice Portal (CVP) framework,</strong> a robust platform for IVR development.</li><li class='mb-2'>The development involved extensive use of <strong>JAVA for both IVR development and the implementation of complex business logic.</strong> This included programming call flows, integrating with backend systems, and managing various service operation functionalities.</li></ul></li><li class='mb-2'><strong>Middleware Client Development for API Access and Data Persistence:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><string>Developed a critical middleware client using JAVA and Maven</strong> (for dependency management) to <strong>streamline API access for both the CLAIMS and SERVICE OPs IVR applications.</strong> This client acted as an abstraction layer, simplifying interactions with various internal and external APIs.</li><li class='mb-2'>For data persistence and enhanced API management, this middleware client was further developed using <strong>Java and Spring Data JPA/Hibernate.</strong> This ensured efficient data storage, retrieval, and object-relational mapping, crucial for managing data flow between the IVR and backend databases.</li></ul></li><li class='mb-2'><strong>Advanced Reporting and Data Optimization:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Designed and implemented advanced reporting solutions</strong> for both IVR systems using <strong>Google BigQuery and Google Looker Studio (formerly Data Studio).</strong></li><li class='mb-2'><strong>Managed and optimized large datasets within Google BigQuery</strong> to ensure efficient processing and querying of vast amounts of IVR interaction data. This involved understanding data warehousing principles and optimizing table structures.</li><li class='mb-2'><strong>Developed complex SQL queries</strong> within BigQuery to extract, transform, and load (ETL) specific data points crucial for performance analysis and user behavior insights.</li><li>These processed datasets were then used to create <strong>visual representations of customer interactions with the IVR system in Google Looker Studio.</strong> These dashboards provided key stakeholders with actionable insights into call volumes, resolution rates, user journeys, common intents, and areas for improvement.</li></ul></li><li class='mb-2'><strong>Architecting and Building the CLAIMS IVR Connector with Google Dialogflow Integration:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Single-handedly architected and built a critical CLAIMS IVR connector</strong> specifically designed for a Cisco-based cloud calling infrastructure. <strong>While another vendor was responsible for building the IVR within Google's Dialogflow, I specifically focused on developing the connector application</strong> to enable seamless communication between the traditional Cisco IVR environment and the Dialogflow agent.</li><li class='mb-2'>This integration significantly <strong>enhanced speech recognition and natural language processing (NLP)</strong> capabilities for the CLAIMS IVR. By routing user utterances through Dialogflow, the system gained the ability to understand complex queries and intents more accurately than a traditional IVR.</li><li class='mb-2'>This integration directly led to an <strong>improved overall user experience</strong> by allowing for more natural, free-flowing conversations with the IVR, reducing frustration often associated with rigid menu-driven systems.</li></ul></li><li class='mb-2'><strong>Customer Relationship Management and Quality Delivery:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Consistently maintained strong customer relationships</strong> through effective communication throughout the project lifecycle. This involved regular updates, requirements gathering, feedback incorporation, and proactive problem-solving.</li><li class='mb-2'><strong>Consistently delivered high-quality work,</strong> demonstrating a commitment to excellence in every phase of the project, from architecture to deployment and ongoing support.</li><li class='mb-2'>The dedication to quality and customer satisfaction was consistently reflected in achieving <strong>a CSAT (Customer Satisfaction) rating of 5,</strong> indicating exceptional client satisfaction with the delivered solutions.</li></ul></li></ul>">
                         <h3 class="text-xl font-bold">Farmers Insurance Group</h3>
                         <p class="mt-2">This project delivered sophisticated IVR and conversational AI solutions for FARMERS Insurance, leveraging Google Cloud and Cisco Platforms. It featured a Claims IVR connector, Service OPs IVR, RAG pattern, Java middleware for APIs, and advanced BigQuery/Looker Studio reporting. These efforts significantly enhanced customer experience and operational efficiency, achieving high client satisfaction.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="ADCB Bank" data-project-description="This project focused on the design, development, and integration of a high-performance, secure, and efficient IVR system within a banking environment, leveraging cloud-native technologies from Genesys PureCloud and Amazon Web Services (AWS). A key highlight was the implementation of a real-time voice biometric authentication solution." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>High-Performance IVR System Design and Development:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Contributed significantly to the design and development of a high-performance Interactive Voice Response (IVR) system.</strong> This system was architected for scalability and responsiveness, crucial for a banking environment with high call volumes.</li><li class='mb-2'><strong>Genesys PureCloud was utilized for the front-end orchestration of the IVR.</strong> This involved configuring call flows, managing prompts, routing logic, and potentially integrating with agents, leveraging PureCloud's robust contact center as a service (CCaaS) capabilities.</li><li class='mb-2'><strong>The back-end integration was robustly handled by AWS services, specifically AWS Lambda and S3 buckets.</strong><ul class='list-disc list-inside ml-auto'><li><strong>AWS Lambda (serverless compute)</strong> was used to power the dynamic logic and processing for the IVR. This enabled highly scalable, event-driven execution of business rules, data lookups, and interactions with other systems without managing servers.</li><li class='mb-2'><strong>AWS S3 buckets</strong> were leveraged for efficient and secure storage of various IVR assets, such as codebases, executable JAR files, ensuring high availability and durability.</li><li class='mb-2'><strong>AWS CloudWatch was implemented for comprehensive monitoring and logging of these AWS back-end components.</strong> This involved setting up CloudWatch Logs for capturing all Lambda function invocations and application-specific logs, establishing CloudWatch Metrics to track key performance indicators (e.g., Lambda invocation duration, error rates, S3 bucket storage and access patterns), and configuring CloudWatch Alarms to proactively alert on predefined thresholds or anomalies in system performance, ensuring high operational visibility and rapid issue resolution.</li></ul></li></ul></li><li class='mb-2'><strong>Seamless IVR Integration with Core Banking System:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Achieved deep integration of the IVR system within the bank's core banking system.</strong> This was a critical aspect, enabling the IVR to access and update customer information, process transactions, and perform other banking operations directly.</li><li class='mb-2'><strong>JAVA was the primary language used for developing robust back-end services</strong> that facilitated this integration. These services acted as secure and reliable intermediaries, translating IVR requests into actions within the core banking system and vice-versa. This ensured data consistency and operational accuracy.</li></ul></li><li class ='mb-2'><strong>Advanced Voice Biometric Authentication Implementation:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Implemented a cutting-edge voice biometric authentication solution, significantly enhancing security and efficiency.</strong> This solution eliminated the need for traditional, often cumbersome, manual authentication methods.</li><li class='mb-2'><strong>Audiohook was specifically utilized for real-time audio processing.</strong> Audiohook, a Genesys Cloud feature, enables the streaming of live conversation audio to third-party services. This was crucial for capturing the caller's voice in real-time for biometric analysis.</li><li class='mb-2'><strong>The voice biometric solution integrated seamlessly with the bank's internal APIs.</strong> This involved developing custom logic to send the processed audio data from Audiohook to the bank's proprietary biometric engine via APIs, and then receiving authentication results back to the IVR in real-time.</li><li class='mb-2'>This implementation resulted in a <strong>streamlined and secure authentication process,</strong> allowing customers to verify their identity simply by speaking, leading to a much faster and more user-friendly experience while simultaneously bolstering security measures.</li></ul></li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="ADCB Bank" data-project-description="This project focused on the design, development, and integration of a high-performance, secure, and efficient IVR system within a banking environment, leveraging cloud-native technologies from Genesys PureCloud and Amazon Web Services (AWS). A key highlight was the implementation of a real-time voice biometric authentication solution." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>High-Performance IVR System Design and Development:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Contributed significantly to the design and development of a high-performance Interactive Voice Response (IVR) system.</strong> This system was architected for scalability and responsiveness, crucial for a banking environment with high call volumes.</li><li class='mb-2'><strong>Genesys PureCloud was utilized for the front-end orchestration of the IVR.</strong> This involved configuring call flows, managing prompts, routing logic, and potentially integrating with agents, leveraging PureCloud's robust contact center as a service (CCaaS) capabilities.</li><li class='mb-2'><strong>The back-end integration was robustly handled by AWS services, specifically AWS Lambda and S3 buckets.</strong><ul class='list-disc list-inside ml-auto'><li><strong>AWS Lambda (serverless compute)</strong> was used to power the dynamic logic and processing for the IVR. This enabled highly scalable, event-driven execution of business rules, data lookups, and interactions with other systems without managing servers.</li><li class='mb-2'><strong>AWS S3 buckets</strong> were leveraged for efficient and secure storage of various IVR assets, such as codebases, executable JAR files, ensuring high availability and durability.</li><li class='mb-2'><strong>AWS CloudWatch was implemented for comprehensive monitoring and logging of these AWS back-end components.</strong> This involved setting up CloudWatch Logs for capturing all Lambda function invocations and application-specific logs, establishing CloudWatch Metrics to track key performance indicators (e.g., Lambda invocation duration, error rates, S3 bucket storage and access patterns), and configuring CloudWatch Alarms to proactively alert on predefined thresholds or anomalies in system performance, ensuring high operational visibility and rapid issue resolution.</li></ul></li></ul></li><li class='mb-2'><strong>Seamless IVR Integration with Core Banking System:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Achieved deep integration of the IVR system within the bank's core banking system.</strong> This was a critical aspect, enabling the IVR to access and update customer information, process transactions, and perform other banking operations directly.</li><li class='mb-2'><strong>JAVA was the primary language used for developing robust back-end services</strong> that facilitated this integration. These services acted as secure and reliable intermediaries, translating IVR requests into actions within the core banking system and vice-versa. This ensured data consistency and operational accuracy.</li></ul></li><li class ='mb-2'><strong>Advanced Voice Biometric Authentication Implementation:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Implemented a cutting-edge voice biometric authentication solution, significantly enhancing security and efficiency.</strong> This solution eliminated the need for traditional, often cumbersome, manual authentication methods.</li><li class='mb-2'><strong>Audiohook was specifically utilized for real-time audio processing.</strong> Audiohook, a Genesys Cloud feature, enables the streaming of live conversation audio to third-party services. This was crucial for capturing the caller's voice in real-time for biometric analysis.</li><li class='mb-2'><strong>The voice biometric solution integrated seamlessly with the bank's internal APIs.</strong> This involved developing custom logic to send the processed audio data from Audiohook to the bank's proprietary biometric engine via APIs, and then receiving authentication results back to the IVR in real-time.</li><li class='mb-2'>This implementation resulted in a <strong>streamlined and secure authentication process,</strong> allowing customers to verify their identity simply by speaking, leading to a much faster and more user-friendly experience while simultaneously bolstering security measures.</li></ul></li></ul>">
                         <h3 class="text-xl font-bold">ADCB Bank</h3>
                         <p class="mt-2">This project involved designing and integrating a high-performance IVR system for ADCB bank, using Genesys PureCloud and AWS (Lambda, S3, CloudWatch). A key feature was the real-time voice biometric authentication via Audiohook and Java backend services, enhancing security and efficiency by integrating with the bank's core system.</p>
                     </div>
@@ -699,11 +742,11 @@
 
                 <h3 class="text-2xl md:text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Personal Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="AI Resume Optimizer" data-project-description="The primary goal was to create a system that could not only optimize the content of a resume to align with a job description but also do so without destroying the document's original formatting—a common failure point for text-based resume tools. The implementation leverages a powerful combination of Python for the backend logic, Streamlit for the interactive web interface, and the Google Gemini LLM as the core intelligence.<p><br>Experience the application directly here: <a href='https://ai-resume-optimizer-covxskfybhkh5vnecsvyxr.streamlit.app/' target='_blank' rel='noopener noreferrer'>AI-Resume-Optimizer</a></p><p>For those interested in the project's architecture, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/AI-Resume-Optimizer.git' target='_blank' rel='noopener noreferrer'>Optimizer Repo</a></p>" data-project-detailed-description="The core of the implementation revolves around treating a .docx file not as a simple text document, but as a structured XML file, which is key to preserving its formatting. The workflow is initiated when a user uploads their resume and provides a job description. Here’s how the AI-driven process unfolds: <ul class='list-decimal list-outside ml-auto'><li class='mb-2'><strong>Document Deconstruction & Parsing: </strong>When a user uploads their resume, the application doesn’t just extract the text. It unzips the .docx file in memory and accesses the word/document.xml file within. Using the lxml library, it meticulously parses this XML tree, iterating through every text-containing element. For each piece of text it finds, it records both the content and its unique XPath—a specific address that pinpoints its exact location within the document's complex structure. This creates a detailed map of the entire resume's content.</li><li class='mb-2'><strong>Intelligent Prompt Engineering: </strong>The project's effectiveness is powered by dynamic prompt engineering. A meticulously crafted prompt is constructed with clear instructions for the Google Gemini LLM to adopt the persona of an expert career coach. By providing the AI with the user's resume content, annotated with its structural XPath reference, along with the target job description, the system ensures the AI has all the necessary context to perform a highly specific and targeted optimization. This method guides the AI to produce a structured JSON object, which is critical for the next stage of the process.</li><li class='mb-2'><strong>AI-Driven Resume Optimization: </strong>Leveraging the Google Gemini LLM, the application performs a deep-level content analysis and generation process. The AI's task is to analyze job requirements, identify critical keywords, and then rewrite the user's resume content. This multi-step AI workflow uses the provided XPath references to ensure the output is not just new text but a structured response. This structured output allows for the precise and lossless reconstruction of the document, resulting in a more impactful and perfectly tailored resume that significantly improves a user's chances of passing applicant tracking systems and capturing a recruiter's attention.</li><li class='mb-2'><strong>Ensuring Reliability with Structured Data: </strong>A critical aspect of the implementation is forcing the AI to return its response in a structured JSON format. This is a key design choice that ensures system reliability. The JSON object contains two primary components: 1) an array of objects, where each object holds a snippet of optimized text and its original XPath, and 2) a detailed analysis section, which includes the resume's strong points, weak points, and a summary of the changes made. This machine-readable format eliminates the ambiguity of parsing a free-form text response.</li><li class='mb-2'><strong>High-Fidelity Reconstruction: </strong>Once the JSON response is received, the application begins the reconstruction process. It creates a new, empty .docx document and copies over all the original styling and metadata. Then, it iterates through the optimized text snippets from the AI's response. For each snippet, it uses the provided XPath to navigate to the exact location in the new document and inserts the optimized text. This ensures that every change is precise, preserving the original layout, fonts, and spacing down to the smallest detail.</li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="AI Resume Optimizer" data-project-description="The primary goal was to create a system that could not only optimize the content of a resume to align with a job description but also do so without destroying the document's original formatting—a common failure point for text-based resume tools. The implementation leverages a powerful combination of Python for the backend logic, Streamlit for the interactive web interface, and the Google Gemini LLM as the core intelligence.<p><br>Experience the application directly here: <a href='https://ai-resume-optimizer-covxskfybhkh5vnecsvyxr.streamlit.app/' target='_blank' rel='noopener noreferrer'>AI-Resume-Optimizer</a></p><p>For those interested in the project's architecture, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/AI-Resume-Optimizer.git' target='_blank' rel='noopener noreferrer'>Optimizer Repo</a></p>" data-project-detailed-description="The core of the implementation revolves around treating a .docx file not as a simple text document, but as a structured XML file, which is key to preserving its formatting. The workflow is initiated when a user uploads their resume and provides a job description. Here’s how the AI-driven process unfolds: <ul class='list-decimal list-outside ml-auto'><li class='mb-2'><strong>Document Deconstruction & Parsing: </strong>When a user uploads their resume, the application doesn’t just extract the text. It unzips the .docx file in memory and accesses the word/document.xml file within. Using the lxml library, it meticulously parses this XML tree, iterating through every text-containing element. For each piece of text it finds, it records both the content and its unique XPath—a specific address that pinpoints its exact location within the document's complex structure. This creates a detailed map of the entire resume's content.</li><li class='mb-2'><strong>Intelligent Prompt Engineering: </strong>The project's effectiveness is powered by dynamic prompt engineering. A meticulously crafted prompt is constructed with clear instructions for the Google Gemini LLM to adopt the persona of an expert career coach. By providing the AI with the user's resume content, annotated with its structural XPath reference, along with the target job description, the system ensures the AI has all the necessary context to perform a highly specific and targeted optimization. This method guides the AI to produce a structured JSON object, which is critical for the next stage of the process.</li><li class='mb-2'><strong>AI-Driven Resume Optimization: </strong>Leveraging the Google Gemini LLM, the application performs a deep-level content analysis and generation process. The AI's task is to analyze job requirements, identify critical keywords, and then rewrite the user's resume content. This multi-step AI workflow uses the provided XPath references to ensure the output is not just new text but a structured response. This structured output allows for the precise and lossless reconstruction of the document, resulting in a more impactful and perfectly tailored resume that significantly improves a user's chances of passing applicant tracking systems and capturing a recruiter's attention.</li><li class='mb-2'><strong>Ensuring Reliability with Structured Data: </strong>A critical aspect of the implementation is forcing the AI to return its response in a structured JSON format. This is a key design choice that ensures system reliability. The JSON object contains two primary components: 1) an array of objects, where each object holds a snippet of optimized text and its original XPath, and 2) a detailed analysis section, which includes the resume's strong points, weak points, and a summary of the changes made. This machine-readable format eliminates the ambiguity of parsing a free-form text response.</li><li class='mb-2'><strong>High-Fidelity Reconstruction: </strong>Once the JSON response is received, the application begins the reconstruction process. It creates a new, empty .docx document and copies over all the original styling and metadata. Then, it iterates through the optimized text snippets from the AI's response. For each snippet, it uses the provided XPath to navigate to the exact location in the new document and inserts the optimized text. This ensures that every change is precise, preserving the original layout, fonts, and spacing down to the smallest detail.</li></ul>">
                         <h3 class="text-xl font-bold">AI Resume Optimizer</h3>
                         <p class="mt-2">This AI-powered web app optimizes resumes for specific jobs by leveraging the Google Gemini API. It analyzes a user's resume against a job description, intelligently rewriting content for a strong keyword match. Built with Python and Streamlit, the system meticulously preserves the document's original formatting, providing a seamless experience from analysis to a perfectly reconstructed document to get noticed by recruiters and applicant tracking system (ATS).</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="GPS & GSM Based Vehicle Tracking System" data-project-description="This project is a cost-effective, real-time location tracking system that uses an Arduino UNO to integrate a GPS and GSM module. It sends a vehicle's location coordinates via SMS to a mobile device, which can be viewed on Google Maps. We prototyped this for Mumbai's BEST buses as a low-cost tracking solution.<p>For those interested in the project, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/GPS-GSM-based-Tracking-Device.git' target='_blank' rel='noopener noreferrer'>Tracking Device Repo</a></p>" data-project-detailed-description="<ul class='list-decimal list-outside ml-auto'><li class='mb-2'>S<strong>ystem Overview: </strong>This project is a robust and effective location tracking system that integrates a Global Positioning System (GPS) module with a Global System for Mobile Communication (GSM) module, all controlled by an Arduino UNO microcontroller.</li><li class='mb-2'><strong>Core Functionality: </strong>The system's primary function is to detect the real-time GPS location of a vehicle or object and transmit that data to a mobile device continuously with a delay of 3 seconds between each transmission providing a near real-time tracking system.</li><li class='mb-2'><strong>Use Case: </strong>The primary use case for this solution was to serve as a low-cost and efficient tracking device for Mumbai's BEST buses. The system continuously sends location data via SMS, and as a prototype, it proved to be a cost-effective solution that could easily be integrated into an app through an API or directly via the carrier's SMS service to enable the development of a real-time tracking system.</li><li class='mb-2'><strong>Data Flow: </strong>The GPS module receives location data in the NMEA protocol, which includes the latitude and longitude. The Arduino UNO then processes this data.</li><li class='mb-2'><strong>User Interface: </strong>The GSM module sends an SMS message containing the location coordinates as a direct link to Google Maps, providing an easy and user-friendly tracking experience for the recipient.</li><li class='mb-2'><strong>Technological Application: </strong>This project demonstrates a practical application of embedded systems and communication technologies, providing a cost-effective solution for vehicle safety, logistics management, and personal asset tracking.</li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="GPS & GSM Based Vehicle Tracking System" data-project-description="This project is a cost-effective, real-time location tracking system that uses an Arduino UNO to integrate a GPS and GSM module. It sends a vehicle's location coordinates via SMS to a mobile device, which can be viewed on Google Maps. We prototyped this for Mumbai's BEST buses as a low-cost tracking solution.<p>For those interested in the project, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/GPS-GSM-based-Tracking-Device.git' target='_blank' rel='noopener noreferrer'>Tracking Device Repo</a></p>" data-project-detailed-description="<ul class='list-decimal list-outside ml-auto'><li class='mb-2'>S<strong>ystem Overview: </strong>This project is a robust and effective location tracking system that integrates a Global Positioning System (GPS) module with a Global System for Mobile Communication (GSM) module, all controlled by an Arduino UNO microcontroller.</li><li class='mb-2'><strong>Core Functionality: </strong>The system's primary function is to detect the real-time GPS location of a vehicle or object and transmit that data to a mobile device continuously with a delay of 3 seconds between each transmission providing a near real-time tracking system.</li><li class='mb-2'><strong>Use Case: </strong>The primary use case for this solution was to serve as a low-cost and efficient tracking device for Mumbai's BEST buses. The system continuously sends location data via SMS, and as a prototype, it proved to be a cost-effective solution that could easily be integrated into an app through an API or directly via the carrier's SMS service to enable the development of a real-time tracking system.</li><li class='mb-2'><strong>Data Flow: </strong>The GPS module receives location data in the NMEA protocol, which includes the latitude and longitude. The Arduino UNO then processes this data.</li><li class='mb-2'><strong>User Interface: </strong>The GSM module sends an SMS message containing the location coordinates as a direct link to Google Maps, providing an easy and user-friendly tracking experience for the recipient.</li><li class='mb-2'><strong>Technological Application: </strong>This project demonstrates a practical application of embedded systems and communication technologies, providing a cost-effective solution for vehicle safety, logistics management, and personal asset tracking.</li></ul>">
                         <h3 class="text-xl font-bold">GPS & GSM Based Vehicle Tracking System</h3>
                         <p class="mt-2">A hardware and software project that combines GPS and GSM technologies to create a real-time vehicle or object tracking system. This system uses a microcontroller to send the precise location coordinates via SMS, offering an effective and affordable tracking solution.</p>
                     </div>
@@ -713,19 +756,19 @@
 
         <section id="keen-interests">
             <div class="text-center sticky top-16 z-20">
-                <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Keen Interests</h2>
+                <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Keen Interests</h2>
             </div>
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+					<div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                         <h3 class="text-2xl font-bold">Machine Learning & Artificial Intelligence</h3>
                         <p class="mt-2">My keen interest lies in machine learning and AI. I'm currently focused on the fundamentals, including supervised and unsupervised learning, and various algorithms. I am building personal projects to apply these skills and plan to next explore foundational AI concepts like neural networks, generative AI, and Large Language Models (LLMs).</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                         <h3 class="text-2xl font-bold">Travel</h3>
                         <p class="mt-2">I love to travel and go on exciting adventures. I'm always looking for new and exciting experiences, whether it's traveling to far-off places.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                    <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
                         <h3 class="text-2xl font-bold">Adventure Sports</h3>
                         <p class="mt-2">I enjoy activities that require a lot of adrenaline and am motivated by a love of the outdoors. Adventure sports like rock climbing, trekking, scuba diving, and paragliding are fun ways for me to push myself.</p>
                     </div>
@@ -735,44 +778,43 @@
 
         <section id="contact">
             <div class="text-center sticky top-16 z-20">
-                <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Get in Touch</h2>
+                <h2 class="text-2xl md:text-4xl font-bold mb-12 py-4 bg-white/30 backdrop-blur-3xl px-4 rounded-full inline-block mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Get in Touch</h2>
             </div>
             <div class="max-w-7xl mx-auto bg-white/10 backdrop-blur-2xl p-8 rounded-3xl text-center">
                 <div class="grid grid-cols-3 gap-4 md:grid-cols-6 gap-4 w-fit mx-auto items-center justify-items-center">
-                        <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/GMAIL_BOTTOM.svg" alt="Gmail Icon" class="w-09 h-10">
+                        <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                            <img src="Assets/GMAIL_BOTTOM.svg" alt="Gmail Icon" class="w-09 h-10" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">Email</span>
                         </a>
-                        <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change text-color-change">
-                            <img src="Assets/LINKEDIN_BOTTOM.svg" alt="LinkedIn Icon" class="w-10 h-10">
+                        <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change text-color-change">
+                            <img src="Assets/LINKEDIN_BOTTOM.svg" alt="LinkedIn Icon" class="w-10 h-10" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">LinkedIn</span>
                         </a>
-                        <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/GITHUB_BOTTOM.svg" alt="GitHub Icon" class="w-11 h-11">
+                        <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                            <img src="Assets/GITHUB_BOTTOM.svg" alt="GitHub Icon" class="w-11 h-11" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">GitHub</span>
                         </a>
-                        <a href="https://www.instagram.com/mustansir_vora/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/INSTAGRAM_BOTTOM.svg" alt="Instagram Icon" class="w-12 h-11">
+                        <a href="https://www.instagram.com/mustansir_vora/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                            <img src="Assets/INSTAGRAM_BOTTOM.svg" alt="Instagram Icon" class="w-12 h-11" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">Instagram</span>
                         </a>
-                        <a href="tel:+918208928683" class="flex flex-col items-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/MOBILE_BOTTOM.svg" alt="Mobile Icon" class="w-11 h-11 rotate-180">
+                        <a href="tel:+918208928683" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                            <img src="Assets/MOBILE_BOTTOM.svg" alt="Mobile Icon" class="w-11 h-11 rotate-180" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">Call</span>
                         </a>
-                        <a href="https://wa.me/918208928683?text=Hello%20there!" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/WHATSAPP_BOTTOM.svg" alt="WhatsApp Icon" class="w-10 h-10">
+                        <a href="https://wa.me/918208928683?text=Hello%20there!" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+                            <img src="Assets/WHATSAPP_BOTTOM.svg" alt="WhatsApp Icon" class="w-10 h-10" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">WhatsApp</span>
                         </a>
                     </div>
                 </div>
-                <a href="https://drive.google.com/uc?export=download&id=1E49zMuKNj9QgAAHkoFHGyz8JV0q7H73W" id="download-resume" class="mt-8 inline-block bg-white/20 backdrop-blur-2xl text-center font-bold py-3 px-6 rounded-full hover:bg-white/30 ease-in-out hover:scale-105 hover:shadow-2xl w-fit mx-auto text-color-change" download>Download Resume</a>
+                <a href="https://drive.google.com/uc?export=download&id=1E49zMuKNj9QgAAHkoFHGyz8JV0q7H73W" id="download-resume" class="mt-8 inline-block bg-white/20 backdrop-blur-2xl text-center font-bold py-3 px-6 rounded-full hover:bg-white/30 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl w-fit mx-auto text-color-change" download>Download Resume</a>
         </section>
     </main>
 
-    <!-- Project Modal -->
     <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-container">
-        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-3xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-            <button id="close-modal" class="absolute top-4 right-4 text-2xl font-bold close-modal-btn">&times;</button>
+        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-3xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+            <button id="close-modal" aria-label="Close project details" class="absolute top-4 right-4 text-2xl font-bold close-modal-btn">&times;</button>
             <h3 id="modal-project-title" class="text-3xl font-bold mb-4"></h3>
             <p id="modal-project-description" class="text-lg"></p>
             <h4 class="text-xl font-bold mt-6 mb-2">Key Contributions:</h4>
@@ -780,10 +822,9 @@
         </div>
     </div>
 
-    <!-- Personal Project Modal -->
     <div id="personal-project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-container">
-        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-3xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-            <button id="close-personal-modal" class="absolute top-4 right-4 text-2xl font-bold close-modal-btn">&times;</button>
+        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-3xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+            <button id="close-personal-modal" aria-label="Close project details" class="absolute top-4 right-4 text-2xl font-bold close-modal-btn">&times;</button>
             <h3 id="personal-modal-project-title" class="text-3xl font-bold mb-4"></h3>
             <p id="personal-modal-project-description" class="text-lg"></p>
             <h4 class="text-xl font-bold mt-6 mb-2">About the Project</h4>
@@ -808,13 +849,11 @@
 
             function openMenu() {
                 mobileMenu.classList.remove('-translate-x-full');
-                // Hides the hamburger button when the menu opens
                 hamburgerBtn.classList.add('hidden');
             }
 
             function closeMenu() {
                 mobileMenu.classList.add('-translate-x-full');
-                // Shows the hamburger button when the menu closes
                 hamburgerBtn.classList.remove('hidden');
             }
 
@@ -839,10 +878,6 @@
                 anchor.addEventListener('click', closeMenu);
             });
 
-            document.querySelectorAll('#home a[class*="hover:scale-110"]').forEach(icon => {
-                icon.style.willChange = 'transform';
-            });
-
             // Modal functionality
             const projectModal = document.getElementById('project-modal');
             const closeModalBtn = document.getElementById('close-modal');
@@ -858,27 +893,36 @@
 
             const projectCards = document.querySelectorAll('.project-card');
 
-            projectCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const title = card.dataset.projectTitle;
-                    const description = card.dataset.projectDescription;
-                    const detailedDescription = card.dataset.projectDetailedDescription;
-                    const isPersonal = card.closest('.grid').previousElementSibling.textContent.includes('Personal Projects');
+            const openModal = (card) => {
+                const title = card.dataset.projectTitle;
+                const description = card.dataset.projectDescription;
+                const detailedDescription = card.dataset.projectDetailedDescription;
+                const isPersonal = card.closest('.grid').previousElementSibling.textContent.includes('Personal Projects');
 
-                    if (isPersonal) {
-                        personalModalProjectTitle.textContent = title;
-                        personalModalProjectDescription.innerHTML = description;
-                        personalModalProjectDetailedDescription.innerHTML = detailedDescription;
-                        personalProjectModal.classList.remove('hidden');
-                    } else {
-                        modalProjectTitle.textContent = title;
-                        modalProjectDescription.textContent = description;
-                        modalProjectDetailedDescription.innerHTML = detailedDescription;
-                        projectModal.classList.remove('hidden');
+                if (isPersonal) {
+                    personalModalProjectTitle.textContent = title;
+                    personalModalProjectDescription.innerHTML = description;
+                    personalModalProjectDetailedDescription.innerHTML = detailedDescription;
+                    personalProjectModal.classList.remove('hidden');
+                    closePersonalModalBtn.focus();
+                } else {
+                    modalProjectTitle.textContent = title;
+                    modalProjectDescription.textContent = description;
+                    modalProjectDetailedDescription.innerHTML = detailedDescription;
+                    projectModal.classList.remove('hidden');
+                    closeModalBtn.focus();
+                }
+            };
+
+            projectCards.forEach(card => {
+                card.addEventListener('click', () => openModal(card));
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        openModal(card);
                     }
                 });
             });
-
+            
             closeModalBtn.addEventListener('click', () => {
                 projectModal.classList.add('hidden');
             });
@@ -897,95 +941,6 @@
                 if (e.target === personalProjectModal) {
                     personalProjectModal.classList.add('hidden');
                 }
-            });
-
-            // Skills data
-            const techSkills = [
-                { name: 'Java', icon: 'Assets/JAVA.svg' },
-                { name: 'JavaScript', icon: 'Assets/JAVASCRIPT.svg' },
-                { name: 'Node.js', icon: 'Assets/NODEJS.svg' },
-                { name: 'React.js', icon: 'Assets/REACT.svg' },
-                { name: 'Python', icon: 'Assets/PYTHON.svg' },
-                { name: 'SQL', icon: 'Assets/SQL.svg' },
-                { name: 'NoSQL', icon: 'Assets/NOSQL.svg' },
-                { name: 'HTML', icon: 'Assets/HTML.svg' },
-                { name: 'CSS', icon: 'Assets/CSS.svg' },
-                { name: 'Bootstrap', icon: 'Assets/BOOTSTRAP.svg' },
-                { name: 'AWS', icon: 'Assets/AWS.svg' },
-                { name: 'GCP', icon: 'Assets/GCP.svg' },
-                { name: 'Azure', icon: 'Assets/AZURE.svg' },
-                { name: 'Dialogflow CX', icon: 'Assets/DIALOGFLOW.svg' },
-                { name: 'Copilot Studio', icon: 'Assets/COPILOTSTUDIO.svg' },
-                { name: 'Genesys Purecloud', icon: 'Assets/GENESYS.svg' },
-                { name: 'PowerBI', icon: 'Assets/POWERBI.svg' },
-                { name: 'Looker Studio', icon: 'Assets/LOOKER.svg' },
-                { name: 'LLM', icon: 'Assets/LLM.svg' },
-                { name: 'RAG', icon: 'Assets/RAG.svg' },
-                { name: 'Machine Learning', icon: 'Assets/MACHINELEARNING.svg' },
-                { name: 'Docker', icon: 'Assets/DOCKER.svg' },
-                { name: 'Kubernetes', icon: 'Assets/KUBERNETES.svg' },
-                { name: 'GIT', icon: 'Assets/GIT.svg' }
-            ];
-
-            const keySkills = [
-                {
-                    title: 'Problem-Solving and Critical Thinking',
-                    description: 'I am great at breaking down complex technical problems to find their root causes and coming up with new, data-driven solutions. My method involves carefully weighing all of the available choices in order to come up with strategies that work well and efficiently.',
-                },
-                {
-                    title: 'Communication',
-                    description: 'I have a track record of translating complex technical information into clear, concise communications for a wide range of audiences, from non-technical stakeholders to senior leadership.',
-                },
-                {
-                    title: 'Adaptability and Learning Agility',
-                    description: 'I am a quick-learner, always eager to acquire new technologies and keep up with industry trends to ensure my skills are at the cutting edge.',
-                },
-                {
-                    title: 'Agile/Scrum Practice',
-                    description: 'I actively participate in all Scrum ceremonies, collaborating with cross-functional teams to align solutions with project goals and user needs.',
-                },
-                {
-                    title: 'Time Management and Organization',
-                    description: 'I am a professional who likes to stay organized and does well in fast-paced work environments. I have proved managing multiple priorities and consistently meeting deadlines while delivering high-quality work.',
-                },
-				{
-					title: 'Leadership',
-					description: 'Even though I do not have a managerial title, I take the lead, help my less experienced coworkers, and try to steer the team to successful outcomes.',
-				},
-            ];
-
-            const techSkillsContainer = document.querySelector('#tech-skills .grid');
-            techSkills.forEach(skill => {
-                const skillCard = document.createElement('div');
-                skillCard.classList.add('relative', 'flex', 'items-center', 'p-3', 'md:p-4', 'rounded-xl', 'transition-all', 'duration-300', 'ease-in-out', 'hover:shadow-2xl', 'group', 'md:w-full', 'hover:scale-105', 'bg-white/15', 'backdrop-blur-md');
-                skillCard.style.willChange = 'transform';
-
-                const skillIcon = document.createElement('img');
-                skillIcon.classList.add('w-7', 'h-7', 'md:w-10', 'md:h-10', 'transition-all', 'duration-300', 'ease-in-out');
-                skillIcon.src = skill.icon;
-
-                const skillName = document.createElement('span');
-                skillName.classList.add('text-md', 'md:text-md', 'font-bold', 'ml-1', 'flex-1', 'text-center', 'text-color-change');
-                skillName.textContent = skill.name;
-
-                skillCard.appendChild(skillIcon);
-                skillCard.appendChild(skillName);
-                techSkillsContainer.appendChild(skillCard);
-            });
-
-            const keySkillsContainer = document.querySelector('#key-skills .grid');
-            keySkills.forEach(skill => {
-                const skillCard = document.createElement('div');
-                skillCard.classList.add('bg-white/10', 'backdrop-blur-md', 'p-6', 'rounded-3xl', 'transition-all', 'duration-300', 'ease-in-out', 'hover:scale-105', 'hover:shadow-2xl', 'text-color-change');
-                const skillTitle = document.createElement('h3');
-                skillTitle.classList.add('text-xl', 'font-bold');
-                skillTitle.textContent = skill.title;
-                const skillDescription = document.createElement('p');
-                skillDescription.classList.add('mt-2');
-                skillDescription.textContent = skill.description;
-                skillCard.appendChild(skillTitle);
-                skillCard.appendChild(skillDescription);
-                keySkillsContainer.appendChild(skillCard);
             });
 
             const timelineAirplane = document.getElementById('timeline-airplane');
@@ -1007,7 +962,7 @@
                     timelineAirplane.style.transform = `translateX(-50%) rotate(${rotation}deg)`;
                 }
             }
-
+            
             function throttle(func, limit) {
                 let inThrottle;
                 return function() {
@@ -1028,7 +983,6 @@
             window.addEventListener('scroll', throttle(scrollHandler, 10));
             updateTimelineAirplanePosition();
 
-            // Enhanced seamless slide-to-open menu
             const menu = document.getElementById('mobile-menu');
             let isDragging = false;
             let touchStartX = 0;
@@ -1039,12 +993,10 @@
                 const isMenuOpen = !menu.classList.contains('-translate-x-full');
                 touchStartX = e.touches[0].clientX;
 
-                // Draggable area: 40px from left edge when closed, or entire menu when open.
                 if ((!isMenuOpen && touchStartX < 40) || (isMenuOpen && menu.contains(e.target))) {
                     isDragging = true;
                     touchStartTime = performance.now();
-                    menu.style.transition = 'none'; // Disable transition for direct manipulation
-
+                    menu.style.transition = 'none'; 
                     const transformMatrix = new DOMMatrix(window.getComputedStyle(menu).transform);
                     menuStartX = transformMatrix.m41;
                 }
@@ -1057,13 +1009,12 @@
                 const diffX = touchCurrentX - touchStartX;
                 let newX = menuStartX + diffX;
 
-                // Add a "rubber band" resistance when dragging beyond the edges
                 const menuWidth = menu.offsetWidth;
                 if (newX > 0) {
-                    newX = newX * 0.3; // Dampen movement past the open state
+                    newX = newX * 0.3; 
                 } else if (newX < -menuWidth) {
                     const overscroll = newX + menuWidth;
-                    newX = -menuWidth + (overscroll * 0.3); // Dampen movement past the closed state
+                    newX = -menuWidth + (overscroll * 0.3);
                 }
 
                 menu.style.transform = `translateX(${newX}px)`;
@@ -1083,16 +1034,14 @@
                 const currentX = transformMatrix.m41;
                 const menuWidth = menu.offsetWidth;
 
-                // If swipe is fast, velocity dictates the outcome
-                if (velocityX > 0.4) { // Fast swipe right
+                if (velocityX > 0.4) {
                     menu.style.transform = 'translateX(0px)';
                     menu.classList.remove('-translate-x-full');
-                } else if (velocityX < -0.4) { // Fast swipe left
+                } else if (velocityX < -0.4) {
                     menu.style.transform = 'translateX(-100%)';
                     menu.classList.add('-translate-x-full');
                 } else {
-                    // If swipe is slow, position dictates the outcome (sensitive threshold)
-                    if (currentX > -menuWidth * 0.7) { // If dragged more than 30% of the way
+                    if (currentX > -menuWidth * 0.7) {
                         menu.style.transform = 'translateX(0px)';
                         menu.classList.remove('-translate-x-full');
                     } else {
@@ -1100,12 +1049,10 @@
                         menu.classList.add('-translate-x-full');
                     }
                 }
-
-                // After the animation finishes, remove the inline styles to let the CSS classes take over.
                 setTimeout(() => {
                     menu.style.transition = '';
                     menu.style.transform = '';
-                }, 300); // This duration must match the CSS transition duration.
+                }, 300);
             });
 
             projectCards.forEach(card => {
@@ -1115,41 +1062,33 @@
                 card.appendChild(p);
             });
 
-            // NEW: Logic to highlight the active navigation link on scroll for desktop view
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.md\\:flex a');
             
-            // Function to remove all active classes from nav links
             const removeActiveClasses = () => {
                 navLinks.forEach(link => {
                     link.classList.remove('bg-white/60', 'scale-105');
                 });
             };
 
-            // Function to set the active class on a specific link
             const setActiveLink = (linkId) => {
                 removeActiveClasses();
-                // Select the link using its href attribute
                 const activeLink = document.querySelector(`.md\\:flex a[href="#${linkId}"]`);
                 if (activeLink) {
                     activeLink.classList.add('bg-white/60', 'scale-105');
                 }
             };
             
-            // Scroll event handler
             const handleScroll = () => {
                 let currentSectionId = '';
                 const scrollY = window.scrollY;
 
-                // Set Home as active if at the very top of the page
                 if (scrollY < 100) {
                     setActiveLink('home');
                     return;
                 }
                 
-                // Loop through sections to find the one in view
                 sections.forEach(section => {
-                    // Check if the section's top is within the viewport, adjusting for the fixed header
                     const sectionTop = section.offsetTop - 150; 
                     const sectionHeight = section.offsetHeight;
 
@@ -1158,26 +1097,19 @@
                     }
                 });
 
-                // Set the active link based on the current section ID
                 if (currentSectionId === 'tech-skills' || currentSectionId === 'key-skills') {
-                    // This handles the user request to highlight "Skills" for both tech and soft skills
                     setActiveLink('tech-skills'); 
                 } else if (currentSectionId === 'portfolio') {
-                    // This handles the user request for "Projects" to highlight for the "portfolio" section
                     setActiveLink('portfolio');
                 } else if (currentSectionId) {
                     setActiveLink(currentSectionId);
                 }
             };
 
-            // Add the scroll event listener
             window.addEventListener('scroll', handleScroll);
-            
-            // Initial call to set the active link on page load
             handleScroll();
 
-            // Typewriter effect for the hero section with callback support
-            function typeWriter(element, text, speed = 100, callback) {
+            function typeWriter(element, text, speed = 75, callback) {
                 let i = 0;
                 element.innerHTML = '';
                 element.style.opacity = '1';
@@ -1189,12 +1121,9 @@
                         i++;
                         setTimeout(type, speed);
                     } else {
-                        // Add cursor after typing is complete
                         const cursor = document.createElement('span');
                         cursor.className = 'terminal-cursor';
                         element.appendChild(cursor);
-
-                        // Execute callback if provided
                         if (callback && typeof callback === 'function') {
                             callback();
                         }
@@ -1203,34 +1132,25 @@
                 type();
             }
 
-            // Initialize typewriter effect with sequenced animations
             setTimeout(() => {
                 const nameElement = document.getElementById('typing-name');
                 const subtitleElement = document.getElementById('typing-subtitle');
                 
                 if (nameElement) {
-                    typeWriter(nameElement, "Mustansir Vora", 150, () => {
-                        // After name typing completes, start subtitle
+                    typeWriter(nameElement, "Mustansir Vora", 75, () => {
                         if (subtitleElement) {
-                            typeWriter(subtitleElement, "Full Stack Developer & AI Enthusiast", 100, () => {
-                                // UPDATED: After subtitle completes, trigger the new animations
+                            typeWriter(subtitleElement, "Full Stack Developer & AI Enthusiast", 50, () => {
                                 const mainNav = document.getElementById('main-nav');
                                 const connectBtn = document.getElementById('connect-btn');
                                 const resumeBtn = document.getElementById('download-resume-btn');
                                 const socialIcons = document.querySelectorAll('.social-icons a');
 
-                                if (mainNav) {
-                                    mainNav.classList.add('animate-slide-in-scale-top');
-                                }
-                                if (connectBtn) {
-                                    connectBtn.classList.add('animate-slide-in-scale-left');
-                                }
-                                if (resumeBtn) {
-                                    resumeBtn.classList.add('animate-slide-in-scale-right');
-                                }
+                                if (mainNav) mainNav.classList.add('animate-slide-in-scale-top');
+                                if (connectBtn) connectBtn.classList.add('animate-slide-in-scale-left');
+                                if (resumeBtn) resumeBtn.classList.add('animate-slide-in-scale-right');
+                                
                                 socialIcons.forEach((icon, index) => {
                                     icon.classList.add('animate-slide-in-scale-bottom');
-                                    // Stagger the animation for each icon
                                     icon.style.animationDelay = `${index * 0.15 + 0.2}s`;
                                 });
                             });
@@ -1242,4 +1162,3 @@
     </script>
 </body>
 </html>
-<!DOCTYPE html>
