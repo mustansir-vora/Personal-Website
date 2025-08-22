@@ -102,98 +102,132 @@
             100% { left: 100%; top: 50%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.5); }
         }
 
-        /* Animation for hero section elements */
-        @keyframes fadeInScale {
+        /* Terminal-style typewriter animation */
+        @keyframes terminal-blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0;
+            }
+        }
+
+        /* NEW: Keyframes for hero section animations */
+        @keyframes slideInScaleTop {
             from {
                 opacity: 0;
-                transform: scale(0.8);
+                transform: translateY(-50px) scale(0.8);
             }
             to {
                 opacity: 1;
-                transform: scale(1);
+                transform: translateY(0) scale(1);
             }
         }
 
-        @keyframes slideInRight {
+        @keyframes slideInScaleLeft {
             from {
                 opacity: 0;
-                transform: translateX(50px);
+                transform: translateX(-50px) scale(0.8);
             }
             to {
                 opacity: 1;
-                transform: translateX(0);
+                transform: translateX(0) scale(1);
             }
         }
 
-        @keyframes slideUp {
+        @keyframes slideInScaleRight {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateX(50px) scale(0.8);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0) scale(1);
             }
         }
 
-        @keyframes staggerFadeIn {
+        @keyframes slideInScaleBottom {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(50px) scale(0.8);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0) scale(1);
             }
         }
 
-        /* Animation classes */
-        .animate-fade-in-scale {
-            animation: fadeInScale 1s ease-out forwards;
+        /* NEW: Animation helper classes */
+        .animate-slide-in-scale-top {
+            animation: slideInScaleTop 0.6s ease-out forwards;
+        }
+        .animate-slide-in-scale-left {
+            animation: slideInScaleLeft 0.6s ease-out forwards;
+        }
+        .animate-slide-in-scale-right {
+            animation: slideInScaleRight 0.6s ease-out forwards;
+        }
+        .animate-slide-in-scale-bottom {
+            animation-name: slideInScaleBottom;
+            animation-duration: 0.6s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
         }
 
-        .animate-slide-in-right {
-            animation: slideInRight 0.8s ease-out forwards;
+        /* Terminal-style text container */
+        .terminal-text {
+            position: relative;
+            display: inline-block;
+            font-family: 'Google Sans Text', sans-serif;
+            font-weight: bold;
         }
 
-        .animate-slide-up {
-            animation: slideUp 0.6s ease-out forwards;
-        }
-
-        .animate-stagger-fade-in {
-            animation: staggerFadeIn 0.5s ease-out forwards;
+        .terminal-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: var(--text-color);
+            animation: terminal-blink 0.7s infinite;
+            vertical-align: text-bottom;
+            margin-left: 2px;
         }
 
         /* Initial state for animations */
-        .hero-content > h1,
-        .hero-content > .subtitle,
-        .hero-content > .button-group,
-        .hero-content > .social-icons > * {
+        /* Hides elements that will be animated in after the typewriter effect */
+        #main-nav,
+        .button-group > a,
+        .social-icons > a {
             opacity: 0;
         }
 
-        .hero-content.animate-in > h1 {
-            animation: fadeInScale 1s ease-out 0.2s forwards;
+        /* Terminal typing styles */
+        .terminal-typing {
+            font-family: 'Google Sans Text', sans-serif;
+            white-space: pre;
+            overflow: hidden;
+            display: inline-block;
         }
 
-        .hero-content.animate-in > .subtitle {
-            animation: slideInRight 0.8s ease-out 0.6s forwards;
+        .terminal-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: var(--text-color);
+            animation: terminal-blink 0.7s infinite;
+            vertical-align: text-bottom;
+            margin-left: 2px;
         }
 
-        .hero-content.animate-in > .button-group {
-            animation: slideUp 0.6s ease-out 1s forwards;
+        /* Ensure text wraps properly on smaller screens */
+        @media (max-width: 767px) {
+            .hero-content > h1,
+            .hero-content > .subtitle {
+                white-space: normal;
+                overflow: visible;
+            }
         }
 
-        .hero-content.animate-in > .social-icons > * {
-            animation: staggerFadeIn 0.5s ease-out forwards;
-        }
-
-        .hero-content.animate-in > .social-icons > *:nth-child(1) { animation-delay: 1.4s; }
-        .hero-content.animate-in > .social-icons > *:nth-child(2) { animation-delay: 1.5s; }
-        .hero-content.animate-in > .social-icons > *:nth-child(3) { animation-delay: 1.6s; }
-        .hero-content.animate-in > .social-icons > *:nth-child(4) { animation-delay: 1.7s; }
-
-body {
+        body {
             background-color: transparent; /* Ensure the background blends with the display */
             font-family: 'Google Sans Text', sans-serif;
             background: linear-gradient(to bottom, var(--sky-color-top), var(--sky-color-bottom));
@@ -478,7 +512,8 @@ body {
 <body class="bg-gray-900">
 
     <header class="fixed top-0 p-4 z-30 w-full">
-        <nav class="fixed top-4 md:top-1 w-full z-50 flex justify-between items-center">
+        <!-- ADDED ID: "main-nav" for animation targeting -->
+        <nav id="main-nav" class="fixed top-4 md:top-1 w-full z-50 flex justify-between items-center">
             <div class="md:hidden flex justify-start pl-1 w-full">
                 <button id="hamburger-btn" class="text-xl font-bold bg-white/30 backdrop-blur-3xl p-2 rounded-xl text-color-change">&#9776;</button>
             </div>
@@ -509,23 +544,26 @@ body {
     <main class="relative z-10">
         <section id="home" class="h-screen flex items-center justify-center text-center">
             <div class="hero-content">
-                <h1 class="text-5xl md:text-7xl font-bold">Hello, I'm Mustansir Vora</h1>
-                <p class="subtitle text-xl md:text-2xl mt-4 opacity-80">Full Stack Developer & AI Research Enthusiast</p>
+                <h1 class="text-5xl md:text-7xl font-bold terminal-typing" id="typing-name"></h1>
+                <p class="subtitle text-xl md:text-2xl mt-4 opacity-80 terminal-typing" id="typing-subtitle"></p>
                 <div class="button-group mt-8 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 justify-center">
-                    <a href="https://wa.me/918208928683?text=Hello%20there!" target="_blank" rel="noopener noreferrer" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4  ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Let's connect</a>
-                    <a href="https://drive.google.com/uc?export=download&id=1E49zMuKNj9QgAAHkoFHGyz8JV0q7H73W" id="download-resume" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4  ease-in-out hover:scale-105 hover:shadow-2xl text-color-change" download>Download Resume</a>
+                    <!-- ADDED ID: "connect-btn" for animation targeting -->
+                    <a href="https://wa.me/918208928683?text=Hello%20there!" id="connect-btn" target="_blank" rel="noopener noreferrer" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4  ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">Let's connect</a>
+                    <!-- CHANGED ID: for consistency -->
+                    <a href="https://drive.google.com/uc?export=download&id=1E49zMuKNj9QgAAHkoFHGyz8JV0q7H73W" id="download-resume-btn" class=" inline-block bg-white/30 backdrop-blur-md font-bold py-3 px-6 rounded-full hover:bg-white/60 w-fit mx-auto md:mx-4  ease-in-out hover:scale-105 hover:shadow-2xl text-color-change" download>Download Resume</a>
                 </div>
                 <div class="social-icons mt-8 flex justify-center space-x-6">
-                    <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center ease-in-out hover:scale-110 hover:shadow-2xl">
+                    <!-- FIXED: Removed invalid 'ease-in-out' class and added proper transition classes for hover effect -->
+                    <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-transform duration-300">
                         <img src="Assets/GMAIL_TOP.svg" alt="Gmail Icon" class="w-5 h-6 md:w-7 md:h-8">
                     </a>
-                    <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center ease-in-out hover:scale-110 hover:shadow-2xl">
+                    <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-transform duration-300">
                         <img src="Assets/LINKEDIN_TOP.svg" alt="LinkedIn Icon" class="w-5 h-6 md:w-7 md:h-8">
                     </a>
-                    <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center ease-in-out hover:scale-110 hover:shadow-2xl">
+                    <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-transform duration-300">
                         <img src="Assets/GITHUB_TOP.svg" alt="GitHub Icon" class="w-5 h-6 md:w-8 md:h-8">
                     </a>
-                    <a href="https://www.instagram.com/mustansir_vora/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center ease-in-out hover:scale-110 hover:shadow-2xl">
+                    <a href="https://www.instagram.com/mustansir_vora/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-transform duration-300">
                         <img src="Assets/INSTAGRAM_TOP.svg" alt="Instagram Icon" class="w-5 h-6 md:w-8 md:h-8">
                     </a>
             </div>
@@ -904,7 +942,7 @@ body {
                 },
                 {
                     title: 'Agile/Scrum Practice',
-                    description: 'I Actively participate in all Scrum ceremonies, collaborating with cross-functional teams to align solutions with project goals and user needs.',
+                    description: 'I actively participate in all Scrum ceremonies, collaborating with cross-functional teams to align solutions with project goals and user needs.',
                 },
                 {
                     title: 'Time Management and Organization',
@@ -1097,30 +1135,7 @@ body {
                     activeLink.classList.add('bg-white/60', 'scale-105');
                 }
             };
-
-            // Hero section animations on page load
-            const heroContent = document.querySelector('.hero-content');
             
-            // Trigger animations when page loads
-            window.addEventListener('load', () => {
-                setTimeout(() => {
-                    heroContent.classList.add('animate-in');
-                }, 300);
-            });
-
-            // Also trigger when user scrolls back to top
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            if (heroContent) {
-                observer.observe(heroContent);
-            }
-
             // Scroll event handler
             const handleScroll = () => {
                 let currentSectionId = '';
@@ -1160,7 +1175,71 @@ body {
             
             // Initial call to set the active link on page load
             handleScroll();
+
+            // Typewriter effect for the hero section with callback support
+            function typeWriter(element, text, speed = 100, callback) {
+                let i = 0;
+                element.innerHTML = '';
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+                
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        // Add cursor after typing is complete
+                        const cursor = document.createElement('span');
+                        cursor.className = 'terminal-cursor';
+                        element.appendChild(cursor);
+
+                        // Execute callback if provided
+                        if (callback && typeof callback === 'function') {
+                            callback();
+                        }
+                    }
+                }
+                type();
+            }
+
+            // Initialize typewriter effect with sequenced animations
+            setTimeout(() => {
+                const nameElement = document.getElementById('typing-name');
+                const subtitleElement = document.getElementById('typing-subtitle');
+                
+                if (nameElement) {
+                    typeWriter(nameElement, "Mustansir Vora", 150, () => {
+                        // After name typing completes, start subtitle
+                        if (subtitleElement) {
+                            typeWriter(subtitleElement, "Full Stack Developer & AI Enthusiast", 100, () => {
+                                // UPDATED: After subtitle completes, trigger the new animations
+                                const mainNav = document.getElementById('main-nav');
+                                const connectBtn = document.getElementById('connect-btn');
+                                const resumeBtn = document.getElementById('download-resume-btn');
+                                const socialIcons = document.querySelectorAll('.social-icons a');
+
+                                if (mainNav) {
+                                    mainNav.classList.add('animate-slide-in-scale-top');
+                                }
+                                if (connectBtn) {
+                                    connectBtn.classList.add('animate-slide-in-scale-left');
+                                }
+                                if (resumeBtn) {
+                                    resumeBtn.classList.add('animate-slide-in-scale-right');
+                                }
+                                socialIcons.forEach((icon, index) => {
+                                    icon.classList.add('animate-slide-in-scale-bottom');
+                                    // Stagger the animation for each icon
+                                    icon.style.animationDelay = `${index * 0.15 + 0.2}s`;
+                                });
+                            });
+                        }
+                    });
+                }
+            }, 300); 
         });
     </script>
 </body>
 </html>
+<!DOCTYPE html>
