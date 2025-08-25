@@ -839,7 +839,7 @@
     </main>
 
     <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-container">
-        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-3xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-3xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative text-color-change">
             <button id="close-modal" aria-label="Close project details" class="absolute top-4 right-4 text-2xl font-bold close-modal-btn">&times;</button>
             <h3 id="modal-project-title" class="text-3xl font-bold mb-4"></h3>
             <p id="modal-project-description" class="text-lg"></p>
@@ -849,7 +849,7 @@
     </div>
 
     <div id="personal-project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-container">
-        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-3xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
+        <div style="background-color: var(--modal-inner-bg);" class="backdrop-blur-3xl p-8 pr-10 rounded-xl max-w-7xl w-full mx-4 relative text-color-change">
             <button id="close-personal-modal" aria-label="Close project details" class="absolute top-4 right-4 text-2xl font-bold close-modal-btn">&times;</button>
             <h3 id="personal-modal-project-title" class="text-3xl font-bold mb-4"></h3>
             <p id="personal-modal-project-description" class="text-lg"></p>
@@ -1163,9 +1163,9 @@
                 const subtitleElement = document.getElementById('typing-subtitle');
                 
                 if (nameElement) {
-                    typeWriter(nameElement, "Mustansir Vora", 75, () => {
+                    typeWriter(nameElement, "Hello, I'm Mustansir Vora", 75, () => {
                         if (subtitleElement) {
-                            typeWriter(subtitleElement, "Full Stack Developer & AI Enthusiast", 50, () => {
+                            typeWriter(subtitleElement, "Full Stack Developer & AI Research Enthusiast", 50, () => {
                                 const mainNav = document.getElementById('main-nav');
                                 const connectBtn = document.getElementById('connect-btn');
                                 const resumeBtn = document.getElementById('download-resume-btn');
