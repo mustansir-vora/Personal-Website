@@ -192,19 +192,16 @@
 
         /* NEW: Animation helper classes */
         .animate-slide-in-scale-top {
-            animation: slideInScaleTop 0.6s ease-out forwards;
+            animation: slideInScaleTop 0.6s ease-out backwards;
         }
         .animate-slide-in-scale-left {
-            animation: slideInScaleLeft 0.6s ease-out forwards;
+            animation: slideInScaleLeft 0.6s ease-out backwards;
         }
         .animate-slide-in-scale-right {
-            animation: slideInScaleRight 0.6s ease-out forwards;
+            animation: slideInScaleRight 0.6s ease-out backwards;
         }
         .animate-slide-in-scale-bottom {
-            animation-name: slideInScaleBottom;
-            animation-duration: 0.6s;
-            animation-timing-function: ease-out;
-            animation-fill-mode: forwards;
+            animation: slideInScaleBottom 0.6s ease-out backwards;
         }
 
         /* Terminal-style text container */
@@ -231,6 +228,22 @@
         .button-group > a,
         .social-icons > a {
             opacity: 0;
+        }
+
+        /*
+         * DEFINITIVE FIX for entrance animations and hover effects:
+         * This rule block uses higher-specificity selectors to define the final, visible state
+         * for the animated elements. This correctly overrides the initial 'opacity: 0' rule
+         * after the animation finishes, preventing the elements from disappearing.
+         * Because the animation no longer needs 'forwards', the 'transform' property is
+         * released, allowing the hover effects to work as intended.
+        */
+        #main-nav.animate-slide-in-scale-top,
+        .button-group > a.animate-slide-in-scale-left,
+        .button-group > a.animate-slide-in-scale-right,
+        .social-icons > a.animate-slide-in-scale-bottom {
+            opacity: 1;
+            transform: translate(0) scale(1);
         }
 
         /* Terminal typing styles */
@@ -294,13 +307,21 @@
         
         /* Text color transition & ROBUST HOVER TRANSITION FIX */
         .text-color-change, h1, h2, h3, h4, h5, a, p, button, [role="button"], .group, 
-        .timeline-content, .project-card, hidden.md\:flex a {
+        .timeline-content, .project-card, hidden.md\:flex a, 
+        .button-group > a, .social-icons > a {
             color: var(--text-color) !important;
-            /* DEFINITIVE FIX: Combined all transitions into a single, overriding rule. */
             transition: color 0.8s ease-in-out,
-                        transform 300ms ease-in-out,
-                        background-color 300ms ease-in-out,
-                        box-shadow 300ms ease-in-out !important;
+            transform 300ms ease-in-out,
+            background-color 300ms ease-in-out,
+            box-shadow 300ms ease-in-out !important;
+        }
+
+        /* FIX: Added hover rules to override the animation's transform. */
+        .button-group > a:hover {
+            transform: scale(1.05);
+        }
+        .social-icons > a:hover {
+            transform: scale(1.1);
         }
 
         /* Modal Styles */
