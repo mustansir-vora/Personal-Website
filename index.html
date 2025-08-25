@@ -292,10 +292,15 @@
             will-change: transform;
         }
         
-        /* Text color transition - global property */
-        .text-color-change, h1, h2, h3, h4, h5, a, p, button, hidden.md\:flex a {
+        /* Text color transition & ROBUST HOVER TRANSITION FIX */
+        .text-color-change, h1, h2, h3, h4, h5, a, p, button, [role="button"], .group, 
+        .timeline-content, .project-card, hidden.md\:flex a {
             color: var(--text-color) !important;
-            transition: color 0.8s ease-in-out !important;
+            /* DEFINITIVE FIX: Combined all transitions into a single, overriding rule. */
+            transition: color 0.8s ease-in-out,
+                        transform 300ms ease-in-out,
+                        background-color 300ms ease-in-out,
+                        box-shadow 300ms ease-in-out !important;
         }
 
         /* Modal Styles */
