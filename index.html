@@ -555,7 +555,17 @@
             }
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .hero-content > h1,
+            .hero-content > .subtitle {
+                white-space: normal;
+            }
+            #tech-skills .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 1025px) {
             #tech-skills .grid {
                 grid-template-columns: repeat(6, 1fr);
             }
