@@ -570,6 +570,23 @@
                 grid-template-columns: repeat(6, 1fr);
             }
         }
+
+        #menu-backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        #menu-backdrop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        header.menu-open {
+            z-index: 50;
+        }
     </style>
 </head>
 <body class="bg-gray-900">
@@ -588,7 +605,7 @@
                 <a href="#contact" class="text-color-change font-bold px-4 py-2 text-sm md:text-base rounded-full hover:bg-white/60 transform translate-z-0 inline-block hover:scale-105 transition-all duration-300 ease-in-out will-change-transform">Get in Touch</a>
             </div>
         </nav>
-        <div id="mobile-menu" class="md:hidden fixed top-0 left-0 h-full w-30 bg-white/30 backdrop-blur-3xl transition-transform duration-300 ease-in-out transform -translate-x-full rounded-r-3xl">
+        <div id="mobile-menu" class="md:hidden fixed top-0 left-0 h-full w-30 bg-white/30 backdrop-blur-3xl transition-transform duration-300 ease-in-out transform -translate-x-full rounded-r-3xl z-50">
             <div class="flex justify-end p-4 text-color-change">
                 <button id="close-menu-btn" aria-label="Close menu" class="text-2xl font-bold">&times;</button>
             </div>
@@ -602,6 +619,7 @@
     </header>
 
     <div id="sun-moon"></div>
+    <div id="menu-backdrop" class="fixed inset-0 z-40"></div>
 
     <main class="relative z-10">
         <section id="home" class="h-screen flex items-center justify-center text-center">
@@ -882,15 +900,21 @@
             const hamburgerBtn = document.getElementById('hamburger-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const closeMenuBtn = document.getElementById('close-menu-btn');
+            const menuBackdrop = document.getElementById('menu-backdrop');
+            const header = document.querySelector('header');
 
             function openMenu() {
                 mobileMenu.classList.remove('-translate-x-full');
                 hamburgerBtn.classList.add('hidden');
+                menuBackdrop.classList.add('active');
+                header.classList.add('menu-open');
             }
 
             function closeMenu() {
                 mobileMenu.classList.add('-translate-x-full');
                 hamburgerBtn.classList.remove('hidden');
+                menuBackdrop.classList.remove('active');
+                header.classList.remove('menu-open');
             }
 
             hamburgerBtn.addEventListener('click', (e) => {
@@ -903,12 +927,7 @@
             });
 
             closeMenuBtn.addEventListener('click', closeMenu);
-
-            document.addEventListener('click', (e) => {
-                if (!mobileMenu.classList.contains('-translate-x-full') && !mobileMenu.contains(e.target)) {
-                    closeMenu();
-                }
-            });
+            menuBackdrop.addEventListener('click', closeMenu);
 
             document.querySelectorAll('#mobile-menu a').forEach(anchor => {
                 anchor.addEventListener('click', closeMenu);
