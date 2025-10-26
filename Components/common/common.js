@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.md\:flex a');
+    const navLinks = document.querySelectorAll('.nav-link');
     
     const removeActiveClasses = () => {
         navLinks.forEach(link => {
@@ -20,10 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setActiveLink = (linkId) => {
         removeActiveClasses();
-        const activeLink = document.querySelector(`.md\:flex a[href="#${linkId}"]`);
-        if (activeLink) {
-            activeLink.classList.add('bg-white/60', 'scale-105');
-        }
+        const activeLinks = document.querySelectorAll(`.nav-link[href="#${linkId}"]`);
+        activeLinks.forEach(activeLink => {
+            if (activeLink) {
+                if (window.innerWidth < 768) {
+                    activeLink.classList.add('bg-white/60');
+                } else {
+                    activeLink.classList.add('bg-white/60', 'scale-105');
+                }
+            }
+        });
     };
     
     const handleScroll = () => {
