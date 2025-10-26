@@ -1,4 +1,3 @@
-
 function typeWriter(element, text, speed = 75, callback) {
     let i = 0;
     element.innerHTML = '';
@@ -146,20 +145,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.project-card, .bg-white\/10');
-    const bentoSection = document.querySelector('body');
+    const cards = document.querySelectorAll('.card');
 
-    if (!bentoSection) return;
-
-    const DEFAULT_PARTICLE_COUNT = 12;
-    const DEFAULT_SPOTLIGHT_RADIUS = 300;
+    const DEFAULT_PARTICLE_COUNT = 15;
+    const DEFAULT_SPOTLIGHT_RADIUS = 400;
     const MOBILE_BREAKPOINT = 768;
 
     const isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
 
     const getContrastingColor = (color) => {
         const rgb = color.match(/\d+/g);
-        if (!rgb) return '#000';
+        if (!rgb) return '255, 255, 255';
         const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
         return brightness > 125 ? '0, 0, 0' : '255, 255, 255';
     };
@@ -277,8 +273,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.addEventListener('mouseenter', () => {
             isHovered = true;
-            const cardColor = getComputedStyle(card).backgroundColor;
-            const glowColor = getContrastingColor(cardColor);
+            const section = card.closest('section');
+            const bgColor = section ? getComputedStyle(section).backgroundColor : getComputedStyle(document.body).backgroundColor;
+            const glowColor = getContrastingColor(bgColor);
             card.style.setProperty('--glow-color', glowColor);
             animateParticles(glowColor);
 
@@ -357,8 +354,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            const cardColor = getComputedStyle(card).backgroundColor;
-            const glowColor = getContrastingColor(cardColor);
+            const section = card.closest('section');
+            const bgColor = section ? getComputedStyle(section).backgroundColor : getComputedStyle(document.body).backgroundColor;
+            const glowColor = getContrastingColor(bgColor);
 
             const maxDistance = Math.max(
                 Math.hypot(x, y),
@@ -404,8 +402,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(spotlight);
 
     document.addEventListener('mousemove', e => {
-        const cardColor = getComputedStyle(bentoSection).backgroundColor;
-        const glowColor = getContrastingColor(cardColor);
+        const section = e.target.closest('section');
+        const bgColor = section ? getComputedStyle(section).backgroundColor : getComputedStyle(document.body).backgroundColor;
+        const glowColor = getContrastingColor(bgColor);
         spotlight.style.background = `radial-gradient(circle,
             rgba(${glowColor}, 0.15) 0%,
             rgba(${glowColor}, 0.08) 15%,
