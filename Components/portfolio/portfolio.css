@@ -1,0 +1,74 @@
+
+.modal-container {
+    background-color: transparent; /* Removed dark overlay */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-container > div {
+    max-height: 90vh; /* Limit height to prevent overflow */
+    overflow-y: auto; /* Enable scrolling for long content */
+    transform: translateY(0); /* Initial position for animation */
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-container.hidden > div {
+    transform: translateY(-50px); /* Move up when hidden */
+}
+
+.close-modal-btn {
+    cursor: pointer;
+}
+
+/* Custom scrollbar for modal */
+.modal-container > div::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-container > div::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-container > div::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+.modal-container > div::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Project Card Text Color Fix */
+.project-card h3,
+.project-card p {
+    color: var(--text-color);
+}
+
+#personal-modal-project-description a {
+    color: #87ceeb;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#personal-modal-project-description a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+    .project-card {
+        transition: transform 0.1s ease-out;
+    }
+
+    .project-card:active {
+        transform: scale(0.95);
+    }
+    .modal-container h3 {
+        font-size: 1.25rem; /* text-xl */
+    }
+    .modal-container h4 {
+        font-size: 1.125rem; /* text-lg */
+    }
+    .modal-container p,
+    .modal-container li {
+        font-size: 0.875rem; /* text-sm */
+    }
+}

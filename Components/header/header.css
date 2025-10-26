@@ -1,0 +1,44 @@
+
+#main-nav,
+.button-group > a,
+.social-icons > a {
+    opacity: 0;
+}
+
+#main-nav.animate-slide-in-scale-top,
+.button-group > a.animate-slide-in-scale-left,
+.button-group > a.animate-slide-in-scale-right,
+.social-icons > a.animate-slide-in-scale-bottom {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+.button-group > a:hover {
+    transform: scale(1.05);
+}
+.social-icons > a:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+    #mobile-menu a {
+        border-color: var(--text-color);
+    }
+}
+
+#menu-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+#menu-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+header.menu-open {
+    z-index: 50;
+}

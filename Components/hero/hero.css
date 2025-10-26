@@ -1,0 +1,39 @@
+
+.terminal-text {
+    position: relative;
+    display: inline-block;
+    font-family: 'Google Sans Text', sans-serif;
+    font-weight: bold;
+}
+
+.terminal-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background-color: var(--text-color);
+    animation: terminal-blink 0.7s infinite;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+}
+
+.terminal-typing {
+    font-family: 'Google Sans Text', sans-serif;
+    white-space: pre;
+    overflow: hidden;
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .hero-content > h1,
+    .hero-content > .subtitle {
+        white-space: normal;
+        overflow: visible;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-content > h1,
+    .hero-content > .subtitle {
+        white-space: normal;
+    }
+}

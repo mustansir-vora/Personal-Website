@@ -1,0 +1,13 @@
+
+#sun-moon {
+    position: fixed;
+    width: var(--sun-size);
+    height: var(--sun-size);
+    background-color: var(--sun-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Behind content */
+    animation: sun-moon-animation linear forwards;
+    animation-timeline: scroll(root);
+    will-change: transform, background-color; /* Performance Optimization */
+}

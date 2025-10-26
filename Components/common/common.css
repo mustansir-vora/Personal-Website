@@ -1,0 +1,147 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+@property --sky-color-top {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #f9d89c;
+}
+@property --sky-color-bottom {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #f9a602;
+}
+@property --sun-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #f9a602;
+}
+@property --text-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000000;
+}
+:root {
+    --sky-color-top: #f9d89c;
+    --sky-color-bottom: #f9a602;
+    --sun-color: #f9a602;
+    --text-color: #000000;
+    --modal-inner-bg: rgba(255, 255, 255, 0.3);
+    --sun-size: 110px;
+}
+
+@media (min-width: 768px) { /* For medium screens and up (desktop) */
+    :root {
+        --sun-size: 184px;  /* Larger size for desktop (e.g., 184px) */
+    }
+}
+
+body {
+    background-color: transparent; /* Ensure the background blends with the display */
+    font-family: 'Google Sans Text', sans-serif;
+    background: linear-gradient(to bottom, var(--sky-color-top), var(--sky-color-bottom));
+    color: var(--text-color);
+    animation: scroll-colors linear forwards;
+    animation-timeline: scroll(root);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+/* Performance: Hint to the browser about upcoming transform changes */
+.will-change-transform {
+    will-change: transform;
+}
+
+/* Text color transition & ROBUST HOVER TRANSITION FIX */
+.text-color-change, h1, h2, h3, h4, h5, a, p, button, [role="button"], .group, 
+.timeline-content, .project-card, hidden.md\:flex a, 
+.button-group > a, .social-icons > a {
+    color: var(--text-color) !important;
+    transition: color 0.8s ease-in-out,
+    transform 300ms ease-in-out,
+    background-color 300ms ease-in-out,
+    box-shadow 300ms ease-in-out !important;
+}
+
+@media (max-width: 767px) {
+    #about,
+    #tech-skills,
+    #key-skills,
+    #work-experience,
+    #portfolio {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #tech-skills .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #tech-skills .group .md\:group-hover\:opacity-0 {
+        opacity: 1 !important;
+    }
+
+    #tech-skills .group .md\:hidden {
+        display: flex;
+    }
+
+    #tech-skills .group .absolute {
+        display: none;
+    }
+
+    section > div.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 1rem;
+        z-index: 20;
+    }
+
+    #tech-skills .grid { grid-template-columns: repeat(2, 1fr); }
+
+    .timeline-content h3,
+    .project-card h3,
+    #key-skills .bg-white\/10 h3 {
+        font-size: 1.125rem; /* text-lg */
+        line-height: 1.75rem;
+    }
+
+    #keen-interests .bg-white\/10 h3 {
+        font-size: 1.25rem; /* text-xl */
+        line-height: 1.75rem;
+    }
+
+    #about p,
+    .timeline-content p,
+    .project-card p,
+    #key-skills .bg-white\/10 p,
+    #keen-interests .bg-white\/10 p {
+        font-size: 0.875rem; /* text-sm */
+    }
+
+    #work-experience .text-center h3 {
+        font-size: 1.25rem; /* text-xl */
+    }
+
+    #tech-skills .grid span {
+        font-size: 0.75rem; /* text-xs */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #tech-skills .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    #tech-skills .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

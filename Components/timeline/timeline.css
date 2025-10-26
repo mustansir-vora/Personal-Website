@@ -1,0 +1,92 @@
+
+.timeline-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #000000;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+#timeline-airplane {
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M2.01 21L23 12 2.01 3 2 10l15 2-15 2z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateX(-50%);
+    z-index: 3;
+    transition: top 0.5s cubic-bezier(0.42, 0, 0.58, 1), transform 0.5s cubic-bezier(0.42, 0, 0.58, 1); /* Increased duration for 'top', changed bezier for smoother animation */
+    will-change: top, transform; /* Added for optimization */
+}
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-left: 4rem;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-right: 4rem;
+}
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+.timeline-content {
+    position: relative;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--sun-color);
+    border: 3px solid var(--sky-color-top);
+    z-index: 1;
+}
+.timeline-item:nth-child(odd)::after {
+    right: 0;
+    transform: translateX(50%);
+}
+.timeline-item:nth-child(even)::after {
+    left: 0;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+    .timeline-line {
+        left: 20px;
+        transform: translateX(0);
+    }
+    #timeline-airplane {
+        left: 20px;
+    }
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding-left: 4rem;
+        padding-right: 1rem;
+    }
+    .timeline-item:nth-child(odd)::after,
+    .timeline-item:nth-child(even)::after {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+}
