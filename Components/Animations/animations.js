@@ -49,7 +49,6 @@ setTimeout(() => {
 }, 300); 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const sparkColor = '#fff';
     const sparkSize = 10;
     const sparkRadius = 15;
     const sparkCount = 8;
@@ -108,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const x2 = spark.x + (distance + lineLength) * Math.cos(spark.angle);
             const y2 = spark.y + (distance + lineLength) * Math.sin(spark.angle);
 
-            ctx.strokeStyle = sparkColor;
+            ctx.strokeStyle = spark.color;
             ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.moveTo(x1, y1);
@@ -124,13 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleClick = (e) => {
         const x = e.clientX;
         const y = e.clientY;
+        const sparkColor = getComputedStyle(document.body).color;
 
         const now = performance.now();
         const newSparks = Array.from({ length: sparkCount }, (_, i) => ({
             x,
             y,
             angle: (2 * Math.PI * i) / sparkCount,
-            startTime: now
+            startTime: now,
+            color: sparkColor
         }));
 
         sparks.push(...newSparks);
