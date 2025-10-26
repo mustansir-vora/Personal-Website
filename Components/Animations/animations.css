@@ -1,0 +1,124 @@
+
+@keyframes scroll-colors {
+    from {
+        --sky-color-top: #f9d89c;
+        --sky-color-bottom: #f9a602;
+        --sun-color: #f9a602;
+        --text-color: #000000;
+        --modal-inner-bg: rgba(255, 255, 255, 0.3);
+    }
+    25% {
+        --sky-color-top: #a2e1ff;
+        --sky-color-bottom: #f0f8ff;
+        --sun-color: #ffcc00;
+    }
+    50% {
+        --sky-color-top: #ff7f50;
+        --sky-color-bottom: #ff4500;
+        --sun-color: #ff4500;
+    }
+    55% {
+        --text-color: #000000;
+        --modal-inner-bg: rgba(255, 255, 255, 0.3);
+    }
+    61% {
+        --text-color: #000000;
+        --modal-inner-bg: rgba(255, 255, 255, 0.3);
+    }
+    62% {
+        --text-color: #000000;
+    }
+    62.01% {
+        --text-color: #ffffff;
+    }
+    75% {
+        --sky-color-top: #000080;
+        --sky-color-bottom: #000000;
+        --sun-color: #f5f5f5;
+    }
+    to {
+        --sky-color-top: #000080;
+        --sky-color-bottom: #000000;
+        --sun-color: #f5f5f5;
+        --text-color: #ffffff;
+        --modal-inner-bg: rgba(255, 255, 255, 0.3);
+    }
+}
+
+@keyframes sun-moon-animation {
+    0%   { left: 0%;   top: 50%; box-shadow: 0 0 100px 40px rgba(255, 238, 207, 0.833); }
+    25%  { left: 25%;  top: 21.72%; }
+    50%  { left: 50%;  top: 10%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 1.0); }
+    75%  { left: 75%;  top: 21.72%; }
+    100% { left: 100%; top: 50%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.5); }
+}
+
+/* Terminal-style typewriter animation */
+@keyframes terminal-blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* NEW: Keyframes for hero section animations */
+@keyframes slideInScaleTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideInScaleLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes slideInScaleRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes slideInScaleBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* NEW: Animation helper classes */
+.animate-slide-in-scale-top {
+    animation: slideInScaleTop 0.6s ease-out backwards;
+}
+.animate-slide-in-scale-left {
+    animation: slideInScaleLeft 0.6s ease-out backwards;
+}
+.animate-slide-in-scale-right {
+    animation: slideInScaleRight 0.6s ease-out backwards;
+}
+.animate-slide-in-scale-bottom {
+    animation: slideInScaleBottom 0.6s ease-out backwards;
+}
+

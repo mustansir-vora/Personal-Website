@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;700&display=swap">
     
+    <link rel="stylesheet" href="Components/CSS/main.css">
+    <link rel="stylesheet" href="Components/Animations/animations.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script type="application/ld+json">
@@ -41,553 +45,6 @@
     }
     </script>
     
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Using a style block for CSS variables and base styles for simplicity */
-        @property --sky-color-top {
-          syntax: '<color>';
-          inherits: true;
-          initial-value: #f9d89c;
-        }
-        @property --sky-color-bottom {
-          syntax: '<color>';
-          inherits: true;
-          initial-value: #f9a602;
-        }
-        @property --sun-color {
-          syntax: '<color>';
-          inherits: true;
-          initial-value: #f9a602;
-        }
-        @property --text-color {
-          syntax: '<color>';
-          inherits: true;
-          initial-value: #000000;
-        }
-        :root {
-            --sky-color-top: #f9d89c;
-            --sky-color-bottom: #f9a602;
-            --sun-color: #f9a602;
-            --text-color: #000000;
-            --modal-inner-bg: rgba(255, 255, 255, 0.3);
-		    --sun-size: 110px;
-        }
-
-		@media (min-width: 768px) { /* For medium screens and up (desktop) */
-			:root {
-				--sun-size: 184px;  /* Larger size for desktop (e.g., 184px) */
-			}
-        }
-
-        @keyframes scroll-colors {
-            from {
-                --sky-color-top: #f9d89c;
-                --sky-color-bottom: #f9a602;
-                --sun-color: #f9a602;
-                --text-color: #000000;
-                --modal-inner-bg: rgba(255, 255, 255, 0.3);
-            }
-            25% {
-                --sky-color-top: #a2e1ff;
-                --sky-color-bottom: #f0f8ff;
-                --sun-color: #ffcc00;
-            }
-            50% {
-                --sky-color-top: #ff7f50;
-                --sky-color-bottom: #ff4500;
-                --sun-color: #ff4500;
-            }
-            55% {
-                --text-color: #000000;
-                --modal-inner-bg: rgba(255, 255, 255, 0.3);
-            }
-            61% {
-                --text-color: #000000;
-                --modal-inner-bg: rgba(255, 255, 255, 0.3);
-            }
-            62% {
-                --text-color: #000000;
-            }
-            62.01% {
-                --text-color: #ffffff;
-            }
-            75% {
-                --sky-color-top: #000080;
-                --sky-color-bottom: #000000;
-                --sun-color: #f5f5f5;
-            }
-            to {
-                --sky-color-top: #000080;
-                --sky-color-bottom: #000000;
-                --sun-color: #f5f5f5;
-                --text-color: #ffffff;
-                --modal-inner-bg: rgba(255, 255, 255, 0.3);
-            }
-        }
-
-        @keyframes sun-moon-animation {
-            0%   { left: 0%;   top: 50%; box-shadow: 0 0 100px 40px rgba(255, 238, 207, 0.833); }
-            25%  { left: 25%;  top: 21.72%; }
-            50%  { left: 50%;  top: 10%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 1.0); }
-            75%  { left: 75%;  top: 21.72%; }
-            100% { left: 100%; top: 50%; box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.5); }
-        }
-
-        /* Terminal-style typewriter animation */
-        @keyframes terminal-blink {
-            0%, 50% {
-                opacity: 1;
-            }
-            51%, 100% {
-                opacity: 0;
-            }
-        }
-
-        /* NEW: Keyframes for hero section animations */
-        @keyframes slideInScaleTop {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        @keyframes slideInScaleLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0) scale(1);
-            }
-        }
-
-        @keyframes slideInScaleRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0) scale(1);
-            }
-        }
-
-        @keyframes slideInScaleBottom {
-            from {
-                opacity: 0;
-                transform: translateY(50px) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        /* NEW: Animation helper classes */
-        .animate-slide-in-scale-top {
-            animation: slideInScaleTop 0.6s ease-out backwards;
-        }
-        .animate-slide-in-scale-left {
-            animation: slideInScaleLeft 0.6s ease-out backwards;
-        }
-        .animate-slide-in-scale-right {
-            animation: slideInScaleRight 0.6s ease-out backwards;
-        }
-        .animate-slide-in-scale-bottom {
-            animation: slideInScaleBottom 0.6s ease-out backwards;
-        }
-
-        /* Terminal-style text container */
-        .terminal-text {
-            position: relative;
-            display: inline-block;
-            font-family: 'Google Sans Text', sans-serif;
-            font-weight: bold;
-        }
-
-        .terminal-cursor {
-            display: inline-block;
-            width: 2px;
-            height: 1.2em;
-            background-color: var(--text-color);
-            animation: terminal-blink 0.7s infinite;
-            vertical-align: text-bottom;
-            margin-left: 2px;
-        }
-
-        /* Initial state for animations */
-        /* Hides elements that will be animated in after the typewriter effect */
-        #main-nav,
-        .button-group > a,
-        .social-icons > a {
-            opacity: 0;
-        }
-
-        /*
-         * DEFINITIVE FIX for entrance animations and hover effects:
-         * This rule block uses higher-specificity selectors to define the final, visible state
-         * for the animated elements. This correctly overrides the initial 'opacity: 0' rule
-         * after the animation finishes, preventing the elements from disappearing.
-         * Because the animation no longer needs 'forwards', the 'transform' property is
-         * released, allowing the hover effects to work as intended.
-        */
-        #main-nav.animate-slide-in-scale-top,
-        .button-group > a.animate-slide-in-scale-left,
-        .button-group > a.animate-slide-in-scale-right,
-        .social-icons > a.animate-slide-in-scale-bottom {
-            opacity: 1;
-            transform: translate(0) scale(1);
-        }
-
-        /* Terminal typing styles */
-        .terminal-typing {
-            font-family: 'Google Sans Text', sans-serif;
-            white-space: pre;
-            overflow: hidden;
-            display: inline-block;
-        }
-
-        .terminal-cursor {
-            display: inline-block;
-            width: 2px;
-            height: 1.2em;
-            background-color: var(--text-color);
-            animation: terminal-blink 0.7s infinite;
-            vertical-align: text-bottom;
-            margin-left: 2px;
-        }
-
-        /* Ensure text wraps properly on smaller screens */
-        @media (max-width: 767px) {
-            .hero-content > h1,
-            .hero-content > .subtitle {
-                white-space: normal;
-                overflow: visible;
-            }
-        }
-
-        body {
-            background-color: transparent; /* Ensure the background blends with the display */
-            font-family: 'Google Sans Text', sans-serif;
-            background: linear-gradient(to bottom, var(--sky-color-top), var(--sky-color-bottom));
-            color: var(--text-color);
-            animation: scroll-colors linear forwards;
-            animation-timeline: scroll(root);
-        }
-        #sun-moon {
-            position: fixed;
-            width: var(--sun-size);
-            height: var(--sun-size);
-            background-color: var(--sun-color);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1; /* Behind content */
-            animation: sun-moon-animation linear forwards;
-            animation-timeline: scroll(root);
-            will-change: transform, background-color; /* Performance Optimization */
-        }
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 2rem;
-        }
-        
-        /* Performance: Hint to the browser about upcoming transform changes */
-        .will-change-transform {
-            will-change: transform;
-        }
-        
-        /* Text color transition & ROBUST HOVER TRANSITION FIX */
-        .text-color-change, h1, h2, h3, h4, h5, a, p, button, [role="button"], .group, 
-        .timeline-content, .project-card, hidden.md\:flex a, 
-        .button-group > a, .social-icons > a {
-            color: var(--text-color) !important;
-            transition: color 0.8s ease-in-out,
-            transform 300ms ease-in-out,
-            background-color 300ms ease-in-out,
-            box-shadow 300ms ease-in-out !important;
-        }
-
-        /* FIX: Added hover rules to override the animation's transform. */
-        .button-group > a:hover {
-            transform: scale(1.05);
-        }
-        .social-icons > a:hover {
-            transform: scale(1.1);
-        }
-
-        /* Modal Styles */
-        .modal-container {
-            background-color: transparent; /* Removed dark overlay */
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .modal-container > div {
-            max-height: 90vh; /* Limit height to prevent overflow */
-            overflow-y: auto; /* Enable scrolling for long content */
-            transform: translateY(0); /* Initial position for animation */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .modal-container.hidden > div {
-            transform: translateY(-50px); /* Move up when hidden */
-        }
-
-        .close-modal-btn {
-            cursor: pointer;
-        }
-
-        /* Custom scrollbar for modal */
-        .modal-container > div::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        .modal-container > div::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .modal-container > div::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.25);
-            border-radius: 5px;
-        }
-
-        .modal-container > div::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        /* Project Card Text Color Fix */
-        .project-card h3,
-        .project-card p {
-            color: var(--text-color);
-        }
-
-        #personal-modal-project-description a {
-            color: #87ceeb;
-            text-decoration: underline;
-            transition: color 0.3s ease;
-        }
-
-        #personal-modal-project-description a:hover {
-            opacity: 0.8;
-        }
-		
-		.timeline-container {
-            position: relative;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: #000000;
-            transform: translateX(-50%);
-            opacity: 0.5;
-        }
-        #timeline-airplane {
-            position: absolute;
-            left: 50%;
-            top: 1rem;
-            width: 24px;
-            height: 24px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M2.01 21L23 12 2.01 3 2 10l15 2-15 2z'/%3E%3C/svg%3E");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            transform: translateX(-50%);
-            z-index: 3;
-            transition: top 0.5s cubic-bezier(0.42, 0, 0.58, 1), transform 0.5s cubic-bezier(0.42, 0, 0.58, 1); /* Increased duration for 'top', changed bezier for smoother animation */
-            will-change: top, transform; /* Added for optimization */
-        }
-        .timeline-item {
-            position: relative;
-            width: 50%;
-            padding: 0 2rem;
-            margin-bottom: 2rem;
-        }
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-left: 4rem;
-        }
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-right: 4rem;
-        }
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-        .timeline-content {
-            position: relative;
-        }
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            top: 1rem;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--sun-color);
-            border: 3px solid var(--sky-color-top);
-            z-index: 1;
-        }
-        .timeline-item:nth-child(odd)::after {
-            right: 0;
-            transform: translateX(50%);
-        }
-        .timeline-item:nth-child(even)::after {
-            left: 0;
-            transform: translateX(-50%);
-        }
-
-        @media (max-width: 767px) {
-            #mobile-menu a {
-                border-color: var(--text-color);
-            }
-
-            .project-card {
-                transition: transform 0.1s ease-out;
-            }
-
-            .project-card:active {
-                transform: scale(0.95);
-            }
-
-            #about,
-            #tech-skills,
-            #key-skills,
-            #work-experience,
-            #portfolio {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            #tech-skills .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            #tech-skills .group .md\:group-hover\:opacity-0 {
-                opacity: 1 !important;
-            }
-
-            #tech-skills .group .md\:hidden {
-                display: flex;
-            }
-
-            #tech-skills .group .absolute {
-                display: none;
-            }
-
-            section > div.sticky {
-                position: -webkit-sticky;
-                position: sticky;
-                top: 1rem;
-                z-index: 20;
-            }
-			
-			.timeline-line {
-                left: 20px;
-                transform: translateX(0);
-            }
-            #timeline-airplane {
-                left: 20px;
-            }
-            .timeline-item,
-            .timeline-item:nth-child(even) {
-                width: 100%;
-                left: 0;
-                padding-left: 4rem;
-                padding-right: 1rem;
-            }
-            .timeline-item:nth-child(odd)::after,
-            .timeline-item:nth-child(even)::after {
-                left: 20px;
-                transform: translateX(-50%);
-            }
-            #tech-skills .grid { grid-template-columns: repeat(2, 1fr); }
-
-            .timeline-content h3,
-            .project-card h3,
-            #key-skills .bg-white\/10 h3 {
-                font-size: 1.125rem; /* text-lg */
-                line-height: 1.75rem;
-            }
-
-            #keen-interests .bg-white\/10 h3 {
-                font-size: 1.25rem; /* text-xl */
-                line-height: 1.75rem;
-            }
-
-            #about p,
-            .timeline-content p,
-            .project-card p,
-            #key-skills .bg-white\/10 p,
-            #keen-interests .bg-white\/10 p {
-                font-size: 0.875rem; /* text-sm */
-            }
-
-            #work-experience .text-center h3 {
-                font-size: 1.25rem; /* text-xl */
-            }
-
-            #tech-skills .grid span {
-                font-size: 0.75rem; /* text-xs */
-            }
-
-            .modal-container h3 {
-                font-size: 1.25rem; /* text-xl */
-            }
-            .modal-container h4 {
-                font-size: 1.125rem; /* text-lg */
-            }
-            .modal-container p,
-            .modal-container li {
-                font-size: 0.875rem; /* text-sm */
-            }
-        }
-
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .hero-content > h1,
-            .hero-content > .subtitle {
-                white-space: normal;
-            }
-            #tech-skills .grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (min-width: 1025px) {
-            #tech-skills .grid {
-                grid-template-columns: repeat(6, 1fr);
-            }
-        }
-
-        #menu-backdrop {
-            background-color: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            pointer-events: none;
-        }
-
-        #menu-backdrop.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        header.menu-open {
-            z-index: 50;
-        }
-    </style>
 </head>
 <body class="bg-gray-900">
 
@@ -632,16 +89,16 @@
                 </div>
                 <div class="social-icons mt-8 flex justify-center space-x-6">
                     <a href="mailto:voramustansir9278@gmail.com" aria-label="Send an email to Mustansir Vora" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                        <img src="Assets/GMAIL_TOP.svg" alt="Gmail Icon" class="w-5 h-6 md:w-7 md:h-8" width="28" height="32" loading="lazy" decoding="async">
+                        <img src="Components/Assets/GMAIL_TOP.svg" alt="Gmail Icon" class="w-5 h-6 md:w-7 md:h-8" width="28" height="32" loading="lazy" decoding="async">
                     </a>
                     <a href="https://linkedin.com/in/mustansir-vora-56128b216" aria-label="View Mustansir Vora's LinkedIn profile" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                        <img src="Assets/LINKEDIN_TOP.svg" alt="LinkedIn Icon" class="w-5 h-6 md:w-7 md:h-8" width="28" height="32" loading="lazy" decoding="async">
+                        <img src="Components/Assets/LINKEDIN_TOP.svg" alt="LinkedIn Icon" class="w-5 h-6 md:w-7 md:h-8" width="28" height="32" loading="lazy" decoding="async">
                     </a>
                     <a href="https://github.com/mustansir-vora" aria-label="View Mustansir Vora's GitHub profile" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                        <img src="Assets/GITHUB_TOP.svg" alt="GitHub Icon" class="w-5 h-6 md:w-8 md:h-8" width="32" height="32" loading="lazy" decoding="async">
+                        <img src="Components/Assets/GITHUB_TOP.svg" alt="GitHub Icon" class="w-5 h-6 md:w-8 md:h-8" width="32" height="32" loading="lazy" decoding="async">
                     </a>
                     <a href="https://www.instagram.com/mustansir_vora/" aria-label="View Mustansir Vora's Instagram profile" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                        <img src="Assets/INSTAGRAM_TOP.svg" alt="Instagram Icon" class="w-5 h-6 md:w-8 md:h-8" width="32" height="32" loading="lazy" decoding="async">
+                        <img src="Components/Assets/INSTAGRAM_TOP.svg" alt="Instagram Icon" class="w-5 h-6 md:w-8 md:h-8" width="32" height="32" loading="lazy" decoding="async">
                     </a>
                 </div>
             </div>
@@ -708,30 +165,30 @@
         </div>
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/JAVA.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Java</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/JAVASCRIPT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">JavaScript</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/NODEJS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Node.js</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/REACT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">React.js</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/PYTHON.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Python</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/SQL.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">SQL</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/NOSQL.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">NoSQL</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/HTML.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">HTML</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/CSS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">CSS</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/BOOTSTRAP.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Bootstrap</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/AWS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">AWS</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/GCP.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">GCP</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/AZURE.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Azure</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/DIALOGFLOW.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Dialogflow CX</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/COPILOTSTUDIO.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Copilot Studio</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/GENESYS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Genesys</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/POWERBI.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">PowerBI</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/LOOKER.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Looker Studio</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/LLM.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">LLM</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/RAG.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">RAG</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/MACHINELEARNING.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">ML</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/DOCKER.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Docker</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/KUBERNETES.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Kubernetes</span></div>
-                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Assets/GIT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">GIT</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/JAVA.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Java</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/JAVASCRIPT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">JavaScript</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/NODEJS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Node.js</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/REACT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">React.js</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/PYTHON.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Python</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/SQL.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">SQL</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/NOSQL.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">NoSQL</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/HTML.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">HTML</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/CSS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">CSS</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/BOOTSTRAP.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Bootstrap</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/AWS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">AWS</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/GCP.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">GCP</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/AZURE.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Azure</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/DIALOGFLOW.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Dialogflow CX</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/COPILOTSTUDIO.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Copilot Studio</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/GENESYS.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Genesys</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/POWERBI.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">PowerBI</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/LOOKER.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Looker Studio</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/LLM.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">LLM</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/RAG.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">RAG</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/MACHINELEARNING.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">ML</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/DOCKER.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Docker</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/KUBERNETES.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">Kubernetes</span></div>
+                <div class="relative flex items-center p-3 md:p-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-2xl group md:w-full hover:scale-105 bg-white/15 backdrop-blur-md" style="will-change: transform;"><img class="w-7 h-7 md:w-10 md:h-10 transition-all duration-300 ease-in-out" src="Components/Assets/GIT.svg" loading="lazy" decoding="async"><span class="text-md md:text-md font-bold ml-1 flex-1 text-center text-color-change">GIT</span></div>
             </div>
         </div>
     </section>
@@ -789,15 +246,15 @@
 
                 <h3 class="text-2xl md:text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Professional Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="Rogers and Shaw Communications Inc." data-project-description="This project focused on the end-to-end architecture, development, and deployment of a highly integrated and intelligent Interactive Voice Response (IVR) system, leveraging the Microsoft Cloud ecosystem, particularly Microsoft Copilot Studio. The core objective was to create a seamless, data-driven, and natural language-enabled IVR experience for users." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>Core IVR System Architecture and Development with Microsoft Copilot Studio:</strong> <ul class='list-disc list-inside ml-auto'><li class='mb-2'>The foundational element of the project involved <strong>architecting and developing the core IVR components directly within Microsoft Copilot Studio.</strong> This encompassed the design and implementation of conversational flows, topic management, and intent recognition, forming the backbone of the interactive voice experience.</li><li class='mb-2'>To ensure <strong>seamless integration of the IVR with various enterprise systems and data sources,</strong> significant effort was dedicated to designing and building custom connectors. These connectors acted as bridges, allowing Copilot Studio to communicate effectively with external applications and databases.</li><li class='mb-2'><strong>Complex business logic and data orchestration were implemented using Power Automate flows.</strong> These flows were crucial for routing calls, retrieving and updating information, triggering actions in other systems, and managing the overall call journey based on user input.</li><li class='mb-2'><strong>Power Apps were developed to provide intuitive interfaces for managing IVR configurations, data, and potentially for agents to interact with call-related information.</strong> This likely included custom UIs for content management or real-time monitoring.</li><li class='mb-2'><strong>Azure Trigger Functions (serverless compute) were strategically utilized to execute specific pieces of code in response to events within the IVR or external systems.</strong> This enabled highly scalable and event-driven processing, such as data validation or triggering external APIs based on IVR interactions.</li><li class='mb-2'><strong>Azure SQL DB connectors were established to facilitate robust data storage and retrieval for the IVR.</strong> This involved designing database schemas, managing data persistence for call logs, user preferences, and potentially dynamic content displayed or used within the IVR.</li></ul></li><li class='mb-2'><strong>Robust API Integrations using Azure HTTP Trigger Functions:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>To ensure the IVR system could interact with a wide array of internal and external services, <strong>robust API integrations were built using Azure HTTP Trigger Functions.</strong> These functions acted as secure and scalable endpoints, enabling the IVR to send and receive data from various systems.</li><li class='mb-2'>This involved developing the necessary logic within the functions to <strong>transform data, handle authentication, and manage error conditions</strong> for seamless communication between the IVR and diverse application programming interfaces (APIs). These integrations were critical for functionalities like retrieving customer information, processing transactions, or accessing knowledge bases.</li></ul></li><li class='mb-2'><strong>Automated IVR Reporting and Analytics:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>A significant focus was placed on enabling <strong>data-driven insights into IVR performance and user behavior.</strong> This was achieved by implementing <strong>custom Power Automate trigger flows</strong> designed to extract and process IVR data. These flows likely captured metrics such as call volume, resolution rates, user journey paths, and common user intents.</li><li class='mb-2'>The processed data was then fed into <strong>Power BI dashboards,</strong> providing a comprehensive and visually rich representation of IVR performance. These dashboards enabled stakeholders to monitor key performance indicators (KPIs), identify trends, and make informed decisions for continuous improvement of the IVR system. This automation significantly reduced manual effort in data collection and analysis.</li></ul></li><li class='mb-2'><strong>Natural Language Communication and Response Accuracy:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'>A key innovation involved <strong>developing custom logic within the Microsoft Cloud environment specifically to enhance natural language communication between the IVR and users.</strong> This went beyond standard intent recognition and likely involved sophisticated techniques to interpret complex user queries and nuances in language.</li></ul></li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="Rogers and Shaw Communications Inc." data-project-description="This project focused on the end-to-end architecture, development, and deployment of a highly integrated and intelligent Interactive Voice Response (IVR) system, leveraging the Microsoft Cloud ecosystem, particularly Microsoft Copilot Studio. The core objective was to create a seamless, data-driven, and natural language-enabled IVR experience for users." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>Core IVR System Architecture and Development with Microsoft Copilot Studio:</strong> <ul class='list-disc list-inside ml-auto'><li class='mb-2'>The foundational element of the project involved <strong>architecting and developing the core IVR components directly within Microsoft Copilot Studio.</strong> This encompassed the design and implementation of conversational flows, topic management, and intent recognition, forming the backbone of the interactive voice experience.</li><li class='mb-2'>To ensure <strong>seamless integration of the IVR with various enterprise systems and data sources,</strong> significant effort was dedicated to designing and building custom connectors. These connectors acted as bridges, allowing Copilot Studio to communicate effectively with external applications and databases.</li><li class='mb-2'><strong>Complex business logic and data orchestration were implemented using Power Automate flows.</strong> These flows were crucial for routing calls, retrieving and updating information, triggering actions in other systems, and managing the overall call journey based on user input.</li><li class='mb-2'><strong>Power Apps were developed to provide intuitive interfaces for managing IVR configurations, dat... [truncated]
                         <h3 class="text-xl font-bold">Rogers and Shaw Communications Inc.</h3>
                         <p class="mt-2">This project delivered an intelligent, end-to-end IVR system using Microsoft Copilot Studio and the Azure ecosystem. It featured custom connectors, Power Automate flows, Power Apps, and Azure Functions for seamless integration and robust API communication, resulting in seamless IVR integration and more natural, Al-driven user interactions.</p>
                     </div>
-                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="Farmers Insurance Group" data-project-description="This project encompassed the end-to-end design, development, and deployment of sophisticated IVR and conversational AI solutions, primarily for Farmers insurance group (CLAIMS and SERVICE OPs), with a strong emphasis on leveraging Google Cloud and Cisco technologies to enhance customer experience, streamline operations, and provide data-driven insights." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>Engineering a Retrieval Augmented Generation (RAG) Pattern for SERVICE OPs IVR:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Engineered a sophisticated Retrieval Augmented Generation (RAG) pattern for the SERVICE OPs IVR</strong> within the conversational AI framework. This was a critical innovation that allowed the Dialogflow agent to query backend systems in real-time.</li><li class='mb-2'>This RAG pattern enabled the IVR to retrieve <strong>accurate, context-specific information</strong> from various data sources, rather than relying solely on pre-programmed responses. This capability ensured that users received precise and up-to-date answers to their queries, significantly improving the quality and relevance of interactions.</li></ul></li><li class='mb-2'><strong>Conversational AI Solution Development for SERVICE OPs IVR using Google Dialogflow CX:</strong></li><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Designed and developed a comprehensive conversational AI solution</strong> specifically for the SERVICE OPs IVR, leveraging the advanced features of <strong>Google Dialogflow CX.</strong> This involved meticulous design of conversational flows, intent detection, entity extraction, and state management within the Dialogflow framework.</li><li class='mb-2'>This solution was instrumental in <strong>enhancing speech recognition and natural language understanding,</strong> allowing the IVR to process and respond to a wider range of customer inquiries related to claims with greater accuracy and efficiency.</li></ul><li class='mb-2'><strong>Team Collaboration on SERVICE OPs IVR for Farmers Insurance:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Contributed as part of a team to build the SERVICE OPs IVR for Farmers Insurance.</strong> This project utilized <strong>Cisco's Customer Voice Portal (CVP) framework,</strong> a robust platform for IVR development.</li><li class='mb-2'>The development involved extensive use of <strong>JAVA for both IVR development and the implementation of complex business logic.</strong> This included programming call flows, integrating with backend systems, and managing various service operation functionalities.</li></ul></li><li class='mb-2'><strong>Middleware Client Development for API Access and Data Persistence:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><string>Developed a critical middleware client using JAVA and Maven</strong> (for dependency management) to <strong>streamline API access for both the CLAIMS and SERVICE OPs IVR applications.</strong> This client acted as an abstraction layer, simplifying interactions with various internal and external APIs.</li><li class='mb-2'>For data persistence and enhanced API management, this middleware client was further developed using <strong>Java and Spring Data JPA/Hibernate.</strong> This ensured efficient data storage, retrieval, and object-relational mapping, crucial for managing data flow between the IVR and backend databases.</li></ul></li><li class='mb-2'><strong>Advanced Reporting and Data Optimization:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Designed and implemented advanced reporting solutions</strong> for both IVR systems using <strong>Google BigQuery and Google Looker Studio (formerly Data Studio).</strong></li><li class='mb-2'><strong>Managed and optimized large datasets within Google BigQuery</strong> to ensure efficient processing and querying of vast amounts of IVR interaction data. This involved understanding data warehousing principles and optimizing table structures.</li><li class='mb-2'><strong>Developed complex SQL queries</strong> within BigQuery to extract, transform, and load (ETL) specific data points crucial for performance analysis and user behavior insights.</li><li>These processed datasets were then used to create <strong>visual representations of customer interactions with the IVR system in Google Looker Studio.</strong> These dashboards provided key stakeholders with actionable insights into call volumes, resolution rates, user journeys, common intents, and areas for improvement.</li></ul></li><li class='mb-2'><strong>Architecting and Building the CLAIMS IVR Connector with Google Dialogflow Integration:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Single-handedly architected and built a critical CLAIMS IVR connector</strong> specifically designed for a Cisco-based cloud calling infrastructure. <strong>While another vendor was responsible for building the IVR within Google's Dialogflow, I specifically focused on developing the connector application</strong> to enable seamless communication between the traditional Cisco IVR environment and the Dialogflow agent.</li><li class='mb-2'>This integration significantly <strong>enhanced speech recognition and natural language processing (NLP)</strong> capabilities for the CLAIMS IVR. By routing user utterances through Dialogflow, the system gained the ability to understand complex queries and intents more accurately than a traditional IVR.</li><li class='mb-2'>This integration directly led to an <strong>improved overall user experience</strong> by allowing for more natural, free-flowing conversations with the IVR, reducing frustration often associated with rigid menu-driven systems.</li></ul></li><li class='mb-2'><strong>Customer Relationship Management and Quality Delivery:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Consistently maintained strong customer relationships</strong> through effective communication throughout the project lifecycle. This involved regular updates, requirements gathering, feedback incorporation, and proactive problem-solving.</li><li class='mb-2'><strong>Consistently delivered high-quality work,</strong> demonstrating a commitment to excellence in every phase of the project, from architecture to deployment and ongoing support.</li><li class='mb-2'>The dedication to quality and customer satisfaction was consistently reflected in achieving <strong>a CSAT (Customer Satisfaction) rating of 5,</strong> indicating exceptional client satisfaction with the delivered solutions.</li></ul></li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="Farmers Insurance Group" data-project-description="This project encompassed the end-to-end design, development, and deployment of sophisticated IVR and conversational AI solutions, primarily for Farmers insurance group (CLAIMS and SERVICE OPs), with a strong emphasis on leveraging Google Cloud and Cisco technologies to enhance customer experience, streamline operations, and provide data-driven insights." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>Engineering a Retrieval Augmented Generation (RAG) Pattern for SERVICE OPs IVR:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Engineered a sophisticated Retrieval Augmented Generation (RAG) pattern for the SERVICE OPs IVR</strong> within the conversational AI framework. This was a critical innovation that allowed the Dialogflow agent to query backend systems in real-time.</li><li class='mb-2'>This RAG pattern enabled the IVR to retrieve <strong>accurate, context-specific information</strong> from various data sources, rather than relying solely on pre-programmed responses. This capability ensured that users received precise and up-to-date answers to their queries, significantly improving the quality and relevance of interactions.</li></ul></li><li class='mb-2'><strong>Conversational AI Solution Development for SERVICE OPs IVR using Google Dialogflow CX:</strong></li><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Designed and developed a comprehensive conversational AI solution</strong> specifically for the SERVICE OPs IVR, leveraging the advanced features of <strong>Google Dialogflow CX.</strong> This involved meticulous design of conversational flows, intent detection, entity extract... [truncated]
                         <h3 class="text-xl font-bold">Farmers Insurance Group</h3>
                         <p class="mt-2">This project delivered sophisticated IVR and conversational AI solutions for FARMERS Insurance, leveraging Google Cloud and Cisco Platforms. It featured a Claims IVR connector, Service OPs IVR, RAG pattern, Java middleware for APIs, and advanced BigQuery/Looker Studio reporting. These efforts significantly enhanced customer experience and operational efficiency, achieving high client satisfaction.</p>
                     </div>
-                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="ADCB Bank" data-project-description="This project focused on the design, development, and integration of a high-performance, secure, and efficient IVR system within a banking environment, leveraging cloud-native technologies from Genesys PureCloud and Amazon Web Services (AWS). A key highlight was the implementation of a real-time voice biometric authentication solution." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>High-Performance IVR System Design and Development:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Contributed significantly to the design and development of a high-performance Interactive Voice Response (IVR) system.</strong> This system was architected for scalability and responsiveness, crucial for a banking environment with high call volumes.</li><li class='mb-2'><strong>Genesys PureCloud was utilized for the front-end orchestration of the IVR.</strong> This involved configuring call flows, managing prompts, routing logic, and potentially integrating with agents, leveraging PureCloud's robust contact center as a service (CCaaS) capabilities.</li><li class='mb-2'><strong>The back-end integration was robustly handled by AWS services, specifically AWS Lambda and S3 buckets.</strong><ul class='list-disc list-inside ml-auto'><li><strong>AWS Lambda (serverless compute)</strong> was used to power the dynamic logic and processing for the IVR. This enabled highly scalable, event-driven execution of business rules, data lookups, and interactions with other systems without managing servers.</li><li class='mb-2'><strong>AWS S3 buckets</strong> were leveraged for efficient and secure storage of various IVR assets, such as codebases, executable JAR files, ensuring high availability and durability.</li><li class='mb-2'><strong>AWS CloudWatch was implemented for comprehensive monitoring and logging of these AWS back-end components.</strong> This involved setting up CloudWatch Logs for capturing all Lambda function invocations and application-specific logs, establishing CloudWatch Metrics to track key performance indicators (e.g., Lambda invocation duration, error rates, S3 bucket storage and access patterns), and configuring CloudWatch Alarms to proactively alert on predefined thresholds or anomalies in system performance, ensuring high operational visibility and rapid issue resolution.</li></ul></li></ul></li><li class='mb-2'><strong>Seamless IVR Integration with Core Banking System:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Achieved deep integration of the IVR system within the bank's core banking system.</strong> This was a critical aspect, enabling the IVR to access and update customer information, process transactions, and perform other banking operations directly.</li><li class='mb-2'><strong>JAVA was the primary language used for developing robust back-end services</strong> that facilitated this integration. These services acted as secure and reliable intermediaries, translating IVR requests into actions within the core banking system and vice-versa. This ensured data consistency and operational accuracy.</li></ul></li><li class ='mb-2'><strong>Advanced Voice Biometric Authentication Implementation:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Implemented a cutting-edge voice biometric authentication solution, significantly enhancing security and efficiency.</strong> This solution eliminated the need for traditional, often cumbersome, manual authentication methods.</li><li class='mb-2'><strong>Audiohook was specifically utilized for real-time audio processing.</strong> Audiohook, a Genesys Cloud feature, enables the streaming of live conversation audio to third-party services. This was crucial for capturing the caller's voice in real-time for biometric analysis.</li><li class='mb-2'><strong>The voice biometric solution integrated seamlessly with the bank's internal APIs.</strong> This involved developing custom logic to send the processed audio data from Audiohook to the bank's proprietary biometric engine via APIs, and then receiving authentication results back to the IVR in real-time.</li><li class='mb-2'>This implementation resulted in a <strong>streamlined and secure authentication process,</strong> allowing customers to verify their identity simply by speaking, leading to a much faster and more user-friendly experience while simultaneously bolstering security measures.</li></ul></li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="ADCB Bank" data-project-description="This project focused on the design, development, and integration of a high-performance, secure, and efficient IVR system within a banking environment, leveraging cloud-native technologies from Genesys PureCloud and Amazon Web Services (AWS). A key highlight was the implementation of a real-time voice biometric authentication solution." data-project-detailed-description="<ul class='list-decimal list-outside'><li class='mb-2'><strong>High-Performance IVR System Design and Development:</strong><ul class='list-disc list-inside ml-auto'><li class='mb-2'><strong>Contributed significantly to the design and development of a high-performance Interactive Voice Response (IVR) system.</strong> This system was architected for scalability and responsiveness, crucial for a banking environment with high call volumes.</li><li class='mb-2'><strong>Genesys PureCloud was utilized for the front-end orchestration of the IVR.</strong> This involved configuring call flows, managing prompts, routing logic, and potentially integrating with agents, leveraging PureCloud's robust contact center as a service (CCaaS) capabilities.</li><li class='mb-2'><strong>The back-end integration was robustly handled by AWS services, specifically AWS Lambda and S3 buckets.</strong><ul class='list-disc list-inside ml-auto'><li><strong>AWS Lambda (serverless compute)</strong> was used to power the dynamic logic and processing for the IVR. This enabled highly scalable, event-driven execution of business rules, data lookups, and interactions with other systems without managing servers.</li><li class='mb-2'><strong>AWS S3 buckets</strong> were leveraged for efficient and secure storage of various IVR assets, such as codebases, executable JA... [truncated]
                         <h3 class="text-xl font-bold">ADCB Bank</h3>
                         <p class="mt-2">This project involved designing and integrating a high-performance IVR system for ADCB bank, using Genesys PureCloud and AWS (Lambda, S3, CloudWatch). A key feature was the real-time voice biometric authentication via Audiohook and Java backend services, enhancing security and efficiency by integrating with the bank's core system.</p>
                     </div>
@@ -805,11 +262,11 @@
 
                 <h3 class="text-2xl md:text-4xl font-bold text-center bg-gradient-to-b from-sky-color-top to-sky-color-bottom z-10 py-4 mb-8">Personal Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="AI Resume Optimizer" data-project-description="The primary goal was to create a system that could not only optimize the content of a resume to align with a job description but also do so without destroying the document's original formatting—a common failure point for text-based resume tools. The implementation leverages a powerful combination of Python for the backend logic, Streamlit for the interactive web interface, and the Google Gemini LLM as the core intelligence.<p><br>Experience the application directly here: <a href='https://ai-resume-optimizer-covxskfybhkh5vnecsvyxr.streamlit.app/' target='_blank' rel='noopener noreferrer'>AI-Resume-Optimizer</a></p><p>For those interested in the project's architecture, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/AI-Resume-Optimizer.git' target='_blank' rel='noopener noreferrer'>Optimizer Repo</a></p>" data-project-detailed-description="The core of the implementation revolves around treating a .docx file not as a simple text document, but as a structured XML file, which is key to preserving its formatting. The workflow is initiated when a user uploads their resume and provides a job description. Here’s how the AI-driven process unfolds: <ul class='list-decimal list-outside ml-auto'><li class='mb-2'><strong>Document Deconstruction & Parsing: </strong>When a user uploads their resume, the application doesn’t just extract the text. It unzips the .docx file in memory and accesses the word/document.xml file within. Using the lxml library, it meticulously parses this XML tree, iterating through every text-containing element. For each piece of text it finds, it records both the content and its unique XPath—a specific address that pinpoints its exact location within the document's complex structure. This creates a detailed map of the entire resume's content.</li><li class='mb-2'><strong>Intelligent Prompt Engineering: </strong>The project's effectiveness is powered by dynamic prompt engineering. A meticulously crafted prompt is constructed with clear instructions for the Google Gemini LLM to adopt the persona of an expert career coach. By providing the AI with the user's resume content, annotated with its structural XPath reference, along with the target job description, the system ensures the AI has all the necessary context to perform a highly specific and targeted optimization. This method guides the AI to produce a structured JSON object, which is critical for the next stage of the process.</li><li class='mb-2'><strong>AI-Driven Resume Optimization: </strong>Leveraging the Google Gemini LLM, the application performs a deep-level content analysis and generation process. The AI's task is to analyze job requirements, identify critical keywords, and then rewrite the user's resume content. This multi-step AI workflow uses the provided XPath references to ensure the output is not just new text but a structured response. This structured output allows for the precise and lossless reconstruction of the document, resulting in a more impactful and perfectly tailored resume that significantly improves a user's chances of passing applicant tracking systems and capturing a recruiter's attention.</li><li class='mb-2'><strong>Ensuring Reliability with Structured Data: </strong>A critical aspect of the implementation is forcing the AI to return its response in a structured JSON format. This is a key design choice that ensures system reliability. The JSON object contains two primary components: 1) an array of objects, where each object holds a snippet of optimized text and its original XPath, and 2) a detailed analysis section, which includes the resume's strong points, weak points, and a summary of the changes made. This machine-readable format eliminates the ambiguity of parsing a free-form text response.</li><li class='mb-2'><strong>High-Fidelity Reconstruction: </strong>Once the JSON response is received, the application begins the reconstruction process. It creates a new, empty .docx document and copies over all the original styling and metadata. Then, it iterates through the optimized text snippets from the AI's response. For each snippet, it uses the provided XPath to navigate to the exact location in the new document and inserts the optimized text. This ensures that every change is precise, preserving the original layout, fonts, and spacing down to the smallest detail.</li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="AI Resume Optimizer" data-project-description="The primary goal was to create a system that could not only optimize the content of a resume to align with a job description but also do so without destroying the document's original formatting—a common failure point for text-based resume tools. The implementation leverages a powerful combination of Python for the backend logic, Streamlit for the interactive web interface, and the Google Gemini LLM as the core intelligence.<p><br>Experience the application directly here: <a href='https://ai-resume-optimizer-covxskfybhkh5vnecsvyxr.streamlit.app/' target='_blank' rel='noopener noreferrer'>AI-Resume-Optimizer</a></p><p>For those interested in the project's architecture, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/AI-Resume-Optimizer.git' target='_blank' rel='noopener noreferrer'>Optimizer Repo</a></p>" data-project-detailed-description="The core of the implementation revolves around treating a .docx file not as a simple text document, but as a structured XML file, which is key to preserving its formatting. The workflow is initiated when a user uploads their resume and provides a job description. Here’s how the AI-driven process unfolds: <ul class='list-decimal list-outside ml-auto'><li class='mb-2'><strong>Document Deconstruction & Parsing: </strong>When a user uploads their resume, the application doesn’t just extract the text. It unzips the .docx file in memory and accesses the word/document.xml file within. Using the lxml library, it meticulously parses this XML tree, iterating through every text-containing element. For each piece of text it finds, it records both the content and its unique XPath—a s... [truncated]
                         <h3 class="text-xl font-bold">AI Resume Optimizer</h3>
                         <p class="mt-2">This AI-powered web app optimizes resumes for specific jobs by leveraging the Google Gemini API. It analyzes a user's resume against a job description, intelligently rewriting content for a strong keyword match. Built with Python and Streamlit, the system meticulously preserves the document's original formatting, providing a seamless experience from analysis to a perfectly reconstructed document to get noticed by recruiters and applicant tracking system (ATS).</p>
                     </div>
-                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="GPS & GSM Based Vehicle Tracking System" data-project-description="This project is a cost-effective, real-time location tracking system that uses an Arduino UNO to integrate a GPS and GSM module. It sends a vehicle's location coordinates via SMS to a mobile device, which can be viewed on Google Maps. We prototyped this for Mumbai's BEST buses as a low-cost tracking solution.<p>For those interested in the project, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/GPS-GSM-based-Tracking-Device.git' target='_blank' rel='noopener noreferrer'>Tracking Device Repo</a></p>" data-project-detailed-description="<ul class='list-decimal list-outside ml-auto'><li class='mb-2'>S<strong>ystem Overview: </strong>This project is a robust and effective location tracking system that integrates a Global Positioning System (GPS) module with a Global System for Mobile Communication (GSM) module, all controlled by an Arduino UNO microcontroller.</li><li class='mb-2'><strong>Core Functionality: </strong>The system's primary function is to detect the real-time GPS location of a vehicle or object and transmit that data to a mobile device continuously with a delay of 3 seconds between each transmission providing a near real-time tracking system.</li><li class='mb-2'><strong>Use Case: </strong>The primary use case for this solution was to serve as a low-cost and efficient tracking device for Mumbai's BEST buses. The system continuously sends location data via SMS, and as a prototype, it proved to be a cost-effective solution that could easily be integrated into an app through an API or directly via the carrier's SMS service to enable the development of a real-time tracking system.</li><li class='mb-2'><strong>Data Flow: </strong>The GPS module receives location data in the NMEA protocol, which includes the latitude and longitude. The Arduino UNO then processes this data.</li><li class='mb-2'><strong>User Interface: </strong>The GSM module sends an SMS message containing the location coordinates as a direct link to Google Maps, providing an easy and user-friendly tracking experience for the recipient.</li><li class='mb-2'><strong>Technological Application: </strong>This project demonstrates a practical application of embedded systems and communication technologies, providing a cost-effective solution for vehicle safety, logistics management, and personal asset tracking.</li></ul>">
+                    <div role="button" tabindex="0" class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl project-card text-color-change" data-project-title="GPS & GSM Based Vehicle Tracking System" data-project-description="This project is a cost-effective, real-time location tracking system that uses an Arduino UNO to integrate a GPS and GSM module. It sends a vehicle's location coordinates via SMS to a mobile device, which can be viewed on Google Maps. We prototyped this for Mumbai's BEST buses as a low-cost tracking solution.<p>For those interested in the project, the complete source code is available for review, download, and execution on GitHub: <a href='https://github.com/mustansir-vora/GPS-GSM-based-Tracking-Device.git' target='_blank' rel='noopener noreferrer'>Tracking Device Repo</a></p>" data-project-detailed-description="<ul class='list-decimal list-outside ml-auto'><li class='mb-2'>S<strong>ystem Overview: </strong>This project is a robust and effective location tracking system that integrates a Global Positioning System (GPS) module with a Global System for Mobile Communication (GSM) module, all controlled by an Arduino UNO microcontroller.</li><li class='mb-2'><strong>Core Functionality: </strong>The system's primary function is to detect the real-time GPS location of a vehicle or object and transmit that data to a mobile device continuously with a delay of 3 seconds between each transmission providing a near real-time tracking system.</li><li class='mb-2'><strong>Use Case: </strong>The primary use case for this solution was to serve as a low-cost and efficient tracking device for Mumbai's BEST buses. The system continuously sends location data via SMS, and as a prototype, it proved to be a cost-effective solution that could easily be integrated into an app through an API or directly via the carrier's SMS service to enable the development of a real-time tracking system... [truncated]
                         <h3 class="text-xl font-bold ">GPS & GSM Based Vehicle Tracking System</h3>
                         <p class="mt-2">A hardware and software project that combines GPS and GSM technologies to create a real-time vehicle or object tracking system. This system uses a microcontroller to send the precise location coordinates via SMS, offering an effective and affordable tracking solution.</p>
                     </div>
@@ -846,27 +303,27 @@
             <div class="max-w-7xl mx-auto bg-white/10 backdrop-blur-2xl p-8 rounded-3xl text-center">
                 <div class="grid grid-cols-3 gap-4 md:grid-cols-6 gap-4 w-fit mx-auto items-center justify-items-center">
                         <a href="mailto:voramustansir9278@gmail.com" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/GMAIL_BOTTOM.svg" alt="Gmail Icon" class="w-09 h-10" loading="lazy" decoding="async">
+                            <img src="Components/Assets/GMAIL_BOTTOM.svg" alt="Gmail Icon" class="w-09 h-10" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">Email</span>
                         </a>
                         <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change text-color-change">
-                            <img src="Assets/LINKEDIN_BOTTOM.svg" alt="LinkedIn Icon" class="w-10 h-10" loading="lazy" decoding="async">
+                            <img src="Components/Assets/LINKEDIN_BOTTOM.svg" alt="LinkedIn Icon" class="w-10 h-10" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">LinkedIn</span>
                         </a>
                         <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/GITHUB_BOTTOM.svg" alt="GitHub Icon" class="w-11 h-11" loading="lazy" decoding="async">
+                            <img src="Components/Assets/GITHUB_BOTTOM.svg" alt="GitHub Icon" class="w-11 h-11" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">GitHub</span>
                         </a>
                         <a href="https://www.instagram.com/mustansir_vora/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/INSTAGRAM_BOTTOM.svg" alt="Instagram Icon" class="w-12 h-11" loading="lazy" decoding="async">
+                            <img src="Components/Assets/INSTAGRAM_BOTTOM.svg" alt="Instagram Icon" class="w-12 h-11" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">Instagram</span>
                         </a>
                         <a href="tel:+918208928683" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/MOBILE_BOTTOM.svg" alt="Mobile Icon" class="w-11 h-11 rotate-180" loading="lazy" decoding="async">
+                            <img src="Components/Assets/MOBILE_BOTTOM.svg" alt="Mobile Icon" class="w-11 h-11 rotate-180" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">Call</span>
                         </a>
                         <a href="https://wa.me/918208928683?text=Hello%20there!" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-color-change">
-                            <img src="Assets/WHATSAPP_BOTTOM.svg" alt="WhatsApp Icon" class="w-10 h-10" loading="lazy" decoding="async">
+                            <img src="Components/Assets/WHATSAPP_BOTTOM.svg" alt="WhatsApp Icon" class="w-10 h-10" loading="lazy" decoding="async">
                             <span class="text-sm mt-1">WhatsApp</span>
                         </a>
                     </div>
@@ -895,334 +352,7 @@
         </div>
     </div>
 
-    <script>
-         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.nav-link').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            const hamburgerBtn = document.getElementById('hamburger-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeMenuBtn = document.getElementById('close-menu-btn');
-            const menuBackdrop = document.getElementById('menu-backdrop');
-            const header = document.querySelector('header');
-
-            function openMenu() {
-                mobileMenu.classList.remove('-translate-x-full');
-                hamburgerBtn.classList.add('hidden');
-                menuBackdrop.classList.add('active');
-                header.classList.add('menu-open');
-            }
-
-            function closeMenu() {
-                mobileMenu.classList.add('-translate-x-full');
-                hamburgerBtn.classList.remove('hidden');
-                menuBackdrop.classList.remove('active');
-                header.classList.remove('menu-open');
-            }
-
-            hamburgerBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                if (mobileMenu.classList.contains('-translate-x-full')) {
-                    openMenu();
-                } else {
-                    closeMenu();
-                }
-            });
-
-            closeMenuBtn.addEventListener('click', closeMenu);
-            menuBackdrop.addEventListener('click', closeMenu);
-
-            document.querySelectorAll('#mobile-menu a').forEach(anchor => {
-                anchor.addEventListener('click', closeMenu);
-            });
-
-            // Modal functionality
-            const projectModal = document.getElementById('project-modal');
-            const closeModalBtn = document.getElementById('close-modal');
-            const modalProjectTitle = document.getElementById('modal-project-title');
-            const modalProjectDescription = document.getElementById('modal-project-description');
-            const modalProjectDetailedDescription = document.getElementById('modal-project-detailed-description');
-
-            const personalProjectModal = document.getElementById('personal-project-modal');
-            const closePersonalModalBtn = document.getElementById('close-personal-modal');
-            const personalModalProjectTitle = document.getElementById('personal-modal-project-title');
-            const personalModalProjectDescription = document.getElementById('personal-modal-project-description');
-            const personalModalProjectDetailedDescription = document.getElementById('personal-modal-project-detailed-description');
-
-            const projectCards = document.querySelectorAll('.project-card');
-
-            const openModal = (card) => {
-                const title = card.dataset.projectTitle;
-                const description = card.dataset.projectDescription;
-                const detailedDescription = card.dataset.projectDetailedDescription;
-                const isPersonal = card.closest('.grid').previousElementSibling.textContent.includes('Personal Projects');
-
-                if (isPersonal) {
-                    personalModalProjectTitle.textContent = title;
-                    personalModalProjectDescription.innerHTML = description;
-                    personalModalProjectDetailedDescription.innerHTML = detailedDescription;
-                    personalProjectModal.classList.remove('hidden');
-                    closePersonalModalBtn.focus();
-                } else {
-                    modalProjectTitle.textContent = title;
-                    modalProjectDescription.textContent = description;
-                    modalProjectDetailedDescription.innerHTML = detailedDescription;
-                    projectModal.classList.remove('hidden');
-                    closeModalBtn.focus();
-                }
-            };
-
-            projectCards.forEach(card => {
-                card.addEventListener('click', () => openModal(card));
-                card.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter') {
-                        openModal(card);
-                    }
-                });
-            });
-            
-            closeModalBtn.addEventListener('click', () => {
-                projectModal.classList.add('hidden');
-            });
-
-            closePersonalModalBtn.addEventListener('click', () => {
-                personalProjectModal.classList.add('hidden');
-            });
-
-            projectModal.addEventListener('click', (e) => {
-                if (e.target === projectModal) {
-                    projectModal.classList.add('hidden');
-                }
-            });
-
-            personalProjectModal.addEventListener('click', (e) => {
-                if (e.target === personalProjectModal) {
-                    personalProjectModal.classList.add('hidden');
-                }
-            });
-
-            const timelineAirplane = document.getElementById('timeline-airplane');
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            function updateTimelineAirplanePosition() {
-                let activeItem = null;
-                for (const item of timelineItems) {
-                    if (item.getBoundingClientRect().top < window.innerHeight / 2) {
-                        activeItem = item;
-                    }
-                }
-                if (activeItem) {
-                    const topPosition = activeItem.offsetTop + 16;
-                    timelineAirplane.style.top = `${topPosition}px`;
-                    let rotation = 90;
-                    if (window.innerWidth >= 768 && activeItem.offsetLeft > 0) {
-                        rotation = -90;
-                    }
-                    timelineAirplane.style.transform = `translateX(-50%) rotate(${rotation}deg)`;
-                }
-            }
-            
-            function throttle(func, limit) {
-                let inThrottle;
-                return function() {
-                    const args = arguments;
-                    const context = this;
-                    if (!inThrottle) {
-                        func.apply(context, args);
-                        inThrottle = true;
-                        setTimeout(() => inThrottle = false, limit);
-                    }
-                }
-            }
-
-            const scrollHandler = () => {
-                updateTimelineAirplanePosition();
-            };
-
-            window.addEventListener('scroll', throttle(scrollHandler, 10));
-            updateTimelineAirplanePosition();
-
-            const menu = document.getElementById('mobile-menu');
-            let isDragging = false;
-            let touchStartX = 0;
-            let menuStartX = 0;
-            let touchStartTime = 0;
-
-            document.addEventListener('touchstart', (e) => {
-                const isMenuOpen = !menu.classList.contains('-translate-x-full');
-                touchStartX = e.touches[0].clientX;
-
-                if ((!isMenuOpen && touchStartX < 40) || (isMenuOpen && menu.contains(e.target))) {
-                    isDragging = true;
-                    touchStartTime = performance.now();
-                    menu.style.transition = 'none'; 
-                    const transformMatrix = new DOMMatrix(window.getComputedStyle(menu).transform);
-                    menuStartX = transformMatrix.m41;
-                }
-            }, { passive: true });
-
-            document.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-
-                const touchCurrentX = e.touches[0].clientX;
-                const diffX = touchCurrentX - touchStartX;
-                let newX = menuStartX + diffX;
-
-                const menuWidth = menu.offsetWidth;
-                if (newX > 0) {
-                    newX = newX * 0.3; 
-                } else if (newX < -menuWidth) {
-                    const overscroll = newX + menuWidth;
-                    newX = -menuWidth + (overscroll * 0.3);
-                }
-
-                menu.style.transform = `translateX(${newX}px)`;
-            }, { passive: true });
-
-            document.addEventListener('touchend', (e) => {
-                if (!isDragging) return;
-                isDragging = false;
-
-                menu.style.transition = 'transform 0.3s ease-out';
-
-                const touchEndX = e.changedTouches[0].clientX;
-                const deltaTime = performance.now() - touchStartTime;
-                const velocityX = (touchEndX - touchStartX) / deltaTime;
-
-                const transformMatrix = new DOMMatrix(window.getComputedStyle(menu).transform);
-                const currentX = transformMatrix.m41;
-                const menuWidth = menu.offsetWidth;
-
-                if (velocityX > 0.4) {
-                    menu.style.transform = 'translateX(0px)';
-                    menu.classList.remove('-translate-x-full');
-                } else if (velocityX < -0.4) {
-                    menu.style.transform = 'translateX(-100%)';
-                    menu.classList.add('-translate-x-full');
-                } else {
-                    if (currentX > -menuWidth * 0.7) {
-                        menu.style.transform = 'translateX(0px)';
-                        menu.classList.remove('-translate-x-full');
-                    } else {
-                        menu.style.transform = 'translateX(-100%)';
-                        menu.classList.add('-translate-x-full');
-                    }
-                }
-                setTimeout(() => {
-                    menu.style.transition = '';
-                    menu.style.transform = '';
-                }, 300);
-            });
-
-            projectCards.forEach(card => {
-                const p = document.createElement('p');
-                p.className = 'text-xs opacity-50 mt-4 text-center';
-                p.textContent = 'Tap to expand';
-                card.appendChild(p);
-            });
-
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.md\\:flex a');
-            
-            const removeActiveClasses = () => {
-                navLinks.forEach(link => {
-                    link.classList.remove('bg-white/60', 'scale-105');
-                });
-            };
-
-            const setActiveLink = (linkId) => {
-                removeActiveClasses();
-                const activeLink = document.querySelector(`.md\\:flex a[href="#${linkId}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('bg-white/60', 'scale-105');
-                }
-            };
-            
-            const handleScroll = () => {
-                let currentSectionId = '';
-                const scrollY = window.scrollY;
-
-                if (scrollY < 100) {
-                    setActiveLink('home');
-                    return;
-                }
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 150; 
-                    const sectionHeight = section.offsetHeight;
-
-                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                        currentSectionId = section.id;
-                    }
-                });
-
-                if (currentSectionId === 'tech-skills' || currentSectionId === 'key-skills') {
-                    setActiveLink('tech-skills'); 
-                } else if (currentSectionId === 'portfolio') {
-                    setActiveLink('portfolio');
-                } else if (currentSectionId) {
-                    setActiveLink(currentSectionId);
-                }
-            };
-
-            window.addEventListener('scroll', handleScroll);
-            handleScroll();
-
-            function typeWriter(element, text, speed = 75, callback) {
-                let i = 0;
-                element.innerHTML = '';
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-                
-                function type() {
-                    if (i < text.length) {
-                        element.innerHTML += text.charAt(i);
-                        i++;
-                        setTimeout(type, speed);
-                    } else {
-                        const cursor = document.createElement('span');
-                        cursor.className = 'terminal-cursor';
-                        element.appendChild(cursor);
-                        if (callback && typeof callback === 'function') {
-                            callback();
-                        }
-                    }
-                }
-                type();
-            }
-
-            setTimeout(() => {
-                const nameElement = document.getElementById('typing-name');
-                const subtitleElement = document.getElementById('typing-subtitle');
-                
-                if (nameElement) {
-                    typeWriter(nameElement, "Hello, I'm Mustansir Vora", 75, () => {
-                        if (subtitleElement) {
-                            typeWriter(subtitleElement, "Full Stack Developer & AI Research Enthusiast", 50, () => {
-                                const mainNav = document.getElementById('main-nav');
-                                const connectBtn = document.getElementById('connect-btn');
-                                const resumeBtn = document.getElementById('download-resume-btn');
-                                const socialIcons = document.querySelectorAll('.social-icons a');
-
-                                if (mainNav) mainNav.classList.add('animate-slide-in-scale-top');
-                                if (connectBtn) connectBtn.classList.add('animate-slide-in-scale-left');
-                                if (resumeBtn) resumeBtn.classList.add('animate-slide-in-scale-right');
-                                
-                                socialIcons.forEach((icon, index) => {
-                                    icon.classList.add('animate-slide-in-scale-bottom');
-                                    icon.style.animationDelay = `${index * 0.15 + 0.2}s`;
-                                });
-                            });
-                        }
-                    });
-                }
-            }, 300); 
-        });
-    </script>
+    <script src="Components/main.js"></script>
+    <script src="Components/Animations/animations.js"></script>
 </body>
 </html>
