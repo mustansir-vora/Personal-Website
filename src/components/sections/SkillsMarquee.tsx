@@ -2,8 +2,33 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Cloud, BrainCircuit, MessageSquareCode } from 'lucide-react';
 import { assetPath } from '@/lib/basePath';
+
+const TerminalIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="4 17 10 11 4 5"></polyline>
+    <line x1="12" y1="19" x2="20" y2="19"></line>
+  </svg>
+);
+
+const CloudIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+  </svg>
+);
+
+const BrainIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path>
+    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path>
+  </svg>
+);
+
+const MessageIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+  </svg>
+);
 
 interface Skill {
   name: string;
@@ -20,7 +45,7 @@ interface SkillCategory {
 const categories: SkillCategory[] = [
   {
     title: 'Languages & Frameworks',
-    icon: Terminal,
+    icon: TerminalIcon,
     className: 'lg:col-span-2',
     skills: [
       { name: 'Java', icon: assetPath('/Assets/JAVA.svg') },
@@ -33,7 +58,7 @@ const categories: SkillCategory[] = [
   },
   {
     title: 'Cloud & DevOps',
-    icon: Cloud,
+    icon: CloudIcon,
     className: 'lg:col-span-1',
     skills: [
       { name: 'GCP', icon: assetPath('/Assets/GCP.svg') },
@@ -45,7 +70,7 @@ const categories: SkillCategory[] = [
   },
   {
     title: 'AI & Machine Learning',
-    icon: BrainCircuit,
+    icon: BrainIcon,
     className: 'lg:col-span-1',
     skills: [
       { name: 'LLMs', icon: assetPath('/Assets/LLM.svg') },
@@ -56,7 +81,7 @@ const categories: SkillCategory[] = [
   },
   {
     title: 'Conversational AI Platforms',
-    icon: MessageSquareCode,
+    icon: MessageIcon,
     className: 'lg:col-span-2',
     skills: [
       { name: 'Dialogflow CX', icon: assetPath('/Assets/DIALOGFLOW.svg') },
