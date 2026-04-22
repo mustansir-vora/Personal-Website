@@ -8,6 +8,7 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Smooth springs for the outer ring
   const springX = useSpring(0, { stiffness: 500, damping: 28, mass: 0.5 });
@@ -15,6 +16,16 @@ export default function CustomCursor() {
 
   useEffect(() => {
     setMounted(true);
+
+    // Detect mobile/touch devices
+    const checkMobile = () => {
+      const hasTouchScreen = window.matchMedia('(pointer: coarse)').matches;
+      const isSmallScreen = window.innerWidth < 768;
+      setIsMobile(hasTouchScreen || isSmallScreen);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       springX.set(e.clientX - 16); // Center the 32px ring
@@ -48,10 +59,11 @@ export default function CustomCursor() {
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('resize', checkMobile);
     };
   }, [springX, springY, isVisible]);
 
-  if (!mounted) return null;
+  if (!mounted || isMobile) return null;
 
   return (
     <>
