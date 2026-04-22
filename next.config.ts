@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
-//test-comment to trigger workflow
+
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: '/Personal-Website',
+  assetPrefix: '/Personal-Website',
   images: {
     unoptimized: true,
   },
