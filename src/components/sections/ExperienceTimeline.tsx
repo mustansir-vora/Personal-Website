@@ -7,28 +7,71 @@ import { Briefcase } from 'lucide-react';
 const experiences = [
   {
     id: 'rogers',
-    role: 'Software Developer (Agentic AI & Integration)',
-    company: 'Rogers Telecommunications / Servion',
-    period: 'Recent - Present',
-    shortDesc: 'Integrating agentic AI with legacy backend systems using OpenAPI schemas.',
-    fullDesc: 'Lead the architecture and development of advanced conversational AI systems. Built Dialogflow CX agents using playbooks, deterministic flows, and generators. Successfully integrated modern Agentic AI capabilities with legacy backend systems via robust OpenAPI schemas, driving complex automated customer journeys.'
+    role: 'Software Developer — Agentic AI & IVR Integration',
+    company: 'Rogers & Shaw Communications Inc. | Servion Global Solutions',
+    period: 'Nov 2025 – Present',
+    shortDesc: 'Architecting AI-driven IVR systems powered by Dialogflow CX, RAG pipelines, and automated cloud deployments.',
+    bullets: [
+      'Architected and developed core IVR components leveraging Google Dialogflow CX, resulting in seamless integration and natural, AI-driven user interactions.',
+      'Built robust API integrations using Cloud Run functions to facilitate connectivity between AI services and internal/external backend systems.',
+      'Reduced inaccurate AI responses (hallucinations) by 44% by implementing safeguards to keep the AI responses on track.',
+      'Implemented a RAG pipeline that lets the AI voice bot check backend databases in real time, giving callers instant, accurate updates on their insurance claims.',
+      'Sped up deployment times by 100% by setting up automated cloud pipelines to deploy Cloud Run functions, buckets, and conversational agents.',
+      'Automated IVR reporting and analytics by implementing smooth data ingestion processes within Google Cloud Platform (BigQuery) and running Cloud Scheduler jobs for data cleansing.',
+    ]
   },
   {
-    id: 'servion-swe',
-    role: 'Software Developer',
-    company: 'Servion Global Solutions',
-    period: 'Dec 2023 - Present',
-    shortDesc: 'Client Appreciation Award and ACE Award FY24-25 winner for complex customer integrations.',
-    fullDesc: 'Rewarded with the ‘Client Appreciation Award’ and ‘ACE Award FY’24-25’ for significant contributions and excellent customer management. Awarded “Best new associate of FY’23-24” for consistently exceeding KPIs and making significant contributions.'
+    id: 'new-jersey',
+    role: 'Software Developer — Cloud Migration & IVR',
+    company: 'State of New Jersey – Conduent | Servion Global Solutions',
+    period: 'Aug 2025 – Feb 2026',
+    shortDesc: 'Led end-to-end migration from on-premise phone systems to modern cloud IVR with Genesys Cloud.',
+    bullets: [
+      'Managed the migration of the state\'s older, on-premise phone system to a modern cloud setup.',
+      'Traveled to the Princeton office to coordinate the launch and ensure zero business downtime.',
+      'Built the conversational solution using bot flow within Genesys Cloud.',
+      'Integrated the state\'s backend systems within the IVR for seamless data flow.',
+      'Integrated Azure Speech-to-Text & Text-to-Speech services within the IVR for seamless conversations.',
+      'Set up real-time data pipelines and Power BI dashboards so leadership could easily see live system performance.',
+      'Maintained strong customer relationships through effective communication, achieving a CSAT rating of 5/5.',
+    ]
   },
   {
-    id: 'servion-get',
-    role: 'Graduate Engineer Trainee',
-    company: 'Servion Global Solutions',
-    period: 'Nov 2022 - Nov 2023',
-    shortDesc: 'Designed and led complex customer integrations within second year.',
-    fullDesc: 'Received exceptional performance reviews, with the Director of Professional Services department describing me as a "once in a generation find with the ability to lead complex integrations and teams," which led to opportunities to design and lead complex customer integrations within my second year.'
-  }
+    id: 'farmers',
+    role: 'Software Developer — Conversational AI & Data Analytics',
+    company: 'Farmers Insurance Group | Servion Global Solutions',
+    period: 'Jan 2024 – Sep 2025',
+    shortDesc: 'Engineered Dialogflow CX IVR connectors, middleware, and advanced reporting pipelines. Maintained a perfect 5/5 CSAT score.',
+    bullets: [
+      'Maintained a 5/5 CSAT score across 9 major project milestones by ensuring deliverables were reliable and on time.',
+      'Built the CLAIMS IVR connector for a Cisco-based cloud infrastructure, enabling seamless communication with Google\'s Dialogflow CX for enhanced speech recognition and NLU.',
+      'Developed a middleware client using Java and Spring Data JPA/Hibernate to manage data persistence and streamline API access.',
+      'Managed and optimized large datasets for an advanced reporting pipeline using Google BigQuery. Developed complex SQL queries for data visualization in Google Looker Studio.',
+    ]
+  },
+  {
+    id: 'adcb',
+    role: 'Software Developer — Voice Biometrics & IVR',
+    company: 'ADCB Bank | Servion Global Solutions',
+    period: 'Jun 2023 – Jan 2024',
+    shortDesc: 'Implemented real-time voice biometric authentication and built a high-performance IVR on Genesys PureCloud & AWS.',
+    bullets: [
+      'Contributed to the implementation of a high-performance IVR system using Genesys PureCloud for front-end orchestration and AWS (Lambda, S3) for back-end integration.',
+      'Implemented a voice biometric authentication solution using Audiohook for real-time audio processing, enhancing security and eliminating manual authentication.',
+      'Integrated the IVR with the bank\'s core system, utilizing Java for robust back-end services.',
+    ]
+  },
+  {
+    id: 'fis',
+    role: 'Graduate Engineer Trainee — IVR Development',
+    company: 'FIS EBT California | Servion Global Solutions',
+    period: 'Dec 2022 – May 2024',
+    shortDesc: 'Developed and maintained reusable IVR components using the Nuance State Engine framework.',
+    bullets: [
+      'Developed and maintained reusable IVR components, including menus, prompts, and data collection modules, using the Nuance State Engine Development framework (XML-based JAVA).',
+      'Optimized IVR performance and scalability.',
+    ]
+  },
 ];
 
 export default function ExperienceTimeline() {
@@ -104,7 +147,7 @@ export default function ExperienceTimeline() {
                         {exp.shortDesc}
                       </motion.p>
 
-                      {/* Expandable Content Area (Template for user to fill more details) */}
+                      {/* Expandable Content Area */}
                       {isExpanded && (
                         <motion.div 
                           initial={{ opacity: 0, height: 0 }}
@@ -112,8 +155,14 @@ export default function ExperienceTimeline() {
                           exit={{ opacity: 0, height: 0 }}
                           className="mt-4 pt-4 border-t border-white/10 text-muted-foreground"
                         >
-                          <p>{exp.fullDesc}</p>
-                          {/* User can add bullet points or metrics here later */}
+                          <ul className="space-y-2 text-sm md:text-base">
+                            {exp.bullets.map((bullet, i) => (
+                              <li key={i} className="flex items-start gap-2">
+                                <span className="text-emerald-400 mt-1 shrink-0">▸</span>
+                                <span>{bullet}</span>
+                              </li>
+                            ))}
+                          </ul>
                         </motion.div>
                       )}
 

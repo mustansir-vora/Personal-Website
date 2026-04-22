@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Mail } from 'lucide-react';
+import { assetPath } from '@/lib/basePath';
 
 export default function HeroSection() {
   return (
@@ -68,10 +69,10 @@ export default function HeroSection() {
           className="flex items-center gap-6 pt-6 md:pt-12"
         >
           <a href="https://linkedin.com/in/mustansir-vora-56128b216" target="_blank" rel="noopener noreferrer" className="p-3 glass rounded-full hover:bg-white/20 transition-colors hover:scale-110 hover:-translate-y-1">
-            <img src="/Personal-Website/Assets/LINKEDIN_TOP.svg" alt="LinkedIn" className="w-6 h-6 invert" />
+            <img src={assetPath('/Assets/LINKEDIN_TOP.svg')} alt="LinkedIn" className="w-6 h-6 invert" />
           </a>
           <a href="https://github.com/mustansir-vora" target="_blank" rel="noopener noreferrer" className="p-3 glass rounded-full hover:bg-white/20 transition-colors hover:scale-110 hover:-translate-y-1">
-            <img src="/Personal-Website/Assets/GITHUB_TOP.svg" alt="GitHub" className="w-6 h-6 invert" />
+            <img src={assetPath('/Assets/GITHUB_TOP.svg')} alt="GitHub" className="w-6 h-6 invert" />
           </a>
           <a href="mailto:voramustansir9278@gmail.com" className="p-3 glass rounded-full hover:bg-white/20 transition-colors hover:scale-110 hover:-translate-y-1">
             <Mail className="w-6 h-6 text-emerald-400" />

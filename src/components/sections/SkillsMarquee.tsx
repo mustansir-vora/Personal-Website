@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { BrainCircuit, CodeSquare, Bot } from 'lucide-react';
+import { assetPath } from '@/lib/basePath';
 
 type Skill = {
   name: string;
@@ -11,23 +12,23 @@ type Skill = {
 };
 
 const existingSkills: Skill[] = [
-  { name: 'Java', icon: '/Personal-Website/Assets/JAVA.svg' },
-  { name: 'JavaScript', icon: '/Personal-Website/Assets/JAVASCRIPT.svg' },
-  { name: 'Node.js', icon: '/Personal-Website/Assets/NODEJS.svg' },
-  { name: 'React.js', icon: '/Personal-Website/Assets/REACT.svg' },
-  { name: 'Python', icon: '/Personal-Website/Assets/PYTHON.svg' },
-  { name: 'SQL', icon: '/Personal-Website/Assets/SQL.svg' },
-  { name: 'AWS', icon: '/Personal-Website/Assets/AWS.svg' },
-  { name: 'GCP', icon: '/Personal-Website/Assets/GCP.svg' },
-  { name: 'Azure', icon: '/Personal-Website/Assets/AZURE.svg' },
-  { name: 'Dialogflow CX', icon: '/Personal-Website/Assets/DIALOGFLOW.svg' },
-  { name: 'Copilot Studio', icon: '/Personal-Website/Assets/COPILOTSTUDIO.svg' },
-  { name: 'Genesys', icon: '/Personal-Website/Assets/GENESYS.svg' },
-  { name: 'LLMs', icon: '/Personal-Website/Assets/LLM.svg' },
-  { name: 'RAG', icon: '/Personal-Website/Assets/RAG.svg' },
-  { name: 'Machine Learning', icon: '/Personal-Website/Assets/MACHINELEARNING.svg' },
-  { name: 'Docker', icon: '/Personal-Website/Assets/DOCKER.svg' },
-  { name: 'Kubernetes', icon: '/Personal-Website/Assets/KUBERNETES.svg' }
+  { name: 'Java', icon: assetPath('/Assets/JAVA.svg') },
+  { name: 'JavaScript', icon: assetPath('/Assets/JAVASCRIPT.svg') },
+  { name: 'Node.js', icon: assetPath('/Assets/NODEJS.svg') },
+  { name: 'React.js', icon: assetPath('/Assets/REACT.svg') },
+  { name: 'Python', icon: assetPath('/Assets/PYTHON.svg') },
+  { name: 'SQL', icon: assetPath('/Assets/SQL.svg') },
+  { name: 'AWS', icon: assetPath('/Assets/AWS.svg') },
+  { name: 'GCP', icon: assetPath('/Assets/GCP.svg') },
+  { name: 'Azure', icon: assetPath('/Assets/AZURE.svg') },
+  { name: 'Dialogflow CX', icon: assetPath('/Assets/DIALOGFLOW.svg') },
+  { name: 'Copilot Studio', icon: assetPath('/Assets/COPILOTSTUDIO.svg') },
+  { name: 'Genesys', icon: assetPath('/Assets/GENESYS.svg') },
+  { name: 'LLMs', icon: assetPath('/Assets/LLM.svg') },
+  { name: 'RAG', icon: assetPath('/Assets/RAG.svg') },
+  { name: 'Machine Learning', icon: assetPath('/Assets/MACHINELEARNING.svg') },
+  { name: 'Docker', icon: assetPath('/Assets/DOCKER.svg') },
+  { name: 'Kubernetes', icon: assetPath('/Assets/KUBERNETES.svg') }
 ];
 
 const newSkills: Skill[] = [

@@ -10,10 +10,10 @@ const contentMap: Record<Tab, React.ReactNode> = {
   Summary: (
     <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
       <p>
-        I'm an <strong className="text-white">Efficacious professional</strong> with a track record of successfully completing projects and resolving challenging technical issues. With more than three years of experience, I am an excellent communicator with both technical and non-technical teams, ensuring a cooperative approach to each project.
+        I'm an <strong className="text-white">Efficient & Efficacious professional</strong> with a track record of successfully completing projects and resolving challenging technical issues. With more than three years of experience, I am an excellent communicator with both technical and non-technical teams, ensuring a cooperative approach to each project.
       </p>
       <p>
-        My commitment to continuous learning and adaptability allows me to thrive in fast-paced corporate environments. I am a dependable team player who consistently delivers excellent work, and I approach every challenge with a <strong className="text-white">proactive, problem-solving mindset</strong>.
+        My commitment to continuous learning and adaptability allows me to thrive in fast-paced environments. I am a dependable team player who consistently delivers excellent work, and I approach every challenge with a <strong className="text-white">proactive, problem-solving mindset</strong>.
       </p>
     </div>
   ),
@@ -45,9 +45,9 @@ export default function AboutSection() {
   return (
     <section className="py-24 relative overflow-hidden" id="about">
       <div className="max-w-6xl mx-auto px-8 relative z-10">
-        
+
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -58,9 +58,9 @@ export default function AboutSection() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-start">
-          
+
           {/* Interactive Tabs */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -70,9 +70,8 @@ export default function AboutSection() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`relative px-4 md:px-6 py-3 md:py-4 text-center lg:text-left font-medium rounded-xl transition-colors whitespace-nowrap ${
-                  activeTab === tab ? 'text-white' : 'text-muted-foreground hover:text-white/80 hover:bg-white/5'
-                }`}
+                className={`relative px-4 md:px-6 py-3 md:py-4 text-center lg:text-left font-medium rounded-xl transition-colors whitespace-nowrap ${activeTab === tab ? 'text-white' : 'text-muted-foreground hover:text-white/80 hover:bg-white/5'
+                  }`}
               >
                 {activeTab === tab && (
                   <motion.div
@@ -88,7 +87,7 @@ export default function AboutSection() {
           </motion.div>
 
           {/* Tab Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -97,7 +96,7 @@ export default function AboutSection() {
             <div className="glass p-6 md:p-12 rounded-3xl relative overflow-hidden">
               {/* Subtle accent glow */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/20 blur-3xl rounded-full"></div>
-              
+
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
