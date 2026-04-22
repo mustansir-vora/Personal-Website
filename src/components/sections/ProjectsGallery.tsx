@@ -18,6 +18,7 @@ interface Project {
   shortDesc: string;
   bullets: string[];
   githubUrl?: string;
+  liveUrl?: string;
 }
 
 const projects: Project[] = [
@@ -98,6 +99,7 @@ const projects: Project[] = [
     tags: ['Python', 'Streamlit', 'Google Gemini LLM', 'lxml', 'XML Parsing'],
     shortDesc: 'An AI agent that optimizes resumes by extracting DOCX content into XML, using Gemini LLM for job-specific enhancement, and rebuilding the DOCX with original formatting preserved.',
     githubUrl: 'https://github.com/mustansir-vora/AI-Resume-Optimizer',
+    liveUrl: 'https://ai-resume-optimizer-covxskfybhkh5vnecsvyxr.streamlit.app/',
     bullets: [
       'Built with Streamlit for a clean, interactive UI: upload a .docx resume, paste a job description, and download an optimized version.',
       'Core innovation: parses the .docx as XML using lxml, extracting every text element with its unique XPath for precise, position-aware content replacement.',
@@ -113,6 +115,7 @@ const projects: Project[] = [
     tags: ['Python', 'Streamlit', 'Gemini AI', 'PyGithub', 'Plotly', 'Graph Viz'],
     shortDesc: 'A Streamlit web app that analyzes any public GitHub repo — visualizes file/function architecture, generates AI-powered summaries, and plots commit activity.',
     githubUrl: 'https://github.com/mustansir-vora/Github-Summarizer',
+    liveUrl: 'https://app-summarizer-ea7fhftuww2pgkixziufis.streamlit.app/',
     bullets: [
       'Fetches all files and commit history from a specified GitHub repository using the PyGithub API.',
       'Extracts code and function names from supported file types, compiling them for AI analysis.',
@@ -239,19 +242,34 @@ export default function ProjectsGallery() {
                       ))}
                     </ul>
 
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="mt-5 inline-flex items-center gap-2 px-5 py-2.5 glass rounded-xl text-white text-sm font-medium hover:bg-white/15 transition-colors border border-white/10 hover:border-emerald-500/50"
-                      >
-                        <GithubIcon className="w-4 h-4" />
-                        View Source on GitHub
-                        <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />
-                      </a>
-                    )}
+                    <div className="mt-5 flex flex-wrap gap-3">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500/10 rounded-xl text-emerald-400 text-sm font-medium hover:bg-emerald-500/20 transition-colors border border-emerald-500/30 hover:border-emerald-500/50"
+                        >
+                          Try Live App
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      )}
+                      
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-2 px-5 py-2.5 glass rounded-xl text-white text-sm font-medium hover:bg-white/15 transition-colors border border-white/10 hover:border-emerald-500/50"
+                        >
+                          <GithubIcon className="w-4 h-4" />
+                          View Source
+                          {!project.liveUrl && <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />}
+                        </a>
+                      )}
+                    </div>
                   </motion.div>
                 )}
 
@@ -259,17 +277,33 @@ export default function ProjectsGallery() {
                   <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
                     {isExpanded ? 'Show Less' : 'Click for Details'}
                   </span>
-                  {project.githubUrl && !isExpanded && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="p-2 glass rounded-full hover:bg-white/20 transition-colors hover:scale-110"
-                      title="View on GitHub"
-                    >
-                      <GithubIcon className="w-4 h-4 text-white/70" />
-                    </a>
+                  {!isExpanded && (project.githubUrl || project.liveUrl) && (
+                    <div className="flex items-center gap-2">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="p-2 bg-emerald-500/10 rounded-full hover:bg-emerald-500/20 transition-all border border-emerald-500/30 hover:scale-110"
+                          title="Try Live App"
+                        >
+                          <ExternalLink className="w-4 h-4 text-emerald-400" />
+                        </a>
+                      )}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="p-2 glass rounded-full hover:bg-white/20 transition-all hover:scale-110"
+                          title="View on GitHub"
+                        >
+                          <GithubIcon className="w-4 h-4 text-white/70" />
+                        </a>
+                      )}
+                    </div>
                   )}
                 </motion.div>
               </motion.div>
