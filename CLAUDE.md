@@ -14,7 +14,16 @@ Build a stunning, futuristic, and accessible personal portfolio website using **
 - **Fonts**: Inter (primary), Orbitron (headlines), Space Mono (code/tech)
 - **Deployment**: Vercel (optimized for static export or serverless)
 
----
+### Directory Structure & Architecture
+- `src/app/`: Next.js App Router pages and layouts.
+- `src/components/ui/`: Reusable, generic UI components (Buttons, Inputs, Cards).
+- `src/components/sections/`: Large, complex page sections (Hero, About, Projects Gallery).
+- `src/lib/`: Utility functions, constants, and custom hooks (e.g., `basePath.ts`).
+- `public/`: Static assets, images, and fonts.
+
+### State Management & Data Fetching
+- For simple UI state, use React `useState` and `useContext`.
+- For fetching data, since the app is statically exported (`output: 'export'`), data should ideally be fetched at build time or using standard `fetch` in `useEffect` on the client. Server actions and dynamic server-side rendering (`getServerSideProps`) are not available in static exports.
 
 ## 🎨 Visual & Design System
 
@@ -202,4 +211,6 @@ After development, update README.md with:
 ## 💡 Tips for AI Agents
 
 1. **Always start with structure** - create components first, then style
-2. **Use Tailwind utilities** - avoid custom
+2. **Use Tailwind utilities** - avoid custom CSS where possible.
+3. **Follow App Router conventions** - use `layout.tsx`, `page.tsx`, and appropriate Next.js conventions.
+4. **Prioritize accessibility** - use semantic HTML and ARIA attributes where needed.
