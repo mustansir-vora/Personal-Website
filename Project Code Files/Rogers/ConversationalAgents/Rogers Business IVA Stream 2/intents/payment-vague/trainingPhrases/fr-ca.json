@@ -1,0 +1,630 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Comment je fais pour payer en ligne?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " le compte d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " autre compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier mon "
+    }, {
+      "text": "paiement minimum",
+      "parameterId": "e_AmountName"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour effectuer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement en ligne avec ma carte de crédit.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me ",
+      "auto": true
+    }, {
+      "text": "dire",
+      "auto": true
+    }, {
+      "text": " comment effectuer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement en ligne pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux de l’information ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " le paiement de ma facture en ligne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au sujet de la façon d’effectuer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement en ligne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier mes options de paiement en ligne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me ",
+      "auto": true
+    }, {
+      "text": "dire",
+      "auto": true
+    }, {
+      "text": " si je peux payer ma facture avec Visa ou MasterCard?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’effectuer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement avec ma carte de débit.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir comment payer avec ma carte de crédit.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour vérifier ma prochaine facture.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider avec la facturation et les paiements?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux consulter ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " historique de paiements.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour poser des questions ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " les options de ",
+      "auto": true
+    }, {
+      "text": "paiement",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de confirmer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me donner de l’information ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " mes paiements?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier comment payer ma facture.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne suis pas certain de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " question de paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux poser ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " question au sujet de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " dernier paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me parler de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " paiement mensuel?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle concernant les paiements ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier les détails de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’information au sujet de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " question concernant ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me parler de ma facture?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux connaître les détails de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " prochain paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au sujet d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler des paiements.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider avec ma facture?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler de gestion des "
+    }, {
+      "text": "paiements sur mon compte",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler de gérer mes "
+    }, {
+      "text": "paiements pour mon compte",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider avec mon montant de céduler "
+    }, {
+      "text": "des paiements",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier mon montant pour cédulé une "
+    }, {
+      "text": "entente de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux connaître les détails de mon "
+    }, {
+      "text": "entente de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au sujet d’un "
+    }, {
+      "text": "paiement programmé",
+      "parameterId": "e_Amount"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler de mon "
+    }, {
+      "text": "n’arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " prévu."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider avec ma "
+    }, {
+      "text": "promesse de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier mon "
+    }, {
+      "text": "montant actuel",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au sujet d’un paiement sur mon plan de "
+    }, {
+      "text": "paiement échelonné.",
+      "parameterId": "e_AmountName"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler de mon plan de "
+    }, {
+      "text": "paiement échelonné.",
+      "parameterId": "e_AmountName"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider avec mon montant de plan de "
+    }, {
+      "text": "paiement différé",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier mon montant pour mon plan de "
+    }, {
+      "text": "paiement différé",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux connaître les détails de mon "
+    }, {
+      "text": "solde",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au sujet d’un paiement sur mon "
+    }, {
+      "text": "solde dû",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler de mon "
+    }, {
+      "text": "solde dû.",
+      "parameterId": "e_AmountName"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider avec mon "
+    }, {
+      "text": "montant actuel",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

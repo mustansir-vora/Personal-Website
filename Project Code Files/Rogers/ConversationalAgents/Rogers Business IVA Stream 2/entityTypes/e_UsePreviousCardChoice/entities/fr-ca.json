@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "use previous",
+    "synonyms": [ " oui", "oui allez-y", "use previous", "utiliser la précédente", "bien sûr" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "enter new",
+    "synonyms": [ " différente", " nouvelle carte", "enter new", "entrer une nouvelle" ],
+    "languageCode": "fr-ca"
+  } ]
+}

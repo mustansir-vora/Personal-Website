@@ -1,0 +1,93 @@
+{
+  "name": "4e43a2ca-222f-409e-ac1e-a00e34a31122",
+  "displayName": "Play continueNextSet",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Should i continue?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Yes",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.paymentHistoryMaxPlaybackCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Play nextSkip",
+    "name": "6483cf23-3a87-4b4c-9929-9fd0be323e3b"
+  }, {
+    "intent": "intent_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call SMS subflow",
+    "name": "4cdcd06d-4342-440b-8957-0886f89a5fda"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "If you'd like to hear the next group of payments, say yes (or press 1). If not, say no (or press 2)." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e596eaeb-60f3-49d5-b753-311aa37efb66"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "If you'd like to hear the next group of payments, say yes (or press 1). If not, say no (or press 2)." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "78513d51-4176-455a-965f-2e0de6d063b4"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To hear the next group of payments, press 1. Otherwise, press 2." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cd4712f3-1d8b-41d8-918d-78f5fc78c966"
+  }, {
+    "targetPage": "Call SMS subflow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "497f1774-f3f8-45ca-8a03-e341fd22dc28"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To hear the next group of payments, press 1. Otherwise, press 2." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "4fcc03dc-c143-44fa-bdf2-5592cd1a6df3"
+  }, {
+    "targetPage": "Call SMS subflow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "6b72eb08-cdc5-4073-b687-8ab429bbafca"
+  } ]
+}

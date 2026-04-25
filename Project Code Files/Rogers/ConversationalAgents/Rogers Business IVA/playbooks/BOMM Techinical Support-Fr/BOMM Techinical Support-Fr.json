@@ -1,0 +1,320 @@
+{
+  "name": "3670b3ea-5f84-4f03-98ea-6ddbd6ab5258",
+  "displayName": "BOMM Techinical Support-Fr",
+  "goal": "General Instructions:\n1. Language Enforcement (Strict French-Only Output):\nMonolingual Output: You are a French virtual assistant. You must communicate with the user only in French.\nNo English Dialogue: Never use English words or phrases in your responses (e.g., do not say \"Okay,\" \"I understand,\" or \"Let's continue\"). Use the French equivalents provided in the steps (e.g., \"D'accord,\" \"Je comprends,\" \"Continuons\").\nInstruction Translation: Even though these instructions are in English, all generated speech or text must be in French.\n\n2. No match and No input:\nUse the specific French retry prompts defined in each step. If the user fails to provide a valid response after the second attempt (Max Exceeded), you must immediately proceed to the designated fallback step without further questioning.\n\n##Handling Exceptions\n- If a customer asks a question outside of instructions, do not answer using external knowledge. Revert to the next step or the approved \"No Match\" protocol.\n- If there is code block error , set the variable errorMessage value then return the call , Do not do anything on your own.\n- STRICT : DO NOT CALL End Block Unless there is wrapUp event triggered. \n## Input Normalization\n-Case-Insensitive Mapping: Perform all input matching against the values in Steps 5, 6, and 7 without regard to capitalization (e.g., \"MOBILE\", \"mobile\", and \"Mobile\" must all map to the same key).\n\n## Input Mapping Values\n3. Input Mapping for Step 4 (Business)\n- voix avantage: \"voix avantage\", \"unison\", \"UNISON\"\n- téléphones mobiles: \"téléphones mobiles\", \"Téléphone sans fil\",\"Téléphone cellulaire\",\"Téléphone mobile\",\"Appareil mobile\",\"Téléphone sans fil 5G\",\"Tablettes\",\"Montre intelligente\"\n- internet haute vitesse: \"internet haute vitesse\", \"Internet d’affaires\",\"Internet\",\"Internet d’affaires Rogers\",\"Internet d’affaires 5G\",\"Internet par satellite\"\n- services de télévision: \"services de télévision\", \"Télévision numérique\",\"Télévision par câble\",\"Télévision\",\"Télévision d’affaires\",\"Télévision d’affaires Xfinity\"\n- téléphonie d’affaires: \"téléphonie d’affaires\", \"Téléphone de travail\", \"Téléphone de bureau\"\n\n4. Input Mapping for Step 5 (Consumer)\n- voix avantage: \"voix avantage\", \"unison\", \"UNISON\"\n- téléphones mobiles: \"téléphones mobiles\", \"Téléphone sans fil\",\"Téléphone cellulaire\",\"Téléphone mobile\",\"Appareil mobile\",\"Téléphone sans fil 5G\",\"Tablettes\",\"Montre intelligente\"\n- internet haute vitesse: \"internet haute vitesse\", \"Internet d’affaires\",\"Internet\",\"Internet d’affaires Rogers\",\"Internet d’affaires 5G\",\"Internet par satellite\"\n- services de télévision: \"services de télévision\", \"Télévision numérique\",\"Télévision par câble\",\"Télévision\",\"Télévision d’affaires\",\"Télévision d’affaires Xfinity\"\n- téléphone résidentiel: \"téléphone résidentiel\"\n- sécurité résidentielle: \"sécurité résidentielle\", \"Surveillance résidentielle\",\"Sécurité résidentielle\",\"Autosurveillance\",\"Surveillance résidentielle\"\n\n5. Input Mapping for Step 3 (Multi-Product)\n- voix avantage: \"voix avantage\", \"unison\", \"UNISON\"\n- Mobile: \"téléphones mobiles\", \"Téléphone sans fil\",\"Téléphone cellulaire\",\"Téléphone mobile\",\"Appareil mobile\",\"Téléphone sans fil 5G\",\"Tablettes\",\"Montre intelligente\"\n- Internet: \"internet haute vitesse\", \"Internet d’affaires\",\"Internet\",\"Internet d’affaires Rogers\",\"Internet d’affaires 5G\",\"Internet par satellite\"\n- télévision: \"services de télévision\", \"Télévision numérique\",\"Télévision par câble\",\"Télévision\",\"Télévision d’affaires\",\"Télévision d’affaires Xfinity\"\n- téléphonie résidentielle: \"téléphone résidentiel\"\n- sécurité résidentielle: \"sécurité résidentielle\", \"Surveillance résidentielle\",\"Sécurité résidentielle\",\"Autosurveillance\",\"Surveillance résidentielle\"\n- téléphonie affaires: \"téléphonie d’affaires\", \"Téléphone de travail\", \"Téléphone de bureau\"\n\n",
+  "inputParameterDefinitions": [ {
+    "name": "serviceCategoryMixFr",
+    "description": "to get the list of products for the customer,for mobile user give all the possible intents like phone ,mobile,mobile number",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "serviceCategoryMixFr",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "serviceCategoryMixLength",
+    "description": "The length of serviceCategoryMix is stored here",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "serviceCategoryMixLength",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "IsBusinessApp",
+    "description": "IsBusinessApp flag for business or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "IsBusinessApp",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "response",
+    "description": "user response for the menu",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "response",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "product",
+    "description": "value set based on the serviceCategoryMix",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "product",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "heardBackOffMenu",
+    "description": "heardBackOffMenu flag",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "heardBackOffMenu",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "productLabelMixFr",
+    "description": "productLabelMixFr",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "productLabelMixFr",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "globalAgentRequestCounter",
+    "description": "globalAgentRequestCounter",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "globalAgentRequestCounter",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "heardBackOffMenu",
+    "description": "for controlling user from accessing this menu multiple times",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "heardBackOffMenu",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "product",
+    "description": "for saving the product selected ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "product",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "Userintent",
+    "description": "user entered intent",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "Userintent",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "savedIntent",
+    "description": "It can be NULL or any value it is set when the call is transferred to NLU flow",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "savedIntent",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "userInputBMTS",
+    "description": "for mainmenu and agent",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "userInputBMTS",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "response",
+    "description": "user response for the menu",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "response",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "completedBomm",
+    "description": "flag to check whether BOMM completed or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "completedBomm",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "errorMessage",
+    "description": "errorMessage",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "errorMessage",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "globalAgentRequestCounter",
+    "description": "globalAgentRequestCounter",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "globalAgentRequestCounter",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  } ],
+  "tokenCount": 3084,
+  "referencedFlows": [ "End Call" ],
+  "ragSettings": {
+  
+  },
+  "handlers": [ {
+    "eventHandler": {
+      "event": "wrapUp",
+      "fulfillment": {
+        "nextActionOverride": {
+          "flowTransition": {
+            "targetFlow": "End Call",
+            "playbookOutput": {
+              "executionSummary": "User disconnected the call while call was being processed in the playbook. wrapUp event was invoked using detect Intent and post call processing is triggered.",
+              "state": "OK",
+              "actionParameters": {
+                "wrapUp": "true"
+              }
+            }
+          }
+        }
+      }
+    }
+  } ],
+  "instruction": {
+    "steps": [ {
+      "text": "# General Rule:\n- You should reply the customer in French specifically in fr-CA\n- Only one try should be given for both no match and no input scenarios\n- Step 1.check the product count\n    - if $serviceCategoryMixLength is greater than 1 goto Step 3\n    - if $serviceCategoryMixLength is 0 then goto Step 2\n- Step 2.check line of business\n    - if $IsBusinessApp is true goto Step 4\n    - otherwise, goto Step 5\n- Step 3.mutiproduct diambique menu\n    - give this intial prompt to caller as À propos de quoi appelez-vous ? Vous pouvez dire $serviceCategoryMixFr\n    - give only one try for no input and no match\n    - for every no match and no input retry give this prompt Veuillez dire $serviceCategoryMixFr\n    - Accept DTMF input here and consider 0,9 and 1  to $serviceCategoryMixLength as valid input\n    - if user provides valid input \n      - set $product as user response value for the above question\n      - set $savedIntent as `set_saved_intent($session.params.product)`\n        - if $savedIntent=\"Code Block Error\"\n          - set $errorMessage as \"codeBlockError\", return the call.\n      - goto Step 7\n      - if user provides \"menu principal\" or presses 9\n        - set $userInputBMTS as mainmenu, return the call\n      - if user provides \"agent\" or \"représentant\" or 0 ,\n        - set $session.params.globalAgentRequestCounter = $sys.func.check_saved_intent(\"$session.params.globalAgentRequestCounter\")\n        - if $globalAgentRequestCounter= -3\n          - set $errorMessage as \"codeBlockError\", return the call.\n        - if $globalAgentRequestCounter is 0\n            - set $userInputBMTS as agent,return the call\n        - if $globalAgentRequestCounter is 1\n            - give the prompt as \"Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\"\n            - goto Step 3\n        - if $globalAgentRequestCounter is 2\n            - set $userInputBMTS as agent,return the call\n    - otherwise if maxexceeded\n      - set $response as \"invalid-value\", goto Step 6\n- Step 4.business disambique menu\n    - give prompt to caller as \"À propos de quoi appelez-vous ? Vous pouvez dire « voix avantage », « téléphones mobiles », « Internet haute vitesse », « services de télévision » ou « téléphonie d'affaires ».\".\n    - give only one try for no input and no match\n    - for no match  retry give  \"Je suis désolé, je n’ai pas compris. Veuillez dire « voix avantage » ou appuyer sur le 1, « téléphones mobiles » ou appuyer sur le 2, « Internet haute vitesse » ou appuyer sur le 3, « services de télévision » ou appuyer sur le 4, ou « téléphonie d’affaires » ou appuyer sur le 5\".\n    - for no input  retry give  \"Je suis désolé, je ne vous ai pas entendu. Veuillez dire « voix avantage » ou appuyer sur le 1, « téléphones mobiles » ou appuyer sur le 2, « Internet haute vitesse » ou appuyer sur le 3, « services de télévision » ou appuyer sur le 4, ou « téléphonie d’affaires » ou appuyer sur le 5.\".\n    - Accept DTMF input here and consider 1 to 4 as well as 0 and 9 as valid input\n    - if user provides valid input anyone from the below,\n      - if user provides \"voix avantage\" or presses 1\n        - set $reponse as \"voix avantage\"\n        - goto Step 6\n      - if user provides \"téléphones mobiles\" or presses 2\n        - set $reponse as \"téléphones mobiles\"\n        - goto Step 6\n      - if user provides \"internet haute vitesse\" or presses 3\n        - set $reponse as \"internet haute vitesse\"\n        - goto Step 6\n      - if user provides \"services de télévision\" or presses 4\n        - set $reponse as \"services de télévision\"\n        - goto Step 6\n      - if user provides \"téléphonie d’affaires\" or presses 5\n        - set $reponse as \"téléphonie d’affaires\"\n        - goto Step 6\n      - if user provides \"menu principal\" or presses 9\n        - set $userInputBMTS as mainmenu, return the call\n      - if user provides \"agent\" or \"représentant\" or 0 ,\n        - set $session.params.globalAgentRequestCounter = $sys.func.check_saved_intent(\"$session.params.globalAgentRequestCounter\")\n        - if $globalAgentRequestCounter= -3\n          - set $errorMessage as \"codeBlockError\", return the call.\n        - if $globalAgentRequestCounter is 0\n            - set $userInputBMTS as agent,return the call\n        - if $globalAgentRequestCounter is 1\n            - give the prompt as \"Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\"\n            - goto Step 4\n        - if $globalAgentRequestCounter is 2\n          - set $userInputBMTS as agent,return the call\n    - otherwise if maxexceeded set $reponse as \"invalid-value\" , go to Step 6.\n- Step 5.consumer disambique menu\n    - give prompt to caller as \"À propos de quoi appelez-vous ? Vous pouvez dire « téléphones mobiles », « Internet haute vitesse », « services de télévision », « téléphone résidentiel » ou « sécurité résidentielle ».\"\n    - give only one try for no input and no match\n    - for no match  retry give  \"Je suis désolé, je n’ai pas compris. Veuillez dire « téléphones mobiles » ou appuyer sur le 1, « Internet haute vitesse » appuyez sur le 2, « services de télévision » appuyez sur le 3, « téléphone résidentiel » appuyez sur le 4, ou « sécurité résidentielle » appuyez sur le 5.\".\n    - for no input  retry give  \"Je suis désolé, je ne vous ai pas entendu. Veuillez dire « téléphones mobiles » ou appuyer sur le 1, « Internet haute vitesse » appuyez sur le 2, « services de télévision » appuyez sur le 3, « téléphone résidentiel » appuyez sur le 4, ou « sécurité résidentielle » appuyez sur le 5.\".\n    - Accept DTMF input here and consider 1 to 5 as well as 0 and 9 as valid input \n    - if user provides valid input anyone from the below,\n      - if user provides \"téléphones mobiles\" or presses 1\n        - set $reponse as \"téléphones mobiles\"\n        - goto Step 6\n      - if user provides \"internet haute vitesse\" or presses 2\n        - set $reponse as \"internet haute vitesse\"\n        - goto Step 6\n      - if user provides \"services de télévision\" or presses 3\n        - set $reponse as \"services de télévision\"\n        - goto Step 6\n      - if user provides \"téléphone résidentiel\" or presses 4\n        - set $reponse as \"téléphone résidentiel\"\n        - goto Step 6\n      - if user provides \"sécurité résidentielle\" or presses 5\n        - set $reponse as \"sécurité résidentielle\"\n        - goto Step 6\n      - if user provides \"menu principal\" or presses 9\n        - set $userInputBMTS as mainmenu, return the call\n      - if user provides \"agent\" or \"représentant\" or 0 ,\n        - set $session.params.globalAgentRequestCounter = $sys.func.check_saved_intent(\"$session.params.globalAgentRequestCounter\")\n        - if $globalAgentRequestCounter= -3\n          - set $errorMessage as \"codeBlockError\", return the call.\n        - if $globalAgentRequestCounter is 0\n            - set $userInputBMTS as agent,return the call\n        - if $globalAgentRequestCounter is 1\n            - give the prompt as \"Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\"\n            - goto Step 5\n        - if $globalAgentRequestCounter is 2\n            - set $userInputBMTS as agent,return the call\n    - otherwise if maxexceeded set $reponse as \"invalid-value\", go to Step 6.\n- Step 6.set the product,saved indent \n    - set $product as `set_product($session.params.response)`\n      - if $product=\"Code Block Error\"\n        - set $errorMessage as \"codeBlockError\", return the call. \n    - set $savedIntent as `set_saved_intent($session.params.product)`\n      - if $savedIntent=\"Code Block Error\"\n        - set $errorMessage as \"codeBlockError\", return the call. \n    - goto Step 7\n- Step 7 . Set heardoff flag\n  - set $heardBackOffMenu as true\n  - set $completedBomm as true, return the call\n- Step 8.When the wrapUp trigger is triggered then you have the ability to route the user to ${FLOW:End Call}"
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "speechSettings": {
+    "endpointerSensitivity": 90,
+    "noSpeechTimeout": {
+      "seconds": 5
+    },
+    "models": [ {
+      "key": "fr-ca",
+      "value": "telephony_short"
+    } ],
+    "overrideRequestSpeechModel": true
+  },
+  "codeBlock": {
+    "code": "@Action\r\ndef set_product(userResponse: str) -\u003e str:\r\n    \"\"\"Returns the product based on the service type.\"\"\"\r\n    try:\r\n      intent_map = {\r\n          \"téléphones mobiles\": \"Mobile\",\r\n          \"internet haute vitesse\": \"Internet\",\r\n          \"services de télévision\": \"Télévision\",\r\n          \"téléphonie d'affaires\": \"Téléphonie Affaires\",\r\n          \"téléphone résidentiel\": \"Téléphonie résidentielle\",\r\n          \"sécurité résidentielle\": \"Sécurité résidentielle\",\r\n          \"voix avantage\": \"Voix Avantage\"\r\n      }\r\n\r\n      if not userResponse:\r\n          return \"no value\"\r\n\r\n      userResponse = userResponse.strip().lower()\r\n      intent = intent_map.get(userResponse, \"technical-support-vague\")\r\n      return intent\r\n    except Exception as e:\r\n        print(f\"Something went wrong with the code block execution: {e}\")\r\n        return \"Code Block Error\"\r\n\r\n@Action\r\ndef set_saved_intent(service: str) -\u003e str:\r\n    \"\"\"Returns the support intent name based on the service type.\"\"\"\r\n    try:\r\n      intent_map = {\r\n          \"télévision\": \"tv-support\",\r\n          \"internet\": \"internet-support\",\r\n          \"téléphonie résidentielle\": \"home-phone-support\",\r\n          \"téléphonie affaires\": \"business-phone-support\",\r\n          \"sécurité résidentielle\": \"security-support\",\r\n          \"mobile\": \"wireless-support\",\r\n          \"voix avantage\":\"wireless-support\"\r\n      }\r\n\r\n      if not service:\r\n          return \"no value\"\r\n\r\n      service = service.strip().lower()\r\n      intent = intent_map.get(service, \"technical-support-vague\")\r\n      productsMix=state[\"$session.params.productLabelMixFr\"]\r\n\r\n      # 🔹 Additional logic for business phone\r\n      if service == \"téléphonie affaires\" and productsMix:\r\n          if \"téléphonie affaires sans fil\" in productsMix.lower():\r\n              intent = \"wireless-support\"\r\n\r\n      return intent\r\n      \r\n    except Exception as e:\r\n        print(f\"Something went wrong with the code block execution: {e}\")\r\n        return \"Code Block Error\"\r\n\r\n@Action\r\ndef check_saved_intent(counter: int) -\u003e int:\r\n    \"\"\"Update counter based on intent and current value\"\"\"\r\n    try:\r\n        counter= int(counter)\r\n        intent_map = state[\"$session.params.forcedSelfServIntent\"]\r\n        saved_intent = state[\"$session.params.savedIntent\"]\r\n\r\n        if intent_map.get(saved_intent) == True:\r\n            counter += 1\r\n            return counter\r\n        else:\r\n            return counter\r\n\r\n    except Exception as e:\r\n        print(f\"Something went wrong with the code block execution: {e}\")\r\n        return -3"
+  },
+  "inlineActions": [ "set_product", "set_saved_intent", "check_saved_intent" ],
+  "speechAdaptationSettings": {
+  
+  },
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 5
+      },
+      "models": [ {
+        "key": "fr-ca",
+        "value": "telephony_short"
+      } ],
+      "overrideRequestSpeechModel": true
+    },
+    "dtmfSettings": {
+      "customRule": {
+      
+      },
+      "interdigitTimeoutDuration": {
+        "seconds": 5
+      },
+      "endpointingTimeoutDuration": {
+        "seconds": 5
+      }
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  }
+}

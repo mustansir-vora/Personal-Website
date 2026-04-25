@@ -1,0 +1,113 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Aide pour ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " téléphone sans?fil à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est?ce que je peux ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " appareil sans-fil à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte d’",
+      "auto": true
+    }, {
+      "text": "affaires",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Questions",
+      "auto": true
+    }, {
+      "text": " concernant l’ajout d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " produit sans-fil à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai des questions au sujet de l’ajout de plus d’",
+      "auto": true
+    }, {
+      "text": "un service",
+      "auto": true
+    }, {
+      "text": " sans-fil à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux plus d’information ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " l’ajout d’",
+      "auto": true
+    }, {
+      "text": "un service",
+      "auto": true
+    }, {
+      "text": " sans-fil à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

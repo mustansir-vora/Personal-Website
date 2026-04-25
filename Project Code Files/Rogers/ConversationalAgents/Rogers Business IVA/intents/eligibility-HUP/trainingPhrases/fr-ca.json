@@ -1,0 +1,117 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je regarde pour de nouveaux appareils mais j'aimerais savoir quand nous pourrons faire ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " rehaussement?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je vérifie si ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " de nos apparieils est éligible ",
+      "auto": true
+    }, {
+      "text": "pour un",
+      "auto": true
+    }, {
+      "text": " rehaussement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'aimerais savoir si ma ligne est éligible ",
+      "auto": true
+    }, {
+      "text": "à une",
+      "auto": true
+    }, {
+      "text": " rehaussement d'appareil?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est-ce que je suis/Est-ce que les appareils de notre compagnie ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " qualifient ",
+      "auto": true
+    }, {
+      "text": "pour un",
+      "auto": true
+    }, {
+      "text": " rehaussement ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte de compagnie.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous confirmer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": "/notre éligibilité ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " rehaussement?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier si ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": "/nos appareil est/sont éligible ",
+      "auto": true
+    }, {
+      "text": "pour un",
+      "auto": true
+    }, {
+      "text": " rehaussement?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,146 @@
+{
+  "name": "e4cce0e4-784f-4248-ba93-94aa200403db",
+  "displayName": "Text Or Call",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.retryCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Comment souhaitez-vous être avisé ? Vous pouvez dire « message texte » ou « appel téléphonique »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "How would you like to be notified? You can say text message or phone call." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 1 AND $session.params.stdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je ne vous ai pas entendu. Veuillez dire « message texte » ou appuyer sur le 1, ou « appel téléphonique » appuyez sur le 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that. Please say text message, or press 1, or phone call, press 2." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 1 AND $session.params.stdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n’ai pas compris. Veuillez dire « message texte » ou appuyer sur le 1, ou « appel téléphonique » appuyez sur le 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that. Please say text message, or press 1, or phone call, press 2." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Outage_Notification_Text",
+    "condition": "$session.params.retryCount \u003c 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "communicationMethod",
+        "value": "SMS"
+      }, {
+        "parameter": "retryCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Collect Phone Number",
+    "name": "b1b4fb8c-07b3-4745-aab9-1b07a94e193e"
+  }, {
+    "intent": "Outage_Notification-Phone",
+    "condition": "$session.params.retryCount \u003c 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "communicationMethod",
+        "value": "Mobile Phone"
+      }, {
+        "parameter": "retryCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Collect Phone Number",
+    "name": "b4dab44b-963a-4f35-9323-e06ddfc0a749"
+  }, {
+    "condition": "$session.params.retryCount \u003e 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je ne suis paas en mesure d’envoyer une notification. Si vous avez terminé, vous pouvez raccrocher." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm unable to send a notification. if you're done, feel free to hang up." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      } ]
+    },
+    "targetPage": "heardOutage",
+    "name": "52465a9b-9fe5-41b8-938f-8dc7f05f50a8"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": "$sys.func.ADD($session.params.retryCount, 1)"
+      }, {
+        "parameter": "stdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "1319c29e-fb7b-44c5-a357-cc1af3d413f1"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": "$sys.func.ADD($session.params.retryCount, 1)"
+      }, {
+        "parameter": "techOutMes",
+        "value": true
+      }, {
+        "parameter": "stdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "7376d6e4-04bf-4178-883a-936b5edff767"
+  } ],
+  "transitionRouteGroups": [ "Global_Menu_TS" ]
+}

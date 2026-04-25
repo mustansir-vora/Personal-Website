@@ -1,0 +1,150 @@
+{
+  "name": "f2999e40-400e-4483-9427-3ec75130643b",
+  "displayName": "Get NLU Configuration",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-nluconfig",
+    "tag": "getIntentProperties",
+    "setParameterActions": [ {
+      "parameter": "AgentRequest2ndAttempt",
+      "value": false
+    }, {
+      "parameter": "AgentRequest1stAttempt",
+      "value": false
+    }, {
+      "parameter": "savedUtterance",
+      "value": "$request.user-utterance"
+    }, {
+      "parameter": "agentName",
+      "value": "stream2"
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "session.params.mwInstance = \"prod\""
+      }, {
+        "condition": "$session.params.savedIntent = \"no-match\""
+      }, {
+        "condition": "$session.params.savedIntent = \"agent-request\""
+      }, {
+        "condition": "$session.params.mwInstance = $session.params.loadTestEnv",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Intent is $session.params.savedIntent ." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "L'intention est $session.params.savedIntent" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Destination Type",
+    "name": "8b1131bd-0752-4185-aa1a-a20b868d4543"
+  }, {
+    "condition": "$session.params.returnCode = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "074cda9e-1102-4b8f-b052-29242e711e77"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "57dadc7d-8d01-4344-a424-51ed5260e557"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "b9e21c4c-f94a-4724-998f-f0f231a6cc32"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "181f2b06-8551-4d6c-9229-7172fbc38f05"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "e6e5e239-e713-40d0-af8f-8621e740270b"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "4c06a109-ed36-4fd7-8a71-e5e0b91e13f3"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "216d46da-d00d-4295-ade1-cf9930c02e21"
+  } ]
+}

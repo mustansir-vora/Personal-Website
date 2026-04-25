@@ -1,0 +1,36 @@
+{
+  "name": "6de7b21e-affa-447e-b932-dbc926b00160",
+  "displayName": "Initialize Card Reset",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "creditCardInfo",
+      "value": "$session.params.api.paymentManagement.paymentConfirmation.creditCardInfo"
+    }, {
+      "parameter": "ccDetailsCounter",
+      "value": 0
+    }, {
+      "parameter": "expirationDateCounter",
+      "value": 0
+    }, {
+      "parameter": "fromProcessPayment",
+      "value": true
+    }, {
+      "parameter": "ccvCounter",
+      "value": 0
+    }, {
+      "parameter": "cvvCounter",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Make A Payment",
+    "name": "3be4d8dd-b812-413c-aaae-024f8c59f9cc"
+  } ]
+}

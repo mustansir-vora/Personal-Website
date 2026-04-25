@@ -1,0 +1,48 @@
+{
+  "name": "85acf86d-fde4-441c-bd50-9f6034d22912",
+  "displayName": "Validation State",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.consumerSemafone.readSecureData.state = ACTIVE AND $session.params.api.response.consumerSemafone.readSecureData.validationState = FAIL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "semafoneFail",
+        "value": true
+      } ]
+    },
+    "targetPage": "Logout",
+    "name": "ff510a08-7fb8-4104-8dd3-9453465ad13e"
+  }, {
+    "condition": "$session.params.api.response.consumerSemafone.readSecureData.state = ACTIVE AND $session.params.api.response.consumerSemafone.readSecureData.validationState = SUCCESS",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Create Token",
+    "name": "806acd19-b46d-45e0-8643-a3bfc616dfae"
+  }, {
+    "condition": "$session.params.api.response.consumerSemafone.readSecureData.state = COMPLETE AND $session.params.api.response.consumerSemafone.readSecureData.validationState = SUCCESS",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Create Token",
+    "name": "3dcd2272-8308-4bef-b239-f5212a019338"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "a0dd34a9-f5b6-4045-a0f4-c8d31ff97e0d"
+  } ]
+}

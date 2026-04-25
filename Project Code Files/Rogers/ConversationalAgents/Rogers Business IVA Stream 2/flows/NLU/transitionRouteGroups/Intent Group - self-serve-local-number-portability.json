@@ -1,0 +1,31 @@
+{
+  "name": "7037d8f6-099f-4c05-ab95-f826c518d4c2",
+  "displayName": "Intent Group - self-serve-local-number-portability",
+  "transitionRoutes": [ {
+    "intent": "lnp-eligibility",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "lnp-eligibility"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "c77f43e0-6fbf-4d95-a2e3-4846f1134fcf"
+  }, {
+    "intent": "lnp-status",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "lnp-status"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "5aa66d7b-ef27-42c7-95b9-2c993e9b8c88"
+  } ]
+}

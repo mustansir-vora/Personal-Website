@@ -1,0 +1,18 @@
+{
+  "name": "ea1696ab-e117-4776-ade2-8de20bd2591c",
+  "displayName": "Intent Group - self-serve-PaymentHistory",
+  "transitionRoutes": [ {
+    "intent": "payment-history",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "payment-history"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "692ca110-b473-496a-a9f3-3b4905732e3e"
+  } ]
+}

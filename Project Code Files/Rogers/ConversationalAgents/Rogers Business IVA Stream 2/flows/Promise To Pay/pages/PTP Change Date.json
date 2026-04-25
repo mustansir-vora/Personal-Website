@@ -1,0 +1,31 @@
+{
+  "name": "f0b7d602-323f-4763-9f0e-e958814738a2",
+  "displayName": "PTP Change Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "changePTPDate",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeDate = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Date Available",
+    "name": "c55ad9e9-3cef-496c-ad6e-6c3bc35b8dfa"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpDate",
+        "value": "$session.params.api.response.ptp.datePromised"
+      } ]
+    },
+    "targetPage": "Check If Change Method",
+    "name": "44cc0053-3404-458c-b724-affbf37c5dd9"
+  } ]
+}

@@ -1,0 +1,333 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Can you tell me  my “"
+    }, {
+      "text": "installment payment plan"
+    }, {
+      "text": "” amount?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me if there’s any “"
+    }, {
+      "text": "installment payment plan"
+    }, {
+      "text": "” amount on my account and when it’s due?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to confirm the “"
+    }, {
+      "text": "installment payment plan"
+    }, {
+      "text": "” amount I still owe for my plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you let me know my “"
+    }, {
+      "text": "installment payment plan"
+    }, {
+      "text": "” amount before I make a payment online?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me  my“"
+    }, {
+      "text": "deferred payment plan"
+    }, {
+      "text": "” amount?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me if there’s any “"
+    }, {
+      "text": "deferred payment plan"
+    }, {
+      "text": "” amount on my account and when it’s due?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to confirm the “"
+    }, {
+      "text": "deferred payment plan"
+    }, {
+      "text": "” amount I still owe for my plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you let me know my “"
+    }, {
+      "text": "deferred payment plan"
+    }, {
+      "text": "” amount before I make a payment online?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me "
+    }, {
+      "text": "how much I owe on my account right now?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me if there’s any "
+    }, {
+      "text": "overdue balance"
+    }, {
+      "text": " on my account and when it’s due?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to confirm the "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " I still owe for my plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you let me know my "
+    }, {
+      "text": "current balance"
+    }, {
+      "text": " before I make a payment online?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to see the "
+    }, {
+      "text": "balance due"
+    }, {
+      "text": ", including any "
+    }, {
+      "text": "late balance"
+    }, {
+      "text": " from "
+    }, {
+      "text": "the previous month"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you check my "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " for both my mobile and home services?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How much is remaining on my phone or internet bill "
+    }, {
+      "text": "right"
+    }, {
+      "text": " now?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to verify my account "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " and any "
+    }, {
+      "text": "late balance"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you show me the "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " details for my last billing cycle?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to find out how much I owe and the due date for my next payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you provide the "
+    }, {
+      "text": "current balance"
+    }, {
+      "text": " and total due for my wireless service?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling to check the "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " on my home phone account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How much is my last bill, and do I have any "
+    }, {
+      "text": "unpaid balance"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please confirm my remaining "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " before I make a payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to check my account "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " and next payment amount."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you give me an update on my "
+    }, {
+      "text": "balance"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What’s my "
+    }, {
+      "text": "current amount"
+    }, {
+      "text": " and due date?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Tell me the "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " left to pay on my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to verify how much I still owe on my mobile plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you show me the "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " for my phone service?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How much is my "
+    }, {
+      "text": "balance due"
+    }, {
+      "text": " "
+    }, {
+      "text": "this month"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just want to see my "
+    }, {
+      "text": "overdue balance"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please tell me the "
+    }, {
+      "text": "balance due"
+    }, {
+      "text": " for my next bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to check my account "
+    }, {
+      "text": "balance"
+    }, {
+      "text": " for "
+    }, {
+      "text": "this month"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

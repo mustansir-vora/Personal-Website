@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@583539784:1712748099418" name="FmstCollectPolicyOnly1" version="6.0.1">
+<subflow_call subflow_name="FmstCollectPolicyOnly" target="Element@31:1712662927774">
+<config>
+<input_data>
+<data name="POLICY_FOUND"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

@@ -1,0 +1,34 @@
+{
+  "name": "e8e865bd-e8f1-4539-a101-eba5d4d6403b",
+  "displayName": "TechSingleService_Security",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.hasHomeSecurityProfile = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "hasHomeSecurityProfile",
+        "value": false
+      }, {
+        "parameter": "invokedTSSFrom",
+        "value": "TechHomeSecurity"
+      } ]
+    },
+    "targetFlow": "Tech SSA And Outage",
+    "name": "2cfce2af-1881-47b7-ad13-fdcb6fdedaac"
+  }, {
+    "condition": "$session.params.hsTSFromOutageStatus = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "hsTSFromOutageStatus",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_Security",
+    "name": "d0995fd7-07dd-4e1b-b6be-866f06dcfc65"
+  } ]
+}

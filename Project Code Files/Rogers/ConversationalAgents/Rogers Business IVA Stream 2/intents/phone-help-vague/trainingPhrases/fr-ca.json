@@ -1,0 +1,121 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Mon service",
+      "auto": true
+    }, {
+      "text": " téléphonique a des problèmes.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour la configuration de la messagerie vocale.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne peux ni faire ni recevoir d’appels.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma ",
+      "auto": true
+    }, {
+      "text": "ligne téléphonique",
+      "auto": true
+    }, {
+      "text": " est en panne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de soutien pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " système téléphonique.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon",
+      "auto": true
+    }, {
+      "text": " téléphone d’",
+      "auto": true
+    }, {
+      "text": "affaires",
+      "auto": true
+    }, {
+      "text": " coupe les appels.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai des problèmes avec mes appels téléphoniques.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous réparer ",
+      "auto": true
+    }, {
+      "text": "mon service",
+      "auto": true
+    }, {
+      "text": " téléphonique?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma ligne d’",
+      "auto": true
+    }, {
+      "text": "affaires",
+      "auto": true
+    }, {
+      "text": " ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide avec ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone d’",
+      "auto": true
+    }, {
+      "text": "affaires",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "08afdb9e-7c8d-4e28-b097-3efc7b298b8e",
+  "displayName": "Check PTP Install Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "ptpInstallMenuCounter",
+      "value": "$sys.func.ADD($session.params.ptpInstallMenuCounter, 1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpInstallMenuCounter = 1 AND $session.params.ptpChangeDetails = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je ne suis pas en mesure de \r\nmodifier votre mode de \r\npaiement pour ce versement \r\nen ce moment. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm unable to change your payment method for this installment right now." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Change Details Retry",
+    "name": "d84d0b18-9a01-420e-8804-f30aefe2f613"
+  }, {
+    "condition": "$session.params.ptpInstallMenuCounter = 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J’éprouve encore des \r\ndifficultés. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm still having trouble." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "skipRecapPreamble",
+        "value": true
+      }, {
+        "parameter": "$session.params.ptpChangeDetails",
+        "value": false
+      }, {
+        "parameter": "$session.params.ptpConfirmation",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "844a57c7-0e88-4daf-95b3-e77d1faf9285"
+  } ]
+}

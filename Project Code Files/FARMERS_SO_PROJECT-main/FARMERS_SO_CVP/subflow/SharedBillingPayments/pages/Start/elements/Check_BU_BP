@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1936122838:1714727578753" name="Check_BU_BP" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.BillPayments_BU_Check</source>
+</config>
+</decision>

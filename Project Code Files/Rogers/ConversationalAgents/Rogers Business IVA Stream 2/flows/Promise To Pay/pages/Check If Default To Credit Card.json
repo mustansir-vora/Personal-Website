@@ -1,0 +1,42 @@
+{
+  "name": "60326baf-e5d8-400d-8fd4-ec055516bd3e",
+  "displayName": "Check If Default To Credit Card",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.api.response.ptp.currentBalance) \u003c= 0 AND $sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance) = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "CC"
+      } ]
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "6b13c805-f518-4e55-922d-4bb2c21d1761"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I can offer you our best option using a credit card, just for now. You can always change it later. With that in mind..." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Je peux vous proposer notre meilleure \r\noption par carte de crédit, pour l’instant. \r\nVous pourrez toujours changer plus tard. \r\nDans ce cas… " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "CC"
+      } ]
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "2528b4fb-94b1-4866-a448-058d52e8fb1f"
+  } ]
+}

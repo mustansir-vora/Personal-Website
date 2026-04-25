@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1064855345:1707818114124" name="SPT_HOST_005" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.AFNI_API</source>
+</config>
+</decision>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@810864185:1707816731593" name="KYCNP_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.KYCNP_MN_001_VALUE</source>
+</config>
+</decision>

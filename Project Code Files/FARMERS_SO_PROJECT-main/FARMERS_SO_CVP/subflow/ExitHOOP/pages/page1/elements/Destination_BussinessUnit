@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@749065792:1709017824853" name="Destination_BussinessUnit" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Destination_BussinessUnit" default_exit_state="Others">
+        <exit_state name="ForemostCustomer" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_BU" />
+                </data>
+                <constant_string value="ForemostCustomer" />
+            </string>
+        </exit_state>
+        <exit_state name="OneSpecility" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_BU" />
+                </data>
+                <constant_string value="OneSpecility" />
+            </string>
+        </exit_state>
+        <exit_state name="ForemostAARP" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_BU" />
+                </data>
+                <constant_string value="ForemostAARP" />
+            </string>
+        </exit_state>
+        <exit_state name="ForemostAgent" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_BU" />
+                </data>
+                <constant_string value="ForemostAgent" />
+            </string>
+        </exit_state>
+        <exit_state name="BristolWestProducer" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_BU" />
+                </data>
+                <constant_string value="BristolWestProducer" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,68 @@
+{
+  "name": "fa9d7d81-3926-430a-9e80-d3b8c95cd636",
+  "displayName": "Check From Single Or Multiple",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.promiseAmount"
+      } ]
+    },
+    "name": "0574898d-79de-4c3d-bb1b-f5536a408a39"
+  }, {
+    "condition": "$session.params.installmentInFocus = first",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.amount1"
+      } ]
+    },
+    "name": "6301d857-7910-444c-9533-96c3b8e793f0"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-singleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "Go To Make A Payment",
+    "name": "dcf583f5-3ea7-4a9b-8681-a451e48ca71a"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "Go To Make A Payment",
+    "name": "151271e7-3082-4d00-b597-f86edd466f02"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "active-updatePtp"
+      } ]
+    },
+    "targetPage": "Go To Make A Payment",
+    "name": "41d6da03-32c8-44fb-a80b-fba4c663665c"
+  } ]
+}

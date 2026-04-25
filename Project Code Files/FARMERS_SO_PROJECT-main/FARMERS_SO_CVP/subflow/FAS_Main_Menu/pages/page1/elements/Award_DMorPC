@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@478517972:1743443077625" name="Award_DMorPC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Award_DMorPC" default_exit_state="Others">
+        <exit_state name="PC" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_AGENT_SEGMENTATION" />
+                </data>
+                <constant_string value="PC" />
+            </string>
+        </exit_state>
+        <exit_state name="DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_AGENT_SEGMENTATION" />
+                </data>
+                <constant_string value="DM" />
+            </string>
+        </exit_state>
+        <exit_state name="PRIME" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_AGENT_SEGMENTATION" />
+                </data>
+                <constant_string value="EA PRIME" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

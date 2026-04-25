@@ -1,0 +1,40 @@
+{
+  "name": "863b72bd-44cd-43e5-ab41-fb9515e1e6fc",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone d’affaires a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je ne sais pas"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "D'accord Continuons\nPour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie d’affaires. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportbusinessPhone",
+      "completedSSName": "passive-techSupportbusinessPhone",
+      "completedSelfServe": "passive-techSupportbusinessPhone",
+      "hasNoBPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportbusinessPhone",
+      "reportingVar_completedSSName": "passive-techSupportbusinessPhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "13020-Have-SIM-dont know",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 252,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

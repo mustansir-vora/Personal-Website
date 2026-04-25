@@ -1,0 +1,133 @@
+{
+  "name": "76cf8750-92c6-4407-ad0b-cab3728ae548",
+  "displayName": "Confirm Payment",
+  "form": {
+    "parameters": [ {
+      "displayName": "userConfirmPaymentConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Are you ready to make the payment of\n$session.params.paymentAmount with the $session.params.cardType ending in $session.params.cardCVV now?\nYou can say 'yes' or press 1. Or say 'no' or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Êtes-vous prêt à effectuer le paiement de $session.params.paymentAmount avec la $session.params.cardType se terminant par $session.params.last4DigitsCC maintenant ? Vous pouvez dire « oui » ou appuyer sur le 1. Ou dire « non » ou appuyer sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "a2c64fd2-922c-4532-a725-92d7a7b31114"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Are you ready to make the payment of\n$session.params.paymentAmount with the $session.params.cardType ending in $session.params.cardCVV now?\nYou can say 'yes' or press 1. Or say 'no' or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Pour effectuer le paiement de $session.params.paymentAmount avec la $session.params.cardType se terminant par $session.params.last4DigitsCC, appuyez sur le 1. Pour refuser, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "f44e8430-b03a-4b7b-a15e-72502ddd0d55"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To make the payment of $session.params.paymentAmount\nwith the $session.params.cardType ending in $session.params.cardCVV, press 1. To delcine, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Êtes-vous prêt à effectuer le paiement de $session.params.paymentAmount avec la $session.params.cardType se terminant par $session.params.last4DigitsCC maintenant ? Vous pouvez dire « oui » ou appuyer sur le 1. Ou dire « non » ou appuyer sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "3647538a-5468-4c64-bdf6-924ef8bab372"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To make the payment of $session.params.paymentAmount\nwith the $session.params.cardType ending in $session.params.cardCVV, press 1. To delcine, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Pour effectuer le paiement de $session.params.paymentAmount avec la $session.params.cardType se terminant par $session.params.last4DigitsCC, appuyez sur le 1. Pour refuser, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "ac53cc5e-5c0b-4fcc-90a9-2d2c5f398bbb"
+        }, {
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "transferType",
+              "value": "systemError"
+            }, {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "d8430fe8-91b4-47ed-b140-8a19bfa5562a"
+        }, {
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "transferType",
+              "value": "systemError"
+            }, {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "f004531d-58d4-43af-908a-2c0e2d2ba747"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Are you ready to make the payment of\n$session.params.paymentAmount with the $session.params.api.response.consumerSemafone.readSecureData.cardScheme expiring on $session.params.api.checkCCExpirationDate.ccExpirationDate now?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Êtes-vous prêt à effectuer le paiement de $session.params.paymentAmount avec la $session.params.api.response.consumerSemafone.readSecureData.cardScheme se terminant par $session.params.api.checkCCExpirationDate.ccExpirationDate  maintenant ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.userConfirmPaymentConfirmation = yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Process Payment",
+    "name": "2bd9113b-4d17-4c63-8435-df7e14adee3c"
+  }, {
+    "condition": "$session.params.userConfirmPaymentConfirmation = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Change Amount Or Card",
+    "name": "4e21882c-5d11-44b9-b5e0-c4cafecaf324"
+  } ]
+}

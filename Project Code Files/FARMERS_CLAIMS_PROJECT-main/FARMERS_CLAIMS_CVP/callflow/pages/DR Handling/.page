@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1845088145:1741075921236" name="DR Handling" version="6.0.1">
+<element height="55" id="Element@1403600783:1741075926548" name="SEMANTIC_HT" type="Hotevent" width="190" x="267" y="118">
+<exit_states>
+<exit_state name="goto" target="Element@812625935:1741239471596"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1073814383:1741075926548" name="BADFETCH_404_HT" type="Hotevent" width="202" x="178" y="200">
+<exit_states>
+<exit_state name="goto" target="Element@812625935:1741239471596"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1139303846:1741075926548" name="FAILURE_ASR_HT" type="Hotevent" width="190" x="680" y="115">
+<exit_states>
+<exit_state name="goto" target="Element@812625935:1741239471596"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2072586788:1741075926548" name="CONNECTION_NO_RESOURCE_HT" type="Hotevent" width="319" x="808" y="304">
+<exit_states>
+<exit_state name="goto" target="Element@812625935:1741239471596"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1982361387:1741075926548" name="UNAVAILABLE_ASR_HT" type="Hotevent" width="230" x="756" y="196">
+<exit_states>
+<exit_state name="goto" target="Element@812625935:1741239471596"/>
+</exit_states>
+</element>
+<element height="55" id="Element@243661490:1741075926548" name="UNSUPPORTED_HT" type="Hotevent" width="201" x="353" y="42">
+<exit_states>
+<exit_state name="goto" target="Element@812625935:1741239471596"/>
+</exit_states>
+</element>
+<element height="55" id="Element@804744955:1741075926548" name="BADFETCH_HT" type="Hotevent" width="164" x="158" y="302">
+<exit_states>
+<exit_state name="goto" target="Element@812625935:1741239471596"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1147590601:1741075926548" name="NO_RESOURCE_HT" type="Hotevent" width="200" x="587" y="43">
+<exit_states>
+<exit_state name="goto" target="Element@812625935:1741239471596"/>
+</exit_states>
+</element>
+<element height="50" id="Element@812625935:1741239471596" name="Error_Entry" type="Page Connector" width="121" x="503" y="305">
+<page_connector target="Element@1747659930:1741239427224">Error_Entry<config/>
+</page_connector>
+</element>
+</page>

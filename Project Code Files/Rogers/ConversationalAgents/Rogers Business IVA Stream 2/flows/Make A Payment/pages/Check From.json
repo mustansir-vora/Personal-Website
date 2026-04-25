@@ -1,0 +1,39 @@
+{
+  "name": "0af6f591-5f40-4d2a-b2b6-1873c775ef4c",
+  "displayName": "Check From",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromProcessPayment = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "CC Operations",
+    "name": "da15bcaf-20ac-4d28-8a01-1fc6c84f7221"
+  }, {
+    "condition": "$session.params.fromAR = true OR $session.params.fromCancelledAccount = true OR $session.params.fromPTP = true OR $session.params.fromInterceptBalance = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Payment",
+    "name": "6749e94c-e064-4856-b4ad-8392b22af9c5"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Billing Profile",
+    "name": "4679252f-4f72-463f-9aea-ad4a5b231f4d"
+  }, {
+    "condition": "$session.params.skipCC = true OR $session.params.validCCOperation = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Process Payment",
+    "name": "8db8781d-02c4-4854-9c44-9efcadb485b2"
+  } ]
+}

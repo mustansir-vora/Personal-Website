@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@571284989:1711345653003" name="Farmers_SLS" version="6.0.1">
+<subflow_call subflow_name="FarmersSales" target="Element@31:1712910065655">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

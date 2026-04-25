@@ -1,0 +1,24 @@
+{
+  "name": "ac594efa-ff1a-4cd3-a5a4-ca3fb35aa4ac",
+  "displayName": "Goto Transtion Routing",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": null
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "9b3fe87b-a3e5-4220-852c-36bd4dae1722"
+  } ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "84f8d3b0-c425-4352-9cd6-e799ae547e5a",
+  "displayName": "Process Payment Code",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.paymentManagement.paymentConfirmation.paymentCompleted = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "completedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"active-makeAPayment\")"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "fromProcessPayment",
+        "value": false
+      }, {
+        "parameter": "skipCardCollection",
+        "value": true
+      }, {
+        "parameter": "interactionLabel",
+        "value": "Make Payment"
+      }, {
+        "parameter": "interactionNotes",
+        "value": "IVA - Make Payment"
+      } ]
+    },
+    "targetPage": "Reusable – Create Interaction PLACEHOLDER",
+    "name": "5d752bf7-c645-4fae-8171-7351a0801eba"
+  }, {
+    "condition": "$session.params.retriedAfterCardNoCardDeclined = true AND $session.params.api.paymentManagement.paymentConfirmation.code != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": null
+      } ]
+    },
+    "targetPage": "Cant Continue Payment",
+    "name": "0ca2dff2-0516-4a60-bb33-91f016d974c4"
+  }, {
+    "condition": "$session.params.api.paymentManagement.paymentConfirmation.code = 10645 AND $session.params.retriedAfterCardCardDeclined = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cant Continue Payment",
+    "name": "c60b130b-42ff-44f0-8d42-676451e41e58"
+  }, {
+    "condition": "$session.params.api.paymentManagement.paymentConfirmation.code = 10645",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retriedAfterCardCardDeclined",
+        "value": true
+      } ]
+    },
+    "targetPage": "First Attempt Card Decline",
+    "name": "773211f7-43da-405d-b196-78521c6c967a"
+  }, {
+    "condition": "$session.params.api.paymentManagement.paymentConfirmation.code != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retriedAfterCardNoCardDeclined",
+        "value": true
+      } ]
+    },
+    "targetPage": "First Attempt No Card Decline",
+    "name": "f77dc421-27b2-47fa-8eda-2683a182e223"
+  } ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "40776024-003d-465c-9ecb-571da3e5be2e",
+  "displayName": "Check Second Install Update Eligibility",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.ptpUpdateEligibilityInd = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpInstallMenuCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "PTP Update Multiple Options 2",
+    "name": "7289af2e-24c7-4898-8de8-2dad205298e8"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il s’agissait du dernier \r\nversement de la liste." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "That was the last installment on the list. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "c91a2206-94d4-4227-8dae-513d1e62d654"
+  } ]
+}

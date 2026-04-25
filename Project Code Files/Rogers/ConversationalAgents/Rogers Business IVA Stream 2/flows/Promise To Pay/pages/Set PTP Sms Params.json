@@ -1,0 +1,31 @@
+{
+  "name": "b7822220-4f14-41b6-a270-bbb4a6046c61",
+  "displayName": "Set PTP Sms Params",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfInstalls = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsId",
+        "value": "updateOneInstallmentPTP"
+      } ]
+    },
+    "targetPage": "Call SMS",
+    "name": "7532ee0e-b7f1-4a6d-8c93-f318d8104e73"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsId",
+        "value": "updateTwoInstallmentPTP"
+      } ]
+    },
+    "targetPage": "Call SMS",
+    "name": "63c3f3e2-1cf7-4c12-af47-b95f9b01c493"
+  } ]
+}

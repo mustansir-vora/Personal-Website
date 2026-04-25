@@ -1,0 +1,7 @@
+{
+  "name": "3a741e44-8582-4ad1-a016-b3c2d682b8c3",
+  "displayName": "Inquiry-manage-mobility",
+  "priority": 500000,
+  "description": "Handles calls specific to manage mobility or wireless devices",
+  "numTrainingPhrases": 14
+}

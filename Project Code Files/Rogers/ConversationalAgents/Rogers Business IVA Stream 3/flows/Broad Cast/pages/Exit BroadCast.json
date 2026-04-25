@@ -1,0 +1,187 @@
+{
+  "name": "195e32c7-2ed0-4f62-a7ca-c610abcb962e",
+  "displayName": "Exit BroadCast",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId1 AND $session.params.BC1 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadcastId",
+        "value": "$session.params.broadcastId2"
+      }, {
+        "parameter": "BC1",
+        "value": false
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "1e34a9f9-1884-417d-bb69-88d2ab107709"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId2 AND $session.params.BC2 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC2",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Pre-NLU",
+    "name": "87f683da-ed42-4364-a46b-72e5a2d12fbc"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId3 AND $session.params.BC3 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "CancellAccountBroadCast",
+        "value": true
+      }, {
+        "parameter": "BC3",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Voluntary \u0026 Predictive",
+    "name": "4484ff99-a7c8-4d81-98b5-38549e598701"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId5 AND $session.params.BC5 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransferBroadCast",
+        "value": true
+      }, {
+        "parameter": "BC5",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "741f66d8-3a77-4faf-b43e-f436aae2071b"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId4 AND $session.params.BC4 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "PredictiveBroadCast",
+        "value": true
+      }, {
+        "parameter": "BC4",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Voluntary \u0026 Predictive",
+    "name": "58e45035-dda8-41f6-af69-c4e1ac322e09"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId6 AND $session.params.BC6 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkTechMainTS",
+        "value": true
+      }, {
+        "parameter": "BC6",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "7eaa0ec9-769f-45dc-b3a7-cf59ccb43cc2"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId7 AND $session.params.BC7 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkTvTS",
+        "value": true
+      }, {
+        "parameter": "BC7",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "1d3197ce-aee2-4c31-8d48-b61273273690"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId8 AND $session.params.BC8 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkIntTS",
+        "value": true
+      }, {
+        "parameter": "BC8",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "62a56bf3-4117-463a-8ab2-6962bb38f355"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId9 AND $session.params.BC9 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkSecMainTS",
+        "value": true
+      }, {
+        "parameter": "BC9",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "349bfc40-064c-4497-ab0d-c0f8d867fd5f"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId10 AND $session.params.BC10 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkBusPhnTS",
+        "value": true
+      }, {
+        "parameter": "BC10",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "e16fee07-ec17-41b4-a503-2f319615673e"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId11 AND $session.params.BC11 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkWirTS",
+        "value": true
+      }, {
+        "parameter": "BC11",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "6052a938-e49c-4f5e-9288-57f91fab14ad"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId12 AND $session.params.BC12 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkHomePhnTS",
+        "value": true
+      }, {
+        "parameter": "BC12",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "2db98a03-aee4-4ca3-8f3d-6173c376d506"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId13 AND $session.params.BC13 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkOutStatus",
+        "value": true
+      }, {
+        "parameter": "BC13",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "30151288-2358-450f-973a-afb288e35765"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId14 AND $session.params.BC14 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC14",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "7d933467-96da-4967-9070-6d1ff6195f00"
+  } ]
+}

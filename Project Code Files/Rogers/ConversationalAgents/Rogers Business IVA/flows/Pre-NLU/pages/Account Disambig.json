@@ -1,0 +1,162 @@
+{
+  "name": "2aff9d6a-b163-43f3-a074-844301888ae5",
+  "displayName": "Account Disambig",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "StdErrorCount",
+      "value": 0
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.numberOfBillingAccounts = 1",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "\u003cspeak\u003e" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003cbreak time=\"300ms\"/\u003e" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "J’ai trouvé un compte lié au numéro de téléphone à partir duquel vous appelez." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003c/speak\u003e" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003cspeak\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003cbreak time=\"300ms\"/\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I have found an account linked to the phone number you are calling from." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003c/speak\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "\u003cspeak\u003e" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003cbreak time=\"300ms\"/\u003e" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "J’ai trouvé plusieurs comptes liés au numéro de téléphone à partir duquel vous appelez." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003c/speak\u003e" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003cspeak\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003cbreak time=\"300ms\"/\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I have found multiple accounts linked to the phone number you are calling from." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003c/speak\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfBillingAccounts = 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "One Billing Account",
+    "name": "0015a40c-6485-470a-94ab-aead8bec44cf"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts = 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Two Billing Account",
+    "name": "c1f6e960-0115-4e92-a5ae-b978c6abb0b5"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts = 3",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Three Billing Account",
+    "name": "ffe062dc-13a5-40b9-80e1-518bd73ca694"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts = 4",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Four Billing Account",
+    "name": "23e1b8eb-80ec-4b8b-a4c7-284e94beac86"
+  } ]
+}

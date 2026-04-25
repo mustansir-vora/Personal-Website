@@ -1,0 +1,143 @@
+{
+  "name": "180e1873-7291-4ab8-a1a2-b8330d2f54d9",
+  "displayName": "Change One Install",
+  "form": {
+    "parameters": [ {
+      "displayName": "changeOneInstallSelection",
+      "required": true,
+      "entityType": "@e_PTPChangeEntity",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Que souhaitez-vous faire ? Dites « modifier le \r\nmontant » ou appuyez sur le 1, « modifier la date » ou appuyez sur le 2, ou \r\n« modifier le mode de paiement » ou appuyez sur le 3." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Which would you like to do? Say 'change the amount' or press 1. 'change the date' or press 2. or 'change the payment method'', or press 3." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6b80d6df-b2b3-4335-a4fd-8b7bfb9dd11d"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Que souhaitez-vous faire ? Dites « modifier le \r\nmontant » ou appuyez sur le 1, « modifier la date » ou appuyez sur le 2, ou \r\n« modifier le mode de paiement » ou appuyez sur le 3." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Which would you like to do? Say 'change the amount' or press 1. 'change the date' or press 2. or 'change the payment method'', or press 3." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "c339d53b-435b-488e-bc26-dcd3ed316d78"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous souhaitez modifier le montant du \npaiement, appuyez sur le 1. Pour modifier la date, appuyez sur le 2. Ou \npour modifier le mode de paiement, appuyez sur le 3. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you'd like to change the payment amount, press 1. To change the date, press 2. Or, to change how you pay, press 3. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "176835ca-50fe-412a-b6c3-7281e0abc6c3"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous souhaitez modifier le montant du \r\npaiement, appuyez sur le 1. Pour modifier la date, appuyez sur le 2. Ou \r\npour modifier le mode de paiement, appuyez sur le 3. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you'd like to change the payment amount, press 1. To change the date, press 2. Or, to change how you pay, press 3. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "b7b5fa96-e0a5-4672-9e93-0fc450caa40a"
+        }, {
+          "targetPage": "PTP Fail",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "a62d9bc5-9b63-479c-bc54-84ee1b08b538"
+        }, {
+          "targetPage": "PTP Fail",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "01dd1e8b-2510-4c71-b250-a5b2c1c36a8f"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Que souhaitez-vous modifier ? Le \r\nmontant, la date ou le mode de paiement ? " ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Alright. What would you like to change? The payment amount, date, or method?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "change-ptp-date",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": "$sys.func.FORMAT_DATE($session.params.changePTPDate, \"yyyy-MM-dd\")"
+      } ]
+    },
+    "targetPage": "Return From Change Details",
+    "name": "6fef13ce-78d9-4521-9a31-a67cc635f554"
+  }, {
+    "intent": "change-ptp-amount",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpChangeDetails",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Validate Amount",
+    "name": "fab1912e-5f77-45a5-b26e-ed731ebc4361"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "changeEntity",
+        "value": "$session.params.changeOneInstallSelection"
+      } ]
+    },
+    "targetPage": "Check Change Entity",
+    "name": "b2d14b02-c1f7-4398-9046-2b4f2207908c"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

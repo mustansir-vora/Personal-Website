@@ -1,0 +1,56 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Our guests are reporting ",
+      "auto": true
+    }, {
+      "text": "black",
+      "auto": true
+    }, {
+      "text": " screens on  ",
+      "auto": true
+    }, {
+      "text": "tv",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our guests are reporting missing subscribed channels or incorrect provisioning.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our guests can’t access the PPV event they paid for.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "and this is affecting multiple rooms. We need this resolved quickly because guests are checking in.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling from my hotel. Our guest rooms are showing ‘",
+      "auto": true
+    }, {
+      "text": "No",
+      "auto": true
+    }, {
+      "text": " Signal’ on the TVs",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

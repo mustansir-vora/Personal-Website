@@ -1,0 +1,151 @@
+{
+  "name": "34fd9938-5cb8-4f77-adee-5442a08ad299",
+  "displayName": "DMBG - Bus-Main-Ent-T2",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Soutien technique pour Voix Avantage, anciennement Rogers Unison — dire « Voix avantage ».\r\nAppareils sans fil portatifs incluant les téléphones intelligents — dire « appareil ».\r\nMicrosoft Office 365 et la mobilité gérée comme BlackBerry, Microsoft Intune et AirWatch — dire « office 365 ».\r\nInternet des objets, services de gros et APN personnalisé — dire « internet des objets »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "For Technical Support of advantage voice, formerly Rogers Unison say \"advantage voice\",\nFor Wireless handheld devices including smartphone, say \"smart phone\",\nFor Microsoft Office 365, managed mobility such as BlackBerry, Microsoft Intune, and Airwatch. say \"office 365\",\nFor internet of Things wholesale and custom APN. say \"internet of things\"." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - Bus-Main-Ent-T2 - Advantage Voice",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-T2-advantage-voice"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "fd454efd-facf-4b14-ada0-6b660cb9f787"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-T2 - Smart Phone",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-T2-smartphone"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "5794ce41-b889-453a-8e09-6683ec12d5b2"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-T2 - Office 365",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-T2-O365"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "be02ec0e-692f-42a1-a095-8ff0f2216d50"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-T2 - IOT",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-T2-IOT"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "9d485642-75c7-46a2-b2a0-2ee4469840cd"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "df455b5d-6806-4d42-9420-70a3119e30ae"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "c64ce912-4e7a-424d-ba27-3b81ed07ff98"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

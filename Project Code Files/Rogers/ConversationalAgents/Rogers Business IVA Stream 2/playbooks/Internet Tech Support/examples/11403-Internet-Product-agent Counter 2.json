@@ -1,0 +1,54 @@
+{
+  "name": "b6364841-96d1-4154-9fdb-378f409a7f96",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Is there an antenna fixed to the outside of your business location?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "no"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Do you access the internet using a SIM or a mobile phone?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to talk with representative"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "1",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "savedIntent": "internet-support"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInput": "agent"
+    }
+  },
+  "displayName": "11403-Internet-Product-agent Counter 2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 239,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

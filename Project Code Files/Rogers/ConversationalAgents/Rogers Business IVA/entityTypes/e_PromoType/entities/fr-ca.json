@@ -1,0 +1,31 @@
+{
+  "entities": [ {
+    "value": "black_friday",
+    "synonyms": [ "black friday", "évènement de Vendredi fou", "offre Vendredi fou", "vente de Vendredi fou" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "cyber_monday",
+    "synonyms": [ "cyber monday", "évènement Cyberlundi ", "offres Cyberlundi" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "holiday_deals",
+    "synonyms": [ "événement Le grand déballage", "événements de fin d'année", "Holiday deals", "HoliDeals", "L'événement Emballant", "Offres spéciales des fêtes" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "rogers_advertised_offers",
+    "synonyms": [ "publicité pour des offres Rogers", "rogers advertised offers" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "boxing_day",
+    "synonyms": [ "boxing day", "Les soldes de l'après-Noël ", "vente le lendemain de Noël" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "boxing_week",
+    "synonyms": [ "boxing week", "Les soldes de semaine de l'après-Noël ", "vente de semaine le lendemain de Noël" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "cyber_week",
+    "synonyms": [ "cyber week", "Cyberlundi", "vente de Cybersemaine" ],
+    "languageCode": "fr-ca"
+  } ]
+}

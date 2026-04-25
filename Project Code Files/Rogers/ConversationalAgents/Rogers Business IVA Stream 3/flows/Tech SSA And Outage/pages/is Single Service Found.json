@@ -1,0 +1,50 @@
+{
+  "name": "cb526ac3-32bf-40e5-b304-fa95f8c45bb2",
+  "displayName": "is Single Service Found",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "SACount",
+      "value": "$sys.func.MINUS($sys.func.COUNT($session.params.postalCodes), $sys.func.COUNT($sys.func.REMOVE($session.params.postalCodes, $session.params.postalCode)))"
+    }, {
+      "parameter": "index_Postal",
+      "value": "$sys.func.MATCH($session.params.postalCodes, $session.params.postalCode)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.SACount = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": "SA"
+      }, {
+        "parameter": "samKey",
+        "value": "$sys.func.GET($session.params.samKeys,$session.params.index_Postal)"
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "5271640e-081f-489e-b506-08194f200184"
+  }, {
+    "condition": "$session.params.SACount \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": "MA"
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "764e8c2f-40ba-47d3-b2fc-b57f95fb3847"
+  }, {
+    "condition": "$session.params.SACount = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": "MA"
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "6fe1900a-d48f-48a4-b8af-e4f8171ec4a3"
+  } ]
+}

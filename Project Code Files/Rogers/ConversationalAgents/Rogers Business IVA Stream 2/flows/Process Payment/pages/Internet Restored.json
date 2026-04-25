@@ -1,0 +1,28 @@
+{
+  "name": "330ee081-a42b-4ff9-ac1e-d4799f441496",
+  "displayName": "Internet Restored",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Votre service Internet sera rétabli dans un délai de 30 minutes." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Your internet service will be restored within 30 minutes." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check From",
+    "name": "6fcdf186-cbda-43ed-9ab6-df05cdd85b2a"
+  } ]
+}

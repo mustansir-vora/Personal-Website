@@ -1,0 +1,41 @@
+{
+  "name": "b836fa2d-c354-49ee-b6b8-e5ff329f118b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Internet,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Advantage Voice"
+    }
+  }, {
+    "agentUtterance": {
+      "text": " Please say Internet,Tv,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "computer"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Internet,Tv, Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "savedIntent": "technical-support-vague"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-NoMatch2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 175,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

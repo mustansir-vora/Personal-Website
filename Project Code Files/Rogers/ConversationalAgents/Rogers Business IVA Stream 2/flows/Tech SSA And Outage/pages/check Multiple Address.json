@@ -1,0 +1,34 @@
+{
+  "name": "2507df0b-db2e-4913-b946-5756e8a7cef6",
+  "displayName": "check Multiple Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.isMultipleAddress = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "check Unique Postal Code",
+    "name": "ff0f69bc-b3f9-4bc6-8292-1b7e25b4d03e"
+  }, {
+    "condition": "$session.params.isMultipleAddress != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": "SA"
+      }, {
+        "parameter": "samKey",
+        "value": "$session.params.samKeys[0]"
+      }, {
+        "parameter": "postalCode",
+        "value": "$session.params.postalCodes[0]"
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "bdebafbc-7822-41db-954e-becc03ca7b34"
+  } ]
+}

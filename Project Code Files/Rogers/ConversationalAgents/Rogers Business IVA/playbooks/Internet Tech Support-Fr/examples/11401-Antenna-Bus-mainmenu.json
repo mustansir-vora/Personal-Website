@@ -1,0 +1,36 @@
+{
+  "name": "a546cff9-34b6-4b13-82ff-aeeb64107640",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Y a-t-il une antenne fixée à l’extérieur de votre lieu d’affaires ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux retourner au menu principal"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "attemptedSSName": "",
+      "completedSSName": "",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the values are set exit the playbook",
+    "actionParameters": {
+      "userInput": "mainmenu"
+    }
+  },
+  "displayName": "11401-Antenna-Bus-mainmenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 171,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

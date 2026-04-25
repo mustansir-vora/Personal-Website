@@ -1,0 +1,31 @@
+{
+  "name": "7d7af65a-e164-405b-97cd-ab334b3a24d4",
+  "displayName": "Return From Validate PTP Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeDetails = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpChangeDetails",
+        "value": false
+      } ]
+    },
+    "targetPage": "Return From Change Details",
+    "name": "6408949c-80e7-46ae-b487-58ce23ea3748"
+  }, {
+    "condition": "$session.params.updateMultipleOptions1 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": false
+      } ]
+    },
+    "targetPage": "Return From PTP Update Multiple Options 1",
+    "name": "83d1a32f-af58-4939-b2ad-f6e5e4a34a34"
+  } ]
+}

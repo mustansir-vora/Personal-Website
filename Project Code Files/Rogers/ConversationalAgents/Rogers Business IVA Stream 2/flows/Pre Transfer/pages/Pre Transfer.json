@@ -1,0 +1,21 @@
+{
+  "name": "84dacde1-4194-4792-a704-1964dfbcc938",
+  "displayName": "Pre Transfer",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId5"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "085d4632-b895-4f9b-bf32-54fad326e287"
+  } ]
+}

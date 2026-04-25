@@ -1,0 +1,34 @@
+{
+  "name": "e7fd8034-c8af-4236-a0fe-7cb115ea369a",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+      "text": "2"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Internet",
+      "savedIntent": "internet-support"
+    }
+  },
+  "displayName": "Consumer- Value",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 154,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

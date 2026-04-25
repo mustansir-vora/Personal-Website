@@ -1,0 +1,157 @@
+{
+  "name": "0fac732f-df60-4a9b-adcc-a16d30010959",
+  "displayName": "SMS Confirm Phone Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.smsConfirmPhoneNumberScript  ,Please say \"yes\" or \"no\"" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.smsConfirmPhoneNumberScript ,Veuillez répondre « oui » ou « non »" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that.  $session.params.smsConfirmPhoneNumberScript , please say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai pas entendu. $session.params.smsConfirmPhoneNumberScript ,Veuillez répondre par oui ou par non." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that.  $session.params.smsConfirmPhoneNumberScript , please say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, j'ai pas compris. $session.params.smsConfirmPhoneNumberScript ,Veuillez répondre par oui ou par non." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i still couldn't hear that. $session.params.smsConfirmPhoneNumberScript ,Please Say yes or press 1,Otherwise say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Désolé, je n'ai toujours pas entendu. $session.params.smsConfirmPhoneNumberScript ,S'il vous plaît, dites oui ou appuyez sur 1, sinon dites non ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i still didn't get that. $session.params.smsConfirmPhoneNumberScript ,Please Say yes or press 1,Otherwise say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai toujours pas compris. $session.params.smsConfirmPhoneNumberScript ,Veuillez répondre oui ou appuyer sur 1, sinon répondez non ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "YesOrNoMn-Yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Send SMS",
+    "name": "f3118aad-76b7-464f-b4fb-2d255d1707f0"
+  }, {
+    "intent": "YesOrNoMn-No",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Reusable Phone Number",
+    "name": "5a35cb79-5c38-485c-aba2-13c09538d115"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Reusable Phone Number",
+    "name": "06d3bfdb-c5bc-4d8b-94af-9081df0bc6aa"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "90148780-1afe-480f-a4ec-02ee25a259a8"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "0b81efad-27f5-4881-b7ea-fcaf38bbdedc"
+  } ]
+}

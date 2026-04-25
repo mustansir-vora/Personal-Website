@@ -1,0 +1,52 @@
+{
+  "name": "eff25704-ce93-4f67-9df9-7d8c5e886c25",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your business phone equipment. Please ensure you're calling from a different phone than the one you need help with."
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfPhone": "1",
+      "productLabelsMixEn": "Home Phone,Wireless Business Phone,Home Security,Mobile"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportbusinessPhone",
+      "completedSSName": "passive-techSupportbusinessPhone",
+      "noWBPhone": "false",
+      "reportingVar_attemptedSSName": "passive-techSupportbusinessPhone",
+      "reportingVar_completedSSName": "passive-techSupportbusinessPhone",
+      "savedIntent": "wireless-support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220002283"
+      }
+    }
+  },
+  "displayName": "CustomerIdentified-yes-WBP",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 305,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

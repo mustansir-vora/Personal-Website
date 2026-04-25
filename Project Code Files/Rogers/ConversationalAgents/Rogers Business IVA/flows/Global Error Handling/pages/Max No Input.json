@@ -1,0 +1,121 @@
+{
+  "name": "a90591e3-3a6e-4e53-b533-b23b72481d29",
+  "displayName": "Max No Input",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Êtes-vous toujours là ? Dites « oui » ou appuyez sur 1 maintenant." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Are you still there? Say yes, or press 1 now. " ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "MaxNoInputMn-Yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Revenons au menu principal et essayons de nouveau." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ " Let's go back to the main menu and try again. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "2fbce0e5-ac6b-4e1a-aff3-b3820b58dbc5"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "4d59612a-4927-4bea-a562-673508ed21e5"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "d5654cb7-f2f6-41fc-93bd-8f40302eec35"
+  }, {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": "$sys.func.ADD($session.params.mainMenuRequestCounter,1)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "7950413e-ee3d-4450-9149-26ea9926aed8"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "caea6340-04ba-4ac1-b0c8-3f7173f3873d"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "End Call",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je ne vous entends pas. Si vous avez besoin d’aide, veuillez nous rappeler… ou visiter rogers.com/business." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I didn't hear from you. If you need help, please call us back during our regular business hours or visit online at Rogers.com/business." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "4c993ac0-4959-4819-b49b-9bdf48733502"
+  }, {
+    "targetFlow": "NLU",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Revenons au menu principal et essayons de nouveau." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ " Let's go back to the main menu and try again. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "name": "db54c574-936d-45d8-b71f-e50f0dd099a3"
+  } ]
+}

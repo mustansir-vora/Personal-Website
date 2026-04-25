@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2093517468:1707108577347" name="Start" version="6.0.1">
+<element height="55" id="Element@31:1707108577347" name="SharedIVRtoText" type="Subflow Start" width="179" x="21" y="-111">
+<exit_states>
+<exit_state name="next" target="Element@1155939865:1730827949950"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1917189921:1751910620924"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1239562837:1730827949950" name="SET_RETURN_VALUE_02" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="228" x="-107" y="469">
+<exit_states>
+<exit_state name="done" target="Element@1443322008:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@315337750:1730827949950" name="Transfer" type="Subflow Call" width="111" x="856" y="612">
+<subflow_call subflow_name="Transfer" target="Element@31:1712417311480">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@743683911:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@751774884:1730827949950" name="SET_API_NAME1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="326" y="476">
+<exit_states>
+<exit_state name="done" target="Element@39165234:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1794906259:1730827949950" name="Subflow Return_01" type="Subflow Return" width="198" x="52" y="236"/>
+<element height="55" id="Element@1975404134:1730827949950" name="IVRTT_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="159" x="-48" y="592">
+<exit_states>
+<exit_state name="done" target="Element@1239562837:1730827949950">
+<bendpoint>
+<dim1 x="-16" y="-65"/>
+<dim2 x="23" y="79"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@987428407:1730827949950" name="IVRTT_PA_002" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="159" x="337" y="603">
+<exit_states>
+<exit_state name="done" target="Element@892113256:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@892113256:1730827949950" name="Disc1" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="93" x="544" y="610">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@713189096:1730827949950" name="IVRTT_HOST_001" type="Decision" width="184" x="638" y="149">
+<exit_states>
+<exit_state name="SU" target="Element@530576675:1730827949950"/>
+<exit_state name="ER" target="Element@1131337100:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1191764791:1730827949950" name="IVRTT_MN_001_VALUE" type="Decision" width="225" x="566" y="478">
+<exit_states>
+<exit_state name="YES" target="Element@751774884:1730827949950"/>
+<exit_state name="NO" target="Element@1131337100:1730827949950"/>
+<exit_state name="NOINPUT" target="Element@743683911:1730827949950"/>
+<exit_state name="NOMATCH" target="Element@315337750:1730827949950"/>
+<exit_state name="ER" target="Element@315337750:1730827949950">
+<bendpoint>
+<dim1 x="184" y="50"/>
+<dim2 x="-49" y="-84"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@690864112:1730827949950" name="IVRTT_HOST_002" type="Decision" width="184" x="131" y="599">
+<exit_states>
+<exit_state name="SU" target="Element@987428407:1730827949950"/>
+<exit_state name="ER" target="Element@1975404134:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@688563975:1730827949950" name="Dummy menu" src="com.servion.platform.vxml.cvp.elements.ServionIndAndCombTriesForm" type="Voice Element" width="164" x="835" y="21">
+<exit_states>
+<exit_state name="done" target="Element@713189096:1730827949950"/>
+<exit_state name="max_nomatch" target="Element@713189096:1730827949950"/>
+<exit_state name="max_noinput" target="Element@713189096:1730827949950"/>
+<exit_state name="max_combinedtries" target="Element@713189096:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@15784778:1730827949950" name="SET_API_NAME" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="447" y="-97">
+<exit_states>
+<exit_state name="done" target="Element@1836510765:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@530576675:1730827949950" name="Is_MOBILE_CALLER" type="Decision" width="198" x="763" y="259">
+<exit_states>
+<exit_state name="Yes" target="Element@431183633:1730827949950"/>
+<exit_state name="No" target="Element@1131337100:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@536155265:1730827949950" name="EligibleIntentCheck" type="Decision" width="199" x="431" y="62">
+<exit_states>
+<exit_state name="Yes" target="Element@15784778:1730827949950"/>
+<exit_state name="No" target="Element@1754115787:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@325104611:1730827949950" name="Subflow Return_05" type="Subflow Return" width="198" x="1081" y="-93"/>
+<element height="55" id="Element@431183633:1730827949950" name="IVRTT_ADM_003" type="Decision" width="179" x="778" y="376">
+<exit_states>
+<exit_state name="SU" target="Element@385781103:1730827949950"/>
+<exit_state name="ER" target="Element@1131337100:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1239184882:1730827949950" name="IVRTT_HOST_003" type="Decision" width="184" x="846" y="-93">
+<exit_states>
+<exit_state name="SU" target="Element@688563975:1730827949950"/>
+<exit_state name="ER" target="Element@325104611:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@39165234:1730827949950" name="WarHead1" type="Subflow Call" width="133" x="146" y="472">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710403873152">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@690864112:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1443322008:1730827949950" name="Subflow Return_03" type="Subflow Return" width="198" x="-101" y="365"/>
+<element height="46" id="Element@1155939865:1730827949950" name="CheckBU_BC" type="Decision" width="123" x="-42" y="39">
+<exit_states>
+<exit_state name="YES" target="Element@1184831271:1730827949950"/>
+<exit_state name="NO" target="Element@1754115787:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1886302375:1730827949950" name="Subflow Return_02" type="Subflow Return" width="198" x="243" y="299"/>
+<element height="55" id="Element@1184831271:1730827949950" name="IsAgentDNIS_BC" type="Decision" width="182" x="172" y="51">
+<exit_states>
+<exit_state name="YES" target="Element@1754115787:1730827949950"/>
+<exit_state name="NO" target="Element@69396698:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1131337100:1730827949950" name="SET_RETURN_VALUE_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="228" x="498" y="215">
+<exit_states>
+<exit_state name="done" target="Element@1886302375:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1836510765:1730827949950" name="WarHead" type="Subflow Call" width="123" x="666" y="-97">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710403873152">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1239184882:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@385781103:1730827949950" name="IVRTT_MN_001_Call" type="Subflow Call" width="202" x="399" y="408">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709039005604">
+<config>
+<argument_data>
+<data name="MenuID">IVRTT_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1191764791:1730827949950"/>
+</exit_states>
+</element>
+<element height="55" id="Element@69396698:1730827949950" name="IVRTT_ADM_001" type="Decision" width="179" x="248" y="-100">
+<exit_states>
+<exit_state name="SU" target="Element@536155265:1730827949950"/>
+<exit_state name="ER" target="Element@536155265:1730827949950">
+<bendpoint>
+<dim1 x="-33" y="58"/>
+<dim2 x="-40" y="-56"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@743683911:1730827949950" name="Disc" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="83" x="865" y="482">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1754115787:1730827949950" name="SET_RETURN _VALUE" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="165" y="156">
+<exit_states>
+<exit_state name="done" target="Element@1794906259:1730827949950"/>
+</exit_states>
+</element>
+<element height="49" id="Element@1917189921:1751910620924" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="-248" y="-94">
+<exit_states>
+<exit_state name="done" target="Element@814184303:1751910620924"/>
+</exit_states>
+</element>
+<element height="48" id="Element@61223374:1751910620924" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="-223" y="83">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@814184303:1751910620924" name="Shared_Transfer" type="Subflow Call" width="132" x="-225" y="-4">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@61223374:1751910620924"/>
+</exit_states>
+</element>
+</page>

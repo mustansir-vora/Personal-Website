@@ -1,0 +1,124 @@
+{
+  "name": "e3f96d52-f371-45f8-a854-4b800c794de5",
+  "displayName": "Make Payment PB",
+  "form": {
+    "parameters": [ {
+      "displayName": "makePaymentPBSelection",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "En passant, vous ne pouvez pas modifier \r\ncette entente de paiement. Toutefois, vous pouvez effectuer le paiement \r\nmaintenant à l’aide de votre carte de crédit. Souhaitez-vous payer \r\nmaintenant ? Dites « oui » ou appuyez sur le 1. Ou, dites « non » ou \r\nappuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "By the way, you cannot make changes to this payment arrangement. But you can pay it now using your credit card. Would you like to pay now? Say yes, or press 1. Or say no, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "756f3c46-8dac-43b5-ae0c-dbffd01e0b80"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "En passant, vous ne pouvez pas modifier \r\ncette entente de paiement. Toutefois, vous pouvez effectuer le paiement \r\nmaintenant à l’aide de votre carte de crédit. Souhaitez-vous payer \r\nmaintenant ? Dites « oui » ou appuyez sur le 1. Ou, dites « non » ou \r\nappuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "By the way, you cannot make changes to this payment arrangement. But you can pay it now using your credit card. Would you like to pay now? Say yes, or press 1. Or say no, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "3d86887b-b215-40c0-88f9-a77ade5c9afc"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour effectuer un paiement, appuyez sur le 1. \r\nSinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To make a payment, press 1. Otherwise, press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "08ebcc21-e950-4fa5-b19b-661549c4bdc4"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour effectuer un paiement, appuyez sur le 1. \r\nSinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To make a payment, press 1. Otherwise, press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "4bbfce8a-ae8a-4728-915e-0c3579afda86"
+        }, {
+          "targetPage": "Return From PTP Pay Now",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "9c7619e7-dbb9-4aa4-8e1c-1ea30a2572eb"
+        }, {
+          "targetPage": "Return From PTP Pay Now",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "808f5c93-b549-4907-972c-d64e5dbe6a97"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Souhaitez-vous payer maintenant à l’aide de \r\nvotre carte de crédit ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Would you like to pay that now using your credit card?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.makePaymentPBSelection = yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check From Single Or Multiple",
+    "name": "44c1f792-c33e-41c4-8b09-65b223f68769"
+  }, {
+    "condition": "$session.params.makePaymentPBSelection = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Return From PTP Pay Now",
+    "name": "d8feb935-76bf-43fd-803e-a3af3defc26d"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

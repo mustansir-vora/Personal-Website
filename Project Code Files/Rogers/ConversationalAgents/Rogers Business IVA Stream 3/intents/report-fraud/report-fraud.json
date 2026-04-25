@@ -1,0 +1,7 @@
+{
+  "name": "d3997264-3c81-4587-91d1-df49efe06aba",
+  "displayName": "report-fraud",
+  "priority": 500000,
+  "description": "Handles reports of fraudulent activity on an account or service.",
+  "numTrainingPhrases": 50
+}

@@ -1,0 +1,1084 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’ai simplement ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " question à propos de l’ajout d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je configurer ",
+      "auto": true
+    }, {
+      "text": "une deuxième",
+      "auto": true
+    }, {
+      "text": " ligne pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "autre ligne"
+    }, {
+      "text": ", mais j’ai des difficultés.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est-il possible d’ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne supplémentaire"
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon service",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne téléphonique"
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir si je peux ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "autre ligne"
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le service",
+      "auto": true
+    }, {
+      "text": " à la clientèle peut-il m’aider à ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie d’ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "nouvelle ligne"
+    }, {
+      "text": " en transférant ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone de ",
+      "auto": true
+    }, {
+      "text": "Telus",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter n’importe quelle ligne disponible à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’aimerais ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait, si possible.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux seulement savoir combien coûte l’ajout d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à ouvrir ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’aimerais ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "autre ligne"
+    }, {
+      "text": " pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " conjoint.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau numéro à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau téléphone pour moi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouvel appareil à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais configurer ",
+      "auto": true
+    }, {
+      "text": "une deuxième",
+      "auto": true
+    }, {
+      "text": " ligne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " question concernant l’ajout d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "autre ligne"
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie d’ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "nouvelle ligne"
+    }, {
+      "text": ", mais ça ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne additionnelle?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux acheter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "nouvelle ligne"
+    }, {
+      "text": " pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait ",
+      "auto": true
+    }, {
+      "text": "mobile",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne supplémentaire"
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais ajouter ",
+      "auto": true
+    }, {
+      "text": "une deuxième",
+      "auto": true
+    }, {
+      "text": " ligne à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " autre ",
+      "auto": true
+    }, {
+      "text": "ligne téléphonique"
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "nouvelle ligne"
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne principale",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais configurer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne principale",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " question concernant l’ajout d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "téléphone régulier",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie d’ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "téléphone régulier",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": ", mais ça ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "téléphone à domicile",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "téléphone à domicile",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne téléphonique",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne téléphonique",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne terrestre",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne terrestre",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "nouvelle ligne",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais configurer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "nouvelle ligne",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai une question concernant l’ajout d’une "
+    }, {
+      "text": "autre ligne",
+      "parameterId": "e_lineType"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie d’ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "autre ligne",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": ", mais ça ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "autre ligne",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter un ",
+      "auto": true
+    }, {
+      "text": "deuxième téléphone",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je ajouter un ",
+      "auto": true
+    }, {
+      "text": "deuxième téléphone",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne supplémentaire",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne secondaire",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne secondaire",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie d’ajouter une nouvelle "
+    }, {
+      "text": "ligne sans fil",
+      "parameterId": "e_lineType"
+    }, {
+      "text": ", mais ça ne fonctionne pas."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne additionnelle de ",
+      "auto": true
+    }, {
+      "text": "téléphone mobile",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux acheter une nouvelle ligne pour mon forfait "
+    }, {
+      "text": "cellulaire",
+      "parameterId": "e_lineType"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne sans fil",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais ajouter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ligne sans fil",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "téléphone cellulaire",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau ",
+      "auto": true
+    }, {
+      "text": "téléphone cellulaire",
+      "parameterId": "e_lineType",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

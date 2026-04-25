@@ -1,0 +1,37 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Help with adding a wireless phone to my account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can I add a wireless devive to my business account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "questions about adding a wireless product to my account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have questions about adding more than "
+    }, {
+      "text": "one"
+    }, {
+      "text": " wireless to my account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want more information about adding wireless to my account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

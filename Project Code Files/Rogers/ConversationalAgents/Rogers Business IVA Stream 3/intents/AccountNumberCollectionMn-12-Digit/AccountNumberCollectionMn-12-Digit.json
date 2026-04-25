@@ -1,0 +1,11 @@
+{
+  "name": "83396b2c-1f70-4281-a8b8-4a7a97e657f6",
+  "displayName": "AccountNumberCollectionMn-12-Digit",
+  "parameters": [ {
+    "id": "accountnum",
+    "entityType": "@AccountNumber-12-Digit"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 26,
+  "dtmfPattern": "dtmf_digits_[0-9]{12}$"
+}

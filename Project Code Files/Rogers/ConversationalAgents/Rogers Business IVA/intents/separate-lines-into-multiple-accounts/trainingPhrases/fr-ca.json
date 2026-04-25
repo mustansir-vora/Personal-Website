@@ -1,0 +1,686 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux faire ",
+      "auto": true
+    }, {
+      "text": "2",
+      "auto": true
+    }, {
+      "text": " comptes à partir d'",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux divisé ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "en deux",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux séparer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne et transférer la propriété ",
+      "auto": true
+    }, {
+      "text": "à une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider avec la facturation séparée pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux créer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau compte pour l’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " des lignes ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux demander ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Transfert de responsabilité",
+      "auto": true
+    }, {
+      "text": " afin que la facturation passe ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " nouveau propriétaire.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider avec ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Transfert de",
+      "auto": true
+    }, {
+      "text": " responsabilité et changer le nom principal du compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux compléter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Transfert de",
+      "auto": true
+    }, {
+      "text": " responsabilité parce que quelqu’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " d’autre sera le nouveau titulaire.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider avec le processus de ",
+      "auto": true
+    }, {
+      "text": "Transfert",
+      "auto": true
+    }, {
+      "text": " de responsabilité pour ce compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois commencer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " transfert de responsabilité pour déplacer ce compte vers ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais transférer à la fois la propriété et la facturation de ce compte ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " autre utilisateur.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois mettre à jour le nom du compte parce qu’il est ",
+      "auto": true
+    }, {
+      "text": "actuellement",
+      "auto": true
+    }, {
+      "text": " au mauvais nom.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à transférer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " nouveau titulaire principal?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer le ",
+      "auto": true
+    }, {
+      "text": "nom",
+      "auto": true
+    }, {
+      "text": " du compte parce que je ne suis plus responsable de ce ",
+      "auto": true
+    }, {
+      "text": "service",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais retirer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " nom du compte et le transférer ",
+      "auto": true
+    }, {
+      "text": "à une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider à transférer la propriété du compte de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " nom à celui de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " conjoint.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux transférer la responsabilité de ce compte ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " nouveau propriétaire.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer le titulaire du compte parce que je transfère ",
+      "auto": true
+    }, {
+      "text": "les services",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "à une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux transférer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte au nom et à la responsabilité de facturation de quelqu’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " d’autre.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à transférer la propriété de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "à une",
+      "auto": true
+    }, {
+      "text": " autre personne?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux séparer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne et en transférer la propriété ",
+      "auto": true
+    }, {
+      "text": "à une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider avec la séparation de la facturation pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux créer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau compte pour l’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " des lignes de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour séparer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "actuel",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux créer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " compte séparé ",
+      "auto": true
+    }, {
+      "text": "pour un",
+      "auto": true
+    }, {
+      "text": " membre de ma famille.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’aimerais séparer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte et déplacer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne vers ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’expliquer comment séparer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux diviser ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte pour qu’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne appartienne à quelqu’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " d’autre.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je séparer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "actuel",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " facturation séparée pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux configurer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " compte distinct pour des raisons de facturation.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’aimerais créer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " compte séparé pour l’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " de mes lignes.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais séparer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte et transférer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne ",
+      "auto": true
+    }, {
+      "text": "à une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à séparer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "en deux",
+      "auto": true
+    }, {
+      "text": " comptes différents?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux séparer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

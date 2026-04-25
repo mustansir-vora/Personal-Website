@@ -1,0 +1,178 @@
+{
+  "trainingPhrases": [ {
+    "id": "98f21846-1b59-48ca-9362-0b950992316b",
+    "parts": [ {
+      "text": "I'm looking to upgrade my current business product."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "4f67ebde-1f46-4fa5-83a6-38f025cc2626",
+    "parts": [ {
+      "text": "How do I purchase a business product?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f6665e12-2ace-4721-85f2-bbbed6764fcc",
+    "parts": [ {
+      "text": "Tell me more about your business product support."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8983c9e3-b131-4601-b39f-fafbbfc36e55",
+    "parts": [ {
+      "text": "I'm interested in your business product offerings."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c3caa9b4-35f2-45b3-9ff9-0915b4b09aa6",
+    "parts": [ {
+      "text": "What are the benefits of your business products?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "44c84177-546a-42f7-bc5c-00454e1ee71d",
+    "parts": [ {
+      "text": "Which business products are best for startups?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "84f9ea53-df6e-4cdd-a367-9f9a3c795f48",
+    "parts": [ {
+      "text": "I need a business product for marketing automation."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9ff23f97-0f21-4770-aaab-73ea7edd21af",
+    "parts": [ {
+      "text": "Can you help me choose a product for my company?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "48846049-0661-4151-a164-d0dfc33e945e",
+    "parts": [ {
+      "text": "I'm looking for a product that can help me with business analytics."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "656433f7-dd06-4c90-a5cb-949983bb5a0c",
+    "parts": [ {
+      "text": "What kind of business solutions do you have?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "4bf1dfdd-4b3f-45c6-951c-f789997f93b3",
+    "parts": [ {
+      "text": "Can you recommend a product for my business"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "66cb71db-f15f-4a66-9b1f-932336454a49",
+    "parts": [ {
+      "text": "Which product can help my business"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0269910e-ef61-4f08-b3cd-07c5d6975877",
+    "parts": [ {
+      "text": "I want to know about solutions for business"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "de09035b-6e3b-4036-8de8-e15767c2266b",
+    "parts": [ {
+      "text": "Do you have products for business clients"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2b05dfe8-7f7b-48e1-8d02-7f2ac9e23e86",
+    "parts": [ {
+      "text": "I need help with my small business product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "46e298bd-4c8d-4a92-8c08-6eb4c952684d",
+    "parts": [ {
+      "text": "I have a question about my business product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0a3b6c27-931d-41dc-b48d-8da510ad182e",
+    "parts": [ {
+      "text": "I want to buy a business product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "44f4cefe-e1a9-4828-8008-ec2a61bfa343",
+    "parts": [ {
+      "text": "What business products do you offer"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b33ab4f9-f2a2-47ba-80dc-d66c06b3f262",
+    "parts": [ {
+      "text": "Where can I find business products"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e9dcebfe-a95f-430f-8dd3-055b5112de6f",
+    "parts": [ {
+      "text": "I want information on business products"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a2269a21-e776-4d3f-b7b4-e8612b30804f",
+    "parts": [ {
+      "text": "Tell me about business products"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f1057c6c-940c-43b2-88c4-6d66d3a0211b",
+    "parts": [ {
+      "text": "I need help with my business product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "43e14606-54fe-4a88-81ac-ac5ac66a36d3",
+    "parts": [ {
+      "text": "i have business product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "598dc151-a8e0-438f-9840-eb68d2c4bca5",
+    "parts": [ {
+      "text": "business product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a8d64f59-0c97-43bb-b940-6a432635daf5",
+    "parts": [ {
+      "text": "new business product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

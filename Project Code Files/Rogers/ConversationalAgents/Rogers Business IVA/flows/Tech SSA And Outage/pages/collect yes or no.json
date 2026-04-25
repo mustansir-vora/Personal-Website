@@ -1,0 +1,113 @@
+{
+  "name": "e01feb72-c7bf-40f0-8dbc-baa6e8dae0da",
+  "displayName": "collect yes or no",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "YesOrNoMn-Yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord. Le voici de nouveau." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay. Here it is again." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "outageRepeatCounter",
+        "value": "$sys.func.ADD($session.params.outageRepeatCounter, 1)"
+      } ]
+    },
+    "targetPage": "readMessage",
+    "name": "8b4df38d-3918-43d2-a5c2-fe75bbf0d6bc"
+  }, {
+    "intent": "YesOrNoMn-No",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D'accord." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Tech Outage Notification",
+    "name": "36dddf61-6cb2-46b3-b3d2-7b97626435e3"
+  }, {
+    "intent": "Outage_Message_Repeat",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord. Le voici de nouveau." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay. Here it is again." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "outageRepeatCounter",
+        "value": "$sys.func.ADD($session.params.outageRepeatCounter, 1)"
+      } ]
+    },
+    "targetPage": "readMessage",
+    "name": "7b1c7a25-aa48-43d0-a321-cda158467aab"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Tech Outage Notification",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Passons à la suite." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's move on." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "isONFromCollect",
+        "value": true
+      } ]
+    },
+    "name": "59e766b7-57c8-425c-af4f-1128b1be9541"
+  }, {
+    "targetPage": "Tech Outage Notification",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Passons à la suite." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's move on." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "isONFromCollect",
+        "value": true
+      } ]
+    },
+    "name": "ff6cc521-27b0-4453-b598-6093b4f179fe"
+  } ]
+}

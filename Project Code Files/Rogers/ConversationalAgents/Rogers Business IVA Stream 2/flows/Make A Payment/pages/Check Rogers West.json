@@ -1,0 +1,18 @@
+{
+  "name": "783860c9-d002-4abd-bbba-459402f86e66",
+  "displayName": "Check Rogers West",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Semafone Available",
+    "name": "f0da119b-70a6-4d33-b7c2-d1a1b1289021"
+  } ]
+}

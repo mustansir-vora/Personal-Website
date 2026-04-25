@@ -1,0 +1,7 @@
+{
+  "name": "b7254d50-0945-49ea-a2d0-3924ffbc1b9d",
+  "displayName": "phone-software-support",
+  "priority": 500000,
+  "description": "Handles issue specific to phone software on wireless ",
+  "numTrainingPhrases": 65
+}

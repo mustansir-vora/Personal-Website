@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@636286139:1711732937323" name="Check_S_INTENT" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_S_INTENT" default_exit_state="representative">
+        <exit_state name="Auto" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_INTENT" />
+                </data>
+                <constant_string value="Auto" />
+            </string>
+        </exit_state>
+        <exit_state name="Umbrella" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_INTENT" />
+                </data>
+                <constant_string value="Umbrella" />
+            </string>
+        </exit_state>
+        <exit_state name="Home" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_INTENT" />
+                </data>
+                <constant_string value="Home" />
+            </string>
+        </exit_state>
+        <exit_state name="Main Menu" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_INTENT" />
+                </data>
+                <constant_string value="Main Menu" />
+            </string>
+        </exit_state>
+        <exit_state name="representative" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_INTENT" />
+                </data>
+                <constant_string value="representative" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

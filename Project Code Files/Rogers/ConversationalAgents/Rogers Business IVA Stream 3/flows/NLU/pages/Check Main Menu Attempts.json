@@ -1,0 +1,63 @@
+{
+  "name": "b413de64-71b1-489d-bd19-1ebbf73a1362",
+  "displayName": "Check Main Menu Attempts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluErrorCounter \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fallbackReason",
+        "value": "NLUMainMenu"
+      } ]
+    },
+    "targetPage": "FallBack Router",
+    "name": "e4fbf9d6-2dc8-4998-a20c-1045568118fd"
+  }, {
+    "condition": "$session.params.nluErrorCounter \u003e 0 AND $session.params.nluErrorType = nomatch",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative.nomatchprompt" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "$request.generative.nomatchprompt" ]
+        },
+        "languageCode": "en"
+      } ],
+      "generators": [ {
+        "generator": "projects/gcp-prj-rogers-cct-iva-dev-01/locations/northamerica-northeast1/agents/b5efb30f-b992-4b73-9ad7-8b8d8f7ad897/generators/2d36750d-41ad-4e3a-b278-0cbf89840bbc",
+        "outputParameter": "$request.generative.nomatchprompt"
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "cd2c7e37-0c5a-42d2-9dad-fca386cba7b7"
+  }, {
+    "condition": "$session.params.nluErrorCounter \u003e 0 AND $session.params.nluErrorType = noinput",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative.noInputPrompt" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "$request.generative.noInputPrompt" ]
+        },
+        "languageCode": "en"
+      } ],
+      "generators": [ {
+        "generator": "projects/gcp-prj-rogers-cct-iva-dev-01/locations/northamerica-northeast1/agents/b5efb30f-b992-4b73-9ad7-8b8d8f7ad897/generators/f8db6a72-449c-4c33-a701-ba55e8c290e4",
+        "outputParameter": "$request.generative.noInputPrompt"
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "723f1a2a-2193-4481-9f14-d6bb9200c76f"
+  } ]
+}

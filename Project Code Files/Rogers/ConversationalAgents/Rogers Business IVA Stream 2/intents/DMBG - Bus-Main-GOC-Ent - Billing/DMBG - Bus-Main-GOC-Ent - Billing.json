@@ -1,0 +1,7 @@
+{
+  "name": "6dc308ef-dc28-47fd-b83d-a15fa178b305",
+  "displayName": "DMBG - Bus-Main-GOC-Ent - Billing",
+  "priority": 500000,
+  "numTrainingPhrases": 12,
+  "dtmfPattern": "1"
+}

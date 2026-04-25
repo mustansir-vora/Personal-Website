@@ -1,0 +1,31 @@
+{
+  "name": "a8dd9039-68ba-4ff4-a88c-f985e08694ed",
+  "displayName": "check Unique Postal Code",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.isSinglePostalCode = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "collect Postal Code",
+    "name": "7bd923bb-75ab-4d90-afdf-94574e55f3e9"
+  }, {
+    "condition": "$session.params.isSinglePostalCode = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": "MA"
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "62203cfb-c376-4e37-9623-aeca97460217"
+  } ]
+}

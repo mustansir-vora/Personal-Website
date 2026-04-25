@@ -1,0 +1,133 @@
+{
+  "name": "99408346-c495-478e-bdcd-1231d30edcc0",
+  "displayName": "DMBG - VoicemailSupportVagueDmbg",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Que souhaitez-vous faire : dites mot de passe, problème technique ou questions générales." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Which would you like: say \"password\", \"technical issue\", or \"general questions\"" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - VoicemailSupportVagueDmbg - Password",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_VoicemailSupportVagueDmbg",
+        "value": "password"
+      }, {
+        "parameter": "savedIntent",
+        "value": "voicemail-password-reset"
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "4b91d016-2334-4dd2-a2dd-5392cef9a15e"
+  }, {
+    "intent": "DMBG - VoicemailSupportVagueDmbg - Technical Issue",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_VoicemailSupportVagueDmbg",
+        "value": "technical_issue"
+      }, {
+        "parameter": "savedIntent",
+        "value": "troubleshoot-voicemail"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "c4d63e1e-706f-4cd7-9c9b-be4761b6a46c"
+  }, {
+    "intent": "DMBG - VoicemailSupportVagueDmbg - General Questions",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_VoicemailSupportVagueDmbg",
+        "value": "general_questions"
+      }, {
+        "parameter": "savedIntent",
+        "value": "voicemail-support"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "090067cb-e5d1-4bdd-8acd-ab656b18de17"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "55d0ef0e-a362-4439-81e1-28dc10caf323"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "d797aac0-fb57-4c7c-953c-4a14ff6e6a96"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

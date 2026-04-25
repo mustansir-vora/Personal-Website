@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@865283703:1707814947913" name="Is_FEIN_Or_SSN_MATCHED" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.SSN_FEIN_Check</source>
+</config>
+</decision>

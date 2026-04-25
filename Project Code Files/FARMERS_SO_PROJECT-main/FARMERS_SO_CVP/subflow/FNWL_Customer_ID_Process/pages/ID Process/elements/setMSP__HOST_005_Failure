@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@742309985:1735631532831" name="setMSP__HOST_005_Failure" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.setMSP_FNWL</source>
+</config>
+</decision>

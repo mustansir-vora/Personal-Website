@@ -1,0 +1,29 @@
+{
+  "name": "81c4153e-2a3d-49bd-adec-edc117b8a2fd",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone d’affaires a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux aller au menu principal"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "userInputBP": "mainmenu"
+    }
+  },
+  "displayName": "13020-Have-SIM-mainmenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 96,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

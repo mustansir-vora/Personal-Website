@@ -1,0 +1,67 @@
+{
+  "name": "dc3f9d63-fac8-40d5-a56d-7f4af3cea3a1",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Y a-t-il une antenne fixée à l’extérieur de votre lieu d’affaires ?"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je ne vous ai pas entendu. S’il y a une antenne fixée à l’extérieur de votre lieu d’affaires, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Accédez-vous à Internet à l’aide d’une carte SIM ou d’un téléphone mobile ?"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je ne vous ai pas entendu. Si vous accédez à Internet à l’aide d’une carte SIM ou de votre téléphone mobile, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement Internet."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11401-Antenna-Bus-no input",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 450,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

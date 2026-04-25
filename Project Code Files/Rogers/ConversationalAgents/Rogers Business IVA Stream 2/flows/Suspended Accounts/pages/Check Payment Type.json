@@ -1,0 +1,32 @@
+{
+  "name": "c53d14d5-e1ad-4408-b985-a1edbf4bb238",
+  "displayName": "Check Payment Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.pendingPTP = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PTP Payment Method",
+    "name": "8305abbb-9bf3-4701-8264-aac754e5a5e9"
+  }, {
+    "condition": "$session.params.api.billingProfile.ippDetails.ippStatus = Active",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play IPP Balance",
+    "name": "424156a0-798e-4a7f-8d80-4df1485c679b"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Reason",
+    "name": "e7d8e2bc-c49e-4f5b-96fc-529770f35d4d"
+  } ]
+}

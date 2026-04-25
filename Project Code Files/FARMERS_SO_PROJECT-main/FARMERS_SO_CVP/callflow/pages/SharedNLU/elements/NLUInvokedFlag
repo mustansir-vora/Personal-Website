@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@196475541:1730744888313" name="NLUInvokedFlag" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">YES</setting>
+<setting name="sessNames">NLU_INVOKED_FLAG</setting>
+</settings>
+</config>
+</action_element>

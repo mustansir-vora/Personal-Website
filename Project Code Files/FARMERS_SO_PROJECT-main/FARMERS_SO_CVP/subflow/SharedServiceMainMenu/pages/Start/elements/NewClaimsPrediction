@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1226994623:1755706306627" name="NewClaimsPrediction" version="6.0.1">
+<subflow_call subflow_name="NewClaimsIntentPredictions" target="Element@31:1754990650461">
+<config/>
+</subflow_call>
+</connector>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1985719134:1708938188550" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708938188550" name="FmstAgentCallerTypeMenu" type="Subflow Start" width="262" x="174" y="59">
+<exit_states>
+<exit_state name="next" target="Element@348742185:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1501728760:1723485325585" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="251" x="626" y="1233">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@958750772:1723485325585" name="Is_EntryMod_Called" type="Decision" width="178" x="-40" y="241">
+<exit_states>
+<exit_state name="Y" target="Element@1362380480:1723485325585"/>
+<exit_state name="N" target="Element@1482560677:1723485325585"/>
+</exit_states>
+</element>
+<element height="54" id="Element@24484424:1723485325585" name="Subflow Return_03" type="Subflow Return" width="155" x="718" y="873"/>
+<element height="55" id="Element@2122989722:1723485325585" name="FACM_MN_001_VALUE" type="Decision" width="228" x="194" y="1122">
+<exit_states>
+<exit_state name="NOMATCH" target="Element@698767589:1723485325585"/>
+<exit_state name="NOINPUT" target="Element@1501728760:1723485325585"/>
+<exit_state name="Customer" target="Element@338628387:1723485325585"/>
+<exit_state name="Agent" target="Element@1433653127:1723485325585"/>
+<exit_state name="Lienholder" target="Element@1331086916:1723485325585"/>
+<exit_state name="ER" target="Element@698767589:1723485325585">
+<bendpoint>
+<dim1 x="199" y="-94"/>
+<dim2 x="-239" y="15"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@999599387:1723485325585" name="PromoteToSession_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="224" x="-163" y="842">
+<exit_states>
+<exit_state name="done" target="Element@338628387:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1433653127:1723485325585" name="Fmst Agent Main Menu" type="Subflow Call" width="236" x="191" y="1265">
+<subflow_call subflow_name="FmstAgentMainMenu" target="Element@31:1711720135804">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@257232732:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@724519720:1723485325585" name="Is_Route_To" type="Decision" width="141" x="925" y="990">
+<exit_states>
+<exit_state name="MAIN_MENU" target="Element@348742185:1723485325585"/>
+<exit_state name="OTHERS" target="Element@698767589:1723485325585"/>
+<exit_state name="NEW_QUOTE" target="Element@24484424:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1938504518:1723485325585" name="Copy_of_Subflow Return_02" type="Subflow Return" width="233" x="-601" y="390"/>
+<element height="55" id="Element@698767589:1723485325585" name="Shared Transfer" type="Subflow Call" width="171" x="473" y="1005">
+<subflow_call subflow_name="Transfer" target="Element@31:1711720120385">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@24484424:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1482560677:1723485325585" name="Shared Enty Mod" type="Subflow Call" width="187" x="210" y="380">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1711720093551">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1362380480:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1362380480:1723485325585" name="Is_Route_To_SharedMainMenu_Subflow" type="Decision" width="312" x="-185" y="393">
+<exit_states>
+<exit_state name="MAIN_MENU" target="Element@875654401:1723485325585"/>
+<exit_state name="NEXT" target="Element@566465087:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1355999045:1723485325585" name="One Specialty Menu" type="Subflow Call" width="208" x="-159" y="1122">
+<subflow_call subflow_name="OneSpecialtyMenu" target="Element@31:1711720114737">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@257232732:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@348742185:1723485325585" name="CheckEntryPoint_BC" type="Decision" width="205" x="462" y="54">
+<exit_states>
+<exit_state name="ER" target="Element@892913148:1723485325585"/>
+<exit_state name="CONT" target="Element@892913148:1723485325585"/>
+<exit_state name="NLU" target="Element@76689062:1723485325585"/>
+<exit_state name="INITIAL" target="Element@892913148:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@200524668:1723485325585" name="intermediaterinformationmanagementv1" type="Decision" width="321" x="156" y="633">
+<exit_states>
+<exit_state name="SU" target="Element@1430747603:1723485325585"/>
+<exit_state name="ER" target="Element@1430747603:1723485325585">
+<bendpoint>
+<dim1 x="36" y="85"/>
+<dim2 x="47" y="-28"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1331086916:1723485325585" name="Shared ID and Auth" type="Subflow Call" width="206" x="650" y="1128">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1712492168603">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@655243183:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@338628387:1723485325585" name="SET_ROUTE_TO_OSPM_MN_001" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="256" x="-165" y="948">
+<exit_states>
+<exit_state name="done" target="Element@1355999045:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1929020564:1723485325585" name="IVRProperty_isANIBypassed" type="Decision" width="239" x="199" y="545">
+<exit_states>
+<exit_state name="YES" target="Element@1430747603:1723485325585">
+<bendpoint>
+<dim1 x="-218" y="89"/>
+<dim2 x="-205" y="-112"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@200524668:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1430747603:1723485325585" name="Agent or Cus check" type="Decision" width="203" x="204" y="746">
+<exit_states>
+<exit_state name="Agent" target="Element@1433653127:1723485325585">
+<bendpoint>
+<dim1 x="172" y="-3"/>
+<dim2 x="179" y="-521"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="178" y="522"/>
+<dim2 x="185" y="4"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Customer" target="Element@999599387:1723485325585"/>
+<exit_state name="Other" target="Element@787046710:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@892913148:1723485325585" name="FACM_ADM_001" type="Decision" width="182" x="215" y="264">
+<exit_states>
+<exit_state name="SU" target="Element@958750772:1723485325585"/>
+<exit_state name="ER" target="Element@958750772:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@787046710:1723485325585" name="FACM_MN_001_Call" type="Subflow Call" width="205" x="194" y="908">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709105041495">
+<config>
+<argument_data>
+<data name="MenuID">FACM_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2122989722:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@655243183:1723485325585" name="Shared Billing and Payments" type="Subflow Call" width="273" x="959" y="1124">
+<subflow_call subflow_name="SharedBillingPayments" target="Element@31:1711720162481">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@724519720:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@76689062:1723485325585" name="SetTransferKey_FmstAgenCallerLein" type="Action" width="326" x="510" y="723">
+<exit_states>
+<exit_state name="done" target="Element@1331086916:1723485325585"/>
+</exit_states>
+</element>
+<element height="55" id="Element@257232732:1723485325585" name="Subflow Return_02" type="Subflow Return" width="198" x="-57" y="1264"/>
+<element height="55" id="Element@566465087:1723485325585" name="KYC Enabled" type="Decision" width="148" x="239" y="469">
+<exit_states>
+<exit_state name="False" target="Element@1929020564:1723485325585"/>
+<exit_state name="True" target="Element@1430747603:1723485325585">
+<bendpoint>
+<dim1 x="-316" y="189"/>
+<dim2 x="-308" y="-88"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@875654401:1723485325585" name="SET_Return_MainMenu" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="223" x="-393" y="268">
+<exit_states>
+<exit_state name="done" target="Element@1938504518:1723485325585"/>
+</exit_states>
+</element>
+</page>

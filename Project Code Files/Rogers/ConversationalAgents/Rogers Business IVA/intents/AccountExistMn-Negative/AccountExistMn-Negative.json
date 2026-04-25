@@ -1,0 +1,7 @@
+{
+  "name": "d0736a0e-5254-4074-8996-7ac907bda78f",
+  "displayName": "AccountExistMn-Negative",
+  "priority": 500000,
+  "description": "This will triger when user says other then yes or no ",
+  "numTrainingPhrases": 11
+}

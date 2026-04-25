@@ -1,0 +1,67 @@
+{
+  "name": "8d29b66e-7124-4956-9860-e3fdbad7c9e4",
+  "displayName": "Global Error Handling",
+  "transitionRoutes": [ {
+    "condition": "$session.params.LastStdError = \"NI\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Max No Input",
+    "name": "86f81843-984d-4c9f-b629-cd48297cfd12"
+  }, {
+    "condition": "$session.params.LastStdError = \"NM\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Max No Match",
+    "name": "afb173ac-5954-4712-b249-345dc156105f"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "47e95893-649e-46f2-a4bb-660963f95321"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e9127e0f-f421-4136-9d12-d46887b8f55c"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "4fe3dada-0c50-4291-8e5c-ca2d87aa45d5"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "languageCode": "en"
+  } ]
+}

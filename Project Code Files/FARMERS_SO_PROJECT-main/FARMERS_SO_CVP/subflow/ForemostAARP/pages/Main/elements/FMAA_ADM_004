@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@795018582:1711545207149" name="FMAA_ADM_004" version="6.0.1">
+<config>
+<source type="Class">com.farmers.adminHost.BrandsTable</source>
+</config>
+</decision>

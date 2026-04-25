@@ -1,0 +1,18 @@
+{
+  "name": "5fe9f750-dac9-410a-a1fd-1b40fb3077ab",
+  "displayName": "Initialize Payment Wrap Up",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Account Status",
+    "name": "18779fc9-adf8-4450-a7c3-21d326c16764"
+  } ]
+}

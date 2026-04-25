@@ -1,0 +1,38 @@
+{
+  "name": "7c966e2b-faa1-41b1-9ac6-5109dd4439cc",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Is there an antenna fixed to the outside of your business location?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "i want to go back to the main menu"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "attemptedSSName": "",
+      "completedSSName": "",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "numberOfInternet": "0",
+      "productLabelsMixEn": "TV,Home Phone,Home Security,Wireless Business Phone,5G Home Internet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the values are set exit the playbook",
+    "actionParameters": {
+      "userInput": "mainmenu"
+    }
+  },
+  "displayName": "11401-Antenna-Bus-mainmenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 196,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

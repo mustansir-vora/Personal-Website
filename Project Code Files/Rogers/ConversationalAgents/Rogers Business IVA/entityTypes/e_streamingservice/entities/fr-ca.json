@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "Netflix",
+    "synonyms": [ "Netflix" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Disney",
+    "synonyms": [ "Disney", "Disney plus", "Disney +" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Crave TV",
+    "synonyms": [ "Crave TV", "Crave" ],
+    "languageCode": "fr-ca"
+  } ]
+}

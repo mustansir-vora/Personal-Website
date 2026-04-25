@@ -1,0 +1,52 @@
+{
+  "name": "cb4787b0-a648-4b96-a51c-ae8607dc4a41",
+  "displayName": "Report Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Based on the date you provided, we should have already received your payment. Thanks! " ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Selon la date que vous avez fournie, nous aurions \r\ndéjà dû recevoir votre paiement. Merci! " ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE(\"$session.params.completedSSName\",\",passive-dateTooFarInThePast\")"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "$sys.func.CONCATENATE(\"$session.params.completedSSName\",\",passivedateTooFarInThePast\")"
+      }, {
+        "parameter": "reportingVar_completedSSName",
+        "value": "$session.params.completedSSName"
+      }, {
+        "parameter": "reportingVar_attemptedSSName",
+        "value": "$session.params.attemptedSSName"
+      }, {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "interactionNotes",
+        "value": "IVA"
+      }, {
+        "parameter": "interactionLabel",
+        "value": "CustReportPayment"
+      } ]
+    },
+    "targetPage": "Create Interaction",
+    "name": "6342cf7b-a17f-4435-bd8e-247055d31060"
+  } ]
+}

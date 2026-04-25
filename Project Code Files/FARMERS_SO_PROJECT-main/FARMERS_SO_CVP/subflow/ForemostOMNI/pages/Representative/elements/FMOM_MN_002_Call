@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@2086499803:1709112925456" name="FMOM_MN_002_Call" version="6.0.1">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709112930108">
+<config>
+<argument_data>
+<data name="MenuID">FMOM_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

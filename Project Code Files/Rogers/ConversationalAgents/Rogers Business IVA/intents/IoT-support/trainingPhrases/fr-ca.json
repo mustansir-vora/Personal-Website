@@ -1,0 +1,106 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Les alertes de notre système ",
+      "auto": true
+    }, {
+      "text": "IdO",
+      "auto": true
+    }, {
+      "text": " ne ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " déclenchent pas comme prévu.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons besoin d’assistance pour intégrer les appareils ",
+      "auto": true
+    }, {
+      "text": "IdO",
+      "auto": true
+    }, {
+      "text": " à notre plateforme existante.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous aider à dépanner notre connexion ",
+      "auto": true
+    }, {
+      "text": "LTE-M",
+      "auto": true
+    }, {
+      "text": " pour les appareils ",
+      "auto": true
+    }, {
+      "text": "IdO",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le tableau de bord ",
+      "auto": true
+    }, {
+      "text": "IdO",
+      "auto": true
+    }, {
+      "text": " affiche ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " statut hors ligne pour plusieurs appareils.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons des difficultés à activer de nouvelles cartes ",
+      "auto": true
+    }, {
+      "text": "SIM IdO",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les dispositifs de suivi de flotte ont arrêté de mettre à jour la localisation.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos capteurs ",
+      "auto": true
+    }, {
+      "text": "IdO",
+      "auto": true
+    }, {
+      "text": " n’envoient plus de données — pouvez-vous vérifier la connectivité?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

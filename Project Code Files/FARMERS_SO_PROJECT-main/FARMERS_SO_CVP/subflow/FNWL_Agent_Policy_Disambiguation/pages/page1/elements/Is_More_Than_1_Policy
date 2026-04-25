@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@274841769:1733743670802" name="Is_More_Than_1_Policy" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IS_More_Than_1_Policy" default_exit_state="NO">
+        <exit_state name="YES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FNWL_SINGLE_MDM_POLICY" />
+                </data>
+                <constant_string value="FALSE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

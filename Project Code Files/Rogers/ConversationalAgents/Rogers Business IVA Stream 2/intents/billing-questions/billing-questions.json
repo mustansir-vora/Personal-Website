@@ -1,0 +1,7 @@
+{
+  "name": "ae814d23-8033-4c81-8528-00846ddc3996",
+  "displayName": "billing-questions",
+  "priority": 500000,
+  "description": "Captures general inquiries or questions related to billing or charges.",
+  "numTrainingPhrases": 58
+}

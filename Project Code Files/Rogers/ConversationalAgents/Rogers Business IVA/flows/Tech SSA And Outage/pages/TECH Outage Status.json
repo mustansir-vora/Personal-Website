@@ -1,0 +1,56 @@
+{
+  "name": "d9d52ba7-abb8-418e-ac4e-72f82649e88a",
+  "displayName": "TECH Outage Status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkOutStatus",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.invokedOSFrom = \"TechInternetSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "outage Status",
+    "name": "8ddf8c2f-42af-41c4-9356-3b11ab01c222"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"TechTvSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "outage Status",
+    "name": "738a6dd8-70eb-4731-a45f-a7e118e1472d"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"TechHomeSecurity\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "outage Status",
+    "name": "d21ea078-2dea-48cd-9d7f-397094f1f8c0"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"TechBusinessPhone\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "outage Status",
+    "name": "2b6822e5-0624-49fd-8a1c-c8139ded9e4b"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"TechHomePhone\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "outage Status",
+    "name": "70b17343-c8bf-4b72-9d8b-a849a7799aa2"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"NLUMain\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "outage Status",
+    "name": "63a67c4a-7836-44de-b0ab-5cde82ecfd20"
+  } ]
+}

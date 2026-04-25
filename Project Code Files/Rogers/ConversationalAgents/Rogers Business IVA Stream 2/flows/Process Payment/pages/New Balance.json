@@ -1,0 +1,28 @@
+{
+  "name": "ae1c822d-ca8e-4cdd-8927-e79c7edccd1a",
+  "displayName": "New Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Votre nouveau solde est... $session.params.currentBalance" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Your new balance is $session.params.currentBalance" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Service Suspended",
+    "name": "7c93ded8-f089-43d3-bef5-c936e709aae6"
+  } ]
+}

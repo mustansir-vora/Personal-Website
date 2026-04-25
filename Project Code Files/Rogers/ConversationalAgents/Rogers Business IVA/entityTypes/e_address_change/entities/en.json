@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "address_change",
+    "synonyms": [ "address_change", "update my information", "update contact details", "change personal information", "update address", "update billing address", "update mailing address", "update email address", "correct address", "wrong address", "address update", "moving to a new address", "relocating", "update account holder", "change account holder", "update ownership", "update contact number" ],
+    "languageCode": "en"
+  } ]
+}

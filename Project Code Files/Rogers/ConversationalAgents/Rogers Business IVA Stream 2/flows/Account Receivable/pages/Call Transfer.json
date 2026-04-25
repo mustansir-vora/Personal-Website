@@ -1,0 +1,21 @@
+{
+  "name": "deddc680-46ab-4a62-b8c5-7bfc02b54f5e",
+  "displayName": "Call Transfer",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "677a1a40-53a3-43df-9b95-cdb1c286d580"
+  } ]
+}

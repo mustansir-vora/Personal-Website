@@ -1,0 +1,46 @@
+{
+  "name": "0dfac78f-291e-479f-a3c4-07634ff5e067",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Is there an antenna fixed to the outside of your residence?"
+    }
+  }, {
+    "userUtterance": {
+      "text": " i want to talk to the representative"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "1",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "savedIntent": "internet-support"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInput": "agent"
+    }
+  },
+  "displayName": "11402-Antenna-Res-agent Counter 2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 205,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

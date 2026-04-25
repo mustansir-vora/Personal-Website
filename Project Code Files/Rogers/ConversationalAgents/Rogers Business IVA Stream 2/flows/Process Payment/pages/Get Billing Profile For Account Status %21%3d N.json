@@ -1,0 +1,33 @@
+{
+  "name": "4aa45969-9047-44c4-95b3-fc85e6ee4535",
+  "displayName": "Get Billing Profile For Account Status != N",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "billingProfile"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.returnCode = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "call SMS subflow",
+    "name": "076a43f7-5153-4103-af4c-c3f00e28102d"
+  }, {
+    "condition": "$session.params.faqCallSMS = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "call SMS subflow",
+    "name": "a97e7273-3f3e-4294-adb6-b395ba69b318"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Billing Profile Failed",
+    "name": "dfc0e16e-de5d-42e4-b137-2c70c2337bde"
+  } ]
+}

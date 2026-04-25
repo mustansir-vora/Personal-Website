@@ -1,0 +1,7 @@
+{
+  "name": "339d90b8-2dca-4635-8c57-355ae844ff53",
+  "displayName": "DMBG - Bus-Main-Ent-DA-techsupport - Fiber",
+  "priority": 500000,
+  "numTrainingPhrases": 7,
+  "dtmfPattern": "6"
+}

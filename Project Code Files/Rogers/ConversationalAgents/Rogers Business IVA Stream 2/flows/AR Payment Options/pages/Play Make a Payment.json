@@ -1,0 +1,32 @@
+{
+  "name": "3fb78c32-7ba8-44db-a23f-e8b1949aa4c5",
+  "displayName": "Play Make a Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Effectuer un paiement." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "OK. Make a payment." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "savedIntent",
+      "value": "make-a-payment"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Make a Payment",
+    "name": "16f61094-3b37-4c57-92bc-e599ca427589"
+  } ]
+}

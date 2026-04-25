@@ -1,0 +1,31 @@
+{
+  "name": "e75ef5be-9b5f-4430-a4a5-0b7f405eece6",
+  "displayName": "Check PTPCreate Eligibility",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.ptpCreateEligibilityInd = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PTP Category N Flow",
+    "name": "6ffdef80-5d5e-4fa2-899c-7ed8e3717185"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "business rule"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "8d531d53-e32e-4ccb-bc31-e502ef6575be"
+  } ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "140525ee-7b8e-4e86-b3bc-01bac5293828",
+  "displayName": "createOutageNotification",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "createOutageNotification",
+    "setParameterActions": [ {
+      "parameter": "selfServiceCompleted",
+      "value": true
+    }, {
+      "parameter": "completedSSName",
+      "value": "$sys.func.CONCATENATE(\"$session.params.completedSSName\",\",active-outageNotification\")"
+    }, {
+      "parameter": "reportingVar_completedSSName",
+      "value": "$session.params.completedSSName"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "outputAudioText": {
+          "ssml": "\u003cspeak\u003e\n\n\nThank you. You'll be notified once the service interruption has been resolved.\n\u003cbreak time=\"1.5s\"/\u003e\nIf you're done and want to end this call, simply hang up. \n\u003cbreak time=\"3s\"/\u003e\n\n\u003c/speak\u003e"
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "\n\n\nThank you. You'll be notified once the service interruption has been resolved.\n\u003cbreak time=\"1.5s\"/\u003e\nIf you're done and want to end this call, simply hang up. \n\u003cbreak time=\"3s\"/\u003e\n\n" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      } ]
+    },
+    "targetPage": "heardOutage",
+    "name": "562e6025-36c6-4da0-8e48-92ccb40eb047"
+  }, {
+    "condition": "$session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm unable to send a notification. if you're done, feel free to hang up." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      } ]
+    },
+    "targetPage": "heardOutage",
+    "name": "f1605d25-d8ac-47c9-a5f1-fc6deae0ccf3"
+  } ]
+}

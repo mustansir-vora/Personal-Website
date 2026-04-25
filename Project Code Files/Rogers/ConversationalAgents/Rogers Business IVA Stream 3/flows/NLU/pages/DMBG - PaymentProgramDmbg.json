@@ -1,0 +1,103 @@
+{
+  "name": "3a42f8f6-946d-4a5c-81cc-96777a9406c9",
+  "displayName": "DMBG - PaymentProgramDmbg",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Que souhaitez-vous faire : dites « conclure une entente de paiement » ou « financer un appareil »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Which would you like: say \"make a payment arrangement\" or \"finance a device\"." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - payment-program - Payment arrangement",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "payment-arrangement"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "e_PaymentProgramDmbg",
+        "value": "payment-arrangement"
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "9a0eab2e-7cfd-4aee-ae06-1e658e9526e7"
+  }, {
+    "intent": "DMBG - payment-program - Device Financing",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "device-financing"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "e_PaymentProgramDmbg",
+        "value": "device-financing"
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "bbbbff73-7cca-4e7d-9546-2fec6d721006"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "9b7e675a-cd1c-4ee0-8483-56d1a0b2b38e"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "1515255d-d478-4108-ba6a-c354640262f0"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

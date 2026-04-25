@@ -1,0 +1,25 @@
+{
+  "name": "03bc9413-73a0-489d-982b-8ba5a8fed1ff",
+  "displayName": "Check isTheNewestPayment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.paymentIndex \u003c 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Reset paymentIndex",
+    "name": "1c2e7d1c-86e7-472f-903d-c4b1faac8802"
+  }, {
+    "condition": "$session.params.paymentIndex \u003e= 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get currentPaymentHistoryObject",
+    "name": "95e6fd46-f7b7-4c72-be78-8807954896fb"
+  } ]
+}

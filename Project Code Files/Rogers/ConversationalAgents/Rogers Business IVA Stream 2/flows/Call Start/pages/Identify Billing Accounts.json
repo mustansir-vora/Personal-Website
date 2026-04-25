@@ -1,0 +1,151 @@
+{
+  "name": "6c8bc262-1898-4afa-8101-d9a4a5536eca",
+  "displayName": "Identify Billing Accounts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callstart",
+    "tag": "getAniIdentification"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.dirtyAni = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identificationApi",
+        "value": true
+      } ]
+    },
+    "targetPage": "Previous Page",
+    "name": "5041ef28-8112-450d-9612-d4648e6d900d"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.dirtyAni = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "customerIdentified",
+        "value": false
+      }, {
+        "parameter": "validANI",
+        "value": false
+      }, {
+        "parameter": "identificationApi",
+        "value": false
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "c4f74813-3400-4d1a-afc1-60660b3b59eb"
+  }, {
+    "condition": "$session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfBillingAccounts",
+        "value": 0
+      }, {
+        "parameter": " customerIdentified",
+        "value": false
+      }, {
+        "parameter": "identificationApi",
+        "value": false
+      } ]
+    },
+    "targetPage": "Previous Page",
+    "name": "88053fd4-0157-46d2-b822-c9565de388e4"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Previous Page",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": " customerIdentified",
+        "value": false
+      }, {
+        "parameter": "validAni",
+        "value": false
+      }, {
+        "parameter": "numberOfBillingAccounts",
+        "value": 0
+      } ]
+    },
+    "name": "f51c28ff-d4f1-4526-a632-51719bbde115"
+  }, {
+    "targetPage": "Previous Page",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "validAni",
+        "value": false
+      }, {
+        "parameter": "customerIdentified",
+        "value": false
+      }, {
+        "parameter": "numberOfBillingAccounts",
+        "value": 0
+      } ]
+    },
+    "name": "b4afe41a-4433-4c35-91dd-df0fe524a98b"
+  }, {
+    "targetPage": "Previous Page",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "customerIdentified",
+        "value": false
+      }, {
+        "parameter": "validAni",
+        "value": false
+      }, {
+        "parameter": "numberOfBillingAccounts",
+        "value": 0
+      } ]
+    },
+    "name": "b21c798a-b633-472f-902c-0ca71c9b5467"
+  }, {
+    "targetPage": "Previous Page",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "validAni",
+        "value": false
+      }, {
+        "parameter": "customerIdentified",
+        "value": false
+      }, {
+        "parameter": "numberOfBillingAccounts",
+        "value": 0
+      } ]
+    },
+    "name": "b61cbf60-9d00-46c5-9486-75612659bfd6"
+  }, {
+    "targetPage": "Previous Page",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "validAni",
+        "value": false
+      }, {
+        "parameter": "customerIdentified",
+        "value": false
+      }, {
+        "parameter": "numberOfBillingAccounts",
+        "value": 0
+      } ]
+    },
+    "name": "47f057bb-9380-45af-aa27-5b2d3850fc1d"
+  }, {
+    "targetPage": "Previous Page",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "customerIdentified",
+        "value": false
+      }, {
+        "parameter": "validAni",
+        "value": false
+      }, {
+        "parameter": "numberOfBillingAccounts",
+        "value": 0
+      } ]
+    },
+    "name": "bc1f1ab7-f4bd-4f11-9b74-9f97156e0b1a"
+  } ]
+}

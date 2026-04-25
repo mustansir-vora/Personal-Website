@@ -1,0 +1,18 @@
+{
+  "name": "6eec9f20-1f25-43db-9650-407bc58aa3ff",
+  "displayName": "Go to Payment Options",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Payment Options",
+    "name": "93fedddd-7116-41bc-83d0-3c87fa94d27f"
+  } ]
+}

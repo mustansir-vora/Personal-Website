@@ -1,0 +1,278 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’ai passé une commande pour une "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " et je ne l’ai toujours pas reçue; pouvez-vous m’aider ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’attendais une "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": ", mais elle n’a pas été livrée à mon adresse."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La livraison de ma "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " n’a pas encore eu lieu."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai commandé une "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": ", mais je ne l’ai toujours pas en main."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " n’a pas encore été expédiée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n’ai pas reçu la "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " de remplacement pour mon compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai demandé une nouvelle "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": ", mais elle n’a pas été livrée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " que je devais recevoir n’est toujours pas arrivée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide parce que la "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " que j’ai commandée n’a pas été reçue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n’ai rien reçu pour ma commande de "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "L’envoi de ma nouvelle "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " n’est pas arrivé à mon adresse."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’attends toujours la "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " que j’ai commandée le mois dernier."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " que j’ai demandée n’a pas été livrée à ce jour."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle parce que ma "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " n’est pas encore arrivée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai passé une commande en ligne pour une "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": ", et elle ne m’a pas été livrée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n’ai pas reçu la "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " que j’ai commandée pour ma nouvelle ligne."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " que j’ai demandée manque toujours à ma livraison."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai commandé une "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " la semaine dernière et elle n’est toujours pas arrivée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma commande de "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " indique qu’elle a été expédiée, mais je ne l’ai jamais reçue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’attendais ma nouvelle "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": ", mais elle n’est pas arrivée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai demandé une "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " de remplacement et je ne l’ai pas encore reçue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " que j’ai commandée ne m’a pas été livrée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n’ai toujours pas reçu la "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " que j’ai demandée en ligne."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma nouvelle "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": " était censée arriver, mais elle n’est pas apparue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai passé une commande pour une "
+    }, {
+      "text": "carte SIM",
+      "parameterId": "e_SIMType"
+    }, {
+      "text": ", mais je ne l’ai pas encore reçue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

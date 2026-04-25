@@ -1,0 +1,44 @@
+{
+  "name": "25b4fb55-d69c-4bab-8168-6f376c62cba5",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Accédez-vous à Internet à l’aide d’une carte SIM ou d’un téléphone mobile ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "oiu"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement Internet."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "false",
+      "npaProvince": "Ontario"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "savedIntent": "5GHI-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11403-Internet-Product-yes(AntennaNotProvided)",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 256,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

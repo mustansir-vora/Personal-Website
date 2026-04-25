@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@64394378:1738826059887" name="Check_IS_UAT_DNIS" version="6.0.1">
+<config>
+<source type="Class">com.farmers.adminHost.NonProdDNISCheck</source>
+</config>
+</decision>

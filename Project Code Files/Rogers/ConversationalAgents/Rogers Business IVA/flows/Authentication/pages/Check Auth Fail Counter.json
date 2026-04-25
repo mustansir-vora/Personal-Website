@@ -1,0 +1,49 @@
+{
+  "name": "e5b0bb30-7181-40e4-b207-c66803ac35c8",
+  "displayName": "Check Auth Fail Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.authFailRetryCounter \u003e 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I can't verify that number" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "authFailure",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "f6f8514e-f97d-44e6-afe2-9e840e7a4938"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I couldn't verify your information. let's try again." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "pinCollectionResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Enter Pin",
+    "name": "8a7145fa-e2e5-4d4f-bf54-84923ccbaeae"
+  } ]
+}

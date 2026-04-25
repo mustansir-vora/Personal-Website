@@ -1,0 +1,194 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Quelles fonctionnalités de ",
+      "auto": true
+    }, {
+      "text": "sécurité",
+      "auto": true
+    }, {
+      "text": " sont incluses dans les forfaits ",
+      "auto": true
+    }, {
+      "text": "O365",
+      "auto": true
+    }, {
+      "text": " offerts dans ",
+      "auto": true
+    }, {
+      "text": "le Marché",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "d’Applications d’Affaires de Rogers (RBAM",
+      "auto": true
+    }, {
+      "text": ")?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Y a-t-il ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " rabais si j’achète ",
+      "auto": true
+    }, {
+      "text": "O365",
+      "auto": true
+    }, {
+      "text": " par l’entremise de ",
+      "auto": true
+    }, {
+      "text": "Rogers",
+      "auto": true
+    }, {
+      "text": " plutôt que directement de Microsoft?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je gérer toutes mes applications et ma facturation via ",
+      "auto": true
+    }, {
+      "text": "le Marché d’Applications d’Affaires de Rogers (RBAM)",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment acheter ou ajouter des licences pour ",
+      "auto": true
+    }, {
+      "text": "O365",
+      "auto": true
+    }, {
+      "text": " dans ",
+      "auto": true
+    }, {
+      "text": "le Marché",
+      "auto": true
+    }, {
+      "text": " d’",
+      "auto": true
+    }, {
+      "text": "Applications d’Affaires",
+      "auto": true
+    }, {
+      "text": " de ",
+      "auto": true
+    }, {
+      "text": "Rogers",
+      "auto": true
+    }, {
+      "text": " (",
+      "auto": true
+    }, {
+      "text": "RBAM",
+      "auto": true
+    }, {
+      "text": ")?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le Marché",
+      "auto": true
+    }, {
+      "text": " d’Applications d’",
+      "auto": true
+    }, {
+      "text": "Affaires",
+      "auto": true
+    }, {
+      "text": " de ",
+      "auto": true
+    }, {
+      "text": "Rogers",
+      "auto": true
+    }, {
+      "text": " (RBAM) inclut-il des options Téléphonie Teams ou ",
+      "auto": true
+    }, {
+      "text": "Business",
+      "auto": true
+    }, {
+      "text": " Voice?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quelles fonctionnalités viennent avec Microsoft ",
+      "auto": true
+    }, {
+      "text": "365",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Business",
+      "auto": true
+    }, {
+      "text": " Premium comparativement à ",
+      "auto": true
+    }, {
+      "text": "Business",
+      "auto": true
+    }, {
+      "text": " Basic?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous expliquer quels forfaits Office ",
+      "auto": true
+    }, {
+      "text": "365",
+      "auto": true
+    }, {
+      "text": " sont disponibles via le ",
+      "auto": true
+    }, {
+      "text": "Marché d’Applications d’Affaires de Rogers (RBAM)",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour me renseigner au sujet d’",
+      "auto": true
+    }, {
+      "text": "O365",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

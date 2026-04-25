@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1309781642:1730744888311" name="CheckNLUFlowFlag_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckNLUFlowFlag_BC" default_exit_state="FALSE">
+        <exit_state name="TRUE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_NLU_FLOW_ENABLED" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

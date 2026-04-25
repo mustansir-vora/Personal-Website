@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1461081892:1711911870508" name="SharedMainMenu_Return" version="6.0.1">
+<subflow_call subflow_name="SharedServiceMainMenu" target="Element@31:1711912173643">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

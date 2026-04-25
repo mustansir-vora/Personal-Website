@@ -1,0 +1,7 @@
+{
+  "name": "1ecddc40-dcf1-4cab-be94-46d67bbc4696",
+  "displayName": "DMBG - Bus-Main-Ent-DA - Tech Support",
+  "priority": 500000,
+  "numTrainingPhrases": 7,
+  "dtmfPattern": "3"
+}

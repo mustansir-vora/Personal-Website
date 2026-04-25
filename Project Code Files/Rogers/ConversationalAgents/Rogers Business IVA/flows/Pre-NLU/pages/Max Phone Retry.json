@@ -1,0 +1,83 @@
+{
+  "name": "f290699c-c41a-4a33-bfe0-88ef84994f58",
+  "displayName": "Max Phone Retry",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.idType = \"account\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J’ai de la difficulté à trouver votre compte. Continuons." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I am having an issue finding your account. Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unIdentifiedCustomer"
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "aaa6bc1f-f34f-4b28-9a54-e69a48f759c5"
+  }, {
+    "condition": "$session.params.idType != \"account\" AND $session.params.accountNumberAskedFlag = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J'ai de la difficulté à trouver votre compte. Continuons." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I am having an issue finding your account. Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "46892cc3-d37c-466d-9ec1-d67eee74f75b"
+  }, {
+    "condition": "$session.params.idType != \"account\" AND $session.params.accountNumberAskedFlag != true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nous n'avons pas trouvé votre compte. Vous pouvez essayer d'utiliser votre numéro de compte." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "We couldn't find your account. You can try using your account number" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "c5f56e15-3a70-46ec-96ab-1fc2bdcbdb54"
+  } ]
+}

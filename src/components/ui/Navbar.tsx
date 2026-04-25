@@ -17,27 +17,39 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Simple scroll spy logic
-      const sections = NAV_ITEMS.map(item => ({
-        id: item.name,
-        element: document.getElementById(item.href.substring(1))
-      }));
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section.element) {
-          const rect = section.element.getBoundingClientRect();
-          if (rect.top <= 200) {
-            setActiveItem(section.id);
-            break;
-          }
-        }
-      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-40% 0px -40% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const navItem = NAV_ITEMS.find(item => item.href.substring(1) === entry.target.id);
+          if (navItem) {
+            setActiveItem(navItem.name);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Initial check since observer only triggers on crossing threshold
+    setTimeout(() => {
+      NAV_ITEMS.forEach((item) => {
+        const element = document.getElementById(item.href.substring(1));
+        if (element) observer.observe(element);
+      });
+    }, 100);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, name: string) => {

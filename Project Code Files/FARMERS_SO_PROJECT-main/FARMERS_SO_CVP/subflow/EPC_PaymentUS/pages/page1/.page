@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@494840241:1707389276832" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1707389276832" name="EPC_PaymentUS_Return_Transfer" type="Subflow Start" width="223" x="321" y="-116">
+<exit_states>
+<exit_state name="next" target="Element@834383880:1707391058940"/>
+</exit_states>
+</element>
+<element height="46" id="Element@834383880:1707391058940" name="Is Business Unit Equal to FWS" type="Decision" width="203" x="329" y="-21">
+<exit_states>
+<exit_state name="YES" target="Element@1298458739:1710841378467"/>
+<exit_state name="NO" target="Element@1422055438:1707391175421"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1422055438:1707391175421" name="Valid 10 digit ANI" type="Decision" width="140" x="360" y="64">
+<exit_states>
+<exit_state name="YES" target="Element@539254970:1710841409451"/>
+<exit_state name="NO" target="Element@948122901:1709275292033"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1480387752:1707391374616" name="Shared Transfer" type="Subflow Call" width="130" x="360" y="448">
+<subflow_call subflow_name="Transfer" target="Element@31:1710612006500">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1530028513:1709704633890"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1661921651:1707913011904" name="EPCUS_HOST_002" type="Decision" width="143" x="355" y="311">
+<exit_states>
+<exit_state name="SU" target="Element@1501775260:1745594722878"/>
+<exit_state name="ER" target="Element@1480387752:1707391374616">
+<bendpoint>
+<dim1 x="61" y="57"/>
+<dim2 x="62" y="-54"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@166524409:1708411852018" name="EPCUS_HOST_001" type="Decision" width="143" x="102" y="301">
+<exit_states>
+<exit_state name="SU" target="Element@1480387752:1707391374616"/>
+<exit_state name="ER" target="Element@1480387752:1707391374616">
+<bendpoint>
+<dim1 x="-1" y="144"/>
+<dim2 x="-253" y="-3"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@599693165:1708429077206" name="EPCUS_MN_001_VALUE" type="Decision" width="172" x="598" y="332">
+<exit_states>
+<exit_state name="SU" target="Element@1661921651:1707913011904"/>
+<exit_state name="NOINPUT" target="Element@431703608:1709731972254"/>
+<exit_state name="NOMATCH" target="Element@1480387752:1707391374616"/>
+<exit_state name="ER" target="Element@1480387752:1707391374616">
+<bendpoint>
+<dim1 x="-1" y="109"/>
+<dim2 x="262" y="1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@948122901:1709275292033" name="EPCUS_MN_001_Call" type="Subflow Call" width="166" x="604" y="64">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709704487606">
+<config>
+<argument_data>
+<data name="MenuID">EPCUS_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@599693165:1708429077206"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1530028513:1709704633890" name="Subflow Return_01" type="Subflow Return" width="148" x="351" y="548"/>
+<element height="46" id="Element@431703608:1709731972254" name="Disc" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="72" x="703" y="432">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2019645296:1710841378467" name="Warhead" type="Subflow Call" width="97" x="123" y="187">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710838177515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@166524409:1708411852018"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1298458739:1710841378467" name="SET_API_NAME" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="130" x="115" y="72">
+<exit_states>
+<exit_state name="done" target="Element@2019645296:1710841378467"/>
+</exit_states>
+</element>
+<element height="46" id="Element@627662791:1710841409451" name="Warhead1" type="Subflow Call" width="133" x="359" y="254">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710838177515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1661921651:1707913011904"/>
+</exit_states>
+</element>
+<element height="46" id="Element@539254970:1710841409451" name="SET_API_NAME1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="136" x="357" y="159">
+<exit_states>
+<exit_state name="done" target="Element@627662791:1710841409451"/>
+</exit_states>
+</element>
+<element height="46" id="Element@291536719:1745594722878" name="EPC_PaymentUS_Flag" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="164" x="108" y="515">
+<exit_states>
+<exit_state name="done" target="Element@1480387752:1707391374616"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1501775260:1745594722878" name="IS_FDS_BU_01" type="Decision" width="121" x="301" y="370">
+<exit_states>
+<exit_state name="Yes" target="Element@291536719:1745594722878"/>
+<exit_state name="No" target="Element@1480387752:1707391374616"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,12 @@
+{
+  "name": "4c485ae4-c70e-42d2-8dac-8bf07d3dcd31",
+  "displayName": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+  "genericWebService": {
+    "uri": "https://gcp-yul-crsrv-cct-iva-r4b-selfserv-dev-01-106267503728.northamerica-northeast1.run.app",
+    "webhookType": "STANDARD",
+    "serviceAgentAuth": "ID_TOKEN"
+  },
+  "timeout": {
+    "seconds": 30
+  }
+}

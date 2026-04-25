@@ -1,0 +1,211 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "On m'a dit d'appeler le soutien technique."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin de parler à quelqu'"
+    }, {
+      "text": "un"
+    }, {
+      "text": " concernant "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème technique."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon service"
+    }, {
+      "text": " ne fonctionne pas correctement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'aide pour régler "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème technique."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai de la difficulté avec la configuration."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'aide concernant le matériel."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre service"
+    }, {
+      "text": " présente des dysfonctionnements."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'aide pour "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème de connexion."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai des problèmes de puissance du signal."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'aide concernant le réseau de "
+    }, {
+      "text": "mon bureau"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon service est"
+    }, {
+      "text": " instable."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'aide concernant "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème avec "
+    }, {
+      "text": "un"
+    }, {
+      "text": " appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai des problèmes avec "
+    }, {
+      "text": "notre service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m'aider à régler ce problème ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'aide pour "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème technique."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n'ai aucun "
+    }, {
+      "text": "service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'aide pour "
+    }, {
+      "text": "une"
+    }, {
+      "text": " panne de "
+    }, {
+      "text": "service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre connexion Internet "
+    }, {
+      "text": "au bureau est"
+    }, {
+      "text": " lente."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre connexion Internet ne fonctionne pas, j'ai besoin de contacter le soutien technique."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'aide concernant "
+    }, {
+      "text": "un"
+    }, {
+      "text": " mauvais fonctionnement de "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": " en "
+    }, {
+      "text": "magasin"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'"
+    }, {
+      "text": "un"
+    }, {
+      "text": " technicien pour régler "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème avec "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

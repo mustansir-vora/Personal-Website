@@ -1,0 +1,28 @@
+{
+  "name": "92eaa0ae-c314-4a16-91e0-5390b7bac918",
+  "displayName": "Play PastDueBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "This includes a past due balance of $ $session.params.api.billingProfile.balanceDetails.pastDueBalance" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Cela comprend un solde en souffrance de $session.params.api.billingProfile.balanceDetails.pastDueBalance\r\n" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Bill Close Date",
+    "name": "4a984abd-5fec-4819-9a06-fc70342842d1"
+  } ]
+}

@@ -1,0 +1,355 @@
+{
+  "name": "a9d8f976-4fd0-46d5-a025-556b92d9a890",
+  "displayName": "Reusable Phone Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.smsPhoneNumberScript = \"NA\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Quel numéro souhaitez‑vous utiliser?" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "What number would you like to use?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "$session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "$session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.smsPhoneNumberScript = \"NA\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Désolé, je n’ai pas pu valider ce numéro. Réessayons. Quel numéro souhaitez‑vous utiliser?" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I couldn't validate that number. Let's try again. what number would you like to use?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Désolé, je n'ai pas pu valider ce numéro. Essayons encore. $session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I couldn't validate that number. Let's try again. $session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.smsPhoneNumberScript = \"NA\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Désolé, je n’ai pas entendu. Quel numéro souhaitez‑vous utiliser?" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, i couldn't hear that, what number would you like to use?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Je suis désolé, je n'ai pas entendu" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "$session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I couldn't hear that." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "$session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.smsPhoneNumberScript = \"NA\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Désolé, je n’ai toujours pas entendu. Vous pouvez dire ou entrer le numéro que vous souhaitez utiliser." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, i  still couldn't hear that, You can say or enter the number you would like to use." ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Je suis désolé, je n'ai toujours pas entendu." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "$session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I still couldn't hear that." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "$session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.smsPhoneNumberScript = \"NA\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Désolé, je n’ai toujours pas pu valider ce numéro. Réessayons. Vous pouvez dire ou entrer le numéro que vous souhaitez utiliser." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I still couldn't validate that number. Let's try again. You can say or enter  the number you would like to use." ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Désolé, je n'ai toujours pas été capable de valider ce numéro. Essayons encore." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "$session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I still couldn't validate that number. Let's try again." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "$session.params.smsPhoneNumberScript" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "PhoneNumberMn-Digit",
+    "condition": "$session.params.phoneNumber != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "reusablePhone",
+        "value": "$sys.func.SUBSTITUTE($session.params.phoneNumber, \"\\s+\", \"\")"
+      }, {
+        "parameter": "reusablePhone",
+        "value": "$sys.func.SUBSTITUTE($session.params.reusablePhone, \"-\", \"\")"
+      } ]
+    },
+    "targetPage": "ITN Validation LookUp",
+    "name": "d76af6a8-3e29-41a7-9a91-f4a3c1ae83aa"
+  }, {
+    "intent": "PhoneNumberMn-Digit",
+    "condition": "$session.params.phoneNumber = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "0114d465-ab93-4d0a-b137-378896ed2aaf"
+  }, {
+    "intent": "ReusablePhoneMn-Don't Know",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "d'accord" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectPhoneNumberCounter",
+        "value": 0
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "SMS Wrap Up",
+    "name": "430c4e4b-2029-42d1-a771-76f283f48240"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "collectPhoneNumberCounter",
+        "value": 0
+      }, {
+        "parameter": "smsStatus",
+        "value": "collection_error"
+      } ]
+    },
+    "targetPage": "SMS Wrap Up",
+    "name": "29a9a566-d080-41de-bb97-73dbc9275a80"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "6b9161ca-1451-4035-a8ad-4465b23bb758"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "b5b252ee-792c-4d7e-bed9-fbbd2081835a"
+  } ]
+}

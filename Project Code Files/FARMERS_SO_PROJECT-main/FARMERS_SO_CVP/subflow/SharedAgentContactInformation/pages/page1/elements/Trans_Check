@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@228242096:1707471843567" name="Trans_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Trans_Check" default_exit_state="Others">
+        <exit_state name="FWS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="Brand" />
+                </data>
+                <constant_string value="FWS" />
+            </string>
+        </exit_state>
+        <exit_state name="21" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="Brand" />
+                </data>
+                <constant_string value="21" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

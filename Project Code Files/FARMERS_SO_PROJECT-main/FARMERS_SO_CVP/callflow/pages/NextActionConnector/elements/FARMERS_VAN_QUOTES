@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1490315083:1732551203570" name="FARMERS_VAN_QUOTES" version="6.0.1">
+<subflow_call subflow_name="FarmersVanity" target="Element@31:1711898911423">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

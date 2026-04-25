@@ -1,0 +1,129 @@
+{
+  "name": "2357ca58-7ea6-47ec-8985-4788cf6c9abb",
+  "displayName": "DMBG - returnCableBoxDisambig",
+  "form": {
+    "parameters": [ {
+      "displayName": "DMBG-returnCableBoxDisambigResponse",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetFlow": "Global Error Handling",
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "LastStdError",
+              "value": "NI"
+            }, {
+              "parameter": "DMBG-returnCableBoxDisambigResponse",
+              "value": null
+            } ]
+          },
+          "name": "e5ce414d-d010-4c76-bf11-9618acec8c71"
+        }, {
+          "targetFlow": "Global Error Handling",
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "LastStdError",
+              "value": "NM"
+            }, {
+              "parameter": "DMBG-returnCableBoxDisambigResponse",
+              "value": null
+            } ]
+          },
+          "name": "14667d0b-e1a1-4260-8a51-ba14f8c53ced"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Are you returning equipment following a move? " ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Retournez-vous de l’équipement à la suite d’un déménagement?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.DMBG-returnCableBoxDisambigResponse != null AND $session.params.DMBG-returnCableBoxDisambigResponse = \"Yes\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "equipment-return-after-move"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "DMBG-returnCableBoxDisambigResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "7d185934-5108-4cb6-9d6c-441ff7cdf982"
+  }, {
+    "condition": "$session.params.DMBG-returnCableBoxDisambigResponse != null AND $session.params.DMBG-returnCableBoxDisambigResponse = \"No\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "equipment-return-general"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "DMBG-returnCableBoxDisambigResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "669e2488-70ab-4ba2-a0cc-37b56ed92bf8"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "ff3fdde1-7d8f-46e0-ba54-a22cbf46e697"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "8aea55b4-560f-4956-b744-d63d25763605"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

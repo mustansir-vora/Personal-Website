@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1657743889:1711547594676" name="FMST_COLLECT_PL_ONLY" version="6.0.1">
+<subflow_call subflow_name="FmstCollectPolicyOnly" target="Element@31:1711790878120">
+<config/>
+</subflow_call>
+</connector>

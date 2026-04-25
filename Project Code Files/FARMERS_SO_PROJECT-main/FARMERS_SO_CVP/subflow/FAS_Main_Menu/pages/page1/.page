@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@387154525:1708061236664" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708061236664" name="FAS_Main_Menu" type="Subflow Start" width="178" x="-78" y="-70">
+<exit_states>
+<exit_state name="next" target="Element@1829109420:1713800122376"/>
+</exit_states>
+</element>
+<element height="55" id="Element@258425622:1708061297334" name="Shared_Entry_Mod" type="Subflow Call" width="197" x="219" y="90">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1711648456556">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1319172012:1741280711349"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2051838713:1708061621262" name="Checking_State_Code" type="Decision" width="217" x="220" y="339">
+<exit_states>
+<exit_state name="YES" target="Element@1235842667:1709027528189"/>
+<exit_state name="NO" target="Element@1420439449:1713370029802"/>
+</exit_states>
+</element>
+<element height="55" id="Element@409416715:1708061866144" name="FASMM_MN_002_VALUE" type="Decision" width="243" x="876" y="343">
+<exit_states>
+<exit_state name="YES" target="Element@677444907:1708061993603"/>
+<exit_state name="NO" target="Element@1420439449:1713370029802"/>
+<exit_state name="ER" target="Element@677444907:1708061993603">
+<bendpoint>
+<dim1 x="250" y="94"/>
+<dim2 x="-159" y="94"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1420439449:1713370029802">
+<bendpoint>
+<dim1 x="24" y="72"/>
+<dim2 x="121" y="-27"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1287661639:1731527248719"/>
+<exit_state name="representative" target="Element@335560743:1730256326339"/>
+</exit_states>
+</element>
+<element height="55" id="Element@677444907:1708061993603" name="Shared_Transfer" type="Subflow Call" width="173" x="1319" y="316">
+<subflow_call subflow_name="Transfer" target="Element@31:1711648500634">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1443035825:1709450290931"/>
+</exit_states>
+</element>
+<element height="55" id="Element@602617045:1708063207391" name="FAS_Policy_Collection" type="Page Connector" width="217" x="552" y="1084">
+<page_connector target="Element@638342484:1708063223804">FAS_Policy_Collection<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@792055722:1708065139047" name="FASMM_MN_001_EXITSTATES" type="Page Entry" width="360" x="1240" y="196">
+<exit_states>
+<exit_state name="next" target="Element@677444907:1708061993603"/>
+</exit_states>
+</element>
+<element height="55" id="Element@370749358:1708491505925" name="AgentPost_API" type="Decision" width="172" x="473" y="550">
+<exit_states>
+<exit_state name="SU" target="Element@478517972:1743443077625"/>
+<exit_state name="ER" target="Element@478517972:1743443077625">
+<bendpoint>
+<dim1 x="53" y="74"/>
+<dim2 x="49" y="-72"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1235842667:1709027528189" name="FASMM_MN_002_Call" type="Subflow Call" width="269" x="504" y="343">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709027594878">
+<config>
+<argument_data>
+<data name="MenuID">FASMM_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@409416715:1708061866144"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1443035825:1709450290931" name="Subflow Return_01" type="Subflow Return" width="198" x="917" y="141"/>
+<element height="55" id="Element@1354476892:1710147085446" name="Warhead_Flow" type="Subflow Call" width="164" x="178" y="459">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1711648470434">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2047275263:1717661647081"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1828967828:1711098381215" name="SET_POLICY" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="178" x="222" y="1046">
+<exit_states>
+<exit_state name="done" target="Element@602617045:1708063207391"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1842505072:1711640287610" name="CheckEntryPoint_BC" type="Decision" width="205" x="18" y="24">
+<exit_states>
+<exit_state name="ER" target="Element@258425622:1708061297334"/>
+<exit_state name="CONT" target="Element@1828967828:1711098381215">
+<bendpoint>
+<dim1 x="-2" y="570"/>
+<dim2 x="-217" y="-320"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NLU" target="Element@252265230:1712387596744"/>
+<exit_state name="INITIAL" target="Element@258425622:1708061297334">
+<bendpoint>
+<dim1 x="143" y="16"/>
+<dim2 x="-53" y="-50"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1628295735:1711719586606" name="SET_FlowName" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="233" y="819">
+<exit_states>
+<exit_state name="done" target="Element@55786874:1711787493034"/>
+</exit_states>
+</element>
+<element height="55" id="Element@55786874:1711787493034" name="NLUReturn" type="Subflow Return" width="148" x="242" y="940"/>
+<element height="55" id="Element@1666950168:1712161928652" name="CheckNLUInvokedFlag" type="Decision" width="227" x="622" y="820">
+<exit_states>
+<exit_state name="YES" target="Element@1828967828:1711098381215"/>
+<exit_state name="NO" target="Element@1628295735:1711719586606"/>
+</exit_states>
+</element>
+<element height="55" id="Element@252265230:1712387596744" name="NLU_CHECK" type="Decision" width="144" x="566" y="-82">
+<exit_states>
+<exit_state name="NA" target="Element@428596458:1712387956557"/>
+<exit_state name="FAS_POLICY_MAINMENU" target="Element@579045650:1712387808912">
+<bendpoint>
+<dim1 x="198" y="54"/>
+<dim2 x="-173" y="-44"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@579045650:1712387808912" name="FAS_Policy_Collection" type="Page Connector" width="217" x="901" y="16">
+<page_connector target="Element@638342484:1708063223804">FAS_Policy_Collection<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@405811246:1712387904278" name="FASPolicy_MainMenu" type="Page Entry" width="216" x="539" y="985">
+<exit_states>
+<exit_state name="next" target="Element@1828967828:1711098381215"/>
+</exit_states>
+</element>
+<element height="55" id="Element@428596458:1712387956557" name="ENTRY_NLU" type="Page Connector" width="165" x="609" y="183">
+<page_connector target="Element@943511420:1711647246003">ENTRY_NLU<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1101004593:1713114683228" name="IIP_Table_State" type="Decision" width="163" x="249" y="257">
+<exit_states>
+<exit_state name="SU" target="Element@2051838713:1708061621262"/>
+<exit_state name="ER" target="Element@677444907:1708061993603"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1420439449:1713370029802" name="FASMM_ADM_001" type="Decision" width="197" x="748" y="464">
+<exit_states>
+<exit_state name="SU" target="Element@2021468968:1715173224347"/>
+<exit_state name="ER" target="Element@2021468968:1715173224347"/>
+</exit_states>
+</element>
+<element height="51" id="Element@2127715660:1713370483265" name="FASMM_MN_001_EXITSTATES" type="Page Connector" width="202" x="139" y="637">
+<page_connector target="Element@792055722:1708065139047">FASMM_MN_001_EXITSTATES<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1829109420:1713800122376" name="CheckFromFASCallInitReq_NLU" type="Decision" width="292" x="160" y="-68">
+<exit_states>
+<exit_state name="Y" target="Element@1255288705:1713800209357"/>
+<exit_state name="N" target="Element@1842505072:1711640287610"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1255288705:1713800209357" name="ResetFASCallInitValue" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="242" x="397" y="28">
+<exit_states>
+<exit_state name="done" target="Element@428596458:1712387956557"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2021468968:1715173224347" name="SET_API_NAME3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="484" y="463">
+<exit_states>
+<exit_state name="done" target="Element@1354476892:1710147085446"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2047275263:1717661647081" name="IVRProperty_isANIBypassed" type="Decision" width="239" x="147" y="550">
+<exit_states>
+<exit_state name="YES" target="Element@478517972:1743443077625"/>
+<exit_state name="NO" target="Element@370749358:1708491505925"/>
+</exit_states>
+</element>
+<element height="55" id="Element@335560743:1730256326339" name="Copy_of_Global_Rep_Handling" type="Decision" width="214" x="1084" y="549">
+<exit_states>
+<exit_state name="CONT" target="Element@1420439449:1713370029802"/>
+<exit_state name="TR" target="Element@677444907:1708061993603"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1287661639:1731527248719" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="217" x="874" y="230">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1319172012:1741280711349" name="Check_Cust_Agent" type="Decision" width="194" x="227" y="180">
+<exit_states>
+<exit_state name="LoopBackToFlow" target="Element@1715412449:1741280748942"/>
+<exit_state name="N" target="Element@1101004593:1713114683228"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1275009291:1741280748942" name="SharedServiceMain" type="Subflow Call" width="199" x="-111" y="319">
+<subflow_call subflow_name="SharedServiceMainMenu" target="Element@31:1714512414276">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1443035825:1709450290931"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1715412449:1741280748942" name="SET_Return_MainMenu" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="227" x="-115" y="204">
+<exit_states>
+<exit_state name="done" target="Element@1275009291:1741280748942"/>
+</exit_states>
+</element>
+<element height="55" id="Element@478517972:1743443077625" name="Award_DMorPC" type="Decision" width="185" x="471" y="696">
+<exit_states>
+<exit_state name="PC" target="Element@2127715660:1713370483265"/>
+<exit_state name="DM" target="Element@2127715660:1713370483265">
+<bendpoint>
+<dim1 x="-172" y="6"/>
+<dim2 x="151" y="67"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Others" target="Element@1666950168:1712161928652"/>
+<exit_state name="PRIME" target="Element@2127715660:1713370483265">
+<bendpoint>
+<dim1 x="-184" y="50"/>
+<dim2 x="139" y="111"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

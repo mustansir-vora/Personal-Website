@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1146066222:1708930330006" name="FASPC_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.FASPC_MN_001_VALUE</source>
+</config>
+</decision>

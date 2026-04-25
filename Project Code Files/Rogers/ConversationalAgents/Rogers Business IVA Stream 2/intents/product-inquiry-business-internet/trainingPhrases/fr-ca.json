@@ -1,0 +1,80 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je recherche de l'information à propos de l'Internet pour ma compagnie.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma nouvelle compagnie a besoin d'",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " connection ",
+      "auto": true
+    }, {
+      "text": "stable",
+      "auto": true
+    }, {
+      "text": " et rapide, J'ai besoin de parler à quelqu'",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " qui pourra m'aider.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Combien coute ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " connection de 1Go pour ma ",
+      "auto": true
+    }, {
+      "text": "campagnie",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ouvre ",
+      "auto": true
+    }, {
+      "text": "un nouveau magasin",
+      "auto": true
+    }, {
+      "text": " et j'ai besoin que l'internet soit installé avant l'ouverture.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je rajoute internet pour ma ",
+      "auto": true
+    }, {
+      "text": "PME",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

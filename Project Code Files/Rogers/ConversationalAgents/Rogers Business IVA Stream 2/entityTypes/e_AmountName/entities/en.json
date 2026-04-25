@@ -1,0 +1,19 @@
+{
+  "entities": [ {
+    "value": "current balance",
+    "synonyms": [ "balance", "balance due", "current amount", "current balance" ],
+    "languageCode": "en"
+  }, {
+    "value": "ipp",
+    "synonyms": [ "deferred payment plan", "installment payment plan", "ipp" ],
+    "languageCode": "en"
+  }, {
+    "value": "past due balance",
+    "synonyms": [ "late balance", "minimum amount", "minimum balance", "outstanding biil", "overdue balance", "past due amount", "past due balance", "unpaid balance" ],
+    "languageCode": "en"
+  }, {
+    "value": "ptp",
+    "synonyms": [ "arrange payment", "payment arrangement", "payment promise", "promise to pay", "ptp", "scheduled payment" ],
+    "languageCode": "en"
+  } ]
+}

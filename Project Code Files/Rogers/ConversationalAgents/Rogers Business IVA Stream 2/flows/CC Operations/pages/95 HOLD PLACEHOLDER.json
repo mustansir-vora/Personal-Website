@@ -1,0 +1,20 @@
+{
+  "name": "a6d6dce0-6da0-4fb4-bbff-d69082423562",
+  "displayName": "95 HOLD PLACEHOLDER",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Use Previous Card",
+    "name": "2ed57f1b-af8c-4892-a4c4-d762eb3d7026",
+    "description": "TO:DO - When done waiting we are to route it back to use previous card.\n\nNot fully sending back to use previous card here as it results in an infinite loop"
+  } ],
+  "description": "Not fully sending back to use previous card here as it results in an infinite loop"
+}

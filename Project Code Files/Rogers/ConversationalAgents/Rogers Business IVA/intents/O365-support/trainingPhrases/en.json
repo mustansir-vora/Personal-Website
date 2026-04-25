@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "After buying Teams Calling in RBAM, it’s not connecting to PSTN."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can’t create user groups or manage permissions in RBAM."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need help renewing or canceling my O"
+    }, {
+      "text": "365"
+    }, {
+      "text": " subscription in RBAM."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My licenses in RBAM and Office "
+    }, {
+      "text": "365"
+    }, {
+      "text": " are out of sync—can you fix this?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I purchased Office "
+    }, {
+      "text": "365"
+    }, {
+      "text": " through RBAM, but my email isn’t working."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

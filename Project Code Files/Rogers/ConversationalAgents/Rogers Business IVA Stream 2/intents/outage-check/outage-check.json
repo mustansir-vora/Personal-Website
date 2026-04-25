@@ -1,0 +1,7 @@
+{
+  "name": "69b4ae9e-a782-496a-9e76-853b27a05593",
+  "displayName": "outage-check",
+  "priority": 500000,
+  "description": "Handles inquiries about service outages or network disruptions in the user’s area.",
+  "numTrainingPhrases": 60
+}

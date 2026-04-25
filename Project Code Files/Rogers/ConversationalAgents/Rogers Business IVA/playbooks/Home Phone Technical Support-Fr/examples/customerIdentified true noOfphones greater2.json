@@ -1,0 +1,68 @@
+{
+  "name": "45d023ca-8bbd-4df4-b2d3-cb0f080a0cad",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie résidentielle. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide."
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_wireless_home_phone",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": "true"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Other",
+          "linkedAccountSystem": "532909633"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportTv",
+      "completedSSName": "passive-techSupportTv",
+      "customerIdentified": "true",
+      "numberOfPhone": "2",
+      "reportingVar_attemptedSSName": "passive-techSupportTv",
+      "reportingVar_completedSSName": "passive-techSupportTv",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportTv,passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportTv,passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportTv,passive-techSupportHomePhone",
+      "reportingVar_attemptedSSName": "passive-techSupportTv,passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportTv,passive-techSupportHomePhone",
+      "savedIntent": "WHP-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Other",
+        "linkedAccountSystem": "532909633"
+      }
+    }
+  },
+  "displayName": " customerIdentified true noOfphones greater2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 451,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

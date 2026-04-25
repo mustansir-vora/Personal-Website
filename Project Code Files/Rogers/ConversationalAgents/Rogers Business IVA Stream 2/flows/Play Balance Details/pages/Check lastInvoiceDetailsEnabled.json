@@ -1,0 +1,35 @@
+{
+  "name": "c595a7f1-0350-4e69-9f9f-e2db7dbd778a",
+  "displayName": "Check lastInvoiceDetailsEnabled",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.app.config.lastInvoiceDetailsEnabled = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play NotAvailable",
+    "name": "4aa41659-2b20-4b59-973e-3a1edf58a517"
+  }, {
+    "condition": "$session.params.app.config.lastInvoiceDetailsEnabled = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId20"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "f54edc58-07a5-4524-a070-15a3dd86497c"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check byPass getBillingProfile",
+    "name": "ee36d724-f813-41cf-925d-85d8da511491"
+  } ]
+}

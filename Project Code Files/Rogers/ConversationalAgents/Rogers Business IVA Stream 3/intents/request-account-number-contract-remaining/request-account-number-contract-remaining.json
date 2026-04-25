@@ -1,0 +1,7 @@
+{
+  "name": "a32457fd-1664-4c94-84af-6ea2ddb26d86",
+  "displayName": "request-account-number-contract-remaining",
+  "priority": 500000,
+  "description": "Handles caller inquiries about their account number when the request is unclear or not specific.",
+  "numTrainingPhrases": 50
+}

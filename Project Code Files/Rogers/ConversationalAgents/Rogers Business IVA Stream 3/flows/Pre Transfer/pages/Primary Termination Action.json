@@ -1,0 +1,105 @@
+{
+  "name": "4079086d-424c-43b6-9130-6d74032ac235",
+  "displayName": "Primary Termination Action",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "callActionType",
+      "value": "$session.params.primaryActionType"
+    }, {
+      "parameter": "reportingVar_actionType",
+      "value": "$session.params.primaryActionType"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.primaryActionType = \"NA\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Default Termination Action",
+    "name": "be9411cc-827a-4b7e-ae5d-05d4cd15cdc8"
+  }, {
+    "condition": "$session.params.primaryActionType = \"termination\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "End"
+      }, {
+        "parameter": "terminationFlag",
+        "value": true
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.primaryScriptContent = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.primaryScriptContent" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.primaryScriptContent" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "End Call Routing",
+    "name": "c5f5e620-fe2e-499a-a68b-c0605ea3bf04"
+  }, {
+    "condition": "$session.params.primaryActionType = \"transfer\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.primaryScriptContent" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "Transfer"
+      } ]
+    },
+    "targetPage": "End Call Routing",
+    "name": "8abde1cf-131c-45f6-82e3-a50bc9165bd1"
+  }, {
+    "condition": "$session.params.primaryActionType = \"returnToMainMenu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "67ab0d73-bacd-4c25-803b-3694e5959598"
+  }, {
+    "condition": "$session.params.primaryActionType = \"digitalDeflection\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Send SMS",
+    "name": "4a0d0d33-02b5-4812-bc7f-91996f8556a4"
+  }, {
+    "condition": "$session.params.sendSMS = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Call Routing",
+    "name": "baef5cd3-9ec7-42d2-b45e-1c98965c91be"
+  }, {
+    "condition": "$session.params.sendSMS = false OR $session.params.sendSMS = null OR $session.params.sendSMS = \"\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Secondary Termination Action",
+    "name": "f3949ee3-0007-478a-adc4-1c147f347aec"
+  } ]
+}

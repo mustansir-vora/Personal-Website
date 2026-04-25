@@ -1,0 +1,7 @@
+{
+  "name": "d20913e4-b2c6-41f8-8cda-17114e4d8551",
+  "displayName": "wrong-device-received",
+  "priority": 500000,
+  "description": "Handles reports that the customer received an incorrect device in an order.",
+  "numTrainingPhrases": 41
+}

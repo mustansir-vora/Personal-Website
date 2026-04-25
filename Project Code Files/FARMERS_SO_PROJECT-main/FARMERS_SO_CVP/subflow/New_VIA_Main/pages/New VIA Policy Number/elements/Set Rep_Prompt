@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1572034110:1745498345016" name="Set Rep_Prompt" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">"I recognize you're asking for a representative but providing your information will allow me to better assist you."</setting>
+<setting name="sessNames">Rep_Prompt</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "^[A-Za-z][-\\s]*\\d[-\\s]*[A-Za-z][-\\s]*\\d[-\\s]*[A-Za-z][-\\s]*\\d$",
+    "synonyms": [ "^[A-Za-z][-\\s]*\\d[-\\s]*[A-Za-z][-\\s]*\\d[-\\s]*[A-Za-z][-\\s]*\\d$" ],
+    "languageCode": "en"
+  }, {
+    "value": "^[A-Za-z]\\d[A-Za-z]\\d[A-Za-z]\\d$",
+    "synonyms": [ "^[A-Za-z]\\d[A-Za-z]\\d[A-Za-z]\\d$" ],
+    "languageCode": "en"
+  } ]
+}

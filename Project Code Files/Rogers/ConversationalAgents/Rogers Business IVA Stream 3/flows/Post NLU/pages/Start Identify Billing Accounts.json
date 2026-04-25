@@ -1,0 +1,118 @@
+{
+  "name": "109d0b78-7460-42f7-ac9d-b8853efeb667",
+  "displayName": "Start Identify Billing Accounts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callstart",
+    "tag": "getAniIdentification",
+    "setParameterActions": [ {
+      "parameter": "callerIdType",
+      "value": "phone"
+    }, {
+      "parameter": "ani",
+      "value": "$session.params.phoneNumberCollection"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = 0 AND $session.params.numberOfBillingAccounts \u003e= 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Dirty Ani",
+    "name": "4a6f04e2-a494-42f2-9ffd-8d193aeab407"
+  }, {
+    "condition": "$session.params.returnCode = 1 OR $session.params.numberOfBillingAccounts = 0 OR $session.params.numberOfBillingAccounts = \"NA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "apiFailureCounter",
+        "value": 2
+      }, {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "1b4221c1-1991-403a-9673-cb31ba966e4d"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "8e7ad77f-62f5-4670-8d9c-c5908f220e57"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "d32b0956-d637-4855-803b-b72fcfce5e7d"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "90196833-17c0-4b78-8e26-ab776db13620"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "b9c3ba78-4736-4721-8d45-b87fdc677955"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "52682417-5e8f-4948-98e2-b0dc57a6b1e4"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "1c11dacf-b83d-4933-b0cd-c0f7af1919be"
+  } ]
+}

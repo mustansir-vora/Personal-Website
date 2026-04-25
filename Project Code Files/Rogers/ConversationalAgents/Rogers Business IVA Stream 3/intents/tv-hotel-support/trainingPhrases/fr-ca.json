@@ -1,0 +1,75 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Nos invités signalent des écrans "
+    }, {
+      "text": "noirs"
+    }, {
+      "text": " "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " les téléviseurs."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos invités signalent que des chaînes auxquelles ils sont abonnés manquent ou "
+    }, {
+      "text": "un"
+    }, {
+      "text": " provisionnement incorrect."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos invités ne peuvent pas accéder à l’événement "
+    }, {
+      "text": "télé"
+    }, {
+      "text": " à la carte qu’ils ont payé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "et "
+    }, {
+      "text": "cela"
+    }, {
+      "text": " touche plusieurs "
+    }, {
+      "text": "chambres"
+    }, {
+      "text": ". Nous devons régler "
+    }, {
+      "text": "cela"
+    }, {
+      "text": " rapidement car des invités arrivent."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle de "
+    }, {
+      "text": "mon hotel"
+    }, {
+      "text": ". "
+    }, {
+      "text": "Les chambres"
+    }, {
+      "text": " affichent « aucun signal » "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " les "
+    }, {
+      "text": "télés"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

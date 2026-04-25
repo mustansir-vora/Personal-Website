@@ -1,0 +1,28 @@
+{
+  "name": "4314c238-f86e-44d6-8c1c-1b566a42116e",
+  "displayName": "Play Internet",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "… et vos services Internet sont actuellement suspendus." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "... and your internet services are currently suspended." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Past Due Balance",
+    "name": "0bf235c2-eff9-442d-89aa-5e7377de63a9"
+  } ]
+}

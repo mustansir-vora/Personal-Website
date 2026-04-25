@@ -1,0 +1,28 @@
+{
+  "name": "66bbc554-99a8-41fb-be9c-fd272ac748f8",
+  "displayName": "ITN Validation LookUp",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " Compris  \u003cspeak\u003e\u003cbreak time=\"200ms\"/\u003e\u003c/speak\u003e" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Got It \u003cspeak\u003e\u003cbreak time=\"200ms\"/\u003e\u003c/speak\u003e" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Send SMS",
+    "name": "5e242119-3198-4fa8-9e24-444c33f46414"
+  } ]
+}

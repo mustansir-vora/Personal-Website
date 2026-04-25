@@ -1,0 +1,56 @@
+{
+  "name": "7e51063a-1a66-4c9c-bdf8-a8999f12b824",
+  "displayName": "Call Authentication",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.authInvoked = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authInvoked",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Authentication",
+    "name": "e345c249-a631-4ad6-82f9-b28d486231b6"
+  }, {
+    "condition": "$session.params.authInvoked = true AND $session.params.authResult = \"Continue\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idAuthComplete",
+        "value": true
+      }, {
+        "parameter": "authInvoked",
+        "value": false
+      }, {
+        "parameter": "reportingVar_authenticationLevel",
+        "value": "$session.params.nluConfig.authLevel"
+      }, {
+        "parameter": "reportingVar_authenticationMethod",
+        "value": "$sys.func.IF(\"$session.params.hasPinInd = true\", \"PIN\", null)"
+      }, {
+        "parameter": "authenticateMode",
+        "value": "$sys.func.IF(\"$session.params.hasPinInd = true\", \"PIN\", null)"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "7c7a58e2-2a1d-4bde-8452-6511fbf58f14"
+  }, {
+    "condition": "$session.params.authInvoked = true AND $session.params.authResult = \"Failure\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idAuthComplete",
+        "value": false
+      }, {
+        "parameter": "authInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "12a4dbed-de43-4686-a401-7ef1d484647c"
+  } ]
+}

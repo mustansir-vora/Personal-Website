@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1139666819:1711796416106" name="BW_ProdMainMenu" version="6.0.1">
+<subflow_call subflow_name="BWProducerMainMenu" target="Element@31:1711883050315">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

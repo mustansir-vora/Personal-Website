@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1145302879:1708938323409" name="Check Payment Amount" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check Payment Amount" default_exit_state="Check Other Options">
+        <exit_state name="Valid amount" conjugate="and">
+            <boolean check_existence="yes" value="true">
+                <data>
+                    <session name="S_PAYMENTAMOUNT" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

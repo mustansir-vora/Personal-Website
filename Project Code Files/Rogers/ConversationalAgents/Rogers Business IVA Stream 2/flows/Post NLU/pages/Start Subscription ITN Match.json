@@ -1,0 +1,30 @@
+{
+  "name": "6eea13c2-e9ec-4287-8584-d69a64b582ba",
+  "displayName": "Start Subscription ITN Match",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "subscriptionIndexCounter",
+      "value": 0
+    }, {
+      "parameter": "subscriptionMatch",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subscriptionIndexCounter",
+        "value": 0
+      }, {
+        "parameter": "subscriptionMatch",
+        "value": false
+      } ]
+    },
+    "targetPage": "Subscription ITN Match Router",
+    "name": "a949b7ab-afca-4cec-b0fc-e8bbeb05ee46"
+  } ]
+}

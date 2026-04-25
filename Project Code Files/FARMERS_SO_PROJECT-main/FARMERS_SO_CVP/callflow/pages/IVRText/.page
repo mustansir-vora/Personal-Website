@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1635772593:1712496278386" name="IVRText" version="6.0.1">
+<element height="55" id="Element@1334227276:1730745013310" name="Copy_of_SharedIVRText" type="Subflow Call" width="204" x="338" y="273">
+<subflow_call subflow_name="SharedIVRtoText" target="Element@31:1712497393289">
+<config>
+<input_data>
+<data name="RETURN_VALUE_FOR_NLU"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@240648809:1730745013310"/>
+</exit_states>
+</element>
+<element height="55" id="Element@240648809:1730745013310" name="CheckSharedIVRTextValue" type="Decision" width="250" x="310" y="391">
+<exit_states>
+<exit_state name="ER" target="Element@1127443868:1730745013310">
+<bendpoint>
+<dim1 x="193" y="-69"/>
+<dim2 x="-82" y="145"/>
+</bendpoint>
+</exit_state>
+<exit_state name="T" target="Element@1468600871:1730745013310"/>
+<exit_state name="R" target="Element@1127443868:1730745013310"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1547737690:1730745013310" name="Global_Rep_Handling" type="Decision" width="217" x="602" y="71">
+<exit_states>
+<exit_state name="CONT" target="Element@978208081:1749051389775"/>
+<exit_state name="TR" target="Element@314937585:1730745013310"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1127443868:1730745013310" name="CheckIsAuthReq_BC" type="Decision" width="212" x="585" y="172">
+<exit_states>
+<exit_state name="ER" target="Element@394041705:1749051389775"/>
+<exit_state name="Y" target="Element@1547737690:1730745013310"/>
+<exit_state name="N" target="Element@394041705:1749051389775">
+<bendpoint>
+<dim1 x="119" y="86"/>
+<dim2 x="-180" y="41"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@314937585:1730745013310" name="Transfer" type="Page Connector" width="111" x="658" y="-18">
+<page_connector target="Element@1707896882:1711784523557">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@469351914:1730745013310" name="SharedIVRText" type="Page Entry" width="161" x="335" y="64">
+<exit_states>
+<exit_state name="next" target="Element@621143164:1730745013310"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1468600871:1730745013310" name="Transfer" type="Page Connector" width="112" x="589" y="390">
+<page_connector target="Element@1707896882:1711784523557">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@621143164:1730745013310" name="CheckNextActionAvail" type="Decision" width="222" x="309" y="174">
+<exit_states>
+<exit_state name="NA" target="Element@1127443868:1730745013310"/>
+<exit_state name="CONT" target="Element@1334227276:1730745013310"/>
+</exit_states>
+</element>
+<element height="50" id="Element@394041705:1749051389775" name="Check_AGENT_LINE_AUTH" type="Decision" width="223" x="758" y="296">
+<exit_states>
+<exit_state name="Agent" target="Element@1423250086:1749051389775"/>
+<exit_state name="Customer" target="Element@1392532454:1749051389775"/>
+</exit_states>
+</element>
+<element height="55" id="Element@978208081:1749051389775" name="VIA_Check" type="Decision" width="144" x="934" y="51">
+<exit_states>
+<exit_state name="Yes" target="Element@1190276875:1749051389775"/>
+<exit_state name="No" target="Element@227512620:1749051389775"/>
+</exit_states>
+</element>
+<element height="55" id="Element@227512620:1749051389775" name="SharedIdAuth" type="Subflow Call" width="159" x="1253" y="128">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1711806744020">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1423250086:1749051389775"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1423250086:1749051389775" name="NextAction" type="Page Connector" width="137" x="1334" y="314">
+<page_connector target="Element@73638143:1711784660316">NextAction<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1190276875:1749051389775" name="NEW_VIA_Main" type="Subflow Call" width="170" x="1257" y="-5">
+<subflow_call subflow_name="New_VIA_Main" target="Element@31:1747831227350">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@575755208:1753893777639"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1392532454:1749051389775" name="SET_CALLER_AUTH" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="175" x="889" y="440">
+<exit_states>
+<exit_state name="done" target="Element@1423250086:1749051389775"/>
+</exit_states>
+</element>
+<element height="55" id="Element@778652062:1753893777639" name="CancelPolicyDisambiguation" type="Subflow Call" width="238" x="1001" y="237">
+<subflow_call subflow_name="CancelPolicyDisambiguation" target="Element@31:1753162560782">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1423250086:1749051389775"/>
+</exit_states>
+</element>
+<element height="50" id="Element@575755208:1753893777639" name="CancelPolicyIntent_Check" type="Decision" width="215" x="1001" y="142">
+<exit_states>
+<exit_state name="YES" target="Element@778652062:1753893777639"/>
+<exit_state name="NO" target="Element@1423250086:1749051389775"/>
+<exit_state name="ER" target="Element@1423250086:1749051389775">
+<bendpoint>
+<dim1 x="217" y="46"/>
+<dim2 x="-91" y="-130"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

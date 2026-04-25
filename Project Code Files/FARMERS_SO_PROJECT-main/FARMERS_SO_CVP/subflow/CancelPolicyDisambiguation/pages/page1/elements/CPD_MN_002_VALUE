@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@651282840:1752605307997" name="CPD_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.CPD_MN_002_VALUE</source>
+</config>
+</decision>

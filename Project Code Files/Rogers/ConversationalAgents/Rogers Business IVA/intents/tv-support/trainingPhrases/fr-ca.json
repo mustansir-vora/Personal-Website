@@ -1,0 +1,211 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Notre équipe s’agrandit et a besoin de connectivité câble.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons besoin du ",
+      "auto": true
+    }, {
+      "text": "service",
+      "auto": true
+    }, {
+      "text": " câble pour la vidéoconférence à ",
+      "auto": true
+    }, {
+      "text": "notre bureau",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous changeons de fournisseur et nous avons besoin que le câble soit activé ici.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons eu ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " interruption de ",
+      "auto": true
+    }, {
+      "text": "service",
+      "auto": true
+    }, {
+      "text": " et nous avons besoin que le câble soit réactivé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre compte d’",
+      "auto": true
+    }, {
+      "text": "affaires",
+      "auto": true
+    }, {
+      "text": " a ",
+      "auto": true
+    }, {
+      "text": "été",
+      "auto": true
+    }, {
+      "text": " mis à niveau et a besoin d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " activation.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous ouvrons ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouvel emplacement et nous avons besoin que ",
+      "auto": true
+    }, {
+      "text": "le service",
+      "auto": true
+    }, {
+      "text": " câble soit installé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le câble a ",
+      "auto": true
+    }, {
+      "text": "été",
+      "auto": true
+    }, {
+      "text": " installé mais pas encore activé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous venons de nous abonner au câble et nous avons besoin que ce soit activé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre nouvelle succursale a besoin d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " installation de câble pour ses opérations.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons déménagé de ",
+      "auto": true
+    }, {
+      "text": "bureau",
+      "auto": true
+    }, {
+      "text": " et nous avons besoin que ",
+      "auto": true
+    }, {
+      "text": "le service",
+      "auto": true
+    }, {
+      "text": " câble soit activé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne peux pas voir la chaîne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai payé pour la télé à la carte mais ça ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai seulement des chaînes en statique.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Aucune image ne s’affiche ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " notre écran télé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre télé ne reçoit pas de signal.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre écran télé ne fonctionne pas d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " côté du ",
+      "auto": true
+    }, {
+      "text": "magasin",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,574 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Please deactivate my "
+    }, {
+      "text": "home security"
+    }, {
+      "text": " plan and close the account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you stop my alarm monitoring service?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to cancel my "
+    }, {
+      "text": "Self Protect"
+    }, {
+      "text": " subscription."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please disconnect my "
+    }, {
+      "text": "Smart Home"
+    }, {
+      "text": " Monitoring system."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my "
+    }, {
+      "text": "home security"
+    }, {
+      "text": " service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to shut off my "
+    }, {
+      "text": "home phone"
+    }, {
+      "text": " service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you terminate my "
+    }, {
+      "text": "home phone"
+    }, {
+      "text": " account "
+    }, {
+      "text": "today"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to cancel my residential "
+    }, {
+      "text": "phone line"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please disconnect my "
+    }, {
+      "text": "landline"
+    }, {
+      "text": " and stop future charges."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my "
+    }, {
+      "text": "home phone"
+    }, {
+      "text": " service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to discontinue my home "
+    }, {
+      "text": "internet"
+    }, {
+      "text": " service immediately."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you cancel my "
+    }, {
+      "text": "internet"
+    }, {
+      "text": " plan because I’m moving?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to cancel my Wi-Fi service and return the modem."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my home "
+    }, {
+      "text": "internet"
+    }, {
+      "text": " service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please remove all my "
+    }, {
+      "text": "TV"
+    }, {
+      "text": " channels and cancel my "
+    }, {
+      "text": "TV"
+    }, {
+      "text": " plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to stop my "
+    }, {
+      "text": "TV"
+    }, {
+      "text": " service and return the "
+    }, {
+      "text": "TV"
+    }, {
+      "text": " box."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my cable "
+    }, {
+      "text": "TV"
+    }, {
+      "text": " subscription."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to cancel my "
+    }, {
+      "text": "TV"
+    }, {
+      "text": " service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to terminate my phone service and ensure my account is fully deactivated."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please shut off my service and close my account immediately."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to speak with a loyalty agent about canceling my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you assist me in canceling my line and discontinuing all service?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel all my services and close my account permanently."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to terminate my account and speak to someone in the retention center."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please remove my phone service and ensure there are "
+    }, {
+      "text": "no"
+    }, {
+      "text": " remaining charges."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to deactivate my account and set up a new "
+    }, {
+      "text": "one"
+    }, {
+      "text": " under a different number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me cancel my contract and transfer my number elsewhere?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to close my account because I’m moving "
+    }, {
+      "text": "this weekend"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to cancel my service and switch to a different provider."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please terminate my account and deactivate all associated devices."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to remove my services and ensure my account is fully closed."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you process the cancellation of my "
+    }, {
+      "text": "phone line"
+    }, {
+      "text": " and account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to speak with the customer retention department about closing my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to cancel my "
+    }, {
+      "text": "wireless"
+    }, {
+      "text": " service before the next billing cycle."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please help me drop my "
+    }, {
+      "text": "home phone"
+    }, {
+      "text": " service and close my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to disconnect my phone number and cancel all related services."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you assist me in terminating my contract and closing my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to cancel my subscription and remove all services attached to my number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to deactivate my "
+    }, {
+      "text": "SIM card"
+    }, {
+      "text": " and close my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please transfer me to the loyalty or retention department to discuss account closure."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": " service and stop all billing."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me terminate my "
+    }, {
+      "text": "phone line"
+    }, {
+      "text": " and close my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to cancel my account and all associated services immediately."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "television"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my "
+    }, {
+      "text": "ipad",
+      "parameterId": "e_product"
+    }, {
+      "text": " service and stop all billing."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "ipad",
+      "parameterId": "e_product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "Home Security",
+      "parameterId": "e_product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "Rocket Mobile Devices",
+      "parameterId": "e_product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "wireless home phone",
+      "parameterId": "e_product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "Home Phone",
+      "parameterId": "e_product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "wireless",
+      "parameterId": "e_product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to speak with the customer retention department about closing my "
+    }, {
+      "text": "5G Home Internet",
+      "parameterId": "e_product"
+    }, {
+      "text": " account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to cancel my "
+    }, {
+      "text": "Wireless Home Internet",
+      "parameterId": "e_product"
+    }, {
+      "text": " service before the next billing cycle."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please help me drop my "
+    }, {
+      "text": "Smartwatch",
+      "parameterId": "e_product"
+    }, {
+      "text": " service and close my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to disconnect my "
+    }, {
+      "text": "Tablet",
+      "parameterId": "e_product"
+    }, {
+      "text": " and cancel all related services."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you assist me in terminating my contract and closing my "
+    }, {
+      "text": "wireless",
+      "parameterId": "e_product"
+    }, {
+      "text": " account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to cancel my subscription and remove all services attached to my "
+    }, {
+      "text": "Home Security.",
+      "parameterId": "e_product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to deactivate my "
+    }, {
+      "text": "Rocket Mobile Device",
+      "parameterId": "e_product"
+    }, {
+      "text": " and close my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please transfer me to the loyalty or retention department to discuss account closure for "
+    }, {
+      "text": "High Speed Internet",
+      "parameterId": "e_product"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my "
+    }, {
+      "text": "mobile",
+      "parameterId": "e_product"
+    }, {
+      "text": " service and stop all billing."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me terminate my "
+    }, {
+      "text": "Home Phone",
+      "parameterId": "e_product"
+    }, {
+      "text": " line and close my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to cancel my "
+    }, {
+      "text": "TV",
+      "parameterId": "e_product"
+    }, {
+      "text": " account and all associated services immediately."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "television",
+      "parameterId": "e_product"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

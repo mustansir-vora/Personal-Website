@@ -1,0 +1,7 @@
+{
+  "name": "9017ff4d-8878-4949-b194-b7921b4e943a",
+  "displayName": "Pin Number Collection - Hold On",
+  "priority": 500000,
+  "numTrainingPhrases": 62,
+  "dtmfPattern": "#"
+}

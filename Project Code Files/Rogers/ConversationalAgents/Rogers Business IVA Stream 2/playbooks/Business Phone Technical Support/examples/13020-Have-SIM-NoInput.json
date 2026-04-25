@@ -1,0 +1,48 @@
+{
+  "name": "b6eec4b7-d1b7-4361-9e0d-d7a11f441bfd",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Does your business phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I couldn't hear that. If your business phone has a SIM, say yes or press 1. If not, say no, or press 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your business phone equipment. Please ensure you're calling from a different phone than the one you need help with."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportbusinessPhone",
+      "completedSSName": "passive-techSupportbusinessPhone",
+      "completedSelfServe": "passive-techSupportbusinessPhone",
+      "hasNoBPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportbusinessPhone",
+      "reportingVar_completedSSName": "passive-techSupportbusinessPhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "13020-Have-SIM-NoInput",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 281,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

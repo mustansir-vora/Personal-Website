@@ -1,0 +1,31 @@
+{
+  "name": "ecfab410-0ee8-4b6d-b2c0-dca4dd44120e",
+  "displayName": "Check Update Eligibility",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.ptpUpdateEligibilityInd = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpInstallMenuCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "PTP Update Multiple Options 1",
+    "name": "74687c7b-ed36-437a-bc75-9e0aaa5db227"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updatemultipleFirstInstall",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Pay Now",
+    "name": "1562c4c7-8e79-4f52-ac9b-f8bc33dddc50"
+  } ]
+}

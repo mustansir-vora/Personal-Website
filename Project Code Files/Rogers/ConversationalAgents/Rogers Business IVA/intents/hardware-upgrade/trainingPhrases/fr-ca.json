@@ -1,0 +1,427 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je voudrais discuter de la façon de passer d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " appareil 3G ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " nouveau téléphone 4G/5G.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me donner les options pour mettre ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone à niveau afin qu’il soit compatible avec le dernier réseau.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour m’assurer que ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " appareil ",
+      "auto": true
+    }, {
+      "text": "actuel",
+      "auto": true
+    }, {
+      "text": " ne sera pas affecté par l’arrêt de la ",
+      "auto": true
+    }, {
+      "text": "3G",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir si ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait inclut de l’aide pour la mise à niveau matérielle pendant la transition de réseau.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je échanger ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " appareil 3G ",
+      "auto": true
+    }, {
+      "text": "pour un",
+      "auto": true
+    }, {
+      "text": " modèle qui supporte la 4G ou la 5G?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau téléphone pour profiter de vitesses de réseau plus rapides.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux mettre ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " appareil à niveau avant la fin du réseau 3G.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je cherche à changer d’appareil parce que ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone ",
+      "auto": true
+    }, {
+      "text": "actuel",
+      "auto": true
+    }, {
+      "text": " est limité à la ",
+      "auto": true
+    }, {
+      "text": "3G",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me ",
+      "auto": true
+    }, {
+      "text": "guider",
+      "auto": true
+    }, {
+      "text": " pour mettre ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone à niveau pour le nouveau réseau?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux m’assurer que ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone fonctionnera après la transition de réseau.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’information ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " les options d’appareils compatibles avec les réseaux ",
+      "auto": true
+    }, {
+      "text": "4G",
+      "auto": true
+    }, {
+      "text": " et ",
+      "auto": true
+    }, {
+      "text": "5G",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’indiquer comment mettre à jour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " appareil à la dernière technologie de réseau.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au sujet de la mise à niveau de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone parce que ",
+      "auto": true
+    }, {
+      "text": "le service",
+      "auto": true
+    }, {
+      "text": " 3G sera abandonné.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais échanger ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " ancien appareil et en obtenir ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " qui supporte la 5G.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider avec ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " mise à niveau de matériel pour la migration de réseau à venir?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir si ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone ",
+      "auto": true
+    }, {
+      "text": "actuel",
+      "auto": true
+    }, {
+      "text": " continuera de fonctionner après l’arrêt du réseau 3G.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour passer d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " appareil 3G ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " modèle plus récent.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je mettre ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " appareil à niveau pour qu’il soit compatible avec le réseau 4G ou 5G?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais remplacer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone parce que ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " appareil ",
+      "auto": true
+    }, {
+      "text": "actuel",
+      "auto": true
+    }, {
+      "text": " ne supporte pas le nouveau réseau.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’expliquer le processus pour passer du réseau 3G au réseau ",
+      "auto": true
+    }, {
+      "text": "5G",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour mettre ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " matériel à niveau pour la compatibilité 4G.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon",
+      "auto": true
+    }, {
+      "text": " appareil ne fonctionnera plus correctement après la fin du réseau 3G; que dois-je faire?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois discuter des arrangements pour migrer du réseau 3G vers ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " réseau plus récent.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me ",
+      "auto": true
+    }, {
+      "text": "dire",
+      "auto": true
+    }, {
+      "text": " quelles sont mes options pour passer de la 3G à la 4G ou à la 5G?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux mettre ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone à niveau parce que ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " appareil ",
+      "auto": true
+    }, {
+      "text": "actuel",
+      "auto": true
+    }, {
+      "text": " est seulement compatible 3G.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

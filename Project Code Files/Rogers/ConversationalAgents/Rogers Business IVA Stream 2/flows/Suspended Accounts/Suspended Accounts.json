@@ -1,0 +1,65 @@
+{
+  "name": "3453689a-5da8-4f98-a713-b8a7800145ce",
+  "displayName": "Suspended Accounts",
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Payment Type",
+    "name": "0ebaae72-3370-41b5-bdaa-6b0b8e78672b"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr"
+      } ]
+    },
+    "name": "9a535640-1f5e-48e5-b1c5-5559f0099fe8"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr"
+      } ]
+    },
+    "name": "528f3e24-77eb-4204-8434-41245b4c1342"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "d897aad0-ae15-4b23-9fff-269504afc67a",
+    "languageCode": "en"
+  } ]
+}

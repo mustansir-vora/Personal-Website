@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1984954505:1729603469633" name="SIDA_MN_ALPHANUM_CALL" version="6.0.1">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709037344342">
+<config>
+<argument_data>
+<data name="MenuID">SIDA_MN_ALPHANUM_CHECK</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

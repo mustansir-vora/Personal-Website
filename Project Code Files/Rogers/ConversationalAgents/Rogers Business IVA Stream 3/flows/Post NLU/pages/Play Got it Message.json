@@ -1,0 +1,28 @@
+{
+  "name": "56c4f06e-3883-45a8-a1d5-ca0d4c70e14e",
+  "displayName": "Play Got it Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Compris" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Got it" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Success Exit - Reusable Phone Number",
+    "name": "a79cb5ee-a4a7-44e3-96d5-a6f8b581a197"
+  } ]
+}

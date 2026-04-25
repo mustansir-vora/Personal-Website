@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@787240962:1709210215640" name="CPF_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.CommPayments_Billing</source>
+</config>
+</decision>

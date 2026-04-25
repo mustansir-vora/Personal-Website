@@ -1,0 +1,30 @@
+{
+  "name": "c158ddfc-7a4a-454b-9fb0-4d5ae253dd4d",
+  "displayName": "Check ippStatus ",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.api.response.billing.profile.billingProfile.ippDetails.ippStatus",
+      "value": "Active"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.ippDetails.ippStatus = \"Active\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check heardIppDetails",
+    "name": "4a3fcf81-24d2-4074-b5d4-f80c8ca3311f",
+    "description": "Check if ipp status active"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check lastInvoiceDetailsEnabled",
+    "name": "6fd43063-d8a5-41e4-a736-0b44a17db92f",
+    "description": "If ippStatus inactive"
+  } ]
+}

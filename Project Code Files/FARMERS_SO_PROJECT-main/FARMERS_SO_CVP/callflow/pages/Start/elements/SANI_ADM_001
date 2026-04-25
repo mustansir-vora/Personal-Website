@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2137346517:1730194901336" name="SANI_ADM_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.adminHost.AniGroup</source>
+</config>
+</decision>

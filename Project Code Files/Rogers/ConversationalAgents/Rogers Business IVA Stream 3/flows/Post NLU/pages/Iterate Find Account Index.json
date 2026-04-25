@@ -1,0 +1,43 @@
+{
+  "name": "db69e35e-baf2-40ae-85d6-3182dde1897e",
+  "displayName": "Iterate Find Account Index",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "currentAcc",
+      "value": "$sys.func.GET($session.params.safeAccounts, $session.params.idx)"
+    }, {
+      "parameter": "isMatch",
+      "value": "$sys.func.IF(\"$sys.func.TO_TEXT($session.params.currentAcc) = $sys.func.TO_TEXT($session.params.linkedAccountNumber)\", true,  false)"
+    }, {
+      "parameter": "accountIndex",
+      "value": "$sys.func.IF(\"$session.params.isMatch = true\", $session.params.idx, $session.params.accountIndex)"
+    }, {
+      "parameter": "found",
+      "value": "$sys.func.IF(\"$session.params.isMatch = true\", true, $session.params.found)"
+    }, {
+      "parameter": "idx",
+      "value": "$sys.func.ADD($session.params.idx, 1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.isMatch = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "accountNumberIndex",
+        "value": "$sys.func.TO_NUMBER($session.params.accountIndex)"
+      } ]
+    },
+    "targetPage": "Set Account Details Into Session",
+    "name": "8235dad3-ef58-40e1-9f32-331dac1d5520"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Find Account Index Router",
+    "name": "1510ec14-1a7d-43dc-959a-59d9e6aff887"
+  } ]
+}

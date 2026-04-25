@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1932094362:1731040693736" name="FWSCM_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.FWSC_MN_002_VALUE</source>
+</config>
+</decision>

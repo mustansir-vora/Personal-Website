@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@619356552:1708937929577" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708937929577" name="21stSalesVanityFriendsandFamily" type="Subflow Start" width="309" x="397" y="-114">
+<exit_states>
+<exit_state name="next" target="Element@1379280873:1712911829119"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1754958439:1708937976087" name="State Disambiguation" type="Subflow Call" width="220" x="-8" y="755">
+<subflow_call subflow_name="StateDisambiguation" target="Element@31:1711719456172">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1851153105:1712723218405"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1237363834:1708937976087" name="Shared Transfer" type="Subflow Call" width="171" x="528" y="760">
+<subflow_call subflow_name="Transfer" target="Element@31:1711719463509">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1611910151:1711719469888"/>
+</exit_states>
+</element>
+<element height="55" id="Element@974035122:1708937976087" name="Shared Entry_Mod" type="Subflow Call" width="195" x="441" y="148">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1711719451514">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2047833866:1712161790065"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1104264867:1708937976087" name="TFFNF_MN_001_VALUE" type="Decision" width="230" x="421" y="541">
+<exit_states>
+<exit_state name="Sales" target="Element@1754958439:1708937976087"/>
+<exit_state name="Service" target="Element@519199706:1712911335163"/>
+<exit_state name="Claims" target="Element@1237363834:1708937976087"/>
+<exit_state name="Representative" target="Element@1237363834:1708937976087">
+<bendpoint>
+<dim1 x="373" y="128"/>
+<dim2 x="289" y="-91"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Extention" target="Element@1237363834:1708937976087">
+<bendpoint>
+<dim1 x="202" y="128"/>
+<dim2 x="118" y="-91"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@381867730:1712314935482"/>
+<exit_state name="NOMATCH" target="Element@1237363834:1708937976087">
+<bendpoint>
+<dim1 x="560" y="131"/>
+<dim2 x="476" y="-88"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1237363834:1708937976087">
+<bendpoint>
+<dim1 x="734" y="134"/>
+<dim2 x="650" y="-85"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@114043681:1709104820369" name="TFFNF_MN_001_Call" type="Subflow Call" width="207" x="426" y="397">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709104835709">
+<config>
+<argument_data>
+<data name="MenuID">TFFNF_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1104264867:1708937976087"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1611910151:1711719469888" name="Subflow Return_02" type="Subflow Return" width="198" x="243" y="881"/>
+<element height="55" id="Element@554193761:1711910846057" name="CheckEntryPoint_BC" type="Decision" width="205" x="38" y="44">
+<exit_states>
+<exit_state name="ER" target="Element@974035122:1708937976087"/>
+<exit_state name="CONT" target="Element@114043681:1709104820369"/>
+<exit_state name="NLU" target="Element@352143085:1711911223121"/>
+<exit_state name="INITIAL" target="Element@974035122:1708937976087"/>
+</exit_states>
+</element>
+<element height="55" id="Element@100896668:1711910912086" name="SET_FlowName" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="458" y="241">
+<exit_states>
+<exit_state name="done" target="Element@415178491:1711910912086"/>
+</exit_states>
+</element>
+<element height="55" id="Element@415178491:1711910912086" name="NLUReturn" type="Subflow Return" width="148" x="472" y="320"/>
+<element height="55" id="Element@352143085:1711911223121" name="EXTENSION_PE" type="Page Connector" width="169" x="35" y="199">
+<page_connector target="Element@1704262962:1711911230662">EXTENSION_PE<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1704262962:1711911230662" name="EXTENSION_PE" type="Page Entry" width="169" x="715" y="864">
+<exit_states>
+<exit_state name="next" target="Element@933357805:1712474479234"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2047833866:1712161790065" name="CheckNLUInvokedFlag" type="Decision" width="227" x="686" y="155">
+<exit_states>
+<exit_state name="YES" target="Element@114043681:1709104820369"/>
+<exit_state name="NO" target="Element@100896668:1711910912086"/>
+</exit_states>
+</element>
+<element height="55" id="Element@381867730:1712314935482" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="251" x="871" y="541">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@933357805:1712474479234" name="SetTransferKey_21stSalesVanFF" type="Action" width="292" x="766" y="788">
+<exit_states>
+<exit_state name="done" target="Element@1237363834:1708937976087"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1851153105:1712723218405" name="Shared Transfer_1" type="Subflow Call" width="189" x="3" y="862">
+<subflow_call subflow_name="Transfer" target="Element@31:1711719463509">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1611910151:1711719469888"/>
+</exit_states>
+</element>
+<element height="55" id="Element@519199706:1712911335163" name="SET_ROUTE_TO_MAIN_MENU" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="203" x="271" y="744">
+<exit_states>
+<exit_state name="done" target="Element@1611910151:1711719469888"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1379280873:1712911829119" name="Skip_MainMenu" type="Decision" width="135" x="144" y="-35">
+<exit_states>
+<exit_state name="Y" target="Element@1182449756:1712911876867"/>
+<exit_state name="N" target="Element@554193761:1711910846057"/>
+</exit_states>
+</element>
+<element height="55" id="Element@612741382:1712911860978" name="QUOTE" type="Page Entry" width="87" x="19" y="611">
+<exit_states>
+<exit_state name="next" target="Element@1754958439:1708937976087"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1182449756:1712911876867" name="QUOTE" type="Page Connector" width="169" x="-59" y="-35">
+<page_connector target="Element@612741382:1712911860978">QUOTE<config/>
+</page_connector>
+</element>
+</page>

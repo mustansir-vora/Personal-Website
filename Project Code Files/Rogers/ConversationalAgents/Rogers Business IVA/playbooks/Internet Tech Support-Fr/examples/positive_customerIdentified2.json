@@ -1,0 +1,52 @@
+{
+  "name": "ff5b65f3-2e15-4742-aebc-453fd97da9c8",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement Internet."
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfInternet": "3",
+      "productLabelMixFr": "Télévision,Téléphonie résidentielle,Sécurité résidentielle,Téléphonie Affaires sans fil"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportInternet",
+      "no5gHomeInternet": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220002283"
+      }
+    }
+  },
+  "displayName": " positive_customerIdentified2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 304,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

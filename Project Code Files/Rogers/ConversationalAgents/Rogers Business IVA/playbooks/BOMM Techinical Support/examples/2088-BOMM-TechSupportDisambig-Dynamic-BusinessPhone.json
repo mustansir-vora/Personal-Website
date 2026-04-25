@@ -1,0 +1,46 @@
+{
+  "name": "20486919-98f2-4c98-bdf5-408c60fad7a8",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Internet,Tv, Mobile,Business phone"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Business phone"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Business phone"
+      },
+      "outputActionParameters": {
+        "result": "business-phone-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "productLabelMixEn": "Wireless Internet,TV,Tablet,Business phone",
+      "serviceCategoryMixEn": "Internet,Tv, Mobile,Business phone",
+      "serviceCategoryMixLength": "4"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Business phone",
+      "savedIntent": "business-phone-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-BusinessPhone",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 218,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

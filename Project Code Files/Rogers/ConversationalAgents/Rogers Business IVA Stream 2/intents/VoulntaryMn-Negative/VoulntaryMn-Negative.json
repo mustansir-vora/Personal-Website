@@ -1,0 +1,7 @@
+{
+  "name": "781a1ba7-d5ac-4990-b58a-f9f7ccbfb738",
+  "displayName": "VoulntaryMn-Negative",
+  "priority": 500000,
+  "description": "This will trigger when user says other then yes or no",
+  "numTrainingPhrases": 14
+}

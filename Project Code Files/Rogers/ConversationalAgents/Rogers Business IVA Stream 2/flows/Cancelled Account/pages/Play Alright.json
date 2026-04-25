@@ -1,0 +1,28 @@
+{
+  "name": "8dcfe4fd-dd77-43ec-ae84-902e3c3e3895",
+  "displayName": "Play Alright",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Alright." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Bien." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Clear PreRoute Override",
+    "name": "bb61c3d1-5515-4bc9-aa2f-9a9408c2360e"
+  } ]
+}

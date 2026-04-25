@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@791058001:1709354755046" name="Disc" version="6.0.1">
+<element height="55" id="Element@902495789:1730194920663" name="BADFETCH_404_HT" type="Hotevent" width="202" x="419" y="380">
+<exit_states>
+<exit_state name="goto" target="Element@2128712771:1733226842506"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1362508224:1730194920663" name="UNSUPPORTED_HT" type="Hotevent" width="201" x="652" y="222">
+<exit_states>
+<exit_state name="goto" target="Element@1120972967:1733226842506"/>
+</exit_states>
+</element>
+<element height="55" id="Element@82588084:1730194920663" name="Failout_Rep_Handling" type="Decision" width="214" x="906" y="876">
+<exit_states>
+<exit_state name="SU" target="Element@1718022759:1730194920663"/>
+<exit_state name="ER" target="Element@1718022759:1730194920663"/>
+</exit_states>
+</element>
+<element height="55" id="Element@334290118:1730194920663" name="Disc" type="Page Entry" width="83" x="320" y="50">
+<exit_states>
+<exit_state name="next" target="Element@2093665776:1730194920663"/>
+</exit_states>
+</element>
+<element height="55" id="Element@762244548:1730194920663" name="UNAVAILABLE_ASR_HT" type="Hotevent" width="230" x="1283" y="336">
+<exit_states>
+<exit_state name="goto" target="Element@257754583:1733226842506"/>
+</exit_states>
+</element>
+<element height="55" id="Element@811609854:1730194920663" name="_PreTransfer_AE" skipped="true" type="Action" width="237" x="421" y="948">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1061050111:1730194920663" name="BADFETCH_HT" type="Hotevent" width="164" x="389" y="474">
+<exit_states>
+<exit_state name="goto" target="Element@1063299937:1733226842506"/>
+</exit_states>
+</element>
+<element height="55" id="Element@862948957:1730194920663" name="NO_RESOURCE_HT" skipped="true" type="Hotevent" width="200" x="911" y="170">
+<exit_states>
+<exit_state name="goto"/>
+</exit_states>
+</element>
+<element height="55" id="Element@90002065:1730194920663" name="CONNECTION_NO_RESOURCE_HT" type="Hotevent" width="319" x="1376" y="445">
+<exit_states>
+<exit_state name="goto" target="Element@524673359:1733226842506"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1718022759:1730194920663" name="Shared_Transfer" type="Subflow Call" width="154" x="970" y="995">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@232640677:1730194920663"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1398883416:1730194920663" name="CheckHotEventOutCome" type="Decision" width="247" x="875" y="558">
+<exit_states>
+<exit_state name="Disconnect" target="Element@1548197573:1730194920663"/>
+<exit_state name="Transfer" target="Element@1388418157:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1159712472:1730194920663" name="HotEventClosedHrs_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="200" x="1190" y="701">
+<exit_states>
+<exit_state name="done" target="Element@1548197573:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1120787281:1730194920663" name="CheckHotEventTxfOpenHrs_BC" type="Decision" width="251" x="896" y="773">
+<exit_states>
+<exit_state name="Open" target="Element@82588084:1730194920663"/>
+<exit_state name="Closed" target="Element@1159712472:1730194920663"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1933432274:1730194920663" name="SEMANTIC_HT" type="Hotevent" width="190" x="499" y="290">
+<exit_states>
+<exit_state name="goto" target="Element@1025215447:1733226842506"/>
+</exit_states>
+</element>
+<element height="55" id="Element@560366876:1730194920663" name="AT" skipped="true" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="70" x="490" y="1051">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1548197573:1730194920663" name="Disc" type="Page Connector" width="83" x="1317" y="591">
+<page_connector target="Element@334290118:1730194920663">Disc<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1925313462:1730194920663" name="FAILURE_ASR_HT" type="Hotevent" width="190" x="1154" y="216">
+<exit_states>
+<exit_state name="goto" target="Element@972248752:1733226842506"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2093665776:1730194920663" name="Copy_of_Copy_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="202" x="314" y="164">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1388418157:1730194920663" name="SET_FLOW_MODULE" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="211" x="899" y="662">
+<exit_states>
+<exit_state name="done" target="Element@1120787281:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@232640677:1730194920663" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="969" y="1085">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1863331526:1730194920663" name="HOT_ANNO_PA" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="185" x="465" y="837">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="50" id="Element@898893670:1731250095604" name="Error_Transfer" type="Page Entry" width="140" x="546" y="641">
+<exit_states>
+<exit_state name="next" target="Element@1388418157:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1063299937:1733226842506" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="213" x="575" y="524">
+<exit_states>
+<exit_state name="done" target="Element@1398883416:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@257754583:1733226842506" name="_SET_TRANSFER_REASON_06" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="241" x="1153" y="405">
+<exit_states>
+<exit_state name="done" target="Element@1398883416:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@524673359:1733226842506" name="SET_TRANSFER_REASON_07" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="235" x="1179" y="506">
+<exit_states>
+<exit_state name="done" target="Element@1398883416:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2128712771:1733226842506" name="SET_TRANSFER_REASON_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="235" x="577" y="447">
+<exit_states>
+<exit_state name="done" target="Element@1398883416:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1120972967:1733226842506" name="SET_TRANSFER_REASON_03" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="235" x="709" y="308">
+<exit_states>
+<exit_state name="done" target="Element@1398883416:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@972248752:1733226842506" name="SET_TRANSFER_REASON_05" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="235" x="1075" y="305">
+<exit_states>
+<exit_state name="done" target="Element@1398883416:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1025215447:1733226842506" name="SET_TRANSFER_REASON_02" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="235" x="644" y="380">
+<exit_states>
+<exit_state name="done" target="Element@1398883416:1730194920663"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2026975295:1733226842506" name="SET_TRANSFER_REASON_04" skipped="true" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="235" x="911" y="253">
+<exit_states>
+<exit_state name="done" target="Element@1398883416:1730194920663"/>
+</exit_states>
+</element>
+</page>

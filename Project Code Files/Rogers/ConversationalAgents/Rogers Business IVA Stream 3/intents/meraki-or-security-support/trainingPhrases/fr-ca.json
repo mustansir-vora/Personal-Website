@@ -1,0 +1,132 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "La page de connexion du ",
+      "auto": true
+    }, {
+      "text": "WiFi",
+      "auto": true
+    }, {
+      "text": " invité ne fonctionne pas; nous devons mettre à jour la page d’accueil.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le tableau de bord affiche des menaces potentielles — comment pouvons-nous les résoudre?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons besoin d’assistance avec les VLAN ou les règles de ",
+      "auto": true
+    }, {
+      "text": "pare",
+      "auto": true
+    }, {
+      "text": "-feu pour sécuriser le trafic.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les points d’accès ",
+      "auto": true
+    }, {
+      "text": "Meraki",
+      "auto": true
+    }, {
+      "text": " affichent ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " statut hors ligne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons besoin d’aide pour mettre à jour les SSID et les réglages d’authentification pour la conformité.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos caméras et points d’accès sont hors ligne — ",
+      "auto": true
+    }, {
+      "text": "cela",
+      "auto": true
+    }, {
+      "text": " affecte notre surveillance de ",
+      "auto": true
+    }, {
+      "text": "sécurité",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous confirmer si nos réglages de ",
+      "auto": true
+    }, {
+      "text": "pare",
+      "auto": true
+    }, {
+      "text": "-feu sont corrects?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous voyons des alertes surle tableau de bord ",
+      "auto": true
+    }, {
+      "text": "Meraki",
+      "auto": true
+    }, {
+      "text": " concernant des vulnérabilités de ",
+      "auto": true
+    }, {
+      "text": "sécurité",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au nom pour ma companie. Notre réseau ",
+      "auto": true
+    }, {
+      "text": "WiFi",
+      "auto": true
+    }, {
+      "text": " Meraki est en panne et le personnel ne peut pas ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " connecter.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

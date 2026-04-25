@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1995522233:1716274087807" name="Call_EPCBrandsTable" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.adminhost.BW_Billing_EPCBrandsTableLookup</source>
+</config>
+</decision>

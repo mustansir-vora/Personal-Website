@@ -1,0 +1,49 @@
+{
+  "name": "7dba5b7e-93be-4ae3-b556-75396c4bc30e",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "is_ani_in_wireless_subscriptions",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": "true"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide. Plusieurs problèmes peuvent être résolus en éteignant et en redémarrant votre appareil."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "after customer is identified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "customerIdentified": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after condition chceks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet,passive-techSupportWireless",
+      "completedSSName": "passive-techSupportInternet,passive-techSupportWireless",
+      "completedSelfServe": "passive-techSupportInternet,passive-techSupportWireless",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet,passive-techSupportWireless",
+      "reportingVar_completedSSName": "passive-techSupportInternet,passive-techSupportWireless",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "wsStepCompleted": "true"
+    }
+  },
+  "displayName": "CustomerIdentified_True_Ani_Found2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 352,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

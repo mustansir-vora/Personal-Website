@@ -1,0 +1,7 @@
+{
+  "name": "cc1a6b9f-5b64-4e95-b8c0-398524bcc64c",
+  "displayName": "cable-burial-status",
+  "priority": 500000,
+  "description": "Handles inquiries related to check the status or progress of a buried cable request.",
+  "numTrainingPhrases": 63
+}

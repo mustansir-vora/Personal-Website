@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1422055438:1707391175421" name="Valid 10 digit ANI" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.Valid_10_digit_ANI</source>
+</config>
+</decision>

@@ -1,0 +1,28 @@
+{
+  "name": "d0c15b78-37aa-4bf6-8b44-ce5d56866cf0",
+  "displayName": "Play lastInvoiceCreditDetails",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "\u003cspeak\u003eVotre facture la plus récente comportait un crédit de $session.params.api.billingProfile.lastPaymentDetails.lastInvoiceAmount daté du \u003csay-as interpret-as=\"date\" format=\"md\"\u003e $session.params.api.billingProfile.playAccountBalanceDates.playlastBillingDate\u003c/say-as\u003e.\u003c/speak\u003e" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "\u003cspeak\u003eYour most recent bill had a credit of $ $session.params.api.billingProfile.lastPaymentDetails.lastInvoiceAmount dated \u003csay-as interpret-as=\"date\" format=\"md\"\u003e $session.params.api.billingProfile.playAccountBalanceDates.playlastBillingDate\u003c/say-as\u003e.\u003c/speak\u003e" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check from AB or AR",
+    "name": "be6257ee-948f-4ed5-824f-baec3ccf237a"
+  } ]
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@745123721:1759254344495" name="Check Retry Count" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check Retry Count">
+        <exit_state name="2nd Try" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <element name="Increment Error Count" variable="count" />
+                </data>
+                <constant_number value="1" />
+            </number>
+        </exit_state>
+        <exit_state name="3rd Try" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <element name="Increment Error Count" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

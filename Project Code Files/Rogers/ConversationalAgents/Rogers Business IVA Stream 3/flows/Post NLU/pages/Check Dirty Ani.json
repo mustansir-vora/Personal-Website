@@ -1,0 +1,46 @@
+{
+  "name": "52703a3d-4950-44e4-acbf-c9df47ae3ad4",
+  "displayName": "Check Dirty Ani",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.dirtyAni = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "customerIdentified",
+        "value": ""
+      }, {
+        "parameter": "validANI",
+        "value": ""
+      }, {
+        "parameter": "ANI",
+        "value": null
+      }, {
+        "parameter": "formattedANI",
+        "value": null
+      }, {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "4d774ac5-bb5a-46b4-96bb-23c4a42b9b48"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idx",
+        "value": 0
+      }, {
+        "parameter": "subscriptionsList",
+        "value": [ ]
+      } ]
+    },
+    "targetPage": "Business Accounts Router",
+    "name": "c248692c-768d-40cd-8546-d202b621bdd3"
+  } ]
+}

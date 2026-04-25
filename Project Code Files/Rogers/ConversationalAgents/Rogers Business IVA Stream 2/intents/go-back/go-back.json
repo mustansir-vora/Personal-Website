@@ -1,0 +1,7 @@
+{
+  "name": "fa5b952d-973c-4583-aa2a-82f0cd52a5ff",
+  "displayName": "go-back",
+  "priority": 500000,
+  "numTrainingPhrases": 4,
+  "dtmfPattern": "\\*"
+}

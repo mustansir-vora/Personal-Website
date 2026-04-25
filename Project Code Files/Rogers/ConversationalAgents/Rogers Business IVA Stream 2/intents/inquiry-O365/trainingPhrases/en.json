@@ -1,0 +1,55 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "What security features are included in the O365 plans offered in RBAM?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there a discount if I buy O365 through Rogers instead of directly from Microsoft?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I manage all my apps and billing through RBAM?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I purchase or add licenses for O365 in RBAM?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Does RBAM include Microsoft Teams Calling or Business Voice options?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What features come with Microsoft 365 Business Premium versus Business Basic?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you explain what Office "
+    }, {
+      "text": "365"
+    }, {
+      "text": " plans are available through RBAM?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm calling to inquire about O365."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

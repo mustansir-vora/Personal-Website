@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@433879904:1743084399937" name="KYCAF_HOST_004" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.KYCAF_IntermediarySegmentationInfoAPI</source>
+</config>
+</decision>

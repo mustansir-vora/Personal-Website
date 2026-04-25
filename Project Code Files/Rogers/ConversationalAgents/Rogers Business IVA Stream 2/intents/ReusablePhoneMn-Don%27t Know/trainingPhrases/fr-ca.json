@@ -1,0 +1,129 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je ne sais pas"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "je n'ai pas"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "désolé, je ne sais pas"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je suis désolé, je ne sais pas"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne l'ai pas avec moi"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne suis pas sûr"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n'en ai aucune idée"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne me souviens pas"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai oublié"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n'ai pas cette information"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne suis pas au courant"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne connais pas la réponse"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne connais pas"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je suis vide"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Malheureusement, je ne sais pas"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n'ai pas"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne suis pas sûr de ça"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai bien peur de ne pas savoir"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne pourrais pas vous dire"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ça me dépasse"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne suis pas certain"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

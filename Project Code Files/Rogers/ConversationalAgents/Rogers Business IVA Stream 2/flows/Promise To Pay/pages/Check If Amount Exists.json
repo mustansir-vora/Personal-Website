@@ -1,0 +1,25 @@
+{
+  "name": "9ce37451-aab6-4d79-bb01-62832e24f01e",
+  "displayName": "Check If Amount Exists",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpAmount != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Date Exists",
+    "name": "2d618b33-6e1a-413b-b5e5-0b8a58f7a9d5"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Current Balance Details",
+    "name": "1c75c74c-a4ac-4e34-9738-bf1bdc32a1f9"
+  } ]
+}

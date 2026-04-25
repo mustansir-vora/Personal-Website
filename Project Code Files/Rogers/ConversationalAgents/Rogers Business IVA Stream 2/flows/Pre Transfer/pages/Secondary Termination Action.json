@@ -1,0 +1,113 @@
+{
+  "name": "8d748824-c745-48b4-ae9a-6214eaaf06f7",
+  "displayName": "Secondary Termination Action",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "callActionType",
+      "value": "$session.params.secondaryActionType"
+    }, {
+      "parameter": "reportingVar_actionType",
+      "value": "$session.params.primaryActionType"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.secondaryActionType = \"NA\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Default Termination Action",
+    "name": "3cb798b8-5e0e-42b6-a135-5484b4c3be77"
+  }, {
+    "condition": "$session.params.secondaryActionType = \"termination\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "End"
+      }, {
+        "parameter": "terminationFlag",
+        "value": true
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.secondaryScriptContent = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.secondaryScriptContent" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.secondaryScriptContent" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "End Call Routing",
+    "name": "90630b35-fe3a-430a-b1bd-b571aeb5d6f8"
+  }, {
+    "condition": "$session.params.secondaryActionType = \"transfer\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "Transfer"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.secondaryScriptContent = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.secondaryScriptContent" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.secondaryScriptContent" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "End Call Routing",
+    "name": "24b6b923-6dbf-4081-a453-6e4b019cefad"
+  }, {
+    "condition": "$session.params.secondaryActionType = \"returnToMainMenu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "f9ee274e-d21d-44d2-b366-64cba59a0eed"
+  }, {
+    "condition": "$session.params.secondaryActionType = \"vaDeflection\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Send SMS",
+    "name": "3624b1e5-a284-4b58-888f-5bc3d577fce8"
+  }, {
+    "condition": "$session.params.sendSMS = true OR $session.params.sendSMS != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Call Routing",
+    "name": "40a67635-bc57-48d5-8703-bacc4e4307bb"
+  } ]
+}

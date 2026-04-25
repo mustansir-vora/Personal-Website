@@ -1,0 +1,38 @@
+{
+  "name": "1f13530a-5c38-4521-ab34-72f5889a341b",
+  "displayName": "Call Broadcast Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCallBroadcastMsg = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpCallBroadcastMsg",
+        "value": true
+      }, {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId19"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "6f3e9b34-c7f4-4bc9-9356-e47a2cc6978a"
+  }, {
+    "condition": "$session.params.fromAR = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If SuperSystem",
+    "name": "4fe8dcb9-2a06-4398-a9fb-f8eed401da47"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Get Billing Profile",
+    "name": "09e54776-6897-42f6-b43c-f52b81392161"
+  } ]
+}

@@ -1,0 +1,237 @@
+{
+  "name": "6321b9c6-e63e-4eb3-9bc6-1d43baf54e4a",
+  "displayName": "Account Or Phone Number ",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "« Si vous avez votre numéro de compte, dites “numéro de compte”. Sinon, dites simplement “numéro de téléphone”. »" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "“If you have your account number, say ‘account number.’ If not, just say ‘phone number.’”" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je ne vous ai pas entendu. Vous pouvez dire « numéro de compte » ou « numéro de téléphone »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I'm Sorry I could't hear that. You can say \"account number\" or \"Phone number\"" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n’ai pas compris. Vous pouvez dire « numéro de compte » ou « numéro de téléphone »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I'm Sorry I didn't get that. You can say \"account number\" or \"Phone number\"" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je ne vous entends toujours pas. Pour fournir votre numéro de compte,… dites « numéro de compte » ou appuyez sur 1. Vous pouvez aussi dire « numéro de téléphone » ou appuyer sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I still couldn't hear  that.To provide your accont number, say account number or press 1. you can also say phone number, or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je n’ai toujours pas compris. Pour fournir votre numéro de compt…, dites « numéro de compte » ou appuyez sur 1. Vous pouvez aussi dire « numéro de téléphone » ou appuyer sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I still didn't get  that. To provide your account number, say account number or press 1. you can also say phone number, or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "IdTypeMn-Account",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "f6472039-eb87-452e-9f42-ddcee1e7aa05"
+  }, {
+    "intent": "IdTypeMn-Phone",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "phoneNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "phoneRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "79339c52-a538-4c9e-bf03-da21ea0d89bd"
+  }, {
+    "intent": "IdTypeMn-Don't Know",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Parfait, continuons." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay! Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      }, {
+        "parameter": "customerIdentified",
+        "value": false
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "f60ef613-40c9-4aee-989d-a5f1a81675b1"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "3cc48b91-f785-4f27-a4d9-ad3bc9254758"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "bb3e8b88-3c28-4d86-af12-3f238a54a3fa"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "60c7cb6b-4b5a-4751-a66e-f73aceaa17fe"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord, continuons." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay! Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      }, {
+        "parameter": "customerIdentified",
+        "value": false
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "d84acce6-09cf-4715-a5fe-b9f5f420a577"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "5189cba3-f4f1-49e9-bc5f-b070db64f74d"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "56eafc4c-3319-4cb8-9312-ea5cb25d733a"
+  } ]
+}

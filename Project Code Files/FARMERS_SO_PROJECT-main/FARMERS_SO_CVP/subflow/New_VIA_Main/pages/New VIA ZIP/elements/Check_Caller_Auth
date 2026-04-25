@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1202931812:1745504267173" name="Check_Caller_Auth" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_Caller_Auth" default_exit_state="ER">
+        <exit_state name="Verified" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CALLER_AUTH" />
+                </data>
+                <constant_string value="Verified" />
+            </string>
+        </exit_state>
+        <exit_state name="Identified" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CALLER_AUTH" />
+                </data>
+                <constant_string value="Identified" />
+            </string>
+        </exit_state>
+        <exit_state name="Authenticated" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CALLER_AUTH" />
+                </data>
+                <constant_string value="Authenticated" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

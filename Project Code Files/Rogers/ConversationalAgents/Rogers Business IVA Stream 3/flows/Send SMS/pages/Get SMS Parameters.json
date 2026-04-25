@@ -1,0 +1,35 @@
+{
+  "name": "06b1dbb5-accb-4f6b-83e5-abf30508b59c",
+  "displayName": "Get SMS Parameters",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callend",
+    "tag": "getSmsParameters"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"1\" OR $session.params.smsAvailable != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsStatus",
+        "value": "notAvailable"
+      }, {
+        "parameter": "sendSMS",
+        "value": false
+      }, {
+        "parameter": "smsId",
+        "value": ""
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "65819c32-628e-4ee0-91b7-8c062f5678b6"
+  }, {
+    "condition": "$session.params.smsAvailable = true AND $session.params.returnCode = \"0\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check SMS Params",
+    "name": "d80308b7-e663-4e35-889c-088300d7c715"
+  } ]
+}

@@ -1,0 +1,55 @@
+{
+  "templateId": "r4b-dlp-deidentify",
+  "deidentifyTemplate": {
+    "displayName": "R4B DLP Deidentify Template",
+    "description": "Replaces detected PII with the corresponding infoType label for Dialogflow CX storage redaction.",
+    "deidentifyConfig": {
+      "infoTypeTransformations": {
+        "transformations": [
+          {
+            "infoTypes": [{ "name": "PERSON_NAME" }, { "name": "ROGERS_CONTEXTUAL_NAME" }],
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          },
+          {
+            "infoTypes": [{ "name": "DATE_OF_BIRTH" }, { "name": "ROGERS_CONTEXTUAL_DOB" }],
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          },
+          {
+            "infoTypes": [{ "name": "EMAIL_ADDRESS" }, { "name": "ROGERS_CONTEXTUAL_EMAIL" }],
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          },
+          {
+            "infoTypes": [{ "name": "LOCATION" }, { "name": "STREET_ADDRESS" }, { "name": "ROGERS_CONTEXTUAL_ADDRESS" }],
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          },
+          {
+            "infoTypes": [{ "name": "CREDIT_CARD_NUMBER" }, { "name": "ROGERS_CONTEXTUAL_CARD" }],
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          },
+          {
+            "infoTypes": [{ "name": "CANADA_BANK_ACCOUNT" }, { "name": "ROGERS_CONTEXTUAL_BANK_ACCOUNT" }, { "name": "ROGERS_ACCOUNT_NUMBER" }],
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          },
+          {
+            "infoTypes": [{ "name": "CANADA_SOCIAL_INSURANCE_NUMBER" }, { "name": "ROGERS_CONTEXTUAL_SIN" }],
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          },
+          {
+            "infoTypes": [{ "name": "CANADA_DRIVERS_LICENSE_NUMBER" }, { "name": "ROGERS_CONTEXTUAL_DRIVERS_LICENSE" }],
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          },
+          {
+            "infoTypes": [{ "name": "ROGERS_ACCOUNT_PIN" }],
+            "primitiveTransformation": {
+              "characterMaskConfig": { "maskingCharacter": "*" }
+            }
+          },
+          {
+            "primitiveTransformation": { "replaceWithInfoTypeConfig": {} }
+          }
+        ]
+      },
+      "transformationErrorHandling": { "leaveUntransformed": {} }
+    }
+  }
+}

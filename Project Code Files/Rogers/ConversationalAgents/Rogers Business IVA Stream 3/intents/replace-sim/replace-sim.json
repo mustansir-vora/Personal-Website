@@ -1,0 +1,7 @@
+{
+  "name": "7f45e1b0-b182-458b-9837-94401a5aca9c",
+  "displayName": "replace-sim",
+  "priority": 500000,
+  "description": "Handles requests to replace a lost, damaged, or malfunctioning SIM card.",
+  "numTrainingPhrases": 12
+}

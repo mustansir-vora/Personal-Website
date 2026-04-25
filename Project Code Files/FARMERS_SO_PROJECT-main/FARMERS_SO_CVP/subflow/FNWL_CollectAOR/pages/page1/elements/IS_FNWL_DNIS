@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@83595903:1732788996323" name="IS_FNWL_DNIS" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IS_FNWL_DNIS" default_exit_state="NO">
+        <exit_state name="YES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FIND_IVR_MAINFLOW" />
+                </data>
+                <constant_string value="FNWL Flow" />
+            </string>
+        </exit_state>
+        <exit_state name="YES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FIND_IVR_MAINFLOW" />
+                </data>
+                <constant_string value="FNWL Flows" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

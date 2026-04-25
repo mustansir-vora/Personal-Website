@@ -1,0 +1,7 @@
+{
+  "name": "dc83d611-d5a5-4e80-af93-8bdc2d3c62b4",
+  "displayName": "AccountNumberMn-HoldOn",
+  "priority": 500000,
+  "description": "this intent will be triggered when user says hold on",
+  "numTrainingPhrases": 61
+}

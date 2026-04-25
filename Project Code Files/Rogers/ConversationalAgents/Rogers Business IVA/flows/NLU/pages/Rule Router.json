@@ -1,0 +1,17 @@
+{
+  "name": "566a5387-3ba1-4b37-9de9-63fe7ba004fc",
+  "displayName": "Rule Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.destination = BusinessConsultantRequest",
+    "triggerFulfillment": {
+    
+    },
+    "name": "40549b1d-f073-4551-b973-9f97d3597dbc"
+  } ]
+}

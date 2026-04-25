@@ -1,0 +1,67 @@
+{
+  "name": "a4ef2165-d7a2-499d-b716-79354f1fa43a",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Is there an antenna fixed to the outside of your business location?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "what was that"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If there's an antenna fixed to the outside of your business location, say yes or press 1. If not, say no or press 2."
+    }
+  }, {
+    "userUtterance": {
+      "text": "i don't understand why are you saying this"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Do you access the internet using a SIM or a mobile phone?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "john speaking what is the issue"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If you access the internet using a SIM or your mobile phone, say yes or press 1. Otherwise, say no or press 2."
+    }
+  }, {
+    "userUtterance": {
+      "text": "3"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your internet equipment"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "customerIdentified": "false",
+      "isQuebecAntennaOffered": "true",
+      "npaProvince": "Quebec"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11401-Antenna-Bus-no match",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 421,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

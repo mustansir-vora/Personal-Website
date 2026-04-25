@@ -1,0 +1,25 @@
+{
+  "name": "e7df4ea7-3cee-4db9-a3ef-3c101a67abe8",
+  "displayName": "Check Intro Script Id",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.introvoiceScriptId != null AND $session.params.introvoiceScriptId != \"\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Try FAQ Menu",
+    "name": "ac0da7a4-3d68-4dfa-b5d0-a43500ef53a4"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "FAQ Announcement",
+    "name": "6f2106fe-2980-4088-9278-32697b5e4462"
+  } ]
+}

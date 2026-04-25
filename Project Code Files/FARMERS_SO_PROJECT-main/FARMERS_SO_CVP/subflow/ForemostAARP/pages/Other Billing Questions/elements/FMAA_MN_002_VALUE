@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@85840480:1708931489368" name="FMAA_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.FMAA_MN_002_VALUE</source>
+</config>
+</decision>

@@ -1,0 +1,56 @@
+{
+  "name": "dd4a4342-3353-4532-a845-9949d9eca4e7",
+  "displayName": "Play accountBalanceOnline",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "By the way, you can also check your account balance online at mybusinesshub.rogers.com" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "En passant, vous pouvez aussi consulter le solde de votre compte en ligne à l’adresse mon-carrefour-daffaires.rogers.com" ]
+      },
+      "languageCode": "fr-ca"
+    } ],
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "createInteraction",
+    "setParameterActions": [ {
+      "parameter": "interactionNotes",
+      "value": "IVA - Account Balance"
+    }, {
+      "parameter": "interactionLabel",
+      "value": "AccountBalance"
+    }, {
+      "parameter": "savedIntent",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAcctReceiveable = true OR $session.params.fromAR = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Payment Options",
+    "name": "9a42b830-0b1e-45df-af98-0b21e00ce65d"
+  }, {
+    "condition": "$session.params.fromAcctReceiveable = false OR $session.params.fromAR = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.savedIntent",
+        "value": ""
+      }, {
+        "parameter": "$session.params.returnToNLU",
+        "value": ""
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "ef0d20b0-6f2f-49b0-85b8-f3ffedeec2e3"
+  } ]
+}

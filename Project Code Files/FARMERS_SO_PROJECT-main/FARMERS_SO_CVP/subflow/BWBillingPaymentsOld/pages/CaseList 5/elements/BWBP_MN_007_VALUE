@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1533313390:1710827700160" name="BWBP_MN_007_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.BWBP_MN_007_VALUE</source>
+</config>
+</decision>

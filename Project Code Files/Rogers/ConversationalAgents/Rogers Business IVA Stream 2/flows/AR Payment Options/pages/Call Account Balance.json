@@ -1,0 +1,25 @@
+{
+  "name": "5c229845-957b-4330-8755-18d0be8980d1",
+  "displayName": "Call Account Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Account Balance",
+    "name": "e1c1cdfe-b1d2-4733-9830-c91e52dad138"
+  }, {
+    "condition": "$session.params.subFlowReturnValue = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "5cbaf5a1-542f-47be-b28a-b91f02e9c2fe"
+  } ]
+}

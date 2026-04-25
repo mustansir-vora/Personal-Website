@@ -1,0 +1,219 @@
+name: Sub Deploy Cloud Functions
+
+on:
+  workflow_call:
+    inputs:
+      functions:
+        required: true
+        type: string
+
+      environment:
+        required: true
+        type: string
+
+      git_tag:
+        required: true
+        type: string
+
+      runner_label:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  # =====================================================
+  # DEPLOY PLAN
+  # =====================================================
+
+  Deploy-Cloud-Functions:
+    name: Sub-Deploy Cloud Functions - ${{ inputs.environment }}
+    runs-on: ${{ inputs.runner_label }}
+    environment: ${{ inputs.environment }}
+
+    steps:
+      - name: Validate Deploy Authorization
+        id: auth
+        run: |
+
+          USER="${{ github.actor }}"
+          ENV="${{inputs.environment}}"
+          ALLOWED="${{ vars.WORKFLOW_EXECUTORS }}"
+
+          echo "Triggered by: $USER"
+          echo "Environment: $ENV"
+
+          AUTH_STATUS="authorized"
+
+          if [ "$ENV" = "Prod" ]; then
+           if [[ ",$ALLOWED," != *",$USER,"* ]]; then
+             echo "❌ User $USER is not allowed to deploy in Prod"
+             AUTH_STATUS="unauthorized"
+            echo "auth_status=$AUTH_STATUS" >> $GITHUB_OUTPUT
+            exit 1
+           fi
+          fi
+          echo "✔ User authorized"
+          echo "auth_status=$AUTH_STATUS" >> $GITHUB_OUTPUT
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.git_tag }}
+
+      - name: Wait for Node package propagation
+        run: |
+          echo "Waiting 20 seconds for Node package to become available..."
+          sleep 20
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set GCP Project
+        run: |
+          gcloud config set project ${{ vars.PROJECT_ID }}
+          gcloud config set billing/quota_project ${{ vars.PROJECT_ID }}
+
+      - name: Deploy Functions
+        id: deploy
+        working-directory: CloudFunctions
+        env:
+          BQ_SQL_VAL: ${{ vars.BIG_QUERY_SQL }}
+
+        run: |
+
+          ENV="${{ inputs.environment }}"
+          FUNCTIONS="${{ inputs.functions }}"
+
+          case "$ENV" in
+            Dev)  SUFFIX="dev-01" ;;
+            Qa)   SUFFIX="qa-01" ;;
+            Prod) SUFFIX="prd-01" ;;
+          esac
+
+          SUCCESS=""
+          FAILED=""
+
+          if [ -z "$FUNCTIONS" ]; then
+            echo "No functions to deploy."
+            exit 0
+          fi
+
+          for FUNC in $FUNCTIONS; do
+
+            FINAL_FUNCTION_NAME="${FUNC}-${SUFFIX}"
+
+            echo "---------------------------------------------"
+            echo "Deploying function: $FINAL_FUNCTION_NAME"
+            echo "---------------------------------------------"
+
+            if [[ "$FINAL_FUNCTION_NAME" == *callendwrapup* ]]; then
+
+              ENV_VARS="^|^BIG_QUERY_SQL=$BQ_SQL_VAL|EVENT_NAME=${{ vars.EVENT_NAME }}|HOST=${{ vars.HOST }}|BASE_URL=${{ vars.BASE_URL }}|LOCATION_MARKER=${{ vars.LOCATION_MARKER }}|SCOPE_1=${{ vars.SCOPE_1 }}|SCOPE_2=${{ vars.SCOPE_2 }}|SESSION_MARKER=${{ vars.SESSION_MARKER }}"
+
+            else
+
+              ENV_VARS="GCS_CONFIG_FILE_NAME=${{ vars.CONFIG_FILE_NAME }},GCS_BUCKET_NAME=${{ vars.CONFIG_BUCKET_NAME }},GCS_NLU_FILE_NAME=${{ vars.NLU_FILE_NAME }},GCS_CALLSTART_MATRIX_FILE_NAME=${{ vars.CALLSTART_MATRIX_FILE_NAME }},GCS_TERMINATION_MATRIX_FILE_NAME=${{ vars.TERMINATION_MATRIX_FILE_NAME }}"
+
+            fi
+
+
+            if npm run artifactregistry-login --prefix="$FUNC" && \
+              gcloud run deploy "$FINAL_FUNCTION_NAME" \
+              --region=${{ vars.REGION }} \
+              --project=${{ vars.PROJECT_ID }} \
+              --source="$FUNC" \
+              --function=R4B \
+              --memory=${{ vars.CLOUD_FUNCTION_MEMORY }} \
+              --cpu=${{ vars.CLOUD_FUNCTION_CPU }} \
+              --concurrency=${{ vars.CLOUD_FUNCTION_CONCURRENCY }} \
+              --timeout=60s \
+              --ingress=internal \
+              --network=${{ vars.CLOUD_RUN_VPC_NETWORK }} \
+              --subnet=${{ vars.CLOUD_RUN_VPC_SUBNET }} \
+              --vpc-egress=${{ vars.CLOUD_RUN_VPC_EGRESS }} \
+              --min-instances=${{ vars.CLOUD_FUNCTION_MIN_INSTANCES }} \
+              --max-instances=${{ vars.CLOUD_FUNCTION_MAX_INSTANCES }} \
+              --service-account=${{ vars.RUNTIME_SERVICE_ACCOUNT }} \
+              --build-service-account=${{ vars.BUILD_SERVICE_ACCOUNT }} \
+              --set-env-vars="$ENV_VARS" \
+              --set-secrets="clientId=${{ vars.CLIENT_ID_KEY }}:latest,clientSecret=${{ vars.CLIENT_SECRET_KEY }}:latest" \
+              --clear-base-image ; then
+
+                SUCCESS="${SUCCESS}| $FINAL_FUNCTION_NAME | ✅ Success |\n"
+                echo "Deployed $FINAL_FUNCTION_NAME"
+
+            else
+
+                FAILED="${FAILED}| $FINAL_FUNCTION_NAME | ❌ Failed |\n"
+                echo "Deployment failed for $FINAL_FUNCTION_NAME"
+
+            fi
+
+          done
+
+
+          echo "success<<EOF" >> $GITHUB_OUTPUT
+          printf "%b" "$SUCCESS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          echo "failed<<EOF" >> $GITHUB_OUTPUT
+          printf "%b" "$FAILED" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+
+          if [ -n "$FAILED" ]; then
+            echo "One or more deployments failed."
+            exit 1
+          fi
+
+      - name: Deployment Summary
+        if: always()
+        run: |
+
+          PROJECT_ID="${{ vars.PROJECT_ID }}"
+          SUCCESS="${{ steps.deploy.outputs.success }}"
+          FAILED="${{ steps.deploy.outputs.failed }}"
+          ENV="${{ inputs.environment }}"
+          USER="${{ github.actor }}"
+
+          BUILD_LOG_URL="https://console.cloud.google.com/cloud-build/builds?project=${PROJECT_ID}"
+
+
+          echo "## ⚡ Cloud Functions Deployment Results" >> $GITHUB_STEP_SUMMARY
+
+          AUTH_STATUS="${{ steps.auth.outputs.auth_status }}"
+
+          if [[ "$AUTH_STATUS" == "authorized" ]]; then
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          echo "🔗 **Cloud Build Logs:** [View Builds](${BUILD_LOG_URL})" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          echo "| Function | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|--------|" >> $GITHUB_STEP_SUMMARY
+
+          if [ -n "$SUCCESS" ]; then
+            echo "$SUCCESS" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -n "$FAILED" ]; then
+            echo "$FAILED" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          fi
+
+          
+
+          if [ -z "$SUCCESS" ] && [ -z "$FAILED" ]; then
+
+           if [[ "$AUTH_STATUS" == "unauthorized" ]]; then
+             echo "" >> $GITHUB_STEP_SUMMARY
+             echo "🚫 User **$USER** is not allowed to deploy to **$ENV**" >> $GITHUB_STEP_SUMMARY
+           else
+            echo "| No functions deployed | No changes detected |" >> $GITHUB_STEP_SUMMARY
+           fi
+          fi

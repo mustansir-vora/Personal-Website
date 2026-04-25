@@ -1,0 +1,22 @@
+{
+  "name": "793bcd9e-90c5-4df4-a6b0-6eeb04168e47",
+  "displayName": "Init CC Expiration",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "ccExpirationErrorCounter",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Expiration Date",
+    "name": "274c1c66-ca19-4bef-9763-fe6ffc9a1d8c"
+  } ],
+  "description": "Nothing to initialise here, keeping to maintain structure of the flows in visio"
+}

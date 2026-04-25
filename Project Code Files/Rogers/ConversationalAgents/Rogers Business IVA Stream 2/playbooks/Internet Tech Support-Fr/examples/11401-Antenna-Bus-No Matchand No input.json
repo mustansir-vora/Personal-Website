@@ -1,0 +1,68 @@
+{
+  "name": "b3e30967-8905-4b12-8796-ed00d776aded",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Y a-t-il une antenne fixée à l’extérieur de votre lieu d’affaires ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "qu'est-ce que c'est"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je n’ai pas compris. S’il y a une antenne fixée à l’extérieur de votre lieu d’affaires, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Accédez-vous à Internet à l’aide d’une carte SIM ou d’un téléphone mobile ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "qu'est-ce que c'est"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je n’ai pas compris. Si vous accédez à Internet à l’aide d’une carte SIM ou de votre téléphone mobile, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement Internet."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "numberOfInternet": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11401-Antenna-Bus-No Matchand No input",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 476,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

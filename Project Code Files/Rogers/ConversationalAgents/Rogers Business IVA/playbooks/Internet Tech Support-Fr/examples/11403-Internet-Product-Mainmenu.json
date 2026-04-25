@@ -1,0 +1,40 @@
+{
+  "name": "b89e452d-ca9d-47b3-a77a-4102c7d8d5f8",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Y a-t-il une antenne fixée à l’extérieur de votre lieu d’affaires ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "non"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Accédez-vous à Internet à l’aide d’une carte SIM ou d’un téléphone mobile ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux accéder au menu principal."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "userInput": "mainmenu"
+    }
+  },
+  "displayName": "11403-Internet-Product-Mainmenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 184,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

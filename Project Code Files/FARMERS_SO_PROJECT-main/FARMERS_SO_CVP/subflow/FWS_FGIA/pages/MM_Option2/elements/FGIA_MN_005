@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@633032654:1707812827133" name="FGIA_MN_005" version="6.0.1">
+<config>
+<settings>
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">1</setting>
+<setting name="max_nomatch_count">1</setting>
+<setting name="dtmf_grammar"/>
+<setting name="dtmf_keypress">1</setting>
+<setting name="dtmf_keypress">2</setting>
+<setting name="dtmf_keypress">3</setting>
+<setting name="dtmf_keypress">4</setting>
+<setting name="dtmf_keypress">5</setting>
+<setting name="dtmf_keypress">6</setting>
+<setting name="dtmf_keypress">7</setting>
+<setting name="help_dtmf_keypress"/>
+<setting name="modal">false</setting>
+<setting name="field_name">foundation_fld</setting>
+<setting name="slot_name"/>
+<setting name="slot_element_data"/>
+<setting name="combinedTriesFlag">Y</setting>
+<setting name="combinedTriesCount">3</setting>
+<setting name="secure_logging">false</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005e.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005f.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005g.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press7.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Retry_3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005e.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005f.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005g.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press7.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Retry_4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005e.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005f.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005g.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press7.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MaxTries.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Retry_3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005e.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005f.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005g.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press7.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Retry_4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005e.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005f.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FGIA_MN_005g.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press7.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MaxTries.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

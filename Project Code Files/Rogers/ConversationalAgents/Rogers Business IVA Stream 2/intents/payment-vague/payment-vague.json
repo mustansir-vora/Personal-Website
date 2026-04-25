@@ -1,0 +1,14 @@
+{
+  "name": "0095fb63-37dc-4626-ace7-9a8876651fde",
+  "displayName": "payment-vague",
+  "parameters": [ {
+    "id": "e_AmountName",
+    "entityType": "@e_AmountName"
+  }, {
+    "id": "e_Amount",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "description": "Captures unclear or unspecified requests related to payments.",
+  "numTrainingPhrases": 115
+}

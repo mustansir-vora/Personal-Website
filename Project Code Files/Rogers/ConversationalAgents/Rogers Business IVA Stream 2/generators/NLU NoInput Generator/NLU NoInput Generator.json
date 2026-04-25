@@ -1,0 +1,13 @@
+{
+  "name": "f8db6a72-449c-4c33-a701-ba55e8c290e4",
+  "displayName": "NLU NoInput Generator",
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 128,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-2.5-flash"
+  }
+}

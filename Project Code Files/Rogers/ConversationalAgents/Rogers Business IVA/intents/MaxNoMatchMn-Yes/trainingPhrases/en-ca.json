@@ -1,0 +1,129 @@
+{
+  "trainingPhrases": [ {
+    "id": "1a3008ca-056d-4250-8913-a744150271eb",
+    "parts": [ {
+      "text": "yes, continue"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e9eee03f-76e4-417e-a962-c82151df1b78",
+    "parts": [ {
+      "text": "please do"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5bb4b844-b601-45ee-93c1-2d9b09850f04",
+    "parts": [ {
+      "text": "sure, I need help"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "92e81701-5de2-4b50-91e6-070c75556c26",
+    "parts": [ {
+      "text": "sure I do"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "26d00c07-7783-4281-a89f-70c0fe8b9435",
+    "parts": [ {
+      "text": "sure, go ahead"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ebce36de-3644-4bce-b43d-acc0b53eaad8",
+    "parts": [ {
+      "text": "that is correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "31ecf28d-4f18-4ce5-b1a1-8bcac5c3a322",
+    "parts": [ {
+      "text": "that's correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "001183f9-09af-456e-a71d-002dbcef5ba4",
+    "parts": [ {
+      "text": "correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5c80bb81-eb6d-4a96-bc71-f07f696b5d74",
+    "parts": [ {
+      "text": "affirmative"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bd56b001-71ca-4265-b3c7-6c2203543d61",
+    "parts": [ {
+      "text": "i do need help"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a33e4647-1ff3-4627-9d2b-cbd74c28a3d7",
+    "parts": [ {
+      "text": "yes, go ahead"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bb15c7ad-a052-422f-b443-ffca98be0e2c",
+    "parts": [ {
+      "text": "yes I do need help"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6e89d166-3172-4bb5-9a08-fab1356e3348",
+    "parts": [ {
+      "text": "yes, that's right"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "68d60dd7-79b2-435f-835a-5d3772491d52",
+    "parts": [ {
+      "text": "yes, I do"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3e7ff23b-cca4-441f-861c-e1237b15103a",
+    "parts": [ {
+      "text": "yes please"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7e688fd2-4bd8-4e51-b52e-b631405ad857",
+    "parts": [ {
+      "text": "go ahead"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "377788a4-3d3a-4c77-a6ae-a8c6f3832e3c",
+    "parts": [ {
+      "text": "yes i need help"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2d0c1ef2-5c6b-4f26-a825-e332a5ac4ec4",
+    "parts": [ {
+      "text": "yeah"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

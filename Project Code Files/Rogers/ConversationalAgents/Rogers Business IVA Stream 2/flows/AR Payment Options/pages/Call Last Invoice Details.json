@@ -1,0 +1,40 @@
+{
+  "name": "00ad3b3b-601e-4b68-96a9-b7650bd496bf",
+  "displayName": "Call Last Invoice Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowInputs.accountBalance.callCurrentBalanceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callInstallmentPaymentPlanDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callCreditLimitUsageDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callPendingPTPDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callLastInvoiceDetailsSubflow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Play Balance Details",
+    "name": "2ebf4de4-1a7d-47ae-bc2b-07d5bfa64d26"
+  }, {
+    "condition": "$session.params.subFlowReturnValue = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "974d0be2-97a4-4160-a292-b6503207edf1"
+  } ]
+}

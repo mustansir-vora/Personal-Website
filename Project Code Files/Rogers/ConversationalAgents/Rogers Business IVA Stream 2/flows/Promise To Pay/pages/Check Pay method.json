@@ -1,0 +1,25 @@
+{
+  "name": "02084786-c65f-4898-b45b-7a8af596300f",
+  "displayName": "Check Pay method",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Offer Best Option CC",
+    "name": "52e1739d-c5d1-4b53-9c34-aa9eb338466c"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Offer Best Option PB",
+    "name": "d93c0198-39a3-44b6-9604-c6d1a7feb395"
+  } ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "eaf6d100-22eb-47f6-becb-78ad5d88a51e",
+  "displayName": "PTP Check Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.ptpCheckDate",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpMethod = CC AND $session.params.collectedPtpDate \u003e $session.params.api.response.ptp.ccSingleInstallmentDate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpCheckDate",
+        "value": true
+      }, {
+        "parameter": "numberOfInstalls",
+        "value": 1
+      } ]
+    },
+    "targetPage": "PTP Offer Latest Install Days",
+    "name": "fbd66ac5-525f-4892-a4a9-970bffd8bc12"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = PB AND $session.params.collectedPtpDate \u003e $session.params.api.response.ptp.pbSingleInstallmentDate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpCheckDate",
+        "value": true
+      }, {
+        "parameter": "numberOfInstalls",
+        "value": 1
+      } ]
+    },
+    "targetPage": "PTP Offer Latest Install Days",
+    "name": "baf9cc1b-3e4a-483e-bd29-d0d0b75c7fd8"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = CC AND $session.params.collectedPtpDate \u003c $session.params.api.response.ptp.ccCollectedDate",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Report Payment",
+    "name": "65465940-c749-413f-93e7-4f5cd89d3d79"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = PB AND $session.params.collectedPtpDate \u003c $session.params.api.response.ptp.pbCollectedDate",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Report Payment",
+    "name": "74d665be-d504-41ec-805f-fed6e74de084"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfInstalls",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Set PTP Check Date Params",
+    "name": "0a64f2c7-cb15-4e85-870a-4beb818dec5c"
+  } ]
+}

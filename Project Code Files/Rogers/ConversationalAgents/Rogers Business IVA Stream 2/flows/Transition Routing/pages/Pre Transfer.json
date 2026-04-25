@@ -1,0 +1,18 @@
+{
+  "name": "03149b38-5d32-465c-89e6-df5fa920e837",
+  "displayName": "Pre Transfer",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "a33a33ac-1397-4863-ba64-2c63f27d5287"
+  } ]
+}

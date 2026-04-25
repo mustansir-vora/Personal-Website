@@ -1,0 +1,7 @@
+{
+  "name": "9abd0e32-79a6-49ba-874c-e13fddeaf0e2",
+  "displayName": "cancel-phone",
+  "priority": 500000,
+  "description": "Handles request to cancel a phone",
+  "numTrainingPhrases": 8
+}

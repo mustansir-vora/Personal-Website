@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@736518922:1707392648560" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1707392648560" name="KYC_Brand_Authentication" type="Subflow Start" width="255" x="232" y="-253">
+<exit_states>
+<exit_state name="next" target="Element@1088334418:1709734842148"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1103170060:1707815685071" name="KYCBA_MN_001_VALUE" type="Decision" width="233" x="243" y="-33">
+<exit_states>
+<exit_state name="SU" target="Element@1844931261:1715174829253"/>
+<exit_state name="ER" target="Element@1985903521:1707816269647"/>
+<exit_state name="I Dont Know" target="Element@1985903521:1707816269647">
+<bendpoint>
+<dim1 x="268" y="1"/>
+<dim2 x="-64" y="-166"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1985903521:1707816269647">
+<bendpoint>
+<dim1 x="284" y="-15"/>
+<dim2 x="-113" y="-61"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1985903521:1707816269647">
+<bendpoint>
+<dim1 x="264" y="64"/>
+<dim2 x="-133" y="18"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1564251366:1707815724732" name="KYCBA_HOST_001" type="Decision" width="192" x="246" y="375">
+<exit_states>
+<exit_state name="SU" target="Element@1678407526:1708584132810"/>
+<exit_state name="ER" target="Element@1507136343:1715175206110"/>
+</exit_states>
+</element>
+<element height="55" id="Element@444045287:1707815839501" name="Is_DOB_Correct" type="Decision" width="171" x="272" y="598">
+<exit_states>
+<exit_state name="YES" target="Element@790972774:1708584217839"/>
+<exit_state name="NO" target="Element@1856656728:1715620233825"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2014556474:1707816129926" name="Subflow Return_01" type="Subflow Return" width="198" x="573" y="933"/>
+<element height="55" id="Element@1985903521:1707816269647" name="Subflow Return_02" type="Subflow Return" width="198" x="657" y="13"/>
+<element height="55" id="Element@1678407526:1708584132810" name="SET_DOB_COLLECTED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="221" x="242" y="480">
+<exit_states>
+<exit_state name="done" target="Element@444045287:1707815839501"/>
+</exit_states>
+</element>
+<element height="55" id="Element@790972774:1708584217839" name="SET_KYC_AUTHENTICATED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="257" x="252" y="692">
+<exit_states>
+<exit_state name="done" target="Element@968052103:1724179600067"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1200137527:1708584310289" name="SET_TI_SCORE_MEDIUM" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="239" x="639" y="727">
+<exit_states>
+<exit_state name="done" target="Element@2014556474:1707816129926"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1088334418:1709734842148" name="KYCBA_MN_001_Call" type="Subflow Call" width="210" x="250" y="-144">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709977922418">
+<config>
+<argument_data>
+<data name="MenuID">KYCBA_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1103170060:1707815685071"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2068439102:1710743872839" name="Active_Claim_Found_InAPI" type="Decision" width="256" x="259" y="821">
+<exit_states>
+<exit_state name="YES" target="Element@1200137527:1708584310289"/>
+<exit_state name="NO" target="Element@1293107620:1710743925718"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1293107620:1710743925718" name="SET_TI_SCORE_HIGH" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="211" x="279" y="934">
+<exit_states>
+<exit_state name="done" target="Element@2014556474:1707816129926"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1844931261:1715174829253" name="BU_Check" type="Decision" width="114" x="295" y="72">
+<exit_states>
+<exit_state name="BW" target="Element@1987186764:1715175223885"/>
+<exit_state name="FDS" target="Element@283991383:1715175264914"/>
+<exit_state name="FM" target="Element@119989091:1715175283579"/>
+<exit_state name="FWS" target="Element@715946991:1715175301731"/>
+<exit_state name="21" target="Element@1832655370:1715175315459"/>
+<exit_state name="Others" target="Element@106464261:1715175223885"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1507136343:1715175206110" name="Copy_of_Subflow Return_02" type="Subflow Return" width="233" x="601" y="379"/>
+<element height="55" id="Element@106464261:1715175223885" name="Warhead3" type="Subflow Call" width="130" x="288" y="267">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710838177515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1564251366:1707815724732"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1987186764:1715175223885" name="SET_API_NAME1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="12" y="155">
+<exit_states>
+<exit_state name="done" target="Element@106464261:1715175223885"/>
+</exit_states>
+</element>
+<element height="55" id="Element@283991383:1715175264914" name="SET_API_NAME2" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="179" y="157">
+<exit_states>
+<exit_state name="done" target="Element@106464261:1715175223885"/>
+</exit_states>
+</element>
+<element height="55" id="Element@119989091:1715175283579" name="SET_API_NAME3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="378" y="162">
+<exit_states>
+<exit_state name="done" target="Element@106464261:1715175223885"/>
+</exit_states>
+</element>
+<element height="55" id="Element@715946991:1715175301731" name="SET_API_NAME4" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="664" y="162">
+<exit_states>
+<exit_state name="done" target="Element@106464261:1715175223885"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1832655370:1715175315459" name="SET_API_NAME5" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="520" y="163">
+<exit_states>
+<exit_state name="done" target="Element@106464261:1715175223885"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1856656728:1715620233825" name="SET_EMAILFLAG_AS_NO" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="255" x="596" y="572">
+<exit_states>
+<exit_state name="done" target="Element@1200137527:1708584310289"/>
+</exit_states>
+</element>
+<element height="52" id="Element@968052103:1724179600067" name="SET_CV_FLG" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="187" x="58" y="760">
+<exit_states>
+<exit_state name="done" target="Element@2068439102:1710743872839"/>
+</exit_states>
+</element>
+</page>

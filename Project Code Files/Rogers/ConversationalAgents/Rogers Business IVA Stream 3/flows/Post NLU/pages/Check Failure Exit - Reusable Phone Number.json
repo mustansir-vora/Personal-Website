@@ -1,0 +1,28 @@
+{
+  "name": "f059f714-0681-426f-83e2-4dd31426679b",
+  "displayName": "Check Failure Exit - Reusable Phone Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.reusablePhoneNumberCalledFrom = \"wirelessIdentification\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ID Required?",
+    "name": "41428170-bad0-4af8-9eea-6a5e7d044454"
+  }, {
+    "condition": "$session.params.reusablePhoneNumberCalledFrom = \"confirmSubscription\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "confirmSubscriptionResult",
+        "value": "invalid_number"
+      } ]
+    },
+    "targetPage": "Confirm Subscription Router",
+    "name": "3c8ea023-6b13-49db-8a4d-80dd9c5c9b92"
+  } ]
+}

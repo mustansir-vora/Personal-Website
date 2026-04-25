@@ -1,0 +1,269 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I want to "
+    }, {
+      "text": "update my address after relocating.",
+      "parameterId": "e_address_change"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have "
+    }, {
+      "text": "moved and need to update my contact information",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about "
+    }, {
+      "text": "changing the account holder",
+      "parameterId": "e_address_change",
+      "auto": true
+    }, {
+      "text": " information."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "update ownership",
+      "parameterId": "e_address_change",
+      "auto": true
+    }, {
+      "text": " or account holder details."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can’t access online services because "
+    }, {
+      "text": "my email is wrong",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to "
+    }, {
+      "text": "correct the email address on file",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "update my email details",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to "
+    }, {
+      "text": "fix an incorrect address",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I recently "
+    }, {
+      "text": "moved and need to update my address",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "change my mailing address details",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to "
+    }, {
+      "text": "update my billing address information",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "correct my address details",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My contact information has changed",
+      "parameterId": "e_address_change"
+    }, {
+      "text": " and needs updating."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to "
+    }, {
+      "text": "change my personal information",
+      "parameterId": "e_address_change",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "update my contact details",
+      "parameterId": "e_address_change",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "update the account holder information",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can’t sign in because "
+    }, {
+      "text": "the email is wrong",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "update the email address on file",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to "
+    }, {
+      "text": "change my email address",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "correct the wrong address",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am "
+    }, {
+      "text": "moving to a new address",
+      "parameterId": "e_address_change",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "change my billing address",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to "
+    }, {
+      "text": "update my address",
+      "parameterId": "e_address_change",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to "
+    }, {
+      "text": "update my account information",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "872b47fe-add9-402a-adfc-9b99e2365775",
+  "displayName": "sim-card-received",
+  "parameters": [ {
+    "id": "e_simtype",
+    "entityType": "@e_SIMType"
+  } ],
+  "priority": 500000,
+  "description": "Handles confirmations or inquiries about receiving a SIM card.",
+  "numTrainingPhrases": 30
+}

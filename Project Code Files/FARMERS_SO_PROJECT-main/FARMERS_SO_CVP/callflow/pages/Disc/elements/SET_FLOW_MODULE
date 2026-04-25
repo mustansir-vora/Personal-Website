@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1388418157:1730194920663" name="SET_FLOW_MODULE" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">YES</setting>
+<setting name="sessNames">S_INVOKED_HOT</setting>
+</settings>
+</config>
+</action_element>

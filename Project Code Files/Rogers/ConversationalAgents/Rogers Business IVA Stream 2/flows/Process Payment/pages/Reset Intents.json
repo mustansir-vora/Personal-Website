@@ -1,0 +1,24 @@
+{
+  "name": "7facb45b-9f13-4cac-a359-09ed7a9dbdf5",
+  "displayName": "Reset Intents",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "returnToNLU",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "a2dfc622-a265-4a56-b107-84c0aeb7e425"
+  } ]
+}

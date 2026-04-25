@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@910260865:1733742371299" name="page1" version="6.0.1">
+<element height="50" id="Element@31:1733742371299" name="FNWL_Customer_Policy_Disambiguation" type="Subflow Start" width="314" x="574" y="98">
+<exit_states>
+<exit_state name="next" target="Element@984545107:1733742427191"/>
+</exit_states>
+</element>
+<element height="50" id="Element@984545107:1733742427191" name="Policy_Type_Check" type="Decision" width="170" x="648" y="216">
+<exit_states>
+<exit_state name="All Other" target="Element@1869670416:1733742835153"/>
+<exit_state name="IUL" target="Element@553531944:1733743053659"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1869670416:1733742835153" name="Book_Type_Check" type="Decision" width="166" x="651" y="327">
+<exit_states>
+<exit_state name="Front Book" target="Element@408615832:1733742882323">
+<bendpoint>
+<dim1 x="-269" y="-3"/>
+<dim2 x="0" y="111"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Mid Book" target="Element@414135177:1733743104739"/>
+<exit_state name="Back Book" target="Element@414135177:1733743104739">
+<bendpoint>
+<dim1 x="157" y="-26"/>
+<dim2 x="-193" y="-29"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Blank/Null" target="Element@414135177:1733743104739">
+<bendpoint>
+<dim1 x="162" y="30"/>
+<dim2 x="-203" y="31"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@408615832:1733742882323" name="FNWL_FrontbookCustomerIVRMenu" type="Subflow Call" width="285" x="323" y="213">
+<subflow_call subflow_name="FNWL_FrontbookCustomerIVRMenu" target="Element@31:1733743303444">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@835076429:1733743307087">
+<bendpoint>
+<dim1 x="0" y="242"/>
+<dim2 x="-267" y="-2"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@553531944:1733743053659" name="Policy Issue Date" type="Decision" width="160" x="1017" y="216">
+<exit_states>
+<exit_state name="Before 10/1/2019" target="Element@444750723:1735633158296">
+<bendpoint>
+<dim1 x="279" y="0"/>
+<dim2 x="2" y="-40"/>
+</bendpoint>
+</exit_state>
+<exit_state name="After 10/1/2019" target="Element@414135177:1733743104739"/>
+</exit_states>
+</element>
+<element height="50" id="Element@414135177:1733743104739" name="FNWL_MidBackbookCustomerIVRMenu" type="Subflow Call" width="308" x="945" y="326">
+<subflow_call subflow_name="FNWL_MidBackbookCustomerIVRMenu" target="Element@31:1733743281369">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@835076429:1733743307087">
+<bendpoint>
+<dim1 x="-1" y="130"/>
+<dim2 x="366" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1976593173:1733743250844" name="FNWL_Transfer" type="Subflow Call" width="154" x="1305" y="329">
+<subflow_call subflow_name="FNWL_Transfer" target="Element@31:1753441988815">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@835076429:1733743307087">
+<bendpoint>
+<dim1 x="2" y="126"/>
+<dim2 x="652" y="-2"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@835076429:1733743307087" name="Subflow Return_01" type="Subflow Return" width="173" x="646" y="457"/>
+<element height="50" id="Element@444750723:1735633158296" name="setMSP_IssueDateCustDisambig" type="Decision" width="266" x="1241" y="256">
+<exit_states>
+<exit_state name="SU" target="Element@1976593173:1733743250844">
+<bendpoint>
+<dim1 x="-28" y="41"/>
+<dim2 x="-36" y="-32"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1976593173:1733743250844">
+<bendpoint>
+<dim1 x="41" y="42"/>
+<dim2 x="33" y="-31"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="41" y="35"/>
+<dim2 x="33" y="-38"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

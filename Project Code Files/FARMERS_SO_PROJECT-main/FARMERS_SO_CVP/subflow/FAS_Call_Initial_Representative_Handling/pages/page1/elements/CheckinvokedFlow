@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@636286139:1711732937323" name="CheckinvokedFlow" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_S_INTENT" default_exit_state="NA">
+        <exit_state name="FAS_MM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REP_INVOKED_FROM" />
+                </data>
+                <constant_string value="FAS_MM" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_AUTO_MM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REP_INVOKED_FROM" />
+                </data>
+                <constant_string value="FAS_AUTO_MM" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_HOME_MM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REP_INVOKED_FROM" />
+                </data>
+                <constant_string value="FAS_HOME_MM" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_UM_MM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REP_INVOKED_FROM" />
+                </data>
+                <constant_string value="FAS_UM_MM" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

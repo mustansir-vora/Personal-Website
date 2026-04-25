@@ -1,0 +1,31 @@
+{
+  "name": "5a8c5dab-5403-435c-ad1f-b15cd7c0f92c",
+  "displayName": "Wireless Intent?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.wireless_SS = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wirelessIdentification",
+        "value": false
+      }, {
+        "parameter": "wirelessIdentificationInvoked",
+        "value": true
+      } ]
+    },
+    "targetPage": "Start Wireless Identification",
+    "name": "a74ae1f7-3cc1-4540-ac3e-c418f1e71c23"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Customer Identified?",
+    "name": "a443fa26-19a6-44a7-b475-698aae203c10"
+  } ]
+}

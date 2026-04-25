@@ -1,0 +1,76 @@
+{
+  "name": "14241e1d-050f-4106-9b5c-5c4466e4b912",
+  "displayName": "NLU Return",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "To continue, say 'Main Menu' or if you're finished, say 'Goodbye' or simply hang up" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServeCompleted",
+        "value": false
+      }, {
+        "parameter": "whatElseNLU",
+        "value": true
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "5da4cd22-410b-497e-8094-e560c5242d03"
+  }, {
+    "intent": "GoodBye",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Polite Disconnect",
+    "name": "cf0ab8d7-4ff7-4e03-babd-eba839bbf9e7"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServeCompleted",
+        "value": false
+      }, {
+        "parameter": "whatElseNLU",
+        "value": true
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "13f4c1b3-7173-4f2b-abd1-860df66f8545"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Main Menu",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "whatElseNLU",
+        "value": true
+      }, {
+        "parameter": "selfServeCompleted",
+        "value": false
+      } ]
+    },
+    "name": "942aa7eb-defe-4af6-a18e-f3c0090bf87d"
+  }, {
+    "targetPage": "Main Menu",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "whatElseNLU",
+        "value": true
+      }, {
+        "parameter": "selfServeCompleted",
+        "value": false
+      } ]
+    },
+    "name": "d6dd0827-45ae-4e4a-8aaf-ee1ad5ffc58c"
+  } ]
+}

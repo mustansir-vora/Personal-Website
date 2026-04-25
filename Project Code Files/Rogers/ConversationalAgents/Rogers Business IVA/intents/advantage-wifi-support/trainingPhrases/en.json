@@ -1,0 +1,67 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Our WiFi is too slow for video calls or streaming presentations."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our Customers can’t log in to the guest WiFi page."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We have dead zones in parts of the restaurant or office."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our signal drops every "
+    }, {
+      "text": "few minutes"
+    }, {
+      "text": "; POS terminals disconnect."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "No"
+    }, {
+      "text": " devices can connect—our business operations are down."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re seeing slow speeds even though we’re on Advantage WiFi. Guests are complaining about poor connectivity."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our Advantage WiFi dashboard shows offline status. Can you check if there’s an outage or help "
+    }, {
+      "text": "us"
+    }, {
+      "text": " reboot the system?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The WiFi keeps dropping in certain areas of our store. We need stable coverage for our POS system and guest network."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling from my business. Our Advantage WiFi isn’t working—none of our devices can connect, and we have customers waiting."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

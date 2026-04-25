@@ -1,0 +1,7 @@
+{
+  "name": "38e6f631-0224-4935-a54f-3c7e039dc2e8",
+  "displayName": "report-death",
+  "priority": 500000,
+  "description": "Handles notifications regarding the death of an account holder.",
+  "numTrainingPhrases": 50
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1223622532:1708938735464" name="BWBP_PA_006" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="BWBP_PA_006.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="dollars_cents" type="currency">{Data.Session.S_NEXT_PAYMENT_AMOUNT}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="standard" type="wav">http://{Data.Session.S_VXML_SERVER_IP}/FARMERS_SO_CVP/EN/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="BWBP_PA_005b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="yyyymmdd" output_format="date" type="date">{Data.Session.S_NEXT_PAYMENT_DATE}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="standard_date" type="wav">http://{Data.Session.S_VXML_SERVER_IP}/FARMERS_SO_CVP/EN/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

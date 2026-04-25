@@ -1,0 +1,28 @@
+{
+  "name": "4018e165-df1e-43d3-86b6-c6784beede06",
+  "displayName": "Play Alright for No",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Alright." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Goto Transtion Routing",
+    "name": "a9fe1632-fb32-47b4-8b85-0824e208c74a"
+  } ]
+}

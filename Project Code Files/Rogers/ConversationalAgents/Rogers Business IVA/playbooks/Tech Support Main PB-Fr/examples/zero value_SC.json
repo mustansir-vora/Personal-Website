@@ -1,0 +1,33 @@
+{
+  "name": "c97d1053-d62f-46d2-8401-e38c913184ed",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_service_category_mix_length",
+      "inputActionParameters": {
+        "service": ""
+      },
+      "outputActionParameters": {
+        "result": "0"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "If the serviceCategory has no values",
+    "actionParameters": {
+      "heardBackOffMenu": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "If the serviceCategory 0",
+    "actionParameters": {
+      "enableBOMM": "true",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "displayName": "zero value_SC",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 126,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "8ccb7717-e948-4708-bce6-4831e15b7721",
+  "displayName": "DMBG - PaymentvagueDisambig - Account Balance",
+  "priority": 500000,
+  "numTrainingPhrases": 3,
+  "dtmfPattern": "2"
+}

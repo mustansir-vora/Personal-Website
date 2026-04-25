@@ -1,0 +1,27 @@
+{
+  "name": "6e7f8ef7-6e2f-4cdc-bcda-91855101a048",
+  "displayName": "PTP Wrap Up",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "refreshGetBillingProfileInfo",
+      "value": true
+    }, {
+      "parameter": "$session.params.ptpWrapUp",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpWrapUp",
+        "value": true
+      } ]
+    },
+    "targetPage": "Call Get Billing Profile",
+    "name": "2cbb3344-38e3-4328-af4c-61f4f33f2aea"
+  } ]
+}

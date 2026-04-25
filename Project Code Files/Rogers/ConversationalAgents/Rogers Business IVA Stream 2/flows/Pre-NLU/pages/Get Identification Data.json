@@ -1,0 +1,190 @@
+{
+  "name": "4902b09e-eb8c-4125-9d24-cb6f5a0ddaa7",
+  "displayName": "Get Identification Data",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "accountNumber",
+        "value": "$sys.func.GET($session.params.accountNumberList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "sessionIdInContext",
+        "value": "$sys.func.GET($session.params.accountSessionList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "accountFound",
+        "value": true
+      }, {
+        "parameter": "maestroAccountInd",
+        "value": "$sys.func.GET($session.params.maestroAccountIndList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "accountClassification",
+        "value": "$sys.func.GET($session.params.accountClassificationList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "collectionSuspendedInd",
+        "value": "$sys.func.GET($session.params.collectionSuspendedIndList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "lob",
+        "value": "$sys.func.GET($session.params.lobList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "accountStatus",
+        "value": "$sys.func.GET($session.params.accountStatusList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "businessInd",
+        "value": "$sys.func.GET($session.params.businessIndList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "billingSystem",
+        "value": "$sys.func.GET($session.params.billingSystemList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "reportingVar_accountNumber",
+        "value": "$session.params.accountNumber"
+      }, {
+        "parameter": "reportingVar_billingSystem",
+        "value": "$session.params.billingSystem"
+      }, {
+        "parameter": "reportingVar_customerType",
+        "value": "$session.params.accountClassification"
+      }, {
+        "parameter": "reportingVar_narrowedAccountStatus",
+        "value": "$session.params.accountStatus"
+      }, {
+        "parameter": "reportingVar_collectionSuspensionIND",
+        "value": "$session.params.collectionSuspendedInd"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "numberOfWireless",
+        "value": "$sys.func.GET($session.params.numberOfWirelessList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "listloadCategoryA",
+        "value": "$sys.func.GET($session.params.routingCategoryAList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "listloadCategoryB",
+        "value": "$sys.func.GET($session.params.routingCategoryBList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "listloadCategoryC",
+        "value": "$sys.func.GET($session.params.routingCategoryCList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "listloadCategoryD",
+        "value": "$sys.func.GET($session.params.routingCategoryDList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "listloadCategoryE",
+        "value": "$sys.func.GET($session.params.routingCategoryEList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "customerIdentified",
+        "value": true
+      }, {
+        "parameter": "productLabelMixEn",
+        "value": "$sys.func.GET($session.params.productLabelsMixEnList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "serviceCategoryMixEn",
+        "value": "$sys.func.GET($session.params.serviceCategoryMixEnList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "subscriptionsList",
+        "value": "$sys.func.GET($session.params.masterSubscriptionsList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "routingSegment",
+        "value": "$sys.func.GET($session.params.routingSegmentList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "profileSegment",
+        "value": "$sys.func.GET($session.params.profileSegmentList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "cbpSubType",
+        "value": "$sys.func.GET($session.params.cbpSubTypeList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "cbpType",
+        "value": "$sys.func.GET($session.params.cbpTypeList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "customerIdentification",
+        "value": "$sys.func.IF(\"$session.params.customerIdentification = notConfirmed\", \"notConfirmed\", \"accountConfirmed\")"
+      }, {
+        "parameter": "numberOfSubscriptions",
+        "value": "$sys.func.GET($session.params.numberOfSubscriptionsList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "numberOfInternet",
+        "value": "$sys.func.GET($session.params.numberOfInternetList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "numberOfPhone",
+        "value": "$sys.func.GET($session.params.numberOfPhoneList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "numberOfHomeSecurity",
+        "value": "$sys.func.GET($session.params.numberOfHomeSecurityList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "numberOfTv",
+        "value": "$sys.func.GET($session.params.numberOfTVList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "reportingVar_routingSegments",
+        "value": "$sys.func.JOIN(\",\",$session.params.routingSegment)"
+      }, {
+        "parameter": "reportingVar_profileSegments",
+        "value": "$sys.func.JOIN(\",\",$session.params.profileSegment)"
+      }, {
+        "parameter": "productLabelMixFr",
+        "value": "$sys.func.GET($session.params.productLabelsMixFrList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "serviceCategoryMixFr",
+        "value": "$sys.func.GET($session.params.serviceCategoryMixFrList,$session.params.accountNumberIndex)"
+      }, {
+        "parameter": "identifiedPhoneNumber",
+        "value": "$session.params.ani"
+      }, {
+        "parameter": "app",
+        "value": {
+        
+        }
+      }, {
+        "parameter": "active",
+        "value": "$sys.func.TO_OBJECT(\"{'profileSummary':{'productLabelsMix':'$session.params.productLabelMixEn','productMix':'$session.params.productLabelMixEn','profileClassification':'$session.params.profileClassification'},'billingAccountNumber':'$session.params.accountNumber','sessionInContext':'$session.params.sessionIdInContext'}\")"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.active\", \"profileSummary\", \"numberOfWireless\")",
+        "value": "$session.params.numberOfWireless"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.active\", \"profileSummary\", \"numberOfTV\")",
+        "value": "$session.params.numberOfTv"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.active\", \"profileSummary\", \"numberOfHSI\")",
+        "value": "$session.params.numberOfInternet"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.active\", \"profileSummary\", \"numberOfRHP\")",
+        "value": "$session.params.numberOfPhone"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.active\", \"profileSummary\", \"numberOfSHM\")",
+        "value": "$session.params.numberOfHomeSecurity"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.active\", \"billingAccountIndex\")",
+        "value": "$session.params.accountNumberIndex"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.active\", \"profileSummary\", \"numberOfSubscriptions\")",
+        "value": "$session.params.numberOfSubscriptions"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.app\", \"active\")",
+        "value": "$sys.func.TO_OBJECT(\"$session.params.active\")"
+      }, {
+        "parameter": "ident",
+        "value": {
+        
+        }
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.ident\", \"aniMatch\")",
+        "value": "$session.params.aniMatch"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.ident\", \"customerIdentified\")",
+        "value": "$session.params.customerIdentified"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.ident\", \"customerIdentification\")",
+        "value": "$sys.func.IF(\"$session.params.customerIdentification = accountConfirmed\", account_confirmed, not_confirmed)"
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.app\", \"ident\")",
+        "value": "$sys.func.TO_OBJECT(\"$session.params.ident\")"
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "032c69c6-b072-4425-9601-6c2def2e3be8"
+  } ]
+}

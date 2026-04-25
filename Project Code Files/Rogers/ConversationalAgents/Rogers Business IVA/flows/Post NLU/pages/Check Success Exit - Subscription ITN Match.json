@@ -1,0 +1,47 @@
+{
+  "name": "564d145d-62a9-46c0-b60f-74d4defbb00d",
+  "displayName": "Check Success Exit - Subscription ITN Match",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.subscriptionITNMatchCalledFrom = \"confirmSubscription_A\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "last4Digit",
+        "value": "$sys.func.MID($session.params.itnToMatchSubscription, 7, 4)"
+      } ]
+    },
+    "targetPage": "Start Dynamic Confirmation Menu",
+    "name": "968c9771-0f27-4f35-80fd-2114ff3ef39a"
+  }, {
+    "condition": "$session.params.subscriptionITNMatchCalledFrom = \"confirmSubscription_B\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "confirmSubscriptionResult",
+        "value": "subscriptionNumber"
+      }, {
+        "parameter": "subscriptionId",
+        "value": "$session.params.phoneNumberCollection"
+      } ]
+    },
+    "targetPage": "Confirm Subscription Router",
+    "name": "ab17ab53-fc58-4fc5-b1a6-1ab47524938f"
+  }, {
+    "condition": "$session.params.subscriptionITNMatchCalledFrom = \"wirelessIdentification\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Identified"
+      }, {
+        "parameter": "subscriptionId",
+        "value": "$session.params.itnToMatchSubscription"
+      } ]
+    },
+    "targetPage": "Find Account Number",
+    "name": "cacac219-b4d6-46f2-a8e7-9761c3415545"
+  } ]
+}

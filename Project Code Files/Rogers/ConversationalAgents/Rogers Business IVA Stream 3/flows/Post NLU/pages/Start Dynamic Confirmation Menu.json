@@ -1,0 +1,21 @@
+{
+  "name": "b585cbcb-3971-4b56-bbaa-1fd27950f581",
+  "displayName": "Start Dynamic Confirmation Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "confirmCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Check NL Voice Script",
+    "name": "d06d2fd0-e0ec-4b82-823b-67c8fafd5396"
+  } ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "f1e54f4b-6e51-48c9-8507-7feeae0deee6",
+  "displayName": "customer Identified",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.customerIdentified = true AND $session.params.predictiveIntent = \"outage-check\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isInvokedFromPredictive",
+        "value": false
+      }, {
+        "parameter": "isReqFromPredictive",
+        "value": true
+      } ]
+    },
+    "targetPage": "getOutageStatus",
+    "name": "10e6fbfe-fcf6-429e-8909-1a421a40b42a"
+  }, {
+    "condition": "$session.params.customerIdentified = true AND $session.params.osFromNLU = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "osFromNLU",
+        "value": false
+      } ]
+    },
+    "targetPage": "getOutageStatus",
+    "name": "fd2480d6-c623-4794-8ea0-98aa91885c0a"
+  }, {
+    "condition": "$session.params.customerIdentified != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "check  Passive Message",
+    "name": "c20797a4-2c07-421a-a7bc-0b404f354d1c"
+  }, {
+    "condition": "$session.params.osTSFromSingleService = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "osTSFromSingleService",
+        "value": false
+      } ]
+    },
+    "targetPage": "getOutageStatus",
+    "name": "52b9f464-1f7a-4015-9c29-173694b76f8e"
+  }, {
+    "condition": "$session.params.customerIdentified = true AND $session.params.osTSFromSingleService != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "invokedTSSFrom",
+        "value": "TechOutageStatus"
+      } ]
+    },
+    "targetPage": "TECH Single Service Address",
+    "name": "90cb9c7b-443f-43d5-abe0-c19c9846ffd3"
+  } ]
+}

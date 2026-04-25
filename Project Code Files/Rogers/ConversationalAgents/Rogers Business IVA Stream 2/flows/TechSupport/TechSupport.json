@@ -1,0 +1,153 @@
+{
+  "name": "bfb7a07a-3d28-41f2-98fa-db22abbb41ae",
+  "displayName": "TechSupport",
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.destinationType = \"Module\" AND $session.params.nluConfig.destination = \"TechnicalSupportMain\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TechMain",
+    "name": "b9787259-fddd-4c76-8909-387c78c375a4"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = \"Module\" AND $session.params.nluConfig.destination = \"BusinessPhoneTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "BusinessPhoneSupportPage",
+    "name": "c1e651c8-0614-4407-b2d7-f12dc4937801"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = \"Module\" AND $session.params.nluConfig.destination = \"TVTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TvSupportPage",
+    "name": "6cd67749-6e50-4c2b-b4b0-886177a8135f"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = \"Module\" AND $session.params.nluConfig.destination = \"WirelessTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "WirelessTechSupportPage",
+    "name": "fca1b92e-ed12-4824-a062-fc43ea3ac5d7"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = \"Module\" AND $session.params.nluConfig.destination = \"InternetTechnicalSupport\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isABusMenu",
+        "value": false
+      } ]
+    },
+    "targetPage": "InternetTechSupportPage",
+    "name": "be98a899-47e5-4199-91f9-cb34ebff87f7"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = \"Module\" AND $session.params.nluConfig.destination = \"HomePhoneTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "HomePhoneSupportPage",
+    "name": "92cbef57-e387-4360-9bfe-f86d137b2937"
+  }, {
+    "condition": "$session.params.destinationType = \"Module\" AND $session.params.destination = \"HomeSecurityTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "HomeSecuritySupportPage",
+    "name": "567a1a8c-9aa8-4707-94a6-84e569076bcb"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = \"Module\" AND $session.params.nluConfig.destination = \"OutageStatus\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "osFromNLU",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech SSA And Outage",
+    "name": "a08d180b-7e00-497b-b6d7-973a15889a06"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr"
+      } ]
+    },
+    "name": "8ce68db9-6182-4bb8-998d-cce420e8da98"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr"
+      } ]
+    },
+    "name": "06c4afc7-2048-42d9-ae2b-e987852328c4"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "985614e9-a491-45ad-ac96-368e5018f274"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ],
+  "inputParameterDefinitions": [ {
+    "name": "invokedFrom",
+    "description": "INvokedFrom",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "invokedFrom",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "internetbcInvoked",
+    "description": "true or false value ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "internetbcInvoked",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  } ]
+}

@@ -1,0 +1,104 @@
+{
+  "name": "2e6042e4-d6fa-45aa-8703-fe26fe4edd40",
+  "displayName": "Tech SSA And Outage",
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.destinationType = \"Module\" AND $session.params.nluConfig.destination = \"OutageStatus\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "invokedOSFrom",
+        "value": "NLUMain"
+      }, {
+        "parameter": "passiveOutageMessage",
+        "value": false
+      } ]
+    },
+    "targetPage": "TECH Outage Status",
+    "name": "825d2e3d-8a03-435a-a923-4e41b827d587"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TECH Single Service Address",
+    "name": "0fca5578-a07b-442c-9874-32f8650ed983"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Tech Wrapper",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "62401d87-f907-4799-956b-6470494d618e"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "77c3f177-6cc3-4b53-a955-2513baa88991"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "104122ab-163f-4450-884f-67cad30347c2"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "99ec0181-6b04-4831-b7f9-34688f3a1c1b",
+  "displayName": "PTP Offer Latest Install Days",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfInstalls = 1 AND $session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpInstallDays",
+        "value": "$session.params.api.response.ptp.ccSingleInstallmentDays"
+      } ]
+    },
+    "targetPage": "Offer First Install Days",
+    "name": "ea1b8567-d119-4971-9360-4ead2740183d"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 1 AND $session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpInstallDays",
+        "value": "$session.params.api.response.ptp.pbSingleInstallmentDays"
+      } ]
+    },
+    "targetPage": "Offer First Install Days",
+    "name": "bdc8e471-1b7b-43e0-92d0-0d2457262dca"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2 AND $session.params.installmentInFocus = first AND $session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpInstallDays",
+        "value": "$session.params.api.response.ptp.ccInstallment1Days"
+      } ]
+    },
+    "targetPage": "Offer First Install Days",
+    "name": "99e3136e-055b-45ee-8316-a7e357398f62"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2 AND $session.params.installmentInFocus = first AND $session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpInstallDays",
+        "value": "$session.params.api.response.ptp.pbInstallment1Days"
+      } ]
+    },
+    "targetPage": "Offer First Install Days",
+    "name": "382addfc-ec21-49fe-9bed-bb3166316bf8"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2 AND $session.params.installmentInFocus = second AND $session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpInstallDays",
+        "value": "$session.params.api.response.ptp.ccInstallment2Days"
+      } ]
+    },
+    "targetPage": "Offer First Install Days",
+    "name": "d0de186f-3bdf-4bae-ac32-7276693ba194"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2 AND $session.params.installmentInFocus = second AND $session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpInstallDays",
+        "value": "$session.params.api.response.ptp.pbInstallment2Days"
+      } ]
+    },
+    "targetPage": "Offer First Install Days",
+    "name": "984ebe70-7d2a-42cd-8bb7-0f89c346eae6"
+  } ]
+}

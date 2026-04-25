@@ -1,0 +1,152 @@
+{
+  "name": "53406fe2-7c9c-4392-b66e-f4b9a3db9352",
+  "displayName": "Check Make Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to make a payment now?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous effectuer un paiement maintenant ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Yes (2026-03-23 09:54:44)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Payment",
+    "name": "28fd75a1-308d-4b74-9edc-07dee3f9a8e4"
+  }, {
+    "intent": "intent_no (2026-03-23 09:54:44)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright",
+    "name": "17ebdef9-5ac5-4415-bd32-7144e8c643f4"
+  }, {
+    "intent": "intent_repeat",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to make a payment now?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "818e689a-4613-4e8d-a544-7e4576b4253d"
+  }, {
+    "intent": "Main Menu (2026-03-23 09:54:44)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright",
+    "name": "a92a484d-a462-4625-b0d3-d7f79d6257f9"
+  }, {
+    "intent": "agent-request (2026-03-23 09:54:44)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "agentRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "04d8ca28-a984-4382-b49a-33cc987daa8d"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "eb992f42-2b3c-4690-bef0-bd3640505eca"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "6fb11388-963b-43ef-a23e-ee9e628bd5f8"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To make a payment, press 1. Otherwise, press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour effectuer un paiement, appuyez sur le 1. Sinon, appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "5fa55384-2ddf-459f-ad8d-cd9b60a02804"
+  }, {
+    "targetPage": "Play Alright",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "2318d13c-1b4a-4881-80d5-e5e3ef6ab76c"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "297fc1c8-15d0-45fb-94f2-758ee6453158"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To make a payment, press 1. Otherwise, press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour effectuer un paiement, appuyez sur le 1. Sinon, appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "57c645a8-0c45-4f78-8a56-e86933aed017"
+  }, {
+    "targetPage": "Play Alright",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "979e21c9-dfd1-4a63-a0b2-5ccd5f4d7e69"
+  } ]
+}

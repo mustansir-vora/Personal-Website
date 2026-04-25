@@ -1,0 +1,205 @@
+{
+  "name": "2354b04b-f800-40a9-9617-20c6a1febe9d",
+  "displayName": "DMBG - Bus-Main-Ent-DA-techsupport",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Pour l’Internet par câble d’entreprise, dites « internet entreprise ».\r\nPour l’Internet de fournisseurs tiers, dites « fournisseurs tiers ».\r\nTéléphone d’affaires Rogers, dites « téléphone d’affaires ».\r\nCentre de données, dites « centre de données ».\r\nServices gérés, dites « services gérés ».\r\nPour la Fibre et tous les autres services, dites « autre »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "For enterprise cable Internet, say \"enterprise internet\",\nFor third party internet, say \"third party\",\nFor Rogers Business Phone, say \"business phone\",\nFor Data Centre, say \"data centre\",\nFor Managed Services, say \"managed services\",\nFor Fiber and all other services, say \"other\"." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - Bus-Main-Ent-DA-techsupport - Enterprise Internet",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-techsupport-ent-internet"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "cfa2418e-6554-45e9-a5a9-9c63c89ad8b8"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-DA-techsupport - Third Party",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-techsupport-TPIA"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "f1765953-2626-49be-b067-c3b4be4d0e90"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-DA-techsupport - Business Phone",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-techsupport-phone"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "c6095f09-73e5-456a-88f4-46821636c97e"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-DA-techsupport - Data Centre",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-techsupport-data-centre"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "8be84585-2102-4eb0-a645-4108439a837b"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-DA-techsupport - Managed Services",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-techsupport-managed-services"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "a96d86f3-5374-4ed1-a5a1-388f7b0d596c"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-DA-techsupport - Fiber",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-techsupport-other"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "50221f5b-8442-4656-ab3e-45f15ab86e77"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "742b3b0c-ad9e-4e3b-9097-5450e21c3192"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "f46b70a1-9784-4bb6-abd6-9e3a09033a67"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

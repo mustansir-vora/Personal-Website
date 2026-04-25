@@ -1,0 +1,135 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux commencer un abonnement "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous configurer "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " pour moi dans mon abonnement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais ajouter "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " à mon compte et commencer à regarder."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ajouter "
+    }, {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " à mes abonnements et l’activer."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est-ce que je peux avoir "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " ajouté à mes services et commencer à l’utiliser?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez ajouter "
+    }, {
+      "text": "Disney Plus",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " et l’activer pour moi."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux "
+    }, {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " sur mon compte et le rendre prêt à utiliser."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ajouter "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " à mon forfait et l’activer."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais m’abonner à "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " et commencer le service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous ajouter "
+    }, {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " à mon forfait et l’activer?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez ajouter "
+    }, {
+      "text": "Disney Plus",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " à mes services pour que je puisse l’écouter."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " à mon compte et commencer à l’utiliser."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "0058f3dc-f347-44d2-b853-3a28f5a601b8",
+  "displayName": "Check SMS Attempts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.smsIdArray = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsIdArray",
+        "value": "$sys.func.APPEND($session.params.smsIdArray, $session.params.smsId)"
+      } ]
+    },
+    "targetPage": "Check SMS ID Exists",
+    "name": "e8628851-e788-4d38-9529-29c833867205"
+  }, {
+    "condition": "$session.params.smsIdArray != null AND $sys.func.CONTAIN($session.params.smsIdArray, $session.params.smsId) = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Confirmed Script Id",
+    "name": "9e37a976-5003-4a88-b1a6-46e3a1aaa344"
+  }, {
+    "condition": "$session.params.smsIdArray != null AND $sys.func.CONTAIN($session.params.smsIdArray, $session.params.smsId) = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check SMS ID Exists",
+    "name": "536992c0-a6fc-44df-8855-cb6559b593ee"
+  } ]
+}

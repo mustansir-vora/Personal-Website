@@ -1,0 +1,11 @@
+{
+  "name": "4d287a26-dfff-49f8-9d2d-f279f9bbc5b4",
+  "displayName": "AccountNumberCollectionMn-9-Digit",
+  "parameters": [ {
+    "id": "accountnum",
+    "entityType": "@AccountNumber-9-Digit"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 41,
+  "dtmfPattern": "dtmf_digits_[0-9]{9}$"
+}

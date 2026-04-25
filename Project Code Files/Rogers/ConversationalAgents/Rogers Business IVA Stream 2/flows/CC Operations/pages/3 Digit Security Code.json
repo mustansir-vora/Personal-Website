@@ -1,0 +1,135 @@
+{
+  "name": "4c8e5471-1178-4d9b-863e-f78b270ea612",
+  "displayName": "3 Digit Security Code",
+  "form": {
+    "parameters": [ {
+      "displayName": "cvvThreeDigit",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter your card's three-digit security\ncode." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Dites ou entrez le code de sécurité à trois chiffres de votre carte." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "313ff60b-1d29-4531-b088-9580885d1ac2"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please key-in your card's three-digit security\ncode." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Veuillez entrer le code de sécurité à trois chiffres de votre carte." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "3fcda208-0d25-44fe-8fa6-49ef3f3970a3"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter your card's three-digit security\ncode." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Dites ou entrez le code de sécurité à trois chiffres de votre carte." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "e02e9629-12bd-4233-8ead-ceb1dc9212d7"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please key-in your card's three-digit security code" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Veuillez entrer le code de sécurité à trois chiffres de votre carte." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "a0ac6c80-1ed0-4781-989d-e01a68c39e32"
+        }, {
+          "targetFlow": "Transition Routing",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "817a305a-4515-4744-9094-9ed8a88eaaef"
+        }, {
+          "targetFlow": "Transition Routing",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "c6372115-d80b-4a4e-a977-083f6d0650ee"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 3,
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 5
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 5
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "And the three-digit security code?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Et le code de sécurité à trois chiffres ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Validate CVV",
+    "name": "4d8548ec-c0c6-4383-b12a-3295e64c5adf"
+  } ]
+}

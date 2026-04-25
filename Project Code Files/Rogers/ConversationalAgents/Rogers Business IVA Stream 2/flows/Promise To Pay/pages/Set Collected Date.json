@@ -1,0 +1,28 @@
+{
+  "name": "5c82a585-98e2-4e16-9cab-f3b069555cf1",
+  "displayName": "Set Collected Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpDate != null AND $session.params.ptpDate != \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpDate",
+        "value": "$session.params.ptpDate"
+      } ]
+    },
+    "targetPage": "Set Collected Method",
+    "name": "9dc04d00-0691-4fc2-981d-daa22749acea"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set Collected Method",
+    "name": "07b5c388-1219-4ac8-99a0-cd2874a2b60b"
+  } ]
+}

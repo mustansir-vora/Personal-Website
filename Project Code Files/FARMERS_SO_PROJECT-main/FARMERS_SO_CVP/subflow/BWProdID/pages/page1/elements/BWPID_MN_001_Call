@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@332256022:1709111228046" name="BWPID_MN_001_Call" version="6.0.1">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653664674">
+<config>
+<argument_data>
+<data name="MenuID">BWPID_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

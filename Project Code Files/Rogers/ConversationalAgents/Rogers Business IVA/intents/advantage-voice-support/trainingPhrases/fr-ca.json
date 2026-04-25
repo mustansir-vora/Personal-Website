@@ -1,0 +1,250 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je ne peux pas récupérer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " messagerie vocale ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " notre ",
+      "auto": true
+    }, {
+      "text": "ligne principale",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon Aide Vocale",
+      "auto": true
+    }, {
+      "text": " ne sonne que sur ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " seul téléphone.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La fonction de messagerie vocale a ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " problème.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon",
+      "auto": true
+    }, {
+      "text": " téléphone de groupe d’appel ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma double identité ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "L’",
+      "auto": true
+    }, {
+      "text": "Aide Vocale",
+      "auto": true
+    }, {
+      "text": " dans ",
+      "auto": true
+    }, {
+      "text": "notre bureau",
+      "auto": true
+    }, {
+      "text": " ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre softphone ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Soutien ",
+      "auto": true
+    }, {
+      "text": "Voix Avantage pour le Wi-Fi Unison",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide avec le forfait ",
+      "auto": true
+    }, {
+      "text": "Voix Avantage",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " problème avec ",
+      "auto": true
+    }, {
+      "text": "mon service",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Voix Avantage",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous ne pouvons pas nous connecter au portail ",
+      "auto": true
+    }, {
+      "text": "Voix Avantage",
+      "auto": true
+    }, {
+      "text": " pour gérer les réglages.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les appels coupent ou la qualité audio est mauvaise pendant les conférences.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La messagerie vocale ne répond pas ou ne transfère pas vers le courriel.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "L’",
+      "auto": true
+    }, {
+      "text": "Aide Vocale",
+      "auto": true
+    }, {
+      "text": " ou le groupe d’appel ne fonctionne pas comme prévu.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous ne pouvons pas faire ou recevoir d’appels ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " aucune ligne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons des problèmes avec le renvoi d’appels et les réglages des groupes d’appel.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La messagerie vocale vers courriel ne fonctionne pas. Nous devons régler ",
+      "auto": true
+    }, {
+      "text": "cela",
+      "auto": true
+    }, {
+      "text": " rapidement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre ",
+      "auto": true
+    }, {
+      "text": "Aide Vocale",
+      "auto": true
+    }, {
+      "text": " ne dirige pas les appels correctement. Les clients restent coincés ou sont déconnectés.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos téléphones Voix Avantage ne fonctionnent pas — nous ne pouvons pas faire ou recevoir d’appels, et ",
+      "auto": true
+    }, {
+      "text": "cela",
+      "auto": true
+    }, {
+      "text": " affecte nos opérations.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

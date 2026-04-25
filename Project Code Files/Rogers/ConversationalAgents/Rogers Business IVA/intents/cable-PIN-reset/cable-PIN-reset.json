@@ -1,0 +1,7 @@
+{
+  "name": "945a457d-0f57-4324-b07d-ac5cdb65c7f0",
+  "displayName": "cable-PIN-reset",
+  "priority": 500000,
+  "description": "Handles requests to reset the TV or cable-set PIN.",
+  "numTrainingPhrases": 50
+}

@@ -1,0 +1,41 @@
+{
+  "name": "b6974d2c-42ce-4569-a2b1-c3a2cdb6fdef",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say 'advantage voice', 'mobile phones', 'high speed internet', 'television services', or 'business phone'"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I couldn't hear that. Please say 'advantage voice', or press1, 'mobile phones' press 2, 'high speed internet' press 3, 'television services', 4, or 'business phone', press 5\"."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "savedIntent": "technical-support-vague"
+    }
+  },
+  "displayName": "2086-BOMM-Bus-TechSupportDisambig-NoI/p",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 232,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

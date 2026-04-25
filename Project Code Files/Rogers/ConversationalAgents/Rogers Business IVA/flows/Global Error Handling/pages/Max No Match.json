@@ -1,0 +1,104 @@
+{
+  "name": "5426c1bb-1589-4c3b-a228-4cdbdad3eabb",
+  "displayName": "Max No Match",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Do you need help?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Avez-vous besoin d’aide ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "MaxNoMatchMn-Yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "bec80071-9886-4faa-9abd-bc00855631ff"
+  }, {
+    "intent": "MaxNoMatchMn-No",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "4941b429-37c8-4eae-b7ba-13e88629c07b"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "f0fbebe2-46cc-4796-a50b-308e8791d015"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "tranferType",
+        "value": "customerError"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "a0757f3f-7c72-44d7-9036-3ca3f1cadb0e"
+  }, {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "d77640cd-36d8-4799-a383-09a7a59a417e"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "abcf46cb-d35d-4384-9762-069dac95d2a1"
+  }, {
+    "targetFlow": "NLU",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "name": "1003de0e-5951-4fec-b51a-526ee0b509ad"
+  } ]
+}

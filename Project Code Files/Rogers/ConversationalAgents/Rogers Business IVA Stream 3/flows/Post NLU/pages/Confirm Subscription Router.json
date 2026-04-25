@@ -1,0 +1,41 @@
+{
+  "name": "2da93377-29ac-45f8-b405-33e91c2dee30",
+  "displayName": "Confirm Subscription Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.confirmSubscriptionResult = \"invalid_number\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identifySubscriptionResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Identify subscription Router",
+    "name": "4723234d-3cca-445f-9a07-9e57e2bd39c2"
+  }, {
+    "condition": "$session.params.confirmSubscriptionResult = \"subscriptionNumber\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identifySubscriptionResult",
+        "value": "Identified"
+      } ]
+    },
+    "targetPage": "Identify subscription Router",
+    "name": "a0d370c5-675d-4c58-9d81-2d0e7540798e"
+  }, {
+    "condition": "$session.params.confirmSubscriptionResult = \"different_account\" OR $session.params.confirmSubscriptionResult = \"different_phone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idCounter",
+        "value": "$sys.func.ADD($session.params.idCounter, 1)"
+      } ]
+    },
+    "targetPage": "Check Identify Counter",
+    "name": "f680da43-0aa2-4697-8fc9-bcb47df57965"
+  } ]
+}

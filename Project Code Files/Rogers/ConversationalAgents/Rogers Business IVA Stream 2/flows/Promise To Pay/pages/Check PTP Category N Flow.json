@@ -1,0 +1,25 @@
+{
+  "name": "ec57027e-4629-43a7-a59d-d6fa8f3cf438",
+  "displayName": "Check PTP Category N Flow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.ptpCategoryNFlow = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "High Risk Check Saved Intent",
+    "name": "698349fb-340d-4844-92d0-8654bd8ebe78"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Create New",
+    "name": "9c2efeb9-0da3-45db-8988-37d089320d53"
+  } ]
+}

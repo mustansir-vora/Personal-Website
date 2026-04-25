@@ -1,0 +1,66 @@
+{
+  "name": "1733a024-0465-4024-bae0-095ef009e9f0",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire Voix Avantage,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux parler à l'agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\nÀ propos de quoi appelez-vous ? Vous pouvez dire Voix Avantage,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "télévision"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "télévision"
+      },
+      "outputActionParameters": {
+        "result": "tv-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "globalAgentRequestCounter": "0",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixFr": "Voix Avantage,Télévision,Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "globalAgentRequestCounter": "1",
+      "heardBackOffMenu": "true",
+      "product": "Télévision",
+      "savedIntent": "tv-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-Agent-Counter1",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 346,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

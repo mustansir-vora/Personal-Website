@@ -1,0 +1,25 @@
+{
+  "name": "a383e48b-0802-40c8-9a5a-7af62bb1fecc",
+  "displayName": "Check maxPlayback",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.paymentHistoryMaxPlaybackCounter \u003c $session.params.app.config.paymentHistoryMaxPlayback",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play nextSkip",
+    "name": "4dba4c80-8217-4db7-8ef1-5ace1e3c0c4b"
+  }, {
+    "condition": "$session.params.paymentHistoryMaxPlaybackCounter \u003e= $session.params.app.config.paymentHistoryMaxPlayback",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play continueNextSet",
+    "name": "975e583f-5558-418d-8442-887819178f3e"
+  } ]
+}

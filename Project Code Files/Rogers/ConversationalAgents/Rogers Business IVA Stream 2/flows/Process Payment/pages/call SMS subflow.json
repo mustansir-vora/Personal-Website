@@ -1,0 +1,28 @@
+{
+  "name": "00a9dc55-c1f9-443b-b18a-0fb0469f169d",
+  "displayName": "call SMS subflow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "smsAttributes",
+      "value": "$sys.func.TO_OBJECT(\"{'last4Acct':'$session.params.last4acct','paymentAmount':'$session.params.paymentamount','authorizationNumber':'$session.params.authorizationnumber'}\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.smsattributes != null AND $session.params.smsid != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Send SMS",
+    "name": "12d5c24d-36c5-4f08-a010-c1b0d594dde8"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "New Balance",
+    "name": "b44135bb-c449-4662-966d-8ad0a7745372"
+  } ]
+}

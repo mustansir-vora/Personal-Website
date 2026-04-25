@@ -1,0 +1,152 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " perdue ou ",
+      "auto": true
+    }, {
+      "text": "volée",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Rapporter une "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " perdue ou volée."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " perdue ou volée."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " a été volée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Rapporter une "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " volée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " volée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Rapporter ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " perdue ou ",
+      "auto": true
+    }, {
+      "text": "volée",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Rapporter une "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " perdue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " manquante."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " est manquante."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " perdue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai perdu ma "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

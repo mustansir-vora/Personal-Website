@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1113958591:1753253435704" name="CancelPolicyIntent_Check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.CancelPolicyIntentCheck_BC</source>
+</config>
+</decision>

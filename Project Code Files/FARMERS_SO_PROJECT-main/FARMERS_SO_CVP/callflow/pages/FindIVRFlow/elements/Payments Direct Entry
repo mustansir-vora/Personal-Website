@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@684428533:1723486284538" name="Payments Direct Entry" version="6.0.1">
+<subflow_call subflow_name="Payments_Direct_Entry" target="Element@31:1712734899502">
+<config/>
+</subflow_call>
+</connector>

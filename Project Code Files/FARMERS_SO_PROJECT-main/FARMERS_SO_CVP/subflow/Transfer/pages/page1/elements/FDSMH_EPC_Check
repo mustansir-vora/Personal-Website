@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1071854952:1745585713450" name="FDSMH_EPC_Check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.FDSMH_EPC_Check</source>
+</config>
+</decision>

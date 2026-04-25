@@ -1,0 +1,49 @@
+{
+  "name": "331eaa68-5fd8-4807-b064-3c97173a925b",
+  "displayName": "Confirm Payment Completed",
+  "form": {
+    "parameters": [ {
+      "displayName": "userRepeatPaymentCompletion",
+      "required": true,
+      "entityType": "@e_Repeat",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Thanks for your payment. Your authorization number is...$session.params.api.paymentManagement.paymentConfirmation.authorizationNumber", "........................................................................", "........................................................................", "To hear that again, say 'repeat'" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Merci pour votre paiement. Votre numéro d'autorisation est...$session.params.api.paymentManagement.paymentConfirmation.authorizationNumber" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Pour entendre de nouveau, dites « répéter »." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.userRepeatPaymentCompletion = repeat",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Payment Completed",
+    "name": "72ecdb56-37b2-4af9-8b65-89bc19925815"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Account Cancelled",
+    "name": "ba0bd42a-edea-450d-9fce-01116ae16562"
+  } ]
+}

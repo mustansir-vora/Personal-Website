@@ -1,0 +1,186 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "The postal code value is "
+    }, {
+      "text": "h4a1a1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "k1A0b1",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "f2e8s7",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "m3b1z1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "E3V3K7",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "V6T2A3",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My code is "
+    }, {
+      "text": "N6C4R6",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "N6C4R6",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "M3B1Z1",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It's "
+    }, {
+      "text": "G0A1A0",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My postal code is "
+    }, {
+      "text": "N1R5C8",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The postal code is "
+    }, {
+      "text": "J9X3L9",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Sure, the postal code is "
+    }, {
+      "text": "R3C1A5",
+      "parameterId": "postalCode"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "L4W5N6",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The postal code is "
+    }, {
+      "text": "T2P4K8",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It's "
+    }, {
+      "text": "V6B1A1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the code is "
+    }, {
+      "text": "B3H2Y9",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "T2P4K8",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "M5V3L9",
+      "parameterId": "postalCode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "yeah",
+      "auto": true
+    }, {
+      "text": " the postal code is "
+    }, {
+      "text": "K1A0B1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the postal code is "
+    }, {
+      "text": "A1A3A6",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

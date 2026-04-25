@@ -1,0 +1,28 @@
+{
+  "name": "571f4d79-2ea6-4593-b77a-ab037ebed5f0",
+  "displayName": "Check from AR",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.subflowReturnValue",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAR = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Payment Options",
+    "name": "5560d8b7-0ebd-480c-922a-20d92bd57639"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "On returnToMainMenu",
+    "name": "93ae3800-4be3-487b-8a01-b8a5cb14e4b4"
+  } ]
+}

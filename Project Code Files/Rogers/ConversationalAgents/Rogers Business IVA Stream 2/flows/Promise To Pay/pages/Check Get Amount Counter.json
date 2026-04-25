@@ -1,0 +1,48 @@
+{
+  "name": "e4caba04-a900-4407-b8f2-941c4adac9ef",
+  "displayName": "Check Get Amount Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.getAmountCounter = 1 OR $session.params.getAmountCounter = 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Essayons de \nnouveau." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's try again." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "$session.params.fromValidatePTPAmount",
+        "value": true
+      } ]
+    },
+    "targetPage": "Call Ask Amount",
+    "name": "f20822a7-032a-4184-901c-05c39e8f37a5"
+  }, {
+    "condition": "$session.params.getAmountCounter = 3",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "paymentAmount",
+        "value": null
+      }, {
+        "parameter": "getAmountFailure",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Fail",
+    "name": "4c62ce9e-d748-499f-a0e7-904c180df2fa"
+  } ]
+}

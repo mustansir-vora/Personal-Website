@@ -1,0 +1,18 @@
+{
+  "name": "a8a1281f-db25-4cf6-850e-cc3cd74ceb84",
+  "displayName": "Rogers West Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Broad Cast",
+    "name": "fa83abb8-6dac-457c-be80-5042ec688d97"
+  } ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "8511580c-cf1a-4026-b1f7-8e9c469215ad",
+  "displayName": "Start pendingPTPDetails subflow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.subflowInputs.accountBalance.callPendingPTPDetailsSubflow = true AND $session.params.api.billingProfile.systemOfRecords = \"V21\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check pendingPTP",
+    "name": "9027f39d-aefd-423a-8aaf-a7a69a5700d6"
+  }, {
+    "condition": "$session.params.subflowInputs.accountBalance.callPendingPTPDetailsSubflow = false OR $session.params.api.billingProfile.systemOfRecords != \"V21\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Clear variables",
+    "name": "b720cf87-2630-48fe-bb67-ecebb4f3fbbf"
+  } ]
+}

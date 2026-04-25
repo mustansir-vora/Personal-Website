@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1031900217:1715692662849" name="Setting FM_transfer_Route" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">BILLING</setting>
+<setting name="sessNames">FM_TRANSFER_ROUTE</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,187 @@
+{
+  "name": "7117281e-e5a3-47f9-a28e-75f61eedec16",
+  "displayName": "Intent Group - tech-support",
+  "transitionRoutes": [ {
+    "intent": "exchange-devices",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "exchange-devices"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "763ae3b8-6e0f-4516-bba2-07957ffcbe2e"
+  }, {
+    "intent": "business-phone-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "business-phone-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "040d45f0-e69f-4d0d-a97d-ab48dfa52150"
+  }, {
+    "intent": "device-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "device-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d81d2f85-41d8-42e3-9312-d4cdbd3135af"
+  }, {
+    "intent": "phone-help-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "phone-help-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "41145c52-c182-4f10-ad01-914304cdea0b"
+  }, {
+    "intent": "phone-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "phone-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "f133d149-d9cd-4fde-8c89-0c0be3efdc3d"
+  }, {
+    "intent": "phone-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "phone-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d2635321-ec38-4db7-a5eb-f9de2e70e27e"
+  }, {
+    "intent": "return-devices",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "return-devices"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "48c1aecf-f453-45e8-914e-12818db62ad3"
+  }, {
+    "intent": "return-label",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "return-label"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "7afe0797-5d8b-41aa-88f0-0b7539e589a3"
+  }, {
+    "intent": "return-order",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "return-order"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "88515be1-1084-4c17-b04f-fb5f45147297"
+  }, {
+    "intent": "ticket-status",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "ticket-status"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "94109f5a-4498-4a89-be21-0bf4ccfe6962"
+  }, {
+    "intent": "troubleshoot-voicemail",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "troubleshoot-voicemail"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "7badea63-d2cf-4b22-964f-f433b45018cc"
+  }, {
+    "intent": "technical-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "technical-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "21987720-79b8-4b0a-ae89-08efa0b30b04"
+  }, {
+    "intent": "password-reset",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "password-reset"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "0df0d2de-fd4b-49e2-8396-0372752a5fdf"
+  }, {
+    "intent": "voicemail-support-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "voicemail-support-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "3ebb6133-f85a-43d2-b6b6-f3ac8ab634f5"
+  } ]
+}

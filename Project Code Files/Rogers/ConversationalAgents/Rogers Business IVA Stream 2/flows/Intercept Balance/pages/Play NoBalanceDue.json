@@ -1,0 +1,28 @@
+{
+  "name": "43bb4f5d-df0d-414e-a9e0-3fedac91d85b",
+  "displayName": "Play NoBalanceDue",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "This account has a zero balance. There is no payment due at this time." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Ce compte a un solde de zéro. Aucun paiement n’est requis pour le moment." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Goto Transtion Routing",
+    "name": "2172403a-7228-49bd-8fab-3e284f002a2c"
+  } ]
+}

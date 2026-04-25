@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1059866737:1759326977390" name="CHECK_IA_CUSTOMER" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.IACustomerCheck</source>
+</config>
+</decision>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1480755633:1745498345016" name="Set policy Collection Flag" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">TRUE</setting>
+<setting name="sessNames">Policy_Collection</setting>
+</settings>
+</config>
+</action_element>

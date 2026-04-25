@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1699301595:1757592954630" name="SAHCB_MN_006_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.afterHoursCallBack.SAHCB_MN_006_VALUE</source>
+</config>
+</decision>

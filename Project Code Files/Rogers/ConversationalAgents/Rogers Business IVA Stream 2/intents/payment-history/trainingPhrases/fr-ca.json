@@ -1,0 +1,287 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux confirmer la "
+    }, {
+      "text": "date"
+    }, {
+      "text": " et le montant de mes derniers paiements."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " historique de paiement à des fins fiscales."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier si mes derniers paiements ont "
+    }, {
+      "text": "été"
+    }, {
+      "text": " appliqués à la bonne facture."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je avoir l’historique incluant paiements en ligne et en "
+    }, {
+      "text": "magasin"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quand exactement "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " paiement a-t-il "
+    }, {
+      "text": "été"
+    }, {
+      "text": " "
+    }, {
+      "text": "posté"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux revoir mes paiements des "
+    }, {
+      "text": "dernières semaines"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me fournir "
+    }, {
+      "text": "un"
+    }, {
+      "text": " état de mes paiements passés?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de l’historique complet de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier l’exactitude de tous mes paiements."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quel était le montant et la "
+    }, {
+      "text": "date"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " dernier paiement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon"
+    }, {
+      "text": " dernier paiement couvrait-il la totalité du montant dû?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux les transactions liées à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " solde."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Montrez-moi "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " historique, incluant ajustements et crédits."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir combien j’ai payé au total dans "
+    }, {
+      "text": "les six derniers mois"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous confirmer que "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " dernier paiement a "
+    }, {
+      "text": "été"
+    }, {
+      "text": " appliqué?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux voir le détail de mes paiements récents."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quand "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " dernier paiement a-t-il "
+    }, {
+      "text": "été"
+    }, {
+      "text": " reçu exactement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " relevé de tous les paiements faits "
+    }, {
+      "text": "cette année"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je crois qu’il y "
+    }, {
+      "text": "a une"
+    }, {
+      "text": " erreur dans "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " historique; pouvez-vous vérifier?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je voir "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " historique de paiements des "
+    }, {
+      "text": "trois"
+    }, {
+      "text": " derniers "
+    }, {
+      "text": "cycles"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier si mes paiements précédents ont "
+    }, {
+      "text": "été"
+    }, {
+      "text": " appliqués correctement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous confirmer le montant de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " paiement le plus récent?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois vérifier quand "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " dernier paiement a "
+    }, {
+      "text": "été"
+    }, {
+      "text": " traité."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me fournir la liste détaillée de tous mes paiements?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux revoir "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " historique complet de paiement des "
+    }, {
+      "text": "derniers mois"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "dd71a445-081e-48c6-b3e3-094ec5233b5b",
+  "displayName": "Check ippStatus",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "recomInstallAmount1",
+      "value": "$session.params.api.response.ptp.recomInstallAmount1"
+    }, {
+      "parameter": "recomInstallAmount2",
+      "value": "$session.params.api.response.ptp.recomInstallAmount2"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.ippStatus = \"Active\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"passive-ippNotEligibleForPTP\")"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"passive-ippNotEligibleForPTP\")"
+      } ]
+    },
+    "targetPage": "Play Not Eligible For Ptp",
+    "name": "1c807673-3bf2-4a78-9dfa-e8aba0518608"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PTPEnrolledInd",
+    "name": "66161585-e598-4b2e-8b2d-7b45664aadd5"
+  } ]
+}

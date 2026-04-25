@@ -1,0 +1,350 @@
+{
+  "name": "6db6e76c-38e2-4f22-baa5-5240dcd56910",
+  "displayName": "Greeting",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.dnisLanguage = \"en-US\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "flowLanguage",
+        "value": "en-US"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.greetingScriptEn = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.greetingScriptEn" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "OfferLanguageMenu",
+    "name": "b3e87f84-273f-4e6a-9254-b8fefaa77ddd"
+  }, {
+    "condition": "$session.params.dnisLanguage = \"fr-CA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "flowLanguage",
+        "value": "fr-CA"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.greetingScriptFr = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "\u003cspeak\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003cvoice name=\"fr-CA-Chirp3-HD-Aoede\"\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003clang xml:lang=\"fr-CA\"\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003cprosody rate=\"90%\"\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.greetingScriptFr" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003c/prosody\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003c/lang\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003c/voice\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003c/speak\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "OfferLanguageMenu",
+    "name": "ac0b9367-a02c-42b3-b9d3-b7cb5bedd45a"
+  }, {
+    "condition": "$session.params.dnisLanguage = \"NA\" AND $session.params.profileSetLanguage = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "flowLanguage",
+        "value": "$session.params.profileLanguage"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.profileLanguage = \"en-US\"",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.greetingScriptEn = \"NA\""
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "$session.params.greetingScriptEn" ]
+                    },
+                    "languageCode": "en"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        }, {
+          "condition": "$session.params.profileLanguage = \"fr-CA\"",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.greetingScriptFr = \"NA\""
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cspeak\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cvoice name=\"fr-CA-Chirp3-HD-Aoede\"\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003clang xml:lang=\"fr-CA\"\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cprosody rate=\"90%\"\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "$session.params.greetingScriptFr" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003c/prosody\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003c/lang\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003c/voice\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003c/speak\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        }, {
+        
+        } ]
+      } ]
+    },
+    "targetPage": "OfferLanguageMenu",
+    "name": "5bda242f-ccf5-4475-b06a-7d581787f234"
+  }, {
+    "condition": "$session.params.dnisLanguage = \"NA\" AND $session.params.profileSetLanguage != true AND $session.params.npaLanguage = \"en-US\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "flowLanguage",
+        "value": "en-US"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.greetingScriptEn = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.greetingScriptEn" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "OfferLanguageMenu",
+    "name": "428ccbad-a684-4a89-a9f7-6c4f86aa1431"
+  }, {
+    "condition": "$session.params.dnisLanguage = \"NA\" AND $session.params.profileSetLanguage != true AND $session.params.npaLanguage = \"fr-CA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "flowLanguage",
+        "value": "fr-CA"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.greetingScriptFr = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "\u003cspeak\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003cvoice name=\"fr-CA-Chirp3-HD-Aoede\"\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003clang xml:lang=\"fr-CA\"\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003cprosody rate=\"90%\"\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.greetingScriptFr" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003c/prosody\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003c/lang\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003c/voice\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "\u003c/speak\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "OfferLanguageMenu",
+    "name": "bd881752-feb4-4e93-8542-f28f9f81df76"
+  }, {
+    "condition": "$session.params.dnisLanguage = \"NA\" AND $session.params.profileSetLanguage != true AND ($session.params.npaLanguage = \"NA\" OR $session.params.npaLanguage = null)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "flowLanguage",
+        "value": "en-US"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.greetingScriptEn = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.greetingScriptEn" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "OfferLanguageMenu",
+    "name": "6665336c-d1ae-4d26-bc9b-d484ddfd725e"
+  } ]
+}

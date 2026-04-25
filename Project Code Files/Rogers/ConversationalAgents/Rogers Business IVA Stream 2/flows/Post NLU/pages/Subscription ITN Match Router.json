@@ -1,0 +1,41 @@
+{
+  "name": "065c89d0-8405-4ad4-a4c0-cd20f3d2725b",
+  "displayName": "Subscription ITN Match Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfWireless = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "confirmSubscription"
+      } ]
+    },
+    "targetPage": "Check Failure Exit - Subscription ITN Match",
+    "name": "a49279ef-b017-4a5f-af83-9db9b92a7125"
+  }, {
+    "condition": "$session.params.subscriptionIndexCounter \u003c $session.params.numberOfWireless",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Iterate Subscriptions",
+    "name": "04a5da0f-d957-494b-8159-503c5cf0a6d9"
+  }, {
+    "condition": "$session.params.subscriptionIndexCounter \u003e= $session.params.numberOfWireless",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "confirmSubscription"
+      }, {
+        "parameter": "subscriptionIndexCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Check Failure Exit - Subscription ITN Match",
+    "name": "4ea8ccab-7712-4f48-8d62-3169ac23f554"
+  } ]
+}

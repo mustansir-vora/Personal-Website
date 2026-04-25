@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@603502500:1743445296699" name="IS_RETENTION_DONE2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IS_RETENTION_DONE" default_exit_state="NO">
+        <exit_state name="YES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_SIDA_RETENTION_DONE" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

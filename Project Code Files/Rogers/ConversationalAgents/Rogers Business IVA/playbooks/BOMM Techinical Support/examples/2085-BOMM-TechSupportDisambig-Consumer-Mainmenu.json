@@ -1,0 +1,31 @@
+{
+  "name": "fd92ebea-aeb8-45db-85ff-3aa30ce34e94",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+      "text": "I need to go for main menu"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "userInputBMTS": "mainmenu"
+    }
+  },
+  "displayName": "2085-BOMM-TechSupportDisambig-Consumer-Mainmenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 134,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "card",
+    "synonyms": [ "card", "change card ", "credit card" ],
+    "languageCode": "en"
+  }, {
+    "value": "amount",
+    "synonyms": [ "amount", "change amount", "payment amount" ],
+    "languageCode": "en"
+  } ]
+}

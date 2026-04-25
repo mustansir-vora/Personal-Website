@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@599693165:1708429077206" name="EPCUS_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.EPCUS_MN_001_VALUE</source>
+</config>
+</decision>

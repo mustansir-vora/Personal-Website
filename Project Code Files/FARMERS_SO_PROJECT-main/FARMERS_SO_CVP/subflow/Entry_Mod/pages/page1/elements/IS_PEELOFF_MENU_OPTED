@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@513522027:1711115305374" name="IS_PEELOFF_MENU_OPTED" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">YES</setting>
+<setting name="sessNames">IS_PEELOFF_MENU_OPTED</setting>
+</settings>
+</config>
+</action_element>

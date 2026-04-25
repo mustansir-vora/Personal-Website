@@ -1,0 +1,28 @@
+{
+  "name": "81da41a7-be06-473d-bb35-1b345ba10a20",
+  "displayName": "Return From Offer Additional Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCheckAmountAndDate = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpCheckAmountAndDate",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "e6cc9389-543e-4bd5-bc3e-0ecb711fe18a"
+  }, {
+    "condition": "$session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "0147f97a-715f-4386-9f34-37b190683c06"
+  } ]
+}

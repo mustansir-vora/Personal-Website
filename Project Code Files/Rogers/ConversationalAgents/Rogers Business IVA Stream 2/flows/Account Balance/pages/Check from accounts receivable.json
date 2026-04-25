@@ -1,0 +1,31 @@
+{
+  "name": "d72acaa3-4490-4cbb-92a2-8509f443c55f",
+  "displayName": "Check from accounts receivable",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.subflowReturnValue",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAR = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowReturnValue",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Playing Balance Details",
+    "name": "6dd0cc6a-4c7a-464d-b17a-825f54103537"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Get Billing Profile ",
+    "name": "3c10ba9c-4d77-44cf-8ebd-ebb75593bce5"
+  } ]
+}

@@ -1,0 +1,107 @@
+{
+  "name": "32b2d439-1b58-4eaf-81a4-11efeacfb510",
+  "displayName": "Send SMS",
+  "transitionRoutes": [ {
+    "condition": "$session.params.smsId = null OR $session.params.smsId = \"NA\" OR $session.params.smsId = \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": false
+      }, {
+        "parameter": "smsStatus",
+        "value": "bypass"
+      }, {
+        "parameter": "passiveSms",
+        "value": true
+      }, {
+        "parameter": "fromSms",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "75905580-d7d1-4989-a262-43093afab3b4"
+  }, {
+    "condition": "$session.params.smsId != null AND $session.params.smsId != \"NA\" AND $session.params.smsId != \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsStatus",
+        "value": "bypass"
+      }, {
+        "parameter": "passiveSms",
+        "value": true
+      }, {
+        "parameter": "fromSms",
+        "value": true
+      } ]
+    },
+    "targetPage": "Get SMS Parameters",
+    "name": "60a98829-cbcd-4bb8-886f-7a96d41abb12"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "fe30b24f-c1c8-405a-ac0c-d319274b5d8f"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "925ffa31-b080-40aa-b7d3-acca97910d6a"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "7d3a9158-11bf-4712-b442-c9dc09ea1e22"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.unknown-event",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "d694e555-8c13-4e69-aa50-97bf15a335b8"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true,
+    "playbackInterruptionSettings": {
+      "allowPlaybackInterruption": true
+    }
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

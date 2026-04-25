@@ -1,0 +1,97 @@
+{
+  "name": "0598f17e-1429-4fad-b324-dee3d7f45311",
+  "displayName": "DMBG - Bus-Main-Regional-Ent-DA",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Pour la facturation, les paiements et les changements de compte, dire « facturation ».\r\nPour le soutien technique, dire « soutien technique »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "For Billing, payment, and Account Changes, say \"billing\",\nFor Technical support, say \"technical support\"" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - Bus-Main-Regional-Ent-DA - Billing",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Regional-Ent-DA-billing"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "2a04a0f2-0e88-4831-94e7-a0b5e453ea4f"
+  }, {
+    "intent": "DMBG - Bus-Main-Regional-Ent-DA - Tech Support",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Regional-Ent-DA-techsupport"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "94ba98f7-db64-405f-942f-9676db44ec41"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "ef129aa7-d955-46a9-856e-887459867a70"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "51a16b7b-d4fd-4367-a450-4bf749565544"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

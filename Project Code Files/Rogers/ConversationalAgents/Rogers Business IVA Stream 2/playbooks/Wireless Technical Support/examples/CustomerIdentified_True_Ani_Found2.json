@@ -1,0 +1,49 @@
+{
+  "name": "2dbe2afe-ebac-4360-9c8f-6467f2149266",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "is_ani_in_wireless_subscriptions",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": "true"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, ensure you are calling from a different phone than the one you need help with. Many issues can be resolved by powering down and restarting your device."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "after customer is identified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "customerIdentified": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after condition chceks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet,passive-techSupportWireless",
+      "completedSSName": "passive-techSupportInternet,passive-techSupportWireless",
+      "completedSelfServe": "passive-techSupportInternet,passive-techSupportWireless",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet,passive-techSupportWireless",
+      "reportingVar_completedSSName": "passive-techSupportInternet,passive-techSupportWireless",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "wsStepCompleted": "true"
+    }
+  },
+  "displayName": "CustomerIdentified_True_Ani_Found2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 336,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

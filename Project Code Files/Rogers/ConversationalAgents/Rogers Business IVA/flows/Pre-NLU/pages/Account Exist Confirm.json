@@ -1,0 +1,254 @@
+{
+  "name": "07329516-eff3-4dac-a477-2322c0ee3f7d",
+  "displayName": "Account Exist Confirm",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "\u003cspeak\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003cbreak time=\"100ms\"/\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\"Do you have a business account set up with us?\"" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003c/speak\u003e" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "« Avez-vous un compte Affaires ouvert chez nous ? »" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that. Do you have a business account with us? You can say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je ne vous ai pas entendu. Avez-vous un compte Affaires chez nous ? Vous pouvez dire « oui » ou « non »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i didn't get that. Do you have a business account with us? You can say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n’ai pas compris. Avez-vous un compte Affaires chez nous ? Vous pouvez dire « oui » ou « non »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I still couldn't hear  that. If you have a business account with us, say yes or press 1. Otherwise, say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je ne vous entends toujours pas. Si vous avez un compte Affaires chez nous, dites « oui » ou appuyez sur 1. Sinon, dites « non » ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I still didn't get that. If you have a business account with us, say yes or press 1. Otherwise, say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je n’ai toujours pas compris. Si vous avez un compte Affaires chez nous, dites « oui » ou appuyez sur 1. Sinon, dites « non » ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "YesOrNoMn-Yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Ani Confirm Id Check",
+    "name": "5655d7d4-1bd9-4bcb-b605-80e07384980c"
+  }, {
+    "intent": "YesOrNoMn-No",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, let's continue." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "D’accord, continuons." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      }, {
+        "parameter": "customerIdentified",
+        "value": false
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        }
+      }
+    },
+    "targetPage": "Exit Type",
+    "name": "149acace-769a-4589-bb37-f046402fbd92"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "c147559f-8b0e-4c78-bfda-a0f0fe473f38"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "57dbe352-e1b5-43bc-a4c7-c1a62eb892fb"
+  }, {
+    "intent": "AccountExistMn-Negative",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "321258d2-770c-4157-a785-708dda5a310a"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "0bafde7a-2b4f-4d93-bfe5-b78172807043"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, let's continue." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "D’accord, continuons." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      }, {
+        "parameter": "customerIdentified",
+        "value": false
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "006a8dc1-4353-434f-9b21-5edf3a923904"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "1b77e4bb-3ac2-4266-8029-7061eca76bff"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "fed15e43-f4e8-403a-b7c8-1c4ff0e79ca7"
+  } ]
+}

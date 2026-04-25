@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@322923583:1707377059282" name="CMMF_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.CMMF_MN_001_VALUE</source>
+</config>
+</decision>

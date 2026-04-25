@@ -1,0 +1,7 @@
+{
+  "name": "6fcfda1b-16a4-4afa-a4c4-0d285a7280e7",
+  "displayName": "voice-support",
+  "priority": 500000,
+  "description": "Handles calls with Voice issue for business customers.",
+  "numTrainingPhrases": 16
+}

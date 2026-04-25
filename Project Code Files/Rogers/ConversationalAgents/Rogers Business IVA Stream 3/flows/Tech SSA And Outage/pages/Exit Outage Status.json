@@ -1,0 +1,68 @@
+{
+  "name": "2253d33f-9788-4891-a212-c11ae8138b72",
+  "displayName": "Exit Outage Status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.invokedOSFrom = \"TechInternetSupport\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "inTSFromOutageStatus",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "53c5c4a0-0fe6-49e4-b2e5-cec95b6e499e"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"TechTvSupport\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tVTSFromOutageStatus",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "0835d550-4ecc-472c-831e-0b30f0d095c8"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"TechHomeSecurity\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "hsTSFromOutageStatus",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "1d998a4a-6e67-4c7d-bc5f-b28dc9afe3fe"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"TechBusinessPhone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bpTSFromOutageStatus",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "4756d132-183e-4161-921e-a05dcf2296e8"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"TechHomePhone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "hpTSFromOutageStatus",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "4232b4ea-e643-4325-a469-401c3f062072"
+  }, {
+    "condition": "$session.params.invokedOSFrom = \"NLUMain\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "16744509-6a00-4163-ad61-478e9ffb6172"
+  } ]
+}

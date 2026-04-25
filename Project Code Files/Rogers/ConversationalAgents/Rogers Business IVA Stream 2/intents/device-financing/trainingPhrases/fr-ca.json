@@ -1,0 +1,327 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je voudrais savoir si je peux financer des accessoires en "
+    }, {
+      "text": "même"
+    }, {
+      "text": " temps que "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " nouveau téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir si ma prochaine facture inclut les frais de financement de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider à vérifier si "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " nouveau téléphone est sous contrat de financement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux voir s’il y "
+    }, {
+      "text": "a une"
+    }, {
+      "text": " promotion de financement disponible pour ma mise à niveau."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment fonctionne le financement si je veux obtenir "
+    }, {
+      "text": "un deuxième"
+    }, {
+      "text": " appareil?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie de comprendre mes options de financement avant de mettre "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone à niveau."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais faire "
+    }, {
+      "text": "un"
+    }, {
+      "text": " paiement forfaitaire additionnel "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil "
+    }, {
+      "text": "financé"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " quelle est la durée restante "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " financement d’appareil?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’information "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " le financement ou le plan de versements de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me transférer à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " qui peut revoir les détails de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " financement d’appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir si je peux échanger "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone tout en étant encore sous financement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " quand "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " financement d’appareil sera entièrement payé?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais changer le mode de paiement lié à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " plan de financement d’appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour discuter de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " entente de financement d’appareil et de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " solde."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je financer plusieurs appareils "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " le "
+    }, {
+      "text": "même"
+    }, {
+      "text": " compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir comment rembourser "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " financement d’appareil plus tôt."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais revoir les modalités de paiement pour le financement d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux financer "
+    }, {
+      "text": "un"
+    }, {
+      "text": " nouvel appareil au lieu de payer le prix complet d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " coup."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu confirmer si je suis admissible au financement d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " autre téléphone "
+    }, {
+      "text": "en ce moment"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais faire "
+    }, {
+      "text": "une"
+    }, {
+      "text": " mise à niveau de téléphone, mais je paie encore "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " combien il me reste à payer "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " plan de versements d’appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier le solde restant "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone "
+    }, {
+      "text": "financé"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’expliquer comment fonctionne le programme de financement d’appareil?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais savoir si je peux financer "
+    }, {
+      "text": "un"
+    }, {
+      "text": " nouveau téléphone "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

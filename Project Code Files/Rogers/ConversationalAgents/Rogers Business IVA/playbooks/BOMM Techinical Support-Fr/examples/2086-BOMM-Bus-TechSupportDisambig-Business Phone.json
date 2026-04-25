@@ -1,0 +1,56 @@
+{
+  "name": "ed57780f-cf6f-42f6-b5f7-9315b8688fd5",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire « voix avantage », « téléphones mobiles », « Internet haute vitesse », « services de télévision » ou « téléphonie d’affaires »."
+    }
+  }, {
+    "userUtterance": {
+      "text": "téléphonie d’affaires"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_product",
+      "inputActionParameters": {
+        "userResponse": "téléphonie d’affaires"
+      },
+      "outputActionParameters": {
+        "result": "Téléphonie Affaires"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Téléphonie Affaires"
+      },
+      "outputActionParameters": {
+        "result": "business-phone-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Téléphonie Affaires",
+      "savedIntent": "business-phone-support"
+    }
+  },
+  "displayName": "2086-BOMM-Bus-TechSupportDisambig-Business Phone",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 267,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "23891a0d-8001-4a28-bf12-e6d5176e171c",
+  "displayName": "FAQ Announcement",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.faqVoiceScriptContent" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "$session.params.faqVoiceScriptContent" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check SMS Attempts",
+    "name": "166688eb-0702-4806-b7b7-2ffa22cf74a1"
+  } ]
+}

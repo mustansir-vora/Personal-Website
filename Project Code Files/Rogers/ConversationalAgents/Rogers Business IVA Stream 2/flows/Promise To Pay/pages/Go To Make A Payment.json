@@ -1,0 +1,18 @@
+{
+  "name": "6175f0a0-c8ba-4017-9291-bfe77046aa65",
+  "displayName": "Go To Make A Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Make A Payment",
+    "name": "efadc4e5-4a1e-44da-8fbb-d1d6c438aa4c"
+  } ]
+}

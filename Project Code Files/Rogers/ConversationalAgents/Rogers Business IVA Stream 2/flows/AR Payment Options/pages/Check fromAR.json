@@ -1,0 +1,34 @@
+{
+  "name": "0124dc22-f6ea-44a8-adab-681d89236ae4",
+  "displayName": "Check fromAR",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAR = true OR $session.params.fromAcctReceiveable = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "549b5c61-bdf4-4840-8393-36156434aa30"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fromAR",
+        "value": true
+      }, {
+        "parameter": "paymentAmount",
+        "value": null
+      }, {
+        "parameter": "fromAcctReceiveable",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BusinessInd",
+    "name": "c6bf521b-f641-4243-b518-aa111ef6ce8d"
+  } ]
+}

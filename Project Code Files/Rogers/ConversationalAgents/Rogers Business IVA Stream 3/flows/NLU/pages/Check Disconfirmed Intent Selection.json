@@ -1,0 +1,31 @@
+{
+  "name": "f2693cb8-3cef-4fe5-92fc-1da22ef049bb",
+  "displayName": "Check Disconfirmed Intent Selection",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.disconfirmed_Intent != null AND $session.params.disconfirmed_Intent = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "disconfirmIntentCounter",
+        "value": "$sys.func.IF(\"$session.params.disconfirmIntentCounter = null\", 1, $sys.func.ADD($session.params.disconfirmIntentCounter, 1))"
+      }, {
+        "parameter": "disconfirmed_Intent",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check Disconfirmed Intent Attempts",
+    "name": "a04d41ab-269c-417a-a247-97bc5735d766"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "5cfe34df-31e4-4234-b9b2-a3f5a7247154"
+  } ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1441329578:1715068065991" name="Is_Invoice_Generated" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="INVOICE_GENERATED_CHECK" default_exit_state="No">
+        <exit_state name="Yes" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_INVOICE_GENERATED" />
+                </data>
+                <constant_string value="Yes" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

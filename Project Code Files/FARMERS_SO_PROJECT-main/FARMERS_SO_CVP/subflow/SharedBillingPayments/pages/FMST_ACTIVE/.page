@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1349594652:1720712010186" name="FMST_ACTIVE" version="6.0.1">
+<element height="50" id="Element@166325623:1720712010186" name="FMST_ACTIVE" type="Page Entry" width="140" x="499" y="-131">
+<exit_states>
+<exit_state name="next" target="Element@904610199:1720721110219"/>
+</exit_states>
+</element>
+<element height="50" id="Element@904610199:1720721110219" name="Check billingStstusCode" type="Decision" width="208" x="466" y="-43">
+<exit_states>
+<exit_state name="PAID" target="Element@1568132183:1721714537618"/>
+<exit_state name="OTHERS" target="Element@1863499439:1720722459460"/>
+<exit_state name="BILL DUE" target="Element@2052800591:1721714688910"/>
+<exit_state name="WAIT TO BILL" target="Element@1969547902:1721714828932"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1991237874:1720722426150" name="FRMSTS_SBP_MN_002_Call" type="Subflow Call" width="225" x="505" y="478">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709026322680">
+<config>
+<argument_data>
+<data name="MenuID">SBP_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1935895843:1720722459460"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1935895843:1720722459460" name="FRMST_SBP_MN_002_VALUE" type="Decision" width="235" x="402" y="554">
+<exit_states>
+<exit_state name="YES" target="Element@1863499439:1720722459460"/>
+<exit_state name="NO" target="Element@809622897:1720722758929">
+<bendpoint>
+<dim1 x="-176" y="-102"/>
+<dim2 x="170" y="133"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1622502410:1731529988315"/>
+<exit_state name="NOMATCH" target="Element@809622897:1720722758929">
+<bendpoint>
+<dim1 x="-134" y="-138"/>
+<dim2 x="212" y="97"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@809622897:1720722758929">
+<bendpoint>
+<dim1 x="-217" y="-94"/>
+<dim2 x="172" y="166"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="52" id="Element@30208260:1720722459460" name="FRMST_Subflow Return_6" type="Subflow Return" width="216" x="822" y="606"/>
+<element height="55" id="Element@1863499439:1720722459460" name="FRMST_EPCPaymentUS1" type="Subflow Call" width="263" x="899" y="451">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1713010274500">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@30208260:1720722459460"/>
+</exit_states>
+</element>
+<element height="55" id="Element@742480268:1720722685585" name="FRMST_Transfer2" type="Subflow Call" width="204" x="-613" y="673">
+<subflow_call subflow_name="Transfer" target="Element@31:1710691173865">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@582211623:1720722685585"/>
+</exit_states>
+</element>
+<element height="59" id="Element@249135681:1720722685585" name="FRMST_SET_LOOKUP_ANOTHER_POLICY" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="312" x="-88" y="595">
+<exit_states>
+<exit_state name="done" target="Element@1128830314:1720722685585"/>
+</exit_states>
+</element>
+<element height="59" id="Element@686957546:1720722685585" name="MAIN_MENU" type="Page Connector" width="136" x="-307" y="685">
+<page_connector target="Element@1654434117:1714726602317">MAIN_MENU<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@582211623:1720722685585" name="FRMST_Subflow Return_2" type="Subflow Return" width="271" x="-756" y="548"/>
+<element height="59" id="Element@311190601:1720722685585" name="FRMST_SBP_MN_005_VALUE" type="Decision" width="235" x="-99" y="442">
+<exit_states>
+<exit_state name="Lienholder" target="Element@1823705214:1721418059925">
+<bendpoint>
+<dim1 x="-246" y="50"/>
+<dim2 x="130" y="-150"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Main Menu" target="Element@686957546:1720722685585"/>
+<exit_state name="Representative" target="Element@1823705214:1721418059925">
+<bendpoint>
+<dim1 x="-174" y="134"/>
+<dim2 x="202" y="-66"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Billing Questions" target="Element@1823705214:1721418059925">
+<bendpoint>
+<dim1 x="-222" y="96"/>
+<dim2 x="154" y="-104"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@742480268:1720722685585"/>
+<exit_state name="NOMATCH" target="Element@1823705214:1721418059925">
+<bendpoint>
+<dim1 x="-287" y="20"/>
+<dim2 x="89" y="-180"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@200195831:1731529967775"/>
+<exit_state name="Lookup Another Policy" target="Element@249135681:1720722685585"/>
+<exit_state name="Repeat" target="Element@848761181:1720722685585"/>
+</exit_states>
+</element>
+<element height="54" id="Element@848761181:1720722685585" name="FRMST_SBP_MN_005_REPEAT" type="Page Connector" width="242" x="98" y="526">
+<page_connector target="Element@201075755:1721994674577">FRMST_SBP_MN_005_REPEAT<config/>
+</page_connector>
+</element>
+<element height="59" id="Element@1128830314:1720722685585" name="FRMST_SharedAuth" type="Subflow Call" width="178" x="-143" y="692">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1707978989591">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@799509257:1720722863935"/>
+</exit_states>
+</element>
+<element height="59" id="Element@809622897:1720722758929" name="FRMST_SBP_MN_005_Call" type="Subflow Call" width="217" x="65" y="315">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709026404246">
+<config>
+<argument_data>
+<data name="MenuID">SBP_MN_005</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@311190601:1720722685585"/>
+</exit_states>
+</element>
+<element height="59" id="Element@799509257:1720722863935" name="FRMTS_ANOTHER_POLICY" type="Page Connector" width="221" x="135" y="732">
+<page_connector target="Element@66172241:1721994674577">FRMTS_ANOTHER_POLICY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1909475608:1720728357916" name="FRMST_SBP_PA_005" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="228" x="-47" y="124">
+<exit_states>
+<exit_state name="done" target="Element@569489282:1720797032758"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1381691579:1720796081678" name="FRMST_SBP_PA_006" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="200" x="320" y="203">
+<exit_states>
+<exit_state name="done" target="Element@569489282:1720797032758"/>
+</exit_states>
+</element>
+<element height="56" id="Element@996376859:1720796594636" name="FRMST_SBP_PA_007" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="179" x="848" y="102">
+<exit_states>
+<exit_state name="done" target="Element@569489282:1720797032758"/>
+</exit_states>
+</element>
+<element height="55" id="Element@569489282:1720797032758" name="FRMST_NextPayment_Allowed" type="Decision" width="249" x="445" y="396">
+<exit_states>
+<exit_state name="YES" target="Element@1991237874:1720722426150"/>
+<exit_state name="NO" target="Element@809622897:1720722758929"/>
+</exit_states>
+</element>
+<element height="52" id="Element@1823705214:1721418059925" name="CHECK_EXIT_STATE_3" type="Decision" width="191" x="-422" y="581">
+<exit_states>
+<exit_state name="ER" target="Element@742480268:1720722685585"/>
+<exit_state name="TRANSFER" target="Element@742480268:1720722685585"/>
+<exit_state name="SELFSERVICE" target="Element@2097959587:1721418125624">
+<bendpoint>
+<dim1 x="-70" y="-84"/>
+<dim2 x="46" y="67"/>
+</bendpoint>
+</exit_state>
+<exit_state name="OTHERS" target="Element@742480268:1720722685585"/>
+</exit_states>
+</element>
+<element height="56" id="Element@2097959587:1721418125624" name="FRMST_EPCPaymentUS2" type="Subflow Call" width="228" x="-593" y="394">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1713010274500">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@582211623:1720722685585"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1568132183:1721714537618" name="FM_Lang_Check_BC_005" type="Decision" width="207" x="-142" y="-43">
+<exit_states>
+<exit_state name="Yes" target="Element@1909475608:1720728357916"/>
+<exit_state name="No" target="Element@720869582:1721714609850"/>
+</exit_states>
+</element>
+<element height="55" id="Element@720869582:1721714609850" name="FRMST_SBP_PA_005_SP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="239" x="-316" y="122">
+<exit_states>
+<exit_state name="done" target="Element@569489282:1720797032758"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2052800591:1721714688910" name="FM_Lang_Check_BC_006" type="Decision" width="207" x="466" y="107">
+<exit_states>
+<exit_state name="Yes" target="Element@1381691579:1720796081678"/>
+<exit_state name="No" target="Element@1643434641:1721714768439"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1643434641:1721714768439" name="FRMST_SBP_PA_006_SP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="201" x="535" y="204">
+<exit_states>
+<exit_state name="done" target="Element@569489282:1720797032758"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1969547902:1721714828932" name="FM_Lang_Check_BC_007" type="Decision" width="267" x="872" y="-38">
+<exit_states>
+<exit_state name="Yes" target="Element@996376859:1720796594636"/>
+<exit_state name="No" target="Element@897985266:1721714865765"/>
+</exit_states>
+</element>
+<element height="56" id="Element@897985266:1721714865765" name="FRMST_SBP_PA_007_SP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="201" x="1069" y="104">
+<exit_states>
+<exit_state name="done" target="Element@569489282:1720797032758"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1241808443:1721911227113" name="FRMST_SBP_MN_005_ENTRY" type="Page Entry" width="236" x="-164" y="244">
+<exit_states>
+<exit_state name="next" target="Element@809622897:1720722758929"/>
+</exit_states>
+</element>
+<element height="50" id="Element@200195831:1731529967775" name="DISC Entry" type="Page Connector" width="124" x="-268" y="345">
+<page_connector target="Element@1782299812:1731529539958">DISC Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1622502410:1731529988315" name="DISC Entry" type="Page Connector" width="124" x="466" y="635">
+<page_connector target="Element@1782299812:1731529539958">DISC Entry<config/>
+</page_connector>
+</element>
+</page>

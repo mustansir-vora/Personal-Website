@@ -1,0 +1,7 @@
+{
+  "name": "f782cb2f-a02e-4ab0-bc12-afebea977c1d",
+  "displayName": "port-in-number",
+  "priority": 500000,
+  "description": "Handles requests to transfer a phone number from another provider into the current service.",
+  "numTrainingPhrases": 44
+}

@@ -1,0 +1,130 @@
+{
+  "name": "6e024e50-4823-4a13-bfd6-38ab489bbe32",
+  "displayName": "Disambig Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.destination = \"agent-request-business-Dmbg\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - Agent Request Business",
+    "name": "d01b3e5b-2fce-46d6-8fac-3b4789af043b"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"Bus-Main-Ent-DA\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - Bus-Main-Ent-DA",
+    "name": "6f58a93e-d924-4b23-ad32-fb23b1813039"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"Bus-Main-Ent-DA-billing\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - Bus-Main-Ent-DA-billing",
+    "name": "49cf132e-d17d-490f-a466-45ac4f9ec876"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"Bus-Main-Ent-DA-techsupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - Bus-Main-Ent-DA-techsupport",
+    "name": "bb1d7332-c16c-4ed8-ae62-3fef8fa94508"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"Bus-Main-Ent-T2\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - Bus-Main-Ent-T2",
+    "name": "a36efe84-6471-4652-bb53-3d3a265547bd"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"Bus-Main-GOC-Ent\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - Bus-Main-GOC-Ent",
+    "name": "e5d81a50-d601-42e8-96ee-42f0a18b2131"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"Bus-Main-Regional-Ent-DA\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - Bus-Main-Regional-Ent-DA",
+    "name": "953d8921-40d2-41da-a815-58ba1abe4911"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"Bus-TechSupp-CLEC-Wir\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - Bus-TechSupp-CLEC-Wir",
+    "name": "d6ecb0b7-8900-4fc8-8d92-88f1a8ce5933"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"PaymentProgramDmbg\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - PaymentProgramDmbg",
+    "name": "44c56662-69b7-4d71-8eac-92f6682e7990"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"PhoneActivationDmbg\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - PhoneActivationDmbg",
+    "name": "bedbc724-2867-4ed3-a995-0bd2fd8913f2"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"UpgradeMobileVagueDmbg\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - UpgradeMobileVagueDmbg",
+    "name": "1e7e518f-d9c1-4ccb-ac82-a0f42ff530a8"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"returnCableBoxDisambig\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - returnCableBoxDisambig",
+    "name": "4204213c-34b4-4648-88ab-02c73d9479bc"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"InternetSupportDmbg\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - InternetSupportDmbg",
+    "name": "f220badb-b673-4938-96b7-5801ac83dbe6"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"PasswordResetDmbg\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - PasswordResetDmbg",
+    "name": "efd34fd7-2800-4904-8837-b43a237b76bd"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"PaymentvagueDisambig\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - PaymentvagueDisambig",
+    "name": "4d3891ce-fa34-4c63-8232-2c2fb84f84a0"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"WifiCallingSupportVagueDmbg\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - WifiCallingSupportVagueDmbg",
+    "name": "0511c76f-c023-47df-9965-d97ad5da55b1"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"VoicemailSupportVagueDmbg\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DMBG - VoicemailSupportVagueDmbg",
+    "name": "f4ce8170-b6ee-47c7-977a-5f086f28a67e"
+  } ]
+}

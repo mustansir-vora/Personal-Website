@@ -1,0 +1,31 @@
+{
+  "name": "3f0281f6-a0ae-4683-99ba-6c8c2909f477",
+  "displayName": "Play Billing Profile Faliure",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Je ne peux pas accéder à vos renseignements de compte pour le moment." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "I can’t access your account information right now." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "6a7b6ac5-d1d9-484d-a3bc-6c52ceeb4fee"
+  } ]
+}

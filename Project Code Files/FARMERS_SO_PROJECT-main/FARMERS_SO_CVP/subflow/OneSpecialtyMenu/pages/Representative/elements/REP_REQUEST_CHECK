@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@463637752:1709114824212" name="REP_REQUEST_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="REP_REQUEST_CHECK" default_exit_state="Initial Request">
+        <exit_state name="&gt;2" conjugate="and">
+            <number operator="greater">
+                <data>
+                    <element name="REP_COUNTER" variable="count" />
+                </data>
+                <constant_string value="1" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

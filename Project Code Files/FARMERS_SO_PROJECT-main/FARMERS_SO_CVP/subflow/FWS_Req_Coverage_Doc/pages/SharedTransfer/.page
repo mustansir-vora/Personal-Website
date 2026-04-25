@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2079308854:1708514890944" name="SharedTransfer" version="6.0.1">
+<element height="55" id="Element@994103853:1708514890944" name="SHARED_TRANSFER" type="Page Entry" width="209" x="404" y="14">
+<exit_states>
+<exit_state name="next" target="Element@1006387312:1708514892907"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1006387312:1708514892907" name="SharedTransfer" type="Subflow Call" width="166" x="417" y="206">
+<subflow_call subflow_name="Transfer" target="Element@31:1710402253619">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2138931037:1708514892907"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2138931037:1708514892907" name="FWS_MAIN_FLOW_RETURN" type="Subflow Return" width="265" x="386" y="303"/>
+</page>

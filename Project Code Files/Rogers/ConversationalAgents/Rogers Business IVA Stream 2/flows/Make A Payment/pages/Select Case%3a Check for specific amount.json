@@ -1,0 +1,59 @@
+{
+  "name": "55d414ad-330e-43c2-b29f-4c16582b4e43",
+  "displayName": "Select Case: Check for specific amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.pendingPTPInstallment \u003e 0 OR $session.params.amount \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Amount",
+    "name": "4be4bc8b-daa0-41d5-9598-66ed3f3abb3d"
+  }, {
+    "condition": "$session.params.ippCurrentBalance \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "IPP Amount",
+    "name": "71ddaff2-e2e1-4c18-9799-184d3fe1be49"
+  }, {
+    "condition": "$session.params.currentBalance \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Pay Current Balance",
+    "name": "8d3d9ea8-62ce-4b2c-abf0-2b967e202935"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Ask Amount",
+    "name": "49a47f04-09f9-40ad-9ee6-f66819c408ab"
+  }, {
+    "condition": "$session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "68649b51-df4a-484a-8154-4f3837f77cb4"
+  }, {
+    "condition": "$session.params.getAmountFailure = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Continue To Credit Operations",
+    "name": "3d7fe89a-3b46-4a6a-9ecf-217902ac24c0"
+  } ]
+}

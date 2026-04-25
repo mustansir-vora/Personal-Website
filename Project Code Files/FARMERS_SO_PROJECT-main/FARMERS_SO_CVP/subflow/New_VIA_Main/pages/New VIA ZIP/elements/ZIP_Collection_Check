@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@361947528:1745495831512" name="ZIP_Collection_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ZIP_Collection_Check" default_exit_state="YES">
+        <exit_state name="NO" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ZIP_CHECK" />
+                </data>
+                <constant_string value="NO" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

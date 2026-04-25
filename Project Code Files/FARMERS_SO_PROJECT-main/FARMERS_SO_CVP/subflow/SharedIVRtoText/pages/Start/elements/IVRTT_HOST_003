@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1239184882:1730827949950" name="IVRTT_HOST_003" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.CheckANIIsMobilePost</source>
+</config>
+</decision>

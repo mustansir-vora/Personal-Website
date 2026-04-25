@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@227987858:1711608394720" name="SIDC_HOST_004" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.PointOrderID</source>
+</config>
+</decision>

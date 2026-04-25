@@ -1,0 +1,57 @@
+{
+  "name": "ab91e19d-7aa4-4138-b9c2-6817edb5773d",
+  "displayName": "Intent Group - sales-wireless",
+  "transitionRoutes": [ {
+    "intent": "eligibility-HUP",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "eligibility-HUP"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "c0546ca6-4c4a-4ca4-8b0c-678e187ac6a8"
+  }, {
+    "intent": "new-phone",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "new-phone"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "6c2463f4-5825-4df0-aec7-eada894e659f"
+  }, {
+    "intent": "product-inquiry-wireless",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "product-inquiry-wireless"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "b8b1d5b8-959f-4e7d-a70c-b11b211a094d"
+  }, {
+    "intent": "add-a-line",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "add-a-line"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "e6ef0512-edc1-43f0-948b-8fb73481a6f9"
+  } ]
+}

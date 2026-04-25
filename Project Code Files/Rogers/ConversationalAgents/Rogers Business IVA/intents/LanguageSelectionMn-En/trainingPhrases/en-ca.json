@@ -1,0 +1,115 @@
+{
+  "trainingPhrases": [ {
+    "id": "ad025e30-b35f-4b89-b110-3cbfa066f776",
+    "parts": [ {
+      "text": "Let's talk in English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6ef96f37-23f4-4bd9-9dc0-a519567b0c01",
+    "parts": [ {
+      "text": "Default to English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b2119b93-4619-432a-b18b-a2978a69d214",
+    "parts": [ {
+      "text": "Speak in English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d2a98439-8f88-4803-93af-0aeeb995d5a2",
+    "parts": [ {
+      "text": "I would like to use English language"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "fe32c1cc-86b2-4566-b7bf-cdc481ccffb9",
+    "parts": [ {
+      "text": "Select English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "29bb5d31-5d4f-4cf2-b833-100a26017898",
+    "parts": [ {
+      "text": "I choose English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "481375ff-ae77-411a-bd65-8e4ca8856399",
+    "parts": [ {
+      "text": "Set the language to English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b2e2f60a-62f4-4cba-a18c-bbb6e4b4c31a",
+    "parts": [ {
+      "text": "I'd prefer English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1d127af2-7021-4235-94ac-8e1d05273224",
+    "parts": [ {
+      "text": "English please"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e78ea7d8-6fc3-4f9c-b4c5-ff82e15c289f",
+    "parts": [ {
+      "text": "Please use English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2811d7fd-acd0-472e-8309-2fd86c9e0667",
+    "parts": [ {
+      "text": "Let's use English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f89aab2c-039e-411a-96d5-32b71f7c5124",
+    "parts": [ {
+      "text": "Can we continue in English?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "fa27617b-89d7-41b7-abf8-ba05681aeae8",
+    "parts": [ {
+      "text": "switch to English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "02e33bca-e724-4ac5-8c34-ba0f3ef9743c",
+    "parts": [ {
+      "text": "Change language to English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "84097847-2929-41b3-8936-32d9de843b9f",
+    "parts": [ {
+      "text": "I want to speak in English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "182b554e-4a28-4e7c-9717-54f7d383bf62",
+    "parts": [ {
+      "text": "English"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

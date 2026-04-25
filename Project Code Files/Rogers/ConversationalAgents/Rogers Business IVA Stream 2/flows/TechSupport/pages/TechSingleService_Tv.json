@@ -1,0 +1,34 @@
+{
+  "name": "e6bca843-2f7c-4fdd-8a7d-903ce4bf64aa",
+  "displayName": "TechSingleService_Tv",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.hasTvProfile = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "hasTvProfile",
+        "value": false
+      }, {
+        "parameter": "invokedTSSFrom",
+        "value": "TechTvSupport"
+      } ]
+    },
+    "targetFlow": "Tech SSA And Outage",
+    "name": "36664238-241c-496c-8ad7-f0a80544367c"
+  }, {
+    "condition": "$session.params.tVTSFromOutageStatus = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tVTSFromOutageStatus",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_Tv",
+    "name": "ad21365d-df01-43b7-aee0-e566f45bdc55"
+  } ]
+}

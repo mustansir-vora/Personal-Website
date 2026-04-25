@@ -1,0 +1,388 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je dois mettre à jour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " mode de paiement pour que ma prochaine facture soit chargée à ma nouvelle carte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider à changer la carte enregistrée ",
+      "auto": true
+    }, {
+      "text": "pour un",
+      "auto": true
+    }, {
+      "text": " nouveau numéro de carte de crédit.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux m’assurer que ma nouvelle carte de crédit est utilisée pour les frais récurrents.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu confirmer que la nouvelle carte de crédit est ",
+      "auto": true
+    }, {
+      "text": "maintenant",
+      "auto": true
+    }, {
+      "text": " le mode de paiement par défaut ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " mode de paiement ",
+      "auto": true
+    }, {
+      "text": "pour un",
+      "auto": true
+    }, {
+      "text": " compte bancaire au lieu de ma carte de crédit.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois remplacer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " ancienne carte de crédit par ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " nouvelle pour la facturation automatique.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez mettre à jour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte avec les nouvelles coordonnées de paiement que je viens de recevoir.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer la ",
+      "auto": true
+    }, {
+      "text": "carte de crédit associée",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte avant le prochain paiement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à mettre à jour mes informations de facturation après le remplacement de ma carte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais changer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " mode de paiement ",
+      "auto": true
+    }, {
+      "text": "pour une",
+      "auto": true
+    }, {
+      "text": " autre carte de crédit enregistrée.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux m’assurer que ma nouvelle carte de crédit est configurée pour tous les paiements futurs.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider à mettre à jour les informations de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte de paiement pour ma facture mensuelle.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois changer la carte que vous facturez ",
+      "auto": true
+    }, {
+      "text": "actuellement",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "pour une",
+      "auto": true
+    }, {
+      "text": " nouvelle carte de crédit.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais mettre à jour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " mode de paiement préautorisé en raison d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " nouvelle carte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à mettre à jour la carte de ",
+      "auto": true
+    }, {
+      "text": "crédit",
+      "auto": true
+    }, {
+      "text": " utilisée pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " abonnement?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer le mode de paiement que ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte utilise pour la facturation mensuelle.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez mettre à jour mes informations de paiement avec ma nouvelle carte American Express.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois remplacer ma carte de crédit ",
+      "auto": true
+    }, {
+      "text": "actuelle",
+      "auto": true
+    }, {
+      "text": " par ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " nouvelle pour les paiements automatiques.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu mettre à jour la ",
+      "auto": true
+    }, {
+      "text": "date",
+      "auto": true
+    }, {
+      "text": " d’expiration de la carte de crédit enregistrée?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais changer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " mode de paiement d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " carte ",
+      "auto": true
+    }, {
+      "text": "à une",
+      "auto": true
+    }, {
+      "text": " autre.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je viens de recevoir ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " nouvelle carte de crédit et je dois la mettre à jour pour les paiements de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez changer la ",
+      "auto": true
+    }, {
+      "text": "carte de crédit associée",
+      "auto": true
+    }, {
+      "text": " à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux mettre à jour mes informations de facturation avec ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau numéro de carte de crédit.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à changer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " mode de paiement ",
+      "auto": true
+    }, {
+      "text": "pour une",
+      "auto": true
+    }, {
+      "text": " nouvelle carte de crédit?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois mettre à jour la carte de crédit enregistrée pour mes paiements mensuels.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

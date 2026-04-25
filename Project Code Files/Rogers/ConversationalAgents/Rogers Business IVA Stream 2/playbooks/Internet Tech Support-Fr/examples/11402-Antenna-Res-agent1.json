@@ -1,0 +1,65 @@
+{
+  "name": "181d85ff-ddcd-431f-be80-e12e79ee50b8",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Y a-t-il une antenne fixée à l’extérieur de votre résidence ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux parler au représentant"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\nY a-t-il une antenne fixée à l’extérieur de votre résidence ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux parler au représentant"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "0",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "savedIntent": "internet-support"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInput": "agent"
+    }
+  },
+  "displayName": "11402-Antenna-Res-agent1",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 334,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

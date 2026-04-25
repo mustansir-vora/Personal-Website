@@ -1,0 +1,28 @@
+{
+  "name": "c5d5560c-a297-4d83-832a-cedad62c714b",
+  "displayName": "CheckSavedIntent_Wireless",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"wireless-support\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askForMoreDetails",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "8215e92e-74df-4bc8-9cbd-b5b5e034eb6c"
+  }, {
+    "condition": "$session.params.savedIntent != \"wireless-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "553a9cef-a402-4314-be70-dfebad116c9e"
+  } ]
+}

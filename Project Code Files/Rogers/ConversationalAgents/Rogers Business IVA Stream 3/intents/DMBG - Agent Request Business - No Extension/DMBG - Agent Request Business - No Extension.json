@@ -1,0 +1,7 @@
+{
+  "name": "bfcc635f-3cbd-47b6-9c18-0cb27a50b53c",
+  "displayName": "DMBG - Agent Request Business - No Extension",
+  "priority": 500000,
+  "numTrainingPhrases": 6,
+  "dtmfPattern": "2"
+}

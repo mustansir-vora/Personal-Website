@@ -1,0 +1,215 @@
+{
+  "name": "5311b6b5-2926-44fd-9e92-28b94002632e",
+  "displayName": "One Billing Account",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPrompt" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPrompt" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPromptNm1" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPromptNm1" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPromptNi1" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPromptNi1" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPromptNi2" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPromptNi2" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPromptNm2" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.disambigMenuPromptNm2" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "AccountNumberMn-FourDigit",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fourdigitaccount",
+        "value": "$sys.func.SUBSTITUTE($session.params.fourdigitaccount, \"-\", \"\")"
+      }, {
+        "parameter": "fourdigitaccount",
+        "value": "$sys.func.SUBSTITUTE($session.params.fourdigitaccount, \"\\s+\", \"\")"
+      } ]
+    },
+    "targetPage": "Check Account Number",
+    "name": "14438563-ae45-4f08-a7d6-90e30ea8b837"
+  }, {
+    "intent": "SingleAccountMn-Digit",
+    "condition": "$session.params.fourdigitaccount = null OR $session.params.fourdigitaccount = \"\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Parfait, merci." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Perfect, thank you" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "accountNumberIndex",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get Identification Data",
+    "name": "a2df4539-ec67-4465-8438-b452782bd3d2"
+  }, {
+    "intent": "OneAccountMN-DifferentAccount",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Disambig Counter Check",
+    "name": "5a3c0142-d5f6-455e-af3d-a8aff37bf305"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "683e1c8e-3ee7-41e1-ad2b-ad546d585931"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": ""
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "d945c0a0-cdb6-4434-8766-c875d1f53df4"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "464cc27e-0313-4e55-b567-d393889c6c00"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "fourdigitaccount",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Account Disambig Counter Check",
+    "name": "f66af2a3-065b-4fe8-8040-2cddba739922"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "2b7839f7-b5ef-4d65-b266-9959a69f3bf6"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "fourdigitaccount",
+        "value": ""
+      } ]
+    },
+    "name": "5e74e729-f558-465c-9b5d-44dc18039a87"
+  } ]
+}

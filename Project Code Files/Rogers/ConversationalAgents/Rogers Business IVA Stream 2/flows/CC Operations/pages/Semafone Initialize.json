@@ -1,0 +1,33 @@
+{
+  "name": "e427ca8d-7024-4fd0-82fc-593aba8b3625",
+  "displayName": "Semafone Initialize",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "semafoneInitialize"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.consumerSemafone.semafoneInitialized = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Init Secure Data",
+    "name": "2981d583-47ca-44f8-9f8a-186d3424cca8"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "f13ef339-2c62-4e4f-a54d-d6d5fa795a35",
+    "description": "semafone not initialized correctly, transfer with systemError"
+  } ]
+}

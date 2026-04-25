@@ -1,0 +1,7 @@
+{
+  "name": "7df31641-d294-4f43-93b5-37cc01270c24",
+  "displayName": "view-bill",
+  "priority": 500000,
+  "description": "Provides general information on how to view and access bills online or through the app",
+  "numTrainingPhrases": 50
+}

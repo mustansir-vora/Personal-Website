@@ -1,0 +1,51 @@
+{
+  "name": "57a66133-8c39-4bb7-910b-880bab17ba9e",
+  "displayName": "Check Switch Language",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.switchLanguage = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileInfo",
+        "value": "$sys.func.TO_OBJECT(\"{'ani': '$session.params.ani','sessionId':'$session.params.sessionId','sessionIdGoogle': '$session.params.sessionId-Google','mwInstance':'$session.params.mwInstance','dnis':'$session.params.dnis','aniConfirm':'$session.params.aniConfirm','idType': '$session.params.idType','searchMobileContact': '$session.params.searchMobileContact','identifyAccount':'$session.params.identifyAccount','searchHomeContact':'$session.params.searchHomeContact', 'brand':'$session.params.brand','predictiveInd':'$session.params.predictiveInd','aniLookup':'$session.params.aniLookup','voluntaryRedirect':'$session.params.voluntaryRedirect','validAni':'$session.params.validAni','involuntaryRedirectInd':'$session.params.involuntaryRedirectInd','searchBusinessContact':'$session.params.searchBusinessContact','aniMatch':'$session.params.aniMatch','callerIdType':'$session.params.callerIdType','accountSessionList':'$session.params.accountSessionList','flowLanguage':'$session.params.flowLanguage','savedIntent':'$session.params.savedIntent','applicationId':'$session.params.applicationId','reportingVar_callStartTime':'$session.params.reportingVar_callStartTime','systemOverride':'$session.params.systemOverride','numberOfBillingAccounts':'$session.params.numberOfBillingAccounts','accountSessionList':'$session.params.accountSessionList','callHistory':'$session.params.callHistory','closedDoorTFN':'$session.params.closedDoorTFN','tn':'$session.params.tn','tnType':'$session.params.tnType','switchLanguage':'$session.params.switchLanguage','disclaimerScriptFr':'$session.params.disclaimerScriptFr','reportingVar_applicationID':'$session.params.applicationId','IsBusinessApp':'$session.params.IsBusinessApp'}\")"
+      }, {
+        "parameter": "terminationType",
+        "value": "switchLanguage"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "4192241b-d17c-4042-93f9-98529ee2e114"
+  }, {
+    "condition": "$session.params.switchLanguage = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "beforeSwitchLang",
+        "value": true
+      }, {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId1"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.disclaimerScriptEn = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "\u003cspeak\u003e\u003cbreak time=\"150ms\"/\u003e$session.params.disclaimerScriptEn\u003cbreak time=\"350ms\"/\u003e\u003c/speak\u003e" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "d47604cb-38a0-49e5-af3b-34f563644db3"
+  } ]
+}

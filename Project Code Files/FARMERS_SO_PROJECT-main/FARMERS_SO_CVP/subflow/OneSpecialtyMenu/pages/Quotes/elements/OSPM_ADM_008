@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2147348310:1708937826401" name="OSPM_ADM_008" version="6.0.1">
+<config>
+<source type="Class">com.farmers.adminHost.BrandsTable</source>
+</config>
+</decision>

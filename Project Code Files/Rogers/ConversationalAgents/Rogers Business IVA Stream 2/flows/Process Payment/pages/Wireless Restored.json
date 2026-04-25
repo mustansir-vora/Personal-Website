@@ -1,0 +1,28 @@
+{
+  "name": "aeb25a12-24bb-403e-8b8f-56d52b827c88",
+  "displayName": "Wireless Restored",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Votre service sans fil sera rétabli dans un délai de 30 minutes. Veuillez éteindre votre appareil sans fil, puis le rallumer afin de vous assurer qu’il fonctionne correctement." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Your wireless service will be retored within 30 minutes. Please turn off your wireless device and turn it back on to ensure your\ndevice functions appropriately." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check From",
+    "name": "f33d86ac-6af6-47ef-890b-3fa10dccc770"
+  } ]
+}

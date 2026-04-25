@@ -1,0 +1,62 @@
+{
+  "name": "f8089f00-192c-49b1-9812-f51b95486b46",
+  "displayName": "Pay Past Due Collection Check",
+  "form": {
+    "parameters": [ {
+      "displayName": "userPayPastDueCollectionConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetPage": "End Flow",
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+          
+          },
+          "name": "bd087c07-fd05-46eb-a696-9c4cee3febc7"
+        }, {
+          "targetPage": "End Flow",
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+          
+          },
+          "name": "f283ccd6-eaee-4d89-9966-7770cf2cf0a7"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to pay the amount to prevent collection activities of $session.params.pastDueBalance ?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous payer le montant de $session.params.pastDueBalance afin d’éviter les activités de recouvrement ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.userPayPastDueCollectionConfirmation = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentDue",
+        "value": "$sys.func.TO_NUMBER($session.params.pastDueBalance)"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "612f58c1-f7b2-436e-aa18-163ebb78b133"
+  }, {
+    "condition": "$session.params.userPayPastDueCollectionConfirmation = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "b8eaffe5-1d73-45ed-9e29-a0381dc7cf6d"
+  } ]
+}

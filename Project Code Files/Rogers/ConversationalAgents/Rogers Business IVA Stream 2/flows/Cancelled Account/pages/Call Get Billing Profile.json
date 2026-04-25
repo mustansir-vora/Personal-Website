@@ -1,0 +1,38 @@
+{
+  "name": "43c66246-5d1d-4a22-921c-64ad10636844",
+  "displayName": "Call Get Billing Profile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "billingProfile"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.returnCode != 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subflowReturnValue",
+        "value": null
+      } ]
+    },
+    "targetPage": "Clear PreRoute Override",
+    "name": "92afb82c-f605-4fff-bd52-a7b7bc4fba88"
+  }, {
+    "condition": "$session.params.api.billingProfile.returnCode = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subFlowReturnValue",
+        "value": null
+      }, {
+        "parameter": "completedSSName",
+        "value": "active-cancelledAccount"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Check Account Balance",
+    "name": "a5f88ece-7b40-41ec-80fd-4e5a3d459559"
+  } ]
+}

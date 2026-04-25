@@ -1,0 +1,31 @@
+{
+  "name": "45a4ef7c-be8b-4f70-afe5-967168888028",
+  "displayName": "Check If SuperSystem",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.systemOfRecord = SuperSystem",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "581ed0cb-faa1-4ac9-b05d-e2a3e04dd018"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set PTP Params",
+    "name": "7f54aeb2-20c0-48d8-bcd7-7022085762f6"
+  } ]
+}

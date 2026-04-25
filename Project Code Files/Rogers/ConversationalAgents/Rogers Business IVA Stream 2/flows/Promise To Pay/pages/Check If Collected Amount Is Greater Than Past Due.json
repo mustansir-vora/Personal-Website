@@ -1,0 +1,34 @@
+{
+  "name": "2551d19e-d0ef-4ee4-bc77-5b7d8849894d",
+  "displayName": "Check If Collected Amount Is Greater Than Past Due",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003e= $sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "promiseAmount",
+        "value": "$session.params.collectedPtpAmount"
+      }, {
+        "parameter": "promiseDate",
+        "value": "$session.params.collectedPtpDate"
+      }, {
+        "parameter": "promiseMethod",
+        "value": "$session.params.collectedPtpMethod"
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "98c982ad-1472-4718-ad7e-8fa537a73643"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Collected Amount Is Greater Than RecomInstallAmount1",
+    "name": "fbefb79f-4fb3-4a71-bc73-99d4be559cb5"
+  } ]
+}

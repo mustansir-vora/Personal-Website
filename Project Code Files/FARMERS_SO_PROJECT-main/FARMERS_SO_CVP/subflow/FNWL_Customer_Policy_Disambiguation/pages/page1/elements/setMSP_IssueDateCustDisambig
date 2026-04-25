@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@444750723:1735633158296" name="setMSP_IssueDateCustDisambig" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.setMSP_FNWL</source>
+</config>
+</decision>

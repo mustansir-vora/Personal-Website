@@ -1,0 +1,25 @@
+{
+  "name": "1d6ade75-2d34-4b17-8fc3-15f2c1d61934",
+  "displayName": "Semafone Fail ?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.semafoneFail = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Sorry Failed",
+    "name": "0f78e51d-c3c0-427d-8fa0-f34b00f923f3"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC Expiration",
+    "name": "46cfda27-3401-49db-8f64-c94386bffeb1"
+  } ]
+}

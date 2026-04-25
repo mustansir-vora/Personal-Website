@@ -1,0 +1,55 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I gave consent for Voice ID, but the system shows opt-out."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Calls are dropping or audio is poor during conferences."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Voicemail isn’t picking up or forwarding to email.“Auto Attendant or Hunt Group isn’t working as expected."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We can’t place or receive calls on our Business "
+    }, {
+      "text": "Phone lines"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re seeing issues with call forwarding and conference calls on Advantage Voice."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our voicemail-to-email feature isn’t working. We need this fixed quickly."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re having trouble with our auto attendant and hunt group settings. Calls aren’t routing properly."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling for my bussiness. Our Advantage Voice phones aren’t working—we can’t make or receive calls, and this is impacting our operations."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

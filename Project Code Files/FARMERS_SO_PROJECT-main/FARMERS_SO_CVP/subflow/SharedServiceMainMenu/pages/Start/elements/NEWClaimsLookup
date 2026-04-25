@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1929519079:1755706306627" name="NEWClaimsLookup" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.NewClaimsLookup</source>
+</config>
+</decision>

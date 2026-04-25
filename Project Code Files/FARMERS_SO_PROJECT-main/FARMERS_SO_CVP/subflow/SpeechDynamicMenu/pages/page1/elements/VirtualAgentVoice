@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@248437689:1731040468327" name="VirtualAgentVoice" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="Confidence">{Data.Element.VirtualAgentVoice.confidence}</data>
+</log>
+<settings>
+<setting name="config_id">{Data.Session.S_GLOBAL_CONFIG}</setting>
+<setting name="secure_logging">{Data.Session.SECURE_FLAG}</setting>
+<setting name="event_name">{Data.Session.S_MENU_ID_EVENT_NAME}</setting>
+<setting name="event_data">'VXMLParam1':'{Data.Session.VXMLParam1}','VXMLParam2':'{Data.Session.VXMLParam2}','VXMLParam3':'{Data.Session.VXMLParam3}','VXMLParam4':'{Data.Session.VXMLParam4}','VXMLParam5':'{Data.Session.VXMLParam5}','VXMLParam6':'{Data.Session.Confidence_Score}'</setting>
+<setting name="sipHeadersRestricted">1</setting>
+</settings>
+<vxml_properties>
+<data name="Dialogflow.session.params.VXMLParam1">{Data.Session.VXMLParam1}</data>
+<data name="Dialogflow.session.params.VXMLParam2">{Data.Session.VXMLParam2}</data>
+<data name="Dialogflow.session.params.VXMLParam3">{Data.Session.VXMLParam3}</data>
+<data name="Dialogflow.session.params.VXMLParam4">{Data.Session.VXMLParam4}</data>
+<data name="Dialogflow.session.params.VXMLParam5">{Data.Session.VXMLParam5}</data>
+<data name="Dialogflow.session.params.VXMLParam6">{Data.Session.Confidence_Score}</data>
+</vxml_properties>
+<session_data>
+<data create_when="After" name="Confidence_Score">{Data.Element.VirtualAgentVoice.confidence}</data>
+</session_data>
+</config>
+</voice_element>

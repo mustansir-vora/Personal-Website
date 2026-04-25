@@ -1,0 +1,105 @@
+{
+  "name": "05b00f14-60d2-42ba-837a-e6eb003db652",
+  "displayName": "LanguageSelection-Fr",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "\u003cspeak\u003e\n \u003cvoice name=\"fr-CA-Chirp3-HD-Aoede\"\u003e\n  \u003clang xml:lang=\"fr-CA\"\u003e\n    \u003cbreak time=\"300ms\"/\u003e\n\t   Pour le français, \u003cbreak time=\"100ms\"/\u003e appuyez sur le 1. \n  \u003c/lang\u003e\n \u003c/voice\u003e\n\u003c/speak\u003e " ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+        "allowPlaybackInterruption": true
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "LanguageSelectionMn-Fr",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "switchLanguage",
+        "value": true
+      }, {
+        "parameter": "switchedLanguage",
+        "value": "fr-CA"
+      }, {
+        "parameter": "flowLanguage",
+        "value": "fr-CA"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "targetPage": "Check Switch Language",
+    "name": "061b172d-f024-4d64-8081-718d2c4924d5"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Check Switch Language",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " Ok, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "switchLanguage",
+        "value": false
+      } ]
+    },
+    "name": "d5d0fbc2-ff33-4538-ae3c-cbff739b783c"
+  }, {
+    "targetPage": "Check Switch Language",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " Ok, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "switchLanguage",
+        "value": false
+      } ]
+    },
+    "name": "e8ece395-a8c1-4b8f-94c6-2df9a9b51ead"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 3
+      },
+      "models": [ {
+        "key": "en",
+        "value": "telephony_short"
+      } ],
+      "overrideRequestSpeechModel": true
+    },
+    "dtmfSettings": {
+      "enabled": true,
+      "useSystemEntityRule": false,
+      "interdigitTimeoutDuration": {
+        "seconds": 5
+      },
+      "endpointingTimeoutDuration": {
+        "seconds": 3
+      },
+      "disableSpeechDetection": true
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

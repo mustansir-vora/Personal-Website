@@ -1,0 +1,44 @@
+{
+  "name": "317a28c9-2644-4c27-ab8c-b3dcb6674b84",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to talk with representative"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "globalAgentRequestCounter": "1",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInputBMTS": "agent"
+    }
+  },
+  "displayName": "2085-BOMM-TechSupportDisambig-Consumer-Agent-Counter2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 199,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

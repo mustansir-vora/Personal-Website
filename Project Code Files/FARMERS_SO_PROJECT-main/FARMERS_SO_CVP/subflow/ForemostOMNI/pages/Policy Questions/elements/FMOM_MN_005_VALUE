@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@604603327:1708937167179" name="FMOM_MN_005_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.FMOM_MN_005_VALUE</source>
+</config>
+</decision>

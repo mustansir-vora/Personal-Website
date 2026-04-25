@@ -1,0 +1,96 @@
+{
+  "name": "93d895b3-6eac-47d4-bd13-768b10bea3d7",
+  "displayName": "NLU",
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "NLU Router",
+    "name": "be02527f-742c-4795-a309-75215aa3ed8f"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f32e3409-e8c8-46b6-9c99-e5cb36405326"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "52c92d63-7b1d-495a-ba9e-da6b341309fc"
+  }, {
+    "targetPage": "NLU Router",
+    "event": "testNLU",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "agentRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "accountClassification",
+        "value": ""
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      }, {
+        "parameter": "repromptCounter",
+        "value": 0
+      }, {
+        "parameter": "disconfirmIntentCounter",
+        "value": 0
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "mwInstance",
+        "value": "qa1"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "savedIntent",
+        "value": null
+      }, {
+        "parameter": "loadTestEnv",
+        "value": "qa1"
+      } ]
+    },
+    "name": "d9cd8062-c73b-4954-a83f-d748e69dcb4c"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "d58da44d-2ed0-4de0-9649-fd2b8e00ddd5"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.34999999,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

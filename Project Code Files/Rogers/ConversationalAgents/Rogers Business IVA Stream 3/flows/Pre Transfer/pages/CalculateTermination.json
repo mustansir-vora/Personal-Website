@@ -1,0 +1,19 @@
+{
+  "name": "32d3c002-1c2a-4d7e-9bcc-ca76643627ea",
+  "displayName": "CalculateTermination",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callend",
+    "tag": "calculateTermination"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\" OR $session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Termination Action",
+    "name": "76666cbc-89b1-4fa2-8e50-7c1e2ca59569"
+  } ]
+}

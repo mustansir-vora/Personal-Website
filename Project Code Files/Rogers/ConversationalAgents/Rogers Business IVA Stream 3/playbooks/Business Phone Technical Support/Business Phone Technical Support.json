@@ -1,0 +1,356 @@
+{
+  "name": "4a1a5643-57ff-4402-b121-414c0dc0789a",
+  "displayName": "Business Phone Technical Support",
+  "goal": "Provide Business Phone Technical Support by identifying the caller, validating business phone service eligibility, confirming SIM and call-back requirements, checking outage status, performing a pre-FAQ diagnostic, and transferring the customer to the appropriate business phone technical support queue.",
+  "inputParameterDefinitions": [ {
+    "name": "customerIdentified",
+    "description": "flag for identifying the caller",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "completedSSName",
+    "description": "completedSSName",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": " for storing attemptedSSName",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "flag to check the self service is attempted or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "flag to check the self service is completed",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "numberOfPhone",
+    "description": "numberOfRBP is value which says how many number of business phone available",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "numberOfPhone",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "productLabelsMixEn",
+    "description": "it has the values of the available products",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "productLabelsMixEn",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "subscriptionsList",
+    "description": "It contains subscription details",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionsList",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "counterValue",
+    "description": "counterValue",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "counterValue",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "globalAgentRequestCounter",
+    "description": "counter",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "globalAgentRequestCounter",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "completedSSName",
+    "description": "name of the completed module ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": "name of the attempted module",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "flag to check the self service is attempted or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "flag to check the self service is conpleted ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "savedIntent",
+    "description": "savedIntent has the value of intent",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "savedIntent",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "userInputBP",
+    "description": "has either 0 or 9 or mainmenu or agent values",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "userInputBP",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "hasNoBPprofile",
+    "description": "flag which says the profile is available or not\n",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "hasNoBPprofile",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "noWBPhone",
+    "description": "flag to say whether the Business Phone is available or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "noWBPhone",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "It is a object",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "reportingVar_attemptedSSName",
+    "description": "for reporting purpose",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "reportingVar_completedSSName",
+    "description": "for reporting purpose",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "counterValue",
+    "description": "counterValue",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "counterValue",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "globalAgentRequestCounter",
+    "description": "counter",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "globalAgentRequestCounter",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  } ],
+  "tokenCount": 1041,
+  "instruction": {
+    "steps": [ {
+      "text": "# General Rule:\n- Only one try should be given for both no match and no input scenarios\n- Step 1. identify the caller\n    - if $customerIdentified is true goto Step 3\n    - otherwise go to Step 2\n- Step 2. business phone sim check\n    - give this intial prompt to caller as Does your business phone have a SIM?\n    - give only one try for no input and no match\n    - for every no match retry give this prompt \"I'm sorry, I didn't get that. If your business phone has a SIM, say yes or press 1. If not, say no, or press 2.\"\n    - for every no input retry give this prompt \"I'm sorry, I couldn't hear that. If your business phone has a SIM, say yes or press 1. If not, say no, or press 2.\"\n    - Accept DTMF input here and consider 1 or 2 or 0 or 9 as valid input\n    - if user provides valid input\n        - if user provides don't know\n            - play Okay. Let's continue.\n            - goto Step 3\n        - if user provides no or 2\n            - goto Step 3\n        - if user provides yes or 1\n            - set $savedIntent as \"wireless-support\"\n            - take to Step 3\n        - if user provides \"main menu\" or 9\n            - set $userInputBP as mainmenu, return the call\n        - if user provides \"agent\" or \"representative\" or 0 ,\n            - set $counterValue `check_saved_intent`\n            - if $counterValue is 0\n                - set $userInputBP as agent\n            - if $counterValue is 1\n                - give the prompt as \"Our specialists are unable to assist with this transaction, but I can help you with it here in the automated system. Let's try again.\"\n                - set $globalAgentRequestCounter as $counterValue\n                - goto Step 4\n            - if $counterValue is 2\n                - set $userInputBP as agent,\n    - if user provides any value other than the above value , it is invalid input\n        - apply the no match no input rule for that and give only one retry\n    - otherwise if maxexceeded goto Step 3\n- Step 3. set business phone support routing\n    - Set $selfServiceAttempted as true\n    - if $attemptedSSName is empty or equal to null\n        - Set $attemptedSSName as \"passive-techSupportbusinessPhone\"\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - if $attemptedSSName is not empty or equal to null\n        - Set $attemptedSSName as $sys.func.CONCATENATE(\"$session.params.attemptedSSName\",\",passive-techSupportbusinessPhone\")\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - Set $selfServiceCompleted as true\n    - if $completedSSName is empty or equal to null\n        - Set $completedSSName as \"passive-techSupportbusinessPhone\"\n        - Set $reportingVar_completedSSName as $completedSSName\n    - if $completedSSName is not empty or equal to null\n        - Set $completedSSName as $sys.func.CONCATENATE(\"$session.params.completedSSName\",\",passive-techSupportbusinessPhone\")\n        - Set $reportingVar_completedSSName as $completedSSName\n    - play \"To troubleshoot your issue, you'll need to have access to your business phone equipment. Please ensure you're calling from a different phone than the one you need help with.\"\n    - pause 1.5 seconds\n    - goto Step 4\n- Step 4.check product has the business phone\n    - if $numberOfPhone is 0 or null\n        - set $hasNoBPprofile as true ,return the call.\n    - if $numberOfPhone is greater than 0 and $sys.func.CONTAIN($session.params.productLabelsMixEn, \"Wireless Business Phone\")\n        - set $savedIntent as \"wireless-support\"\n        - set $subscriptionAccountDetails as `get_account_details`,return the call.\n    - otherwise if any of the above two conditions matches do the below steps\n      - set $noWBPhone as true\n      - set $subscriptionAccountDetails as `get_account_details`,return the call."
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "codeBlock": {
+    "code": "@Action\r\ndef get_account_details() -\u003e dict:\r\n    \"\"\"Get linkedAccountNumber and linkedAccountSystem for Internet service\"\"\"\r\n\r\n    subscriptions = state[\"$session.params.subscriptionsList\"]\r\n\r\n    result = {\r\n        \"linkedAccountNumber\": None,\r\n        \"linkedAccountSystem\": None\r\n    }\r\n\r\n    if not subscriptions:\r\n        return result\r\n\r\n    for item in subscriptions:\r\n        service_category = item.get(\"serviceCategory\", {}).get(\"english\", \"\").strip().lower()\r\n\r\n        if service_category == \"business phone\":\r\n            result[\"linkedAccountNumber\"] = item.get(\"linkedAccountNumber\")\r\n            result[\"linkedAccountSystem\"] = item.get(\"linkedAccountSystem\")\r\n            return result\r\n\r\n    return result\r\n\r\n@Action\r\ndef check_saved_intent() -\u003e int:\r\n    \"\"\"Update counter based on intent and current value\"\"\"\r\n    \r\n    intent_map = state[\"$session.params.forcedSelfServIntent\"]\r\n\r\n    counter = state[\"$session.params.globalAgentRequestCounter\"]\r\n    saved_intent = state[\"$session.params.savedIntent\"]\r\n\r\n    if intent_map[saved_intent] == True:\r\n        if counter == 0:\r\n            counter += 1\r\n            return counter\r\n        else:\r\n            counter +=1\r\n            return counter\r\n    else:\r\n        return counter"
+  },
+  "inlineActions": [ "get_account_details", "check_saved_intent" ]
+}

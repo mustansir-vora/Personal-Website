@@ -1,0 +1,62 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Les applications de diffusion en continu ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " décodeur ne fonctionnent pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne peux pas accéder à "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " via mon service télé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " ne joue aucune vidéo."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon application "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " gèle constamment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " ne se charge pas sur mon décodeur télé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

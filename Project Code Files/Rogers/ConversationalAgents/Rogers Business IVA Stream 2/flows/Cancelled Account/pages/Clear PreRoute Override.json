@@ -1,0 +1,24 @@
+{
+  "name": "252899c9-94e0-4f96-94ef-69cb32ace906",
+  "displayName": "Clear PreRoute Override",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.preRouteOverride",
+      "value": null
+    }, {
+      "parameter": "savedIntent",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Goto NLU Main Menu",
+    "name": "42774013-732f-4371-9cb8-4fc47ec08f16"
+  } ]
+}

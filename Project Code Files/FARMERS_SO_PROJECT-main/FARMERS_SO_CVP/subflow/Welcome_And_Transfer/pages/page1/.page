@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1969297132:1707374089886" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1707374089886" name="Welcome_and_Transfer" type="Subflow Start" width="171" x="338" y="-57">
+<exit_states>
+<exit_state name="next" target="Element@660907859:1710583719902"/>
+</exit_states>
+</element>
+<element height="46" id="Element@758240131:1707374102672" name="Shared Entry Mod" type="Subflow Call" width="144" x="356" y="169">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1710583638313">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2014707708:1707374225574"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2014707708:1707374225574" name="Shared Transfer" type="Subflow Call" width="130" x="358" y="267">
+<subflow_call subflow_name="Transfer" target="Element@31:1710583664581">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1181851369:1709703454024"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1181851369:1709703454024" name="Subflow Return_01" type="Subflow Return" width="148" x="358" y="378"/>
+<element height="46" id="Element@660907859:1710583719902" name="SET_WAT_CALLED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="203" x="323" y="33">
+<exit_states>
+<exit_state name="done" target="Element@758240131:1707374102672"/>
+</exit_states>
+</element>
+</page>

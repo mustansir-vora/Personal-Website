@@ -1,0 +1,25 @@
+{
+  "name": "13ba9c64-2c1c-4e88-9431-3e74b33f474b",
+  "displayName": "Check If Change Method",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeMethod = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set Installment Date",
+    "name": "af010ae6-c8d2-4052-a04e-63af85748f99"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Return From Change PTP Date",
+    "name": "f6e5c731-2803-4165-baab-d0612f8e28c5"
+  } ]
+}

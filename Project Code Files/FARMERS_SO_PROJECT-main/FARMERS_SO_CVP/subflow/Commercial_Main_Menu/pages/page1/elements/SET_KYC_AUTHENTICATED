@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@820224318:1710698828748" name="SET_KYC_AUTHENTICATED" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">MAKE_A_PAYMENT</setting>
+<setting name="sessNames">S_INTENT</setting>
+</settings>
+</config>
+</action_element>

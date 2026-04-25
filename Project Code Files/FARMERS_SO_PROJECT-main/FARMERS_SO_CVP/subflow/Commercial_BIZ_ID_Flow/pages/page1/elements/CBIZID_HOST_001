@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1716740449:1707806394066" name="CBIZID_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.CBIZID_HOST_001</source>
+</config>
+</decision>

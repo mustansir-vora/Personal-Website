@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@365534214:1708000025501" name="EPSL_MN_009_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.EPSL_MN_009_VALUE</source>
+</config>
+</decision>

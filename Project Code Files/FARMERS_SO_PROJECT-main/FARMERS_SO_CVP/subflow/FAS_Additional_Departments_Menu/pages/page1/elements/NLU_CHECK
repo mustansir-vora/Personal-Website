@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@582232613:1711900505887" name="NLU_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="NLU_CHECK" default_exit_state="NA">
+        <exit_state name="FARMER_PL_ACCT_TXR" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FARMER_PL_ACCT_TXR" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_ADD_DEPT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_ADD_DEPT" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_ADD_DEPT_FLOOD" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_ADD_DEPT_FLOOD" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_ADD_DEPT_HELPPOINT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_ADD_DEPT_HELPPOINT" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_ADD_DEPT_FNWL" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_ADD_DEPT_FNWL" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

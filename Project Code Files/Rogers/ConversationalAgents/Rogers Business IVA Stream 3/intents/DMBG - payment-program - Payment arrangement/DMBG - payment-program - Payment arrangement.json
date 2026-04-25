@@ -1,0 +1,7 @@
+{
+  "name": "c106debe-0b2f-4aac-9a1d-07bc5be6eaa0",
+  "displayName": "DMBG - payment-program - Payment arrangement",
+  "priority": 500000,
+  "numTrainingPhrases": 41,
+  "dtmfPattern": "1"
+}

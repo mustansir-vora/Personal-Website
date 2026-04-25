@@ -1,0 +1,62 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I am looking for a bundle of products and services for  my business and opportunity where I can save."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I wanted to install TVs in my restaurant, and I'm looking for options available."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk to someone who can give me information about flexible voice solution for my business."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I travel a lot and I'm looking for faster speed and nationwide coverage on my mobility."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I would like to ask about business internet. the cost and options available."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I would like to get pricing and deployment details for my medium business."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a trucking company and I looking for fleet management solution."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am opening a store and I need internet and phone for my business."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a business with "
+    }, {
+      "text": "800",
+      "parameterId": "number"
+    }, {
+      "text": " employees and I am looking for  products and services that will work well for my company"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

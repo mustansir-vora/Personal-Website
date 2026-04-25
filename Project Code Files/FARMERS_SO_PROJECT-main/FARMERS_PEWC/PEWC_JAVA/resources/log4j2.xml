@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+<Properties>
+	<Property name="log-path">C:/Servion/PEWC_CVP/AppStartLog</Property>
+</Properties>
+  <Appenders>
+    	<RollingFile name="PEWC_INFO" fileName="${log-path}/AppStart_Info.log"
+            filePattern="${log-path}/AppStart_Info-%d{yyyy-MM-dd}-%i.log" >
+            <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{ISO8601} (%c) - %m%n"/>
+             <Policies>
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="50"/>
+        </RollingFile>
+         
+        <RollingFile name="PEWC_ERROR" fileName="${log-path}/AppStart_Error.log"
+            filePattern="${log-path}/AppStart_Error-%d{yyyy-MM-dd}-%i.log" >
+            <LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{ISO8601} (%c) - %m%n"/>
+             <Policies>
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="50"/>
+        </RollingFile>
+  </Appenders>
+  <Loggers>
+  
+  <Logger name="com.farmers.common.ApplicationStart" level="info" additivity="false">
+        <appender-ref ref="PEWC_INFO" level="info"/>
+         <appender-ref ref="PEWC_ERROR" level="error"/>
+    </Logger>
+    
+    <Root level="info" additivity="false">
+        <AppenderRef ref="PEWC_INFO"/>
+    </Root>
+    
+    <Root level="error" additivity="false">
+        <AppenderRef ref="PEWC_ERROR"/>
+    </Root>
+   
+  </Loggers>
+</Configuration>

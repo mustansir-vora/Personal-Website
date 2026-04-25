@@ -1,0 +1,34 @@
+{
+  "name": "7394cfbc-9da6-4a32-9647-817a20f5b881",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to be at home to have access to your TV equipment."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After Broad cast",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "customerIdentified": "true",
+      "numberOfTV": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Customer is Identified and Business account",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportTv",
+      "completedSSName": "passive-techSupportTv",
+      "completedSelfServe": "passive-techSupportTv",
+      "hasTvProfile": "false",
+      "reportingVar_attemptedSSName": "passive-techSupportTv",
+      "reportingVar_completedSSName": "passive-techSupportTv",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "Consumer noTv profile",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 192,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

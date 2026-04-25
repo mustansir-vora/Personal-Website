@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@697156329:1707395658725" name="Match payer or insured zip" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Match payer or insured zip" default_exit_state="N">
+        <exit_state name="Y" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ZIP_CODE" />
+                </data>
+                <data>
+                    <session name="S_PAYOR_ZIP_CODE" />
+                </data>
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

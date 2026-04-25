@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@723995868:1729603501859" name="Reset Policy Collection Flag" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">FALSE</setting>
+<setting name="sessNames">Policy_Collection</setting>
+</settings>
+</config>
+</action_element>

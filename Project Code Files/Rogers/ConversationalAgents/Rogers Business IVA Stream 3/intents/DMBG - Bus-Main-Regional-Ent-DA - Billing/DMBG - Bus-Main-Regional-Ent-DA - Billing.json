@@ -1,0 +1,7 @@
+{
+  "name": "32f47401-faa6-4bcb-abfa-1e6c472636e6",
+  "displayName": "DMBG - Bus-Main-Regional-Ent-DA - Billing",
+  "priority": 500000,
+  "numTrainingPhrases": 13,
+  "dtmfPattern": "1"
+}

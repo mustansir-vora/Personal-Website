@@ -1,0 +1,246 @@
+name: Sub Build
+
+on:
+  workflow_call:
+    inputs:
+      safe_branch:
+        required: true
+        type: string
+      runner_label:
+        required: true
+        type: string
+      environment:
+        required: true
+        type: string
+      build_gdf:
+        type: string
+      build_cf:
+        type: string
+      build_iva:
+        type: string
+      build_node:
+        type: string
+
+    secrets:
+      GH_APP_PRIVATE_KEY_CCT:
+        required: true
+
+    outputs:
+      common_tag:
+        value: ${{ jobs.Sub-Build.outputs.common_tag }}
+      tag_gdf:
+        value: ${{ jobs.Sub-Build.outputs.tag_gdf }}
+      tag_cf:
+        value: ${{ jobs.Sub-Build.outputs.tag_cf }}
+      tag_iva:
+        value: ${{ jobs.Sub-Build.outputs.tag_iva }}
+      tag_node:
+        value: ${{ jobs.Sub-Build.outputs.tag_node }}
+
+jobs:
+  Sub-Build:
+    name: Sub-Build – ${{ inputs.environment }}
+    runs-on: ${{ inputs.runner_label }}
+    environment: ${{ inputs.environment }}
+
+    env:
+      GIT_USER: ${{ vars.GIT_USER }}
+      GIT_EMAIL: ${{ vars.GIT_EMAIL }}
+      REGION: ${{ vars.REGION }}
+      PROJECT_NUMBER: ${{ vars.COMPUTE_PROJECT_NUMBER }}
+
+    outputs:
+      common_tag: ${{ steps.tags.outputs.common_tag }}
+      tag_gdf: ${{ steps.tags.outputs.tag_gdf }}
+      tag_cf: ${{ steps.tags.outputs.tag_cf }}
+      tag_iva: ${{ steps.tags.outputs.tag_iva }}
+      tag_node: ${{ steps.tags.outputs.tag_node }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+        # Generate GitHub App Token
+      - name: Generate GitHub App Token
+        id: generate-token
+        if: ${{ github.actor != 'cct-git-bot' }}
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: 3075548
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY_CCT }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+
+        # Git Credentials Helper
+      - name: Git Credentials Helper
+        if: ${{ github.actor != 'cct-git-bot' }}
+        uses: RogersCommunications/enterprise-actions-workflows/git/git-credentials@main
+        with:
+          git_service_token: ${{ steps.generate-token.outputs.token }}
+          git_user: $GIT_USER
+          git_user_email: $GIT_EMAIL
+          working_directory: .
+
+      # Configure Git
+      - name: Configure Git
+        run: |
+          git config user.name "$GIT_USER"
+          git config user.email "$GIT_EMAIL"
+
+          echo "Git user.name configured as: $(git config user.name)"
+          echo "Git user.email configured as: $(git config user.email)"
+
+      # Resolve Environment Suffix
+      - name: Resolve environment suffix
+        run: |
+          case "${{ github.ref_name }}" in
+            Dev)  echo "ENV_SUFFIX=dev-01" >> $GITHUB_ENV ;;
+            Qa)   echo "ENV_SUFFIX=qa-01" >> $GITHUB_ENV ;;
+            Prod) echo "ENV_SUFFIX=prd-01" >> $GITHUB_ENV ;;
+          esac
+
+      # Cloud Functions ENV Updates
+      - name: Update CloudFunctions npmrc
+        if: inputs.build_cf == 'true' && contains(fromJson('["Qa","Prod"]'), github.ref_name)
+        run: |
+          set -e
+          for FUNC in CloudFunctions/*; do
+            if [ -f "$FUNC/.npmrc" ]; then
+              sed -i \
+                -e "s/dev-01/${ENV_SUFFIX}/g" \
+                -e "s/qa-01/${ENV_SUFFIX}/g" \
+                -e "s/prd-01/${ENV_SUFFIX}/g" \
+                "$FUNC/.npmrc"
+            fi
+          done
+
+      - name: Commit CloudFunctions env changes
+        if: inputs.build_cf == 'true' && contains(fromJson('["Qa","Prod"]'), github.ref_name)
+        run: |
+          git add CloudFunctions/**/.npmrc
+          git commit -m "Auto-update CloudFunctions npm registry for ${{ github.ref_name }} [skip ci]" || echo "No changes to commit"
+          git push -f origin ${{ github.ref_name }}
+
+      # GDF Agent ENV Updates
+
+      - name: Update Webhook URIs
+        if: inputs.build_gdf == 'true' && contains(fromJson('["Qa","Prod"]'), github.ref_name)
+        run: |
+          set -e
+          for agent in ConversationalAgents/*; do
+            if [ -d "$agent/webhooks" ]; then
+              for file in "$agent/webhooks"/*.json; do
+
+                base_name=$(jq -r '.displayName' "$file")
+
+                new_uri="https://${base_name}-${ENV_SUFFIX}-${PROJECT_NUMBER}.${REGION}.run.app"
+
+                jq --arg uri "$new_uri" \
+                  '.genericWebService.uri = $uri' \
+                  "$file" > tmp.json && mv tmp.json "$file"
+
+                jq empty "$file"
+
+              done
+            fi
+          done
+
+      - name: Update GCS Recording URI
+        if: inputs.build_gdf == 'true' && contains(fromJson('["Qa","Prod"]'), github.ref_name)
+        run: |
+          set -e
+
+           NEW_URI="gs://gcp-yul-csb-cct-iva-r4b-callrecording-${ENV_SUFFIX}"
+
+           for agent in ConversationalAgents/*; do
+
+             AGENT_FILE="$agent/agent.json"
+
+              if [ -f "$AGENT_FILE" ]; then
+
+               jq --arg uri "$NEW_URI" \
+               '.advancedSettings.audioExportGcsDestination.uri = $uri' \
+               "$AGENT_FILE" > tmp.json && mv tmp.json "$AGENT_FILE"
+
+               jq empty "$AGENT_FILE"
+
+             fi
+           done
+
+      - name: Commit GDF updates
+        if: inputs.build_gdf == 'true' && contains(fromJson('["Qa","Prod"]'), github.ref_name)
+        run: |
+          ENVIRONMENT="${{ inputs.environment }}"
+
+          git fetch origin $ENVIRONMENT
+          git checkout $ENVIRONMENT
+
+          git add ConversationalAgents/*/webhooks/*.json
+          git add ConversationalAgents/*/agent.json
+          git commit -m "Auto-update GDF webhook URLs for ${ENVIRONMENT} [skip ci]" || echo "No changes to commit"
+          git push -f origin $ENVIRONMENT
+
+      # Node Modules ENV Updates
+
+      - name: Update NodeModules npmrc
+        working-directory: CommonNodeModules
+        if: inputs.build_node == 'true' && contains(fromJson('["Qa","Prod"]'), github.ref_name)
+        run: |
+          if [ -f ".npmrc" ]; then
+            if [ "${{ github.ref_name }}" = "Qa" ]; then
+              sed -i "s/dev-01/${ENV_SUFFIX}/g" ".npmrc"
+            elif [ "${{ github.ref_name }}" = "Prod" ]; then
+              sed -i "s/qa-01/${ENV_SUFFIX}/g" ".npmrc"
+            fi
+          fi
+
+      - name: Commit NodeModules env changes
+        working-directory: CommonNodeModules
+        if: inputs.build_node == 'true' && contains(fromJson('["Qa","Prod"]'), github.ref_name)
+        run: |
+          git add .npmrc
+          git commit -m "Auto Update npm registry for ${{ github.ref_name }} [skip ci]" || echo "No changes to commit"
+          git push -f origin ${{ github.ref_name }}
+
+      # Calculate Next Versions
+      - name: Calculate Next Versions
+        id: tags
+        run: |
+
+          next_version() {
+
+            PREFIX=$1
+
+            LAST=$(git tag --list "${PREFIX}-v*" | sort -V | tail -n 1)
+
+            if [ -z "$LAST" ]; then
+              echo "${PREFIX}-v1"
+            else
+              NUM=$(echo "$LAST" | grep -oE '[0-9]+$')
+              echo "${PREFIX}-v$((NUM+1))"
+            fi
+          }
+
+          SAFE="${{ inputs.safe_branch }}"
+
+          COMMON=$(next_version "Release-${SAFE}")
+          echo "common_tag=$COMMON"
+          echo "common_tag=$COMMON" >> $GITHUB_OUTPUT
+
+          if [ "${{ inputs.build_gdf }}" = "true" ]; then
+            echo "tag_gdf=$(next_version GDF-${SAFE})" >> $GITHUB_OUTPUT
+          fi
+
+          if [ "${{ inputs.build_cf }}" = "true" ]; then
+            echo "tag_cf=$(next_version CloudFunctions-${SAFE})" >> $GITHUB_OUTPUT
+          fi
+
+          if [ "${{ inputs.build_iva }}" = "true" ]; then
+            echo "tag_iva=$(next_version IVA-Config-${SAFE})" >> $GITHUB_OUTPUT
+          fi
+
+          if [ "${{ inputs.build_node }}" = "true" ]; then
+            echo "tag_node=$(next_version NodeModules-${SAFE})" >> $GITHUB_OUTPUT
+          fi

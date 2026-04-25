@@ -1,0 +1,56 @@
+{
+  "name": "39abfebf-968c-46e1-9eae-82dac8d5a08f",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say 'advantage voice', 'mobile phones', 'high speed internet', 'television services', or 'business phone'"
+    }
+  }, {
+    "userUtterance": {
+      "text": "high speed internet"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_product",
+      "inputActionParameters": {
+        "userResponse": "high speed internet"
+      },
+      "outputActionParameters": {
+        "result": "Internet"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Internet"
+      },
+      "outputActionParameters": {
+        "result": "internet-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Internet",
+      "savedIntent": "internet-support"
+    }
+  },
+  "displayName": "Bus-With Input",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 249,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

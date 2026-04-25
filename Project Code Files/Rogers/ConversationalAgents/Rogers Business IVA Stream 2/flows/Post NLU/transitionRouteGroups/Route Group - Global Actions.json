@@ -1,0 +1,47 @@
+{
+  "name": "1cafb616-c755-49a7-badd-b6b72aad58aa",
+  "displayName": "Route Group - Global Actions",
+  "transitionRoutes": [ {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": null
+      }, {
+        "parameter": "returnToNLU",
+        "value": null
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": "$sys.func.ADD($session.params.mainMenuRequestCounter, 1)"
+      } ]
+    },
+    "name": "eeb4ead4-dd8f-471f-9d92-2055b0c73028"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "6ba65867-43f3-4d90-a436-b7335617667e"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "a31c5b9e-2d79-4cfb-a7ea-05fd78d4dd54"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "e237f31a-8bd4-449b-a9d9-b32bb7ef95c5"
+  } ]
+}

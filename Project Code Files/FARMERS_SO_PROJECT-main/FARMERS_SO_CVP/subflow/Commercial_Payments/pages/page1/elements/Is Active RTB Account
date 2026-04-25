@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1364852177:1707385162432" name="Is Active RTB Account" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is Active RTB Account" default_exit_state="F">
+        <exit_state name="T" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_IS_RTB_ACCOUNT" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

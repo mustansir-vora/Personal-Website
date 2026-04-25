@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@901285281:1715078283565" name="IsPolicyInCollectionMode7" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="POLICY_MODE_CHECK" default_exit_state="No">
+        <exit_state name="Yes" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_POLICYIN_COLLECTION_MODE" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

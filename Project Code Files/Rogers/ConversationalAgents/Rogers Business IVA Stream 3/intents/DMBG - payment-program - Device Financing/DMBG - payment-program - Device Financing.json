@@ -1,0 +1,7 @@
+{
+  "name": "17320b9a-cf75-4758-a0e6-7d213dcb983f",
+  "displayName": "DMBG - payment-program - Device Financing",
+  "priority": 500000,
+  "numTrainingPhrases": 27,
+  "dtmfPattern": "2"
+}

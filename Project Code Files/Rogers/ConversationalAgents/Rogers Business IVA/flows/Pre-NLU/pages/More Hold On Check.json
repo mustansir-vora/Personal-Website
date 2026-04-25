@@ -1,0 +1,37 @@
+{
+  "name": "48aaeda3-e39e-4f30-ae7c-fa4ccf3246a8",
+  "displayName": "More Hold On Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfHolds \u003e= 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "numberOfHolds",
+        "value": 0
+      }, {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      } ]
+    },
+    "targetFlow": "Global Error Handling",
+    "name": "ceba2e34-2b10-426b-8916-890ee59af1ed"
+  }, {
+    "condition": "$session.params.numberOfHolds \u003c 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "More Hold On Menu",
+    "name": "df4d1fd2-bf6d-407d-9780-c5e17a974a08"
+  } ]
+}

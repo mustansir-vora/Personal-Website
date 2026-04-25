@@ -1,0 +1,13 @@
+{
+  "name": "2d36750d-41ad-4e3a-b278-0cbf89840bbc",
+  "displayName": "NLU NoMatch Generator",
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 128,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-2.5-flash"
+  }
+}

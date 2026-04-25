@@ -1,0 +1,25 @@
+{
+  "name": "50d28194-c10a-4d71-8754-403cfc730b23",
+  "displayName": "Check PTP Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpDetails = null OR $session.params.ptpinfo = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PaymentMethod",
+    "name": "3059574e-bbb4-4881-a9ad-9b42fd1ac376"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Payment Status",
+    "name": "a7dec511-c8d2-423b-9df5-5c53520d5972"
+  } ]
+}

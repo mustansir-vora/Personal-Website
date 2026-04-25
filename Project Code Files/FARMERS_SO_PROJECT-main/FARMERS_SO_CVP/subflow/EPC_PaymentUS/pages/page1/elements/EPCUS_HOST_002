@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1661921651:1707913011904" name="EPCUS_HOST_002" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.EPC_PaymentusGroup</source>
+</config>
+</decision>

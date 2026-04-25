@@ -1,0 +1,90 @@
+{
+  "name": "d93716fc-298e-4e8a-ac44-15f9939ed38e",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "setp value as\nIs there an antenna fixed to the outside of your business location?"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If there's an antenna fixed to the outside of your residence, say yes or press 1. If not, say no or press 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Do you access the internet using a SIM or a mobile phone?"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If you access the internet using a SIM or your mobile phone, say yes or press 1. Otherwise, say no or press 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your internet equipment"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "298002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "numberOfInternet": "3",
+      "productLabelsMixEn": "TV,Home Phone,Home Security,Wireless Business Phone,5G Home Internet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "savedIntent": "5GHI-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "298002283"
+      }
+    }
+  },
+  "displayName": "11401-Antenna-Bus-no input",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 587,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

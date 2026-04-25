@@ -1,0 +1,25 @@
+{
+  "name": "0972837c-1f7b-425d-a7ec-5f53a15884f6",
+  "displayName": "Account Cancelled",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.accountCancelled != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Updated Balance",
+    "name": "507e89a5-b043-4052-86b5-93078ef4e6ee"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Payment Wrap Up",
+    "name": "1cb09ff5-052c-40f0-9c2c-ed6572f212c1"
+  } ]
+}

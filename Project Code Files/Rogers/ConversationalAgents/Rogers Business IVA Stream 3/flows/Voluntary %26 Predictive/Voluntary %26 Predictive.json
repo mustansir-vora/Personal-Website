@@ -1,0 +1,121 @@
+{
+  "name": "050faa57-0dbb-49d0-acaf-f914591d969b",
+  "displayName": "Voluntary \u0026 Predictive",
+  "transitionRoutes": [ {
+    "condition": "$session.params.CancellAccountBroadCast = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "CancellAccountBroadCast",
+        "value": false
+      } ]
+    },
+    "targetPage": "Cancelled Account",
+    "name": "d3374af0-3b0c-4e20-bfb2-316a29c5b6d2"
+  }, {
+    "condition": "$session.params.PredictiveBroadCast = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "PredictiveBroadCast",
+        "value": false
+      } ]
+    },
+    "targetPage": "Predictive Intent",
+    "name": "78ff3921-a1e8-4cb4-ac54-5afac1167d95"
+  }, {
+    "condition": "$session.params.involuntaryRedirectInd != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Voluntary Redirect",
+    "name": "de0f2231-d882-4038-bf27-a25c21fc010e"
+  }, {
+    "condition": "$session.params.involuntaryRedirectInd = true AND $session.params.accountFound != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Voluntary Redirect",
+    "name": "f9ffe0a4-949d-4b24-b89c-ee0e842c7362"
+  }, {
+    "condition": "$session.params.involuntaryRedirectInd = true AND $session.params.accountFound = true AND $session.params.accountStatus = \"N\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId3"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "322d111c-d505-4414-a7c3-2081dff1c309"
+  }, {
+    "condition": "$session.params.involuntaryRedirectInd = true AND $session.params.accountFound = true AND $session.params.accountStatus != \"N\" AND $session.params.collectionSuspendedInd = true AND $session.params.accountClassification = \"business_enterprise_wireless\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Voluntary Redirect",
+    "name": "baac1079-5c8a-49ac-b63c-9bdb79207528"
+  }, {
+    "condition": "$session.params.involuntaryRedirectInd = true AND $session.params.accountFound = true AND $session.params.accountStatus != \"N\" AND $session.params.collectionSuspendedInd = true AND $session.params.accountClassification != \"business_enterprise_wireless\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preRouteOverride",
+        "value": "suspNonPay"
+      }, {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "459280b9-e677-446c-8eb1-f444b8e9c29d"
+  }, {
+    "condition": "$session.params.involuntaryRedirectInd = true AND $session.params.accountFound = true AND $session.params.accountStatus != \"N\" AND $session.params.collectionSuspendedInd != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Voluntary Redirect",
+    "name": "9750c1ea-1e7e-4177-a15f-2e72ae3bbf7d"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1136bf38-f554-4164-a935-f290ec32b2db"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3b2e9fcd-1086-48ad-b1a6-e8cde7efcb5c"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "ca3c29b1-a0cb-492b-9d32-7758cc6214bb"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "languageCode": "en"
+  } ]
+}

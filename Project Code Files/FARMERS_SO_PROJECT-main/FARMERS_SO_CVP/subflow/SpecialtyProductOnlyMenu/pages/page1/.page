@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1968510832:1708938391086" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708938391086" name="SpecialtyProductOnlyMenu" type="Subflow Start" width="264" x="435" y="18">
+<exit_states>
+<exit_state name="next" target="Element@1897654287:1712166736842"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1976809245:1708938402033" name="S_ENTRY_MOD" type="Subflow Call" width="169" x="473" y="279">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1711718483557">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1019118987:1709114079729"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1289140133:1708938402033" name="SPPO_ADM_001" type="Decision" width="179" x="471" y="141">
+<exit_states>
+<exit_state name="ER" target="Element@1976809245:1708938402033"/>
+<exit_state name="SU" target="Element@1976809245:1708938402033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1669857638:1708938402033" name="S_TRANSFER" type="Subflow Call" width="151" x="196" y="781">
+<subflow_call subflow_name="Transfer" target="Element@31:1711718494515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1329316001:1711706828900"/>
+</exit_states>
+</element>
+<element height="55" id="Element@833769477:1708938402033" name="SPPO_ADM_002" type="Decision" width="179" x="514" y="895">
+<exit_states>
+<exit_state name="ER" target="Element@981380392:1711921889398"/>
+<exit_state name="SU" target="Element@981380392:1711921889398"/>
+</exit_states>
+</element>
+<element height="55" id="Element@834986162:1708938402033" name="STATE_DISAMBIGUATION" type="Subflow Call" width="251" x="436" y="782">
+<subflow_call subflow_name="StateDisambiguation" target="Element@31:1711718490129">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@833769477:1708938402033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@58133251:1708938402032" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="158" x="731" y="751">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1019118987:1709114079729" name="SPPO_MN_001_Call" type="Subflow Call" width="202" x="457" y="441">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709114101647">
+<config>
+<argument_data>
+<data name="MenuID">SPPO_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1876119203:1711921889398"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1329316001:1711706828900" name="Subflow Return_01" type="Subflow Return" width="198" x="26" y="921"/>
+<element height="55" id="Element@981380392:1711921889398" name="GDF_RETURN_CHECK" type="Decision" width="251" x="459" y="1033">
+<exit_states>
+<exit_state name="Motor Home" target="Element@1669857638:1708938402033"/>
+<exit_state name="Motorcycle" target="Element@1669857638:1708938402033"/>
+<exit_state name="Specialty Dwelling" target="Element@1669857638:1708938402033"/>
+<exit_state name="Mobile Home" target="Element@1669857638:1708938402033"/>
+<exit_state name="Off Road Vehicle" target="Element@1669857638:1708938402033"/>
+<exit_state name="Boat or Watercraft" target="Element@1669857638:1708938402033"/>
+<exit_state name="Seasonal Home" target="Element@1669857638:1708938402033"/>
+<exit_state name="Vacant Home" target="Element@1669857638:1708938402033"/>
+<exit_state name="Landlord" target="Element@1669857638:1708938402033"/>
+<exit_state name="Travel Trailer" target="Element@1669857638:1708938402033"/>
+<exit_state name="ER" target="Element@1669857638:1708938402033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1876119203:1711921889398" name="SPPO_MN_001_VALUE" type="Decision" width="254" x="417" y="556">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@834986162:1708938402033"/>
+<exit_state name="Specialty Dwelling" target="Element@834986162:1708938402033"/>
+<exit_state name="Motorcycle" target="Element@834986162:1708938402033"/>
+<exit_state name="Motor Home" target="Element@834986162:1708938402033"/>
+<exit_state name="Boat or Watercraft" target="Element@834986162:1708938402033"/>
+<exit_state name="Off Road Vehicle" target="Element@834986162:1708938402033"/>
+<exit_state name="NOINPUT" target="Element@58133251:1708938402032"/>
+<exit_state name="NOMATCH" target="Element@1669857638:1708938402033"/>
+<exit_state name="ER" target="Element@1669857638:1708938402033"/>
+<exit_state name="Landlord" target="Element@834986162:1708938402033"/>
+<exit_state name="Vacant Home" target="Element@834986162:1708938402033"/>
+<exit_state name="Seasonal Home" target="Element@834986162:1708938402033"/>
+<exit_state name="Travel Trailer" target="Element@834986162:1708938402033"/>
+<exit_state name="Other" target="Element@834986162:1708938402033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1897654287:1712166736842" name="CheckEntryPoint_BC" type="Decision" width="205" x="194" y="83">
+<exit_states>
+<exit_state name="CONT" target="Element@1289140133:1708938402033"/>
+<exit_state name="NLU" target="Element@1019118987:1709114079729"/>
+<exit_state name="ER" target="Element@1289140133:1708938402033"/>
+<exit_state name="INITIAL" target="Element@1289140133:1708938402033"/>
+</exit_states>
+</element>
+</page>

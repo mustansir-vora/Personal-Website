@@ -1,0 +1,7 @@
+{
+  "name": "6589d590-6a6e-4b1b-bee8-1185e857de85",
+  "displayName": "device-financing",
+  "priority": 500000,
+  "description": "Handles requests or questions about financing options or installment plans for a device.",
+  "numTrainingPhrases": 48
+}

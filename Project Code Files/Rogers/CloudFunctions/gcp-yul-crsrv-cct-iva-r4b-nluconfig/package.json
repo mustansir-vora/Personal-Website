@@ -1,0 +1,22 @@
+{
+  "name": "gcp-yul-crsrv-cct-iva-r4b-nluconfig-dev-01",
+  "version": "1.0.0",
+  "description": "r4b-nlu config..",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "artifactregistry-login": "npx google-artifactregistry-auth --repo-config=./.npmrc --credential-config=./.npmrc",
+    "start": "functions-framework --target=R4B"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.5.1",
+    "@google-cloud/secret-manager": "^6.1.0",
+    "axios": "^1.15.0",
+    "@google-cloud/storage": "^7.10.0",
+    "csv-parser": "^3.0.0",
+    "@roger/r4b-common-nodemodules": "1.3.3"
+  },
+  "keywords": [],
+  "author": "Mustan",
+  "license": "ISC"
+}

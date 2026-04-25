@@ -1,0 +1,35 @@
+{
+  "name": "4a10c5ac-119f-41a0-9448-69b5739c91e7",
+  "displayName": "Exit Type",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.postNLANIConfirm = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preNLANIConfirm",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "9cd79bff-c0de-4466-8da5-91d04ad56bf7"
+  }, {
+    "condition": "$session.params.postNLIDType != null AND $session.params.postNLInvoked = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preNLComplete",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "9c615a7c-fffb-460c-b997-af8ef95c9341"
+  }, {
+    "condition": "$session.params.postNLIDType = null AND $session.params.postNLInvoked != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Voluntary \u0026 Predictive",
+    "name": "975c0803-239a-49ca-8300-84041f0be525"
+  } ]
+}

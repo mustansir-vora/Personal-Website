@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@153556848:1743445216485" name="SIDA_RetentionCheckFlag2" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">S_SIDA_RETENTION_CHECK</setting>
+</settings>
+</config>
+</action_element>

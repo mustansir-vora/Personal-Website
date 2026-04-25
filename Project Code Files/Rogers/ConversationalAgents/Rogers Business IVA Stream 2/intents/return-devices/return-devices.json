@@ -1,0 +1,7 @@
+{
+  "name": "1ee3672f-08d3-4114-bea0-e771a5cfc7cb",
+  "displayName": "return-devices",
+  "priority": 500000,
+  "description": "Handles calls for returning equipment that was rented (can be resi or wireless)",
+  "numTrainingPhrases": 10
+}

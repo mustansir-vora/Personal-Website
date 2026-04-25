@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1334227276:1730745013310" name="Copy_of_SharedIVRText" version="6.0.1">
+<subflow_call subflow_name="SharedIVRtoText" target="Element@31:1712497393289">
+<config>
+<input_data>
+<data name="RETURN_VALUE_FOR_NLU"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

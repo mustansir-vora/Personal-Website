@@ -1,0 +1,41 @@
+{
+  "name": "ee61f7bd-9a80-4e44-9b1e-387730b8eeaa",
+  "displayName": "Single Wireless Subscription 1?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfWireless = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "confirmSubscription"
+      } ]
+    },
+    "targetPage": "Start Reusable Phone Number",
+    "name": "97abae12-108a-4136-ae47-1bc5f3186b7d"
+  }, {
+    "condition": "$session.params.numberOfWireless = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "itnToMatchSubscription",
+        "value": "$sys.func.GET($sys.func.FILTER(\"$session.params.subscriptionsList\", \"$[?(@.serviceCategory.english == 'Mobile')].subscriptionSerialNumber\"), 0)"
+      }, {
+        "parameter": "subscriptionITNMatchCalledFrom",
+        "value": "confirmSubscription_A"
+      } ]
+    },
+    "targetPage": "Start Subscription ITN Match",
+    "name": "d10ba166-5f52-424f-827a-a9b2fd2b775b"
+  }, {
+    "condition": "$session.params.numberOfWireless \u003e 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check ID Type - Confirm Subscription",
+    "name": "5d7958b7-4dc7-4681-a480-7fa90762d1c7"
+  } ]
+}

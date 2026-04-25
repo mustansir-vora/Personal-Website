@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1781002914:1708937661907" name="Policy Assistance" version="6.0.1">
+<element height="55" id="Element@1214282897:1708937834390" name="OSPM_ADM_007" type="Decision" width="185" x="569" y="1070">
+<exit_states>
+<exit_state name="ER" target="Element@2066658704:1711892597403"/>
+<exit_state name="SU" target="Element@2066658704:1711892597403"/>
+</exit_states>
+</element>
+<element height="55" id="Element@234825761:1708937834390" name="CALLER_AUTHENTICATION_CHECK" type="Decision" width="322" x="497" y="531">
+<exit_states>
+<exit_state name="Yes" target="Element@470130861:1708937834390">
+<bendpoint>
+<dim1 x="-200" y="1"/>
+<dim2 x="-200" y="-237"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-200" y="238"/>
+<dim2 x="-200" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="No" target="Element@406016321:1709113446111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2139740831:1708937834390" name="OSPM_MN_005_VALUE" type="Decision" width="231" x="537" y="406">
+<exit_states>
+<exit_state name="YES" target="Element@512477397:1708937834390"/>
+<exit_state name="NO" target="Element@234825761:1708937834390">
+<bendpoint>
+<dim1 x="87" y="63"/>
+<dim2 x="81" y="-62"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NI" target="Element@641294953:1710850955697"/>
+<exit_state name="NM" target="Element@1575000216:1710850959654"/>
+<exit_state name="ER" target="Element@1575000216:1710850959654"/>
+<exit_state name="Representative" target="Element@1575000216:1710850959654"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1809669215:1708937834390" name="OSPM_ADM_006" type="Decision" width="185" x="317" y="1035">
+<exit_states>
+<exit_state name="ER" target="Element@1203131230:1711892574407"/>
+<exit_state name="SU" target="Element@1203131230:1711892574407"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1608847057:1708937834390" name="A" type="Page Connector" width="64" x="174" y="954">
+<page_connector target="Element@1175452934:1708937851026">A<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@343674353:1708937834390" name="B" type="Page Connector" width="64" x="1039" y="664">
+<page_connector target="Element@266502703:1713871967345">B<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@501187807:1708937834390" name="OSPM_MN_006_VALUE" type="Decision" width="231" x="106" y="762">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@1809669215:1708937834390"/>
+<exit_state name="Motor Home" target="Element@1809669215:1708937834390"/>
+<exit_state name="Motorcycle" target="Element@1809669215:1708937834390"/>
+<exit_state name="Boat or Watercraft" target="Element@1809669215:1708937834390"/>
+<exit_state name="Specialty Dwelling" target="Element@1809669215:1708937834390"/>
+<exit_state name="Representative" target="Element@1755766517:1730258911667"/>
+<exit_state name="NI" target="Element@1015292299:1710851482352"/>
+<exit_state name="NM" target="Element@455789006:1711892624363">
+<bendpoint>
+<dim1 x="-124" y="131"/>
+<dim2 x="-5" y="-136"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@455789006:1711892624363"/>
+<exit_state name="Auto" target="Element@1809669215:1708937834390"/>
+</exit_states>
+</element>
+<element height="55" id="Element@749992153:1708937834390" name="POLICY_ASSISTANCE" type="Page Entry" width="215" x="544" y="39">
+<exit_states>
+<exit_state name="next" target="Element@1242451769:1708937834390"/>
+</exit_states>
+</element>
+<element height="55" id="Element@470130861:1708937834390" name="OSPM_MN_007_VALUE" type="Decision" width="231" x="509" y="778">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@1214282897:1708937834390"/>
+<exit_state name="Specialty Dwelling" target="Element@1214282897:1708937834390">
+<bendpoint>
+<dim1 x="218" y="218"/>
+<dim2 x="201" y="-107"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motorcycle" target="Element@1214282897:1708937834390">
+<bendpoint>
+<dim1 x="-43" y="206"/>
+<dim2 x="-60" y="-119"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motor Home" target="Element@1214282897:1708937834390">
+<bendpoint>
+<dim1 x="-70" y="128"/>
+<dim2 x="-87" y="-197"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Boat or Watercraft" target="Element@1214282897:1708937834390">
+<bendpoint>
+<dim1 x="188" y="161"/>
+<dim2 x="171" y="-164"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Auto" target="Element@1214282897:1708937834390">
+<bendpoint>
+<dim1 x="104" y="154"/>
+<dim2 x="87" y="-171"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@421823201:1730258940754"/>
+<exit_state name="NI" target="Element@1015292299:1710851482352"/>
+<exit_state name="NM" target="Element@128698843:1710851477253">
+<bendpoint>
+<dim1 x="200" y="76"/>
+<dim2 x="148" y="-85"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@128698843:1710851477253">
+<bendpoint>
+<dim1 x="156" y="86"/>
+<dim2 x="104" y="-75"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1242451769:1708937834390" name="S_ID_AUTH_2" type="Subflow Call" width="155" x="568" y="151">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1711718289119">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@83163805:1709113423103"/>
+</exit_states>
+</element>
+<element height="55" id="Element@512477397:1708937834390" name="CALLER_AUTHENTICATION_CHECK_1" type="Decision" width="339" x="70" y="406">
+<exit_states>
+<exit_state name="Yes" target="Element@501187807:1708937834390">
+<bendpoint>
+<dim1 x="-118" y="56"/>
+<dim2 x="-144" y="-212"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-175" y="318"/>
+<dim2 x="-157" y="-38"/>
+</bendpoint>
+</exit_state>
+<exit_state name="No" target="Element@811670017:1709113444313"/>
+</exit_states>
+</element>
+<element height="55" id="Element@83163805:1709113423103" name="OSPM_MN_005_Call" type="Subflow Call" width="208" x="542" y="269">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113441496">
+<config>
+<argument_data>
+<data name="MenuID">OSPM_MN_005</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2139740831:1708937834390"/>
+</exit_states>
+</element>
+<element height="55" id="Element@811670017:1709113444313" name="OSPM_MN_006_Call" type="Subflow Call" width="208" x="122" y="534">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113469111">
+<config>
+<argument_data>
+<data name="MenuID">OSPM_MN_006</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@501187807:1708937834390"/>
+</exit_states>
+</element>
+<element height="55" id="Element@406016321:1709113446111" name="OSPM_MN_007_Call" type="Subflow Call" width="208" x="686" y="654">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113486575">
+<config>
+<argument_data>
+<data name="MenuID">OSPM_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@470130861:1708937834390"/>
+</exit_states>
+</element>
+<element height="55" id="Element@641294953:1710850955697" name="HANGUP_ENTRY" type="Page Connector" width="181" x="858" y="527">
+<page_connector target="Element@1082558673:1710847492354">HANGUP_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1575000216:1710850959654" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="846" y="406">
+<page_connector target="Element@1034481077:1710846981544">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@128698843:1710851477253" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="847" y="1005">
+<page_connector target="Element@1034481077:1710846981544">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1015292299:1710851482352" name="HANGUP_ENTRY" type="Page Connector" width="181" x="349" y="877">
+<page_connector target="Element@1082558673:1710847492354">HANGUP_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1445115089:1711642222729" name="NLU_ENTRY" type="Page Entry" width="142" x="348" y="160">
+<exit_states>
+<exit_state name="next" target="Element@83163805:1709113423103"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1203131230:1711892574407" name="GDF_RETURN_CHECK" type="Decision" width="217" x="251" y="1194">
+<exit_states>
+<exit_state name="Representative" target="Element@286571611:1730259006395"/>
+<exit_state name="Specialty Dwelling" target="Element@455789006:1711892624363"/>
+<exit_state name="Motorcycle" target="Element@455789006:1711892624363">
+<bendpoint>
+<dim1 x="-171" y="-82"/>
+<dim2 x="73" y="81"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motor Home" target="Element@455789006:1711892624363">
+<bendpoint>
+<dim1 x="-279" y="43"/>
+<dim2 x="-35" y="206"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Mobile Home" target="Element@455789006:1711892624363">
+<bendpoint>
+<dim1 x="-267" y="9"/>
+<dim2 x="-23" y="172"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Auto" target="Element@455789006:1711892624363">
+<bendpoint>
+<dim1 x="-246" y="-18"/>
+<dim2 x="-2" y="145"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Boat or Watercraft" target="Element@455789006:1711892624363">
+<bendpoint>
+<dim1 x="-201" y="-61"/>
+<dim2 x="43" y="102"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@2066658704:1711892597403" name="GDF_RETURN_CHECK_1" type="Decision" width="234" x="570" y="1188">
+<exit_states>
+<exit_state name="Representative" target="Element@847287713:1730259034615"/>
+<exit_state name="Auto" target="Element@128698843:1710851477253">
+<bendpoint>
+<dim1 x="390" y="-53"/>
+<dim2 x="125" y="130"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motor Home" target="Element@128698843:1710851477253">
+<bendpoint>
+<dim1 x="99" y="-122"/>
+<dim2 x="-166" y="61"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motorcycle" target="Element@128698843:1710851477253">
+<bendpoint>
+<dim1 x="385" y="38"/>
+<dim2 x="120" y="221"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Specialty Dwelling" target="Element@128698843:1710851477253">
+<bendpoint>
+<dim1 x="352" y="3"/>
+<dim2 x="87" y="186"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Mobile Home" target="Element@128698843:1710851477253">
+<bendpoint>
+<dim1 x="290" y="-16"/>
+<dim2 x="25" y="167"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Boat or Watercraft" target="Element@128698843:1710851477253">
+<bendpoint>
+<dim1 x="212" y="-64"/>
+<dim2 x="-53" y="119"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@455789006:1711892624363" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="10" y="1031">
+<page_connector target="Element@1034481077:1710846981544">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@687898972:1712857149391" name="PromoteToSession_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="224" x="920" y="781">
+<exit_states>
+<exit_state name="done" target="Element@343674353:1708937834390"/>
+</exit_states>
+</element>
+<element height="55" id="Element@968368684:1712857304985" name="Copy_of_Copy_of_PromoteToSession_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="370" x="277" y="619">
+<exit_states>
+<exit_state name="done" target="Element@1608847057:1708937834390"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1755766517:1730258911667" name="Copy_3_of_Global_Rep_Handling" type="Decision" width="223" x="8" y="619">
+<exit_states>
+<exit_state name="CONT" target="Element@968368684:1712857304985"/>
+<exit_state name="TR" target="Element@455789006:1711892624363"/>
+</exit_states>
+</element>
+<element height="55" id="Element@421823201:1730258940754" name="Copy_4_of_Global_Rep_Handling" type="Decision" width="223" x="818" y="721">
+<exit_states>
+<exit_state name="CONT" target="Element@687898972:1712857149391"/>
+<exit_state name="TR" target="Element@128698843:1710851477253"/>
+</exit_states>
+</element>
+<element height="55" id="Element@286571611:1730259006395" name="Copy_5_of_Global_Rep_Handling" type="Decision" width="223" x="420" y="1254">
+<exit_states>
+<exit_state name="CONT" target="Element@1608847057:1708937834390"/>
+<exit_state name="TR" target="Element@455789006:1711892624363"/>
+</exit_states>
+</element>
+<element height="55" id="Element@847287713:1730259034615" name="Copy_6_of_Global_Rep_Handling" type="Decision" width="223" x="685" y="1244">
+<exit_states>
+<exit_state name="CONT" target="Element@1608847057:1708937834390"/>
+<exit_state name="TR" target="Element@128698843:1710851477253"/>
+</exit_states>
+</element>
+</page>

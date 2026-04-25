@@ -1,0 +1,25 @@
+{
+  "name": "27e6555c-5664-479a-a426-e920d8d09c86",
+  "displayName": "Check unbilledUsageAmount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.balanceDetails.unbilledUsageAmount = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check availableCredit",
+    "name": "ada92fd2-7ea5-4adc-8b34-a64b6ef80386"
+  }, {
+    "condition": "$session.params.api.billingProfile.balanceDetails.unbilledUsageAmount != 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play UnbilledUsageAmount",
+    "name": "89a762d6-0214-4697-9d8b-44b0b1cddb69"
+  } ]
+}

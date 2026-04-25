@@ -1,0 +1,25 @@
+{
+  "name": "5c21aa57-0c34-4eb2-b87a-4a28dcc29d58",
+  "displayName": "Check Confirmation Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.confirmCounter \u003e= 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Retry Confirmation",
+    "name": "735d0c8a-c6d9-4a94-93a0-dc700452d8e4"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Subscription",
+    "name": "f02082bf-8d8c-4b2f-b0fd-832b1cd6ef39"
+  } ]
+}

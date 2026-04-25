@@ -1,0 +1,82 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "La ",
+      "auto": true
+    }, {
+      "text": "Gestion",
+      "auto": true
+    }, {
+      "text": " de la mobilité inclut?elle des outils de gestion des appareils mobiles?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons des problèmes avec l’inscription des appareils — pouvez-vous nous aider?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous nous aider à configurer des politiques de ",
+      "auto": true
+    }, {
+      "text": "sécurité",
+      "auto": true
+    }, {
+      "text": " pour les appareils personnels?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment pouvons-nous suivre l’utilisation et les coûts des appareils de nos employés?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous voulons ajouter ou retirer des lignes dans le cadre de notre forfait de ",
+      "auto": true
+    }, {
+      "text": "Gestion",
+      "auto": true
+    }, {
+      "text": " de la mobilité.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous expliquer ce que comprend la ",
+      "auto": true
+    }, {
+      "text": "Gestion",
+      "auto": true
+    }, {
+      "text": " de la mobilité?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour gérer tous nos appareils mobiles d’",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@110420139:1712652331544" name="CASELIST_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CASELIST_CHECK" default_exit_state="Others">
+        <exit_state name="CL_1" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CASE_BELONGS_TO" />
+                </data>
+                <constant_string value="CL_1" />
+            </string>
+        </exit_state>
+        <exit_state name="CL_2" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CASE_BELONGS_TO" />
+                </data>
+                <constant_string value="CL_2" />
+            </string>
+        </exit_state>
+        <exit_state name="CL_3" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CASE_BELONGS_TO" />
+                </data>
+                <constant_string value="CL_3" />
+            </string>
+        </exit_state>
+        <exit_state name="CL_4" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CASE_BELONGS_TO" />
+                </data>
+                <constant_string value="CL_4" />
+            </string>
+        </exit_state>
+        <exit_state name="CL_5" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CASE_BELONGS_TO" />
+                </data>
+                <constant_string value="CL_5" />
+            </string>
+        </exit_state>
+        <exit_state name="CL_6" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CASE_BELONGS_TO" />
+                </data>
+                <constant_string value="CL_6" />
+            </string>
+        </exit_state>
+        <exit_state name="CL_7" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CASE_BELONGS_TO" />
+                </data>
+                <constant_string value="CL_7" />
+            </string>
+        </exit_state>
+        <exit_state name="CL_8" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CASE_BELONGS_TO" />
+                </data>
+                <constant_string value="CL_8" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

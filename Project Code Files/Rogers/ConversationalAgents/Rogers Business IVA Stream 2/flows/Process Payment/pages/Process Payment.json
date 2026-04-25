@@ -1,0 +1,26 @@
+{
+  "name": "707dca1f-a06b-4e26-8044-fbc8a3ea1593",
+  "displayName": "Process Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "makeCreditCardPayment"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.paymentManagement.paymentConfirmation.paymentCompleted = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Process Payment Code",
+    "name": "5f498833-5f88-4c7f-b8dd-671542ee559f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cant Continue Payment",
+    "name": "734a8b8e-cadb-4e2c-8c47-2f9efab13c3d"
+  } ]
+}

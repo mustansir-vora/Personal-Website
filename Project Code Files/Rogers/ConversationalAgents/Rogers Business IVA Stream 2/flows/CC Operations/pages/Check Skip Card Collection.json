@@ -1,0 +1,29 @@
+{
+  "name": "420684ad-c9d9-49b3-8c7a-b959ca9f07ec",
+  "displayName": "Check Skip Card Collection",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "ccDetailsCounter",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.skipCardCollection = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Use Previous Card",
+    "name": "16ed0016-e580-4d0b-87dc-1a3781f20a6e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC Details Counter",
+    "name": "85732fa5-59c6-4566-94f0-f88cbb876dbe",
+    "description": "skipCardCollection is false"
+  } ]
+}

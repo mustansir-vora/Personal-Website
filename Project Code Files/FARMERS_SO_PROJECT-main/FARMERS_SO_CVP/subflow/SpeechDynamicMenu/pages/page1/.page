@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@410544429:1709031656828" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1709031656827" name="SpeechDynamicMenu" type="Subflow Start" width="221" x="574" y="24">
+<exit_states>
+<exit_state name="next" target="Element@43599705:1731040468327"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1496669729:1750693769490"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1860615647:1731040468327" name="CHECK_EVENT_DATA_BC" type="Decision" width="241" x="405" y="580">
+<exit_states>
+<exit_state name="done" target="Element@378384292:1731040468327"/>
+<exit_state name="retry" target="Element@1615514418:1731040468327"/>
+<exit_state name="loop" target="Element@248437689:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@248437689:1731040468327" name="VirtualAgentVoice" src="com.audium.server.voiceElement.nlu.MNluElement" type="Voice Element" width="217" x="416" y="468">
+<exit_states>
+<exit_state name="done" target="Element@1860615647:1731040468327">
+<bendpoint>
+<dim1 x="-137" y="77"/>
+<dim2 x="-23" y="-60"/>
+</bendpoint>
+</exit_state>
+<exit_state name="error" target="Element@1489234026:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1172203312:1731040468327" name="Retry_DTMF_Menu" type="Page Entry" width="195" x="1003" y="251">
+<exit_states>
+<exit_state name="next" target="Element@1694911200:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1604862416:1731040468327" name="Form_01" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="119" x="467" y="362">
+<exit_states>
+<exit_state name="done" target="Element@248437689:1731040468327"/>
+<exit_state name="max_nomatch" target="Element@248437689:1731040468327"/>
+<exit_state name="max_noinput" target="Element@248437689:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1428118688:1731040468328" name="Play_Error_Prompt" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="184" x="1402" y="444">
+<exit_states>
+<exit_state name="done" target="Element@1694911200:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1615514418:1731040468327" name="Retry_DTMF_Menu" type="Page Connector" width="195" x="427" y="688">
+<page_connector target="Element@1172203312:1731040468327">Retry_DTMF_Menu<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@261914977:1731040468327" name="CHECK_PURE_DTMF" type="Decision" width="181" x="705" y="366">
+<exit_states>
+<exit_state name="PURE_DTMF" target="Element@1694911200:1731040468327"/>
+<exit_state name="OTHERS" target="Element@1604862416:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1489234026:1731040468327" name="ERROR_HANDLING_BC" type="Action" width="230" x="696" y="468">
+<exit_states>
+<exit_state name="done" target="Element@378384292:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1400353705:1731040468327" name="CHECK_PREF_LANG_BC" type="Decision" width="231" x="682" y="254">
+<exit_states>
+<exit_state name="ENG" target="Element@261914977:1731040468327">
+<bendpoint>
+<dim1 x="26" y="66"/>
+<dim2 x="28" y="-44"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SPA" target="Element@261914977:1731040468327">
+<bendpoint>
+<dim1 x="-43" y="68"/>
+<dim2 x="-43" y="-46"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@188144083:1731040468327" name="Play_MaxTries_Prompt" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="230" x="1307" y="678">
+<exit_states>
+<exit_state name="done" target="Element@378384292:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@504179051:1731040468327" name="CHECK_DATA_BC" type="Decision" width="183" x="1019" y="519">
+<exit_states>
+<exit_state name="done" target="Element@378384292:1731040468327">
+<bendpoint>
+<dim1 x="-19" y="65"/>
+<dim2 x="176" y="-52"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@378384292:1731040468327">
+<bendpoint>
+<dim1 x="37" y="86"/>
+<dim2 x="239" y="-35"/>
+</bendpoint>
+</exit_state>
+<exit_state name="retry" target="Element@1428118688:1731040468328"/>
+<exit_state name="max_noinput" target="Element@188144083:1731040468327"/>
+<exit_state name="max_nomatch" target="Element@378384292:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@43599705:1731040468327" name="CHECK_MENU_LOADER_BC" type="Decision" width="262" x="666" y="149">
+<exit_states>
+<exit_state name="ER" target="Element@1400353705:1731040468327">
+<bendpoint>
+<dim1 x="-46" y="61"/>
+<dim2 x="-46" y="-44"/>
+</bendpoint>
+</exit_state>
+<exit_state name="done" target="Element@1400353705:1731040468327">
+<bendpoint>
+<dim1 x="32" y="63"/>
+<dim2 x="32" y="-42"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1694911200:1731040468327" name="COMBINED_TRIES" src="com.servion.platform.vxml.cvp.elements.ServionIndAndCombTriesForm" type="Voice Element" width="192" x="1011" y="365">
+<exit_states>
+<exit_state name="done" target="Element@504179051:1731040468327"/>
+<exit_state name="max_nomatch" target="Element@504179051:1731040468327">
+<bendpoint>
+<dim1 x="135" y="65"/>
+<dim2 x="90" y="-86"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@504179051:1731040468327">
+<bendpoint>
+<dim1 x="-110" y="69"/>
+<dim2 x="-113" y="-85"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@504179051:1731040468327"/>
+</exit_states>
+</element>
+<element height="55" id="Element@378384292:1731040468327" name="SpeechMenuExit" type="Subflow Return" width="198" x="715" y="685"/>
+<element height="49" id="Element@1496669729:1750693769490" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="987" y="28">
+<exit_states>
+<exit_state name="done" target="Element@147135576:1750693769490"/>
+</exit_states>
+</element>
+<element height="55" id="Element@147135576:1750693769490" name="Shared_Transfer" type="Subflow Call" width="173" x="1237" y="59">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1656917150:1750693769490"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1656917150:1750693769490" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="1320" y="195">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

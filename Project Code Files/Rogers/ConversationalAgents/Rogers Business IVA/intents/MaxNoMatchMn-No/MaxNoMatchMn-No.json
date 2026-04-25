@@ -1,0 +1,8 @@
+{
+  "name": "22adcdcd-b6c9-467c-8a74-9b899d8a26e3",
+  "displayName": "MaxNoMatchMn-No",
+  "priority": 500000,
+  "description": "this will trigger when user says no/i don't need any help/nope",
+  "numTrainingPhrases": 46,
+  "dtmfPattern": "2"
+}

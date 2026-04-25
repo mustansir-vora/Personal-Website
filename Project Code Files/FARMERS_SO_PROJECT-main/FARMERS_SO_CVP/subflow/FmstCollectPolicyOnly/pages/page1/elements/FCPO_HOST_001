@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1386217804:1708938089183" name="FCPO_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.FOREMOSTPOLICYINQUIIRY_BC</source>
+</config>
+</decision>

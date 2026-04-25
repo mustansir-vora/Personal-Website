@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1966255560:1714724764124" name="FWS_Payroll DeductQA" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="FWS_Payroll DeductQA" default_exit_state="OFF">
+        <exit_state name="ON" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PAYROLL_DEDUCT" />
+                </data>
+                <constant_string value="ON" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

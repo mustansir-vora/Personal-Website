@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1476161406:1733741381983" name="FNWL_HOST_006" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.FNWL_HOST_006</source>
+</config>
+</decision>

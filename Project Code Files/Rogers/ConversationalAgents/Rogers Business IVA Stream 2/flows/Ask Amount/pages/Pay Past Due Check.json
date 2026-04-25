@@ -1,0 +1,62 @@
+{
+  "name": "5626abfd-d203-4e9a-83cb-66ccc5961cba",
+  "displayName": "Pay Past Due Check",
+  "form": {
+    "parameters": [ {
+      "displayName": "userPayPastDueConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetPage": "End Flow",
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+          
+          },
+          "name": "4a7896ac-5449-40d5-ab3b-d7fd717ea410"
+        }, {
+          "targetPage": "End Flow",
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+          
+          },
+          "name": "e7311a30-3e4f-4525-bc11-e81b6730ecda"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to pay the past due\namount of $session.params.pastDueBalance ?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous payer le montant en souffrance de $session.params.pastDueBalance ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.userPayPastDueConfirmation = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$sys.func.TO_NUMBER($session.params.pastDueBalance)"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "3b119b15-ba03-4965-8d0a-af6887f84c36"
+  }, {
+    "condition": "$session.params.userPayPastDueConfirmation = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "d01d997c-c213-41fd-b1c1-5d2d64228c18"
+  } ]
+}

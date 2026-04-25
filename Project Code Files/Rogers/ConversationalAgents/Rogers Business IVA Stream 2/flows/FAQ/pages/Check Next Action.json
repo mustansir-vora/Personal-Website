@@ -1,0 +1,48 @@
+{
+  "name": "d496c4ed-9ced-49da-8152-56d66104c1b6",
+  "displayName": "Check Next Action",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.faqNextAction = \"goodbye\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "End Call",
+    "name": "efd364ef-95c6-403a-a48f-34790d6f4457"
+  }, {
+    "condition": "$session.params.faqNextAction = \"nlumainmenu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "3650a57a-2fbd-47f5-a85a-f154a744ab51"
+  }, {
+    "condition": "$session.params.faqNextAction = \"transfer\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "BusinessRules"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "45a00ed5-4805-4291-97e4-1064806148b5"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "4ccb2d3d-f63a-4489-b912-0609387a7e56"
+  } ]
+}

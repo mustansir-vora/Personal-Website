@@ -1,0 +1,50 @@
+{
+  "name": "9e8e785c-7b22-44c4-8869-4eef6d15474e",
+  "displayName": "Business Accounts Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "safeMaster",
+      "value": "$sys.func.IF(\"$session.params.masterSubscriptionsList = null\", [], $session.params.masterSubscriptionsList)"
+    }, {
+      "parameter": "safeBiz",
+      "value": "$sys.func.IF(\"$session.params.businessIndList = null\", [], $session.params.businessIndList)"
+    }, {
+      "parameter": "accountsCount",
+      "value": "$sys.func.COUNT($session.params.safeMaster)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.accountsCount = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "b7f71632-1687-4339-8d41-ccf646015385"
+  }, {
+    "condition": "$session.params.idx \u003e= $session.params.accountsCount",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subscriptionITNMatchCalledFrom",
+        "value": "wirelessIdentification"
+      }, {
+        "parameter": "numberOfWireless",
+        "value": "$sys.func.COUNT($sys.func.FILTER(\"$session.params.subscriptionsList\", \"$[?(@.serviceCategory.english == 'Mobile')]\"))"
+      } ]
+    },
+    "targetPage": "Start Subscription ITN Match",
+    "name": "8e3f4024-04b1-4212-926f-78d12e71c049"
+  }, {
+    "condition": "$session.params.idx \u003c $session.params.accountsCount",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Iterate Business Accounts",
+    "name": "50f1d5ba-c5c3-411e-8d4f-9da17acf0e4d"
+  } ]
+}

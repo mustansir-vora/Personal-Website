@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1411731726:1715068065991" name="NxtpaymentAmt_PolicyActvityDate_Available" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="PL_ACITVITY_DATE_CHECK" default_exit_state="No">
+        <exit_state name="Yes" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_NEXT_PAYMENT_AMOUNT_EXISTS" />
+                </data>
+                <constant_string value="True" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="S_POLICY_ACTIVITY_DATE_EXISTS" />
+                </data>
+                <constant_string value="True" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

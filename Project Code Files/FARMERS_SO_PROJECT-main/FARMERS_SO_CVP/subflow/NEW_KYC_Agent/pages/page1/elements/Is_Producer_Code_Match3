@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@850093265:1739964358630" name="Is_Producer_Code_Match3" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is_Producer_Code_Match" default_exit_state="ER">
+        <exit_state name="MATCH" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PRODUCER_CODE_MATCH" />
+                </data>
+                <constant_string value="MATCH" />
+            </string>
+        </exit_state>
+        <exit_state name="NOMATCH" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PRODUCER_CODE_MATCH" />
+                </data>
+                <constant_string value="NOMATCH" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

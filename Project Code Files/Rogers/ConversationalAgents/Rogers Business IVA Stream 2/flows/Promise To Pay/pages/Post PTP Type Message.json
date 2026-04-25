@@ -1,0 +1,86 @@
+{
+  "name": "921fb0a8-7803-40a0-9349-da86ebabbd91",
+  "displayName": "Post PTP Type Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.ptpCategory = N",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Cette entente ne rétablira pas le \r\nservice et ne mettra pas fin aux \r\nmesures de recouvrement, y compris \r\nla suspension ou l’annulation du \r\ncompte. Si le service est suspendu, il \r\nsera rétabli lorsque le solde en \r\nsouffrance sera porté au compte. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "This arrangement will not restore service or stop collection treatment which includes account suspension or cancellation. If suspended, services will be restored when the past due balance is posted to the account." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Set PTP Sms Params",
+    "name": "a39018bb-ed9d-4bec-b3ab-69647963156f"
+  }, {
+    "condition": "$session.params.api.response.ptp.ptpCategory = A AND $session.params.ptpAccountStatusBeforeUpdate = S AND $session.params.api.response.ptp.accountStatus = O",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Cela suspendra les activités de \r\nrecouvrement." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "This will hold collection activities." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Post PTP Product Message",
+    "name": "2c9f3b1e-14d3-4c72-b928-f4a4ef8b86f4"
+  }, {
+    "condition": "$session.params.api.response.ptp.ptpCategory = B AND $session.params.ptpAccountStatusBeforeUpdate = S AND $session.params.api.response.ptp.accountStatus = O",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Cela suspendra les activités de \r\nrecouvrement." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "This will hold collection activities." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Post PTP Product Message",
+    "name": "2f6a72fe-5324-4e0d-b419-0f8d161848c8"
+  }, {
+    "condition": "$session.params.api.response.ptp.ptpCategory = A OR $session.params.api.response.ptp.ptpCategory = B",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Cela suspendra les activités de \r\nrecouvrement." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "This will hold collection activities." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Set PTP Sms Params",
+    "name": "d5f413ce-6194-4eba-9ee3-96e3c43f1630"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set PTP Sms Params",
+    "name": "e203ab35-e6ad-4aa0-bab3-3282d6e502b3"
+  } ]
+}

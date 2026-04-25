@@ -1,0 +1,14 @@
+{
+  "name": "e9ffd065-fdf0-4bf4-86b2-426c38673dc2",
+  "displayName": "change-contact-info",
+  "parameters": [ {
+    "id": "e_address_change",
+    "entityType": "@e_address_change"
+  }, {
+    "id": "date",
+    "entityType": "@sys.date"
+  } ],
+  "priority": 500000,
+  "description": "Handles requests to update or modify contact details associated with an account.",
+  "numTrainingPhrases": 48
+}

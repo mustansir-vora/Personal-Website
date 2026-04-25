@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@406016321:1709113446111" name="OSPM_MN_007_Call" version="6.0.1">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113486575">
+<config>
+<argument_data>
+<data name="MenuID">OSPM_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

@@ -1,0 +1,421 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "payment arrangement"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "make a "
+    }, {
+      "text": "payment arrangement"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to create a new "
+    }, {
+      "text": "50"
+    }, {
+      "text": "$ "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to modify my current "
+    }, {
+      "text": "50"
+    }, {
+      "text": "$ "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to adjust my "
+    }, {
+      "text": "50"
+    }, {
+      "text": "$ "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to extend my "
+    }, {
+      "text": "50"
+    }, {
+      "text": "$ "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to set up a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to make a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " for my bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I set up a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " "
+    }, {
+      "text": "today"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to set up a "
+    }, {
+      "text": "promise to pay"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need an extension on my bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I get an extension for my payment?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need more time to pay and want to arrange a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to arrange a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " for my "
+    }, {
+      "text": "overdue balance"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to schedule a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to change the date of my existing "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to reschedule my "
+    }, {
+      "text": "promise to pay"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to arrange a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " for "
+    }, {
+      "text": "next week"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to push out my "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to create a new "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to modify my current "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to adjust my "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like an extensionon my phone bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to extend my "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to split my payment into "
+    }, {
+      "text": "two"
+    }, {
+      "text": " as part of my "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "promise to pay"
+    }, {
+      "text": " is due "
+    }, {
+      "text": "today"
+    }, {
+      "text": " but I need to move it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to change the date on my "
+    }, {
+      "text": "promise to pay"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to make a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " for "
+    }, {
+      "text": "Friday"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to defer my bill with a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm calling to set up a payment plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to set up a preauthorized "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to arrange a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " for my overdue bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I schedule a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " for a later date?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to make arrangements to pay using a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to request an extension on my bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to arrange a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " for the end of the month."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to update my current "
+    }, {
+      "text": "promise to pay"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm unable to pay "
+    }, {
+      "text": "today"
+    }, {
+      "text": " and need an extension."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to make arrangements through a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " for my "
+    }, {
+      "text": "overdue balance"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need a "
+    }, {
+      "text": "payment arrangement"
+    }, {
+      "text": " to avoid disconnection."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1664791916:1721994608733" name="FRMST" version="6.0.1">
+<element height="50" id="Element@287465934:1721994608733" name="FRMST" type="Page Entry" width="95" x="224" y="15">
+<exit_states>
+<exit_state name="next" target="Element@1422106392:1721994674577"/>
+</exit_states>
+</element>
+<element height="57" id="Element@1519543948:1721994674577" name="FRMST_SBP_HOST_001" type="Decision" width="200" x="190" y="175">
+<exit_states>
+<exit_state name="ER" target="Element@858363681:1721994674577"/>
+<exit_state name="SU" target="Element@2051420622:1721994674577"/>
+<exit_state name="PENDING_ER" target="Element@183726943:1721994674577"/>
+</exit_states>
+</element>
+<element height="50" id="Element@644209688:1721994674577" name="FRMST_PENDING" type="Page Connector" width="164" x="-24" y="503">
+<page_connector target="Element@1777577252:1721749105277">FRMST_PENDING<config/>
+</page_connector>
+</element>
+<element height="53" id="Element@66172241:1721994674577" name="FRMTS_ANOTHER_POLICY" type="Page Entry" width="221" x="-42" y="188">
+<exit_states>
+<exit_state name="next" target="Element@1519543948:1721994674577"/>
+</exit_states>
+</element>
+<element height="50" id="Element@118884235:1721994674577" name="Subflow Return_08" type="Subflow Return" width="173" x="462" y="478"/>
+<element height="53" id="Element@1502267242:1721994674577" name="EPC_PaymentUS" type="Subflow Call" width="158" x="565" y="377">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1720712264277">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@118884235:1721994674577"/>
+</exit_states>
+</element>
+<element height="53" id="Element@201075755:1721994674577" name="FRMST_SBP_MN_005_REPEAT" type="Page Entry" width="242" x="-185" y="387">
+<exit_states>
+<exit_state name="next" target="Element@183726943:1721994674577"/>
+</exit_states>
+</element>
+<element height="50" id="Element@183726943:1721994674577" name="Check_Policy_Status_Flag" type="Decision" width="213" x="66" y="390">
+<exit_states>
+<exit_state name="ER" target="Element@1279758401:1721994674577"/>
+<exit_state name="ACTIVE" target="Element@2077944861:1721994674577"/>
+<exit_state name="PENDING" target="Element@644209688:1721994674577"/>
+<exit_state name="EXPIRED" target="Element@310990292:1721994674577"/>
+<exit_state name="CANCELLED" target="Element@1414127258:1721994972517"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2077944861:1721994674577" name="FMST_ACTIVE" type="Page Connector" width="140" x="-157" y="504">
+<page_connector target="Element@166325623:1720712010186">FMST_ACTIVE<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1422106392:1721994674577" name="ID_AUTH_CHECK" type="Decision" width="162" x="188" y="85">
+<exit_states>
+<exit_state name="Success" target="Element@1519543948:1721994674577"/>
+<exit_state name="Failure" target="Element@1279758401:1721994674577"/>
+</exit_states>
+</element>
+<element height="50" id="Element@858363681:1721994674577" name="CHECK_EXIT_STATE_4" type="Decision" width="191" x="415" y="270">
+<exit_states>
+<exit_state name="ER" target="Element@1279758401:1721994674577"/>
+<exit_state name="TRANSFER" target="Element@1279758401:1721994674577"/>
+<exit_state name="SELFSERVICE" target="Element@1502267242:1721994674577"/>
+<exit_state name="OTHERS" target="Element@1279758401:1721994674577">
+<bendpoint>
+<dim1 x="-101" y="54"/>
+<dim2 x="30" y="-66"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@2051420622:1721994674577" name="CHECK_EXIT_STATE" type="Decision" width="177" x="-12" y="271">
+<exit_states>
+<exit_state name="ER" target="Element@1279758401:1721994674577">
+<bendpoint>
+<dim1 x="28" y="160"/>
+<dim2 x="14" y="-104"/>
+</bendpoint>
+</exit_state>
+<exit_state name="TRANSFER" target="Element@183726943:1721994674577">
+<bendpoint>
+<dim1 x="-27" y="64"/>
+<dim2 x="-95" y="-52"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SELFSERVICE" target="Element@183726943:1721994674577">
+<bendpoint>
+<dim1 x="-81" y="137"/>
+<dim2 x="129" y="-77"/>
+</bendpoint>
+</exit_state>
+<exit_state name="OTHERS" target="Element@1279758401:1721994674577"/>
+</exit_states>
+</element>
+<element height="51" id="Element@310990292:1721994674577" name="FRMST_EXPIRED" type="Page Connector" width="158" x="129" y="500">
+<page_connector target="Element@1409038117:1721825918714">FRMST_EXPIRED<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1279758401:1721994674577" name="SharedTransfered2" type="Subflow Call" width="173" x="342" y="379">
+<subflow_call subflow_name="Transfer" target="Element@31:1709205093586">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@118884235:1721994674577"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1414127258:1721994972517" name="FRMST_CANCELLED" type="Page Connector" width="181" x="273" y="503">
+<page_connector target="Element@1759817614:1721832754622">FRMST_CANCELLED<config/>
+</page_connector>
+</element>
+</page>

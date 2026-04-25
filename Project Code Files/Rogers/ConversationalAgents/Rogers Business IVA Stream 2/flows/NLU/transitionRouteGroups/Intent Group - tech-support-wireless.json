@@ -1,0 +1,174 @@
+{
+  "name": "e0049641-3110-4cc8-9cfa-8cd405ea3394",
+  "displayName": "Intent Group - tech-support-wireless",
+  "transitionRoutes": [ {
+    "intent": "device-warranty",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "device-warranty"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "dcb6976a-58c8-4079-86ec-b85915085f3e"
+  }, {
+    "intent": "advantage-voice-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "advantage-voice-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "4184bc00-8c40-4b50-add8-1d32e60975a0"
+  }, {
+    "intent": "phone-hardware-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "phone-hardware-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "21fca502-9d61-47de-a19f-5b0751e768a5"
+  }, {
+    "intent": "phone-software-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "phone-software-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d6417f5a-8b6c-4239-9734-c97f573ce541"
+  }, {
+    "intent": "voice-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "voice-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "3c4e95fc-739a-4ca3-84a9-dfb782acb195"
+  }, {
+    "intent": "missing-sim-order",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "missing-sim-order"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "5e81151c-0bfe-4b5b-8b59-33cf4c5918d4"
+  }, {
+    "intent": "replace-sim",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "replace-sim"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "e681b17a-8c6c-4c0a-b4e6-f8b4df9b6f01"
+  }, {
+    "intent": "roaming-support-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "roaming-support-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "aa42ae41-dc9f-4500-8249-ea6b4c5db4a6"
+  }, {
+    "intent": "unlock-device",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "unlock-device"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "bd81abe9-ee2a-436c-a63c-0dab5ba39b65"
+  }, {
+    "intent": "wifi-calling-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "wifi-calling-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "88691e56-7f36-4392-9163-94bd985bf208"
+  }, {
+    "intent": "wireless-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "wireless-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "ff4082e7-2b4f-4dfa-8e3c-5fcd4689d823"
+  }, {
+    "intent": "wrong-device-received",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "wrong-device-received"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "b790f0f0-2d4d-44d9-939b-4a96a80c02a0"
+  }, {
+    "intent": "sim-card-received",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "sim-card-received"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "cb4e18e7-6c62-4b30-b597-acc914c8ec78"
+  } ]
+}

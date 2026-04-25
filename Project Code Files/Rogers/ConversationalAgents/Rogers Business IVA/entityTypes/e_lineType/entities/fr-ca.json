@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "mobile line",
+    "synonyms": [ "cellulaire", "ligne sans fil", "mobile line", "téléphone cellulaire", "téléphone mobile" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Second Line",
+    "synonyms": [ "Second Line", "ligne secondaire", "ligne supplémentaire", "deuxième téléphone", "autre ligne", "nouvelle ligne" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Phone line",
+    "synonyms": [ "Phone line", "ligne terrestre", "ligne téléphonique", "téléphone à domicile", "téléphone régulier", "ligne principale" ],
+    "languageCode": "fr-ca"
+  } ]
+}

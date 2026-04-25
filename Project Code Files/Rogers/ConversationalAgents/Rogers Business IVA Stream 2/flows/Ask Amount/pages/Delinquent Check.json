@@ -1,0 +1,38 @@
+{
+  "name": "4390fcc0-d352-4833-bb90-be69ff95ff1b",
+  "displayName": "Delinquent Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.paymentAmount n’est pas suffisant pour suspendre les activités de recouvrement." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "$session.params.paymentAmount is not sufficient to hold collection activities" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"report-a-payment\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askAmountSuccess",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "89ce1636-ed70-4d36-9d7d-3fd2487391ae"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Pay Past Due Collection Check",
+    "name": "066a2ac7-26ea-4b4a-b35e-281e0438853c"
+  } ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "70191250-7570-4b3b-9a1a-f301bdcde9c3",
+  "displayName": "PTP Validate Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "ptpChangeAmount",
+      "value": true
+    }, {
+      "parameter": "collectedPtpAmount",
+      "value": "$session.params.changePTPAmount.amount"
+    }, {
+      "parameter": "$session.params.fromValidatePTPAmount",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003e $session.params.maxAmountToCompare OR $sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003c $session.params.minAmountToCompare",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Le montant du paiement doit être \ncompris entre \n$session.params.minAmountToCompare et \n$session.params.maxAmountToCompare . " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "The payment amount must be between $session.params.minAmountToCompare and $session.params.maxAmountToCompare . " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Check Get Amount Counter",
+    "name": "eac07074-7ccf-47cf-9b69-ee9b0dcb2391"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Return From Validate PTP Amount",
+    "name": "413882a2-8ec7-4539-8a9c-c9529bee09fd"
+  } ]
+}

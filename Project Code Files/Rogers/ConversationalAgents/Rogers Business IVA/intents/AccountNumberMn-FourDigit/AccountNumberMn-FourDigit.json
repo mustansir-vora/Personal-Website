@@ -1,0 +1,12 @@
+{
+  "name": "dd7864b7-b56b-47a6-8b00-a4cee2ac2633",
+  "displayName": "AccountNumberMn-FourDigit",
+  "parameters": [ {
+    "id": "fourdigitaccount",
+    "entityType": "@FourDigitAccount"
+  } ],
+  "priority": 500000,
+  "description": "This will Trigger when user says last four digit of the account number",
+  "numTrainingPhrases": 81,
+  "dtmfPattern": "dtmf_digits_[0-9]{4}$"
+}

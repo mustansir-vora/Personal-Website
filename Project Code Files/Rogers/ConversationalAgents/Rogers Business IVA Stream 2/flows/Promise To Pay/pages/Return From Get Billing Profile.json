@@ -1,0 +1,58 @@
+{
+  "name": "eea90cd1-0289-4afe-b22d-e5bb79765c03",
+  "displayName": "Return From Get Billing Profile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCallBillingProfile = true AND $session.params.api.billingProfile.returnCode = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpCallBillingProfile",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check If SuperSystem",
+    "name": "1deae7b1-485d-4044-bfec-429a3f4d883b"
+  }, {
+    "condition": "$session.params.ptpCallBillingProfile = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I can’t access your account information right now." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Je ne peux pas accéder à vos renseignements de compte\npour le moment." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "ptpCallBillingProfile",
+        "value": false
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "10f693c1-7234-4f9a-af60-88e149f25e73"
+  }, {
+    "condition": "$session.params.ptpWrapUp = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpWrapUp",
+        "value": false
+      } ]
+    },
+    "targetPage": "Post PTP Update Message",
+    "name": "9d6ba6b4-2525-41e4-972f-2d8dd66dee37"
+  } ]
+}

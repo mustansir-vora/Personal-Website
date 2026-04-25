@@ -1,0 +1,132 @@
+{
+  "name": "bcda5536-90aa-40eb-8adf-d68599dd5d2d",
+  "displayName": "IPP Amount",
+  "form": {
+    "parameters": [ {
+      "displayName": "userIPPAmountConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant actuellement exigible de $session.params.ippCurrentBalance ?" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Would you like to pay your current payable amount of ${session.params.ippCurrentBalance} ?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant actuellement exigible de ${session.params.ippCurrentBalance} ?" ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "b3f19c45-0684-40c4-9f59-ce0501a574d0"
+        }, {
+          "targetPage": "In That Case",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+          
+          },
+          "name": "6db8dda2-aeb2-41f7-b287-ee526e991dfa"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant actuellement exigible de $session.params.ippCurrentBalance ?" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Would you like to pay your current payable amount of ${session.params.ippCurrentBalance} ?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant actuellement exigible de ${session.params.ippCurrentBalance} ?" ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "8ebde56f-9fd0-4ed2-9034-5840fb32fde9"
+        }, {
+          "targetPage": "In That Case",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+          
+          },
+          "name": "faeacb13-fc83-4f45-8ab0-53ed24d28f22"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Souhaitez-vous payer le montant actuellement exigible de $session.params.ippCurrentBalance ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Would you like to pay your current payable\namount of $session.params.ippCurrentBalance ?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous payer le montant actuellement exigible de ${session.params.ippCurrentBalance} ?" ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.userIPPAmountConfirmation = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "In That Case",
+    "name": "280b0e99-f43e-4904-89c4-5dc493f01903"
+  }, {
+    "condition": "$session.params.userIPPAmountConfirmation = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.ippCurrentBalance"
+      } ]
+    },
+    "targetPage": "Continue To Credit Operations",
+    "name": "91a58f8a-5458-4ad4-acff-2e11f86ec98d"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to pay your current payable\namount of $session.params.ippCurrentBalance ?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "846fe24d-053e-47ee-9b06-b4bcdfc9ce1e"
+  }, {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to pay your current payable\namount of ${session.params.ippCurrentBalance} ?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "21a67b91-f178-43b6-9608-66783ca6d7f3"
+  } ]
+}

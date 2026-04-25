@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@411510848:1730827882279" name="CheckClarifierNextAction_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.CheckNextAction_BC</source>
+</config>
+</decision>

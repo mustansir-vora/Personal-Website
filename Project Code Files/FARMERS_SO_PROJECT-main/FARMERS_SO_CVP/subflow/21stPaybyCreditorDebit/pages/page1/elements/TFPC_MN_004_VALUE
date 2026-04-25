@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1792171750:1710846638553" name="TFPC_MN_004_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.TFPC_MN_004_VALUE</source>
+</config>
+</decision>

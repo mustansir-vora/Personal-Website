@@ -1,0 +1,10 @@
+{
+  "name": "dadfc580-9687-4bf0-bf72-a93d5261df22",
+  "displayName": "GoodBye",
+  "parameters": [ {
+    "id": "person",
+    "entityType": "@sys.person"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 24
+}

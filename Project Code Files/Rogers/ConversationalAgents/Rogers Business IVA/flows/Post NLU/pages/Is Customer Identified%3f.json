@@ -1,0 +1,28 @@
+{
+  "name": "432fc3df-3b6f-46c6-a59d-eed61b55236d",
+  "displayName": "Is Customer Identified?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.customerIdentified = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Identify Subscription",
+    "name": "ab418527-6872-4b04-bdc3-133a51c538cd"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "wirelessIdentification"
+      } ]
+    },
+    "targetPage": "Start Reusable Phone Number",
+    "name": "c95e4f25-76de-4cfb-a783-0e37b95613d6"
+  } ]
+}

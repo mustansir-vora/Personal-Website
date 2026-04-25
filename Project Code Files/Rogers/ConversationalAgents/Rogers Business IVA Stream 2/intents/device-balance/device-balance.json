@@ -1,0 +1,11 @@
+{
+  "name": "76f750a3-5bfc-464d-acfd-ac4524c38393",
+  "displayName": "device-balance",
+  "parameters": [ {
+    "id": "date-time",
+    "entityType": "@sys.date-time"
+  } ],
+  "priority": 500000,
+  "description": "Handles inquiries about the remaining balance or usage on a device or plan.",
+  "numTrainingPhrases": 48
+}

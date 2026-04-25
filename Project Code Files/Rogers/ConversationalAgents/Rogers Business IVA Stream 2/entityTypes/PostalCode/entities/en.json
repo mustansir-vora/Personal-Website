@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "^[A-Za-z]\\d[A-Za-z]\\d[A-Za-z]\\d$",
+    "synonyms": [ "^[A-Za-z]\\d[A-Za-z]\\d[A-Za-z]\\d$" ],
+    "languageCode": "en"
+  } ]
+}

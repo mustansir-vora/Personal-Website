@@ -1,0 +1,11 @@
+{
+  "name": "c72a905d-b2b4-4fd3-ba8d-a275d75c91be",
+  "displayName": "gcp-yul-crsrv-cct-iva-r4b-callstart",
+  "genericWebService": {
+    "uri": "https://gcp-yul-crsrv-cct-iva-r4b-callstart-qa-01-244522361420.northamerica-northeast1.run.app",
+    "webhookType": "STANDARD"
+  },
+  "timeout": {
+    "seconds": 30
+  }
+}

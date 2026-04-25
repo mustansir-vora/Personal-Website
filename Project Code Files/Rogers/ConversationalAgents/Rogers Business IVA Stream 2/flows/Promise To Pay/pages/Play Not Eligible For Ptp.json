@@ -1,0 +1,44 @@
+{
+  "name": "984a9f89-8bfe-487d-9313-a7647101a947",
+  "displayName": "Play Not Eligible For Ptp",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Our records show that you're currently on an Installment Payment Plan. That means you’re not eligible for Promise To Pay at this time." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Selon nos dossiers, vous êtes actuellement inscrit à un plan de paiement par versements. Cela signifie que vous n’êtes pas admissible à une promesse de paiement pour le moment. " ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAR = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Go to Payment Options",
+    "name": "41d79e36-10ed-4157-9f3d-d70ff76bf337"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      }, {
+        "parameter": "savedIntent",
+        "value": null
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "08952761-437b-4998-90cc-7daeda56f041"
+  } ]
+}

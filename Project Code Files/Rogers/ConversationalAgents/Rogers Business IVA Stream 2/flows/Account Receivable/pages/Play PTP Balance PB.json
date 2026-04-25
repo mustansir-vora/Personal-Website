@@ -1,0 +1,28 @@
+{
+  "name": "b63e21b9-2ee4-4fa0-8a00-bfd093cd6865",
+  "displayName": "Play PTP Balance PB",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "There's an existing payment arrangement on file for $$session.params.api.billingProfile.ptpAmount to be paid on \u003cssml:say-as type=\"date:md\"\u003e $session.params.api.billingProfile.ptpPaymentDate \u003c/ssml:say-as\u003e at a bank." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Il existe une entente de paiement au dossier pour un montant de $session.params.api.billingProfile.ptpAmount à payer le $session.params.api.billingProfile.ptpPaymentDate par transaction bancaire.\r\n" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Make Payment",
+    "name": "18bbd06d-8b84-4bb0-8c11-581d9eae9a82"
+  } ]
+}

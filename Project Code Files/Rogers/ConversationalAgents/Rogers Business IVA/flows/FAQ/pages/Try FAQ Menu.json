@@ -1,0 +1,93 @@
+{
+  "name": "7b4c02f3-0bb5-4a1f-9f56-a0ec41f2af2c",
+  "displayName": "Try FAQ Menu",
+  "form": {
+    "parameters": [ {
+      "displayName": "FAQMenuResponse",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To hear more about this, say yes or press 1. For all other questions, say no or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "83646d02-0dd6-45bb-90b9-d35f62d8b157"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To hear more about this, say yes or press 1. For all other questions, say no or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "e8c73bae-46e3-4ede-9a6f-407d44f58643"
+        }, {
+          "targetPage": "FAQ Announcement",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "FAQMenuResponse",
+              "value": null
+            } ]
+          },
+          "name": "20c6a9cc-75f2-4d97-ab9d-d174975f8c9d"
+        }, {
+          "targetPage": "FAQ Announcement",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "FAQMenuResponse",
+              "value": null
+            } ]
+          },
+          "name": "fb8c87d0-844d-4778-adad-f0e5f4ef74ac"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.introvoiceScriptContent" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "$session.params.introvoiceScriptContent" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.FAQMenuResponse != null AND $session.params.FAQMenuResponse = \"Yes\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "FAQMenuResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "FAQ Announcement",
+    "name": "c271f404-999b-4a24-9f76-fd9d5e783c0f"
+  }, {
+    "condition": "$session.params.FAQMenuResponse != null AND $session.params.FAQMenuResponse = \"No\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "FAQMenuResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "Check Caller Id \u0026 Int_Label 1",
+    "name": "209d284c-a3b9-49ab-a8e1-7d792689ff51"
+  } ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@837005415:1709112491457" name="FMAA_MN_001_Call" version="6.0.1">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709112493576">
+<config>
+<argument_data>
+<data name="MenuID">FMAA_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

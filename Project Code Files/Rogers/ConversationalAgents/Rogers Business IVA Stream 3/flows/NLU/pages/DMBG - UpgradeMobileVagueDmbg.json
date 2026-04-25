@@ -1,0 +1,103 @@
+{
+  "name": "eab2e982-71d2-4592-bcbb-81cde4e74ff2",
+  "displayName": "DMBG - UpgradeMobileVagueDmbg",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Que souhaitez-vous faire : dites « mettre à niveau mon appareil » ou « modifier mon forfait mobile »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Which would you like: say \"upgrade my device\" or \"change my mobile plan\"." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - upgrade-vague - Updgrade Device",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "hardware-upgrade"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "e_UpgradeMobileVagueDmbg",
+        "value": "upgrade_device"
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "0931ab2d-f30d-455e-8967-8cb5f6d77603"
+  }, {
+    "intent": "DMBG - upgrade-vague - Change Mobile Plan",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "price-plan-change"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "e_UpgradeMobileVagueDmbg",
+        "value": "change_plan"
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "8e2fd3ac-13f6-46fb-a9a6-6ce42b940af0"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "6904bf66-0814-4825-a7e1-1f8071eb6268"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "ee535efe-fad3-40c6-bf25-1449e7c8d4f5"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

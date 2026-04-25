@@ -1,0 +1,60 @@
+{
+  "name": "7e0ddf4d-e572-4759-bacd-0d6b94a79d05",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Does your business phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yes "
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your business phone equipment. Please ensure you're calling from a different phone than the one you need help with."
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "false",
+      "numberOfPhone": "1",
+      "productLabelsMixEn": "Home Phone,Business Phone,Home Security,Mobile"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportbusinessPhone",
+      "completedSSName": "passive-techSupportbusinessPhone",
+      "noWBPhone": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportbusinessPhone",
+      "reportingVar_completedSSName": "passive-techSupportbusinessPhone",
+      "savedIntent": "wireless-support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220002283"
+      }
+    }
+  },
+  "displayName": "CustomerIdentified-No",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 337,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

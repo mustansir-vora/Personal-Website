@@ -1,0 +1,7 @@
+{
+  "name": "b4087c84-052a-4c3e-92fc-c36350d6d1ec",
+  "displayName": "satellite-support",
+  "priority": 500000,
+  "description": "Handles calls with satellite issue for business customers.",
+  "numTrainingPhrases": 14
+}

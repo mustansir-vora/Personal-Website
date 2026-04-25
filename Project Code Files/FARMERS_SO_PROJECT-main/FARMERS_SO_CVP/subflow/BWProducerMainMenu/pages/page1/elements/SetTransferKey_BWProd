@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@2096563475:1712048959751" name="SetTransferKey_BWProd" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.SetTransferKey_BWProd</source>
+</config>
+</action>

@@ -1,0 +1,20 @@
+{
+  "name": "b16c01a1-7349-48d9-99d6-1bdee3be319e",
+  "displayName": "On returnToNLU",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.returnToNLU",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "name": "b075de2d-971e-492f-9958-4823fd0a1ba6"
+  } ]
+}

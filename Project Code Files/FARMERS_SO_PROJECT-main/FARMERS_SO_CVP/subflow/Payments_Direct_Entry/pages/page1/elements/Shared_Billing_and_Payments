@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1360506602:1707993833730" name="Shared_Billing_and_Payments" version="6.0.1">
+<subflow_call subflow_name="SharedBillingPayments" target="Element@31:1712157465400">
+<config/>
+</subflow_call>
+</connector>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@804744955:1732797048263" name="FNWL_Shared_Transfer" version="6.0.1">
+<subflow_call subflow_name="FNWL_Transfer" target="Element@31:1733821943517">
+<config/>
+</subflow_call>
+</connector>

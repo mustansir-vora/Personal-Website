@@ -1,0 +1,139 @@
+{
+  "name": "1767a4bc-7baa-4c28-ab07-b33f63769c02",
+  "displayName": "Update 2nd Install",
+  "form": {
+    "parameters": [ {
+      "displayName": "update2ndInstallSelection",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Selon le changement effectué, vous devez \négalement mettre à jour le montant de votre deuxième versement à \n$ $session.params.updateSecondInstallmentAmount . Puis-je effectuer cette mise à jour \npour vous ? Dites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Based on the change you made, you need to update your second installment to $ $session.params.updateSecondInstallmentAmount .\nCan I update that amount for you? Say yes or press 1, or no or press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "32424c99-649e-466c-adde-9d8400b38c50"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Selon le changement effectué, vous devez \r\négalement mettre à jour le montant de votre deuxième versement à \r\n$ $session.params.updateSecondInstallmentAmount . Puis-je effectuer cette mise à jour \r\npour vous ? Dites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Based on the change you made, you need to update your second installment to $ $session.params.updateSecondInstallmentAmount .\r\nCan I update that amount for you? Say yes or press 1, or no or press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "bd25729a-c6a9-4cbc-921c-2a1de42a9d92"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour mettre à jour votre deuxième versement \nà $ $session.params.updateSecondInstallmentAmount , appuyez sur le 1. Sinon, appuyez \nsur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To update your second installment to $ $session.params.updateSecondInstallmentAmount , press 1. Otherwise, press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "3650413a-835b-4c23-a149-60397f5716a2"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour mettre à jour votre deuxième versement \r\nà $ $session.params.updateSecondInstallmentAmount , appuyez sur le 1. Sinon, appuyez \r\nsur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To update your second installment to $ $session.params.updateSecondInstallmentAmount , press 1. Otherwise, press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6036b474-570f-4a8f-913f-0b0b07d06bd6"
+        }, {
+          "targetPage": "PTP Offer Best Option",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "eeed916c-a6bf-4456-9718-de52f484289b"
+        }, {
+          "targetPage": "PTP Offer Best Option",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "e98a85d3-a9f7-4726-9dd8-dcee2eac5860"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Selon le changement effectué, vous devrez aussi \nmettre à jour le montant de votre deuxième versement à \n$ $session.params.updateSecondInstallmentAmount . Souhaitez-vous que je fasse ce \nchangement ? " ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Based on the change you made, you’ll also need to update the amount of your second installment to $ $session.params.updateSecondInstallmentAmount . Should I go ahead and make that change?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.update2ndInstallSelection = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "firstPromiseAmount",
+        "value": "$session.params.collectedPtpAmount"
+      }, {
+        "parameter": "firstPromiseDate",
+        "value": "$session.params.collectedPtpDate"
+      }, {
+        "parameter": "secondPromiseAmount",
+        "value": "$session.params.updateSecondInstallmentAmount"
+      }, {
+        "parameter": "secondPromiseDate",
+        "value": "$session.params.datePromised2"
+      }, {
+        "parameter": "paymentMethod",
+        "value": "$session.params.collectedPtpMethod"
+      } ]
+    },
+    "targetPage": "Return From Change 1st PTP Amount",
+    "name": "0fa1dc10-7e36-4a62-ba18-4ca860b3df53"
+  }, {
+    "condition": "$session.params.update2ndInstallSelection = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "62968591-c0d1-42a0-996d-b4a995d9864d"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

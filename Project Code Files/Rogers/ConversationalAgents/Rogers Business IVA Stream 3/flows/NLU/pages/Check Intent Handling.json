@@ -1,0 +1,120 @@
+{
+  "name": "c98bd6f0-e995-41eb-99d6-eeba05066460",
+  "displayName": "Check Intent Handling",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "intent-confidence",
+      "value": "$request.nlu-confidence-score"
+    }, {
+      "parameter": "reportingVar_intent",
+      "value": "$session.params.savedIntent"
+    }, {
+      "parameter": "reportingVar_intentGroup",
+      "value": "$session.params.nluConfig.intentGroup"
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.mwInstance = \"prod\""
+      }, {
+        "condition": "$session.params.mwInstance = $session.params.loadTestEnv",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "L'intention est $session.params.savedIntent" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Intent is $session.params.savedIntent" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = agent-request",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Destination Type",
+    "name": "21fe175d-c656-46aa-8cd7-63e1bd7f478f"
+  }, {
+    "condition": "$session.params.savedIntent = \"nlu-main-menu\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Destination Type",
+    "name": "de7b58c5-b6d8-4d5c-ac89-3cd5ad71b776"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = Reprompt",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "repromptCounter",
+        "value": "$sys.func.ADD($session.params.repromptCounter, 1)"
+      } ]
+    },
+    "targetPage": "Check Reprompt Attempts",
+    "name": "d4881fc4-5aa8-417b-8cb6-95573353c6c9"
+  }, {
+    "condition": "$session.params.fromFallback = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fromFallback",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check Destination Type",
+    "name": "baa22ac3-0ce3-42cd-a8f4-1efe2ffcc082"
+  }, {
+    "condition": "$session.params.fromRule = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fromRule",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check Destination Type",
+    "name": "fa9f4f25-b387-4024-82f2-cd9e2b8c0654"
+  }, {
+    "condition": "$session.params.fromDmbg = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fromDmbg",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check Destination Type",
+    "name": "9291f041-51f1-4429-9708-609d515880bc"
+  }, {
+    "condition": "$session.params.skipConfirmation = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Destination Type",
+    "name": "9919e4eb-6533-4464-bc0c-f80bf4fc19a6"
+  }, {
+    "condition": "$session.params.intent-confidence \u003e= 0.7",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Landmark Confirmation",
+    "name": "56be9ae9-5059-40af-a230-bac6060a441c"
+  }, {
+    "condition": "$session.params.intent-confidence \u003e= 0.35 AND $session.params.intent-confidence \u003c 0.7",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "implicitTriesCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Play Implicit Confirmation",
+    "name": "87a6b892-9528-4f93-8088-eee1490223db"
+  } ]
+}

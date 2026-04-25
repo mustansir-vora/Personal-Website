@@ -1,0 +1,173 @@
+{
+  "name": "c5601f91-f979-49db-bf81-52d4f97e0bdc",
+  "displayName": "More Hold On Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "If you still need more time. Say, more time" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Si vous avez encore besoin de temps, dites « plus de temps »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that. If you still need more time. Say, more time" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Désolé je n'ai pas compris. Si vous avez encore besoin de temps, dites \"plus de temps\"." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that. If you still need more time. Say, more time" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Désolé je n'ai pas entendu. Si vous avez encore besoin de temps, dites \"plus de temps\"" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I still couldn't hear that. If you still need more time. Say, more time or press 9" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Désolé, je n'ai toujours pas entendu. Si vous avez besoin de plus de temps, dites « Plus de temps » ou appuyez sur 9." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i still didn't get that. If you still need more time. Say, more time or press 9" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai toujours pas compris. Si vous avez besoin de plus de temps, dites « Plus de temps » ou appuyez sur 9." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "HoldOnMenu-Continue",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "a0fae3ba-f8a5-4fe1-ba6d-628dc5b4f912"
+  }, {
+    "intent": "MoreHoldOnMn-MoreTime",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfHolds",
+        "value": "$sys.func.ADD($session.params.numberOfHolds,1)"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Hold On Menu",
+    "name": "24424547-9582-45f1-9965-202eb8147f27"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "ce255812-9412-4438-8c41-129dcdb3c2a5"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "numberOfHolds",
+        "value": 0
+      }, {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      } ]
+    },
+    "targetFlow": "Global Error Handling",
+    "name": "4e133ed0-ccd3-42a7-912d-baa1a94a4fbe"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "1bb9e224-0f89-466d-a977-08a25ca2b370"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "4e90ee54-9b4c-413f-9fd5-5947f574162d"
+  } ]
+}

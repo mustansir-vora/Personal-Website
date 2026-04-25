@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@275132949:1730261606836" name="KYCAF_MN_002_Call" version="6.0.1">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1750274245013">
+<config>
+<argument_data>
+<data name="MenuID">KYCAF_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

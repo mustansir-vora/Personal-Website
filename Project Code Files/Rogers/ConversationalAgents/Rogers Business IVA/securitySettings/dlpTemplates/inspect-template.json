@@ -1,0 +1,165 @@
+{
+  "templateId": "r4b-dlp-inspect",
+  "inspectTemplate": {
+    "displayName": "R4B DLP Inspect Template",
+    "description": "Detects customer PII plus common spoken/transcribed contextual variants for Dialogflow CX redaction.",
+    "inspectConfig": {
+      "infoTypes": [
+        { "name": "EMAIL_ADDRESS" },
+        { "name": "STREET_ADDRESS" },
+        { "name": "LOCATION" },
+        { "name": "CANADA_BANK_ACCOUNT" },
+        { "name": "CANADA_SOCIAL_INSURANCE_NUMBER" },
+        { "name": "PERSON_NAME" },
+        { "name": "CANADA_DRIVERS_LICENSE_NUMBER" },
+        { "name": "DATE_OF_BIRTH" },
+        { "name": "CREDIT_CARD_NUMBER" }
+      ],
+      "minLikelihood": "POSSIBLE",
+      "limits": {},
+      "customInfoTypes": [
+        {
+          "infoType": { "name": "ROGERS_CONTEXTUAL_NAME" },
+          "regex": {
+            "pattern": "(?i)\\b(?:(?:my\\s+)?(?:first\\s*name|firstname|last\\s*name|lastname|name|full\\s*name)\\s*(?:is|=|:)?\\s*[A-Za-z][A-Za-z'\\-]{0,49}|(?:mon\\s+)?(?:pr[eé]nom|nom(?:\\s+de\\s+famille)?)\\s*(?:est|=|:)?\\s*[A-Za-z][A-Za-z'\\-]{0,49}|je\\s+m['']?appelle\\s+[A-Za-z][A-Za-z'\\-]{0,49})\\b"
+          },
+          "likelihood": "VERY_LIKELY"
+        },
+        {
+          "infoType": { "name": "ROGERS_CONTEXTUAL_DOB" },
+          "regex": {
+            "pattern": "(?i)\\b(?:(?:my\\s+)?(?:date\\s+of\\s+birth|birth\\s*date|dob)\\s*(?:is|=|:)?\\s*(?:\\d{4}[\\/-]\\d{1,2}[\\/-]\\d{1,2}|\\d{1,2}[\\/-]\\d{1,2}[\\/-]\\d{2,4}|(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\\.?\\s+\\d{1,2}(?:st|nd|rd|th)?(?:,)?\\s+\\d{2,4}))\\b"
+          },
+          "likelihood": "VERY_LIKELY"
+        },
+        {
+          "infoType": { "name": "ROGERS_CONTEXTUAL_EMAIL" },
+          "regex": {
+            "pattern": "(?i)\\b(?:(?:my\\s+)?(?:email|email\\s+address|e-mail|e-mail\\s+address)\\s*(?:is|=|:)?\\s*[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,})\\b"
+          },
+          "likelihood": "VERY_LIKELY"
+        },
+        {
+          "infoType": { "name": "ROGERS_CONTEXTUAL_ADDRESS" },
+          "regex": {
+            "pattern": "(?i)\\b(?:(?:my|the)?\\s*(?:home|service|billing|mailing|shipping)?\\s*address\\s*(?:is|=|:)?\\s*(?:apt\\.?\\s*\\w+[\\s,.-]*)?\\d{1,6}[A-Za-z]?(?:\\s+[A-Za-z0-9][A-Za-z0-9'.,#\\-/]*){1,8}|\\d{1,6}[A-Za-z]?(?:\\s+[A-Za-z0-9][A-Za-z0-9'.,#\\-/]*){1,6}\\s+(?:street|st|avenue|ave|road|rd|lane|ln|drive|dr|boulevard|blvd|court|ct|crescent|cres|way|terrace|ter|parkway|pkwy))\\b"
+          },
+          "likelihood": "VERY_LIKELY"
+        },
+        {
+          "infoType": { "name": "ROGERS_CONTEXTUAL_CARD" },
+          "regex": { "pattern": "\\b\\d(?:[ -]*\\d){12,15}\\b" },
+          "likelihood": "UNLIKELY",
+          "sensitivityScore": { "score": "SENSITIVITY_HIGH" }
+        },
+        {
+          "infoType": { "name": "ROGERS_CONTEXTUAL_BANK_ACCOUNT" },
+          "regex": { "pattern": "\\b\\d(?:[ -]*\\d){6,16}\\b" },
+          "likelihood": "UNLIKELY",
+          "sensitivityScore": { "score": "SENSITIVITY_HIGH" }
+        },
+        {
+          "infoType": { "name": "ROGERS_CONTEXTUAL_SIN" },
+          "regex": { "pattern": "\\b\\d(?:[ -]?\\d){8}\\b" },
+          "likelihood": "UNLIKELY",
+          "sensitivityScore": { "score": "SENSITIVITY_HIGH" }
+        },
+        {
+          "infoType": { "name": "ROGERS_CONTEXTUAL_DRIVERS_LICENSE" },
+          "regex": {
+            "pattern": "(?i)\\b(?:(?:my\\s+)?(?:driver['']?s?\\s*(?:licen[cs]e|licence|license)|licen[cs]e\\s*number|driver['']?s?\\s*licence\\s*number|driver['']?s?\\s*license\\s*number)\\s*(?:is|=|:)?\\s*[A-Z0-9][A-Z0-9\\s-]{4,19})\\b"
+          },
+          "likelihood": "VERY_LIKELY"
+        },
+        {
+          "infoType": { "name": "ROGERS_ACCOUNT_NUMBER" },
+          "regex": {
+            "pattern": "(?i)\\b(?:account(?:\\s*(?:number|no|#))?|acct)\\s*(?:is|=|:)?\\s*\\d(?:[\\s-]*\\d){7,19}\\b"
+          },
+          "likelihood": "VERY_LIKELY"
+        },
+        {
+          "infoType": { "name": "ROGERS_ACCOUNT_PIN" },
+          "regex": { "pattern": "\\b\\d(?:[ -]*\\d){3}\\b" },
+          "likelihood": "UNLIKELY",
+          "sensitivityScore": { "score": "SENSITIVITY_HIGH" }
+        }
+      ],
+      "ruleSet": [
+        {
+          "infoTypes": [{ "name": "PERSON_NAME" }],
+          "rules": [
+            {
+              "exclusionRule": {
+                "regex": { "pattern": "(?i)rogers" },
+                "matchingType": "MATCHING_TYPE_FULL_MATCH"
+              }
+            }
+          ]
+        },
+        {
+          "infoTypes": [{ "name": "ROGERS_CONTEXTUAL_BANK_ACCOUNT" }],
+          "rules": [
+            {
+              "hotwordRule": {
+                "hotwordRegex": {
+                  "pattern": "(?i)\\b(bank|banque|account|compte|routing|routage|transit|institution|checking|chequing|ch[eè]ques|savings|[eé]pargne|deposit|d[eé]p[oô]t|wire|virement|transfert|void|sp[eé]cimen)\\b"
+                },
+                "proximity": { "windowBefore": 100, "windowAfter": 100 },
+                "likelihoodAdjustment": { "fixedLikelihood": "VERY_LIKELY" }
+              }
+            }
+          ]
+        },
+        {
+          "infoTypes": [{ "name": "ROGERS_ACCOUNT_PIN" }],
+          "rules": [
+            {
+              "hotwordRule": {
+                "hotwordRegex": {
+                  "pattern": "(?i)\\b(pin|nip|code|access|secret|acc[eè]s|identification|personnel|identification)\\b"
+                },
+                "proximity": { "windowBefore": 100, "windowAfter": 100 },
+                "likelihoodAdjustment": { "fixedLikelihood": "VERY_LIKELY" }
+              }
+            }
+          ]
+        },
+        {
+          "infoTypes": [
+            { "name": "ROGERS_CONTEXTUAL_SIN" },
+            { "name": "CANADA_SOCIAL_INSURANCE_NUMBER" }
+          ],
+          "rules": [
+            {
+              "hotwordRule": {
+                "hotwordRegex": {
+                  "pattern": "(?i)\\b(sin|nas|ssn|social|insurance|assurance|sociale|num[eé]ro)\\b"
+                },
+                "proximity": { "windowBefore": 100, "windowAfter": 100 },
+                "likelihoodAdjustment": { "fixedLikelihood": "VERY_LIKELY" }
+              }
+            }
+          ]
+        },
+        {
+          "infoTypes": [
+            { "name": "ROGERS_CONTEXTUAL_CARD" },
+            { "name": "CREDIT_CARD_NUMBER" }
+          ],
+          "rules": [
+            {
+              "hotwordRule": {
+                "hotwordRegex": {
+                  "pattern": "(?i)\\b(card|carte|cr[eé]dit|credit|d[eé]bit|debit|visa|mastercard|amex|account|compte|paiement|payment|cc|billing|facturation)\\b"
+                },
+                "proximity": { "windowBefore": 100, "windowAfter": 100 },
+                "likelihoodAdjustment": { "fixedLikelihood": "VERY_LIKELY" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

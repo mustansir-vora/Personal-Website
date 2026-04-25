@@ -1,0 +1,30 @@
+{
+  "name": "113a5f0f-4223-44fb-90e3-f0dde71fcafd",
+  "displayName": "Set PTP Check Date Params",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "numberOfInstalls",
+      "value": 1
+    }, {
+      "parameter": "promiseMethod",
+      "value": "$session.params.collectedPtpMethod"
+    }, {
+      "parameter": "promiseAmount",
+      "value": "$session.params.collectedPtpAmount"
+    }, {
+      "parameter": "promiseDate",
+      "value": "$session.params.collectedPtpDate"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "71022f81-11f3-416d-a2ad-c58e7b93affd"
+  } ]
+}

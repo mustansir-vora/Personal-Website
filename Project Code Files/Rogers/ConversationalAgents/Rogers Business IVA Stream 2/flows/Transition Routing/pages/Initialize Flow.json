@@ -1,0 +1,21 @@
+{
+  "name": "001e46b4-aa7b-42a1-b44f-89439921f4a6",
+  "displayName": "Initialize Flow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "mainMenuRequestCounter",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Route Based On Incoming Request",
+    "name": "b487041f-eb1a-491b-a20a-715a2fcbbf33"
+  } ]
+}

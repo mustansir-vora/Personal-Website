@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I want to change the payment to "
+    }, {
+      "text": "400",
+      "parameterId": "changePTPAmount"
+    }, {
+      "text": " dollars."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Adjust the payment to "
+    }, {
+      "text": "$300",
+      "parameterId": "changePTPAmount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I make the payment "
+    }, {
+      "text": "200",
+      "parameterId": "changePTPAmount"
+    }, {
+      "text": " dollars?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Change the payment to "
+    }, {
+      "text": "150",
+      "parameterId": "changePTPAmount"
+    }, {
+      "text": " dollars"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

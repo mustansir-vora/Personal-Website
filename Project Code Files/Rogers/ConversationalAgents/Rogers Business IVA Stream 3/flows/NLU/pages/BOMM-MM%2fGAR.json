@@ -1,0 +1,95 @@
+{
+  "name": "75ec8e7b-aac1-4e8d-8f2e-55d81a25a340",
+  "displayName": "BOMM-MM/GAR",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "To make a payment or access other self-serve transactions, Press 1\nFor Sales, Press 2\nFor Technical Support, Press 3\nFor all other inquiries, Press 4" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Pour qu’on puisse vous diriger au bon endroit, veuillez choisir l’une des options suivantes :\r\nPour faire un paiement ou pour accéder à d’autres transactions libre-service, appuyez sur le 1.\r\nPour le service des Ventes, appuyez sur le 2.\r\nPour le soutien technique, appuyez sur le 3.\r\nPour toute autre question, appuyez sur le  4." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "BOMM - Make a payment or other self service",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "billing-vague"
+      }, {
+        "parameter": "fromFallback",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "68aaecf3-81ae-48a9-8317-ce135c857202"
+  }, {
+    "intent": "BOMM - Sales",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "sales-vague"
+      }, {
+        "parameter": "fromFallback",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "d721db38-d754-4e62-83dd-fe68d1f4b51f"
+  }, {
+    "intent": "BOMM - Technical support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "tech-support-vague"
+      }, {
+        "parameter": "fromFallback",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "c64b9baa-8197-4074-bbd7-9b43c99e5a77"
+  }, {
+    "intent": "BOMM - Other inquiries",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "service-vague"
+      }, {
+        "parameter": "fromFallback",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "a467c982-7293-414e-8a3f-286db414b31d"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "c8eb6689-592e-4d87-9f7e-f92c431dbb39"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "BOMM-MMAR",
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+    
+    },
+    "name": "9da1c935-0a6c-4c8b-b5ef-cedb214bb3dd"
+  }, {
+    "targetPage": "BOMM-MMAR",
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+    
+    },
+    "name": "ffcbef69-a627-457a-a58b-caa758bebf80"
+  } ]
+}

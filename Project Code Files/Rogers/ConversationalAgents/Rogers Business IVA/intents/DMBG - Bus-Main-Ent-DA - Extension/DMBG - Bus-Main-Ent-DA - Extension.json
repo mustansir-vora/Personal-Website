@@ -1,0 +1,7 @@
+{
+  "name": "6dd67cc5-079f-42f9-87a8-fa1708c13a52",
+  "displayName": "DMBG - Bus-Main-Ent-DA - Extension",
+  "priority": 500000,
+  "numTrainingPhrases": 7,
+  "dtmfPattern": "1"
+}

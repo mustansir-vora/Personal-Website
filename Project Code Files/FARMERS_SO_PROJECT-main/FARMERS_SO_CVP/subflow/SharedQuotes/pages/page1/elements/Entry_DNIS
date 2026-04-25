@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@825639860:1707305275437" name="Entry_DNIS" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Entry_DNIS" default_exit_state="OTHERS">
+        <exit_state name="FOREMOST" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_UNIQUE_BU" />
+                </data>
+                <constant_string value="FOREMOST" />
+            </string>
+        </exit_state>
+        <exit_state name="FWS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_UNIQUE_BU" />
+                </data>
+                <constant_string value="FWS" />
+            </string>
+        </exit_state>
+        <exit_state name="FARMERS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_UNIQUE_BU" />
+                </data>
+                <constant_string value="FARMERS" />
+            </string>
+        </exit_state>
+        <exit_state name="21ST" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_UNIQUE_BU" />
+                </data>
+                <constant_string value="21ST" />
+            </string>
+        </exit_state>
+        <exit_state name="BW" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_UNIQUE_BU" />
+                </data>
+                <constant_string value="BW" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

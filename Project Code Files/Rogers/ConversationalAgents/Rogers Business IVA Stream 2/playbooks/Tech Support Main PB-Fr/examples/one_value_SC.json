@@ -1,0 +1,46 @@
+{
+  "name": "7f567aed-4f10-4abe-83e9-0f2b5a7c1127",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_service_category_mix_length",
+      "inputActionParameters": {
+        "service": "Mobile"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_support_intent",
+      "inputActionParameters": {
+        "service": "Mobile"
+      },
+      "outputActionParameters": {
+        "result": "wireless-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "If the serviceCategory contains one ",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixFr": "Mobile"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "If the serviceCategory contains more than one value",
+    "actionParameters": {
+      "product": "Mobile",
+      "savedIntent": "wireless-support",
+      "serviceCategoryMixLength": "1"
+    }
+  },
+  "displayName": "one_value_SC",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 187,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

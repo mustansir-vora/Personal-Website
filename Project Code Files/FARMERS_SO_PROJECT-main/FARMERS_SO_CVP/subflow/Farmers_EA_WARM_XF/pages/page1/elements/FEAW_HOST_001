@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1053633732:1758729809500" name="FEAW_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.cancelExpress.MulesoftPolicyLookup</source>
+</config>
+</decision>

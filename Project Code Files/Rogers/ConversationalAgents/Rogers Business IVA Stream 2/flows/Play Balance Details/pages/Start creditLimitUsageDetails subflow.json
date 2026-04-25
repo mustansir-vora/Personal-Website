@@ -1,0 +1,31 @@
+{
+  "name": "58b9a3fd-f85b-4ddd-a4e2-5732b92d2f18",
+  "displayName": "Start creditLimitUsageDetails subflow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.subflowInputs.accountBalance.callCreditLimitUsageDetailsSubflow = true AND $session.params.api.billingProfile.systemOfRecords = \"V21\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"passive-creditLimitUsage\")"
+      } ]
+    },
+    "targetPage": "Check creditLimitAmount",
+    "name": "7a70c802-d7b9-498b-be32-a5e1df30e5af"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start pendingPTPDetails subflow",
+    "name": "533141c6-8a2b-48ce-a201-6b675000c162"
+  } ]
+}

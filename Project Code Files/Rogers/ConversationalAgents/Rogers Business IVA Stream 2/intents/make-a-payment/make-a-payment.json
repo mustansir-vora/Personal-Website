@@ -1,0 +1,7 @@
+{
+  "name": "d3fbdcbc-50b5-4c04-85b4-d092cc391d20",
+  "displayName": "make-a-payment",
+  "priority": 500000,
+  "description": "Handles requests to make a payment on an account.",
+  "numTrainingPhrases": 44
+}

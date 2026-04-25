@@ -1,0 +1,77 @@
+{
+  "name": "a216d88a-fa1e-4b96-b866-61b55ba9d3c2",
+  "displayName": "Switch Language",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "rate",
+      "value": "medium"
+    }, {
+      "parameter": "pitch",
+      "value": "-1st"
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.switchedLanguage = \"fr-CA\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "D'accord." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "D'accord." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "We’ll proceed in English." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "numberOfHolds",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "collectPhoneNumberCounter",
+        "value": 0
+      }, {
+        "parameter": "globalAgentRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "agentRequestCounter",
+        "value": 0
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "7d12c6f5-6c42-46d9-a9be-e152348b4139"
+  } ]
+}

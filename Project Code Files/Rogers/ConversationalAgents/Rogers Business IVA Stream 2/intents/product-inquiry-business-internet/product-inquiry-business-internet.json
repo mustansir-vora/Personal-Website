@@ -1,0 +1,7 @@
+{
+  "name": "c7ef5c48-1f66-4f99-80ed-325fdaff5a5b",
+  "displayName": "product-inquiry-business-internet",
+  "priority": 500000,
+  "description": "Handles calls for business internet poduct inquiry",
+  "numTrainingPhrases": 10
+}

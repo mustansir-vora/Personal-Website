@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@970666575:1707998029044" name="Confirm_Submitted_Today" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Confirm_Submitted_Today" default_exit_state="NO">
+        <exit_state name="YES" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <session name="S_LEAVEAPPLIED" />
+                </data>
+                <constant_number value="1" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

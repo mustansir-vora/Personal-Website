@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@100192256:1708938946110" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708938946110" name="BWProdID" type="Subflow Start" width="133" x="504" y="147">
+<exit_states>
+<exit_state name="next" target="Element@332256022:1709111228046"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2104153204:1708938957753" name="BWProdIDSubflowReturn" type="Subflow Return" width="249" x="467" y="979"/>
+<element height="55" id="Element@332256022:1709111228046" name="BWPID_MN_001_Call" type="Subflow Call" width="213" x="472" y="273">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653664674">
+<config>
+<argument_data>
+<data name="MenuID">BWPID_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1967635046:1710828612361"/>
+</exit_states>
+</element>
+<element height="55" id="Element@297036648:1709111278689" name="WARHEAD_CHECK" type="Subflow Call" width="197" x="483" y="626">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1709111282143">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@476429510:1710828783573"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1967635046:1710828612361" name="BWPID_MN_001_VALUE" type="Decision" width="236" x="467" y="393">
+<exit_states>
+<exit_state name="DONTHAVE" target="Element@1276589610:1712963818657">
+<bendpoint>
+<dim1 x="-266" y="67"/>
+<dim2 x="248" y="69"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SU" target="Element@1083980322:1715171932797"/>
+<exit_state name="NI" target="Element@39915397:1731526543485"/>
+<exit_state name="NM" target="Element@1276589610:1712963818657">
+<bendpoint>
+<dim1 x="-259" y="1"/>
+<dim2 x="96" y="-134"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1767314932:1749649880209">
+<bendpoint>
+<dim1 x="-170" y="99"/>
+<dim2 x="185" y="-36"/>
+</bendpoint>
+</exit_state>
+<exit_state name="New Policy" target="Element@1276589610:1712963818657">
+<bendpoint>
+<dim1 x="-218" y="29"/>
+<dim2 x="137" y="-106"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@476429510:1710828783573" name="BWPID_HOST_001" type="Decision" width="195" x="485" y="746">
+<exit_states>
+<exit_state name="SU" target="Element@1015713408:1711624050834"/>
+<exit_state name="ER" target="Element@1276589610:1712963818657"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1015713408:1711624050834" name="SUCCESS_FAILURE_KEY" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="231" x="477" y="858">
+<exit_states>
+<exit_state name="done" target="Element@2104153204:1708938957753"/>
+</exit_states>
+</element>
+<element height="55" id="Element@232037283:1712071895587" name="Subflow Return_01" type="Subflow Return" width="198" x="124" y="660"/>
+<element height="55" id="Element@1276589610:1712963818657" name="Transfer" type="Subflow Call" width="111" x="175" y="528">
+<subflow_call subflow_name="Transfer" target="Element@31:1712963830264">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@232037283:1712071895587"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1083980322:1715171932797" name="SET_API_NAME" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="498" y="501">
+<exit_states>
+<exit_state name="done" target="Element@297036648:1709111278689"/>
+</exit_states>
+</element>
+<element height="55" id="Element@39915397:1731526543485" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="217" x="816" y="392">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="52" id="Element@1767314932:1749649880209" name="CHECK_HT_TRANSFER" type="Decision" width="217" x="120" y="277">
+<exit_states>
+<exit_state name="YES" target="Element@1276589610:1712963818657"/>
+<exit_state name="NO" target="Element@1276589610:1712963818657">
+<bendpoint>
+<dim1 x="-104" y="127"/>
+<dim2 x="-106" y="-125"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

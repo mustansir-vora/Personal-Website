@@ -1,0 +1,34 @@
+{
+  "name": "4a1ac4a8-73a0-410a-9b2c-d294602a8dc4",
+  "displayName": "outage Status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkOutStatus",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bcInkOutStatus != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId13"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "09597f0f-7c42-485e-a519-22c34ab06caf"
+  }, {
+    "condition": "$session.params.bcInkOutStatus = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkOutStatus",
+        "value": false
+      } ]
+    },
+    "targetPage": "customer Identified",
+    "name": "3e77a6e3-ca7f-418e-8719-2c1d90b8e81f"
+  } ]
+}

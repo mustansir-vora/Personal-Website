@@ -1,0 +1,74 @@
+{
+  "name": "03490f65-6f96-4551-8983-8adef3f65cf5",
+  "displayName": "TvSupportPage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkTvTS",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bcInkTvTS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId7"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "cae88b72-b30d-4311-a655-e848bc552e84"
+  }, {
+    "condition": "$session.params.bcInkTvTS = true AND $session.params.flowLanguage = \"en-US\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkTvTS",
+        "value": false
+      } ]
+    },
+    "name": "12bdd39b-18f4-40e8-a23c-bedb6ad660fc",
+    "targetPlaybook": "TV Technical Support"
+  }, {
+    "condition": "$session.params.bcInkTvTS = true AND $session.params.flowLanguage = \"fr-CA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkTvTS",
+        "value": false
+      } ]
+    },
+    "name": "ba29a1f3-3cc4-472c-9a2c-081853b52370",
+    "targetPlaybook": "TV Technical Support-Fr"
+  }, {
+    "condition": "$session.params.errorMessage = \"codeBlockError\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "applicationError"
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "b5b73073-6b46-42af-b43b-566ca2c3f705"
+  }, {
+    "condition": "$session.params.hasTvProfile = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TechSingleService_Tv",
+    "name": "609cce95-1295-4714-9157-c98dcd1327ab"
+  }, {
+    "condition": "$session.params.hasTvProfile = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CheckSavedIntent_Tv",
+    "name": "59efe5b2-6d11-4bf9-85bb-d620c68fcf6b"
+  } ]
+}

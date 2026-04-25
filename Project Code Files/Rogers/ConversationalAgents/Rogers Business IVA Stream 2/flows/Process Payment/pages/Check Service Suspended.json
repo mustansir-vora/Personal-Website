@@ -1,0 +1,25 @@
+{
+  "name": "19d5b859-03f5-4464-b5db-d374a42fce2c",
+  "displayName": "Check Service Suspended",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectionSuspendedInd = false AND $session.params.accountStatusSuspended = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Product On Account",
+    "name": "89b12eaa-321c-45b5-9d84-0a13d4ec0adb"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check From",
+    "name": "5cafbccf-d66f-4661-9b32-6f7c1de60dad"
+  } ]
+}

@@ -1,0 +1,68 @@
+{
+  "name": "7dcc44f6-42a1-4165-9e45-631bf646f24c",
+  "displayName": "Promise To Pay",
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpCallBroadcastMsg",
+        "value": false
+      }, {
+        "parameter": "$session.params.ptpCallCurrentBalanceDetails",
+        "value": false
+      }, {
+        "parameter": "$session.params.ptpCallAskAmount",
+        "value": false
+      }, {
+        "parameter": "currentDate",
+        "value": "$sys.func.FORMAT_DATE($sys.func.NOW(), \"yyyy-MM-dd\")"
+      }, {
+        "parameter": "changeEntity",
+        "value": null
+      }, {
+        "parameter": "ptpCallBillingProfile",
+        "value": false
+      }, {
+        "parameter": "minAmountToCompare",
+        "value": 1
+      }, {
+        "parameter": "maxAmountToCompare",
+        "value": 10000
+      } ]
+    },
+    "targetPage": "Set Initial Params",
+    "name": "053e8224-06ca-4a81-846c-9620861e7679"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "0d0e5418-4df5-4b7e-96e6-f0196fe0e4df"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f0a11c83-8d6b-4c49-b6ef-7b19687ccb52"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,228 @@
+{
+  "name": "53738b64-ba8e-4dbb-b678-aea8a2b3a6d5",
+  "displayName": "Collect Pin",
+  "form": {
+    "parameters": [ {
+      "displayName": "pinCollectionResponse",
+      "required": true,
+      "entityType": "@Pin-Number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm sorry, I couldn't get that. What is your four digit PIN?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Désolé, j'ai pas compris. Quel est votre NIP à quatre chiffres ?" ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "aed53257-095d-4b58-aa35-5bbc01f762a9"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm sorry, I didn't get that. What is your four digit PIN?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Je suis désolé, j'ai pas compris. Quel est votre NIP à quatre chiffres ?" ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "ddc8887f-cc7f-4d26-a210-94868ffa265c"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm sorry, I still couldn't get that. Please enter your 4 digit PIN one digit at a time." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Je suis désolé, j'y arrive toujours pas. Veuillez entrer votre NIP à 4 chiffres un par un." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "782c3583-21aa-47ab-8a6a-0aa52a333ed2"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm sorry, I still didn't get that. Please enter your 4 digit PIN one digit at a time." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Je suis désolé, je n'ai toujours pas compris. Veuillez entrer votre NIP à 4 chiffres un par un." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "b0e2d56b-8622-4183-80dc-ed661fabb4d6"
+        }, {
+          "targetPage": "End Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I can't verify that number" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Je ne peux pas vérifier ce numéro." ]
+              },
+              "languageCode": "fr-ca"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "authResult",
+              "value": "Failure"
+            }, {
+              "parameter": "transferType",
+              "value": "customerError"
+            }, {
+              "parameter": "authFailure",
+              "value": true
+            } ]
+          },
+          "name": "3f405cda-52ca-4d0e-9dac-ef0dc67f0e93"
+        }, {
+          "targetPage": "End Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I can't verify that number" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Je ne peux pas vérifier ce numéro." ]
+              },
+              "languageCode": "fr-ca"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "authResult",
+              "value": "Failure"
+            }, {
+              "parameter": "transferType",
+              "value": "customerError"
+            }, {
+              "parameter": "authFailure",
+              "value": true
+            } ]
+          },
+          "name": "5d43508c-e4db-4f20-b940-a457b82d723c"
+        } ]
+      },
+      "redact": true
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "What is your four digit PIN?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Quel est votre NIP à quatre chiffres ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Pin Number Collection",
+    "condition": "$session.params.pinCollectionResponse != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "pinCollectionResponse",
+        "value": "$sys.func.SUBSTITUTE($session.params.pinCollectionResponse, \"\\s+\", \"\")",
+        "redact": true
+      }, {
+        "parameter": "pin",
+        "value": "$session.params.pinCollectionResponse",
+        "redact": true
+      }, {
+        "parameter": "pinCollectionResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Validation",
+    "name": "b8fe46dd-706d-4e2e-9222-d22d899f4683"
+  }, {
+    "intent": "ReusablePhoneMn-Don't Know",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I'm having trouble. Let me get some help." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Désolé, j'ai un problème. Laissez-moi demander de l'aide." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "authFailure",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "92272865-e550-48c6-891d-be44c8cd102e"
+  }, {
+    "intent": "Pin Number Collection - Hold On",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Hold On",
+    "name": "98d0e584-6182-47e5-ab14-e030077c825d"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "b3740504-bd72-4b41-9676-5d8eba9a909b"
+  }, {
+    "condition": "$session.params.pinCollectionResponse != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "pinCollectionResponse",
+        "value": "$sys.func.SUBSTITUTE($session.params.pinCollectionResponse, \"\\s+\", \"\")",
+        "redact": true
+      }, {
+        "parameter": "pin",
+        "value": "$session.params.pinCollectionResponse",
+        "redact": true
+      }, {
+        "parameter": "pinCollectionResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Validation",
+    "name": "0f642036-c522-493e-86eb-8ecaba2aac71"
+  } ]
+}

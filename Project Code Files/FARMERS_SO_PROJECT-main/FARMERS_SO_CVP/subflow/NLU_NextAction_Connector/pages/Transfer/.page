@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1993586675:1711455247679" name="Transfer" version="6.0.1">
+<element height="55" id="Element@495250323:1711455247679" name="Transfer" type="Page Entry" width="111" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@652756145:1711455261413"/>
+</exit_states>
+</element>
+<element height="55" id="Element@652756145:1711455261413" name="SetTransferKey_BC" type="Decision" width="192" x="279" y="133">
+<exit_states>
+<exit_state name="done" target="Element@1952344616:1711455279877"/>
+<exit_state name="ER" target="Element@1952344616:1711455279877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1952344616:1711455279877" name="Transfer" type="Subflow Call" width="140" x="282" y="230">
+<subflow_call subflow_name="Transfer" target="Element@31:1711455012946">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1452934401:1711553984810"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1452934401:1711553984810" name="End" type="Subflow Return" width="148" x="287" y="313"/>
+</page>

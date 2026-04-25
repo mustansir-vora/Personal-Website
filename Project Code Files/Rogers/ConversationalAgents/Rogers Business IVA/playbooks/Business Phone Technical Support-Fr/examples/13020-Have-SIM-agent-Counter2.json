@@ -1,0 +1,42 @@
+{
+  "name": "bf3daf51-44f9-46bd-927e-f23974fae21b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone d’affaires a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je souhaite parler avec un représentant"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "1"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInputBP": "agent"
+    }
+  },
+  "displayName": "13020-Have-SIM-agent-Counter2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 162,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

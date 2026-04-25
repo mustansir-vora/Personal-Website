@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2027135039:1724179119382" name="Lang_check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.CallerVerification.CV_Lang_Check</source>
+</config>
+</decision>

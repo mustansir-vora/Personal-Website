@@ -1,0 +1,42 @@
+{
+  "name": "a2c72464-b76c-4657-a25a-4edb2ec79b7e",
+  "displayName": "Update Multiple Check Intent",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = payment-arrangement",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Update Multiple Second Install",
+    "name": "76ce2cda-1c83-4552-917c-249630604416"
+  }, {
+    "condition": "$session.params.savedIntent = report-a-payment",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Parfait ! Merci d’avoir signalé votre \r\npaiement. Nous mettrons votre \r\ncompte à jour dès que le paiement \r\nsera reçu. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Great! Thank you for reporting your payment. We’ll update your account once we receive the payment." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "c965578a-6b6d-4bd6-a5fb-fa7ba310d2be"
+  } ]
+}

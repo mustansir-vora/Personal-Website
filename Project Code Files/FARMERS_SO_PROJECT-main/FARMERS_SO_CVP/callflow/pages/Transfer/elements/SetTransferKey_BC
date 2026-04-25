@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1391435462:1711784523557" name="SetTransferKey_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.SetTransferKey_BC</source>
+</config>
+</decision>

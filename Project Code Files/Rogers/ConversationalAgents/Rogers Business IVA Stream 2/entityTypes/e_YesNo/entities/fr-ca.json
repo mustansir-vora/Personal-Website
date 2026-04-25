@@ -1,0 +1,13 @@
+{
+  "entities": [ {
+    "value": "yes",
+    "synonyms": [ "oui" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "1"
+  }, {
+    "value": "no",
+    "synonyms": [ "non" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "2"
+  } ]
+}

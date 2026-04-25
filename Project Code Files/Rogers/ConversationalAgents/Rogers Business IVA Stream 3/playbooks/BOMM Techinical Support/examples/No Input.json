@@ -1,0 +1,42 @@
+{
+  "name": "61477d93-5d9b-4a5c-b180-f11562d588e0",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Internet,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": " Please say Internet,Tv or Mobile"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Internet,Tv, Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "savedIntent": "technical-support-vague"
+    }
+  },
+  "displayName": "No Input",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 181,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

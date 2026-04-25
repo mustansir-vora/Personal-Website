@@ -1,0 +1,145 @@
+{
+  "name": "57c83b00-b6e0-40ae-936e-e52e83b386d8",
+  "displayName": "Offer Best Option PB",
+  "form": {
+    "parameters": [ {
+      "displayName": "bestOptionPB",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seriez-vous en mesure d’effectuer un \npaiement de $ $session.params.recomInstallAmount1 d’ici le $session.params.api.response.ptp.pbInstallmentDate1 et un \ndeuxième paiement de $ $session.params.recomInstallAmount2 d’ici le \n$session.params.api.response.ptp.pbInstallmentDate2 ? Dites « oui » ou appuyez sur le 1. « Non » ou \nappuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Would you be able to make a payment of $ $session.params.recomInstallAmount1 by $session.params.api.response.ptp.pbInstallmentDate1 … and a second payment of $ $session.params.recomInstallAmount2 by $session.params.api.response.ptp.pbInstallmentDate2 ? Say yes, or press 1. No, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "e717dd84-a1b7-41c2-b2b1-7db460d137a3"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seriez-vous en mesure d’effectuer un \r\npaiement de $ $session.params.recomInstallAmount1 d’ici le $session.params.api.response.ptp.pbInstallmentDate1 et un \r\ndeuxième paiement de $ $session.params.recomInstallAmount2 d’ici le \r\n$session.params.api.response.ptp.pbInstallmentDate2 ? Dites « oui » ou appuyez sur le 1. « Non » ou \r\nappuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Would you be able to make a payment of $ $session.params.recomInstallAmount1 by $session.params.api.response.ptp.pbInstallmentDate1 … and a second payment of $ $session.params.recomInstallAmount2 by $session.params.api.response.ptp.pbInstallmentDate2 ? Say yes, or press 1. No, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a2cfd357-b516-4876-a2b2-89a4d5e53f61"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous pouvez effectuer un paiement de \n$ $session.params.recomInstallAmount1 d’ici le $session.params.api.response.ptp.pbInstallmentDate1 et un deuxième \npaiement de $ $session.params.recomInstallAmount2 d’ici le $session.params.api.response.ptp.pbInstallmentDate2, \nappuyez sur le 1 maintenant. Sinon, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you can make a payment of $ $session.params.recomInstallAmount1 by $session.params.api.response.ptp.pbInstallmentDate1 …and a second payment of $ $session.params.recomInstallAmount2 by $session.params.api.response.ptp.pbInstallmentDate2, press 1 now. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2abfadf7-78f0-47af-92ab-ffb729eb5322"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous pouvez effectuer un paiement de \r\n$ $session.params.recomInstallAmount1 d’ici le $session.params.api.response.ptp.pbInstallmentDate1 et un deuxième \r\npaiement de $ $session.params.recomInstallAmount2 d’ici le $session.params.api.response.ptp.pbInstallmentDate2, \r\nappuyez sur le 1 maintenant. Sinon, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you can make a payment of $ $session.params.recomInstallAmount1 by $session.params.api.response.ptp.pbInstallmentDate1 …and a second payment of $ $session.params.recomInstallAmount2 by $session.params.api.response.ptp.pbInstallmentDate2, press 1 now. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "68bff2ef-acc4-4cd4-b989-aeebd36532f7"
+        }, {
+          "targetPage": "PTP Fail",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "879c6682-03f5-40ba-8ed9-e121e46cbed9"
+        }, {
+          "targetPage": "PTP Fail",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "34dbfe98-d11f-45c1-a111-cc0d27a12b81"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ " Seriez-vous en mesure d’effectuer un paiement \nde $ $session.params.recomInstallAmount1 d’ici le $session.params.api.response.ptp.pbInstallmentDate1 et un deuxième \npaiement de $ $session.params.recomInstallAmount2 d’ici le $session.params.api.response.ptp.pbInstallmentDate2 ? " ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Would you be able to make a payment of $ $session.params.recomInstallAmount1 by $session.params.api.response.ptp.pbInstallmentDate1 … and a second payment of $ $session.params.recomInstallAmount2 by $session.params.api.response.ptp.pbInstallmentDate2 ?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bestOptionPB = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfInstalls",
+        "value": 2
+      }, {
+        "parameter": "skipIsThatRight",
+        "value": true
+      }, {
+        "parameter": "promiseMethod",
+        "value": "$session.params.collectedPtpMethod"
+      }, {
+        "parameter": "firstPromiseAmount",
+        "value": "$session.params.recomInstallAmount1"
+      }, {
+        "parameter": "secondPromiseAmount",
+        "value": "$session.params.recomInstallAmount2"
+      }, {
+        "parameter": "firstPromiseDate",
+        "value": "$session.params.api.response.ptp.pbInstallmentDate1"
+      }, {
+        "parameter": "secondPromiseDate",
+        "value": "$session.params.api.response.ptp.pbInstallmentDate2"
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "d1b995d7-fe9a-4761-bdce-72086f845b7f"
+  }, {
+    "condition": "$session.params.bestOptionPB = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Current Balance Split",
+    "name": "dc5bd83b-86b9-480c-a4d1-9fc4b5f735ae"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

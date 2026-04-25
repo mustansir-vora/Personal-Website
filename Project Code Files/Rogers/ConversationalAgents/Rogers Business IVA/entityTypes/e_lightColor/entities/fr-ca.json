@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "green",
+    "synonyms": [ "green", "vert", "vert clignotant", "vert fixe" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "orange",
+    "synonyms": [ "ambre", "orange", "orange clignotant" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "red",
+    "synonyms": [ "red", "rouge", "rouge clignotant", "rouge fixe", "rouge solide", "rouge uni" ],
+    "languageCode": "fr-ca"
+  } ]
+}

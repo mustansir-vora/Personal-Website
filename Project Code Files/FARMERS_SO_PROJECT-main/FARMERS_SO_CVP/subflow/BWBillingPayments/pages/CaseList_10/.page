@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@287200434:1729664774019" name="CaseList_10" version="6.0.1">
+<element height="55" id="Element@2109919327:1729664775242" name="BWBP_MN_011_VALUE" type="Decision" width="218" x="291" y="-350">
+<exit_states>
+<exit_state name="YES" target="Element@1388182036:1729664775242"/>
+<exit_state name="NO" target="Element@320734456:1729664775242"/>
+<exit_state name="NOINPUT" target="Element@320734456:1729664775242">
+<bendpoint>
+<dim1 x="120" y="92"/>
+<dim2 x="-9" y="-78"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@320734456:1729664775242">
+<bendpoint>
+<dim1 x="-8" y="134"/>
+<dim2 x="-137" y="-36"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@320734456:1729664775242">
+<bendpoint>
+<dim1 x="195" y="41"/>
+<dim2 x="-14" y="-83"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1296701890:1729664775242" name="CASELIST_10" type="Page Entry" width="116" x="359" y="-507">
+<exit_states>
+<exit_state name="next" target="Element@652306460:1729664775242"/>
+</exit_states>
+</element>
+<element height="55" id="Element@652306460:1729664775242" name="BWBP_MN_011_Call" type="Subflow Call" width="204" x="316" y="-435">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709109707575">
+<config>
+<argument_data>
+<data name="MenuID">BWBP_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2109919327:1729664775242"/>
+</exit_states>
+</element>
+<element height="50" id="Element@320734456:1729664775242" name="Transfer" type="Page Connector" width="102" x="490" y="-166">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@2032465356:1729664775242" name="Disc" type="Page Connector" width="78" x="275" y="-81">
+<page_connector target="Element@1134908791:1715070588429">Disc<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1388182036:1729664775242" name="Decision_01" type="Decision" width="112" x="85" y="-316">
+<exit_states>
+<exit_state name="ACT" target="Element@2048360109:1729664775242"/>
+<exit_state name="ER" target="Element@320734456:1729664775242">
+<bendpoint>
+<dim1 x="113" y="75"/>
+<dim2 x="-158" y="93"/>
+</bendpoint>
+</exit_state>
+<exit_state name="PEN" target="Element@2048360109:1729664775242">
+<bendpoint>
+<dim1 x="-110" y="48"/>
+<dim2 x="-57" y="-72"/>
+</bendpoint>
+</exit_state>
+<exit_state name="CAN" target="Element@320734456:1729664775242">
+<bendpoint>
+<dim1 x="126" y="30"/>
+<dim2 x="-145" y="48"/>
+</bendpoint>
+</exit_state>
+<exit_state name="REN" target="Element@2048360109:1729664775242">
+<bendpoint>
+<dim1 x="-51" y="77"/>
+<dim2 x="-26" y="-83"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@2048360109:1729664775242" name="Copy_of_EPC_PAYMENTS_US" type="Subflow Call" width="202" x="15" y="-160">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1711717421472">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2032465356:1729664775242"/>
+</exit_states>
+</element>
+</page>

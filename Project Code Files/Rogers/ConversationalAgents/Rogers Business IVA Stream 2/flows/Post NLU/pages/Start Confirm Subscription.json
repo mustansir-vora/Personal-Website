@@ -1,0 +1,18 @@
+{
+  "name": "909956a4-3b48-402f-b8e0-d5253b0ff4b4",
+  "displayName": "Start Confirm Subscription",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Subscription Changed?",
+    "name": "0c32d93b-7187-43b0-be72-75253bb30855"
+  } ]
+}

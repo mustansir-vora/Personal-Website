@@ -1,0 +1,29 @@
+{
+  "name": "d9804e4d-15e9-4a4f-91c2-ea3d1f06c42e",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Does your home phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to go for main menu"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "userInputHPTS": "mainmenu"
+    }
+  },
+  "displayName": "13050-Have-SIM-MainMenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 94,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

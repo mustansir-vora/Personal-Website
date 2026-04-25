@@ -1,0 +1,7 @@
+{
+  "name": "d59a11bb-e456-4feb-a9cc-0a140a8b3c04",
+  "displayName": "DMBG - Bus-TechSupp-CLEC-Wir - Something Else",
+  "priority": 500000,
+  "numTrainingPhrases": 6,
+  "dtmfPattern": "2"
+}

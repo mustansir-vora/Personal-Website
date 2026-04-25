@@ -1,0 +1,63 @@
+{
+  "name": "e02b9d3d-b3e3-4698-bd68-4ff9784bb4f9",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire Internet,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux parler à l'agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore\nÀ propos de quoi appelez-vous ? Vous pouvez dire Internet,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux parler à l'agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "globalAgentRequestCounter": "0",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixFr": "Internet,Télévision,Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInputBMTS": "agent"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-Agent",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 318,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

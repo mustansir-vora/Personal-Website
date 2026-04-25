@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@833644905:1733294758750" name="STR_ADM_003" version="6.0.1">
+<config>
+<source type="Class">com.farmers.adminHost.Routing</source>
+</config>
+</decision>

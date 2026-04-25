@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1311584752:1730827882279" name="Is_Clarifier_Already_Invoked" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">IS_CLARIFIER_ALREADY_INVOKED</setting>
+</settings>
+</config>
+</action_element>

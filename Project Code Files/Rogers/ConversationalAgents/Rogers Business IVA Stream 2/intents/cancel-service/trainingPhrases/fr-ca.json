@@ -1,0 +1,115 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je paie trop cher; je veux annuler "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je "
+    }, {
+      "text": "change"
+    }, {
+      "text": " de fournisseur; je veux annuler "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez annuler "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je quitte le pays et je n’ai pas besoin de "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": " Internet et téléphoniques."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne suis pas satisfait et je veux annuler "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux arrêter tous les frais; j’annule "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je "
+    }, {
+      "text": "ferme"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": " et je voudrais annuler "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Tellement déçu et je veux annuler "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n’ai pas besoin "
+    }, {
+      "text": "des services"
+    }, {
+      "text": " que j’ai."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux annuler "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte immédiatement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "190c34aa-7e4c-46dc-91bd-fb3ad70e4163",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone résidentiel a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je souhaite parler avec un représentant"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\nVotre téléphone résidentiel a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux parler à l'agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInput": "agent"
+    }
+  },
+  "displayName": "13050-Have-SIM-Agent",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 286,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

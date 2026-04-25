@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@944246218:1712652337841" name="PromoteToSession_02" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Included</setting>
+<setting name="sessNames">S_ADDITIONAL_CHARGE_TYPE</setting>
+</settings>
+</config>
+</action_element>

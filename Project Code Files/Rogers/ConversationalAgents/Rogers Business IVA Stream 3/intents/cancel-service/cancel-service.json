@@ -1,0 +1,7 @@
+{
+  "name": "3fc18222-53b4-4bc3-82c6-2a88acfc128c",
+  "displayName": "cancel-service",
+  "priority": 500000,
+  "description": "Handles request to cancel a business account",
+  "numTrainingPhrases": 20
+}

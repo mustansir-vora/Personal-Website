@@ -1,0 +1,187 @@
+{
+  "trainingPhrases": [ {
+    "id": "043c7da3-8d38-449c-9e82-0d51edc74440",
+    "parts": [ {
+      "text": "yeah go with my account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "86e984c1-7c30-4399-8762-1939705fa1c2",
+    "parts": [ {
+      "text": "yay"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f67f5a4d-81ed-43ee-add0-cb38b1085675",
+    "parts": [ {
+      "text": "true"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "62ee6e6a-1d02-47c7-a388-5df5dc849330",
+    "parts": [ {
+      "text": "correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e38ede39-188d-471a-bb53-c4cbad6237ba",
+    "parts": [ {
+      "text": "positive"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6d4c28e3-4e3b-45c4-b057-ec62aca95f77",
+    "parts": [ {
+      "text": "yes sir"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ad817c2d-847d-4f27-bce9-ac48be646c63",
+    "parts": [ {
+      "text": "yup"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "4dd12ddd-e63f-462a-b2b6-8f9f0077472b",
+    "parts": [ {
+      "text": "ya"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "609bfbc3-c3f6-4ce6-a207-d344f7c66e84",
+    "parts": [ {
+      "text": "yes"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "25648542-2b98-44e7-9038-512131964f92",
+    "parts": [ {
+      "text": "the first"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "en-ca"
+  }, {
+    "id": "12b59f68-6344-486f-bb10-499f70631a7a",
+    "parts": [ {
+      "text": "make it the first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "60864fb6-e122-40c7-a56b-f9ab6a3493e9",
+    "parts": [ {
+      "text": "alright, first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d552c196-e7c9-4d3e-8c5a-ee950e0a4cc8",
+    "parts": [ {
+      "text": "that's the first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a3dfd9ff-0384-4af6-9dc7-1dff05a132b0",
+    "parts": [ {
+      "text": "I'll take the first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9200ff1d-91e2-4fd6-b463-ceb424cb6b16",
+    "parts": [ {
+      "text": "I want the first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3bb2ee70-47e8-4c7a-8008-bb049051adc8",
+    "parts": [ {
+      "text": "option one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9b752b10-ebe1-419d-8439-a4db5045eca3",
+    "parts": [ {
+      "text": "select the first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "72862b68-1d7d-4169-9991-83d56eefa0da",
+    "parts": [ {
+      "text": "okay, first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "561b41eb-47d5-4966-bea5-a9e85069cf32",
+    "parts": [ {
+      "text": "yes, the first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7734df77-4bed-46e8-a788-c81e84b3f0e1",
+    "parts": [ {
+      "text": "number one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e3fc774b-4294-45ed-bc4d-b4a66512caae",
+    "parts": [ {
+      "text": "the first option"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c6546657-b0a5-4bac-83f1-a8c0f70821cb",
+    "parts": [ {
+      "text": "I choose one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a89c1182-080c-4882-a0d2-092c89706c07",
+    "parts": [ {
+      "text": "the first choice"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a6be2d06-aff2-4c73-a7f4-705c46898fbc",
+    "parts": [ {
+      "text": "one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1ea827c4-05ba-4786-8d2c-d0fbfc96dda8",
+    "parts": [ {
+      "text": "go with "
+    }, {
+      "text": "first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "29a2c0a4-8b99-4b17-86e9-f3ebc23fad29",
+    "parts": [ {
+      "text": "first one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

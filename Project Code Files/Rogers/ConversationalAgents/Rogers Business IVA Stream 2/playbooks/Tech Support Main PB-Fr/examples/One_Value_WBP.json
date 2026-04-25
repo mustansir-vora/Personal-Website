@@ -1,0 +1,47 @@
+{
+  "name": "f6ea53c1-04f9-40a4-9357-185b7113043c",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_service_category_mix_length",
+      "inputActionParameters": {
+        "service": "Téléphonie Affaires"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_support_intent",
+      "inputActionParameters": {
+        "service": "Téléphonie Affaires"
+      },
+      "outputActionParameters": {
+        "result": "wireless-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "If the serviceCategory contains one ",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "productLabelMixFr": "Téléphonie Affaires sans fil",
+      "serviceCategoryMixFr": "Téléphonie Affaires"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "If the serviceCategory contains more than one value",
+    "actionParameters": {
+      "product": "Téléphonie Affaires",
+      "savedIntent": "wireless-support",
+      "serviceCategoryMixLength": "1"
+    }
+  },
+  "displayName": "One_Value_WBP",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 207,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

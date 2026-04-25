@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2099269429:1714169283005" name="RecordingEnableDisc" version="6.0.1">
+<config>
+<source type="Class">com.farmers.verint.recordingEnable</source>
+</config>
+</decision>

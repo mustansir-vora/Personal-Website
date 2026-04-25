@@ -1,0 +1,180 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Notre WiFi est",
+      "auto": true
+    }, {
+      "text": " trop lent pour les appels vidéo ou les présentations en diffusion continue.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos clients ne peuvent pas ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " connecter à la page du ",
+      "auto": true
+    }, {
+      "text": "WiFi",
+      "auto": true
+    }, {
+      "text": " invité.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons des zones sans signal dans certaines parties ",
+      "auto": true
+    }, {
+      "text": "du restaurant",
+      "auto": true
+    }, {
+      "text": " ou du ",
+      "auto": true
+    }, {
+      "text": "bureau",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre signal coupe toutes les quelques minutes; les terminaux point de vente ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " déconnectent.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Aucun appareil ne peut ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " connecter — nos opérations d’",
+      "auto": true
+    }, {
+      "text": "affaires",
+      "auto": true
+    }, {
+      "text": " sont interrompues.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous constatons des vitesses lentes ",
+      "auto": true
+    }, {
+      "text": "même",
+      "auto": true
+    }, {
+      "text": " si nous utilisons ",
+      "auto": true
+    }, {
+      "text": "le WiFi",
+      "auto": true
+    }, {
+      "text": " Avantage. Les clients ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " plaignent de la mauvaise connectivité.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre tableau de bord ",
+      "auto": true
+    }, {
+      "text": "WiFi",
+      "auto": true
+    }, {
+      "text": " Avantage affiche ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " statut hors ligne. Pouvez-vous vérifier s’il y a ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " panne ou nous aider à redémarrer le système?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le WiFi",
+      "auto": true
+    }, {
+      "text": " coupe dans certaines zones de ",
+      "auto": true
+    }, {
+      "text": "notre magasin",
+      "auto": true
+    }, {
+      "text": ". Nous avons besoin d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " couverture ",
+      "auto": true
+    }, {
+      "text": "stable",
+      "auto": true
+    }, {
+      "text": " pour notre système point de vente et notre réseau invité.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au nom de ma companie. ",
+      "auto": true
+    }, {
+      "text": "Notre WiFi",
+      "auto": true
+    }, {
+      "text": " Avantage ne fonctionne pas — aucun de nos appareils ne peut ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " connecter et nous avons des clients qui attendent.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

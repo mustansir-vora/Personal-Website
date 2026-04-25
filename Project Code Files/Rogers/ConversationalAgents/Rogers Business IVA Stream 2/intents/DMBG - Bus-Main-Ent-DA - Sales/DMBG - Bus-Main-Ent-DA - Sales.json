@@ -1,0 +1,11 @@
+{
+  "name": "69dfea68-a61d-4661-a484-0ab0f18026b3",
+  "displayName": "DMBG - Bus-Main-Ent-DA - Sales",
+  "parameters": [ {
+    "id": "location",
+    "entityType": "@sys.location"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5,
+  "dtmfPattern": "4"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@463366172:1731527517540" name="FWSARC_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.FWSARC_MN_002_VALUE</source>
+</config>
+</decision>

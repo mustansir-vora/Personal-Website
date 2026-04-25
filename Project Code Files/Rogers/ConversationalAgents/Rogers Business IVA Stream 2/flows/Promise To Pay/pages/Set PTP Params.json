@@ -1,0 +1,19 @@
+{
+  "name": "4780f604-b92f-49d5-bbaa-8d8971d4d967",
+  "displayName": "Set PTP Params",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "getPTPBillingProfile"
+    },
+    "targetPage": "Check ippStatus",
+    "name": "bb1399a8-5fea-4a86-b5ef-a2a181999454"
+  } ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "c3ca96fa-958f-474a-987c-d445d393d664",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your internet equipment"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfInternet": "3",
+      "productLabelMixEn": "TV,Home Phone,Home Security,Wireless Business Phone,5G Home Internet"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportInternet",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "savedIntent": "5GHI-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220002283"
+      }
+    }
+  },
+  "displayName": "positive_customerIdentified",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 299,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

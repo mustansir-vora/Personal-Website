@@ -1,0 +1,131 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Nous sommes en expansion et avons besoin d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " soutien à grande échelle.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " solution pour ",
+      "auto": true
+    }, {
+      "text": "une entreprise",
+      "auto": true
+    }, {
+      "text": " à plusieurs sites.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler à quelqu’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " au sujet de ",
+      "auto": true
+    }, {
+      "text": "services",
+      "auto": true
+    }, {
+      "text": " en volume.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous cherchons ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " connectivité pour ",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’",
+      "auto": true
+    }, {
+      "text": "un service",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "pour une",
+      "auto": true
+    }, {
+      "text": " grande organisation.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous aider avec des comptes corporatifs?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler de solutions pour grandes ",
+      "auto": true
+    }, {
+      "text": "entreprises",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons besoin d’",
+      "auto": true
+    }, {
+      "text": "un service",
+      "auto": true
+    }, {
+      "text": " de niveau ",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

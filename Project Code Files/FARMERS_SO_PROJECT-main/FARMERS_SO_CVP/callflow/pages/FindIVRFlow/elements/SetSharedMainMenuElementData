@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@230654098:1723486284538" name="SetSharedMainMenuElementData" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Shared_MainMenu</setting>
+<setting name="sessNames">ElementKey</setting>
+</settings>
+</config>
+</action_element>

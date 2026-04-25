@@ -1,0 +1,7 @@
+{
+  "name": "4c599630-27cc-476e-a740-0bbdd0b9bbd0",
+  "displayName": "appointment-change ",
+  "priority": 500000,
+  "description": "This intent is triggered when the user is calling to change or reschedule their appointment",
+  "numTrainingPhrases": 25
+}

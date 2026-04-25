@@ -1,0 +1,25 @@
+{
+  "name": "4a9dd269-2342-4a50-a98e-f2b850915d5c",
+  "displayName": "Check PTP Payment Method",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.ptpPaymentMethod = \"PB\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play PTP Balance PB",
+    "name": "ba6771bb-07ac-429a-854f-37a26d0790f9"
+  }, {
+    "condition": "$session.params.api.billingProfile.ptpPaymentMethod = \"CC\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play PTP Balance CC",
+    "name": "48721e7e-836a-4602-8aa5-7f4a422132ca"
+  } ]
+}

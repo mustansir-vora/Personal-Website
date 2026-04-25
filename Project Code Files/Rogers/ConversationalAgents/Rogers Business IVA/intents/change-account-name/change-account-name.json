@@ -1,0 +1,7 @@
+{
+  "name": "ff3235cd-25f6-4c3a-b113-21deea5ce83b",
+  "displayName": "change-account-name",
+  "priority": 500000,
+  "description": "Handles requests to update the account holder’s name, correct name details, manage authorized users.",
+  "numTrainingPhrases": 41
+}

@@ -1,0 +1,28 @@
+{
+  "name": "c55961e9-8a44-4672-9655-36a05e6cbc74",
+  "displayName": "Check If PTP Change Method",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeMethod = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Switch Payment Method Prompt",
+    "name": "1cff6249-af30-461f-8954-b7b61478eae7"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "changePTPDate",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Offer Latest Install Days",
+    "name": "a88cbd92-f3cc-478b-aa5d-ef700322fc07"
+  } ]
+}

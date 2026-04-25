@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1019092899:1736673981287" name="Set_MSP_NoMatchCollectAOR" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.setMSP_FNWL</source>
+</config>
+</decision>

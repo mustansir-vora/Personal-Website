@@ -1,0 +1,32 @@
+{
+  "name": "060473dc-923d-4ca8-8a78-49775801b47e",
+  "displayName": "Create Token",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "createToken"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.consumerSemafone.createToken.token != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Logout",
+    "name": "a9306467-7817-4de6-9f4f-d62ab2fff9c0"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "5570ebbb-0cfb-4f05-a481-7f0e9f748d03"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "788bf9a7-b636-4bcd-80e9-ed10a2eb822b",
+  "displayName": "lost-or-stolen-device",
+  "priority": 500000,
+  "description": "Handles requests related to a lost or stolen device.",
+  "numTrainingPhrases": 59
+}

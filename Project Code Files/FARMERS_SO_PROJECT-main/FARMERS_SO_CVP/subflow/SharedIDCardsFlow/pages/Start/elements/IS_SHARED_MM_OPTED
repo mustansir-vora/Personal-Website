@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1390343947:1711967236965" name="IS_SHARED_MM_OPTED" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">YES</setting>
+<setting name="sessNames">IS_SHARED_MM_OPTED</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="S_ROUTE_TO">MAIN_MENU</data>
+</session_data>
+</config>
+</action_element>

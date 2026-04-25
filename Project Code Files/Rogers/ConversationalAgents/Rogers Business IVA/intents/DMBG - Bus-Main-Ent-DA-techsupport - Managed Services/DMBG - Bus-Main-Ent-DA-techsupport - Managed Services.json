@@ -1,0 +1,7 @@
+{
+  "name": "e73a3eca-3a29-4862-9e43-57cd5612be35",
+  "displayName": "DMBG - Bus-Main-Ent-DA-techsupport - Managed Services",
+  "priority": 500000,
+  "numTrainingPhrases": 5,
+  "dtmfPattern": "5"
+}

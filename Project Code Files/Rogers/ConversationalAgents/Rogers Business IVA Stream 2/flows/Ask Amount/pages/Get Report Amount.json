@@ -1,0 +1,173 @@
+{
+  "name": "d4c2c7e4-abd7-47a9-9ef3-efeb621a7820",
+  "displayName": "Get Report Amount",
+  "form": {
+    "parameters": [ {
+      "displayName": "amountNumber",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter the amount, including cents, that\nyou paid." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Dites ou entrez le montant payé, incluant les cennes." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Dites ou entrez le montant que vous paierez, incluant les cennes." ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "1329444e-7201-4a27-8357-e83e799b23e0"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter the amount, including cents, that\nyou paid." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Veuillez entrer le montant que vous avez payé, incluant les cennes. Par exemple, 25 dollars serait 2 5 0 0." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Dites ou entrez le montant que vous paierez, incluant les cennes." ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "2bc3eb67-6232-4728-a5a8-fc47fa334651"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please enter the amount, including cents, that\nyou paid. For example, 25 dollars would be 2 5 0 0." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Dites ou entrez le montant payé, incluant les cennes." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Veuillez entrer le montant que vous paierez, incluant les cennes. Par exemple, 25 dollars serait 2 5 0 0." ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "3607c7a2-1e08-43b1-bbef-7b48d3ff6b37"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please enter the amount, including cents, that\nyou paid. For example, 25 dollars would be 2 5 0 0." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Veuillez entrer le montant que vous avez payé, incluant les cennes. Par exemple, 25 dollars serait 2 5 0 0." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Veuillez entrer le montant que vous paierez, incluant les cennes. Par exemple, 25 dollars serait 2 5 0 0." ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "2907d768-da07-4b14-a073-7ebb7d6d4052"
+        }, {
+          "targetPage": "Initialize Failure",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "edc3bf2e-0017-47e0-b91e-a1856d7c93b0"
+        }, {
+          "targetPage": "Initialize Failure",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "e0524360-bd8f-4f85-88b8-40042f9a2d6b"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "How much did you pay?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Quel montant avez-vous payé ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Quel montant avez-vous payé ?" ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "payment-current-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.api.billingProfile.balanceDetails.currentBalance"
+      }, {
+        "parameter": "amountNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "562e290d-f977-4184-a216-03eac496d65e"
+  }, {
+    "intent": "payment-past-due-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.api.billingProfile.balanceDetails.pastDueBalance"
+      }, {
+        "parameter": "amountNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "dd76505d-690f-461e-8c43-0437bbdde28c"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$sys.func.TO_NUMBER($session.params.amountNumber)"
+      }, {
+        "parameter": "amountNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "d3125c2d-6b6b-4493-98fc-3d60792bd835"
+  } ]
+}

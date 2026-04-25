@@ -1,0 +1,7 @@
+{
+  "name": "60df95d0-e364-4044-86bf-2b043d27538e",
+  "displayName": "DMBG - Bus-Main-Ent-DA-billing - Enterprise Wireline",
+  "priority": 500000,
+  "numTrainingPhrases": 14,
+  "dtmfPattern": "1"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "1ef8d955-29b4-4ead-b362-c778b169d451",
+  "displayName": "check  Passive Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.passiveOutageMessage = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Exit Outage Status",
+    "name": "86fcf3b9-1b2a-4856-aa31-b42e0f7f760a"
+  }, {
+    "condition": "$session.params.passiveOutageMessage != true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je ne suis pas en mesure de fournir des renseignements sur les pannes pour le moment." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm unable to provide outage information at this time." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "FAQ",
+    "name": "50d15cbb-50b1-4065-b2c2-45792fe4339b"
+  } ]
+}

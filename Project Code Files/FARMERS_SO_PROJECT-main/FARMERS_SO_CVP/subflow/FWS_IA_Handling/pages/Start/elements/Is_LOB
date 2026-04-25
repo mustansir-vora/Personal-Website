@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@178399850:1710738720793" name="Is_LOB" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is_LOB" default_exit_state="OTHERS">
+        <exit_state name="A" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FWS_POLICY_LOB" />
+                </data>
+                <constant_string value="A" />
+            </string>
+        </exit_state>
+        <exit_state name="H" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FWS_POLICY_LOB" />
+                </data>
+                <constant_string value="H" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

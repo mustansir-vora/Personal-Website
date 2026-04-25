@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1067076115:1709038737718" name="EPSL_MN_005_Call" version="6.0.1">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709038863596">
+<config>
+<argument_data>
+<data name="MenuID">EPSL_MN_005</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

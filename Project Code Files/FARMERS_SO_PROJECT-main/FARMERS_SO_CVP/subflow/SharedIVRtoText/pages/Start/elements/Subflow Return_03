@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subflow_return id="Element@1443322008:1730827949950" name="Subflow Return_03" version="6.0.1">
+<config>
+<return_data>
+<data name="RETURN_VALUE_FOR_NLU" type="String">T</data>
+</return_data>
+</config>
+</subflow_return>

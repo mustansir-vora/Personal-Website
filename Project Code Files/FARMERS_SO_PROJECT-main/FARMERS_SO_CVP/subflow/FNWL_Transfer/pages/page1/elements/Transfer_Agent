@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@845592566:1733294758750" name="Transfer_Agent" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">T</setting>
+<setting name="FromExtVXML0">{Data.Session.S_VXML_0}</setting>
+<setting name="FromExtVXML1">{Data.Session.S_VXML_1}</setting>
+<setting name="FromExtVXML2">{Data.Session.S_VXML_2}</setting>
+<setting name="FromExtVXML3">{Data.Session.S_VXML_3}</setting>
+</settings>
+</config>
+</subdialog_return>

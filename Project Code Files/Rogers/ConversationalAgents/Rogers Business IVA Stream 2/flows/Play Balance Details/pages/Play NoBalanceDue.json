@@ -1,0 +1,31 @@
+{
+  "name": "eefd2ca0-37e9-49b5-a7ae-f9d0310987e1",
+  "displayName": "Play NoBalanceDue",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ce compte a un solde de zéro. Aucun paiement n’est requis pour le moment." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "This account has a zero balance. There is no payment due at this time." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsId",
+        "value": "accountBalanceZeroCurrBalance"
+      } ]
+    },
+    "targetPage": "Start InstallmentPaymentPlanDetails subflow",
+    "name": "2681cb79-8717-4740-8f3a-a184e0c17eef"
+  } ]
+}

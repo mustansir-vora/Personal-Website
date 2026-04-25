@@ -1,0 +1,11 @@
+name: SonarQube
+on:
+  # push: {}
+  pull_request: {}
+jobs:
+  SonarQube:
+    uses: RogersCommunications/enterprise-actions-workflows/.github/workflows/sonar-workflow.yml@main
+    with:
+      app_id: 1637
+    secrets:
+      sonarqube_service_token: ${{ secrets.SONAR_TOKEN_SERV_TECHHUB_CCT }}

@@ -1,0 +1,28 @@
+{
+  "name": "56999aa2-3b5e-4de6-9618-d4090c031e59",
+  "displayName": "Play CurrentBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your current balance is $ $session.params.api.billingProfile.balanceDetails.currentBalance" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Votre solde actuel est… $session.params.api.billingProfile.balanceDetails.currentBalance\r\n" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Past Due Balance",
+    "name": "7609ddce-db75-4ce7-9213-815aff597ace"
+  } ]
+}

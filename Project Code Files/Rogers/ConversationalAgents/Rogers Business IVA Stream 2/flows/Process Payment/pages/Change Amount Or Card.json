@@ -1,0 +1,145 @@
+{
+  "name": "a11462c7-01a3-4b14-9cce-8b9d763fdc5d",
+  "displayName": "Change Amount Or Card",
+  "form": {
+    "parameters": [ {
+      "displayName": "changeTarget",
+      "required": true,
+      "entityType": "@e_ChangeCardOrAmount",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "What would you like to change? Say 'amount'\nor press 1, or, say 'card' or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Que souhaitez-vous modifier ? Dites « montant » ou appuyez sur le 1, ou dites « carte » ou appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "e4d119a1-f4fa-4309-9d45-1dbdfeedcf09"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To change the amount, press 1. To change the\ncard, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Pour modifier le montant, appuyez sur le 1. Pour modifier la carte, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "49ab3dc9-c3de-48e8-8350-bb58d3f837c5"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "What would you like to change? Say\n'amount' or press 1, or, say 'card' or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Que souhaitez-vous modifier ? Dites « montant » ou appuyez sur le 1, ou dites « carte » ou appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "818a728e-e236-441e-85c6-fe4972ade63d"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To change the amount, press 1. To change\nthe card, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Pour modifier le montant, appuyez sur le 1. Pour modifier la carte, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "4fad2b9b-6eac-461a-b899-a108b7a053fe"
+        }, {
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "transferType",
+              "value": "systemError"
+            }, {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "0321101e-50f8-4f76-bdf0-5d24b894c86d"
+        }, {
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "transferType",
+              "value": "systemError"
+            }, {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "25f17152-25ee-482c-9088-488344755525"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 5
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 5
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to change the amount or card?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous modifier le montant ou la carte ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.changeTarget = amount",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Nullify Amount",
+    "name": "2724767c-9b35-4444-8596-78039df32624"
+  }, {
+    "condition": "$session.params.changeTarget = card",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Initialize Card Reset",
+    "name": "57202c59-b18b-45f2-b543-21c80bbd7b0a"
+  } ]
+}

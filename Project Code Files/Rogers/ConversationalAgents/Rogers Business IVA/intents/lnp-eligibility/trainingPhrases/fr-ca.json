@@ -1,0 +1,111 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Vérifier si le transfert est permis."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Admissibilité au transfert."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon"
+    }, {
+      "text": " numéro est?il admissible au transfert?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Vérifier l’admissibilité au transfert de numéro."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est?ce que je peux apporter "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro à "
+    }, {
+      "text": "Rogers"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est?ce que je peux transférer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro à "
+    }, {
+      "text": "Rogers"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Vérifier si le transfert est possible."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Admissibilité au transfert de numéro."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Suis?je admissible au transfert de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Vérifier si "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro peut être transféré."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est?ce que je peux transférer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est?ce que je peux transférer mon numéro?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Vérifier l’admissibilité au transfert."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

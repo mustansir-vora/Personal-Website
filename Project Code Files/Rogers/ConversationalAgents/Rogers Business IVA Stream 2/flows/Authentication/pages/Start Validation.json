@@ -1,0 +1,32 @@
+{
+  "name": "59e471f4-9b6d-47fc-b022-13636ab26cac",
+  "displayName": "Start Validation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-nluconfig",
+    "tag": "authenticateCustomer"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Match Found?",
+    "name": "53fcf4a3-40f7-47ce-9155-6b440f79789d"
+  }, {
+    "condition": "$session.params.returnCode = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "5bdc9ea5-72e9-46fe-b38f-7f43dff8a40a"
+  } ]
+}

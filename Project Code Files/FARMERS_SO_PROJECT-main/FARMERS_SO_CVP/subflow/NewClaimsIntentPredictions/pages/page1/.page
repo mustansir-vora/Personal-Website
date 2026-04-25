@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1507625222:1754990501672" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1754990501672" name="NewClaimsIntentPredictions" type="Subflow Start" width="200" x="230" y="30">
+<exit_states>
+<exit_state name="next" target="Element@6035961:1754990506746"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1886539377:1754990506747" name="Transfer" type="Subflow Call" width="111" x="571" y="484">
+<subflow_call subflow_name="Transfer" target="Element@31:1708067583898">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@339782950:1754990506747"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1228957953:1754990506746" name="SIP_MN_002_VALUE" type="Decision" width="206" x="240" y="326">
+<exit_states>
+<exit_state name="YES" target="Element@1886539377:1754990506747"/>
+<exit_state name="NO" target="Element@984627487:1754990506747"/>
+<exit_state name="NOMATCH" target="Element@1886539377:1754990506747">
+<bendpoint>
+<dim1 x="113" y="43"/>
+<dim2 x="22" y="-75"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@339782950:1754990506747"/>
+<exit_state name="ER" target="Element@1886539377:1754990506747">
+<bendpoint>
+<dim1 x="275" y="12"/>
+<dim2 x="-8" y="-146"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@984627487:1754990506747" name="Subflow Return" type="Subflow Return" width="144" x="43" y="482"/>
+<element height="55" id="Element@339782950:1754990506747" name="Disc" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="114" x="287" y="609">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1712507290:1754990506746" name="SIP_MN_002_Call" type="Subflow Call" width="183" x="242" y="214">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709977907054">
+<config>
+<argument_data>
+<data name="MenuID">SIP_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1228957953:1754990506746"/>
+</exit_states>
+</element>
+<element height="55" id="Element@6035961:1754990506746" name="ClaimsStatusCheck" type="Decision" width="198" x="241" y="114">
+<exit_states>
+<exit_state name="Open" target="Element@1712507290:1754990506746"/>
+<exit_state name="Closed" target="Element@339172642:1754990506746"/>
+</exit_states>
+</element>
+<element height="55" id="Element@339172642:1754990506746" name="Copy_of_Subflow Return" type="Subflow Return" width="180" x="581" y="123"/>
+</page>

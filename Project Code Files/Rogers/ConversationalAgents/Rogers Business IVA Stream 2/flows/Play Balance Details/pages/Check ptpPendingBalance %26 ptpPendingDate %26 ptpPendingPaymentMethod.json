@@ -1,0 +1,37 @@
+{
+  "name": "5343b3ef-fad7-4383-8f5f-24ed54e0392c",
+  "displayName": "Check ptpPendingBalance \u0026 ptpPendingDate \u0026 ptpPendingPaymentMethod",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"passive-ptpDetailsMsg\")"
+    }, {
+      "parameter": "$session.params.selfServiceCompleted",
+      "value": true
+    }, {
+      "parameter": "$session.params.completedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"passive-ptpDetailsMsg\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.ptpAmount \u003e 0 AND $session.params.api.billingProfile.ptpPaymentDate != null AND $session.params.api.billingProfile.ptpPaymentMethod != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set PaymentMethod",
+    "name": "56eef66f-b028-4f90-921b-5dbd4cc45110"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Clear variables",
+    "name": "6cbd7403-11a2-47db-b2ae-2b09a8be62ee"
+  } ]
+}

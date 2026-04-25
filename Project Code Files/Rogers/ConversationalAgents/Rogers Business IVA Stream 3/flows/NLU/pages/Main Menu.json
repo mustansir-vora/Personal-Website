@@ -1,0 +1,119 @@
+{
+  "name": "9609942c-af67-46a4-b88f-60b77c6b87c7",
+  "displayName": "Main Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.AgentRequest1stAttempt = true",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Let’s try that again. Please describe briefly what you need help with. How can I help you today?" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Réessayons. Veuillez décrire brièvement le service ou produit pour lequel vous avez besoin d’aide." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.AgentRequest2ndAttempt = true",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I understand you’re looking for a Business Specialist, but I may be able to help you quicker if you share the reason for your call. How can I help you today?" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je comprends que vous souhaitez parler à nos spécialistes Affaires, mais je pourrais vous aider plus rapidement si vous me disiez la raison de votre appel." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.nluConfig.destinationType = \"Reprompt\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.nluConfig.repromptMenu_EN" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.nluConfig.repromptMenu_FR" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "How can I help you today?" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Comment puis-je vous aider aujourd'hui?" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "eventHandlers": [ {
+    "targetPage": "Check Main Menu Attempts",
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "nluErrorCounter",
+        "value": "$sys.func.ADD($session.params.nluErrorCounter, 1)"
+      }, {
+        "parameter": "nluErrorType",
+        "value": "nomatch"
+      }, {
+        "parameter": "AgentRequest1stAttempt",
+        "value": false
+      }, {
+        "parameter": "AgentRequest2ndAttempt",
+        "value": false
+      } ]
+    },
+    "name": "f338fb27-b6b3-4c23-bb6a-067e1d649dd2"
+  }, {
+    "targetPage": "Check Main Menu Attempts",
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "nluErrorCounter",
+        "value": "$sys.func.ADD($session.params.nluErrorCounter, 1)"
+      }, {
+        "parameter": "nluErrorType",
+        "value": "noinput"
+      }, {
+        "parameter": "AgentRequest1stAttempt",
+        "value": false
+      }, {
+        "parameter": "AgentRequest2ndAttempt",
+        "value": false
+      } ]
+    },
+    "name": "a91cf747-3e6c-4335-8a1e-4402e0e3ef05"
+  } ],
+  "transitionRouteGroups": [ "Intent Group - billing-disputes-O365", "Intent Group - sales", "Intent Group - sales-wireless", "Intent Group - sales-wireline", "Intent Group - self-serve-MakePayment", "Intent Group - self-serve-OrderStatus", "Intent Group - self-serve-PaymentHistory", "Intent Group - self-serve-PromiseToPay", "Intent Group - self-serve-wireless-HUP", "Intent Group - service", "Intent Group - tech-support", "Intent Group - tech-support-wireline", "Intent Group - churn-risk", "Intent Group - self-serve-local-number-portability", "Intent Group - self-serve-AccountBalance", "Intent Group - collection-payments", "Intent Group - self-serve-wireless-lost-stolen", "Intent Group - billing", "Intent Group - tech-support-advantage-wifi", "Intent Group - tech-support-satellite", "Intent Group - tech-support-T2-IOT", "Intent Group - tech-support-T2-O365", "Intent Group - tech-support-wholesale", "Intent Group - tech-support-wireless" ]
+}

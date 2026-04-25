@@ -1,0 +1,10 @@
+{
+  "name": "4098a2f5-34b0-4f9b-83bf-f0432fd77fcd",
+  "displayName": "inquire-box-decommission",
+  "parameters": [ {
+    "id": "date",
+    "entityType": "@sys.date"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 40
+}

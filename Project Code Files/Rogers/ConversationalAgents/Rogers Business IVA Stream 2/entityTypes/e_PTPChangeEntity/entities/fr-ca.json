@@ -1,0 +1,42 @@
+{
+  "entities": [ {
+    "value": "date",
+    "synonyms": [ "changer la date", "date" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "2"
+  }, {
+    "value": "amount",
+    "synonyms": [ "changer le montant", "montant" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "1"
+  }, {
+    "value": "method",
+    "synonyms": [ "changer la méthode", "changer la méthode de paiement", "méthode" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "3"
+  }, {
+    "value": "amount_and_date",
+    "synonyms": [ "montant et date" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "credit_card",
+    "synonyms": [ "carte", "carte de crédit" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "bank",
+    "synonyms": [ "banque" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "amount_and_method",
+    "synonyms": [ "montant et méthode" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "date_and_method",
+    "synonyms": [ "date et méthode" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "all_of_them",
+    "synonyms": [ "tous" ],
+    "languageCode": "fr-ca"
+  } ]
+}

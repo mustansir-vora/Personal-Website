@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@554614095:1715185376633" name="21ST_OUTSTANDING_BALANCE_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="21ST_OUTSTANDING_BALANCE_CHECK" default_exit_state="NO">
+        <exit_state name="YES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_OUTSTANDINGBALANCE" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -9,9 +9,9 @@ export default function HeroSection() {
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative p-8 pb-32 md:pb-8">
       {/* Background ambient effects */}
-      <div className="absolute top-1/4 -left-10 w-96 h-96 bg-teal-600/20 rounded-full mix-blend-screen filter blur-[60px] animate-blob"></div>
-      <div className="absolute top-1/3 -right-10 w-96 h-96 bg-emerald-600/20 rounded-full mix-blend-screen filter blur-[60px] animate-blob" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-lime-600/10 rounded-full mix-blend-screen filter blur-[60px] animate-blob" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute top-1/4 -left-10 w-96 h-96 bg-[radial-gradient(circle,rgba(13,148,136,0.2)_0%,transparent_70%)] rounded-full blur-3xl pointer-events-none transform-gpu"></div>
+      <div className="absolute top-1/3 -right-10 w-96 h-96 bg-[radial-gradient(circle,rgba(16,185,129,0.2)_0%,transparent_70%)] rounded-full blur-3xl pointer-events-none transform-gpu"></div>
+      <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(190,242,100,0.1)_0%,transparent_70%)] rounded-full blur-3xl pointer-events-none transform-gpu"></div>
 
       <div className="z-10 w-full max-w-5xl flex flex-col items-center text-center space-y-8 mt-4 md:mt-20">
         

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2104921588:1712349611722" name="Return_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Return_Check" default_exit_state="NA">
+        <exit_state name="ACH1" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_SUBMIT_METHOD_CASE" />
+                </data>
+                <constant_string value="ACH1" />
+            </string>
+        </exit_state>
+        <exit_state name="ACH1_FROM_DEBIT_CREDIT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PAY_BY_DEBIT_OR_CREDIT_CASE" />
+                </data>
+                <constant_string value="ACH1" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

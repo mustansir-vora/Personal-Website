@@ -1,0 +1,136 @@
+{
+  "name": "f9a1d97b-0305-4e1e-b35d-4612c063660d",
+  "displayName": "getServiceAddress",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "getServiceAddress"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "check Multiple Address",
+    "name": "d309bd48-f68c-437e-8566-954070d067fd"
+  }, {
+    "condition": "$session.params.returnCode = \"1\" AND $session.params.subscriptionAccountName = \"maestro\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": "MA"
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "47522761-a800-409a-9a30-22c1bf9398ec"
+  }, {
+    "condition": "$session.params.returnCode = \"1\" AND $session.params.subscriptionAccountName != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "31f7c8bc-85ce-42a2-a644-c1039004dcb9"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "4b5dfe3a-85dc-4c7a-85b1-d00ed6f139d0"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "1c23be6e-83eb-44b8-ae88-7659f652a107"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "57b00fd6-7bc0-4394-83da-227ad6853e60"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "5a9622fb-7b0a-4111-87ef-433715198362"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "bf2b92e5-90d7-473b-9e05-1625a72f09b1"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "037dfcdc-663c-4b35-a308-26a98b9dbe4a"
+  } ]
+}

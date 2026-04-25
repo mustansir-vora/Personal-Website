@@ -1,0 +1,134 @@
+{
+  "name": "1401aaa9-7d00-4e25-bbb3-96f9aff09998",
+  "displayName": "Hold On Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Okay, When you are ready, say \"continue\"" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "D’accord. Quand vous serez prêt, dites « continue »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm Sorry, I didn't get that. When you are ready, say \"continue\"" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai pas compris. Quand vous serez prêt, dites « continuer »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm Sorry, I still didn't get that. When you are ready, say \"continue\" or Press 1" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai toujours pas compris. Lorsque vous serez prêt, dites « continuer » ou appuyez sur 1." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "HoldOnMenu-Continue",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "f3415738-4dde-4dfb-8382-82949350645b"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "4b9be1a2-91e0-44ea-9ddf-d05e5423142f"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "More Hold On Check",
+    "name": "f29ad1d2-0f7b-41b8-af8a-b90b681ab396"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "More Hold On Check",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "eea40602-0553-4cec-aadf-9b31dc2f47bd"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "772ba992-c1d0-4b7f-a94c-077c05d33900"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 20
+      }
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

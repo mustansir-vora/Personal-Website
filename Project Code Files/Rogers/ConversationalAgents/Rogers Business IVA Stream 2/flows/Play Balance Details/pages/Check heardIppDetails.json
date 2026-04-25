@@ -1,0 +1,25 @@
+{
+  "name": "2290c785-26ad-4be0-9a6e-9c57a1ae8309",
+  "displayName": "Check heardIppDetails",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.heardIppDetails = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start LastInvoiceDetails subflow",
+    "name": "49e2b73c-2741-40f7-be9f-45fa422b9f46"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check remainingIppInstallments \u0026 ippCurrentBalance",
+    "name": "cfa38c89-a36d-4147-9f9f-d5f2b16418bf"
+  } ]
+}

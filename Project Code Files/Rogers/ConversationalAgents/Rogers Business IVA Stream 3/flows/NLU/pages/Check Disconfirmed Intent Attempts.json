@@ -1,0 +1,33 @@
+{
+  "name": "740d4a08-b557-4804-a2ae-24cf618a0b32",
+  "displayName": "Check Disconfirmed Intent Attempts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.disconfirmIntentCounter \u003c= 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "9f7aab5e-5db1-4b61-ad03-21342c0037c8"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fallbackReason",
+        "value": "NLUMainMenu"
+      } ]
+    },
+    "targetPage": "FallBack Router",
+    "name": "f56cfa3f-4150-4277-8cf3-2fdaa9adb668"
+  } ]
+}

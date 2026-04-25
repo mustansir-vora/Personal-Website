@@ -1,0 +1,45 @@
+{
+  "name": "7f8de0f9-ff4a-4db9-b673-1a957626b07b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Internet,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "TV"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "TV"
+      },
+      "outputActionParameters": {
+        "result": "tv-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Internet,Tv, Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "TV",
+      "savedIntent": "tv-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-tv",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 189,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,157 @@
+{
+  "trainingPhrases": [ {
+    "id": "300a9ea0-0518-437a-838b-80b784f7e43d",
+    "parts": [ {
+      "text": "negative"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "35cf521f-7dc0-463a-ad90-c3f468e27747",
+    "parts": [ {
+      "text": "none"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bd04e8f8-8596-4a35-8bc4-949d383afa49",
+    "parts": [ {
+      "text": "no payment as of now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e69acdfc-8d6a-498a-bf86-fb23e23aadb0",
+    "parts": [ {
+      "text": "I'm not paying right now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e17f4763-e024-423c-b972-54b6c2c1ba7b",
+    "parts": [ {
+      "text": "No payment from me now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "904aeb93-7335-4ecc-a6cd-67c14d9898dd",
+    "parts": [ {
+      "text": "I don't want to pay right now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5c3ba27e-dfe3-4507-923e-65e5f02771b9",
+    "parts": [ {
+      "text": "I am not paying now."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8e5a715f-6a09-4075-9a27-92b93044a31a",
+    "parts": [ {
+      "text": "I don't want to make the payment now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "dd59ec21-eb7d-4040-8ead-3a89829c90bb",
+    "parts": [ {
+      "text": "I am not going to pay"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "095a496b-3b0c-4a4a-bd1e-2064ed866789",
+    "parts": [ {
+      "text": "Absolutely not"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ef517c4d-c915-49b1-b229-f2655f18039f",
+    "parts": [ {
+      "text": "I will not pay now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2908fc70-70e0-4644-905c-2742536e3855",
+    "parts": [ {
+      "text": "No, I'm not paying today"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "20e6593d-e354-439a-a1a6-29ecfe739e6c",
+    "parts": [ {
+      "text": "I'm not paying"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c369c9f3-42a4-43b6-a09f-3563c974e4fb",
+    "parts": [ {
+      "text": "I'm not interested in paying now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "4b303f68-9e7b-44ec-94ba-e7ece5f8c09c",
+    "parts": [ {
+      "text": "Not at the moment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2f1dc161-5ae2-49a4-89ee-5e2d2bebaa58",
+    "parts": [ {
+      "text": "I do not want to make a payment right now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8abe224e-5d04-4c54-a590-b4f7e82043d8",
+    "parts": [ {
+      "text": "I'm not going to pay at this time"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "402a51ab-d03b-4d87-9c57-af70fa1752d5",
+    "parts": [ {
+      "text": "I am not ready to pay now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e62ef645-59f0-477d-9e6a-c5faac2e91f2",
+    "parts": [ {
+      "text": "i don't want to pay now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1aa9bafd-418f-433b-a60a-05c72f84ed51",
+    "parts": [ {
+      "text": "nay"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "754df6ac-2c59-412d-9dcf-fe4f3d0128de",
+    "parts": [ {
+      "text": "nope"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "252785d9-1ffe-41ea-8e2d-92583412ebee",
+    "parts": [ {
+      "text": "no"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2096774056:1708937109199" name="Policy Questions" version="6.0.1">
+<element height="55" id="Element@1598814302:1708937167179" name="CALLER_AUTHENTICATION_CHECK" type="Decision" width="322" x="410" y="243">
+<exit_states>
+<exit_state name="Yes" target="Element@604603327:1708937167179">
+<bendpoint>
+<dim1 x="-192" y="1"/>
+<dim2 x="-192" y="-258"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-192" y="258"/>
+<dim2 x="-192" y="-1"/>
+</bendpoint>
+</exit_state>
+<exit_state name="No" target="Element@409652758:1709113085137"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1111751555:1708937167179" name="S_ID_AUTH_3" type="Subflow Call" width="155" x="481" y="126">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1711718188435">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1598814302:1708937167179"/>
+</exit_states>
+</element>
+<element height="55" id="Element@825715506:1708937167180" name="POLICY_QUESTIONS" type="Page Entry" width="211" x="459" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1111751555:1708937167179"/>
+</exit_states>
+</element>
+<element height="55" id="Element@604603327:1708937167179" name="FMOM_MN_005_VALUE" type="Decision" width="236" x="444" y="484">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@283495513:1710840789979"/>
+<exit_state name="Specialty Dwelling" target="Element@283495513:1710840789979">
+<bendpoint>
+<dim1 x="133" y="138"/>
+<dim2 x="141" y="-125"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motorcycle" target="Element@283495513:1710840789979">
+<bendpoint>
+<dim1 x="-226" y="83"/>
+<dim2 x="-218" y="-180"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Boat or Watercraft" target="Element@283495513:1710840789979">
+<bendpoint>
+<dim1 x="37" y="148"/>
+<dim2 x="45" y="-115"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motor Home" target="Element@283495513:1710840789979">
+<bendpoint>
+<dim1 x="103" y="147"/>
+<dim2 x="111" y="-116"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NI" target="Element@418992091:1710840839142"/>
+<exit_state name="NM" target="Element@2033238954:1710840837729"/>
+<exit_state name="ER" target="Element@2033238954:1710840837729">
+<bendpoint>
+<dim1 x="254" y="169"/>
+<dim2 x="-42" y="-152"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Landlord" target="Element@283495513:1710840789979">
+<bendpoint>
+<dim1 x="-48" y="133"/>
+<dim2 x="-40" y="-130"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@1168138606:1730256998767"/>
+</exit_states>
+</element>
+<element height="55" id="Element@409652758:1709113085137" name="FMOM_MN_005_Call" type="Subflow Call" width="213" x="455" y="364">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113088152">
+<config>
+<argument_data>
+<data name="MenuID">FMOM_MN_005</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@604603327:1708937167179"/>
+</exit_states>
+</element>
+<element height="55" id="Element@283495513:1710840789979" name="FMOM_ADM_007" type="Decision" width="190" x="459" y="747">
+<exit_states>
+<exit_state name="SU" target="Element@1158705084:1711892109676"/>
+<exit_state name="ER" target="Element@1158705084:1711892109676"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2033238954:1710840837729" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="829" y="734">
+<page_connector target="Element@1802475520:1723485829141">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@418992091:1710840839142" name="HANGUP_ENTRY" type="Page Connector" width="181" x="144" y="490">
+<page_connector target="Element@1275769473:1723485829141">HANGUP_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1158705084:1711892109676" name="GDF_RETURN_CHECK_2" type="Decision" width="234" x="452" y="854">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@2033238954:1710840837729"/>
+<exit_state name="Specialty Dwelling" target="Element@2033238954:1710840837729"/>
+<exit_state name="Motorcycle" target="Element@2033238954:1710840837729"/>
+<exit_state name="Motor Home" target="Element@2033238954:1710840837729"/>
+<exit_state name="Boat or Watercraft" target="Element@2033238954:1710840837729"/>
+<exit_state name="Representative" target="Element@2033238954:1710840837729"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1168138606:1730256998767" name="Copy_3_of_Global_Rep_Handling" type="Decision" width="223" x="721" y="406">
+<exit_states>
+<exit_state name="CONT" target="Element@283495513:1710840789979"/>
+<exit_state name="TR" target="Element@2033238954:1710840837729"/>
+</exit_states>
+</element>
+</page>

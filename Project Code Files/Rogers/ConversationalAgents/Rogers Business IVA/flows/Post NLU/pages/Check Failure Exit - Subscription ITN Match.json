@@ -1,0 +1,44 @@
+{
+  "name": "adb721cb-1bd5-45d7-9c77-ac121a60e92a",
+  "displayName": "Check Failure Exit - Subscription ITN Match",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.subscriptionITNMatchCalledFrom = \"confirmSubscription_A\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "confirmSubscription"
+      } ]
+    },
+    "targetPage": "Start Reusable Phone Number",
+    "name": "8b0aa5ae-ab84-467f-909e-23a042029b2f"
+  }, {
+    "condition": "$session.params.subscriptionITNMatchCalledFrom = \"confirmSubscription_B\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "confirmSubscriptionResult",
+        "value": "different_account"
+      }, {
+        "parameter": "skipIdentificationPhoneCollection",
+        "value": true
+      } ]
+    },
+    "targetPage": "Confirm Subscription Router",
+    "name": "59996c0a-2683-43cd-9da4-f36fab96763c"
+  }, {
+    "condition": "$session.params.subscriptionITNMatchCalledFrom = \"wirelessIdentification\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "9edee2f7-ccf2-412a-8212-08e82dfaddc8"
+  } ]
+}

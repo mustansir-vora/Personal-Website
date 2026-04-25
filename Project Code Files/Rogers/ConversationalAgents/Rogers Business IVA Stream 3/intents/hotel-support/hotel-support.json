@@ -1,0 +1,7 @@
+{
+  "name": "560193f0-0a3b-4c1f-a345-101aeff2da83",
+  "displayName": "hotel-support",
+  "priority": 500000,
+  "description": "Handles calls requesting west services or products ",
+  "numTrainingPhrases": 176
+}

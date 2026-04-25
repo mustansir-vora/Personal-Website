@@ -1,0 +1,41 @@
+{
+  "name": "5cbd99ce-d04c-448d-8122-901964c23811",
+  "displayName": "Check sentAccountBalanceSms",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "completedSSName",
+      "value": "$sys.func.APPEND($session.params.completedSSName, \"active-accountBalance\")"
+    }, {
+      "parameter": "$session.params.selfServiceCompleted",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.app.config.sentAccountBalanceSms = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check accountBalanceRepeatCounter",
+    "name": "e0c461e1-24b1-456d-b1cd-9917cef12e2f"
+  }, {
+    "condition": "$session.params.smsId != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Send SMS",
+    "name": "7dec7540-2477-499d-8db4-7f008d2653b6"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sentAccountBalanceSms",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check accountBalanceRepeatCounter",
+    "name": "0807e837-a20b-4ba9-85bf-e7ccc90daf84"
+  } ]
+}

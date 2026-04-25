@@ -1,0 +1,141 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’ai besoin d’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " détail complet de mes frais du ",
+      "auto": true
+    }, {
+      "text": "Marché d’Applications d’Affaires de Rogers (RBAM)",
+      "auto": true
+    }, {
+      "text": " pour ",
+      "auto": true
+    }, {
+      "text": "la comptabilité",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous expliquer les frais liés à Microsoft Teams Calling ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ma facture?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai annulé ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " abonnement dans le ",
+      "auto": true
+    }, {
+      "text": "Marché d’Applications d’Affaires de Rogers (RBAM)",
+      "auto": true
+    }, {
+      "text": ", mais je suis encore facturé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pourquoi ma facture a augmenté après avoir ajouté ",
+      "auto": true
+    }, {
+      "text": "O365",
+      "auto": true
+    }, {
+      "text": " via le ",
+      "auto": true
+    }, {
+      "text": "Marché d’Applications d’Affaires de Rogers (RBAM)",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma facture du Marché d’",
+      "auto": true
+    }, {
+      "text": "Applications d’Affaires",
+      "auto": true
+    }, {
+      "text": " de ",
+      "auto": true
+    }, {
+      "text": "Rogers",
+      "auto": true
+    }, {
+      "text": " (",
+      "auto": true
+    }, {
+      "text": "RBAM",
+      "auto": true
+    }, {
+      "text": ") ne correspond pas au nombre de licences que j’ai.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai ",
+      "auto": true
+    }, {
+      "text": "été",
+      "auto": true
+    }, {
+      "text": " facturé ",
+      "auto": true
+    }, {
+      "text": "deux",
+      "auto": true
+    }, {
+      "text": " fois pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " abonnement Office ",
+      "auto": true
+    }, {
+      "text": "365",
+      "auto": true
+    }, {
+      "text": ". J’ai besoin de parler ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " agent.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

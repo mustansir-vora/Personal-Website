@@ -1,0 +1,17 @@
+{
+  "name": "30931c86-97c5-4fa3-927d-054491a62f56",
+  "displayName": "NLU Landmark Confirmation Generator",
+  "placeholders": [ {
+    "id": "savedIntent",
+    "name": "savedIntent"
+  } ],
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 128,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-2.5-flash"
+  }
+}

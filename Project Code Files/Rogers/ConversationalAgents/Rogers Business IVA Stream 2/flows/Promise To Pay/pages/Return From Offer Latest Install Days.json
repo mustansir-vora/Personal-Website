@@ -1,0 +1,35 @@
+{
+  "name": "0b18e597-bee2-4015-b245-28d393bafd5a",
+  "displayName": "Return From Offer Latest Install Days",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCheckAmountAndDate = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Offer Additional Payment",
+    "name": "32fc365c-5d1e-479c-9f63-92c4e12420b3"
+  }, {
+    "condition": "$session.params.ptpCheckDate = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpCheckDate",
+        "value": false
+      } ]
+    },
+    "targetPage": "Set PTP Check Date Params",
+    "name": "c7e81051-6320-434c-9d5d-888b61ddc3dd"
+  }, {
+    "condition": "$session.params.changePTPDate = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Return From Change PTP Date",
+    "name": "06560373-3bff-4d45-8036-c8bcc092d4a2"
+  } ]
+}

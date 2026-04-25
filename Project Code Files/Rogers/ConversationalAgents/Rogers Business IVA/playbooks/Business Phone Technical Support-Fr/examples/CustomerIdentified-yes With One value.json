@@ -1,0 +1,52 @@
+{
+  "name": "da5c47a8-f5ff-4498-80a5-4e7d9e4415a5",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie d’affaires. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide."
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfPhone": "1",
+      "productLabelMixFr": "Téléphonie Affaires"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportbusinessPhone",
+      "completedSSName": "passive-techSupportbusinessPhone",
+      "completedSelfServe": "passive-techSupportbusinessPhone",
+      "noWBPhone": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportbusinessPhone",
+      "reportingVar_completedSSName": "passive-techSupportbusinessPhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220002283"
+      }
+    }
+  },
+  "displayName": "CustomerIdentified-yes With One value",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 312,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

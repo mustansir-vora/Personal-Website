@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@405378126:1722927741423" name="PromoteToSession_01" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Main_Menu_Agent</setting>
+<setting name="sessNames">BILLING_PAYMENTS_RETURN</setting>
+</settings>
+</config>
+</action_element>

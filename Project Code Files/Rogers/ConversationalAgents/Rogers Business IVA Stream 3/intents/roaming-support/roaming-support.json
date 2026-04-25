@@ -1,0 +1,7 @@
+{
+  "name": "ab428f1b-9f73-4ebc-8772-0db2da36efab",
+  "displayName": "roaming-support",
+  "priority": 500000,
+  "description": "Handles requests or issues related to roaming services.",
+  "numTrainingPhrases": 10
+}

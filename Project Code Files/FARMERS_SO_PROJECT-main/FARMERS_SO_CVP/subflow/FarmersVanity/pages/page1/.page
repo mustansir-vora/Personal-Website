@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@269742274:1708930440115" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708930440115" name="FarmersVanity" type="Subflow Start" width="160" x="462" y="-49">
+<exit_states>
+<exit_state name="next" target="Element@1223419648:1711910737998"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1092759615:1708930466925" name="FVAN_MN_001_VALUE" type="Decision" width="225" x="1135" y="859">
+<exit_states>
+<exit_state name="YES" target="Element@767888114:1732551463810">
+<bendpoint>
+<dim1 x="-271" y="2"/>
+<dim2 x="-1" y="-133"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1738988160:1708930466925">
+<bendpoint>
+<dim1 x="272" y="3"/>
+<dim2 x="-1" y="-137"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@933390148:1712315239332"/>
+<exit_state name="NOMATCH" target="Element@1846714109:1710911220260"/>
+<exit_state name="ER" target="Element@1846714109:1710911220260">
+<bendpoint>
+<dim1 x="179" y="117"/>
+<dim2 x="68" y="-34"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1738988160:1708930466925" name="Farmers Sales" type="Subflow Call" width="157" x="1268" y="998">
+<subflow_call subflow_name="FarmersSales" target="Element@31:1712402859760">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1726393316:1711719983864"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1004277845:1708930466925" name="Shared Entry_Mod" type="Subflow Call" width="195" x="441" y="16">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1711719756026">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1607885464:1709100629444"/>
+</exit_states>
+</element>
+<element height="55" id="Element@936753037:1708930466925" name="Shared Main Menu" type="Subflow Call" width="199" x="473" y="1000">
+<subflow_call subflow_name="SharedServiceMainMenu" target="Element@31:1711719823870">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1726393316:1711719983864"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1073504453:1708930466925" name="Intent_Check" type="Decision" width="150" x="1151" y="433">
+<exit_states>
+<exit_state name="Quote Intent" target="Element@1308180695:1709036760583">
+<bendpoint>
+<dim1 x="148" y="81"/>
+<dim2 x="111" y="-93"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Non-Quote Intent" target="Element@1308180695:1709036760583">
+<bendpoint>
+<dim1 x="-6" y="91"/>
+<dim2 x="-43" y="-83"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1308180695:1709036760583" name="FVAN_MN_001_Call" type="Subflow Call" width="202" x="1186" y="733">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709036765855">
+<config>
+<argument_data>
+<data name="MenuID">FVAN_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1092759615:1708930466925"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1607885464:1709100629444" name="Warhead_Check" type="Subflow Call" width="174" x="456" y="105">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1709100661093">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1959250114:1717661515191"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1846714109:1710911220260" name="Shared_Transfer" type="Subflow Call" width="173" x="1011" y="960">
+<subflow_call subflow_name="Transfer" target="Element@31:1711719828519">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1726393316:1711719983864"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1726393316:1711719983864" name="Subflow Return_02" type="Subflow Return" width="198" x="893" y="1129"/>
+<element height="55" id="Element@358553860:1711910123637" name="SET_FlowName" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="803" y="300">
+<exit_states>
+<exit_state name="done" target="Element@1805026866:1711910123637"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1805026866:1711910123637" name="NLUReturn" type="Subflow Return" width="148" x="815" y="400"/>
+<element height="55" id="Element@1223419648:1711910737998" name="CheckEntryPoint_BC" type="Decision" width="205" x="803" y="-35">
+<exit_states>
+<exit_state name="ER" target="Element@1004277845:1708930466925"/>
+<exit_state name="CONT" target="Element@1073504453:1708930466925">
+<bendpoint>
+<dim1 x="206" y="174"/>
+<dim2 x="-48" y="-253"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NLU" target="Element@1308180695:1709036760583"/>
+<exit_state name="INITIAL" target="Element@1004277845:1708930466925">
+<bendpoint>
+<dim1 x="207" y="50"/>
+<dim2 x="-204" y="58"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@441117451:1712167856881" name="CheckNLUInvokedFlag" type="Decision" width="227" x="756" y="193">
+<exit_states>
+<exit_state name="YES" target="Element@1073504453:1708930466925"/>
+<exit_state name="NO" target="Element@358553860:1711910123637"/>
+</exit_states>
+</element>
+<element height="55" id="Element@933390148:1712315239332" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="1472" y="763">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1959250114:1717661515191" name="IVRProperty_isANIBypassed" type="Decision" width="239" x="426" y="187">
+<exit_states>
+<exit_state name="YES" target="Element@441117451:1712167856881"/>
+<exit_state name="NO" target="Element@1436260862:1758221470856"/>
+</exit_states>
+</element>
+<element height="46" id="Element@767888114:1732551463810" name="CHCEK_NEXT_ACTION" type="Decision" width="169" x="744" y="853">
+<exit_states>
+<exit_state name="QUOTES" target="Element@1726393316:1711719983864"/>
+<exit_state name="OTHERS" target="Element@936753037:1708930466925"/>
+</exit_states>
+</element>
+<element height="48" id="Element@781495841:1758221470856" name="NewMDMUpfrontANILookup" type="Subflow Call" width="205" x="-45" y="288">
+<subflow_call subflow_name="NewMDMUpfrontANILookup" target="Element@31:1745942446995">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1033938443:1758221470856"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1436260862:1758221470856" name="IS_NEW_MDM_CALLED" type="Decision" width="190" x="104" y="185">
+<exit_states>
+<exit_state name="Yes" target="Element@2021468968:1758222744978"/>
+<exit_state name="No" target="Element@781495841:1758221470856"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1033938443:1758221470856" name="S_NEW_MDM_CALLED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="208" y="292">
+<exit_states>
+<exit_state name="done" target="Element@2021468968:1758222744978"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2021468968:1758222744978" name="Check_PoliciesFound" type="Decision" width="212" x="442" y="297">
+<exit_states>
+<exit_state name="NoPolicyFound" target="Element@441117451:1712167856881"/>
+<exit_state name="Single_Policy" target="Element@23835644:1758315700584"/>
+<exit_state name="Multiple Policies" target="Element@205806875:1758223061637">
+<bendpoint>
+<dim1 x="-245" y="121"/>
+<dim2 x="-200" y="-234"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-219" y="352"/>
+<dim2 x="-174" y="-3"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Multiple Product" target="Element@205806875:1758223061637">
+<bendpoint>
+<dim1 x="189" y="132"/>
+<dim2 x="234" y="-223"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="173" y="367"/>
+<dim2 x="161" y="5"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@205806875:1758223061637" name="CheckBrandMainMenu" type="Decision" width="172" x="417" y="652">
+<exit_states>
+<exit_state name="OneSpeciality" target="Element@496754247:1758224462650"/>
+<exit_state name="FDS" target="Element@614581354:1758223964857">
+<bendpoint>
+<dim1 x="-58" y="95"/>
+<dim2 x="-89" y="-52"/>
+</bendpoint>
+</exit_state>
+<exit_state name="BW" target="Element@614581354:1758223964857"/>
+<exit_state name="FWS" target="Element@614581354:1758223964857">
+<bendpoint>
+<dim1 x="70" y="84"/>
+<dim2 x="39" y="-63"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Others" target="Element@614581354:1758223964857">
+<bendpoint>
+<dim1 x="150" y="73"/>
+<dim2 x="119" y="-74"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@614581354:1758223964857" name="S_FVAN_SMM_ENTRY" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="215" x="458" y="811">
+<exit_states>
+<exit_state name="done" target="Element@936753037:1708930466925"/>
+</exit_states>
+</element>
+<element height="55" id="Element@198744660:1758224244171" name="Onespecialty" type="Subflow Call" width="160" x="157" y="1049">
+<subflow_call subflow_name="OneSpecialtyMenu" target="Element@31:1758224309411">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1726393316:1711719983864"/>
+</exit_states>
+</element>
+<element height="55" id="Element@496754247:1758224462650" name="S_FVAN_OSPM_ENTRY" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="103" y="806">
+<exit_states>
+<exit_state name="done" target="Element@198744660:1758224244171"/>
+</exit_states>
+</element>
+<element height="55" id="Element@23835644:1758315700584" name="TFNPBrandMatch" type="Decision" width="186" x="441" y="434">
+<exit_states>
+<exit_state name="YES" target="Element@665078988:1758538745981"/>
+<exit_state name="NO" target="Element@665078988:1758538745981">
+<bendpoint>
+<dim1 x="-89" y="58"/>
+<dim2 x="-45" y="-49"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@665078988:1758538745981">
+<bendpoint>
+<dim1 x="21" y="56"/>
+<dim2 x="65" y="-51"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@665078988:1758538745981" name="S_TFN_BRAND_MATCH_CALLED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="218" x="407" y="542">
+<exit_states>
+<exit_state name="done" target="Element@205806875:1758223061637"/>
+</exit_states>
+</element>
+</page>

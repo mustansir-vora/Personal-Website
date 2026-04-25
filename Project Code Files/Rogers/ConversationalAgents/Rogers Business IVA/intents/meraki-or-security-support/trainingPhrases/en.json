@@ -1,0 +1,51 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Guest WiFi login page isn’t working; need to update splash page."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Dashboard shows potential threats—how do we resolve them?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We need assistance with VLAN or firewall rules for secure traffic."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Meraki access points are showing offline status."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We need help updating SSIDs and authentication settings for compliance."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our cameras and access points are offline—this is impacting our security monitoring."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re seeing alerts in the Meraki dashboard about security vulnerabilities."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling from my business. Our Meraki WiFi network is down, and staff can’t connect."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

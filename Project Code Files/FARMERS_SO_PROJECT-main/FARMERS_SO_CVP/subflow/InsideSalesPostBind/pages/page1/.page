@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1020249155:1713131964896" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1713131964896" name="InsideSalesPostBind" type="Subflow Start" width="154" x="18" y="7">
+<exit_states>
+<exit_state name="next" target="Element@1762827631:1713131996101"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@2114005280:1751910488015"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1874470004:1713131974369" name="Return" type="Subflow Return" width="85" x="548" y="345"/>
+<element height="46" id="Element@1762827631:1713131996101" name="PostBindEntryMod" type="Subflow Call" width="155" x="73" y="86">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1713132003615">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1008442306:1713673088762"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1008442306:1713673088762" name="IPST_MN_001_Call" type="Subflow Call" width="145" x="314" y="140">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709039747268">
+<config>
+<argument_data>
+<data name="MenuID">IPST_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1696983256:1713673088762"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1696983256:1713673088762" name="IPST_MN_001_VALUE" type="Decision" width="159" x="238" y="223">
+<exit_states>
+<exit_state name="SU" target="Element@2119569637:1713998834959"/>
+<exit_state name="ER" target="Element@2121251212:1713674257041"/>
+<exit_state name="NOMATCH" target="Element@2121251212:1713674257041">
+<bendpoint>
+<dim1 x="160" y="-42"/>
+<dim2 x="-103" y="-48"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1874470004:1713131974369">
+<bendpoint>
+<dim1 x="149" y="30"/>
+<dim2 x="-114" y="24"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2121251212:1713674257041" name="Transfer" type="Subflow Call" width="101" x="530" y="233">
+<subflow_call subflow_name="Transfer" target="Element@31:1710409877935">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1874470004:1713131974369"/>
+</exit_states>
+</element>
+<element height="46" id="Element@65194602:1713677400348" name="IPST_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="114" x="214" y="482">
+<exit_states>
+<exit_state name="done" target="Element@1276333556:1713677723000"/>
+</exit_states>
+</element>
+<element height="55" id="Element@292938409:1713677723000" name="Post_Queue_Check" type="Decision" width="200" x="203" y="922">
+<exit_states>
+<exit_state name="ENABLED" target="Element@1182879298:1713745428846"/>
+<exit_state name="DISABLED" target="Element@1519565410:1713717529810"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1276333556:1713677723000" name="IPST_ADM_001" type="Decision" width="134" x="203" y="575">
+<exit_states>
+<exit_state name="SU" target="Element@540707750:1713677723000"/>
+<exit_state name="ER" target="Element@540707750:1713677723000"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1002379898:1713677723000" name="STR_PA_002" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="185" x="195" y="790">
+<exit_states>
+<exit_state name="done" target="Element@292938409:1713677723000"/>
+</exit_states>
+</element>
+<element height="55" id="Element@540707750:1713677723000" name="Pre_Queue_Check" type="Decision" width="194" x="182" y="681">
+<exit_states>
+<exit_state name="ENABLED" target="Element@1297297850:1713745242379"/>
+<exit_state name="DISABLED" target="Element@1002379898:1713677723000"/>
+</exit_states>
+</element>
+<element height="46" id="Element@255654563:1713677723000" name="STR_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="111" x="673" y="596">
+<exit_states>
+<exit_state name="done" target="Element@1043398418:1713745312798"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1993030734:1713677723000" name="STR_PA_003" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="111" x="570" y="971">
+<exit_states>
+<exit_state name="done" target="Element@1181306718:1713745428846"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1519565410:1713717529810" name="Transfer_End" type="Subflow Call" width="140" x="231" y="1046">
+<subflow_call subflow_name="Transfer" target="Element@31:1710409877935">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1144246229:1713717558944"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1144246229:1713717558944" name="Return_End" type="Subflow Return" width="134" x="243" y="1154"/>
+<element height="46" id="Element@1297297850:1713745242379" name="_Form_01" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="107" x="466" y="585">
+<exit_states>
+<exit_state name="done" target="Element@255654563:1713677723000"/>
+<exit_state name="max_nomatch" target="Element@255654563:1713677723000"/>
+<exit_state name="max_noinput" target="Element@255654563:1713677723000"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1043398418:1713745312798" name="_Form_01_" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="113" x="646" y="681">
+<exit_states>
+<exit_state name="done" target="Element@1851655748:1713750698879"/>
+<exit_state name="max_nomatch" target="Element@1851655748:1713750698879"/>
+<exit_state name="max_noinput" target="Element@1851655748:1713750698879"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1182879298:1713745428846" name="Form_02" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="100" x="517" y="887">
+<exit_states>
+<exit_state name="done" target="Element@1993030734:1713677723000"/>
+<exit_state name="max_nomatch" target="Element@1993030734:1713677723000"/>
+<exit_state name="max_noinput" target="Element@1993030734:1713677723000"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1181306718:1713745428846" name="_Form_02" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="100" x="510" y="1055">
+<exit_states>
+<exit_state name="done" target="Element@292938409:1713677723000"/>
+<exit_state name="max_nomatch" target="Element@292938409:1713677723000"/>
+<exit_state name="max_noinput" target="Element@292938409:1713677723000"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1851655748:1713750698879" name="CheckCount" type="Decision" width="116" x="651" y="780">
+<exit_states>
+<exit_state name="continue" target="Element@1002379898:1713677723000"/>
+<exit_state name="loop" target="Element@255654563:1713677723000"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2119569637:1713998834959" name="FSE_ADM_001" type="Decision" width="172" x="220" y="344">
+<exit_states>
+<exit_state name="SU" target="Element@65194602:1713677400348">
+<bendpoint>
+<dim1 x="-72" y="61"/>
+<dim2 x="-37" y="-73"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@65194602:1713677400348"/>
+</exit_states>
+</element>
+<element height="49" id="Element@2114005280:1751910488015" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="426" y="12">
+<exit_states>
+<exit_state name="done" target="Element@929257375:1751910488015"/>
+</exit_states>
+</element>
+<element height="48" id="Element@1320221138:1751910488015" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="834" y="7">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@929257375:1751910488015" name="Shared_Transfer" type="Subflow Call" width="132" x="674" y="10">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1320221138:1751910488015"/>
+</exit_states>
+</element>
+</page>

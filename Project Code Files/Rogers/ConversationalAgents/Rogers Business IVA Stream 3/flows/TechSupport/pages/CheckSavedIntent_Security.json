@@ -1,0 +1,28 @@
+{
+  "name": "d6c44718-dc9b-450e-a3bf-6d916fde45ce",
+  "displayName": "CheckSavedIntent_Security",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"security-support\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askForMoreDetails",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "df916ee1-c1f0-49a0-b68b-41f0f874f24c"
+  }, {
+    "condition": "$session.params.savedIntent != \"security-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "4ce31a4a-a8c3-4c59-87f0-8a2ddd790575"
+  } ]
+}

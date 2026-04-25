@@ -1,0 +1,25 @@
+{
+  "name": "3ce22533-bb92-4442-b7a5-6340efe78273",
+  "displayName": "check Affected Outage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.outageCount = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Passive Message",
+    "name": "3b2d0db1-d5d9-4050-a078-4b05b028b463"
+  }, {
+    "condition": "$session.params.outageCount \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "heardOutage",
+    "name": "7ce7d978-e484-4ec5-8c5d-5853057f26cc"
+  } ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "a104cd88-8adf-4e6f-94fd-2ca5476c4b79",
+  "displayName": "Past Due Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.paymentAmount is less than your past due balance." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "$session.payment.paymentAmount est inférieur à votre solde en souffrance." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"report-a-payment\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askAmountSuccess",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "75fd2e73-5384-4e95-9723-0dd66328f83f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Pay Past Due Check",
+    "name": "0512b3f9-0afe-4bf6-8241-e916cff2a5eb"
+  } ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@933258138:1715077277966" name="PolicyUpForRenewal6" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="POLICY_STATUS_CHECK" default_exit_state="Not Y">
+        <exit_state name="Y" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_RENEWAL_PENDING" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

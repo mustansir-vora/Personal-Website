@@ -1,0 +1,7 @@
+{
+  "name": "45f1eabc-d1f3-4695-9768-ac5966592ca2",
+  "displayName": "new-phone",
+  "priority": 500000,
+  "description": "Handles requests related to purchasing, activating, or setting up a new phone.",
+  "numTrainingPhrases": 51
+}

@@ -1,0 +1,8 @@
+{
+  "name": "23c12ec0-48b4-4e53-9783-9c54299586e0",
+  "displayName": "HoldOnMenu-Continue",
+  "priority": 500000,
+  "description": "this will trigger when user says continue on hold on menu ",
+  "numTrainingPhrases": 62,
+  "dtmfPattern": "1"
+}

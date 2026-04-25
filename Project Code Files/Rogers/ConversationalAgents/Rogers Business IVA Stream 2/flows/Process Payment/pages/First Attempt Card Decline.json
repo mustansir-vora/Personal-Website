@@ -1,0 +1,31 @@
+{
+  "name": "c74c6a06-fc4f-4fa6-8eb9-078537e98be5",
+  "displayName": "First Attempt Card Decline",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.cardDeclined = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": null
+      } ]
+    },
+    "targetPage": "Cant Continue Payment",
+    "name": "33652a91-eb70-4c6e-b411-15a3f61cc472"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cardDeclined",
+        "value": true
+      } ]
+    },
+    "targetPage": "Institutional Decline",
+    "name": "c7429173-7147-4e20-9815-3941a9b0692c"
+  } ]
+}

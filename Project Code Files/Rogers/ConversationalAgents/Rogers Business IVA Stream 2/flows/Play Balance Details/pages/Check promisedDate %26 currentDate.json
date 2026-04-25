@@ -1,0 +1,27 @@
+{
+  "name": "623ef134-25b2-4fd2-92c1-63c513518096",
+  "displayName": "Check promisedDate \u0026 currentDate",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play pendingPTPBalance",
+    "name": "4bae1f44-90db-4bc9-a2a5-3ffaaddf8a52"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play pastPTPBalance",
+    "name": "534bdcfd-db40-479a-ada3-289adbb0a802",
+    "description": "If yes"
+  } ],
+  "description": "Not finish"
+}

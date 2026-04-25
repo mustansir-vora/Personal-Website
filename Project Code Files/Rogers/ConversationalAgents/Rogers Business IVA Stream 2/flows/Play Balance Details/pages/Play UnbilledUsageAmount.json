@@ -1,0 +1,28 @@
+{
+  "name": "c3179efe-1de5-446a-995f-041366040dd3",
+  "displayName": "Play UnbilledUsageAmount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Votre utilisation actuelle non facturée est de $session.params.api.billingProfile.balanceDetails.unbilledUsageAmount" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Your current unbilled usage is $session.params.api.billingProfile.balanceDetails.unbilledUsageAmount" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check availableCredit",
+    "name": "638daab2-2402-488d-918d-5cdb1e893107"
+  } ]
+}

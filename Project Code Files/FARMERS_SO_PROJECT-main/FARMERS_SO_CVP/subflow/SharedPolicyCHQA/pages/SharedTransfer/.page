@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@697621649:1707302297535" name="SharedTransfer" version="6.0.1">
+<element height="55" id="Element@387447662:1707302297535" name="Transfer" type="Page Entry" width="159" x="66" y="172">
+<exit_states>
+<exit_state name="next" target="Element@391546230:1707302430888"/>
+</exit_states>
+</element>
+<element height="55" id="Element@391546230:1707302430888" name="Internal_Transfer" type="Decision" width="177" x="283" y="172">
+<exit_states>
+<exit_state name="Non-Licensed Internal" target="Element@956303897:1707302628254"/>
+<exit_state name="LicensedInternal" target="Element@916680882:1707302602023"/>
+<exit_state name="Vendor" target="Element@983006024:1707302587231"/>
+<exit_state name="Others" target="Element@983006024:1707302587231"/>
+<exit_state name="Yes" target="Element@1801410279:1707302643652"/>
+<exit_state name="No" target="Element@962150585:1707302645111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@983006024:1707302587231" name="Vendor" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="107" x="495" y="305">
+<exit_states>
+<exit_state name="done" target="Element@1625748566:1707302753694"/>
+</exit_states>
+</element>
+<element height="55" id="Element@916680882:1707302602023" name="Licensed Internal" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="181" x="77" y="312">
+<exit_states>
+<exit_state name="done" target="Element@1625748566:1707302753694"/>
+</exit_states>
+</element>
+<element height="55" id="Element@956303897:1707302628254" name="NonLicensed" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="180" x="278" y="310">
+<exit_states>
+<exit_state name="done" target="Element@1625748566:1707302753694"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1801410279:1707302643652" name="YesPolicyChange" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="180" x="634" y="310">
+<exit_states>
+<exit_state name="done" target="Element@1625748566:1707302753694"/>
+</exit_states>
+</element>
+<element height="55" id="Element@962150585:1707302645111" name="NoPolicyChange" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="179" x="-131" y="316">
+<exit_states>
+<exit_state name="done" target="Element@1625748566:1707302753694"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1625748566:1707302753694" name="Subflow Return_01" type="Subflow Return" width="198" x="262" y="523"/>
+</page>

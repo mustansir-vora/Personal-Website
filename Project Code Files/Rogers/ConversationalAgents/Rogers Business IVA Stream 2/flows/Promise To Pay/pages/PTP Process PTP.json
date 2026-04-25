@@ -1,0 +1,43 @@
+{
+  "name": "34b619bd-5863-4854-8821-eefef8df8178",
+  "displayName": "PTP Process PTP",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.promiseMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "dateEstimatedPosting",
+        "value": "$session.params.api.response.ptp.ccDateEstimatedPosting"
+      } ]
+    },
+    "name": "2ec5ff9f-03e0-4bf7-9f40-8ea96ceda092"
+  }, {
+    "condition": "$session.params.promiseMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "dateEstimatedPosting",
+        "value": "$session.params.api.response.ptp.pbDateEstimatedPosting"
+      } ]
+    },
+    "name": "a0ff10f5-ee71-43de-bc40-fd5f72fa0035"
+  }, {
+    "condition": "$session.params.promiseDate \u003c $session.params.currentDate OR $session.params.firstPromiseDate \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Process PTP Set Promise Date",
+    "name": "a365abe6-f1a4-47ec-b667-0fdb6bdc0ffb"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Create Update PTP",
+    "name": "b2e3d8d2-672a-4a7d-ac7a-8e50b263c1db"
+  } ]
+}

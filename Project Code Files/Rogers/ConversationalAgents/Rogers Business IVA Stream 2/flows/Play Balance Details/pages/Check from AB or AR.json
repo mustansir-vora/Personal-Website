@@ -1,0 +1,28 @@
+{
+  "name": "27973c34-1d51-4cc9-95a2-cfc8cf2734be",
+  "displayName": "Check from AB or AR",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAcctBalance = true OR $session.params.fromAcctReceiveable = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start creditLimitUsageDetails subflow",
+    "name": "092bface-de36-48e6-a214-dbb1ec0a71dc",
+    "description": "Check If from AB or AR"
+  }, {
+    "condition": "$session.params.fromAccountBalance = false AND $session.params.fromAccountReceiveable = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.returnToNLU",
+        "value": true
+      } ]
+    },
+    "name": "bf1aeffe-4844-47fc-8083-622b546e67db"
+  } ]
+}

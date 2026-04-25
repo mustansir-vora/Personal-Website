@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@180475375:1712652418788" name="SET_ROUTE_TO_BILL_PAY" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">BILL_PAY</setting>
+<setting name="sessNames">S_ROUTE_TO</setting>
+</settings>
+</config>
+</action_element>

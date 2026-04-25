@@ -1,0 +1,34 @@
+{
+  "name": "dfe1abb7-4d74-4e98-ba93-a0833de8bfcb",
+  "displayName": "Cant Continue Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sorry I'm having trouble continuing with the payment." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Désolé, j’éprouve des difficultés à poursuivre le paiement." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "823d59fc-5613-4c7a-a047-6edd47a6c63e"
+  } ]
+}

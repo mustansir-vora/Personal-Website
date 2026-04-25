@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@910343303:1711891698817" name="GDF_RETURN_CHECK_1" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="GDF_RETURN_CHECK_1">
+        <exit_state name="Mobile Home" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMOM_MN_004_RETURN_VALUE" />
+                </data>
+                <constant_string value="Mobile Home" />
+            </string>
+        </exit_state>
+        <exit_state name="Specialty Dwelling" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMOM_MN_004_RETURN_VALUE" />
+                </data>
+                <constant_string value="Specialty Dwelling" />
+            </string>
+        </exit_state>
+        <exit_state name="Motorcycle" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMOM_MN_004_RETURN_VALUE" />
+                </data>
+                <constant_string value="Motorcycle" />
+            </string>
+        </exit_state>
+        <exit_state name="Motor Home" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMOM_MN_004_RETURN_VALUE" />
+                </data>
+                <constant_string value="Motor Home" />
+            </string>
+        </exit_state>
+        <exit_state name="Boat or Watercraft" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMOM_MN_004_RETURN_VALUE" />
+                </data>
+                <constant_string value="Boat or Watercraft" />
+            </string>
+        </exit_state>
+        <exit_state name="Representative" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMOM_MN_004_RETURN_VALUE" />
+                </data>
+                <constant_string value="Representative" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

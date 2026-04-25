@@ -1,0 +1,38 @@
+{
+  "name": "96372b0a-d39e-4830-9de2-d9244744ce7e",
+  "displayName": "Check lastInvoice \u0026 lastBillingDate",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.completedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"passive-lastBillDetails\")"
+    }, {
+      "parameter": "$session.params.selfServiceCompleted",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.lastPaymentDetails.lastInvoiceAmount = null OR $session.params.api.billingProfile.lastPaymentDetails.lastBillingDate = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play NotAvailable",
+    "name": "154e0b70-08bb-45fe-9ccc-a667bc8e1b62"
+  }, {
+    "condition": "$session.params.api.billingProfile.lastPaymentDetails.lastInvoiceAmount \u003c 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play lastInvoiceCreditDetails",
+    "name": "94011ac1-71f7-425f-b44e-f8ee71618f4c"
+  }, {
+    "condition": "$session.params.api.billingProfile.lastPaymentDetails.lastInvoiceAmount != null AND $session.params.api.billingProfile.lastPaymentDetails.lastBillingDate != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play lastInoviceDetails",
+    "name": "2a8df3f2-fdf3-42c2-87f8-71bbf8917e5f"
+  } ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "a1b58e31-e9a5-4563-a465-5031e4a29626",
+  "displayName": "Third Invalid Attempt",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.cvvAttemptNumber \u003c 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cvvAttemptNumber",
+        "value": "$sys.func.ADD($session.params.cvvAttemptNumber, 1)"
+      } ]
+    },
+    "targetPage": "Check Card Type",
+    "name": "57a7d3f1-a99c-4934-89e2-f7bea5cfd245"
+  }, {
+    "condition": "$session.params.cvvAttemptNumber \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "3d4d959b-732f-4402-9a36-fe7b0435a956"
+  } ]
+}

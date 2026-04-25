@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@17495490:1724179119382" name="CV_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.CallerVerification.CV_MN_001_VALUE</source>
+</config>
+</decision>

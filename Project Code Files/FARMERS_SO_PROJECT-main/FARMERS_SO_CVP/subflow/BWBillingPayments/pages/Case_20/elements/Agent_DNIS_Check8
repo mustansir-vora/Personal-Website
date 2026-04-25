@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1062697814:1715079584946" name="Agent_DNIS_Check8" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BWBP_ADM_002" default_exit_state="Customer">
+        <exit_state name="Agent" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PRODUCER_LINE" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

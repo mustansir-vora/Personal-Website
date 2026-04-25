@@ -1,0 +1,213 @@
+{
+  "trainingPhrases": [ {
+    "id": "7429a38a-169e-455c-a41b-1c54981d62b1",
+    "parts": [ {
+      "text": "I am new and I currently do not have one."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "41dac5d5-98bf-4669-8ac8-f526278c9652",
+    "parts": [ {
+      "text": "I'm a new customer, I do not own a phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "97c9b70a-2cbc-4abe-92af-16ce08552a51",
+    "parts": [ {
+      "text": "Sorry, I'm a new customer, I don't have a phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9ea1aada-0c34-463a-be21-c6aa6fa37569",
+    "parts": [ {
+      "text": "I am a brand new customer and I don't have a number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3744cb16-c346-4382-a566-987b6da98d4f",
+    "parts": [ {
+      "text": "New customer. I don't have a phone number to provide."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "667f2dc8-7f15-4699-98b8-7c972819d9a4",
+    "parts": [ {
+      "text": "Being a new customer I don't have one yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "217da599-fe2f-4823-99bc-d5de2861999e",
+    "parts": [ {
+      "text": "I'm a new customer, I don't currently have a phone number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "13a32051-140a-4684-aff5-34982f55889a",
+    "parts": [ {
+      "text": "I'm a new customer, so I have no phone number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3fcee0fc-54f3-4aa7-bab5-eb1c31d678b2",
+    "parts": [ {
+      "text": "New customer, no phone number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "4ecddabe-1819-4344-be15-fa316ea9b82d",
+    "parts": [ {
+      "text": "As a new customer, I don't have a phone number to give you."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "295415b9-5cdf-4490-aab8-9bf93ec737b4",
+    "parts": [ {
+      "text": "I'm new, I don't have one yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "161ca692-c568-40cd-80d9-25d183789006",
+    "parts": [ {
+      "text": "I don't have a phone number because I'm a new customer."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6c38636c-15af-4bb4-bb33-323c1c6ea066",
+    "parts": [ {
+      "text": "I just signed up, I don't have a phone number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5426d591-e9f4-4067-8442-deebbedd3143",
+    "parts": [ {
+      "text": "I'm a new customer, and I don't have a phone number to enter."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c1eb4652-5e8e-4b0d-b557-9c0611218e7f",
+    "parts": [ {
+      "text": "I'm new and don't have a number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e5fd050a-aff3-4436-b870-5ed360a72887",
+    "parts": [ {
+      "text": "I'm new, and don't have a phone number to give you"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ed87fcb1-f17c-4300-aec0-2d7f7d192410",
+    "parts": [ {
+      "text": "Being a new customer, I don't have a current phone number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0fdb7907-3456-459a-8a5c-b33fcd33f0af",
+    "parts": [ {
+      "text": "I am a new customer and do not have a phone number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "89b5a1ca-bedf-4207-8ddb-b2ea318e4633",
+    "parts": [ {
+      "text": "I'm a new customer and I do not have a phone number at the moment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b67f233f-c9be-436b-aade-3111692e2705",
+    "parts": [ {
+      "text": "I'm new here, I don't own a phone number yet"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1e117d44-116a-441c-af04-eec54f1f4fb4",
+    "parts": [ {
+      "text": "I'm a new customer so I don't have any phone number to enter"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "04ec177b-5389-41cb-9571-a870b033e4ad",
+    "parts": [ {
+      "text": "Since I'm a new customer, I do not have a phone number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "64b26c06-5c97-4643-a48e-1d1c7cf8185f",
+    "parts": [ {
+      "text": "As a new customer, I currently don't have one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "cedd2fb9-695f-43a9-90fc-56b0ec594145",
+    "parts": [ {
+      "text": "I'm a new customer, I don't have a phone number to provide"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "09d44e58-7ce0-49d1-873c-a03a0bc75cfb",
+    "parts": [ {
+      "text": "I am a new customer and don't have a phone number yet"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c377bcec-ec33-4aee-862e-fa2420d02963",
+    "parts": [ {
+      "text": "new customer"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8efc3b5c-f2a8-4345-9bf9-89712e288136",
+    "parts": [ {
+      "text": "i'm a new customer"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "383060bb-f272-4e92-82c9-014e3ac1b04c",
+    "parts": [ {
+      "text": "sorry i don't have"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ba6943e5-45d8-48a8-9665-130c8c128207",
+    "parts": [ {
+      "text": "I don't have phone number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5f86c923-1153-4d0c-b58f-468ec417293f",
+    "parts": [ {
+      "text": "I don't have one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

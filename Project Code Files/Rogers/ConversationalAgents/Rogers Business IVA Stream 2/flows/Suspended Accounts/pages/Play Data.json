@@ -1,0 +1,28 @@
+{
+  "name": "59621f86-a1f4-41de-bb55-15c1eb00f6e5",
+  "displayName": "Play Data",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "… et les données sur votre appareil mobile ont été suspendues." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "... and the data on your mobile has been suspended." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Past Due Balance",
+    "name": "4c7cdcbd-ca8f-4525-a40b-ea7ec1d7ae03"
+  } ]
+}

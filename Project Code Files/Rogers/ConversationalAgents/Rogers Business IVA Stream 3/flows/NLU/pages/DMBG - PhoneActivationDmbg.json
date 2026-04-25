@@ -1,0 +1,139 @@
+{
+  "name": "722e802f-640e-48f2-b9e1-18279b562736",
+  "displayName": "DMBG - PhoneActivationDmbg",
+  "form": {
+    "parameters": [ {
+      "displayName": "DMBG-PhoneActivationDmbgResp",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetFlow": "Global Error Handling",
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "LastStdError",
+              "value": "NI"
+            }, {
+              "parameter": "DMBG-PhoneActivationDmbgResp",
+              "value": null
+            } ]
+          },
+          "name": "b11e55f1-17d9-4349-8bf3-2509deccede5"
+        }, {
+          "targetFlow": "Global Error Handling",
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "LastStdError",
+              "value": "NM"
+            }, {
+              "parameter": "DMBG-PhoneActivationDmbgResp",
+              "value": null
+            } ]
+          },
+          "name": "3e19c371-a69e-4800-9ba3-2f4f8eb85c56"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to report that your phone has been found?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous signaler que votre téléphone a été retrouvé?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.DMBG-PhoneActivationDmbgResp != null AND $session.params.DMBG-PhoneActivationDmbgResp = \"Yes\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "lost-or-stolen-device"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "DMBG-PhoneActivationDmbgResp",
+        "value": null
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "57d65066-268e-46fe-b1d2-bc4815a7a384"
+  }, {
+    "condition": "$session.params.DMBG-PhoneActivationDmbgResp != null AND $session.params.DMBG-PhoneActivationDmbgResp = \"No\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "activate-ss-ct"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "DMBG-PhoneActivationDmbgResp",
+        "value": null
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "780742cb-6914-4e07-b42e-700473c7f53a"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "dd101915-491b-4136-a9ae-991973bfddd2"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "b08cf061-9e37-4c8e-a5eb-57048f44f5d8"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

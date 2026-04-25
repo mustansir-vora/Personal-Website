@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2132040145:1750338190942" name="ZIP_IS_CALLED_VIA" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">TRUE</setting>
+<setting name="sessNames">IS_CALLED_SHARED_ID_AUTH</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="S_KYC_AUTHENTICATED">YES</data>
+</session_data>
+</config>
+</action_element>

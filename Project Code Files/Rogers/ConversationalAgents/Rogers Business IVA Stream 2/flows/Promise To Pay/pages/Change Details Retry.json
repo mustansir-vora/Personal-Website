@@ -1,0 +1,25 @@
+{
+  "name": "75eb320b-f866-4259-b9c4-bf8e572fe785",
+  "displayName": "Change Details Retry",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpInstallMenuCounter \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Change Two Install Retry",
+    "name": "4c7cb075-57ac-4cd8-a0c6-505eb1ce482d"
+  }, {
+    "condition": "$session.params.installmentInFocus = second",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Change Two Install Initial",
+    "name": "0ea1d264-b757-4598-b961-b21a531084f4"
+  } ]
+}

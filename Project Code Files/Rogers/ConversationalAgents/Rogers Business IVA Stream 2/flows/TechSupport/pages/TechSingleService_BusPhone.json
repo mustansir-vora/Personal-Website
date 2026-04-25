@@ -1,0 +1,31 @@
+{
+  "name": "4e04bde9-e896-4957-9037-aab37a54646e",
+  "displayName": "TechSingleService_BusPhone",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.noWBPhone = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "invokedTSSFrom",
+        "value": "TechBusinessPhone"
+      } ]
+    },
+    "targetFlow": "Tech SSA And Outage",
+    "name": "0aeccd0d-173c-4127-881d-5903fa243e61"
+  }, {
+    "condition": "$session.params.bpTSFromOutageStatus = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bpTSFromOutageStatus",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_BusPhone",
+    "name": "07209fc2-cd11-4e77-804b-e6d8d3e32cd3"
+  } ]
+}

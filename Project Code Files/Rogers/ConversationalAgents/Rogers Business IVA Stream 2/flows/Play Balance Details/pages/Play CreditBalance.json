@@ -1,0 +1,26 @@
+{
+  "name": "c8fc6a95-3af7-4eed-a031-ffe2876dc398",
+  "displayName": "Play CreditBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your account has a credit balance of $$session.params.api.billingProfile.balanceDetails.currentBalance. There is no payment due at this time." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "accountBalanceSMS",
+        "value": "accountBalanceNegCurrBalance"
+      } ]
+    },
+    "targetPage": "Start InstallmentPaymentPlanDetails subflow",
+    "name": "11aafbe3-b983-4ad4-97da-bc2336c5fd64"
+  } ]
+}

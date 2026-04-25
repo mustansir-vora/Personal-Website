@@ -1,0 +1,178 @@
+{
+  "name": "bfcc761a-aaba-4fe1-a50b-3bc360418617",
+  "displayName": "SMS OptIn Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.smsOptInQuestionScriptContent.  Please say \"yes\" or \"no\"." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.smsOptInQuestionScriptContent ,Veuillez répondre « oui » ou « non »" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that. $session.params.smsOptInQuestionScriptContent. please say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai pas entendu. $session.params.smsOptInQuestionScriptContent ,Veuillez répondre par oui ou par non." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that. $session.params.smsOptInQuestionScriptContent. please say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, j'ai pas compris. $session.params.smsOptInQuestionScriptContent ,Veuillez répondre par oui ou par non." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I still couldn't hear that. $session.params.smsOptInQuestionScriptContent , say yes or press 1. otherwise say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Désolé, je n'ai toujours pas entendu. $session.params.smsOptInQuestionScriptContent ,S'il vous plaît, dites oui ou appuyez sur 1, sinon dites non ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I still didn't get that. $session.params.smsOptInQuestionScriptContent say yes or press 1. otherwise say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai toujours pas compris. $session.params.smsOptInQuestionScriptContent ,Veuillez répondre oui ou appuyer sur 1, sinon répondez non ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "YesOrNoMn-Yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "SMS Phone Number",
+    "name": "3d759fd5-3fb6-4cd6-8c1a-dba34f08b3c5"
+  }, {
+    "intent": "YesOrNoMn-No",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "smsStatus",
+        "value": "declined"
+      }, {
+        "parameter": "sendSMS",
+        "value": false
+      }, {
+        "parameter": "smsId",
+        "value": ""
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "be276125-daa5-42d8-ab3d-6df7c23db8d0"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsStatus",
+        "value": "collection_err"
+      }, {
+        "parameter": "smsRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "sendSMS",
+        "value": false
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "a8c60190-96d7-459f-83a2-c6a6d879d708"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "d176c526-c05c-428d-a192-04c39b357e76"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "ef0be226-ee37-466e-aa63-06ea7910949c"
+  } ]
+}

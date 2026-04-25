@@ -1,0 +1,19 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "check my account "
+    }, {
+      "text": "balance"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Account "
+    }, {
+      "text": "balance"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

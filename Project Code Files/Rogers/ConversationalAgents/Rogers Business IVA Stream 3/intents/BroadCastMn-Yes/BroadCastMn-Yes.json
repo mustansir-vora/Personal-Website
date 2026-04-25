@@ -1,0 +1,8 @@
+{
+  "name": "f5f17385-59f6-4ddd-966c-a32ce0e54375",
+  "displayName": "BroadCastMn-Yes",
+  "priority": 500000,
+  "description": "This Will Trigger When User Said Yes Related Inputs",
+  "numTrainingPhrases": 50,
+  "dtmfPattern": "1"
+}

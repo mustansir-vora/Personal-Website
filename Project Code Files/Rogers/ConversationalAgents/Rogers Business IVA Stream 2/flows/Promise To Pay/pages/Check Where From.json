@@ -1,0 +1,25 @@
+{
+  "name": "b75944b0-b1a1-4751-adc0-c7078cf661d4",
+  "displayName": "Check Where From",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Return From Change 1st PTP Amount",
+    "name": "4d40814a-1f64-49d4-b4f9-358911379a35"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Amount Is Greater Than Recommended Amount 1",
+    "name": "86c3588a-a76a-4f44-988d-e1dc9c1575ef"
+  } ]
+}

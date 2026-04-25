@@ -1,0 +1,49 @@
+{
+  "name": "cca6332e-25cd-4202-a532-fdc78944f28e",
+  "displayName": "Check If Installment 1 Is Fulfilled",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.installmentStatus1 = F",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpInstallmentFullfilled",
+        "value": true
+      }, {
+        "parameter": "installmentInFocus",
+        "value": "second"
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      }, {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "passive-secondInstallmentMsg"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-secondInstallmentMsg"
+      } ]
+    },
+    "targetPage": "Check PromisedDate 2",
+    "name": "b8caff0c-ed8d-404e-9cd4-5ef8f3ae0f61"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Update Multiple First Install",
+    "name": "3eacabfe-ae4b-4587-9e89-6fdacfe23484"
+  } ]
+}

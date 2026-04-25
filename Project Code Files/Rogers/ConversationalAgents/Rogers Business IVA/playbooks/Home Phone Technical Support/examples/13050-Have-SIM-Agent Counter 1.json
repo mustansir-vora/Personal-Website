@@ -1,0 +1,62 @@
+{
+  "name": "dcf1da9a-1d16-462d-a00a-07ec96cfb779",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Does your home phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to talk with represntative"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Our specialists are unable to assist with this transaction, but I can help you with it here in the automated system. Let's try again.\nDoes your home phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yes "
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your home phone equipment. Please ensure you're calling from a different phone than the one you need help with."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportHomePhone",
+      "globalAgentRequestCounter": "1",
+      "hasNoHPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "savedIntent": "WHP-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "13050-Have-SIM-Agent Counter 1",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 374,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,275 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Veuillez m’aider à mettre à jour les utilisateurs autorisés afin de refléter les personnes qui doivent avoir des autorisations "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " le compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je soumettre "
+    }, {
+      "text": "une"
+    }, {
+      "text": " mise à jour des utilisateurs autorisés afin qu’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " autre personne puisse effectuer des modifications en "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " nom?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je souhaite retirer "
+    }, {
+      "text": "un"
+    }, {
+      "text": " ancien contact et mettre à jour les utilisateurs autorisés "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider à mettre à jour les utilisateurs autorisés, y compris l’ajout d’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " nouvelle personne au compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour mettre à jour les utilisateurs autorisés pouvant accéder et gérer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je mettre à jour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " nom et m’assurer que tous "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": " reflètent ce changement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider à mettre à jour le nom figurant au dossier afin qu’il corresponde à mes documents légaux."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux autoriser "
+    }, {
+      "text": "une"
+    }, {
+      "text": " autre personne à effectuer des modifications "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte en "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " nom."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je souhaite mettre à jour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " profil afin qu’il reflète "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "nouveau nom"
+    }, {
+      "text": " légal tel qu’indiqué "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " ma "
+    }, {
+      "text": "pièce"
+    }, {
+      "text": " d’identité."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois changer le nom du titulaire du compte enregistré à des fins de facturation."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je ajouter "
+    }, {
+      "text": "un"
+    }, {
+      "text": " autre utilisateur autorisé à gérer le compte avec moi?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour demander "
+    }, {
+      "text": "une"
+    }, {
+      "text": " mise à jour du nom du compte en raison d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " récent changement de document légal."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois mettre à jour le compte afin qu’il affiche "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " nouveau nom après "
+    }, {
+      "text": "mon mariage"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je "
+    }, {
+      "text": "souhaite ajouter une autre personne comme co"
+    }, {
+      "text": "-titulaire ou contact autorisé "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider à corriger l’orthographe de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " nom dans le compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider à ajouter "
+    }, {
+      "text": "un"
+    }, {
+      "text": " utilisateur autorisé pouvant accéder à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je modifier le nom indiqué comme titulaire principal du compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je souhaite mettre à jour les renseignements de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte afin qu’ils reflètent "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "nouveau nom"
+    }, {
+      "text": " légal."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je me suis récemment marié et je dois changer le nom de famille du titulaire du compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois mettre à jour le nom affiché "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte en raison d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " récent changement "
+    }, {
+      "text": "légal de nom"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

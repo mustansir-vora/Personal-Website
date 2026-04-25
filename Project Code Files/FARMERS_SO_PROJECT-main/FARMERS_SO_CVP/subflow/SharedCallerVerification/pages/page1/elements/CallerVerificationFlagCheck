@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@562120981:1724179119382" name="CallerVerificationFlagCheck" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CallerVerificationFlagCheck" default_exit_state="N">
+        <exit_state name="Y" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CALLER_VERIFICATION" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

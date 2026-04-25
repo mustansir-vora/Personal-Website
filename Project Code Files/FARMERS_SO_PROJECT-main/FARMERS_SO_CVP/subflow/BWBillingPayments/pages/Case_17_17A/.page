@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1153815334:1715067625507" name="Case_17_17A" version="6.0.1">
+<element height="50" id="Element@1504584381:1715067625507" name="Case_17_17A" type="Page Entry" width="135" x="318" y="29">
+<exit_states>
+<exit_state name="next" target="Element@901285281:1715078283565"/>
+</exit_states>
+</element>
+<element height="55" id="Element@901285281:1715078283565" name="IsPolicyInCollectionMode7" type="Decision" width="224" x="288" y="144">
+<exit_states>
+<exit_state name="Yes" target="Element@479879305:1715078510035">
+<bendpoint>
+<dim1 x="-60" y="72"/>
+<dim2 x="-61" y="-70"/>
+</bendpoint>
+</exit_state>
+<exit_state name="No" target="Element@479879305:1715078510035"/>
+</exit_states>
+</element>
+<element height="55" id="Element@807808234:1715078510035" name="BWBP_PA_024" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="162" x="-226" y="509">
+<exit_states>
+<exit_state name="done" target="Element@1446808070:1715078510035"/>
+</exit_states>
+</element>
+<element height="55" id="Element@479879305:1715078510035" name="POLICY_CALCELLATION_DAYS_CHECK" type="Decision" width="346" x="211" y="286">
+<exit_states>
+<exit_state name="Yes" target="Element@463830237:1715078510035"/>
+<exit_state name="No" target="Element@1294551740:1715078510035"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1173842262:1715078510035" name="BWBP_PA_025" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="162" x="287" y="522">
+<exit_states>
+<exit_state name="done" target="Element@1830655223:1715079285060"/>
+</exit_states>
+</element>
+<element height="55" id="Element@463830237:1715078510035" name="POLICY_BALANCE_CHECK_4" type="Decision" width="269" x="242" y="402">
+<exit_states>
+<exit_state name="&gt;=0" target="Element@556688668:1721743974893"/>
+<exit_state name="No" target="Element@556688668:1721743974893">
+<bendpoint>
+<dim1 x="263" y="6"/>
+<dim2 x="-155" y="-64"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1294551740:1715078510035" name="POLICY_CALCELLATION_DAYS_CHECK_1" type="Decision" width="363" x="-222" y="280">
+<exit_states>
+<exit_state name="Yes" target="Element@1485244291:1715079045780"/>
+<exit_state name="No" target="Element@1421087445:1721743918341"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1446808070:1715078510035" name="Transfer" type="Page Connector" width="174" x="277" y="751">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1485244291:1715079045780" name="Transfer" type="Page Connector" width="102" x="-86" y="157">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1830655223:1715079285060" name="Agent_DNIS_Check7" type="Decision" width="206" x="254" y="639">
+<exit_states>
+<exit_state name="Customer" target="Element@1446808070:1715078510035"/>
+<exit_state name="Agent" target="Element@696087486:1722927813051"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1421087445:1721743918341" name="Lang_Check_17" type="Decision" width="209" x="-202" y="398">
+<exit_states>
+<exit_state name="Yes" target="Element@807808234:1715078510035"/>
+<exit_state name="No" target="Element@1225160579:1721743937336"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1225160579:1721743937336" name="SP_BWBP_PA_024" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="203" x="-34" y="515">
+<exit_states>
+<exit_state name="done" target="Element@1446808070:1715078510035"/>
+</exit_states>
+</element>
+<element height="50" id="Element@556688668:1721743974893" name="Lang_Check_18" type="Decision" width="209" x="690" y="474">
+<exit_states>
+<exit_state name="Yes" target="Element@1173842262:1715078510035"/>
+<exit_state name="No" target="Element@383630832:1721744004557"/>
+</exit_states>
+</element>
+<element height="55" id="Element@383630832:1721744004557" name="SP_BWBP_PA_025" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="203" x="555" y="552">
+<exit_states>
+<exit_state name="done" target="Element@1830655223:1715079285060"/>
+</exit_states>
+</element>
+<element height="46" id="Element@696087486:1722927813051" name="Call_MN2" type="Page Connector" width="101" x="502" y="679">
+<page_connector target="Element@1699768267:1715068065991">Call_MN2<config/>
+</page_connector>
+</element>
+</page>

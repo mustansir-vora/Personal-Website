@@ -1,0 +1,211 @@
+{
+  "name": "37ed14fb-be35-4a0c-97d9-2f7eed0cbc1d",
+  "displayName": "Play Business SS Acc Menu",
+  "form": {
+    "parameters": [ {
+      "displayName": "dtmfOption",
+      "required": true,
+      "entityType": "@e_Dtmf1To3",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); or 'make a payment' (press 3)." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "ed5605ae-c3ee-4ae6-bcc1-9c80986a4849"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); or 'make a payment' (press 3)." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "3eb80523-e9ec-483c-a626-ddcef741daaf"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To hear your account balance, press 1; report a payment, 2; or to make a payment, press 3." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "48e8cf36-bc04-483e-a5ab-c719618a8474"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To hear your account balance, press 1; report a payment, 2; or to make a payment, press 3." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "9996e9f0-cc36-454d-9f77-3c43791d03ba"
+        }, {
+          "targetPage": "Check Suspension Resolved",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "9cbf9dc9-328c-493e-97f1-f238f70c1207"
+        }, {
+          "targetPage": "Check Suspension Resolved",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "2a2013f6-1786-45b0-b5ba-b283591255a9"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 5
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 5
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Which would you like? You can say ‘Account Balance’, ‘Report a payment’, or ‘Make a Payment’." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "account-balance",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Account Balance",
+    "name": "e7011814-e1cf-4f4e-91aa-6eab65d07ce0"
+  }, {
+    "intent": "report-a-payment",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Report a Payment",
+    "name": "5d287ca2-83ea-45f0-9be2-98e83be86156"
+  }, {
+    "intent": "make-a-payment",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Make a Payment",
+    "name": "87f76be7-76c1-4fa2-89ce-79858ae5a0b9"
+  }, {
+    "intent": "agent-request",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "384a9f89-aa10-4dae-98c4-894eb77d3fde"
+  }, {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "f2ea47c2-7f77-4841-bfd9-664bf34021d2"
+  }, {
+    "condition": "$session.params.dtmfOption = 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Account Balance",
+    "name": "c78c2eb9-f033-42fa-916c-6e6102d6566f"
+  }, {
+    "condition": "$session.params.dtmfOption = 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Report a Payment",
+    "name": "f2b95ef6-52d1-4d29-803a-3da76c9d7712"
+  }, {
+    "condition": "$session.params.dtmfOption = 3",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Make a Payment",
+    "name": "fea3f1f6-e948-4630-8e68-ba255861b7a4"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); or 'make a payment' (press 3)." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e6b783fd-863f-4dff-b14b-e486ca23dd5c"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To hear account balance, press 1; report a payment, 2 or to make a payment, press 3." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c277ad7d-6d4b-4db2-ad69-1b3129c48033"
+  }, {
+    "targetPage": "Check Suspension Resolved",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "3b6a7e69-a7e4-47ff-bda3-a501e8261082"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); or 'make a payment' (press 3)." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "4d923523-7c26-45a3-8b38-c68f4706ec9f"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To hear account balance, press 1; report a payment, 2 or to make a payment, press 5." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "94083c06-e19d-4cbc-a1fe-fa27eee24e00"
+  }, {
+    "targetPage": "Check Suspension Resolved",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "6683df90-b4a1-4bce-94c6-8dc865a5c7e3"
+  } ]
+}

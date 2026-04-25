@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1862591294:1721420436799" name="Copy_of_Is_Route_To" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is_Route_To" default_exit_state="OTHERS">
+        <exit_state name="MAIN_MENU" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ROUTE_TO" />
+                </data>
+                <constant_string value="MAIN_MENU" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

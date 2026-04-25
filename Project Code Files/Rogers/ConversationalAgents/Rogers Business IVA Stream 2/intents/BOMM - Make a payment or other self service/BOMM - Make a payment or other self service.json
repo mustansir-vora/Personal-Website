@@ -1,0 +1,7 @@
+{
+  "name": "9b3089df-ff1a-4115-9149-9ae14010af27",
+  "displayName": "BOMM - Make a payment or other self service",
+  "priority": 500000,
+  "numTrainingPhrases": 12,
+  "dtmfPattern": "1"
+}

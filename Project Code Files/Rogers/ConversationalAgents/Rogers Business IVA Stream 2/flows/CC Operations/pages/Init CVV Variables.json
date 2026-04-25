@@ -1,0 +1,22 @@
+{
+  "name": "c26fa31b-7ce9-4a85-b9f2-25eeafde0348",
+  "displayName": "Init CVV Variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "cvvAttemptNumber",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Card Type",
+    "name": "01c61c57-ba9c-4787-a534-9830a3bb0a1b"
+  } ],
+  "description": "Nothing to initialise here, keeping to maintain 1-1 visio structure"
+}

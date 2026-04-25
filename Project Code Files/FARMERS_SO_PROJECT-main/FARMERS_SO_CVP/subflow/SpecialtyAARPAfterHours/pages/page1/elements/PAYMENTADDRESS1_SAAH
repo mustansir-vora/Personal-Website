@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@196110212:1722499407547" name="PAYMENTADDRESS1_SAAH" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">DUMMY</setting>
+<setting name="sessNames">DUMMY_VAR</setting>
+</settings>
+</config>
+</action_element>

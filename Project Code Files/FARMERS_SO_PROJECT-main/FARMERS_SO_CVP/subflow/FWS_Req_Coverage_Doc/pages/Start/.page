@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@881181867:1708494385593" name="Start" version="6.0.1">
+<element height="46" id="Element@31:1708494385571" name="FWS_Req_Coverage_Doc" type="Subflow Start" width="179" x="192" y="25">
+<exit_states>
+<exit_state name="next" target="Element@1137056574:1711963609864"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@525593016:1751910477830"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1423178613:1708494424225" name="FWSRCD_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="186" x="249" y="131">
+<exit_states>
+<exit_state name="done" target="Element@241339595:1710402061926"/>
+</exit_states>
+</element>
+<element height="55" id="Element@384137468:1708494460505" name="FWSRCD_MN_001_VALUE" type="Decision" width="252" x="230" y="315">
+<exit_states>
+<exit_state name="Hang Up" target="Element@216032874:1708514953103"/>
+<exit_state name="Main Menu" target="Element@1983236161:1708514936782"/>
+<exit_state name="Representative" target="Element@1457762009:1708515034209"/>
+<exit_state name="NOINPUT" target="Element@405180827:1731528103997"/>
+<exit_state name="NOMATCH" target="Element@1457762009:1708515034209">
+<bendpoint>
+<dim1 x="162" y="54"/>
+<dim2 x="-52" y="-65"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1457762009:1708515034209"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1983236161:1708514936782" name="MainMenu" type="Subflow Call" width="138" x="254" y="422">
+<subflow_call subflow_name="SharedServiceMainMenu" target="Element@31:1713171931367">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1077224009:1708515000740"/>
+</exit_states>
+</element>
+<element height="55" id="Element@216032874:1708514953103" name="DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="89" x="98" y="417">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1077224009:1708515000740" name="FWS_REQ_COVERAGE" type="Subflow Return" width="223" x="239" y="511"/>
+<element height="55" id="Element@1457762009:1708515034209" name="SHARED_TRANSFER" type="Page Connector" width="209" x="466" y="434">
+<page_connector target="Element@994103853:1708514890944">SHARED_TRANSFER<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@241339595:1710402061926" name="FWSRCD_MN_001_Call" type="Subflow Call" width="229" x="242" y="216">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709977922418">
+<config>
+<argument_data>
+<data name="MenuID">FWSRCD_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@384137468:1708494460505"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1137056574:1711963609864" name="CHECK_ENTRYPOINT" type="Decision" width="218" x="463" y="79">
+<exit_states>
+<exit_state name="CONT" target="Element@1423178613:1708494424225"/>
+<exit_state name="ER" target="Element@1423178613:1708494424225"/>
+<exit_state name="NLU" target="Element@1423178613:1708494424225"/>
+<exit_state name="INITIAL" target="Element@1423178613:1708494424225"/>
+</exit_states>
+</element>
+<element height="55" id="Element@405180827:1731528103997" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="217" x="585" y="324">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="49" id="Element@525593016:1751910477830" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="521" y="3">
+<exit_states>
+<exit_state name="done" target="Element@2049246789:1751910477830"/>
+</exit_states>
+</element>
+<element height="48" id="Element@2069813602:1751910477830" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="929" y="-2">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2049246789:1751910477830" name="Copy_of_Shared_Transfer" type="Subflow Call" width="181" x="769" y="1">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2069813602:1751910477830"/>
+</exit_states>
+</element>
+</page>

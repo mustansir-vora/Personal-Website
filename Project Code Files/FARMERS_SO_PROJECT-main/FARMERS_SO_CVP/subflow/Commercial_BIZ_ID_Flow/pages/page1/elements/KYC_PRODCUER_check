@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@191182453:1730232361425" name="KYC_PRODCUER_check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.Commercial_BIZ_ID_Flow_KYC_check</source>
+</config>
+</decision>

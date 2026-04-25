@@ -1,0 +1,19 @@
+{
+  "name": "ad1096d0-98f3-48f6-8440-f79626fbab91",
+  "displayName": "Get Billing Profile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "billingProfile"
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cancelled Account",
+    "name": "e5bd96b8-2129-4943-99ab-4ead69cfaf19"
+  } ]
+}

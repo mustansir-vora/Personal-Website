@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@875687765:1712656788349" name="Disconnect" version="6.0.1">
+<element height="50" id="Element@208763510:1712656788349" name="DISCONNECT" type="Page Entry" width="140" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1951880178:1712656926026"/>
+</exit_states>
+</element>
+<element height="50" id="Element@801892631:1712656904949" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="140" x="298" y="231">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1951880178:1712656926026" name="SAHM_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="145" x="295" y="128">
+<exit_states>
+<exit_state name="done" target="Element@801892631:1712656904949"/>
+</exit_states>
+</element>
+</page>

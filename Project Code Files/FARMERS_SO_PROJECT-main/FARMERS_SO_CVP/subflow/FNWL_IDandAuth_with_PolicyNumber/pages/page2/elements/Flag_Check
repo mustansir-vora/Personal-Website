@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@93153395:1734071954377" name="Flag_Check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.FNWL_AuthCriteriaCheck</source>
+</config>
+</decision>

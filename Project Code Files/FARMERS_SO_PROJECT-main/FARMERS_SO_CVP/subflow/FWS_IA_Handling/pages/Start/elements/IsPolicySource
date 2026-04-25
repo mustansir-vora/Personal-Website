@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1843496480:1710738401771" name="IsPolicySource" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IsPolicySource" default_exit_state="OTHERS">
+        <exit_state name="Met360" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_POLICY_SOURCE" />
+                </data>
+                <constant_string value="Met360" />
+            </string>
+        </exit_state>
+        <exit_state name="A360" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_POLICY_SOURCE" />
+                </data>
+                <constant_string value="A360" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,251 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Can you check if the rocket mobile network is experiencing issues?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My rocket mobile device lost internet. Is there an outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is the rocket mobile internet service down?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you check if the Rocket Hub network is down?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My Rocket Hub internet stopped working. Is this an outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there an outage affecting Rocket Hub service "
+    }, {
+      "text": "today"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you check if "
+    }, {
+      "text": "5"
+    }, {
+      "text": "G home internet service is down?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "5"
+    }, {
+      "text": "G home internet suddenly went offline. Is this an outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there an outage for "
+    }, {
+      "text": "5"
+    }, {
+      "text": "G home internet in my area?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My wireless home internet stopped working. Is there an outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you check if wireless home internet is down in my area?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there an outage affecting my wireless home internet?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to report a possible outage since my services went completely offline "
+    }, {
+      "text": "this morning"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The internet suddenly stopped. Can you confirm if it’s a system-wide outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to check whether there’s an ongoing outage or a temporary network crash."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to know if the outage has been reported and how long it might take to restore service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there a current network failure or scheduled maintenance in my area?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think my home internet is part of an outage because even the modem lights are off."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "None of my devices are connecting. Is there a known service disruption happening?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I heard there might be a system-wide issue. Can you confirm if there’s an outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to make sure there isn’t a major outage before I reset all my devices."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you check if the mobile network is down in my region?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The connection has been dropping all morning; is there any service interruption reported?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just lost all connectivity and I’m wondering if it’s due to an outage in my zone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to report that my entire system is down. Maybe it’s part of a larger outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My Wi-Fi and TV both went out. Can you see if there’s a network crash or outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you verify if there’s an outage notice for my address?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I believe there’s a power or service outage affecting my internet and "
+    }, {
+      "text": "phone lines"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to find out if the service is down in my building or if it’s just my equipment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My connection completely dropped. Is there an ongoing outage that’s been reported?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me if there’s an internet outage in my postal code area "
+    }, {
+      "text": "right"
+    }, {
+      "text": " now?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just want to confirm whether there’s a known outage impacting my neighborhood."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think there might be a system outage because none of my services are working properly."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My phone isn’t getting any signal. Is there some sort of outage happening nearby?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you check if there’s a network outage affecting my internet connection "
+    }, {
+      "text": "right"
+    }, {
+      "text": " now?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm wondering if there’s an outage in my area because my service suddenly stopped working."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

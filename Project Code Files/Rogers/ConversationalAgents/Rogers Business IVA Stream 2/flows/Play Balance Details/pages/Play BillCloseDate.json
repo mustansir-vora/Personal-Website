@@ -1,0 +1,31 @@
+{
+  "name": "761de4c8-d855-47e2-ba35-404693a5d319",
+  "displayName": "Play BillCloseDate",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "\u003cspeak\u003ePayment is due by \u003csay-as interpret-as=\"date\" format=\"md\"\u003e $session.params.api.billingProfile.playAccountBalanceDates.playbillCloseDate\u003c/say-as\u003e.\u003c/speak\u003e" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Le paiement est exigible au plus tard le $session.params.api.billingProfile.playAccountBalanceDates.playbillCloseDate" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "accountBalanceSMS",
+        "value": "accountBalanceCurrBalPastDueBillCloseDate"
+      } ]
+    },
+    "targetPage": "Start InstallmentPaymentPlanDetails subflow",
+    "name": "850b9fff-e75f-48bd-8709-05229d954e1f"
+  } ]
+}

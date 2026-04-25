@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@200524668:1723485325585" name="intermediaterinformationmanagementv1" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.Intermediaterinformationmanagement</source>
+</config>
+</decision>

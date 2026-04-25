@@ -1,0 +1,38 @@
+{
+  "name": "e0e1fe3c-0cc3-4a34-aac9-be4435c8ac45",
+  "displayName": "Check Auth Level Achieved",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.authLevelAchieved = \"low\" AND $session.params.nluConfig.authLevel = \"high\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Pin Indicator",
+    "name": "e457a394-06ac-4666-8b79-8be87f9566df"
+  }, {
+    "condition": "$session.params.authLevelAchieved = \"low\" AND $session.params.nluConfig.authLevel = \"low\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Continue"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "6bd5ca3f-9b49-415d-9e98-1c05f7f072f7"
+  }, {
+    "condition": "$session.params.authLevelAchieved = \"high\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Continue"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "8a04775d-be75-4fdb-8a53-9c6ac0608e6f"
+  } ]
+}

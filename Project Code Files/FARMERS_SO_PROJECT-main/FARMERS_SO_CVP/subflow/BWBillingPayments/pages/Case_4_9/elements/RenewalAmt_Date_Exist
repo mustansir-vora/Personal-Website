@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1393587567:1715074476187" name="RenewalAmt_Date_Exist" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="RE_AMOUNT_DATE_CHECK" default_exit_state="False">
+        <exit_state name="True" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_RENEWAL_AMOUNT_EXISTS" />
+                </data>
+                <constant_string value="True" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="S_RENEWAL_DATE_EXISTS" />
+                </data>
+                <constant_string value="True" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

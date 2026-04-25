@@ -1,0 +1,116 @@
+{
+  "name": "83be7b3c-d262-4537-a88f-a13de9ff9089",
+  "displayName": "collect Postal Code",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.retryCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "There are multiple service addresses associated with your account.What's the postal code for the service address you're calling about?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 1 AND $session.params.stdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that. Please tell me the postal code for the service address you're calling about." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 1 AND $session.params.stdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that. Please tell me the postal code for the service address you're calling about." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "SSA_PostalCode",
+    "condition": "$session.params.retryCount \u003c 2 AND $session.params.postalCode != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postalCode",
+        "value": "$sys.func.UPPER($session.params.postalCode)"
+      } ]
+    },
+    "targetPage": "is Single Service Found",
+    "name": "0f92603a-697e-4ee4-bf9d-f38e54b2b2a9"
+  }, {
+    "condition": "$session.params.retryCount \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": "MA"
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "f516d09a-b655-4a8c-b01c-fc5d4c9e1d05"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": "$sys.func.ADD($session.params.retryCount, 1)"
+      }, {
+        "parameter": "stdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "49d2b9ab-3fd5-4bcb-9b99-6f87aec22a18"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": "$sys.func.ADD($session.params.retryCount, 1)"
+      }, {
+        "parameter": "stdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "fb947b48-af09-4fb2-b557-2a23a03ec617"
+  } ],
+  "transitionRouteGroups": [ "Global_Menu_TS" ],
+  "advancedSettings": {
+    "speechAdaptationSettings": {
+      "enableManualSpeechAdaptation": true,
+      "biasingPhraseSets": [ {
+        "biasingPhrases": [ {
+          "value": "$OOV_CLASS_ALPHANUMERIC_SEQUENCE",
+          "boost": 20
+        }, {
+          "value": "$OOV_CLASS_ALPHANUMERIC_SEQUENCE"
+        }, {
+          "value": "$POSTALCODE"
+        }, {
+          "value": "$POSTALCODE",
+          "boost": 20
+        } ],
+        "displayName": "Postal_Code"
+      } ]
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

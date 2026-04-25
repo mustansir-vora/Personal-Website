@@ -1,0 +1,8 @@
+{
+  "entities": [ {
+    "value": "^([0-9][-\\s]?){4}$",
+    "synonyms": [ "^([0-9][-\\s]?){4}$" ],
+    "languageCode": "en",
+    "dtmfPattern": "dtmf_digits_[0-9]{4}$"
+  } ]
+}

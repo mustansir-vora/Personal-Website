@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@235501653:1754498788995" name="Global REP Handling" version="6.0.1">
+<element height="55" id="Element@2122305011:1754498828056" name="Rep_Req" type="Page Connector" width="117" x="183" y="292">
+<page_connector target="Element@1969882355:1745500715033">Rep_Req<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1944534410:1754498840426" name="REP_COUNT_CHECK" type="Decision" width="202" x="294" y="122">
+<exit_states>
+<exit_state name="CONT" target="Element@2122305011:1754498828056"/>
+<exit_state name="TR" target="Element@2018173071:1754500737905"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1828866062:1754498931732" name="GLOBAL_REP_ENTRY" type="Page Entry" width="209" x="287" y="37">
+<exit_states>
+<exit_state name="next" target="Element@1944534410:1754498840426"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1600599808:1754500661273" name="CANCEL_POLICY_ENTRY" type="Page Connector" width="180" x="484" y="302">
+<page_connector target="Element@1232041515:1754377542076">CANCEL_POLICY_ENTRY<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2018173071:1754500737905" name="SET_REP_REQ_FLAG" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="164" x="478" y="227">
+<exit_states>
+<exit_state name="done" target="Element@1600599808:1754500661273"/>
+</exit_states>
+</element>
+</page>

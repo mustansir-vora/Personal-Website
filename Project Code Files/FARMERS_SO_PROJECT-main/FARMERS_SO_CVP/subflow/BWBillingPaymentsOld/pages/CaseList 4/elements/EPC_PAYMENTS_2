@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1787710732:1708938708013" name="EPC_PAYMENTS_2" version="6.0.1">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1711717625940">
+<config/>
+</subflow_call>
+</connector>

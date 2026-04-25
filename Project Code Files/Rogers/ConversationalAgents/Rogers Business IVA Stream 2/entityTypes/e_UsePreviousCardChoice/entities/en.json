@@ -1,0 +1,18 @@
+{
+  "entities": [ {
+    "value": "hold",
+    "synonyms": [ "give me a second", "hold", "hold on", "one moment", "wait" ],
+    "languageCode": "en",
+    "dtmfPattern": "#"
+  }, {
+    "value": "enter_new",
+    "synonyms": [ "different", "enter_new", "new card", "no", "nope" ],
+    "languageCode": "en",
+    "dtmfPattern": "2"
+  }, {
+    "value": "use_previous",
+    "synonyms": [ "correct", "sure", "use it", "use previous", "use_previous", "yeah", "yep", "yes" ],
+    "languageCode": "en",
+    "dtmfPattern": "1"
+  } ]
+}

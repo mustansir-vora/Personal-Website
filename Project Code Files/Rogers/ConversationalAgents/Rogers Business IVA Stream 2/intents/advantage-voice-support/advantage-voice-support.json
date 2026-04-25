@@ -1,0 +1,7 @@
+{
+  "name": "02002b74-9ed2-4d59-bd62-0be67e36f174",
+  "displayName": "advantage-voice-support",
+  "priority": 500000,
+  "description": "Handles calls with Advantage Voice issue for business customers.",
+  "numTrainingPhrases": 38
+}

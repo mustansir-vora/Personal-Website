@@ -1,0 +1,134 @@
+{
+  "name": "c3731ad4-0f59-4cf7-ac5f-fbc393cadada",
+  "displayName": "Get PTP Date",
+  "form": {
+    "parameters": [ {
+      "displayName": "getPTPDate",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "What date do you want to use for your payment arrangement? Say it now, or enter it using two digits for the date. two for the month. and four for the year." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Quelle date souhaitez-vous utiliser pour votre \r\nentente de paiement ? Dites-la maintenant ou entrez-la à l’aide de deux \r\nchiffres pour le jour, deux pour le mois et quatre pour l’année. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "35dad870-e7d7-4fdf-aff6-591ea82b7c60"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Enter the date you want to use for your payment arrangement. Use two digits for the date. two for the month. and four for the year. For example, March 8, 2030, would be entered as 0 8, 0 3, 2 0, 3 0. " ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Entrez la date que vous souhaitez utiliser pour \nvotre entente de paiement. Utilisez deux chiffres pour le jour, \ndeux pour le mois et quatre pour l’année. Par exemple, le 8 mars 2030 \nserait entré comme 0 8, 0 3, 2 0, 3 0. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "b369435c-6f44-4795-8617-43dda26e1fa1"
+        }, {
+          "targetPage": "Return From Get Date",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "collectedPtpDate",
+              "value": null
+            }, {
+              "parameter": "getPtpDateFailure",
+              "value": true
+            } ]
+          },
+          "name": "f07e5bd5-e8ba-41f7-a9bf-af7291aaa2c7"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "What date do you want to use for your payment arrangement? Say it now, or enter it using two digits for the date. two for the month. and four for the year." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Quelle date souhaitez-vous utiliser pour votre \r\nentente de paiement ? Dites-la maintenant ou entrez-la à l’aide de deux \r\nchiffres pour le jour, deux pour le mois et quatre pour l’année. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "9f8a7344-aa05-4d29-9cee-a6d08e25e50c"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Enter the date you want to use for your payment arrangement. Use two digits for the date. two for the month. and four for the year. For example, March 8, 2030, would be entered as 0 8, 0 3, 2 0, 3 0." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Entrez la date que vous souhaitez utiliser pour \r\nvotre entente de paiement. Utilisez deux chiffres pour le jour, \r\ndeux pour le mois et quatre pour l’année. Par exemple, le 8 mars 2030 \r\nserait entré comme 0 8, 0 3, 2 0, 3 0. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "1b714c7a-9b44-48e8-9675-bae4e4004366"
+        }, {
+          "targetPage": "Return From Get Date",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "collectedPtpDate",
+              "value": null
+            }, {
+              "parameter": "getPtpDateFailure",
+              "value": true
+            } ]
+          },
+          "name": "a7ce189d-d2e8-47d7-a0ee-f0440871c1eb"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "When can you pay it?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Quand pouvez-vous effectuer le paiement ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpDate",
+        "value": "$sys.func.FORMAT_DATE($session.params.getPTPDate, \"yyyy-MM-dd\")"
+      }, {
+        "parameter": "getPTPDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Get Date",
+    "name": "e35d60b0-7aef-490b-b5b0-06b7463a117e"
+  } ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1734713259:1729664898821" name="SET_EMAILFLAG_AS_NO" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">NO</setting>
+<setting name="sessNames">S_IS_POLICY_EMAIL_AVIALABLE</setting>
+</settings>
+</config>
+</action_element>

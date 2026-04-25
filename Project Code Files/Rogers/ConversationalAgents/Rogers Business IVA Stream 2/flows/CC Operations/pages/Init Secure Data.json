@@ -1,0 +1,32 @@
+{
+  "name": "96e224a0-afda-4908-9019-dcf5253aa610",
+  "displayName": "Init Secure Data",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "initSecureData"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.consumerSemafone.initSecureData.success = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ask Card Number",
+    "name": "c6068d50-dd97-4c91-a7e2-bd5ab8bd52b6"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "7d59d71f-ac1b-4675-b581-f88d47767bb6"
+  } ]
+}

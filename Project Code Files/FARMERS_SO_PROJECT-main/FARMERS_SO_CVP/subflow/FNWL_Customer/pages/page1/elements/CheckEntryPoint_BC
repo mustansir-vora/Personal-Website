@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1802517206:1712474921577" name="CheckEntryPoint_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.CheckEntryPoint_BC</source>
+</config>
+</decision>

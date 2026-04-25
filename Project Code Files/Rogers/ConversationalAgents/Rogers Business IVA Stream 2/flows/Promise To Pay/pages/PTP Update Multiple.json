@@ -1,0 +1,90 @@
+{
+  "name": "083fa928-d6f6-457e-ac57-959505da8f2d",
+  "displayName": "PTP Update Multiple",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "fromUpdateMultiple",
+      "value": true
+    }, {
+      "parameter": "fromUpdateSingle",
+      "value": false
+    }, {
+      "parameter": "selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSNName",
+      "value": "passive-multipleInstallmentPtp"
+    }, {
+      "parameter": "ptpOperation",
+      "value": "UPDATE"
+    }, {
+      "parameter": "numberOfInstalls",
+      "value": 2
+    }, {
+      "parameter": "ptpInstallmentIndexCounter",
+      "value": 0
+    }, {
+      "parameter": "ptpInstallmentFullfilled",
+      "value": false
+    }, {
+      "parameter": "firstInstallmentChanged",
+      "value": false
+    }, {
+      "parameter": "ptpChangeAmount",
+      "value": false
+    }, {
+      "parameter": "ptpChangeDate",
+      "value": false
+    }, {
+      "parameter": "ptpChangeMethod",
+      "value": false
+    }, {
+      "parameter": "collectedPtpAmount",
+      "value": null
+    }, {
+      "parameter": "collectedPtpDate",
+      "value": null
+    }, {
+      "parameter": "collectedPtpMethod",
+      "value": "$session.params.api.response.ptp.paymentMethod"
+    }, {
+      "parameter": "amount1",
+      "value": "$session.params.api.response.ptp.amount1"
+    }, {
+      "parameter": "datePromised1",
+      "value": "$session.params.api.response.ptp.datePromised1"
+    }, {
+      "parameter": "firstPromiseAmount",
+      "value": "$session.params.api.response.ptp.amount1"
+    }, {
+      "parameter": "firstPromiseDate",
+      "value": "$session.params.api.response.ptp.datePromised1"
+    }, {
+      "parameter": "promiseMethod",
+      "value": "$session.params.api.response.ptp.paymentMethod"
+    }, {
+      "parameter": "amount2",
+      "value": "$session.params.api.response.ptp.amount2"
+    }, {
+      "parameter": "datePromised2",
+      "value": "$session.params.api.response.ptp.datePromised2"
+    }, {
+      "parameter": "secondPromiseAmount",
+      "value": "$session.params.api.response.ptp.amount2"
+    }, {
+      "parameter": "secondPromiseDate",
+      "value": "$session.params.api.response.ptp.datePromised2"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Installment 1 Is Fulfilled",
+    "name": "e738176c-d4af-49e2-913e-434d7e7a33b1"
+  } ]
+}

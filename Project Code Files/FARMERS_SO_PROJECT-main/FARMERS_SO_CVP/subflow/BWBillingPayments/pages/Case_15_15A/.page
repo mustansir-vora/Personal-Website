@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1420300322:1715067594525" name="Case_15_15A" version="6.0.1">
+<element height="50" id="Element@1385035113:1715067594525" name="Case_15_15A" type="Page Entry" width="135" x="549" y="-132">
+<exit_states>
+<exit_state name="next" target="Element@1576761477:1715076130827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1743775878:1715076130827" name="PolicyBalCheck5" type="Decision" width="156" x="529" y="322">
+<exit_states>
+<exit_state name="&gt;=0" target="Element@1138192571:1715076295159"/>
+<exit_state name="No" target="Element@1138192571:1715076295159">
+<bendpoint>
+<dim1 x="-54" y="57"/>
+<dim2 x="-71" y="-56"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1800725963:1715076130827" name="BWBP_PA_017" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="162" x="263" y="849">
+<exit_states>
+<exit_state name="done" target="Element@1640677372:1715076684155"/>
+</exit_states>
+</element>
+<element height="55" id="Element@725040383:1715076130827" name="NSF_State_Check5" type="Decision" width="214" x="487" y="680">
+<exit_states>
+<exit_state name="Y" target="Element@6040734:1721743574465"/>
+<exit_state name="Not Y" target="Element@6040734:1721743574465">
+<bendpoint>
+<dim1 x="71" y="66"/>
+<dim2 x="69" y="-55"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1576761477:1715076130827" name="IsPolicyInCollectionMode" type="Decision" width="216" x="512" y="-25">
+<exit_states>
+<exit_state name="Yes" target="Element@1146829183:1715076130827"/>
+<exit_state name="No" target="Element@1146829183:1715076130827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@639418269:1715076130827" name="PolicyQualifiedForReinstateWithLapse" type="Decision" width="300" x="474" y="216">
+<exit_states>
+<exit_state name="Y" target="Element@1743775878:1715076130827"/>
+<exit_state name="N" target="Element@1743775878:1715076130827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1365129751:1715076130827" name="BWBP_MN_008_VALUE" type="Decision" width="228" x="182" y="1186">
+<exit_states>
+<exit_state name="Make a Payment" target="Element@1749608848:1715076900487">
+<bendpoint>
+<dim1 x="-109" y="68"/>
+<dim2 x="-135" y="-53"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Outstanding Balance" target="Element@1749608848:1715076900487"/>
+<exit_state name="NOINPUT" target="Element@794577991:1715076900487"/>
+<exit_state name="NOMATCH" target="Element@794577991:1715076900487"/>
+<exit_state name="ER" target="Element@794577991:1715076900487"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1146829183:1715076130827" name="PolicyUpForRenewal" type="Decision" width="184" x="522" y="94">
+<exit_states>
+<exit_state name="Y" target="Element@639418269:1715076130827"/>
+<exit_state name="Not Y" target="Element@639418269:1715076130827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1078124229:1715076130827" name="BWBP_MN_008_Call" type="Subflow Call" width="205" x="183" y="1061">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709110104594">
+<config>
+<argument_data>
+<data name="MenuID">BWBP_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1365129751:1715076130827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1138192571:1715076295159" name="TodayDate_LessThan_RenewalEffectiveDate5" type="Decision" width="346" x="449" y="435">
+<exit_states>
+<exit_state name="True" target="Element@175907474:1715076295159"/>
+<exit_state name="False" target="Element@175907474:1715076295159"/>
+</exit_states>
+</element>
+<element height="55" id="Element@175907474:1715076295159" name="Relapse_Period5" type="Decision" width="184" x="510" y="554">
+<exit_states>
+<exit_state name="True" target="Element@725040383:1715076130827">
+<bendpoint>
+<dim1 x="-29" y="53"/>
+<dim2 x="-16" y="-54"/>
+</bendpoint>
+</exit_state>
+<exit_state name="False" target="Element@725040383:1715076130827">
+<bendpoint>
+<dim1 x="33" y="55"/>
+<dim2 x="46" y="-52"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1640677372:1715076684155" name="Agent_DNIS_Check5" type="Decision" width="183" x="510" y="934">
+<exit_states>
+<exit_state name="Customer" target="Element@1078124229:1715076130827"/>
+<exit_state name="Agent" target="Element@32046347:1722927851331"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1749608848:1715076900487" name="EPC_PAYMENTS_US5" type="Subflow Call" width="185" x="243" y="1307">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1711717421472">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@633061034:1715076900487"/>
+</exit_states>
+</element>
+<element height="50" id="Element@794577991:1715076900487" name="Transfer" type="Page Connector" width="102" x="496" y="1305">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@633061034:1715076900487" name="Disc" type="Page Connector" width="78" x="279" y="1420">
+<page_connector target="Element@1134908791:1715070588429">Disc<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@6040734:1721743574465" name="Lang_Check_14" type="Decision" width="209" x="489" y="777">
+<exit_states>
+<exit_state name="Yes" target="Element@1800725963:1715076130827"/>
+<exit_state name="No" target="Element@1926179018:1721743608745"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1926179018:1721743608745" name="SP_BWBP_PA_017" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="203" x="494" y="849">
+<exit_states>
+<exit_state name="done" target="Element@1640677372:1715076684155"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32046347:1722927851331" name="Call_MN2" type="Page Connector" width="101" x="692" y="1102">
+<page_connector target="Element@1699768267:1715068065991">Call_MN2<config/>
+</page_connector>
+</element>
+</page>

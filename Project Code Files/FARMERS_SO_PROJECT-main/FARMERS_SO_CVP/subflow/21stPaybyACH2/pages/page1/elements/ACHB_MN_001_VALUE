@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@56630693:1708931493788" name="ACHB_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.ACHB_MN_001_VALUE</source>
+</config>
+</decision>

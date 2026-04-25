@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1711022580:1722927741423" name="BWBP_MN_002_INTENT_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BWBP_MN_002_INTENT_CHECK_1" default_exit_state="Lookup Another Policy">
+        <exit_state name="Main Menu" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="BWBP_MN_002_Call" variable="Return_Value" />
+                </data>
+                <constant_string value="Main Menu" />
+            </string>
+        </exit_state>
+        <exit_state name="Other Billing Questions" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="BWBP_MN_002_Call" variable="Return_Value" />
+                </data>
+                <constant_string value="Other Billing Questions" />
+            </string>
+        </exit_state>
+        <exit_state name="Representative" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="BWBP_MN_002_Call" variable="Return_Value" />
+                </data>
+                <constant_string value="Representative" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

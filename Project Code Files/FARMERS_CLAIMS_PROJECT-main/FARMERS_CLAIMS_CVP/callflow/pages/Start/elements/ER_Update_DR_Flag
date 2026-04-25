@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@894846617:1741239312524" name="ER_Update_DR_Flag" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">strDR</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="CISCO_DR">Y</data>
+</session_data>
+</config>
+</action_element>

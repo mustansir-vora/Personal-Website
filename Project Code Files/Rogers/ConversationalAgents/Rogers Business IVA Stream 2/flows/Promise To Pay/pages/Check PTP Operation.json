@@ -1,0 +1,25 @@
+{
+  "name": "56241404-c85f-471a-875f-36e1b4b753d3",
+  "displayName": "Check PTP Operation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpOperation = CREATE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Create New",
+    "name": "21b7fc2b-c95f-48d3-883a-55f70b760cb6"
+  }, {
+    "condition": "$session.params.ptpOperation = UPDATE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Update Single Details",
+    "name": "c61cc178-6599-4242-af0d-3d33bb281f98"
+  } ]
+}

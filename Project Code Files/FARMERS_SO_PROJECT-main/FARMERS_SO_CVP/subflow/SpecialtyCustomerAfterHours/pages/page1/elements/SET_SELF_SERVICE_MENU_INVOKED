@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@719550026:1712682608785" name="SET_SELF_SERVICE_MENU_INVOKED" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">S_SELF_SERVICE_INVOKED</setting>
+</settings>
+</config>
+</action_element>

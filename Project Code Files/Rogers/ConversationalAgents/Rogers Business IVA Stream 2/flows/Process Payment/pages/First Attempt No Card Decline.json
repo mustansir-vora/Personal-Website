@@ -1,0 +1,31 @@
+{
+  "name": "863b1bec-22c2-4a57-b9dd-4d03476333ce",
+  "displayName": "First Attempt No Card Decline",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.cardErroredOut = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": null
+      } ]
+    },
+    "targetPage": "Cant Continue Payment",
+    "name": "476d0dc6-cece-4efb-b1c6-8882074eb441"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cardErroredOut",
+        "value": true
+      } ]
+    },
+    "targetPage": "Process Payment",
+    "name": "93bf7690-9237-4593-86da-e5c9b23f552e"
+  } ]
+}

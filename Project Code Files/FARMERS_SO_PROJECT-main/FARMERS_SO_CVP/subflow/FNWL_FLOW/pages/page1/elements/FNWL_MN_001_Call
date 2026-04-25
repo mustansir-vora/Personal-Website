@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@119735568:1732780138357" name="FNWL_MN_001_Call" version="6.0.1">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1754660332294">
+<config>
+<argument_data>
+<data name="MenuID">FNWL_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

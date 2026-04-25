@@ -1,0 +1,45 @@
+{
+  "name": "c1ab05df-5f0c-4c4f-a5ef-5a9914c752d4",
+  "displayName": "Tech Outage Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "$sys.func.CONCATENATE(\"$session.params.attemptedSSName\",\",active-outageStatus\")"
+    }, {
+      "parameter": "selfServiceCompleted",
+      "value": true
+    }, {
+      "parameter": "completedSSName",
+      "value": "$sys.func.CONCATENATE(\"$session.params.completedSSName\",\",active-outageStatus\")"
+    }, {
+      "parameter": "outageRepeatCounter",
+      "value": 0
+    }, {
+      "parameter": "reportingVar_attemptedSSName",
+      "value": "$session.params.attemptedSSName"
+    }, {
+      "parameter": "reportingVar_completedSSName",
+      "value": "$session.params.completedSSName"
+    }, {
+      "parameter": "completedSelfServe",
+      "value": "$session.params.completedSSName"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "outageRepeatCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "readMessage",
+    "name": "1c65f44c-d8d9-4903-9527-bd8c99f1b2fa"
+  } ]
+}

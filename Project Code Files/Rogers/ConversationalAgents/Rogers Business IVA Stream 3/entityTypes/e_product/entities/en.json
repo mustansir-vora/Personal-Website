@@ -1,0 +1,43 @@
+{
+  "entities": [ {
+    "value": "Home Phone",
+    "synonyms": [ "Home Phone" ],
+    "languageCode": "en"
+  }, {
+    "value": "mobile",
+    "synonyms": [ "mobile", "wireless" ],
+    "languageCode": "en"
+  }, {
+    "value": "5G Home Internet",
+    "synonyms": [ "5G Home Internet" ],
+    "languageCode": "en"
+  }, {
+    "value": "Home Phone",
+    "synonyms": [ "Home Phone", "home phone", "wireless home phone " ],
+    "languageCode": "en"
+  }, {
+    "value": "Rocket Mobile Devices",
+    "synonyms": [ "Rocket Mobile Devices", "Rocket Mobile" ],
+    "languageCode": "en"
+  }, {
+    "value": "High Speed Internet",
+    "synonyms": [ "High Speed Internet", "Internet", "Wireless Home Internet" ],
+    "languageCode": "en"
+  }, {
+    "value": "TV",
+    "synonyms": [ "TV", "Television" ],
+    "languageCode": "en"
+  }, {
+    "value": "Home Security",
+    "synonyms": [ "Home Security", "smart home", "self protect " ],
+    "languageCode": "en"
+  }, {
+    "value": "Smartwatch",
+    "synonyms": [ "Smartwatch" ],
+    "languageCode": "en"
+  }, {
+    "value": "Tablet",
+    "synonyms": [ "Tablet", "ipad" ],
+    "languageCode": "en"
+  } ]
+}

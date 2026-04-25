@@ -1,0 +1,25 @@
+{
+  "name": "d683063b-3ca2-4963-a191-36889976a1fe",
+  "displayName": "Call Make a Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Make A Payment",
+    "name": "24443aed-0208-4613-a7a2-724d1ba9ceb3"
+  }, {
+    "condition": "$session.params.subFlowReturnValue = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "b888707f-f7b1-4d7b-8ca8-6c934101ed81"
+  } ]
+}

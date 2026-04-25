@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@224258180:1715185323575" name="21ST_CANCELLED" version="6.0.1">
+<element height="55" id="Element@117700350:1715185323575" name="21ST_CANCELLED" type="Page Entry" width="190" x="864" y="36">
+<exit_states>
+<exit_state name="next" target="Element@554614095:1715185376633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@466291886:1715185376633" name="21ST_SBP_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="191" x="235" y="104">
+<exit_states>
+<exit_state name="done" target="Element@1979981088:1715185376635"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2079520252:1715185376633" name="MAIN_MENU" type="Page Connector" width="199" x="1176" y="791">
+<page_connector target="Element@1654434117:1714726602317">MAIN_MENU<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1979981088:1715185376635" name="21ST_PAYMENT_METHOD_1" type="Subflow Call" width="271" x="260" y="231">
+<subflow_call subflow_name="21stPaymentMethod" target="Element@31:1715160715929">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@265678160:1715185376635"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1500388503:1715185376635" name="21ST" type="Page Connector" width="89" x="1663" y="982">
+<page_connector target="Element@1931462250:1715185251006">21ST<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1561328637:1715185376633" name="21ST_Subflow Return_2" type="Subflow Return" width="304" x="698" y="483"/>
+<element height="55" id="Element@792904094:1715185376633" name="21ST_SBP_MN_005_VALUE" type="Decision" width="257" x="1148" y="602">
+<exit_states>
+<exit_state name="Lienholder" target="Element@1923217232:1715185376633">
+<bendpoint>
+<dim1 x="-246" y="50"/>
+<dim2 x="130" y="-150"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Main Menu" target="Element@2079520252:1715185376633"/>
+<exit_state name="Representative" target="Element@1923217232:1715185376633">
+<bendpoint>
+<dim1 x="-144" y="125"/>
+<dim2 x="232" y="-75"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-174" y="134"/>
+<dim2 x="202" y="-66"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Billing Questions" target="Element@1923217232:1715185376633">
+<bendpoint>
+<dim1 x="-222" y="96"/>
+<dim2 x="154" y="-104"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1561328637:1715185376633"/>
+<exit_state name="NOMATCH" target="Element@1923217232:1715185376633">
+<bendpoint>
+<dim1 x="-287" y="20"/>
+<dim2 x="89" y="-180"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@510993019:1731529917227"/>
+<exit_state name="Lookup Another Policy" target="Element@941570128:1715185376633"/>
+<exit_state name="Repeat" target="Element@1341356913:1715185376635"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1347628724:1715185376633" name="21ST_SBP_MN_005_Call" type="Subflow Call" width="234" x="1159" y="482">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709026404246">
+<config>
+<argument_data>
+<data name="MenuID">SBP_MN_005</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@792904094:1715185376633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1341356913:1715185376635" name="21ST_REPEAT_BY_STATUS" type="Page Connector" width="245" x="1548" y="603">
+<page_connector target="Element@1946065192:1715185276559">21ST_REPEAT_BY_STATUS<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@941570128:1715185376633" name="SET_LOOKUP_ANOTHER_POLICY_21ST_CANCELLED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="451" x="1467" y="749">
+<exit_states>
+<exit_state name="done" target="Element@1537818023:1715185376635"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1646992010:1715185376633" name="21ST_SET_ROUTE_TO_NEW_QUOTE" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="395" x="650" y="337">
+<exit_states>
+<exit_state name="done" target="Element@1561328637:1715185376633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1386522605:1715185376633" name="21ST_SBP_MN_007_Call" type="Subflow Call" width="234" x="1145" y="233">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709026814985">
+<config>
+<argument_data>
+<data name="MenuID">SBP_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@721367139:1715185376633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1923217232:1715185376633" name="21ST_Transfer2" type="Subflow Call" width="237" x="726" y="775">
+<subflow_call subflow_name="Transfer" target="Element@31:1710691173865">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1561328637:1715185376633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@554614095:1715185376633" name="21ST_OUTSTANDING_BALANCE_CHECK" type="Decision" width="361" x="778" y="124">
+<exit_states>
+<exit_state name="YES" target="Element@656563843:1722494424606"/>
+<exit_state name="NO" target="Element@1386522605:1715185376633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@265678160:1715185376635" name="Copy_of_Subflow Return_03" type="Subflow Return" width="271" x="257" y="325"/>
+<element height="55" id="Element@721367139:1715185376633" name="21ST_SBP_MN_007_VALUE" type="Decision" width="257" x="1145" y="341">
+<exit_states>
+<exit_state name="New Quote" target="Element@1646992010:1715185376633"/>
+<exit_state name="NOINPUT" target="Element@1347628724:1715185376633">
+<bendpoint>
+<dim1 x="-58" y="63"/>
+<dim2 x="-57" y="-63"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1347628724:1715185376633">
+<bendpoint>
+<dim1 x="56" y="70"/>
+<dim2 x="57" y="-56"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1347628724:1715185376633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1537818023:1715185376635" name="21ST_SharedAuth" type="Subflow Call" width="259" x="1574" y="868">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1707978989591">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1500388503:1715185376635"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2057894834:1722494397864" name="21ST_SBP_PA_001_SP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="226" x="487" y="105">
+<exit_states>
+<exit_state name="done" target="Element@1979981088:1715185376635"/>
+</exit_states>
+</element>
+<element height="50" id="Element@656563843:1722494424606" name="21ST_Lang_Check_BC_008" type="Decision" width="279" x="293" y="-6">
+<exit_states>
+<exit_state name="Yes" target="Element@466291886:1715185376633"/>
+<exit_state name="No" target="Element@2057894834:1722494397864"/>
+</exit_states>
+</element>
+<element height="50" id="Element@510993019:1731529917227" name="DISC Entry" type="Page Connector" width="124" x="1548" y="490">
+<page_connector target="Element@1782299812:1731529539958">DISC Entry<config/>
+</page_connector>
+</element>
+</page>

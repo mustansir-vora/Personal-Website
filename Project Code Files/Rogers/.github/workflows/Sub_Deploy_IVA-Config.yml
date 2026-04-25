@@ -1,0 +1,148 @@
+name: Sub Deploy IVA Configs
+
+on:
+  workflow_call:
+    inputs:
+      configs:
+        required: true
+        type: string
+
+      environment:
+        required: true
+        type: string
+
+      git_tag:
+        required: true
+        type: string
+
+      runner_label:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  Deploy-Configs:
+    name: Sub-Deploy IVA Configs - ${{ inputs.environment }}
+    runs-on: ${{ inputs.runner_label }}
+    environment: ${{ inputs.environment }}
+
+    env:
+      PROJECT_ID: ${{ vars.PROJECT_ID }}
+      CONFIG_PATH: ${{ vars.CONFIG_FILE_PATH }}
+
+    steps:
+      - name: Validate Deploy Authorization
+        id: auth
+        run: |
+
+          USER="${{ github.actor }}"
+          ENV="${{inputs.environment}}"
+          ALLOWED="${{ vars.WORKFLOW_EXECUTORS }}"
+
+          echo "Triggered by: $USER"
+          echo "Environment: $ENV"
+
+          AUTH_STATUS="authorized"
+
+          if [ "$ENV" = "Prod" ]; then
+           if [[ ",$ALLOWED," != *",$USER,"* ]]; then
+             echo "❌ User $USER is not allowed to deploy in Prod"
+             AUTH_STATUS="unauthorized"
+            echo "auth_status=$AUTH_STATUS" >> $GITHUB_OUTPUT
+            exit 1
+           fi
+          fi
+          echo "✔ User authorized"
+          echo "auth_status=$AUTH_STATUS" >> $GITHUB_OUTPUT
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.git_tag }}
+
+      - name: Set GCP Project
+        run: |
+          gcloud config set project "$PROJECT_ID"
+          gcloud config set billing/quota_project "$PROJECT_ID"
+
+      - name: Deploy IVA Config Files
+        id: deploy
+        run: |
+
+          FILES="${{ inputs.configs }}"
+          ST_PATH="${CONFIG_PATH}"
+
+          SUCCESS=""
+          FAILED=""
+
+          if [ -z "$FILES" ]; then
+            echo "No config files to deploy."
+            exit 0
+          fi
+
+          for file in $FILES; do
+
+            SOURCE="IvaConfigs/$file"
+            TARGET="$ST_PATH/$file"
+
+            echo "----------------------------------"
+            echo "Deploying Config: $file"
+            echo "----------------------------------"
+
+            if gcloud storage cp "$SOURCE" "$TARGET"; then
+              SUCCESS="${SUCCESS}| $file | ✅ Success |\n"
+            else
+              FAILED="${FAILED}| $file | ❌ Failed |\n"
+            fi
+
+          done
+
+          echo "success<<EOF" >> $GITHUB_OUTPUT
+          printf "%b" "$SUCCESS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          echo "failed<<EOF" >> $GITHUB_OUTPUT
+          printf "%b" "$FAILED" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          if [ -n "$FAILED" ]; then
+            echo "One or more config deployments failed."
+            exit 1
+          fi
+
+      - name: Deployment Summary
+        if: always()
+        run: |
+
+          SUCCESS="${{ steps.deploy.outputs.success }}"
+          FAILED="${{ steps.deploy.outputs.failed }}"
+
+          USER="${{ github.actor }}"
+          ENV="${{ inputs.environment }}"
+
+          echo "## ⚙️ IVA Configs Deployment Results" >> $GITHUB_STEP_SUMMARY
+          AUTH_STATUS="${{ steps.auth.outputs.auth_status }}"
+
+          if [[ "$AUTH_STATUS" == "authorized" ]]; then
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+         
+          echo "| Config File | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------------|--------|" >> $GITHUB_STEP_SUMMARY
+
+          printf "%b" "$SUCCESS" >> $GITHUB_STEP_SUMMARY
+          printf "%b" "$FAILED" >> $GITHUB_STEP_SUMMARY
+
+          fi
+
+
+           if [ -z "$SUCCESS" ] && [ -z "$FAILED" ]; then
+           if [[ "$AUTH_STATUS" == "unauthorized" ]]; then
+             echo "" >> $GITHUB_STEP_SUMMARY
+             echo "🚫 User **$USER** is not allowed to deploy to **$ENV**" >> $GITHUB_STEP_SUMMARY
+           else
+            echo "| No files deployed | ℹ️ No changes detected |" >> $GITHUB_STEP_SUMMARY
+           fi
+          fi

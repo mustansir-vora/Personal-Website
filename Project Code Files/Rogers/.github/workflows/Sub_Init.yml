@@ -1,0 +1,121 @@
+name: Sub Init
+
+on:
+  workflow_call:
+    inputs:
+      git_tag:
+        required: false
+        type: string
+
+    outputs:
+      safe_branch:
+        value: ${{ jobs.Sub-Init.outputs.safe_branch }}
+      runner_label:
+        value: ${{ jobs.Sub-Init.outputs.runner_label }}
+      environment:
+        value: ${{ jobs.Sub-Init.outputs.environment }}
+
+jobs:
+  Sub-Init:
+    name: Sub-Init – ${{ github.ref_name }}
+    runs-on: ${{ github.ref_name == 'Prod' && vars.RUNNER_LABEL_PROD || vars.RUNNER_LABEL_DEFAULT }}
+    environment: ${{  github.ref_name == 'Prod' && 'Prod' || github.ref_name == 'Qa' && 'Qa' || 'Dev' }}
+    outputs:
+      safe_branch: ${{ steps.meta.outputs.safe_branch }}
+      runner_label: ${{ steps.meta.outputs.runner_label }}
+      environment: ${{ steps.meta.outputs.environment }}
+
+    steps:
+
+      - name: Prevent Re-run
+        run: |
+          if [ "$GITHUB_RUN_ATTEMPT" -gt 1 ]; then
+            echo "::error::Re-running this release is disabled."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ------------------------------------------------
+      # Resolve Metadata
+      # ------------------------------------------------
+
+      - name: Resolve Metadata
+        id: meta
+        run: |
+
+          TAG="${{ inputs.git_tag }}"
+          BRANCH="${{ github.ref_name }}"
+
+          echo "Branch: $BRANCH"
+          echo "Tag: $TAG"
+
+          if [ -n "$TAG" ]; then
+
+            echo "Using TAG to determine environment"
+
+            if [[ "$TAG" == *"-Prod-"* ]]; then
+             ENV="Prod"
+
+             elif [[ "$TAG" == *"-Qa-"* ]]; then
+               ENV="Qa"
+
+            elif [[ "$TAG" == *"-Dev-"* ]]; then
+              ENV="Dev"
+
+            else
+              echo "❌ ERROR: Unable to determine environment from tag: $TAG"
+             exit 1
+            fi
+
+
+           if [ "$BRANCH" != "$ENV" ]; then
+           echo "❌ ERROR: Branch ($BRANCH) does not match tag environment ($ENV)"
+           exit 1
+           fi
+
+           else
+
+            echo "No tag provided → using branch as ENV"
+            ENV="$BRANCH"
+
+          fi
+
+
+
+            SAFE_BRANCH=$(echo "$ENV" | tr '/' '-')
+
+            echo "safe_branch=$SAFE_BRANCH" >> $GITHUB_OUTPUT
+
+            if [ "$ENV" = "Prod" ]; then
+            echo "runner_label=${{ vars.RUNNER_LABEL_PROD }}" >> $GITHUB_OUTPUT
+            echo "environment=Prod" >> $GITHUB_OUTPUT
+
+            elif [ "$ENV" = "Qa" ]; then
+            echo "runner_label=${{ vars.RUNNER_LABEL_DEFAULT }}" >> $GITHUB_OUTPUT
+            echo "environment=Qa" >> $GITHUB_OUTPUT
+
+            else
+            echo "runner_label=${{ vars.RUNNER_LABEL_DEFAULT }}" >> $GITHUB_OUTPUT
+             echo "environment=Dev" >> $GITHUB_OUTPUT
+            fi
+      # ------------------------------------------------
+      # Deploy Tag Validation (Deploy pipeline only)
+      # ------------------------------------------------
+      - name: Validate Git Tag
+        if: ${{ inputs.git_tag != '' }}
+        run: |
+
+          TAG="${{ inputs.git_tag }}"
+          ENV="${{ steps.meta.outputs.environment }}"
+
+          echo "Validating tag '$TAG' for environment '$ENV'..."
+
+          if [[ "$TAG" =~ ^(Release|CloudFunctions|GDF|IVA-Config|NodeModules)-${ENV}-v[0-9]+$ ]]; then
+            echo "✔ Tag validation successful."
+          else
+            echo "❌ ERROR: Invalid tag '$TAG' for environment '$ENV'."
+            exit 1
+          fi

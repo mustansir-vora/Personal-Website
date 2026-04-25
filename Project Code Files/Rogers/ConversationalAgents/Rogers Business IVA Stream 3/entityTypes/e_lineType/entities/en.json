@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "mobile line",
+    "synonyms": [ "cell phoine", "cellphone", "mobile line", "cell phone", "mobile phone", "wireless line" ],
+    "languageCode": "en"
+  }, {
+    "value": "Second Line",
+    "synonyms": [ "Second Line", "secondary line", "additional line", "extra line", "second phone", "another line" ],
+    "languageCode": "en"
+  }, {
+    "value": "Phone line",
+    "synonyms": [ "Phone line", "landline", "telephone line", "home phone", "regular phone", "main line" ],
+    "languageCode": "en"
+  } ]
+}

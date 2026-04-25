@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@448052497:1745494498269" name="TakeSelectedPolicy" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.Take1stPolicy</source>
+</config>
+</decision>

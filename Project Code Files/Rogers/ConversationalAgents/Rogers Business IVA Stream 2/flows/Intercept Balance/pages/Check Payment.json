@@ -1,0 +1,152 @@
+{
+  "name": "b7455f4a-ab6c-4232-a22e-13074e0f1618",
+  "displayName": "Check Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to make a payment now?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous effectuer un paiement maintenant ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "paymentAmount",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright for Yes",
+    "name": "9b75140b-ece1-4043-8a3e-9759912d573f"
+  }, {
+    "intent": "intent_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright for No",
+    "name": "5ad37d08-d8c4-4694-8605-6f6dfb2797fc"
+  }, {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright for No",
+    "name": "d9316374-2369-4bb3-b62d-6bca884736b1"
+  }, {
+    "intent": "agent-request",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "agent-request"
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "bef81ebd-1b81-4f31-a1b9-e7a7b75d623a"
+  }, {
+    "intent": "intent_repeat",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to make a payment now?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "0874fc82-60f3-4d5d-8a32-b85e865fdf7d"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "b8c12a9f-998b-4b5d-a829-e6cd5c47020c"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "f631e555-7686-44b5-9423-29bd5f17d3c8"
+  }, {
+    "targetPage": "Play Alright for No",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "abf3c0e7-65b9-44e9-9618-8bb9fea70d35"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "3da6f602-29ea-4918-a3f3-e09802066f37"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "deefd7bb-4686-4bbd-b1a2-5729e0a63fcd"
+  }, {
+    "targetPage": "Play Alright for No",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "6780ea18-25ed-4711-85a8-2b2bed5d2a0a"
+  } ]
+}

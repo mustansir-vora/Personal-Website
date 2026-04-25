@@ -1,0 +1,143 @@
+{
+  "name": "61fa6d72-1a6c-44de-9e2c-db34cbf6bf4d",
+  "displayName": "Ask Card Number",
+  "form": {
+    "parameters": [ {
+      "displayName": "cardNumber",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Using the keypad please enter a valid card\nnumber. Make sure you are using a Visa, Master card or American express.\nTo start over, press star." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "À l’aide du clavier, veuillez entrer un numéro de carte valide. Assurez-vous d’utiliser une carte Visa, Mastercard ou American Express. Pour recommencer, appuyez sur l’étoile." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "fc0bb3ad-c92b-438c-b440-72a56bb8f055"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Using the keypad please enter a valid card\nnumber. Make sure you are using a Visa, Master card or American express.\nTo start over, press star." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "À l’aide du clavier, veuillez entrer un numéro de carte valide. Assurez-vous d’utiliser une carte Visa, Mastercard ou American Express. Pour recommencer, appuyez sur l’étoile." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "bf05b7c1-565e-443a-839a-7ad97af3b6e3"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Using the keypad please enter a valid card\nnumber. Make sure you are using a Visa, Master card or American express.\nTo start over, press star." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "À l’aide du clavier, veuillez entrer un numéro de carte valide. Assurez-vous d’utiliser une carte Visa, Mastercard ou American Express. Pour recommencer, appuyez sur l’étoile." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "c4b4df77-164b-424c-a5d3-b865eebc06f4"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Using the keypad please enter a valid card\nnumber. Make sure you are using a Visa, Master card or American express.\nTo start over, press star." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "À l’aide du clavier, veuillez entrer un numéro de carte valide. Assurez-vous d’utiliser une carte Visa, Mastercard ou American Express. Pour recommencer, appuyez sur l’étoile." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "feca8cf3-5751-47ce-a9cf-f7648a1a0c58"
+        }, {
+          "targetFlow": "Transition Routing",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "transferType",
+              "value": "systemError"
+            }, {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "234a4a01-c548-4744-b9d9-9f574d016521"
+        }, {
+          "targetFlow": "Transition Routing",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "transferType",
+              "value": "systemError"
+            }, {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "4e62253c-6539-442b-9923-ef02cb44bf83"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 16,
+          "finishDigit": "#",
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 4
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 4
+          }
+        }
+      },
+      "description": "capture the cardNumber"
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Using your keypad, please enter your card number." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "À l’aide de votre clavier, veuillez entrer votre numéro de carte." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Read Secure Data",
+    "name": "ca714e7c-61cc-4f1e-bd06-c46cf03108c4"
+  } ]
+}

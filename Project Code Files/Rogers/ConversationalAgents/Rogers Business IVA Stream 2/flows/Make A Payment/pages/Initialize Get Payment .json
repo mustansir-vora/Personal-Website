@@ -1,0 +1,24 @@
+{
+  "name": "17f3611c-c66e-4531-b34d-aba314703736",
+  "displayName": "Initialize Get Payment ",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "active-makeAPayment"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Amount Known",
+    "name": "c464b8ec-12d6-47e5-88a7-dd157e7152ba"
+  } ]
+}

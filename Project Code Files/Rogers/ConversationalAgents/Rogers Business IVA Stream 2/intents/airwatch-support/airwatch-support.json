@@ -1,0 +1,7 @@
+{
+  "name": "9ac059fc-72bf-4a81-b3aa-da006dff4ac4",
+  "displayName": "airwatch-support",
+  "priority": 500000,
+  "description": "Handle calls specific to T2 Airwatch",
+  "numTrainingPhrases": 14
+}

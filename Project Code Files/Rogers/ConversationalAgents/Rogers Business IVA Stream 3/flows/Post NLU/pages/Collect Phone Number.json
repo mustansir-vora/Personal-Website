@@ -1,0 +1,159 @@
+{
+  "name": "14e0bb8f-dd8a-414f-a248-4bfb70a496e8",
+  "displayName": "Collect Phone Number",
+  "form": {
+    "parameters": [ {
+      "displayName": "phoneNumberCollection",
+      "required": true,
+      "entityType": "@PhoneNumber",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Désolé, je n’ai pas entendu. Quel numéro souhaitez‑vous utiliser?" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "I'm sorry, i couldn't hear that, what number would you like to use?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a7bb1178-aca4-4095-a9d3-4ea8fcd3cde1"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Désolé, je n’ai pas pu valider ce numéro. Réessayons. Quel numéro souhaitez‑vous utiliser?" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "I'm sorry, I couldn't validate that number. Let's try again. what number would you like to use?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "0bb7c995-9ac9-45fb-b66e-e63c33619199"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Désolé, je n’ai toujours pas entendu. Vous pouvez dire ou entrer le numéro que vous souhaitez utiliser." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "I'm sorry, i  still couldn't hear that, You can say or enter the number you would like to use." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "cf501ab0-d001-41aa-a1fe-e4211473b74d"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Désolé, je n’ai toujours pas pu valider ce numéro. Réessayons. Vous pouvez dire ou entrer le numéro que vous souhaitez utiliser." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "I'm sorry, I still couldn't validate that number. Let's try again. You can say or enter  the number you would like to use." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "aced71c2-da14-4186-95b8-976cefe96186"
+        }, {
+          "targetPage": "Check Failure Exit - Reusable Phone Number",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "phoneNumberCollection",
+              "value": null
+            } ]
+          },
+          "name": "5969922c-809e-4f69-b433-b6d35b2ebc16"
+        }, {
+          "targetPage": "Check Failure Exit - Reusable Phone Number",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "phoneNumberCollection",
+              "value": null
+            } ]
+          },
+          "name": "fa5c0230-e981-40eb-b26f-2364aee14928"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Quel numéro voulez-vous utiliser ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "What number would you like to use?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "PhoneNumberMn-Digit",
+    "condition": "$session.params.phoneNumberCollection != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ani",
+        "value": "$sys.func.SUBSTITUTE($session.params.phoneNumberCollection, \"\\s+\", \"\")"
+      }, {
+        "parameter": "ani",
+        "value": "$sys.func.SUBSTITUTE($session.params.ani, \"-\", \"\")"
+      }, {
+        "parameter": "phoneNumberCollection",
+        "value": "$sys.func.SUBSTITUTE($session.params.phoneNumberCollection, \"\\s+\", \"\")"
+      } ]
+    },
+    "targetPage": "Play Got it Message",
+    "name": "7cff92a8-3fa3-4bc7-a7f8-8cd56a99ef19"
+  }, {
+    "intent": "ReusablePhoneMn-Don't Know",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneNumberCollection",
+        "value": null
+      } ]
+    },
+    "targetPage": "Check Failure Exit - Reusable Phone Number",
+    "name": "0db7a1d0-2e94-4b98-9e09-a6a28bceccc5"
+  }, {
+    "condition": "$session.params.phoneNumberCollection != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ani",
+        "value": "$sys.func.SUBSTITUTE($session.params.phoneNumberCollection, \"\\s+\", \"\")"
+      }, {
+        "parameter": "ani",
+        "value": "$sys.func.SUBSTITUTE($session.params.ani, \"-\", \"\")"
+      }, {
+        "parameter": "phoneNumberCollection",
+        "value": "$sys.func.SUBSTITUTE($session.params.phoneNumberCollection, \"\\s+\", \"\")"
+      } ]
+    },
+    "targetPage": "Play Got it Message",
+    "name": "8be09124-2e53-428b-be21-7d45eda43ce6"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

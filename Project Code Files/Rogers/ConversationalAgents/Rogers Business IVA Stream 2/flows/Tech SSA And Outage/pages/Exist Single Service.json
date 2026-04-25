@@ -1,0 +1,86 @@
+{
+  "name": "57b8d783-b406-472d-9fee-d3d316671204",
+  "displayName": "Exist Single Service",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.invokedTSSFrom = \"TechInternetSupport\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "invokedOSFrom",
+        "value": "TechInternetSupport"
+      }, {
+        "parameter": "passiveOutageMessage",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Outage Status",
+    "name": "1e5c1ff8-914f-4ff3-83a8-f4d0f491e2c2"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechTvSupport\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "invokedOSFrom",
+        "value": "TechTvSupport"
+      }, {
+        "parameter": "passiveOutageMessage",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Outage Status",
+    "name": "af4595c8-def9-4695-94e2-a9ecd072c3f2"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechHomeSecurity\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "invokedOSFrom",
+        "value": "TechHomeSecurity"
+      }, {
+        "parameter": "passiveOutageMessage",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Outage Status",
+    "name": "157e2b56-3586-4057-b3a8-0e61ca43be89"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechBusinessPhone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "invokedOSFrom",
+        "value": "TechBusinessPhone"
+      }, {
+        "parameter": "passiveOutageMessage",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Outage Status",
+    "name": "7cf01add-3acd-4f34-9394-fd7f5d9e35a9"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechHomePhone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "invokedOSFrom",
+        "value": "TechHomePhone"
+      }, {
+        "parameter": "passiveOutageMessage",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Outage Status",
+    "name": "e96db053-4027-4898-b0c7-f05d405b2071"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechOutageStatus\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "osTSFromSingleService",
+        "value": true
+      } ]
+    },
+    "targetPage": "customer Identified",
+    "name": "1c219397-ce27-459f-a20d-d66fff42d09b"
+  } ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "3fec92ea-38c4-41b9-9bae-853ddbb39697",
+  "displayName": "Check Skip Is That Right",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.skipIsThatRight = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Process PTP",
+    "name": "45d8e49a-65f2-4e74-a4fd-19b28bc5707c"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Recap",
+    "name": "8dde16d5-c448-482e-a23e-935b35c72d4e"
+  } ]
+}

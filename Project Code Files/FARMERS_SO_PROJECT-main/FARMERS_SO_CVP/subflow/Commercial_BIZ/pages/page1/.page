@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@110321689:1707388907618" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1707388907618" name="Commercial_BIZ" type="Subflow Start" width="137" x="298" y="83">
+<exit_states>
+<exit_state name="next" target="Element@453448022:1710930223581"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1629833843:1751909865279"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1697273324:1707388937368" name="Property and Casualty" type="Page Connector" width="224" x="-214" y="377">
+<page_connector target="Element@766519805:1707388959905">Property and Casualty<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@598025766:1707388937368" name="Shared Transfer" type="Subflow Call" width="171" x="623" y="655">
+<subflow_call subflow_name="Transfer" target="Element@31:1710408720216">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2090306942:1709640526832"/>
+</exit_states>
+</element>
+<element height="55" id="Element@61186866:1707388937368" name="CBIZ_MN_001_VALUE" type="Decision" width="217" x="300" y="404">
+<exit_states>
+<exit_state name="Dial an Extension" target="Element@598025766:1707388937368">
+<bendpoint>
+<dim1 x="192" y="202"/>
+<dim2 x="-472" y="-55"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="278" y="149"/>
+<dim2 x="-85" y="-2"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Property and Casualty" target="Element@1697273324:1707388937368"/>
+<exit_state name="Workers Compensation" target="Element@878427936:1707388937368"/>
+<exit_state name="billing and Reinstatements" target="Element@2048510979:1707388937368"/>
+<exit_state name="Real Time Billing" target="Element@598025766:1707388937368"/>
+<exit_state name="Contact Information" target="Element@1251065969:1722499200513"/>
+<exit_state name="NOINPUT" target="Element@780286960:1709720800116"/>
+<exit_state name="NOMATCH" target="Element@598025766:1707388937368">
+<bendpoint>
+<dim1 x="569" y="54"/>
+<dim2 x="-95" y="-203"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="552" y="142"/>
+<dim2 x="94" y="4"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@598025766:1707388937368">
+<bendpoint>
+<dim1 x="416" y="71"/>
+<dim2 x="-42" y="-67"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@598025766:1707388937368">
+<bendpoint>
+<dim1 x="316" y="160"/>
+<dim2 x="-348" y="-97"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Direct Billing" target="Element@2048510979:1707388937368"/>
+</exit_states>
+</element>
+<element height="55" id="Element@878427936:1707388937368" name="Workers Comp" type="Page Connector" width="169" x="-212" y="499">
+<page_connector target="Element@1101494274:1707388979821">Workers Comp<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@2048510979:1707388937368" name="Commercial Biz ID Flow3" type="Subflow Call" width="246" x="17" y="585">
+<subflow_call subflow_name="Commercial_BIZ_ID_Flow" target="Element@31:1707975977001">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2014485144:1711103865150"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1785642713:1707388937368" name="Commercial Biz Billing Flow" type="Subflow Call" width="265" x="282" y="811">
+<subflow_call subflow_name="Commercial_BIZ_Billing_Flow" target="Element@31:1708962468186">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2090306942:1709640526832"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1008917757:1707388937368" name="CBIZ_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="151" x="1205" y="405">
+<exit_states>
+<exit_state name="done" target="Element@1803734566:1723099916116"/>
+</exit_states>
+</element>
+<element height="55" id="Element@631148742:1709273930875" name="CBIZ_MN_001_Call" type="Subflow Call" width="194" x="299" y="302">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709640298551">
+<config>
+<argument_data>
+<data name="MenuID">CBIZ_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@61186866:1707388937368"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2090306942:1709640526832" name="Subflow Return_01" type="Subflow Return" width="198" x="636" y="801"/>
+<element height="55" id="Element@780286960:1709720800116" name="DisConnect" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="673" y="257">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@453448022:1710930223581" name="SET_FLOW_MODULE" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="159" x="294" y="145">
+<exit_states>
+<exit_state name="done" target="Element@252659501:1711413546049"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2014485144:1711103865150" name="IS_ELITE_AGENT_BC" type="Decision" width="202" x="-215" y="738">
+<exit_states>
+<exit_state name="YES" target="Element@598025766:1707388937368"/>
+<exit_state name="NO" target="Element@1785642713:1707388937368"/>
+</exit_states>
+</element>
+<element height="55" id="Element@252659501:1711413546049" name="EntryMod" type="Subflow Call" width="128" x="320" y="219">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1711413121678">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@631148742:1709273930875"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1251065969:1722499200513" name="CONTACTINF_CBIZ" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="174" x="840" y="401">
+<exit_states>
+<exit_state name="done" target="Element@1008917757:1707388937368"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1803734566:1723099916116" name="Shared_Transfer_CBIZ_PA_001" type="Subflow Call" width="244" x="1429" y="409">
+<subflow_call subflow_name="Transfer" target="Element@31:1723099962829">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2090306942:1709640526832"/>
+</exit_states>
+</element>
+<element height="49" id="Element@1629833843:1751909865279" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="527" y="8">
+<exit_states>
+<exit_state name="done" target="Element@964706606:1751909865279"/>
+</exit_states>
+</element>
+<element height="48" id="Element@273735009:1751909865279" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="935" y="3">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@964706606:1751909865279" name="Shared_Transfer" type="Subflow Call" width="132" x="775" y="6">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@273735009:1751909865279"/>
+</exit_states>
+</element>
+</page>

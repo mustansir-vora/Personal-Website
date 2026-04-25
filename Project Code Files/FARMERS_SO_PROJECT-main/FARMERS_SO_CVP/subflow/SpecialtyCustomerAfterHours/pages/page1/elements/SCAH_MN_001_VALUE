@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1309521913:1708938326773" name="SCAH_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.SCAH_MN_001_VALUE</source>
+</config>
+</decision>

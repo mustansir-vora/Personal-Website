@@ -1,0 +1,7 @@
+{
+  "name": "ca0caa3b-1ad1-44f5-a230-1e1e52abce23",
+  "displayName": "AccountNumberMn-BusinessProduct",
+  "priority": 500000,
+  "description": "this will be triggered when user say business product related ",
+  "numTrainingPhrases": 77
+}

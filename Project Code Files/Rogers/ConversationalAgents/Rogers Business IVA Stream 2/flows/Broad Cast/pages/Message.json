@@ -1,0 +1,62 @@
+{
+  "name": "6ac537f2-9a35-462e-9556-23cc68a86978",
+  "displayName": "Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.primaryMessage = \"NA\""
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.primaryMessage" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.primaryMessage" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.primaryMessage = NA",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Exit BroadCast",
+    "name": "75af2b14-71b1-4e38-9f29-a43a763c93b8"
+  }, {
+    "condition": "$session.params.smsEnabled = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "NextAction",
+    "name": "d1f1497f-cd09-4dda-a4d7-90ae9d768c60"
+  }, {
+    "condition": "$session.params.smsEnabled = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Send SMS",
+    "name": "3e3f6c00-3365-446e-aa98-b72929c52c49"
+  }, {
+    "condition": "$session.params.sendSMS = true OR $session.params.sendSMS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": ""
+      } ]
+    },
+    "targetPage": "NextAction",
+    "name": "ab5075d4-fe95-4e16-a659-f80668d05d4f"
+  } ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "0012f99a-79b4-4ccf-a5c9-319c22deb6c8",
+  "displayName": " Play CurrentBalanceUnavailable",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Les renseignements concernant votre solde actuel ne sont pas disponibles." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Your current balance information is not available." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start InstallmentPaymentPlanDetails subflow",
+    "name": "e34b63a3-aaeb-4928-a804-7ffa43f79c6e"
+  } ]
+}

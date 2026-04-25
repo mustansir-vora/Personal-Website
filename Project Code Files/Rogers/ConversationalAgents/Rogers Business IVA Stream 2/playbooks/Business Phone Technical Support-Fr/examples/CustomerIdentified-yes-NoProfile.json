@@ -1,0 +1,33 @@
+{
+  "name": "b01e7f89-c96a-4cab-a2de-ae247b7b4156",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie d’affaires. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "productLabelMixFr": "Téléphonie résidentielle,Sécurité résidentielle,Mobile"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportbusinessPhone",
+      "completedSSName": "passive-techSupportbusinessPhone",
+      "completedSelfServe": "passive-techSupportbusinessPhone",
+      "hasNoBPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportbusinessPhone",
+      "reportingVar_completedSSName": "passive-techSupportbusinessPhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "CustomerIdentified-yes-NoProfile",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 222,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

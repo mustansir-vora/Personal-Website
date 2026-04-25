@@ -1,0 +1,18 @@
+{
+  "name": "5d6de230-ae78-4b01-8f0e-b66144114cb8",
+  "displayName": "Intent Group - billing-disputes-O365",
+  "transitionRoutes": [ {
+    "intent": "billing-O365",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "billing-O365"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "5a2164b4-ff91-4cb4-913c-67d8fad658c5"
+  } ]
+}

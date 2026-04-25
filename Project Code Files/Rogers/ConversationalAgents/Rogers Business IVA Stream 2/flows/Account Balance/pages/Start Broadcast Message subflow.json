@@ -1,0 +1,39 @@
+{
+  "name": "dd3524e1-bd85-4ccf-bfdd-48c35f8ffb28",
+  "displayName": "Start Broadcast Message subflow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId15"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "3e4abddd-5ab3-4826-9b33-06e9207eeade"
+  }, {
+    "condition": "$session.params.fromAcctReceiveable = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadcastInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Start Playing Balance Details",
+    "name": "6cff9aef-0fb3-4ba3-b1a4-74d50d96382b",
+    "description": "Broadcaset Message"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Get Billing Profile ",
+    "name": "708e42ca-c8cf-447d-98f7-d41ba213366d"
+  } ]
+}

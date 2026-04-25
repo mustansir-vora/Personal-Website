@@ -1,0 +1,13 @@
+{
+  "name": "d5098b34-ea86-450a-9cec-11e3ba310ad1",
+  "displayName": "cancel-streaming-services",
+  "parameters": [ {
+    "id": "e_StreamingService",
+    "entityType": "@e_streamingservice"
+  }, {
+    "id": "e_StreamingService1",
+    "entityType": "@e_streamingservice"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 36
+}

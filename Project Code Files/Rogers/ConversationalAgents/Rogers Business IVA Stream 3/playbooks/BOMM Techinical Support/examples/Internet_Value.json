@@ -1,0 +1,45 @@
+{
+  "name": "c1497552-c38a-4558-aa82-5b3c438421de",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Internet,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Internet"
+    }
+  }, {
+    "toolUse": {
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Internet"
+      },
+      "outputActionParameters": {
+        "result": "internet-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Internet,Tv, Mobile",
+      "serviceCategoryMixLength": "2"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Internet",
+      "savedIntent": "internet-support"
+    }
+  },
+  "displayName": "Internet_Value",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 198,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

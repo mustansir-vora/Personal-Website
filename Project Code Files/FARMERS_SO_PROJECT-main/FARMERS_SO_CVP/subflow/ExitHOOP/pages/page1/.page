@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1128883481:1707392621141" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1707392621141" name="HOOP" type="Subflow Start" width="101" x="406" y="41">
+<exit_states>
+<exit_state name="next" target="Element@850834737:1709017883856"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@432951021:1751910010509"/>
+</exit_states>
+</element>
+<element height="55" id="Element@971954703:1707818588119" name="Subflow Return_01" type="Subflow Return" width="198" x="701" y="176"/>
+<element height="55" id="Element@1880280035:1707819114385" name="HOOP_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="166" x="376" y="551">
+<exit_states>
+<exit_state name="done" target="Element@1888277374:1711673390502"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1869807741:1708930892461" name="Disc" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="83" x="185" y="825">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@749065792:1709017824853" name="Destination_BussinessUnit" skipped="true" type="Decision" width="254" x="29" y="380">
+<exit_states>
+<exit_state name="ForemostCustomer" target="Element@1880280035:1707819114385"/>
+<exit_state name="ForemostAARP" target="Element@1880280035:1707819114385"/>
+<exit_state name="ForemostAgent" target="Element@1880280035:1707819114385"/>
+<exit_state name="BristolWestProducer" target="Element@1880280035:1707819114385"/>
+<exit_state name="Others" target="Element@1880280035:1707819114385"/>
+<exit_state name="OneSpecility" target="Element@1880280035:1707819114385"/>
+</exit_states>
+</element>
+<element height="55" id="Element@850834737:1709017883856" name="CallCenter_Open" type="Decision" width="222" x="344" y="177">
+<exit_states>
+<exit_state name="OPEN" target="Element@971954703:1707818588119"/>
+<exit_state name="CLOSED" target="Element@853611001:1709018015826"/>
+<exit_state name="Holiday" target="Element@1880280035:1707819114385"/>
+<exit_state name="VM" target="Element@1880280035:1707819114385"/>
+</exit_states>
+</element>
+<element height="55" id="Element@853611001:1709018015826" name="AfterHours_SelfService_Available" type="Decision" width="306" x="388" y="373">
+<exit_states>
+<exit_state name="YES" target="Element@640894766:1712680220129">
+<bendpoint>
+<dim1 x="-335" y="151"/>
+<dim2 x="1" y="-146"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1880280035:1707819114385"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1037769799:1711673349499" name="PreTransfer_AE" type="Action" width="164" x="528" y="773">
+<exit_states>
+<exit_state name="done" target="Element@336627518:1711673349499"/>
+</exit_states>
+</element>
+<element height="55" id="Element@336627518:1711673349499" name="Transfer_Agent" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="506" y="886">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1888277374:1711673390502" name="VM_DISC" type="Decision" width="123" x="384" y="676">
+<exit_states>
+<exit_state name="CLOSED" target="Element@1869807741:1708930892461"/>
+<exit_state name="VM" target="Element@1037769799:1711673349499"/>
+</exit_states>
+</element>
+<element height="55" id="Element@713838524:1712679872151" name="SAHM_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="126" x="142" y="670">
+<exit_states>
+<exit_state name="done" target="Element@1869807741:1708930892461"/>
+</exit_states>
+</element>
+<element height="46" id="Element@640894766:1712680220129" name="Is_SelfServiceInvoked" type="Decision" width="161" x="108" y="551">
+<exit_states>
+<exit_state name="YES" target="Element@713838524:1712679872151"/>
+<exit_state name="NO" target="Element@1880280035:1707819114385"/>
+</exit_states>
+</element>
+<element height="49" id="Element@432951021:1751910010509" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="544" y="49">
+<exit_states>
+<exit_state name="done" target="Element@971954703:1707818588119"/>
+</exit_states>
+</element>
+</page>

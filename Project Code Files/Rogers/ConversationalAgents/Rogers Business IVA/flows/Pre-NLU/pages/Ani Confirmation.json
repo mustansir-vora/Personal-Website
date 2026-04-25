@@ -1,0 +1,66 @@
+{
+  "name": "bcdab411-c632-48f7-a8ed-e32d2ba055bf",
+  "displayName": "Ani Confirmation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "StdErrorCount",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.identifyAccount != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      }, {
+        "parameter": "customerIdentified",
+        "value": false
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "d418e00c-95ba-4cb3-be3e-76c8e237fa09"
+  }, {
+    "condition": "$session.params.identifyAccount = true AND $session.params.idType = \"phone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "maxPhoneRetries",
+        "value": 2
+      }, {
+        "parameter": "maxAccountRetries",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Ani Confirm By Billing Accounts",
+    "name": "26c58a36-8343-4a88-a35a-b8081dde5a33"
+  }, {
+    "condition": "$session.params.identifyAccount = true AND $session.params.idType = \"account\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "maxPhoneRetries",
+        "value": 1
+      }, {
+        "parameter": "maxAccountRetries",
+        "value": 2
+      } ]
+    },
+    "targetPage": "Ani Confirm By Billing Accounts",
+    "name": "e05f3b48-64c4-4858-91b8-9882c1c92804"
+  }, {
+    "condition": "$session.params.identifyAccount = true AND $session.params.idType = \"both\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "maxAccountRetries",
+        "value": 1
+      }, {
+        "parameter": "maxPhoneRetries",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Ani Confirm By Billing Accounts",
+    "name": "bb42236b-007d-4245-8fd7-0f59a6012e10"
+  } ]
+}

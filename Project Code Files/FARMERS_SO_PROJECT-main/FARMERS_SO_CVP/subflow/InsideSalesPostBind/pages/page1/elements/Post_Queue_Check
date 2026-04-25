@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@292938409:1713677723000" name="Post_Queue_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Post_Queue_Check" default_exit_state="DISABLED">
+        <exit_state name="ENABLED" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_POST_QUEUE_MSG_ENABLED" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

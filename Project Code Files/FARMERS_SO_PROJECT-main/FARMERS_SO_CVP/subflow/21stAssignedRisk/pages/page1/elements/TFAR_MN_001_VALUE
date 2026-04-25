@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1478922895:1708932120208" name="TFAR_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.TFAR_MN_001_VALUE</source>
+</config>
+</decision>

@@ -1,0 +1,33 @@
+{
+  "name": "d7701718-b64b-420f-8d32-63b7ea406da7",
+  "displayName": "Set Variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "smsId",
+      "value": "makePayment"
+    }, {
+      "parameter": "smsAttributes.paymentAmount",
+      "value": "$session.params.paymentAmount"
+    }, {
+      "parameter": "smsAttributes.authorizationNumber",
+      "value": "$session.params.api.paymentManagement.paymentConfirmation.authorizationNumber"
+    }, {
+      "parameter": "refreshGetBillingProfileInfo",
+      "value": true
+    }, {
+      "parameter": "paymentAmount",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Billing Profile For Account Status != N",
+    "name": "73abba63-1142-4f1c-8ea6-e680361d2301"
+  } ]
+}

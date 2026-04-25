@@ -1,0 +1,7 @@
+{
+  "name": "0720d733-8a18-4c33-b40c-24f63276dfff",
+  "displayName": "DMBG - Bus-Main-Ent-DA - Small Business",
+  "priority": 500000,
+  "numTrainingPhrases": 10,
+  "dtmfPattern": "5"
+}

@@ -1,0 +1,217 @@
+{
+  "name": "41df8303-c4ab-4f87-8a82-e1b63f859ddb",
+  "displayName": "Broad Cast",
+  "transitionRoutes": [ {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC1",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "87551236-9c49-4d23-9171-eba14203da28"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC2",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "66236575-20ea-4005-8f27-bcf24ca89539"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId3",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC3",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "981826a1-70f7-4323-a0c3-d5b520c50e9b"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId4",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC4",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "78db8d13-7fa8-4629-b1be-f0e9ba2207fb"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId5",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC5",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "9b09e351-c681-42ce-a7a4-7af97da1671b"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId6",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC6",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "3db6b672-b8e7-4ed0-b504-6b8ab326c4b8"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId7",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC7",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "0b463dda-901d-4054-a8c3-a067bc06fde7"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId8",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC8",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "f11941c8-1527-4ebe-86f5-1d923d3bb397"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId9",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC9",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "6fa7b4a2-8b1a-4e76-a33c-7a16c8cd9014"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId10",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC10",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "af718d4b-48fd-4d19-af81-b95d3d428ee8"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId11",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC11",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "3b40557a-caa9-4089-8085-05c45f2b86ad"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId12",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC12",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "7159cf43-f095-4037-b71a-00b593fa334d"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId13",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC13",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "64ff4994-d253-4079-80f4-1de15338dea3"
+  }, {
+    "condition": "$session.params.broadCastId = $session.params.broadCastId14",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC14",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "477dc044-d830-4200-bdfd-2f735d408496"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "53a22cdb-400f-4dd2-92ac-3cb99a8f9c03"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "69110034-a07c-4ede-bb77-abd13fa89c78"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "f7bed85b-c9ac-4437-ba55-4ed460bc4b96"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.unknown-event",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "3bfcd2a4-fbda-4272-a035-a687bc796ae5"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true,
+    "playbackInterruptionSettings": {
+      "allowPlaybackInterruption": true
+    }
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "fr-ca"
+  }, {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "a53578f6-6f41-4176-8d58-fa5660e6a60d",
+  "displayName": "SKIP CC",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "skipCC",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "6ea9e72f-8445-4e26-b702-e0069f350e4a"
+  } ]
+}

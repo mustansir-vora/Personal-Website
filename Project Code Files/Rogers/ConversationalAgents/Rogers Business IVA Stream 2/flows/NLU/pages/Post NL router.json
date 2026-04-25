@@ -1,0 +1,31 @@
+{
+  "name": "b47f971b-6f8f-434c-9f0b-7555a8cc2224",
+  "displayName": "Post NL router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.destinationType = Module",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Module Router",
+    "name": "026bc895-efe0-4a00-94ba-4767cba0edc0"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = Transfer",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "BusinessRules"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "db1b11bf-e0df-4f8e-8b13-e41376baa756"
+  } ]
+}

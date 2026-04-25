@@ -1,0 +1,33 @@
+{
+  "name": "72d04054-d8db-478a-83c4-6521bca4ab14",
+  "displayName": "Get Billing Profile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "billingProfile"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.returnCode = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Payment",
+    "name": "d34c234d-1758-45c3-b8ad-4ed27d911ffe"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "73a4f108-feb0-4c47-a5b0-13717733afd1"
+  } ],
+  "description": "Call Billing Profile Webhook"
+}

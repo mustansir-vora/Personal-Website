@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1094357671:1712350755858" name="Return_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Return_Check" default_exit_state="NA">
+        <exit_state name="MAKE_A_PAYMENT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PAY_BY_DEBIT_OR_CREDIT_CASE" />
+                </data>
+                <constant_string value="MAKE_A_PAYMENT" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

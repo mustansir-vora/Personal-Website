@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@904610199:1720721110219" name="Check billingStstusCode" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check billingStstusCode" default_exit_state="OTHERS">
+        <exit_state name="PAID" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_HALO_API_ZerooutstandingBalance" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+        <exit_state name="BILL DUE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_HALO_API_BillDue" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+        <exit_state name="WAIT TO BILL" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_HALO_API_Waiting_TO_Bill" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "address_change",
+    "synonyms": [ "address_change", "changer d'adresse", "changer de titulaire de compte", "corriger mon adresse", "déménager", "mettre à jour la propriété", "mettre à jour mes coordonnées", "Mettre à jour mes renseignements", "mettre à jour mon adresse", "mettre à jour mon adresse courriel", "mettre à jour mon adresse de facturation", "mettre à jour mon adresse postale", "modifier mes renseignements personnels", "mettre à jour mon numéro de téléphone" ],
+    "languageCode": "fr-ca"
+  } ]
+}

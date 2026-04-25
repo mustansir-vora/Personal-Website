@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_start id="Element@1546405237:1730194901337" name="CVP Subdialog Start" version="6.0.1">
+<config>
+<settings>
+<setting name="Parameter">callid</setting>
+<setting name="Parameter">OCallId</setting>
+<setting name="Parameter">IVRF</setting>
+<setting name="Parameter">BE</setting>
+<setting name="Parameter">CCallId</setting>
+<setting name="Parameter">OANI</setting>
+<setting name="Parameter">CS</setting>
+<setting name="Parameter">BU</setting>
+<setting name="Parameter">CGUID</setting>
+<setting name="Where">Session Data</setting>
+<setting name="enable_digits_bypass">false</setting>
+</settings>
+</config>
+</subdialog_start>

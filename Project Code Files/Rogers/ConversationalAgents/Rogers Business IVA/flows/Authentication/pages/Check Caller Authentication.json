@@ -1,0 +1,25 @@
+{
+  "name": "587f4719-9f1d-42d8-840e-6e81247866a1",
+  "displayName": "Check Caller Authentication",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.callerAuthenticated = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Auth Level Achieved",
+    "name": "f80f7cd4-6806-4ee2-ac31-278b7ad3554d"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Auth Attributes Webhook",
+    "name": "c02496b8-1008-4249-9d37-6172768eca27"
+  } ]
+}

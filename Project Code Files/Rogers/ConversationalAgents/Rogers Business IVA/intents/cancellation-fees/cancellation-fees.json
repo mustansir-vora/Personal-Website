@@ -1,0 +1,7 @@
+{
+  "name": "d58d3846-676c-45cd-961b-fe3dbe566e61",
+  "displayName": "cancellation-fees",
+  "priority": 500000,
+  "description": "Handles inquiries about fees or charges associated with canceling a service or account.",
+  "numTrainingPhrases": 50
+}

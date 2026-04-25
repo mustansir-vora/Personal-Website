@@ -1,0 +1,11 @@
+{
+  "name": "b5ffc5da-27ba-4899-a0e2-d3e2604b0cf3",
+  "displayName": "Pin Number Collection",
+  "parameters": [ {
+    "id": "pinNumber",
+    "entityType": "@Pin-Number"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 44,
+  "dtmfPattern": "dtmf_digits_[0-9]{4}$"
+}

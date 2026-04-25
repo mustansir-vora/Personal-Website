@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@748633336:1711890864247" name="GDF_RETURN_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="GDF_RETURN_CHECK">
+        <exit_state name="Default" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMAM_MN_001__RETURN_VALUE" />
+                </data>
+                <constant_string value="Default" />
+            </string>
+        </exit_state>
+        <exit_state name="Mobile Home" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMAM_MN_001__RETURN_VALUE" />
+                </data>
+                <constant_string value="Mobile Home" />
+            </string>
+        </exit_state>
+        <exit_state name="Motorcycle" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMAM_MN_001__RETURN_VALUE" />
+                </data>
+                <constant_string value="Motorcycle" />
+            </string>
+        </exit_state>
+        <exit_state name="All Other Products" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FMAM_MN_001__RETURN_VALUE" />
+                </data>
+                <constant_string value="All Other Products" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

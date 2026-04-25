@@ -1,0 +1,28 @@
+{
+  "name": "f725bf73-1c79-425c-8d4a-be6befcdc3bc",
+  "displayName": "Play Alright for Yes",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Alright." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Create Variables",
+    "name": "e9921e56-e5c1-4353-b6a6-95c961de0977"
+  } ]
+}

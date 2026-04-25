@@ -1,0 +1,27 @@
+{
+  "name": "ab7c426e-47db-403f-a6b4-a8be5bdd932e",
+  "displayName": "Initialize Failure",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "paymentAmount",
+      "value": null
+    }, {
+      "parameter": "getAmountFailure",
+      "value": true
+    }, {
+      "parameter": "askAmountFailure",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "37d3713b-889c-4eef-8a0f-0ed3378938c0"
+  } ]
+}

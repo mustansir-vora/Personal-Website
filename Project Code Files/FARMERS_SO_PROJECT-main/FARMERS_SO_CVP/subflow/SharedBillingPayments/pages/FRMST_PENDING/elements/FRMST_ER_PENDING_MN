@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@963755665:1721934490792" name="FRMST_ER_PENDING_MN" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.FRMST_PENDING_ER</source>
+</config>
+</decision>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@391546230:1707302430888" name="Internal_Transfer" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Internal_Transfer" default_exit_state="Others">
+        <exit_state name="Non-Licensed Internal" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="TransferCheck" />
+                </data>
+                <constant_string value="NonLicensedInternal" />
+            </string>
+        </exit_state>
+        <exit_state name="LicensedInternal" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="TransferCheck" />
+                </data>
+                <constant_string value="LicensedInternal" />
+            </string>
+        </exit_state>
+        <exit_state name="Vendor" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="TransferCheck" />
+                </data>
+                <constant_string value="Vendor" />
+            </string>
+        </exit_state>
+        <exit_state name="Yes" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="PolicyChange" />
+                </data>
+                <constant_string value="Yes" />
+            </string>
+        </exit_state>
+        <exit_state name="No" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="PolicyChange" />
+                </data>
+                <constant_string value="No" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

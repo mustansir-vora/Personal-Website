@@ -1,0 +1,36 @@
+{
+  "name": "0da09285-7f49-49b3-a3f6-db2c136bd5ad",
+  "displayName": "Find Account Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "allSubs",
+      "value": "$sys.func.FILTER(\"$session.params.masterSubscriptionsList\", \"$[*][*]\")"
+    }, {
+      "parameter": "serialToMatch",
+      "value": "$sys.func.TO_TEXT($session.params.subscriptionId)"
+    }, {
+      "parameter": "linkedAccountNumber",
+      "value": "$sys.func.GET($sys.func.FILTER(\"$session.params.allSubs\", $sys.func.CONCATENATE(\"$[?(@.subscriptionSerialNumber == '\", $session.params.serialToMatch, \"')].linkedAccountNumber\")), 0)"
+    }, {
+      "parameter": "idx",
+      "value": 0
+    }, {
+      "parameter": "found",
+      "value": false
+    }, {
+      "parameter": "accountIndex",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Find Account Index Router",
+    "name": "33a53136-0e16-4b29-acdf-1b9208324399"
+  } ]
+}

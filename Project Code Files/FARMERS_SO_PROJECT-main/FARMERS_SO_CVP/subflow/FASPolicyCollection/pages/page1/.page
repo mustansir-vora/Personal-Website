@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@158106732:1708930305674" name="page1" version="6.0.1">
+<element height="52" id="Element@31:1708930305674" name="FASPolicyCollection" type="Subflow Start" width="155" x="468" y="22">
+<exit_states>
+<exit_state name="next" target="Element@1477459884:1712733415434"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1485807644:1751910253638"/>
+</exit_states>
+</element>
+<element height="49" id="Element@1785037958:1708930330006" name="CALLER_ENTERED_FROM_FLOW_CEHCK" type="Decision" width="262" x="664" y="688">
+<exit_states>
+<exit_state name="Yes" target="Element@2131807245:1732201228511"/>
+<exit_state name="No" target="Element@1592527935:1711005052849"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1146066222:1708930330006" name="FASPC_MN_001_VALUE" type="Decision" width="232" x="424" y="489">
+<exit_states>
+<exit_state name="Got Policy" target="Element@302544702:1715173379949"/>
+<exit_state name="No Policy Found" target="Element@1785037958:1708930330006">
+<bendpoint>
+<dim1 x="76" y="139"/>
+<dim2 x="-157" y="-77"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NI" target="Element@1680901746:1731527366103"/>
+<exit_state name="NM" target="Element@1785037958:1708930330006">
+<bendpoint>
+<dim1 x="-35" y="101"/>
+<dim2 x="-268" y="-115"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-61" y="177"/>
+<dim2 x="-294" y="-39"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1785037958:1708930330006">
+<bendpoint>
+<dim1 x="300" y="9"/>
+<dim2 x="67" y="-207"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Dont have it" target="Element@1785037958:1708930330006">
+<bendpoint>
+<dim1 x="157" y="100"/>
+<dim2 x="-76" y="-116"/>
+</bendpoint>
+</exit_state>
+<exit_state name="representative" target="Element@1046381981:1730256608368"/>
+<exit_state name="New Policy" target="Element@1912815520:1708930330006">
+<bendpoint>
+<dim1 x="4" y="199"/>
+<dim2 x="-6" y="-134"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1256011056:1708930330006" name="FASPC_HOST_001" type="Decision" width="214" x="156" y="707">
+<exit_states>
+<exit_state name="Policy Found" target="Element@1004044328:1712404446228"/>
+<exit_state name="Policy Not Found" target="Element@1785037958:1708930330006">
+<bendpoint>
+<dim1 x="169" y="-90"/>
+<dim2 x="-375" y="-86"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1912815520:1708930330006">
+<bendpoint>
+<dim1 x="294" y="-3"/>
+<dim2 x="-5" y="-121"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1912815520:1708930330006" name="S_TRANSFER" type="Subflow Call" width="151" x="509" y="820">
+<subflow_call subflow_name="Transfer" target="Element@31:1711717830132">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1592527935:1711005052849"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2093964557:1708930330006" name="FASPC_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="215" x="466" y="199">
+<exit_states>
+<exit_state name="done" target="Element@400840490:1709111897629"/>
+</exit_states>
+</element>
+<element height="55" id="Element@400840490:1709111897629" name="FASPC_MN_001_Call" type="Subflow Call" width="209" x="463" y="321">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709111904086">
+<config>
+<argument_data>
+<data name="MenuID">FASPC_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1146066222:1708930330006"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1501677688:1709116762573" name="WARHEAD_CHECK" type="Subflow Call" width="197" x="135" y="599">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1709116766470">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1256011056:1708930330006"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1592527935:1711005052849" name="Subflow Return_01" type="Subflow Return" width="198" x="479" y="1021"/>
+<element height="55" id="Element@1004044328:1712404446228" name="CALLER_ENTERED_FROM_NLU" type="Decision" width="361" x="68" y="832">
+<exit_states>
+<exit_state name="Yes" target="Element@1239147538:1712404517046"/>
+<exit_state name="No" target="Element@1592527935:1711005052849"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1239147538:1712404517046" name="SetTransferKey_BC" type="Decision" width="192" x="149" y="968">
+<exit_states>
+<exit_state name="done" target="Element@1912815520:1708930330006">
+<bendpoint>
+<dim1 x="178" y="-69"/>
+<dim2 x="-161" y="79"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1912815520:1708930330006">
+<bendpoint>
+<dim1 x="197" y="-20"/>
+<dim2 x="-142" y="128"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1477459884:1712733415434" name="PromoteToSession_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="164" x="474" y="112">
+<exit_states>
+<exit_state name="done" target="Element@2093964557:1708930330006"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2164104:1712736306794" name="InvokedFrom_Rep1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="203" x="930" y="521">
+<exit_states>
+<exit_state name="done" target="Element@1592527935:1711005052849"/>
+</exit_states>
+</element>
+<element height="55" id="Element@302544702:1715173379949" name="SET_API_NAME" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="139" y="482">
+<exit_states>
+<exit_state name="done" target="Element@1501677688:1709116762573"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1046381981:1730256608368" name="Global_Rep_Handling" type="Decision" width="214" x="764" y="363">
+<exit_states>
+<exit_state name="CONT" target="Element@2164104:1712736306794"/>
+<exit_state name="TR" target="Element@1912815520:1708930330006"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1680901746:1731527366103" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="217" x="168" y="365">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@121655194:1732006513806" name="FASPC_MN_002_Call" type="Subflow Call" width="209" x="909" y="862">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709111904086">
+<config>
+<argument_data>
+<data name="MenuID">FASPC_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1318228050:1732006532588"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1318228050:1732006532588" name="FASPC_MN_002_VALUE" type="Decision" width="232" x="807" y="989">
+<exit_states>
+<exit_state name="Auto" target="Element@1912815520:1708930330006">
+<bendpoint>
+<dim1 x="-176" y="-60"/>
+<dim2 x="113" y="72"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Home" target="Element@1912815520:1708930330006">
+<bendpoint>
+<dim1 x="-86" y="-167"/>
+<dim2 x="203" y="-35"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Umberlla" target="Element@1912815520:1708930330006">
+<bendpoint>
+<dim1 x="-116" y="-101"/>
+<dim2 x="173" y="31"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1912815520:1708930330006">
+<bendpoint>
+<dim1 x="-199" y="-37"/>
+<dim2 x="90" y="95"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2131807245:1732201228511" name="UNDERWRITER_INTENT_CHECK" type="Decision" width="255" x="890" y="789">
+<exit_states>
+<exit_state name="Yes" target="Element@121655194:1732006513806"/>
+<exit_state name="No" target="Element@1592527935:1711005052849"/>
+</exit_states>
+</element>
+<element height="49" id="Element@1485807644:1751910253638" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="697" y="-10">
+<exit_states>
+<exit_state name="done" target="Element@1943588172:1751910253638"/>
+</exit_states>
+</element>
+<element height="48" id="Element@718823634:1751910253638" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="1105" y="-15">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1943588172:1751910253638" name="Shared_Transfer" type="Subflow Call" width="132" x="945" y="-12">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@718823634:1751910253638"/>
+</exit_states>
+</element>
+</page>

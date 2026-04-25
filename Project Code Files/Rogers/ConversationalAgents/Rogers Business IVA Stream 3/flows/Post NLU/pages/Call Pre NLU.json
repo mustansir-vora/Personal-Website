@@ -1,0 +1,47 @@
+{
+  "name": "a3e1efb4-38d6-4bb8-852a-e97aa8fa3278",
+  "displayName": "Call Pre NLU",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.postNLInvoked = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLInvoked",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre-NLU",
+    "name": "9e76bf18-10ed-43c4-afba-c295aee1cc3d"
+  }, {
+    "condition": "$session.params.customerIdentified = true AND $session.params.preNLComplete = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLInvoked",
+        "value": false
+      }, {
+        "parameter": "preNLComplete",
+        "value": false
+      } ]
+    },
+    "targetPage": "Play Okay Message",
+    "name": "8fdfcd7a-3492-4b83-a622-2d2dae8cbbc4"
+  }, {
+    "condition": "$session.params.preNLComplete = true AND $session.params.customerIdentified != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLInvoked",
+        "value": false
+      }, {
+        "parameter": "preNLComplete",
+        "value": false
+      } ]
+    },
+    "targetPage": "ID Required?",
+    "name": "9d028edb-4457-4230-84ab-c09bb4db2011"
+  } ]
+}

@@ -1,0 +1,87 @@
+{
+  "name": "3726e367-b444-4292-8557-2750714ad552",
+  "displayName": "HomePhoneSupportPage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkHomePhnTS",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bcInkHomePhnTS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadcastId",
+        "value": "$session.params.broadCastId12"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "00b569aa-d4de-4fdb-b02d-9bc018539708"
+  }, {
+    "condition": "$session.params.bcInkHomePhnTS = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkHomePhnTS",
+        "value": false
+      } ]
+    },
+    "name": "4fa8a053-2c2f-497d-b575-fb502853cd4d",
+    "targetPlaybook": "Home Phone Technical Support"
+  }, {
+    "condition": "$session.params.userInputHPTS = \"mainmenu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "userInputHPTS",
+        "value": ""
+      }, {
+        "parameter": "returnToNLU",
+        "value": false
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": "$sys.func.ADD($session.params.mainMenuRequestCounter, 1)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "6037438e-37db-4551-b0d2-510530ab9442"
+  }, {
+    "condition": "$session.params.userInputHPTS = \"agent\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "userInputHPTS",
+        "value": ""
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "07db4db4-50db-4ae8-ba36-c6a9e7d39c5f"
+  }, {
+    "condition": "$session.params.savedIntent = \"WHP-Support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CheckSavedIntent_HomePhn",
+    "name": "904f1475-687d-4489-985d-7f0c7a1f4248"
+  }, {
+    "condition": "$session.params.hasNoHPprofile = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "hasNoHPprofile",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_HomePhn",
+    "name": "315cc904-58fd-4cd5-9d3a-c9e51d07c67e"
+  }, {
+    "condition": "$session.params.noWHBPhone = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TechSingleService_HomePhn",
+    "name": "b32dccd1-c0c5-4dae-b121-690cad26bc3e"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "f43c6c32-dd4b-4182-8101-b2610be9e3ba",
+  "displayName": "DMBG - Bus-Main-Ent-DA-techsupport - Enterprise Internet",
+  "priority": 500000,
+  "numTrainingPhrases": 4,
+  "dtmfPattern": "1"
+}

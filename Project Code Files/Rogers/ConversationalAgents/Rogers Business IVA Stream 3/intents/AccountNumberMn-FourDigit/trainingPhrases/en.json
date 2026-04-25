@@ -1,0 +1,247 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "account number is "
+    }, {
+      "text": "5678",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my account number ends in "
+    }, {
+      "text": "1234",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the last four digits are "
+    }, {
+      "text": "6789",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my number ends with "
+    }, {
+      "text": "4567",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "it's "
+    }, {
+      "text": "9012",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the last four of my account are "
+    }, {
+      "text": "5678",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "it is "
+    }, {
+      "text": "0123",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the account number ends in "
+    }, {
+      "text": "3456",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the last four numbers are "
+    }, {
+      "text": "8901",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "it ends in "
+    }, {
+      "text": "2345",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the number is "
+    }, {
+      "text": "7890",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the last four of the account are "
+    }, {
+      "text": "9012",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the account ends with "
+    }, {
+      "text": "6789",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the account ends with "
+    }, {
+      "text": "5555",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the last four of the account are "
+    }, {
+      "text": "4444",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the number is "
+    }, {
+      "text": "2222",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "it is "
+    }, {
+      "text": "8901",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "it ends in "
+    }, {
+      "text": "1000",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the last four numbers are "
+    }, {
+      "text": "5432",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the account number ends in "
+    }, {
+      "text": "0987",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "it is "
+    }, {
+      "text": "6543",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the last four of my account are "
+    }, {
+      "text": "8765",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "it's "
+    }, {
+      "text": "2345",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my number ends with "
+    }, {
+      "text": "7890",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the last four digits are "
+    }, {
+      "text": "4321",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my account number ends in "
+    }, {
+      "text": "9876",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "account number is "
+    }, {
+      "text": "3456",
+      "parameterId": "fourdigitaccount",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

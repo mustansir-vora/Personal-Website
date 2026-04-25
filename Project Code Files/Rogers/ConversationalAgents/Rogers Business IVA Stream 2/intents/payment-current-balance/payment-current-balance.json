@@ -1,0 +1,10 @@
+{
+  "name": "8bc296f9-f15c-4c7b-9875-3ce6f7a45cdc",
+  "displayName": "payment-current-balance",
+  "parameters": [ {
+    "id": "e_amountname",
+    "entityType": "@e_AmountName"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

@@ -1,0 +1,40 @@
+{
+  "name": "9629b4f5-0f5f-442e-bbb4-d10063c4ab2d",
+  "displayName": "PTP Change Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "ptpChangeAmount",
+      "value": false
+    }, {
+      "parameter": "ptpChangeDate",
+      "value": false
+    }, {
+      "parameter": "ptpChangeMethod",
+      "value": false
+    }, {
+      "parameter": "$session.params.ptpChangeDetails",
+      "value": false
+    }, {
+      "parameter": "ptpInstallMenuCounter",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpConfirmNo = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Number Of Installs",
+    "name": "fd701918-f68b-48f1-ae42-2475c7ba7907"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Is Change Entity Known",
+    "name": "cd0cfadd-85dd-44f3-9d42-7bcd9aad45d2"
+  } ]
+}

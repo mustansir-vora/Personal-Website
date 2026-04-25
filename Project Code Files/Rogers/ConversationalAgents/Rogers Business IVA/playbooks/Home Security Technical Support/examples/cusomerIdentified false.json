@@ -1,0 +1,20 @@
+{
+  "name": "01899d02-bd8e-4ad5-bc73-2cb5efa0cb07",
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcasrt",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after checks",
+    "actionParameters": {
+      "customerNotIdentified": "true"
+    }
+  },
+  "displayName": "cusomerIdentified false",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 55,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "undetected"
+}

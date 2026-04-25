@@ -1,0 +1,19 @@
+{
+  "name": "c24add66-dc66-49cf-8bdd-da09b31c32e2",
+  "displayName": "Create Interaction",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "createInteraction"
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "1a58d582-6010-4c8a-ab2b-7409d30a5abf"
+  } ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1388182036:1729664775242" name="Decision_01" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.PolicyStatus_Check_BC</source>
+</config>
+</decision>

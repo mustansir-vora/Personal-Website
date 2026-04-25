@@ -1,0 +1,147 @@
+{
+  "name": "6eea0efd-66d8-4267-8261-125a9e8f9a77",
+  "displayName": "Ani Lookup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "aniMatch",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.aniLookup = true AND $session.params.accountNumber = null AND $session.params.validAni = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "callerIdType",
+        "value": "phone"
+      }, {
+        "parameter": "idNumber",
+        "value": "$session.params.ani"
+      } ]
+    },
+    "targetPage": "Identify Billing Accounts",
+    "name": "d14a28f4-fe45-4095-ab86-65e9fc884cea"
+  }, {
+    "condition": "$session.params.aniLookup = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileSetLanguage",
+        "value": false
+      }, {
+        "parameter": "numberOfBillingAccounts",
+        "value": 0
+      }, {
+        "parameter": "identificationApi",
+        "value": false
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "e20b4385-cb37-46d0-9fa2-a875bf74b152"
+  }, {
+    "condition": "$session.params.aniLookup = true AND $session.params.accountNumber != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "callerIdType",
+        "value": "account"
+      }, {
+        "parameter": "idNumber",
+        "value": "$session.params.accountNumber"
+      } ]
+    },
+    "targetPage": "Identify Billing Accounts",
+    "name": "56121218-7789-4209-a5a1-0f8b6abecdd0"
+  }, {
+    "condition": "$session.params.aniLookup = true AND $session.params.accountNumber = null AND $session.params.validAni != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileSetLanguage",
+        "value": false
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "479f19c5-27ce-4ee6-9c17-9ab3af448a94"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileSetLanguage",
+        "value": false
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "baffc086-4a78-4d7b-abfb-77e525547a8c"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts = 1 AND ($session.params.billingLanguage = \"en-US\" OR $session.params.billingLanguage = \"fr-CA\")",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileLanguage",
+        "value": "$session.params.billingLanguage"
+      }, {
+        "parameter": "profileSetLanguage",
+        "value": true
+      }, {
+        "parameter": "aniMatch",
+        "value": true
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "933ae3ad-4373-4e27-9b70-0b6fef642a73"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts = 1 AND $session.params.billingLanguage = \"NA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileSetLanguage",
+        "value": false
+      }, {
+        "parameter": "aniMatch",
+        "value": true
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "a65cf660-8ecd-4581-8fee-79cb9cc2ebc7"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts \u003e 1 AND $session.params.uniqueBillingLanguage = true AND ($session.params.billingLanguage = \"fr-CA\" OR $session.params.billingLanguage = \"en-US\")",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileLanguage",
+        "value": "$session.params.billingLanguage"
+      }, {
+        "parameter": "profileSetLanguage",
+        "value": true
+      }, {
+        "parameter": "aniMatch",
+        "value": true
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "7cf80550-0e4c-4471-af90-2abde4e1ed0a"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts \u003e 1 AND $session.params.uniqueBillingLanguage = true AND $session.params.billingLanguage = \"NA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileSetLanguage",
+        "value": false
+      }, {
+        "parameter": "aniMatch",
+        "value": true
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "448142dc-042f-4cde-abce-f2280c086e6c"
+  }, {
+    "condition": "$session.params.uniqueBillingLanguage != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "aniMatch",
+        "value": true
+      }, {
+        "parameter": "profileSetLanguage",
+        "value": false
+      } ]
+    },
+    "targetPage": "Greeting",
+    "name": "91b68bf5-0ed6-4c8a-9431-5ffb07e5d34c"
+  } ]
+}

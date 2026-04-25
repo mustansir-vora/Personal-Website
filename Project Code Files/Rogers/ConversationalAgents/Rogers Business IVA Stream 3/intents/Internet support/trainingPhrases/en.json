@@ -1,0 +1,12 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "i need help with "
+    }, {
+      "text": "internet support",
+      "parameterId": "intention"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

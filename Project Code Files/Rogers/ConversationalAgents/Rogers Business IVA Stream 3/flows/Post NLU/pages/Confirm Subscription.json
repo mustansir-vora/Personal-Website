@@ -1,0 +1,58 @@
+{
+  "name": "ad9955d1-3fc6-4fd6-abbf-035da741aecc",
+  "displayName": "Confirm Subscription",
+  "form": {
+    "parameters": [ {
+      "displayName": "DynamicConfirmationMenuResponse",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetPage": "Check Confirmation Menu Response",
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "stdErrorType",
+              "value": "NI"
+            } ]
+          },
+          "name": "8e109ef9-d599-4fef-af0c-8ac8e8233fa5"
+        }, {
+          "targetPage": "Check Confirmation Menu Response",
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "stdErrorType",
+              "value": "NM"
+            } ]
+          },
+          "name": "dff09aa2-7cb3-4abb-adb6-a2925c62d809"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vous appelez à propos du mobile qui se termine par $session.params.last4Digit. Est-ce exact ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "You're calling about the mobile number ending in $session.params.last4Digit. Is that right?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.DynamicConfirmationMenuResponse != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Confirmation Menu Response",
+    "name": "1ed4dcc5-9ad4-4e88-98cf-f9a3de5bf6f1"
+  } ]
+}

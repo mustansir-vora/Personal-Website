@@ -1,0 +1,39 @@
+{
+  "name": "2a1b8ccb-f865-4f63-bd4e-8de324a5bff7",
+  "displayName": "Check Collect Retry Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectRetryCounter = 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Max Phone Retry",
+    "name": "be9648b1-401a-4e0a-a14e-db93aaf31ad2"
+  }, {
+    "condition": "$session.params.collectRetryCounter \u003c 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D'accord, essayons encore." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay, let's try again. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectRetryCounter",
+        "value": "$sys.func.ADD($session.params.collectRetryCounter,1)"
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "cecd8d32-9cde-490c-93c2-bc3c3fa488fe"
+  } ]
+}

@@ -1,0 +1,271 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux mettre à jour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " adresse après ",
+      "auto": true
+    }, {
+      "text": "un déménagement",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai "
+    }, {
+      "text": "déménagé et je dois mettre à jour mes coordonnées",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle concernant "
+    }, {
+      "text": "le changement des informations du titulaire du compte.",
+      "parameterId": "e_address_change"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "mettre à jour la propriété ou les informations du titulaire du compte",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne peux pas accéder aux services en ligne parce que "
+    }, {
+      "text": "mon adresse courriel est incorrecte",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux "
+    }, {
+      "text": "corriger l’adresse courriel au dossier",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "mettre à jour les détails de mon adresse courriel",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux "
+    }, {
+      "text": "corriger une adresse erronée",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai récemment "
+    }, {
+      "text": "déménagé et je dois mettre à jour mon adresse",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "changer les détails de mon adresse postale",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux "
+    }, {
+      "text": "mettre à jour les informations de mon adresse de facturation",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "corriger les détails de mon adresse",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mes coordonnées ont changé",
+      "parameterId": "e_address_change"
+    }, {
+      "text": " et doivent être mises à jour."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer "
+    }, {
+      "text": "mes informations personnelles",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "mettre à jour mes coordonnées",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "mettre à jour les informations du titulaire du compte",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne peux pas me connecter parce que "
+    }, {
+      "text": "l’adresse courriel est incorrecte",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "mettre à jour l’adresse courriel au dossier",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux "
+    }, {
+      "text": "changer mon adresse courriel",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "corriger une adresse incorrecte",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je suis "
+    }, {
+      "text": "en train de déménager à une nouvelle adresse",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "changer mon adresse de facturation",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de "
+    }, {
+      "text": "mettre à jour mon adresse",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux "
+    }, {
+      "text": "mettre à jour les informations de mon compte",
+      "parameterId": "e_address_change"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

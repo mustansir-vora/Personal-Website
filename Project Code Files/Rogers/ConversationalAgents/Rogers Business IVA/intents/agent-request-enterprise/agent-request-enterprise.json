@@ -1,0 +1,7 @@
+{
+  "name": "8a0eda42-a88a-409d-bbc8-9b2bbfeb546e",
+  "displayName": "agent-request-enterprise",
+  "priority": 500000,
+  "description": "Handles calls regarding large business inquiries",
+  "numTrainingPhrases": 16
+}

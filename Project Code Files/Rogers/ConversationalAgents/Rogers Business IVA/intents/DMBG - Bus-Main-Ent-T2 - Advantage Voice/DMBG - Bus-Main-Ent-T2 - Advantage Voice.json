@@ -1,0 +1,7 @@
+{
+  "name": "dd1ffdfa-932c-4048-a0c5-3cd0b25501e7",
+  "displayName": "DMBG - Bus-Main-Ent-T2 - Advantage Voice",
+  "priority": 500000,
+  "numTrainingPhrases": 6,
+  "dtmfPattern": "1"
+}

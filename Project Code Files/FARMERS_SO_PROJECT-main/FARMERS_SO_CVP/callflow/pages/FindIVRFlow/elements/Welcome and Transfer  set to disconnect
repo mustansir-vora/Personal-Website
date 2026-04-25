@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@217305988:1723486284538" name="Welcome and Transfer  set to disconnect" version="6.0.1">
+<subflow_call subflow_name="Welcome_And_Transfer" target="Element@31:1710584122388">
+<config/>
+</subflow_call>
+</connector>

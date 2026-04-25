@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1731283626:1749649933980" name="CHECK_HT_TRANSFER" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.gdfhoteventTransferCheck</source>
+</config>
+</decision>

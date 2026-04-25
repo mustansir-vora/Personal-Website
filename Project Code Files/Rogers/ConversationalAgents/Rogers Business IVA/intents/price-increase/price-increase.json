@@ -1,0 +1,7 @@
+{
+  "name": "1419795a-5c68-4bb0-939c-72127dc43e8f",
+  "displayName": "price-increase",
+  "priority": 500000,
+  "description": "Handles inquiries or complaints about price increases or billing changes.",
+  "numTrainingPhrases": 50
+}

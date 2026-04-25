@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1328220822:1718105048187" name="FWSIA_PA_001_PA" version="6.0.1">
+<config>
+<settings>
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">100ms</setting>
+<setting name="max_noinput_count">1</setting>
+<setting name="max_nomatch_count">1</setting>
+<setting name="dtmf_grammar"/>
+<setting name="dtmf_keypress">1</setting>
+<setting name="help_dtmf_keypress"/>
+<setting name="modal">false</setting>
+<setting name="field_name">foundation_fld</setting>
+<setting name="slot_name"/>
+<setting name="slot_element_data"/>
+<setting name="secure_logging">false</setting>
+<setting name="dtmf_overlay">false</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="FWSIA_PA_001.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

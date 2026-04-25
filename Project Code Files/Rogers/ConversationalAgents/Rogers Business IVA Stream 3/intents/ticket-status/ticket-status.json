@@ -1,0 +1,7 @@
+{
+  "name": "cfb77ce6-8038-4668-af49-1d49fa70717c",
+  "displayName": "ticket-status",
+  "priority": 500000,
+  "description": "Explains how customers can check the status of a support ticket",
+  "numTrainingPhrases": 45
+}

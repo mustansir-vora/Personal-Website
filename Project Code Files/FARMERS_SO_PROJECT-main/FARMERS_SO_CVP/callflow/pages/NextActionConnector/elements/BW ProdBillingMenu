@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@857079331:1711796224043" name="BW ProdBillingMenu" version="6.0.1">
+<subflow_call subflow_name="BWPBillingMenu" target="Element@31:1711796246497">
+<config/>
+</subflow_call>
+</connector>

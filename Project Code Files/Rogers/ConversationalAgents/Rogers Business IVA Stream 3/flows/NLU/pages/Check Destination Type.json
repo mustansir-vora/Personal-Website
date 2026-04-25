@@ -1,0 +1,45 @@
+{
+  "name": "16b6b273-f603-4eda-9ead-19159306632a",
+  "displayName": "Check Destination Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.destinationType = Disambig",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Dmbg Msg",
+    "name": "4aa3fbc6-9e70-4b2c-b121-e949aa7e1482"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = Rule",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Rule Router",
+    "name": "2de335f6-9f8a-4172-9d31-4714e50d973a"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = Module",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idAuthInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check ID/Auth Required?",
+    "name": "f1be8b2b-13fe-43cd-a6bb-74f486337f0f"
+  }, {
+    "condition": "$session.params.nluConfig.destinationType = Transfer",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idAuthInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check ID/Auth Required?",
+    "name": "df646596-7fca-48e7-98e9-320cf3c28415"
+  } ]
+}

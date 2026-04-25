@@ -1,0 +1,154 @@
+{
+  "name": "5b0616f6-600e-454c-b203-e8c29d7fbe85",
+  "displayName": "Update Multiple First Install Report Payment",
+  "form": {
+    "parameters": [ {
+      "displayName": "FirstInstallSelection",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si c’est l’entente de paiement pour lequel \r\nvous appelez, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou \r\nappuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If that's the payment arrangement you're calling about, say yes or press 1. Otherwise, say no, or press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "13fb1d31-8558-424e-8e40-fd3cdba5a554"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si c’est l’entente de paiement pour lequel \r\nvous appelez, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou \r\nappuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If that's the payment arrangement you're calling about, say yes or press 1. Otherwise, say no, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2aa67a75-5787-4153-9900-9bf969910fbe"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si c’est l’entente de paiement pour lequel vous \r\nappelez, appuyez sur le 1. Sinon, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If that's the payment arrangement you're calling about, press 1. If not, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "9363134d-cbeb-4dc8-8a4b-8de3981a544e"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si c’est l’entente de paiement pour lequel vous \r\nappelez, appuyez sur le 1. Sinon, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If that's the payment arrangement you're calling about, press 1. If not, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a7333a81-7976-4dac-920e-bc052b1cdb17"
+        }, {
+          "targetPage": "PTP NLU Return",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "C’est tout ce que j’ai au dossier concernant \r\ncette entente en suspens. Une nouvelle \r\nentente de paiement ne peut pas être créée \r\npour le moment." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "That's all I have on file with this pending arrangement. A new payment arrangement can't be created at this time." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "daf0ecc4-5596-4777-9196-7fc603b8247f"
+        }, {
+          "targetPage": "PTP NLU Return",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "C’est tout ce que j’ai au dossier concernant \r\ncette entente en suspens. Une nouvelle \r\nentente de paiement ne peut pas être créée \r\npour le moment." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "That's all I have on file with this pending arrangement. A new payment arrangement can't be created at this time." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "da89aa9c-3cf3-4208-a114-d22f9e664e26"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Est-ce l’entente de paiement pour lequel vous \nappelez ? " ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Is that the payment arrangement you’re calling about?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.FirstInstallSelection = no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "C’est tout ce que j’ai au dossier concernant \r\ncette entente en suspens. Une nouvelle \r\nentente de paiement ne peut pas être créée \r\npour le moment." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "That's all I have on file with this pending arrangement. A new payment arrangement can't be created at this time." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "fdd8599c-cab6-4847-b684-ea096bcf5fac"
+  }, {
+    "condition": "$session.params.FirstInstallSelection = yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Report Payment Intent",
+    "name": "bd6f4feb-393d-4e62-9e52-29dd6faff96e"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

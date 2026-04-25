@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2099448385:1733399003294" name="ID Process Ctd" version="6.0.1">
+<element height="50" id="Element@737436520:1733399003294" name="ID Process Ctd" type="Page Entry" width="145" x="748" y="31">
+<exit_states>
+<exit_state name="next" target="Element@1601975453:1733463476052"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1601975453:1733463476052" name="Check Policy LOB" type="Decision" width="166" x="738" y="136">
+<exit_states>
+<exit_state name="LIFE" target="Element@34513399:1733463606629"/>
+<exit_state name="Others" target="Element@1767466125:1737041144100"/>
+</exit_states>
+</element>
+<element height="50" id="Element@34513399:1733463606629" name="Check Policy Type" type="Decision" width="166" x="739" y="243">
+<exit_states>
+<exit_state name="VUL" target="Element@1780624754:1735631312644"/>
+<exit_state name="IUL/Others" target="Element@1100929881:1733464644862"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1262753481:1733463650040" name="FWS FGIA MENU" type="Subflow Call" width="160" x="1019" y="44">
+<subflow_call subflow_name="FWS_FGIA" target="Element@31:1733463673063">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1900013042:1733463938983">
+<bendpoint>
+<dim1 x="292" y="1"/>
+<dim2 x="-1" y="-196"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@387817624:1733463886750" name="FNWL Transfer 1" type="Subflow Call" width="157" x="504" y="241">
+<subflow_call subflow_name="FNWL_Transfer" target="Element@31:1733463900704">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@353612599:1733463991551"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1900013042:1733463938983" name="Subflow Return Entry" type="Page Connector" width="188" x="1298" y="241">
+<page_connector target="Element@476947690:1733463922811">Subflow Return Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@353612599:1733463991551" name="Subflow Return Entry" type="Page Connector" width="188" x="233" y="241">
+<page_connector target="Element@476947690:1733463922811">Subflow Return Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1100929881:1733464644862" name="IUL or Others" type="Decision" width="136" x="754" y="353">
+<exit_states>
+<exit_state name="IUL" target="Element@1111260494:1733464704495"/>
+<exit_state name="Others" target="Element@1463482837:1733464962358"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1111260494:1733464704495" name="Policy Issue Date" type="Decision" width="160" x="497" y="354">
+<exit_states>
+<exit_state name="Before 10/1/2019" target="Element@333992168:1735631416416"/>
+<exit_state name="After 10/1/2019" target="Element@1463482837:1733464962358">
+<bendpoint>
+<dim1 x="0" y="120"/>
+<dim2 x="-245" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1463482837:1733464962358" name="FNWL_ID_AUTH_WITH_POLICY_NUMBER" type="Subflow Call" width="317" x="664" y="475">
+<subflow_call subflow_name="FNWL_IDandAuth_with_PolicyNumber" target="Element@31:1733464973486">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1900013042:1733463938983">
+<bendpoint>
+<dim1 x="568" y="-2"/>
+<dim2 x="-2" y="232"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1780624754:1735631312644" name="setMSP__PolicyTypeIDProcess" type="Decision" width="243" x="455" y="133">
+<exit_states>
+<exit_state name="SU" target="Element@387817624:1733463886750">
+<bendpoint>
+<dim1 x="26" y="56"/>
+<dim2 x="26" y="-52"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@387817624:1733463886750">
+<bendpoint>
+<dim1 x="-27" y="57"/>
+<dim2 x="-27" y="-51"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@333992168:1735631416416" name="setMSP__IssueDateIDProcess" type="Decision" width="238" x="110" y="354">
+<exit_states>
+<exit_state name="SU" target="Element@387817624:1733463886750">
+<bendpoint>
+<dim1 x="180" y="-71"/>
+<dim2 x="-167" y="42"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@387817624:1733463886750">
+<bendpoint>
+<dim1 x="200" y="-42"/>
+<dim2 x="-147" y="71"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1767466125:1737041144100" name="IS_FNWL_DNIS" type="Decision" width="147" x="1026" y="134">
+<exit_states>
+<exit_state name="YES" target="Element@902813714:1737047863301"/>
+<exit_state name="NO" target="Element@1262753481:1733463650040"/>
+</exit_states>
+</element>
+<element height="50" id="Element@272908432:1737041233555" name="FNWL Transfer 2" type="Subflow Call" width="157" x="1023" y="377">
+<subflow_call subflow_name="FNWL_Transfer" target="Element@31:1737041320937">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1900013042:1733463938983">
+<bendpoint>
+<dim1 x="289" y="-2"/>
+<dim2 x="-2" y="134"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@902813714:1737047863301" name="setMSP_NonLifePolicyIDProcess" type="Decision" width="298" x="952" y="243">
+<exit_states>
+<exit_state name="SU" target="Element@1076862073:1749638177909">
+<bendpoint>
+<dim1 x="71" y="55"/>
+<dim2 x="-107" y="-23"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1076862073:1749638177909"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1076862073:1749638177909" name="Set_RLUS_Flag" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="145" x="1207" y="319">
+<exit_states>
+<exit_state name="done" target="Element@272908432:1737041233555">
+<bendpoint>
+<dim1 x="-178" y="-1"/>
+<dim2 x="0" y="-57"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

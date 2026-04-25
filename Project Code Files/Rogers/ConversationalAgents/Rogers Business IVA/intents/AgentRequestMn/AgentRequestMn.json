@@ -1,0 +1,12 @@
+{
+  "name": "fbfbb7a1-b18f-4e88-85c7-e46b1d86aeeb",
+  "displayName": "AgentRequestMn",
+  "parameters": [ {
+    "id": "geo-city",
+    "entityType": "@sys.geo-city"
+  } ],
+  "priority": 500000,
+  "description": "This will trigger when user says want to talk with agent ",
+  "numTrainingPhrases": 60,
+  "dtmfPattern": "0"
+}

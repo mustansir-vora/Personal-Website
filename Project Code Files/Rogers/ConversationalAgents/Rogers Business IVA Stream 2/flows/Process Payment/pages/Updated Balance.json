@@ -1,0 +1,28 @@
+{
+  "name": "e181b76f-5e93-468b-98e1-ddadb9541412",
+  "displayName": "Updated Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Autrement, veuillez patienter pendant la mise à jour de votre solde de compte." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Otherwise, please hold for your\nupdated account balance." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Payment Wrap Up",
+    "name": "357f3d41-637c-49f7-865c-d45f05dca7ea"
+  } ]
+}

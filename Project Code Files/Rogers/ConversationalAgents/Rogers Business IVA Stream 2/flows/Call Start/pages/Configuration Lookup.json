@@ -1,0 +1,137 @@
+{
+  "name": "ccde71e8-a1e4-4ce8-9ad4-d0dc95b33797",
+  "displayName": "Configuration Lookup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callstart",
+    "tag": "getCallStartParams"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\" OR $session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ani Lookup",
+    "name": "16ed10c0-630d-4ba6-bf84-549d6c55dadd"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Default Feilds",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "d60cf1c4-0e76-4bf9-9ef7-bca6a340ab0d"
+  }, {
+    "targetPage": "Default Feilds",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+    
+    },
+    "name": "5d20d98b-a4f6-474a-922f-bd0d9787c907"
+  }, {
+    "targetPage": "Default Feilds",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+    
+    },
+    "name": "ec043499-1907-4cb3-8c6f-3099987d8d90"
+  }, {
+    "targetPage": "Default Feilds",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+    
+    },
+    "name": "1460e9e6-94dc-499f-8931-c3f9f126dd34"
+  }, {
+    "targetPage": "Default Feilds",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "brand",
+        "value": "ROGERS"
+      }, {
+        "parameter": "applicationId",
+        "value": "Bus_Main_SMB"
+      }, {
+        "parameter": "greetingScriptEn",
+        "value": "Welcome to Rogers Business."
+      }, {
+        "parameter": "greetingScriptFr",
+        "value": "Rogers Affaires vous souhaite la Bienvenue."
+      }, {
+        "parameter": "offerLanguageMenu",
+        "value": true
+      }, {
+        "parameter": "aniLookup",
+        "value": true
+      }, {
+        "parameter": "aniConfirm",
+        "value": true
+      }, {
+        "parameter": "aniPredictiveInd",
+        "value": true
+      }, {
+        "parameter": "identifyAccount",
+        "value": true
+      }, {
+        "parameter": "idType",
+        "value": "both"
+      }, {
+        "parameter": "itnPredictiveInd",
+        "value": true
+      }, {
+        "parameter": "searchHomeContact",
+        "value": false
+      }, {
+        "parameter": "searchMobileContact",
+        "value": true
+      }, {
+        "parameter": "searchBusinessContact",
+        "value": true
+      }, {
+        "parameter": "involuntaryRedirectInd",
+        "value": true
+      }, {
+        "parameter": "voluntaryRedirect",
+        "value": "ALL"
+      }, {
+        "parameter": "savedIntent",
+        "value": "NA"
+      }, {
+        "parameter": "callHistory",
+        "value": true
+      }, {
+        "parameter": "disclaimerScriptEn",
+        "value": "To better direct your call, we have introduced a new conversational Virtual Assistant. Please have your account number ready and tell us the reason for your call so we can offer self serve options or connect you with a business specialist who can best support you. Your call including any time spent on hold will be recorded, for quality assurance, training, security, and identification purposes."
+      }, {
+        "parameter": "disclaimerScriptFr",
+        "value": "Pour mieux rediriger votre appel, nous avons lancé un nouvel Assistant virtuel conversationnel. Veuillez avoir votre numéro de compte à portée de main et nous donner la raison de votre appel afin que nous puissions vous offrir des options en libre service ou vous mettre en contact avec un spécialiste de Rogers Affaires, qui pourra mieux vous aider. Votre appel, y compris le temps passé en attente, sera enregistré à des fins d’assurance de la qualité, de formation, de sécurité et d’identification."
+      }, {
+        "parameter": "routingId",
+        "value": "NA"
+      }, {
+        "parameter": "predictiveInd",
+        "value": true
+      }, {
+        "parameter": "closedDoorTFN",
+        "value": "NA"
+      }, {
+        "parameter": "dnisLanguage",
+        "value": "NA"
+      }, {
+        "parameter": "npaLanguage",
+        "value": "NA"
+      } ]
+    },
+    "name": "f151e95d-bb6d-40ed-bdd3-e712c64db449"
+  }, {
+    "targetPage": "Default Feilds",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+    
+    },
+    "name": "bd23ff82-bf70-4f30-9ac2-56d6fd944fff"
+  } ]
+}

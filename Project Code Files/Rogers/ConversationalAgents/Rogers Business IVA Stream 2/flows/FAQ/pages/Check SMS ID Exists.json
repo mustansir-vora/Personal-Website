@@ -1,0 +1,31 @@
+{
+  "name": "d0ff6c59-0318-43d1-b8c2-86dddb4bb20d",
+  "displayName": "Check SMS ID Exists",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.smsId != null AND $session.params.smsId != \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsAttempted",
+        "value": true
+      }, {
+        "parameter": "SMSInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call SMS",
+    "name": "7abbd485-b1bb-4e22-ac72-f968d35bf91f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Confirmed Script Id",
+    "name": "4525af5f-4db3-4d76-a0d5-d1cd76038f04"
+  } ]
+}

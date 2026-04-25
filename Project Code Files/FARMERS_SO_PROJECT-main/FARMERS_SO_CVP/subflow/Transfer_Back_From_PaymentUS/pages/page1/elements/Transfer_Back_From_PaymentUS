@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subflow_start id="Element@31:1711835004791" name="Transfer_Back_From_PaymentUS" version="6.0.1">
+<config>
+<local_events>
+<local_event>
+<name>NO_RESOURCE</name>
+<eventlist>error.noresource</eventlist>
+<type>VXML Event</type>
+</local_event>
+</local_events>
+</config>
+</subflow_start>

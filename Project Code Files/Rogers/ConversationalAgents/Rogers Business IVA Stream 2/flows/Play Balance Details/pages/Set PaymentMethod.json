@@ -1,0 +1,47 @@
+{
+  "name": "4dc1869d-6a37-4c88-8f53-c5a180a218b7",
+  "displayName": "Set PaymentMethod",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.ptpPaymentMethod = \"CC\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpPaymentMethod",
+        "value": "credit card"
+      }, {
+        "parameter": "ptpPaymentMethodFR",
+        "value": "carte de crédit"
+      } ]
+    },
+    "targetPage": "Check promisedDate \u0026 currentDate",
+    "name": "3fda9ffd-34fe-44f2-b639-461076c8a60a"
+  }, {
+    "condition": "$session.params.api.billingProfile.ptpPaymentMethod = \"PB\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpPaymentMethod",
+        "value": "personal bank"
+      }, {
+        "parameter": "ptpPaymentMethodFR",
+        "value": "banque personnelle"
+      } ]
+    },
+    "targetPage": "Check promisedDate \u0026 currentDate",
+    "name": "b6a42df2-7a3d-48af-be12-c1d6f88e906e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpPaymentMethod",
+        "value": "credit card"
+      }, {
+        "parameter": "ptpPaymentMethodFR",
+        "value": "carte de crédit"
+      } ]
+    },
+    "targetPage": "Check promisedDate \u0026 currentDate",
+    "name": "2263eff7-7942-439c-aeb8-b60bead470b1"
+  } ]
+}

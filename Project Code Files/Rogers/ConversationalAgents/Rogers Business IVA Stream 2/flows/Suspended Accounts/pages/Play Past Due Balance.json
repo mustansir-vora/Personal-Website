@@ -1,0 +1,28 @@
+{
+  "name": "e97992ae-5a3f-44db-80b0-5d6c31a8296c",
+  "displayName": "Play Past Due Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your total balance is $ $session.params.api.billingProfile.balanceDetails.currentBalance . To restore your service you’ll need to make a payment of $ $session.params.api.billingProfile.balanceDetails.pastDueBalance" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Votre solde total est de $session.params.api.billingProfile.balanceDetails.currentBalance. Pour rétablir votre service, vous devrez effectuer un paiement de $session.params.api.billingProfile.balanceDetails.pastDueBalance" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Make Payment",
+    "name": "87500ca5-4416-4075-8900-37e703e995a5"
+  } ]
+}

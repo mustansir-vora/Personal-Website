@@ -1,0 +1,31 @@
+{
+  "name": "ed779b04-3f8f-4799-8c58-fd3d203be9ec",
+  "displayName": "readMessage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "postal3Value",
+      "value": "$sys.func.MID($session.params.postalCode, 4, 3)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Pour le code postal se terminant par $session.params.postal3Value, $session.params.outageMessage" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "For your postal code ending in $session.params.postal3Value, $session.params.outageMessage" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "repeat",
+    "name": "b5c2df22-0ebe-4eab-b9b9-4fcabbf80b68"
+  } ]
+}

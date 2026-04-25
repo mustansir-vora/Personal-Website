@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@752405690:1707994943206" name="EPSL_BOTH_MN_MATCH" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.EPSL_BOTH_MN_MATCH_DECISION</source>
+</config>
+</decision>

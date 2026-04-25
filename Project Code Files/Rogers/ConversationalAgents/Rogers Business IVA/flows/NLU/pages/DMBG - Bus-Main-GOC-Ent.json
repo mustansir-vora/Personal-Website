@@ -1,0 +1,97 @@
+{
+  "name": "2cf1f807-f8ed-4454-a24c-e2566b7534a3",
+  "displayName": "DMBG - Bus-Main-GOC-Ent",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Pour la facturation, les paiements et les changements de compte, dire « facturation ».\r\nPour le soutien technique, dire « soutien technique »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "For Billing, payment, and Account Changes, say \"billing\",\nFor Technical support, say \"technical support\"" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - Bus-Main-GOC-Ent - Billing",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-GOC-Ent-billing"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "c854c573-6b5d-40fe-8a12-cedf37dcc63e"
+  }, {
+    "intent": "DMBG - Bus-Main-GOC-Ent - Technical Support",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-GOC-Ent-techsupport"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "e3f2a15a-bacf-4b8b-b9be-6f4bda3c16e8"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "2e9a4d5b-0787-4d8c-9ff0-7688e914e973"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "f0761a1d-0836-44cb-94bb-cad05ade7319"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

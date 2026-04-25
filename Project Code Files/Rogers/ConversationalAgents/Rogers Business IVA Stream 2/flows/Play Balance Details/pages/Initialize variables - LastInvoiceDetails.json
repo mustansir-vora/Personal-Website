@@ -1,0 +1,24 @@
+{
+  "name": "e14c1dcb-b0e8-41bf-bdb4-8c0b05605f45",
+  "displayName": "Initialize variables - LastInvoiceDetails",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.selfServiceAttempted ",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "$sys.func.APPEND($session.params.attemptedSSName, \"passive-lastBillDetails\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check lastInvoiceDetailsEnabled",
+    "name": "d524fef3-5bbc-407e-b563-e11172a6a1cb"
+  } ]
+}

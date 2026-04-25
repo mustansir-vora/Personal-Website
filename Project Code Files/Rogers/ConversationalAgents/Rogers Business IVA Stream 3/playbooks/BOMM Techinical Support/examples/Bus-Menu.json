@@ -1,0 +1,62 @@
+{
+  "name": "42a58fe7-c790-459a-ad6b-52bba8ea86ee",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say 'advantage voice', 'mobile phones', 'high speed internet', 'television services', or 'business phone'"
+    }
+  }, {
+    "userUtterance": {
+      "text": "what it is"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. Please say 'advantage voice', or press1, 'mobile phones' press 2, 'high speed internet' press 3, 'television services', 4, or 'business phone', press 5."
+    }
+  }, {
+    "userUtterance": {
+      "text": "4"
+    }
+  }, {
+    "toolUse": {
+      "action": "set_product",
+      "inputActionParameters": {
+        "userResponse": "television services"
+      },
+      "outputActionParameters": {
+        "result": "TV"
+      }
+    }
+  }, {
+    "toolUse": {
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "TV"
+      },
+      "outputActionParameters": {
+        "result": "tv-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "TV",
+      "savedIntent": "tv-support"
+    }
+  },
+  "displayName": " Bus-Menu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 328,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

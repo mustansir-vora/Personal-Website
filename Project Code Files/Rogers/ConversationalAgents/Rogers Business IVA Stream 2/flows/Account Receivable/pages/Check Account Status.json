@@ -1,0 +1,32 @@
+{
+  "name": "c8c1af32-ca49-407a-81ac-4b68cfeaedaf",
+  "displayName": "Check Account Status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.accountStatus = S",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Suspended Accounts",
+    "name": "34fd41f4-d408-4fef-aab8-063d253b0f72"
+  }, {
+    "condition": "$session.params.api.billingProfile.balanceDetails.pastDueBalance = 0 OR $session.params.api.billingProfile.balanceDetails.pastDueBalance = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Balance",
+    "name": "eb5bfdab-c54f-4678-9a0b-ad08d218685f"
+  }, {
+    "condition": "$session.params.api.billingProfile.balanceDetails.pastDueBalance != 0 AND $session.params.api.billingProfile.balanceDetails.pastDueBalance != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Balance with PastDue",
+    "name": "a3d01497-68be-46b3-930e-4e70b8427960"
+  } ]
+}

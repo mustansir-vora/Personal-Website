@@ -1,0 +1,38 @@
+{
+  "name": "4a4b46e8-33fb-47b0-8b0e-ef1778b6c8c4",
+  "displayName": "Check currentBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "completedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"passive-balanceDetails\")"
+    }, {
+      "parameter": "$session.params.selfServiceCompleted",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.balanceDetails.currentBalance \u003c 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play CreditBalance",
+    "name": "74d09465-a090-48ec-9351-01a1f9c03adf"
+  }, {
+    "condition": "$session.params.api.billingProfile.balanceDetails.currentBalance \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play CurrentBalance",
+    "name": "4f07c9cd-11b1-44db-ad0d-20caec7c42bf"
+  }, {
+    "condition": "$session.params.api.billingProfile.balanceDetails.currentBalance = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play NoBalanceDue",
+    "name": "ea3d20db-1597-4f88-918e-6bacd014100c"
+  } ]
+}

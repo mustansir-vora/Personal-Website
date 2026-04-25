@@ -1,0 +1,68 @@
+{
+  "name": "bef05d4e-e4cc-494c-a866-a0fc2f7b4290",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Is there an antenna fixed to the outside of your business location?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "what is that"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If there's an antenna fixed to the outside of your business location, say yes or press 1. If not, say no or press 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Do you access the internet using a SIM or a mobile phone?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "what was it "
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If you access the internet using a SIM or your mobile phone, say yes or press 1. Otherwise, say no or press 2\n"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your internet equipment"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "numberOfInternet": "0",
+      "selfServiceAttempted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11401-Antenna-Bus-No Matchand No input",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 416,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

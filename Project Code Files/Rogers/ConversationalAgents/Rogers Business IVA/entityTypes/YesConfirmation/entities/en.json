@@ -1,0 +1,8 @@
+{
+  "entities": [ {
+    "value": "Yes",
+    "synonyms": [ "That's right", "Yeah", "Yes" ],
+    "languageCode": "en",
+    "dtmfPattern": "1"
+  } ]
+}

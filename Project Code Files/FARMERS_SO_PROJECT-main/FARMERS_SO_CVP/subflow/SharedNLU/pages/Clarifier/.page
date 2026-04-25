@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@193639727:1711120089807" name="Clarifier" version="6.0.1">
+<element height="55" id="Element@640342907:1711120089807" name="Clarifier" type="Page Entry" width="109" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1096537071:1711120510535"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1096537071:1711120510535" name="SharedNLU_Clarifier_Call" type="Subflow Call" width="239" x="258" y="129">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1711109924275">
+<config>
+<argument_data>
+<data name="MenuID">NLCL_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1622334033:1711121339755"/>
+</exit_states>
+</element>
+<element height="55" id="Element@273166482:1711120556322" name="CheckClarifierAppTagDetails_BC" type="Decision" width="298" x="233" y="229">
+<exit_states>
+<exit_state name="ER" target="Element@1549877187:1711120593346"/>
+<exit_state name="done" target="Element@711322842:1711120593346"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1549877187:1711120593346" name="Transfer" type="Page Connector" width="111" x="564" y="331">
+<page_connector target="Element@319010261:1711111797545">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1238739669:1711120593346" name="CheckClarifierNextAction_BC" type="Decision" width="271" x="619" y="437">
+<exit_states>
+<exit_state name="ER" target="Element@1549877187:1711120593346">
+<bendpoint>
+<dim1 x="22" y="-50"/>
+<dim2 x="33" y="51"/>
+</bendpoint>
+</exit_state>
+<exit_state name="N" target="Element@1549877187:1711120593346">
+<bendpoint>
+<dim1 x="-47" y="-47"/>
+<dim2 x="-36" y="54"/>
+</bendpoint>
+</exit_state>
+<exit_state name="done" target="Element@2110481126:1711728825194"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1308783821:1711120593346" name="Clarifier" type="Page Connector" width="109" x="300" y="510">
+<page_connector target="Element@640342907:1711120089807">Clarifier<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@533722162:1711120593346" name="CheckClarifierIsClarifierReq_BC" type="Decision" width="286" x="238" y="430">
+<exit_states>
+<exit_state name="ER" target="Element@1549877187:1711120593346"/>
+<exit_state name="AVL" target="Element@1308783821:1711120593346"/>
+<exit_state name="NA" target="Element@1238739669:1711120593346"/>
+</exit_states>
+</element>
+<element height="55" id="Element@711322842:1711120593346" name="CheckClarifierIsImmediateTxf_BC" type="Decision" width="303" x="234" y="334">
+<exit_states>
+<exit_state name="ER" target="Element@1549877187:1711120593346">
+<bendpoint>
+<dim1 x="166" y="28"/>
+<dim2 x="-100" y="29"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Y" target="Element@1549877187:1711120593346">
+<bendpoint>
+<dim1 x="165" y="-40"/>
+<dim2 x="-101" y="-39"/>
+</bendpoint>
+</exit_state>
+<exit_state name="N" target="Element@533722162:1711120593346"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1622334033:1711121339755" name="SharedNLU_Clarifier_BC" type="Decision" width="232" x="502" y="128">
+<exit_states>
+<exit_state name="NOINPUT" target="Element@1113556524:1711121360296"/>
+<exit_state name="NOMATCH" target="Element@1549877187:1711120593346"/>
+<exit_state name="done" target="Element@273166482:1711120556322"/>
+<exit_state name="NLU_FAILURE" target="Element@1238739669:1711120593346">
+<bendpoint>
+<dim1 x="237" y="142"/>
+<dim2 x="183" y="-162"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1549877187:1711120593346">
+<bendpoint>
+<dim1 x="-39" y="100"/>
+<dim2 x="-57" y="-103"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1113556524:1711121360296" name="DISC" type="Page Connector" width="89" x="765" y="126">
+<page_connector target="Element@437769865:1711111865840">DISC<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@2110481126:1711728825194" name="NextAction" type="Page Connector" width="137" x="672" y="512">
+<page_connector target="Element@1668084430:1711195676780">NextAction<config/>
+</page_connector>
+</element>
+</page>

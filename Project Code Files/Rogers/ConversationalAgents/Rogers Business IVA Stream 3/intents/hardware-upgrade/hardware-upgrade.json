@@ -1,0 +1,7 @@
+{
+  "name": "0016f257-42b6-4745-956a-b0f8394595ec",
+  "displayName": "hardware-upgrade",
+  "priority": 500000,
+  "description": "Requests to transfer mobile network generations",
+  "numTrainingPhrases": 50
+}

@@ -1,0 +1,133 @@
+{
+  "name": "e2ace5c9-70e2-4faa-bc77-fdd45879dc9c",
+  "displayName": "SMS Phone Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "StdErrorCount",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.smsForcePromptForPhoneInd = true AND $session.params.numberOfWireless != 1 AND $session.params.customerIdentified != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "passiveSms",
+        "value": false
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Reusable Phone Number",
+    "name": "4d2001b1-79f4-4df9-b7d4-86076eb9bdd4"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd = true AND $session.params.numberOfWireless != 1 AND $session.params.customerIdentified = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "passiveSMS",
+        "value": false
+      } ]
+    },
+    "targetPage": "Reusable Phone Number",
+    "name": "14008961-29fc-4cc8-9fab-f543c1917db1"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd = true AND $session.params.numberOfWireless = 1 AND $session.params.customerIdentified = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "passiveSms",
+        "value": false
+      }, {
+        "parameter": "stdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "SMS Confirm Phone Number",
+    "name": "962629bf-e6cb-4daf-9d1f-2e719fda7178"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd != true AND $session.params.customerIdentified != true AND $session.params.smsAllowPromptForPhoneInd = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "passiveSms",
+        "value": false
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Reusable Phone Number",
+    "name": "0886cb77-5e25-4a2d-bbb0-84c9b3a98fe4"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd != true AND $session.params.customerIdentified != true AND $session.params.smsAllowPromptForPhoneInd != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsStatus",
+        "value": "bypass"
+      } ]
+    },
+    "targetPage": "SMS Wrap Up",
+    "name": "b1bb0d92-2b8e-49e6-afe4-e4c95c446ca6"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd != true AND $session.params.numberOfWireless = 1 AND $session.params.customerIdentified = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Send SMS",
+    "name": "1506118b-47a1-4d45-a7f9-12830b62aee6"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd != true AND $session.params.numberOfWireless = 0 AND $session.params.customerIdentified = true AND $session.params.smsAllowPromptForPhoneInd = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "passiveSms",
+        "value": false
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Reusable Phone Number",
+    "name": "fc1fcc62-d45d-4721-8165-131103950631"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd != true AND $session.params.numberOfWireless = 0 AND $session.params.customerIdentified = true AND $session.params.smsAllowPromptForPhoneInd != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsStatus",
+        "value": "bypass"
+      } ]
+    },
+    "targetPage": "SMS Wrap Up",
+    "name": "68d545cc-4661-4a07-a79a-3959f09487a7"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd != true AND $session.params.numberOfWireless \u003e 1 AND $session.params.customerIdentified = true AND $session.params.smsAllowPromptForPhoneInd != true AND $session.params.subscriptionMatch != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsStatus",
+        "value": "bypass"
+      } ]
+    },
+    "targetPage": "SMS Wrap Up",
+    "name": "7f27db05-7151-4998-8350-2c33a6bbddd7"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd != true AND $session.params.numberOfWireless \u003e 1 AND $session.params.customerIdentified = true AND $session.params.smsAllowPromptForPhoneInd = true AND $session.params.subscriptionMatch != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "passiveSms",
+        "value": false
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Reusable Phone Number",
+    "name": "2537becd-354c-46b0-8e5a-2ad8fd607423"
+  }, {
+    "condition": "$session.params.smsForcePromptForPhoneInd != true AND $session.params.numberOfWireless \u003e 1 AND $session.params.customerIdentified = true AND $session.params.subscriptionMatch = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Send SMS",
+    "name": "8d948ba0-f7e5-45ef-ad19-e41ac51db8bf"
+  } ]
+}

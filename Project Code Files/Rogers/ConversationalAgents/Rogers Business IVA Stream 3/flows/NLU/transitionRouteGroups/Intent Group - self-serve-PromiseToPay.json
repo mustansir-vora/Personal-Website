@@ -1,0 +1,44 @@
+{
+  "name": "633ab1e2-9ec2-4b83-9529-a5cb58cf5965",
+  "displayName": "Intent Group - self-serve-PromiseToPay",
+  "transitionRoutes": [ {
+    "intent": "promise-to-pay",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "promise-to-pay"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "e880d012-5b0b-4f97-af40-cfa79422411c"
+  }, {
+    "intent": "report-a-payment",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "report-a-payment"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "9d580976-5f2b-4d05-9a82-49d588565c7d"
+  }, {
+    "intent": "payment-arrangement",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "payment-arrangement"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "c2276850-b717-4ead-b1ba-116de14d48d3"
+  } ]
+}

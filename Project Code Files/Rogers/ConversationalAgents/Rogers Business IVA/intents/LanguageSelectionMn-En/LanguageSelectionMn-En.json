@@ -1,0 +1,8 @@
+{
+  "name": "6b11819a-8b18-4222-bdfc-a05f2967ec9a",
+  "displayName": "LanguageSelectionMn-En",
+  "priority": 500000,
+  "description": "This Intent will Trigger when user says English language",
+  "numTrainingPhrases": 24,
+  "dtmfPattern": "1"
+}

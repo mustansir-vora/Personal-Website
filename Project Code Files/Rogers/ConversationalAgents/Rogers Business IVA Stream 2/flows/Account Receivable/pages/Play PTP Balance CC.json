@@ -1,0 +1,28 @@
+{
+  "name": "12be22c6-4de6-48c2-9021-c9789ae7da36",
+  "displayName": "Play PTP Balance CC",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "There's an existing payment arrangement on file for $$session.params.api.billingProfile.ptpAmount to be paid on \u003cssml:say-as type=\"date:md\"\u003e $session.params.api.billingProfile.ptpPaymentDate \u003c/ssml:say-as\u003e by credit card." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Il existe une entente de paiement au dossier pour un montant de $session.params.api.billingProfile.ptpAmount à payer le $session.params.api.billingProfile.ptpPaymentDate par carte de crédit." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Make Payment",
+    "name": "a7a0f62e-0dd3-404b-9fe9-e74820e09793"
+  } ]
+}

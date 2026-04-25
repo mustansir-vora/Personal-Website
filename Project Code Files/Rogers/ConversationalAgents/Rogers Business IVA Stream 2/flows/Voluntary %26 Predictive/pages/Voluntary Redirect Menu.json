@@ -1,0 +1,215 @@
+{
+  "name": "a85b58bb-bd9b-4ad5-9e2c-9598ff263f7b",
+  "displayName": "Voluntary Redirect Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Are you calling to inquire or purchase business product or service?" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Appelez-vous pour vous renseigner sur ou acheter un produit ou service pour entreprises ?" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i didn't get that. Are you calling to inquire or purchase business product or service?  Say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n’ai pas compris. Appelez-vous pour vous renseigner sur ou acheter un produit ou service pour entreprises ? Dites « oui » ou « non »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that. Are you calling to inquire or purchase business product or service? Say yes or no" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je ne vous ai pas entendu. Appelez-vous pour vous renseigner sur ou acheter un produit ou service pour entreprises ? Dites « oui » ou « non »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "If you are calling to inquire or purchase business product or service?, say yes or press 1. Otherwise, say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Si vous appelez pour vous renseigner sur ou acheter un produit ou service pour entreprises, dites « oui » ou appuyez sur 1. Sinon, dites « non » ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "If you are calling to inquire or purchase business product or service? say yes or press 1. Otherwise, say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Si vous appelez pour vous renseigner sur ou acheter un produit ou service pour entreprises, dites « oui » ou appuyez sur 1. Sinon, dites « non » ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "YesOrNoMn-Yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "savedIntent",
+        "value": "sales-from-consumer"
+      } ]
+    },
+    "targetPage": "ExitType",
+    "name": "441d7eee-f45b-4464-860e-3fde9aab259d"
+  }, {
+    "intent": "YesOrNoMn-No",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preRouteOverride",
+        "value": "Consumer"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "businessRules"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "ccf8ed13-afca-41a1-a061-eb97849f172d"
+  }, {
+    "intent": "VoulntaryMn-Negative",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "3ed583ea-ddca-422c-bda1-3aaf0f3d89c4"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "d3b98026-5a34-47ae-8b41-68b0ec303a31"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "c0ff137c-f373-4ff4-aadc-3b71f4eff40f"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "bc6d7774-f204-4386-a6c3-285d8d9cc509"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preRouteOverride ",
+        "value": "Consumer"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "businessRules"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "595a807d-4014-495f-8e86-f5e9f1b85161"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "d36c0b28-0c1d-47cf-8583-4bf96a3a3c4b"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "5cd5a3ff-e404-43c2-b74b-5edfebd6c2b4"
+  } ]
+}

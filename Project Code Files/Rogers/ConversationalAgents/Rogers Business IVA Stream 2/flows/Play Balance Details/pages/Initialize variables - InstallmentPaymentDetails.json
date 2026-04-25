@@ -1,0 +1,24 @@
+{
+  "name": "38dbb79f-2d0f-4052-ae48-eab12c5e9a46",
+  "displayName": "Initialize variables - InstallmentPaymentDetails",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "$sys.func.APPEND($session.params.attemptedSSName, \"passive-ippDetails\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check ippStatus ",
+    "name": "3fe87129-09bf-43ed-a4ff-e976c8155047"
+  } ]
+}

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1888088515:1732865896457" name="page1" version="6.0.1">
+<element height="50" id="Element@31:1732865896457" name="FNWL_IDandAuth_with_PolicyNumber" type="Subflow Start" width="298" x="305" y="16">
+<exit_states>
+<exit_state name="next" target="Element@888599211:1732871988988"/>
+</exit_states>
+</element>
+<element height="50" id="Element@888599211:1732871988988" name="FNWL_MN_011_Call" type="Subflow Call" width="180" x="365" y="121">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1754660377626">
+<config>
+<argument_data>
+<data name="MenuID">FNWL_MN_011</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1051173697:1732872008709"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1051173697:1732872008709" name="FNWL_MN_011_VALUE" type="Decision" width="198" x="361" y="211">
+<exit_states>
+<exit_state name="SU" target="Element@1621688887:1732872463378"/>
+<exit_state name="ER" target="Element@1741154234:1732873477955"/>
+<exit_state name="NOMATCH" target="Element@1741154234:1732873477955">
+<bendpoint>
+<dim1 x="-119" y="97"/>
+<dim2 x="-120" y="-26"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1741154234:1732873477955">
+<bendpoint>
+<dim1 x="167" y="55"/>
+<dim2 x="167" y="-67"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Dont have it" target="Element@1741154234:1732873477955">
+<bendpoint>
+<dim1 x="122" y="94"/>
+<dim2 x="121" y="-29"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@616989291:1736177391450">
+<bendpoint>
+<dim1 x="-253" y="26"/>
+<dim2 x="-1" y="-53"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1621688887:1732872463378" name="DOB Matched" type="Decision" width="161" x="626" y="210">
+<exit_states>
+<exit_state name="YES" target="Element@1428388815:1732872600873"/>
+<exit_state name="NO" target="Element@1741154234:1732873477955">
+<bendpoint>
+<dim1 x="1" y="123"/>
+<dim2 x="250" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1428388815:1732872600873" name="Identified via ANI or PCN" type="Decision" width="216" x="888" y="209">
+<exit_states>
+<exit_state name="ANI" target="Element@2142689366:1735291161413"/>
+<exit_state name="Policy" target="Element@1741154234:1732873477955">
+<bendpoint>
+<dim1 x="-177" y="50"/>
+<dim2 x="340" y="-75"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-218" y="124"/>
+<dim2 x="299" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@265937362:1732873226333" name="FNWL_Customer_Policy_Disambiguation" type="Subflow Call" width="314" x="840" y="329">
+<subflow_call subflow_name="FNWL_Customer_Policy_Disambiguation" target="Element@31:1733818273107">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1846070238:1732881935749">
+<bendpoint>
+<dim1 x="444" y="-6"/>
+<dim2 x="-2" y="-424"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1741154234:1732873477955" name="FNWL_MN_012_Call" type="Subflow Call" width="180" x="370" y="333">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1754660385506">
+<config>
+<argument_data>
+<data name="MenuID">FNWL_MN_012</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@389644261:1732873898417"/>
+</exit_states>
+</element>
+<element height="50" id="Element@389644261:1732873898417" name="FNWL_MN_012_VALUE" type="Decision" width="198" x="359" y="454">
+<exit_states>
+<exit_state name="SU" target="Element@205988022:1732877782401"/>
+<exit_state name="ER" target="Element@959935689:1732881381855">
+<bendpoint>
+<dim1 x="-2" y="45"/>
+<dim2 x="-1" y="-110"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Dont have it" target="Element@959935689:1732881381855"/>
+<exit_state name="NOMATCH" target="Element@959935689:1732881381855">
+<bendpoint>
+<dim1 x="-101" y="92"/>
+<dim2 x="-100" y="-63"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@959935689:1732881381855">
+<bendpoint>
+<dim1 x="87" y="89"/>
+<dim2 x="88" y="-66"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@1366867324:1736229536578"/>
+</exit_states>
+</element>
+<element height="50" id="Element@205988022:1732877782401" name="ZIP Matched" type="Decision" width="147" x="635" y="454">
+<exit_states>
+<exit_state name="YES" target="Element@1966066081:1732877852612"/>
+<exit_state name="NO" target="Element@959935689:1732881381855"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1966066081:1732877852612" name="Identified via ANI or PCN 2" type="Decision" width="228" x="852" y="453">
+<exit_states>
+<exit_state name="ANI" target="Element@1987397327:1735291225455"/>
+<exit_state name="Policy" target="Element@1480991775:1732880707687"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1480991775:1732880707687" name="DOB_Matched_2" type="Decision" width="188" x="1164" y="450">
+<exit_states>
+<exit_state name="YES" target="Element@919143206:1736683709394"/>
+<exit_state name="NO" target="Element@1745322241:1734070278678">
+<bendpoint>
+<dim1 x="5" y="161"/>
+<dim2 x="257" y="-3"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@959935689:1732881381855" name="DOB_Matched_3" type="Decision" width="199" x="358" y="609">
+<exit_states>
+<exit_state name="YES" target="Element@1745322241:1734070278678"/>
+<exit_state name="NO" target="Element@163406106:1732881474952"/>
+</exit_states>
+</element>
+<element height="50" id="Element@163406106:1732881474952" name="Identified via ANI or PCN 3" type="Decision" width="228" x="343" y="752">
+<exit_states>
+<exit_state name="ANI" target="Element@1745322241:1734070278678"/>
+<exit_state name="Policy" target="Element@726898687:1736741992173"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1769251575:1732881595364" name="FNWL_Shared_Transfer" type="Subflow Call" width="199" x="945" y="748">
+<subflow_call subflow_name="FNWL_Transfer" target="Element@31:1734070155400">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1846070238:1732881935749"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1846070238:1732881935749" name="Subflow Return_01" type="Subflow Return" width="173" x="1357" y="747"/>
+<element height="50" id="Element@1745322241:1734070278678" name="FNWL_IDandAuth_with_PolicyNumber_Contd" type="Page Connector" width="344" x="834" y="614">
+<page_connector target="Element@1364075386:1734070321365">FNWL_IDandAuth_with_PolicyNumber_Contd<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@686489260:1734071669991" name="FNWL_Customer_Policy_Disambiguation_Entry" type="Page Entry" width="353" x="1454" y="320">
+<exit_states>
+<exit_state name="next" target="Element@265937362:1732873226333"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2142689366:1735291161413" name="Auth_Flag_1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="129" x="1184" y="208">
+<exit_states>
+<exit_state name="done" target="Element@265937362:1732873226333">
+<bendpoint>
+<dim1 x="2" y="115"/>
+<dim2 x="253" y="-4"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1987397327:1735291225455" name="Auth_Flag_2" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="129" x="634" y="385">
+<exit_states>
+<exit_state name="done" target="Element@265937362:1732873226333">
+<bendpoint>
+<dim1 x="301" y="-2"/>
+<dim2 x="2" y="56"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@549152185:1736177391450" name="Count" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="116" x="149" y="401">
+<exit_states>
+<exit_state name="done" target="Element@1741154234:1732873477955"/>
+</exit_states>
+</element>
+<element height="55" id="Element@616989291:1736177391450" name="Global_Rep_Handling" type="Decision" width="214" x="101" y="288">
+<exit_states>
+<exit_state name="CONT" target="Element@549152185:1736177391450"/>
+<exit_state name="TR" target="Element@231170388:1736177439391"/>
+</exit_states>
+</element>
+<element height="50" id="Element@231170388:1736177439391" name="FNWL_Transfer_Entry" type="Page Connector" width="186" x="-124" y="292">
+<page_connector target="Element@480049240:1734072121318">FNWL_Transfer_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1755956151:1736229536578" name="Count_2" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="149" x="79" y="608">
+<exit_states>
+<exit_state name="done" target="Element@959935689:1732881381855"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1366867324:1736229536578" name="Global_Rep_Handling_2" type="Decision" width="253" x="27" y="518">
+<exit_states>
+<exit_state name="CONT" target="Element@1755956151:1736229536578"/>
+<exit_state name="TR" target="Element@2121548644:1736229580233"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2121548644:1736229580233" name="FNWL_Transfer_Entry" type="Page Connector" width="186" x="-208" y="519">
+<page_connector target="Element@480049240:1734072121318">FNWL_Transfer_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@919143206:1736683709394" name="Auth_Flag_3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="129" x="1187" y="373">
+<exit_states>
+<exit_state name="done" target="Element@265937362:1732873226333">
+<bendpoint>
+<dim1 x="0" y="-50"/>
+<dim2 x="254" y="-4"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@616854883:1736741992173" name="setMSP_AuthFailure_1" type="Decision" width="252" x="336" y="959">
+<exit_states>
+<exit_state name="SU" target="Element@2021664498:1749638524987">
+<bendpoint>
+<dim1 x="585" y="0"/>
+<dim2 x="1" y="106"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@2021664498:1749638524987">
+<bendpoint>
+<dim1 x="404" y="0"/>
+<dim2 x="-180" y="106"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="583" y="0"/>
+<dim2 x="-1" y="106"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@726898687:1736741992173" name="ZIP Matched_2" type="Decision" width="147" x="388" y="853">
+<exit_states>
+<exit_state name="Zip Nomatch" target="Element@616854883:1736741992173"/>
+<exit_state name="Transfer" target="Element@2021664498:1749638524987"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2021664498:1749638524987" name="Set_RLUS_Flag_2" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="205" x="944" y="851">
+<exit_states>
+<exit_state name="done" target="Element@1769251575:1732881595364"/>
+</exit_states>
+</element>
+</page>

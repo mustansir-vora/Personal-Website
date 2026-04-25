@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1240217210:1713184808791" name="CHECK_STATE_GROUP" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="FSLS_ADM_005_Value" default_exit_state="othr">
+        <exit_state name="AHOGNR" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STATEGROUP_STATUS" />
+                </data>
+                <constant_string value="AHOGNR" />
+            </string>
+        </exit_state>
+        <exit_state name="AHONOBIND" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STATEGROUP_STATUS" />
+                </data>
+                <constant_string value="AHONOBIND" />
+            </string>
+        </exit_state>
+        <exit_state name="AHNOPRODUCT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STATEGROUP_STATUS" />
+                </data>
+                <constant_string value="AHNOPRODUCT" />
+            </string>
+        </exit_state>
+        <exit_state name="HI" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STATEGROUP_STATUS" />
+                </data>
+                <constant_string value="HI" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,64 @@
+{
+  "name": "c43411b7-18f4-4064-bb6c-82722c8c7150",
+  "displayName": "NLU Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.mainMenuRequest = true AND $session.params.mainMenuRequestCounter \u003c= 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "5ddffd57-0b84-4b43-aed6-3ed92b366c2f"
+  }, {
+    "condition": "$session.params.mainMenuRequest = true AND $session.params.mainMenuRequestCounter \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fallbackReason",
+        "value": "NLUMainMenu"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "FallBack Router",
+    "name": "5f0df8c4-1380-451b-8394-9c6e97336ee3"
+  }, {
+    "condition": "$session.params.returnToNLU != null AND $session.params.returnToNLU = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Force Goodbye",
+    "name": "2ce05429-ac30-452d-836e-df33517bb03d"
+  }, {
+    "condition": "$session.params.GlobalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fallbackReason",
+        "value": "GlobalAgentRequest"
+      }, {
+        "parameter": "GlobalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "FallBack Router",
+    "name": "0c8a8f0c-7acf-4c28-b65c-01810ca89c08"
+  }, {
+    "condition": "$session.params.savedIntent != null AND $session.params.savedIntent != \"\" AND $session.params.savedIntent != \"NA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "skipConfirmation",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check Disconfirmed Intent Selection",
+    "name": "1e4e5c40-7975-43ff-8d68-34f48d1e4289"
+  } ]
+}

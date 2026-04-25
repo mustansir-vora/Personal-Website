@@ -1,0 +1,421 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I’d like to hear about your "
+    }, {
+      "text": "Rogers advertised offers"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you go over the offers in your "
+    }, {
+      "text": "Boxing Week event"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What promotions are included in your "
+    }, {
+      "text": "Boxing Week"
+    }, {
+      "text": " sale?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling to check your "
+    }, {
+      "text": "Boxing Day"
+    }, {
+      "text": " offers."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have any "
+    }, {
+      "text": "Boxing Day deals"
+    }, {
+      "text": " on new phones?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I saw your "
+    }, {
+      "text": "Wrapped in Red"
+    }, {
+      "text": " promotion and want more details."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m interested in the "
+    }, {
+      "text": "HoliDeals"
+    }, {
+      "text": " you’re advertising."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me more about your "
+    }, {
+      "text": "Holiday events"
+    }, {
+      "text": " promotions?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What kind of "
+    }, {
+      "text": "Holiday deals"
+    }, {
+      "text": " are you offering "
+    }, {
+      "text": "right"
+    }, {
+      "text": " now?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know what promotions are included in your "
+    }, {
+      "text": "Cyber Week event"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Are there any specials for "
+    }, {
+      "text": "Cyber Week"
+    }, {
+      "text": " on phones or plans?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling to ask about your "
+    }, {
+      "text": "Cyber Monday event"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have a "
+    }, {
+      "text": "Cyber Monday offer"
+    }, {
+      "text": " on any devices?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What "
+    }, {
+      "text": "Cyber Monday deals"
+    }, {
+      "text": " are available "
+    }, {
+      "text": "today"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Are you running any "
+    }, {
+      "text": "Black Friday event"
+    }, {
+      "text": " promotions "
+    }, {
+      "text": "this year"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What "
+    }, {
+      "text": "Black Friday offers"
+    }, {
+      "text": " do you have on phones "
+    }, {
+      "text": "right"
+    }, {
+      "text": " now?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to know about your "
+    }, {
+      "text": "Black Friday deals"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m interested in your Rogers $"
+    }, {
+      "text": "34 60"
+    }, {
+      "text": "GB plan and want to know what deals you can offer me."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I noticed the price went down for my new phone, so I need help adjusting my offer."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was offered a discount on my hardware upgrade, and I’m calling back to get it applied."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have any new offers available for existing customers?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have any new deals on devices or plans?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m looking for a hardware promotion on a new phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have any device promotions "
+    }, {
+      "text": "today"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What type of phone deals do you currently have for me?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What deals do you have "
+    }, {
+      "text": "today"
+    }, {
+      "text": " on phones and plans?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m interested in any ongoing offers that could upgrade my plan or give additional perks."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me understand the promotional discounts currently running for new activations?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received a message offering me a preferred customer deal. How do I claim it?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know if there are promotional periods where I can get extra data at "
+    }, {
+      "text": "no"
+    }, {
+      "text": " extra cost."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got a notification about a free bonus with my plan. Can you confirm eligibility?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m exploring better deals or promotions that could reduce my monthly cost."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to know all the current limited-time offers available for my account type."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received an online offer for my phone and want to see if it can be applied immediately."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check if there’s a promotional plan that gives more data for the same price."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m looking for any money-saving offers or discounts I qualify for with my current plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received a text about a "
+    }, {
+      "text": "$20"
+    }, {
+      "text": " promotion. Can you add it to my billing statement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you review my account for any ongoing deals I may have missed?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a promotional code for my account and need guidance on how to use it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was offered a plan upgrade with additional data at a promotional price. How can I activate it?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I noticed Virgin/Telus is offering a better deal. Can you match or provide something similar?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me apply a reward or promotional bonus that was mentioned in a recent message?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received a gift card offer for signing up. How do I redeem it?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to compare my current plan with any competitive promotions available "
+    }, {
+      "text": "today"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a bring-your-own-phone deal I want to confirm and possibly upgrade."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you check if there are any employee discounts or loyalty promotions applicable to my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I saw a promotional rate advertised and I want to know if it’s available for my line."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was informed about a limited-time deal and I’d like to understand how to activate it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I noticed a special offer online for a data boost. Can you apply it to my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me if there are any exclusive offers available for my plan "
+    }, {
+      "text": "right"
+    }, {
+      "text": " now?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received a text about a new promotion on my account and I need details."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

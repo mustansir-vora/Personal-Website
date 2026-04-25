@@ -1,0 +1,34 @@
+{
+  "name": "a8b49861-2a31-42a2-9ed7-6d5d5590b512",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_service_category_mix_length",
+      "inputActionParameters": {
+        "service": "Internet,TV"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "If the serviceCategory contains more than one value",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Internet, Mobile"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "If the serviceCategory contains more than one value",
+    "actionParameters": {
+      "enableBOMM": "true",
+      "serviceCategoryMixLength": "2"
+    }
+  },
+  "displayName": "Bomm Enabled",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 143,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

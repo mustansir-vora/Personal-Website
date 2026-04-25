@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2100425881:1707391139667" name="MainMenuResponses" version="6.0.1">
+<element height="55" id="Element@1561187008:1707391139667" name="MMResponses" type="Page Entry" width="223" x="323" y="15">
+<exit_states>
+<exit_state name="next" target="Element@624705542:1707391268472"/>
+</exit_states>
+</element>
+<element height="55" id="Element@624705542:1707391268472" name="SMM_MN_001_VALUE" type="Decision" width="223" x="333" y="221">
+<exit_states>
+<exit_state name="Agent Information" target="Element@575028206:1712283102156"/>
+<exit_state name="Claims" target="Element@1877611381:1710688898842">
+<bendpoint>
+<dim1 x="-191" y="-48"/>
+<dim2 x="211" y="18"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@495353166:1730258129610"/>
+<exit_state name="Website Help" target="Element@1602184350:1707392281611">
+<bendpoint>
+<dim1 x="170" y="-11"/>
+<dim2 x="-135" y="-38"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Cancel Policy" target="Element@1602184350:1707392281611">
+<bendpoint>
+<dim1 x="167" y="-40"/>
+<dim2 x="-138" y="-67"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Policy Questions" target="Element@292416118:1750771097777"/>
+<exit_state name="Sales or Quotes" target="Element@1767740632:1707393523631"/>
+<exit_state name="ID Cards" target="Element@678389251:1707393448972"/>
+<exit_state name="Billing and Payments" target="Element@1050212784:1707393299507">
+<bendpoint>
+<dim1 x="-164" y="-3"/>
+<dim2 x="173" y="7"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@239526285:1731442411038"/>
+<exit_state name="NOMATCH" target="Element@1877611381:1710688898842">
+<bendpoint>
+<dim1 x="-133" y="-24"/>
+<dim2 x="121" y="84"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@754835774:1747940213464">
+<bendpoint>
+<dim1 x="-103" y="-87"/>
+<dim2 x="151" y="21"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1602184350:1707392281611" name="Call_SharedIDAuth" type="Subflow Call" width="196" x="697" y="242">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1707393752337">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1113958591:1753253435704"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1639859270:1707392526770" name="Call_SharedTrans" type="Subflow Call" width="184" x="1230" y="189">
+<subflow_call subflow_name="Transfer" target="Element@31:1708405851750">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@992518190:1707392567865"/>
+</exit_states>
+</element>
+<element height="55" id="Element@992518190:1707392567865" name="Subflow Return_03" type="Subflow Return" width="198" x="1449" y="183"/>
+<element height="55" id="Element@413899217:1707392653392" name="Caller Rep" type="Decision" width="172" x="915" y="364">
+<exit_states>
+<exit_state name="other" target="Element@1911941604:1712560073418"/>
+<exit_state name="TWO" target="Element@1759097528:1719582672245"/>
+</exit_states>
+</element>
+<element height="55" id="Element@332084730:1707392714088" name="Count" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="116" x="691" y="372">
+<exit_states>
+<exit_state name="done" target="Element@413899217:1707392653392"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1028182887:1707392990326" name="SMM_MN_003_VALUE" type="Decision" width="223" x="776" y="923">
+<exit_states>
+<exit_state name="NOINPUT" target="Element@1249732136:1731442438766"/>
+<exit_state name="NOMATCH" target="Element@1249430000:1710689132893">
+<bendpoint>
+<dim1 x="168" y="-28"/>
+<dim2 x="-139" y="-7"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1270847416:1710689147354"/>
+<exit_state name="YES" target="Element@1378941641:1711700365553">
+<bendpoint>
+<dim1 x="-172" y="-6"/>
+<dim2 x="86" y="15"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1378941641:1711700365553">
+<bendpoint>
+<dim1 x="-147" y="-51"/>
+<dim2 x="111" y="-30"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@1249430000:1710689132893">
+<bendpoint>
+<dim1 x="175" y="27"/>
+<dim2 x="-132" y="48"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@849662047:1707393041451" name="Subflow Return_04" type="Subflow Return" width="198" x="298" y="892"/>
+<element height="55" id="Element@1050212784:1707393299507" name="SharedD" type="Subflow Call" width="220" x="-60" y="247">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1707393385472">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1044620641:1713303839125"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1022796056:1707393302913" name="Call_SharedBillingPayemnt" type="Subflow Call" width="255" x="-183" y="445">
+<subflow_call subflow_name="SharedBillingPayments" target="Element@31:1711761174876">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1421286242:1712217397573"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2132408431:1707393428700" name="Subflow Return_06" type="Subflow Return" width="198" x="293" y="666"/>
+<element height="55" id="Element@678389251:1707393448972" name="Call_IDAuth" type="Subflow Call" width="141" x="288" y="366">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1712348700058">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@934833177:1707393460235"/>
+</exit_states>
+</element>
+<element height="55" id="Element@934833177:1707393460235" name="Call_IDCards" type="Subflow Call" width="148" x="283" y="473">
+<subflow_call subflow_name="SharedIDCardsFlow" target="Element@31:1707393479645">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@54303006:1712346768120"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1767740632:1707393523631" name="Call_SharedQuotes" type="Subflow Call" width="198" x="454" y="393">
+<subflow_call subflow_name="SharedQuotes" target="Element@31:1707393702963">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@634922380:1707393535690"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1913476718:1707393525269" name="Call_SharedIDAut" type="Subflow Call" width="186" x="650" y="48">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1707393672937">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1818070538:1707393643418"/>
+</exit_states>
+</element>
+<element height="55" id="Element@634922380:1707393535690" name="Retrun" type="Subflow Return" width="101" x="502" y="480"/>
+<element height="55" id="Element@1818070538:1707393643418" name="Call_SharedPlcyCH" type="Subflow Call" width="195" x="641" y="-29">
+<subflow_call subflow_name="SharedPolicyCHQA" target="Element@31:1708405804901">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1350476793:1710402153144"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1807807715:1709038877442" name="SMM_MN_003_Call" type="Subflow Call" width="200" x="938" y="805">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709038896558">
+<config>
+<argument_data>
+<data name="MenuID">SMM_MN_003</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1028182887:1707392990326"/>
+</exit_states>
+</element>
+<element height="55" id="Element@418643631:1710312020916" name="Warahead" type="Subflow Call" width="171" x="1262" y="626">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710312049781">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@833669677:1717660390420"/>
+</exit_states>
+</element>
+<element height="55" id="Element@83052590:1710401461488" name="MenuEntry" type="Page Connector" width="135" x="1428" y="294">
+<page_connector target="Element@1012108779:1710401440222">MenuEntry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@942081061:1710401510817" name="SMM_MN_002_Call" type="Subflow Call" width="200" x="915" y="599">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709038896558">
+<config>
+<argument_data>
+<data name="MenuID">SMM_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@225911160:1712561872222"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1350476793:1710402153144" name="Copy_of_Retrun" type="Subflow Return" width="174" x="892" y="-46"/>
+<element height="55" id="Element@1877611381:1710688898842" name="Transfer_0" type="Subflow Call" width="128" x="-22" y="155">
+<subflow_call subflow_name="Transfer" target="Element@31:1710688970596">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@503914776:1710688954443"/>
+</exit_states>
+</element>
+<element height="55" id="Element@503914776:1710688954443" name="Subflow Return_08" type="Subflow Return" width="198" x="53" y="15"/>
+<element height="55" id="Element@1249430000:1710689132893" name="Transfer_2" type="Subflow Call" width="128" x="1130" y="902">
+<subflow_call subflow_name="Transfer" target="Element@31:1710689198424">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1270847416:1710689147354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1270847416:1710689147354" name="Subflow Return_10" type="Subflow Return" width="198" x="947" y="1011"/>
+<element height="55" id="Element@1378941641:1711700365553" name="Call_02" type="Subflow Call" width="105" x="577" y="902">
+<subflow_call subflow_name="Transfer" target="Element@31:1711700394932">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@849662047:1707393041451"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1084572895:1711961732926" name="SetTransferKey" type="Action" width="164" x="1300" y="47">
+<exit_states>
+<exit_state name="done" target="Element@1639859270:1707392526770"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1081226247:1711962782998" name="NLU_Mapping" type="Page Entry" width="162" x="1042" y="16">
+<exit_states>
+<exit_state name="next" target="Element@1084572895:1711961732926"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1151488145:1711962996130" name="NLU_Mapping_Rep" type="Page Entry" width="199" x="652" y="561">
+<exit_states>
+<exit_state name="next" target="Element@1176999793:1711963005438"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1176999793:1711963005438" name="SetTransferKey_Rep" type="Action" width="201" x="656" y="487">
+<exit_states>
+<exit_state name="done" target="Element@1807807715:1709038877442"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1421286242:1712217397573" name="Is_Route_To" type="Decision" width="141" x="-7" y="581">
+<exit_states>
+<exit_state name="NEW_QUOTE" target="Element@772064538:1712303946464"/>
+<exit_state name="MAIN_MENU" target="Element@155576701:1712217573501"/>
+<exit_state name="OTHERS" target="Element@2132408431:1707393428700"/>
+<exit_state name="21ST_PAYMENT" target="Element@2132408431:1707393428700"/>
+</exit_states>
+</element>
+<element height="55" id="Element@155576701:1712217573501" name="Main_Menu_Entry" type="Page Connector" width="188" x="-222" y="674">
+<page_connector target="Element@180899143:1712217527591">Main_Menu_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@575028206:1712283102156" name="Call_SharedIDAuth_Agent" type="Subflow Call" width="251" x="688" y="307">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1707393752337">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1624327642:1712283141428"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1624327642:1712283141428" name="Call_AgentContact" type="Subflow Call" width="194" x="1008" y="273">
+<subflow_call subflow_name="SharedAgentContactInformation" target="Element@31:1712283184289">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@83052590:1710401461488"/>
+</exit_states>
+</element>
+<element height="55" id="Element@772064538:1712303946464" name="Shared_Quote" type="Subflow Call" width="162" x="228" y="550">
+<subflow_call subflow_name="SharedQuotes" target="Element@31:1712303989274">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2132408431:1707393428700"/>
+</exit_states>
+</element>
+<element height="55" id="Element@54303006:1712346768120" name="MainMenuOpted" type="Decision" width="185" x="408" y="589">
+<exit_states>
+<exit_state name="YES" target="Element@1196591758:1712346911903"/>
+<exit_state name="NO" target="Element@2132408431:1707393428700"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1196591758:1712346911903" name="MenuEntry" type="Page Connector" width="135" x="444" y="684">
+<page_connector target="Element@1012108779:1710401440222">MenuEntry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1911941604:1712560073418" name="SMM_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="157" x="1179" y="391">
+<exit_states>
+<exit_state name="done" target="Element@83052590:1710401461488"/>
+</exit_states>
+</element>
+<element height="55" id="Element@395642984:1712560573423" name="SMM_PA_002" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="157" x="932" y="518">
+<exit_states>
+<exit_state name="done" target="Element@942081061:1710401510817"/>
+</exit_states>
+</element>
+<element height="55" id="Element@225911160:1712561872222" name="SMM_MN_002_VALUE" type="Decision" width="223" x="912" y="676">
+<exit_states>
+<exit_state name="Representative" target="Element@1825365175:1730258169003"/>
+<exit_state name="Dont have it" target="Element@1807807715:1709038877442">
+<bendpoint>
+<dim1 x="-147" y="51"/>
+<dim2 x="-151" y="-62"/>
+</bendpoint>
+</exit_state>
+<exit_state name="VALID" target="Element@769641087:1715177582802"/>
+<exit_state name="NOINPUT" target="Element@755479291:1731530603176"/>
+<exit_state name="NOMATCH" target="Element@1807807715:1709038877442">
+<bendpoint>
+<dim1 x="-84" y="55"/>
+<dim2 x="-88" y="-58"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1807807715:1709038877442">
+<bendpoint>
+<dim1 x="61" y="59"/>
+<dim2 x="57" y="-54"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1163623370:1712562150076" name="SMM_HOST_001" type="Decision" width="182" x="1315" y="850">
+<exit_states>
+<exit_state name="SU" target="Element@1807807715:1709038877442"/>
+<exit_state name="ER" target="Element@1807807715:1709038877442"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1044620641:1713303839125" name="BU_Check" type="Decision" width="126" x="-26" y="335">
+<exit_states>
+<exit_state name="YES" target="Element@810835511:1713303964236"/>
+<exit_state name="NO" target="Element@1022796056:1707393302913"/>
+</exit_states>
+</element>
+<element height="55" id="Element@810835511:1713303964236" name="Call_BWBillingPayment" type="Subflow Call" width="227" x="119" y="407">
+<subflow_call subflow_name="SharedBillingPayments" target="Element@31:1711761174876">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1421286242:1712217397573"/>
+</exit_states>
+</element>
+<element height="55" id="Element@769641087:1715177582802" name="SET_API_NAME3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="1248" y="533">
+<exit_states>
+<exit_state name="done" target="Element@418643631:1710312020916"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1838742132:1717660390420" name="IVRProperty_isANIBypassed" type="Decision" width="269" x="1481" y="723">
+<exit_states>
+<exit_state name="YES" target="Element@1368422181:1717660541996"/>
+<exit_state name="NO" target="Element@1163623370:1712562150076"/>
+</exit_states>
+</element>
+<element height="55" id="Element@833669677:1717660390420" name="BU_Check_2" type="Decision" width="143" x="1305" y="722">
+<exit_states>
+<exit_state name="BW" target="Element@1838742132:1717660390420"/>
+<exit_state name="Others" target="Element@1163623370:1712562150076"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1875555142:1717660484652" name="SMM_MN_003_Entry" type="Page Entry" width="212" x="607" y="804">
+<exit_states>
+<exit_state name="next" target="Element@1807807715:1709038877442"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1368422181:1717660541996" name="SMM_MN_003_Entry" type="Page Connector" width="212" x="1512" y="631">
+<page_connector target="Element@1875555142:1717660484652">SMM_MN_003_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1759097528:1719582672245" name="Auth Check" type="Decision" width="140" x="933" y="443">
+<exit_states>
+<exit_state name="AUTHENTICATED" target="Element@230881155:1719582864822"/>
+<exit_state name="UNAUTHENTICATED" target="Element@395642984:1712560573423"/>
+</exit_states>
+</element>
+<element height="55" id="Element@230881155:1719582864822" name="SMM_MN_003_Entry" type="Page Connector" width="212" x="1251" y="452">
+<page_connector target="Element@1875555142:1717660484652">SMM_MN_003_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@495353166:1730258129610" name="Global_Rep_Handling" type="Decision" width="217" x="505" y="336">
+<exit_states>
+<exit_state name="CONT" target="Element@332084730:1707392714088"/>
+<exit_state name="TR" target="Element@1877611381:1710688898842"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1825365175:1730258169003" name="Copy_of_Global_Rep_Handling" type="Decision" width="290" x="630" y="704">
+<exit_states>
+<exit_state name="CONT" target="Element@1807807715:1709038877442"/>
+<exit_state name="TR" target="Element@1249430000:1710689132893"/>
+</exit_states>
+</element>
+<element height="55" id="Element@239526285:1731442411038" name="DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="93" x="522" y="90">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1249732136:1731442438766" name="DISC 1" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="142" x="691" y="1004">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@755479291:1731530603176" name="DISC 2" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="104" x="1182" y="760">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@754835774:1747940213464" name="CHECK_HT_TRANSFER" type="Decision" width="224" x="215" y="90">
+<exit_states>
+<exit_state name="YES" target="Element@1877611381:1710688898842">
+<bendpoint>
+<dim1 x="-73" y="67"/>
+<dim2 x="190" y="-13"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1877611381:1710688898842"/>
+</exit_states>
+</element>
+<element height="55" id="Element@292416118:1750771097777" name="S_SMM_SPCQ_FLAG" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="224" x="647" y="113">
+<exit_states>
+<exit_state name="done" target="Element@1913476718:1707393525269"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1113958591:1753253435704" name="CancelPolicyIntent_Check" type="Decision" width="187" x="966" y="214">
+<exit_states>
+<exit_state name="YES" target="Element@137181451:1753253435704"/>
+<exit_state name="NO" target="Element@1639859270:1707392526770"/>
+<exit_state name="ER" target="Element@137181451:1753253435704">
+<bendpoint>
+<dim1 x="-104" y="48"/>
+<dim2 x="-25" y="-54"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@137181451:1753253435704" name="CancelPolicyDisambiguation" type="Subflow Call" width="202" x="936" y="99">
+<subflow_call subflow_name="CancelPolicyDisambiguation" target="Element@31:1753162560782">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1639859270:1707392526770"/>
+</exit_states>
+</element>
+</page>

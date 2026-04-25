@@ -1,0 +1,59 @@
+{
+  "name": "fca5256c-e514-4d78-b1c3-1bb28a1f634d",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your home phone equipment. Please ensure you're calling from a different phone than the one you need help with"
+    }
+  }, {
+    "toolUse": {
+      "action": "check_wireless_home_phone",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": "true"
+      }
+    }
+  }, {
+    "toolUse": {
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Other",
+          "linkedAccountSystem": "532909633"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfPhone": "2"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "savedIntent": "WHP-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Other",
+        "linkedAccountSystem": "532909633"
+      }
+    }
+  },
+  "displayName": "customerIdentified true noOfphones greater",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 326,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

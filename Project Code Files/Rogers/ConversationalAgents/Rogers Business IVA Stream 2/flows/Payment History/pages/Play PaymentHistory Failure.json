@@ -1,0 +1,35 @@
+{
+  "name": "67e882c2-f9e9-4850-a1b8-33f6fde541f3",
+  "displayName": "Play PaymentHistory Failure",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I can’t access your account information right now." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Je ne peux pas accéder à vos renseignements de compte pour le moment." ]
+      },
+      "languageCode": "fr-ca"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "transferType",
+      "value": "systemError"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "d7cec529-19ff-4440-aeb5-ae4fdec923e6"
+  } ]
+}

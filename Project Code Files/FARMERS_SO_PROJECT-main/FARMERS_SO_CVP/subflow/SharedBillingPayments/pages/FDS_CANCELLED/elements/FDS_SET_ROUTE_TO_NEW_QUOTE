@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1744657304:1715074520578" name="FDS_SET_ROUTE_TO_NEW_QUOTE" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">NEW_QUOTE</setting>
+<setting name="sessNames">S_ROUTE_TO</setting>
+</settings>
+</config>
+</action_element>

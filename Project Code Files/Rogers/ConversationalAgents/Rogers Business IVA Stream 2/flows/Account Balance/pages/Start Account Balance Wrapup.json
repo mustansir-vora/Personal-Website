@@ -1,0 +1,64 @@
+{
+  "name": "f76287e6-c911-4b9a-b1fb-34726954d250",
+  "displayName": "Start Account Balance Wrapup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "selfServiceCompleted",
+      "value": true
+    }, {
+      "parameter": "completedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"active-accountBalance\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.sentAccountBalanceSms = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check accountBalanceRepeatCounter",
+    "name": "8dbc4c6f-7995-4fbd-a057-0d23fd06b822"
+  }, {
+    "condition": "$session.params.smsId != null OR $session.params.smsId != \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sentAccountBalanceSms",
+        "value": true
+      }, {
+        "parameter": "last4Acct",
+        "value": "$sys.func.MID($session.params.accountNumber, $sys.func.MINUS($sys.func.LEN($session.params.accountNumber), 3), 4)"
+      }, {
+        "parameter": "smsAttributes",
+        "value": "$sys.func.TO_OBJECT(\"{'last4Acct': '$session.params.last4Acct', 'currentBalance': '$session.params.api.billingProfile.balanceDetails.currentBalance', 'pastDueBalance': '$session.params.api.billingProfile.balanceDetails.pastDueBalance', 'billClosrDate': '$session.params.api.billingProfile.billingPaymentDetails.billingCycle.billCloseDate' }\")"
+      } ]
+    },
+    "targetFlow": "Send SMS",
+    "name": "6fcff8c2-7fd9-4386-8dcf-bdc775e43e49"
+  }, {
+    "condition": "$flow.accountBalanceRepeatCounter = 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play accountBalanceOnline",
+    "name": "23073a3a-3d30-49db-989c-453189bf5670"
+  }, {
+    "condition": "$flow.accountBalanceRepeatCounter \u003c 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play repeat",
+    "name": "ebf6a6ad-7cbc-4a08-8493-eb81b9aa6ca7"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowInputs.invokeAccountBalanceWrapup",
+        "value": false
+      } ]
+    },
+    "targetPage": "Play repeat",
+    "name": "deb6477e-3cb0-4856-b83f-e03c7494b926"
+  } ]
+}

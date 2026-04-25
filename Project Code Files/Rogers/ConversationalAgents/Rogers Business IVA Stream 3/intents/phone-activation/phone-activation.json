@@ -1,0 +1,7 @@
+{
+  "name": "ca6193f8-9540-43e9-bbe6-4b8296cc2833",
+  "displayName": "phone-activation",
+  "priority": 500000,
+  "description": "Handles requests to activate a phone or mobile device.",
+  "numTrainingPhrases": 8
+}

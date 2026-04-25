@@ -1,0 +1,12 @@
+{
+  "name": "0e88200b-21ce-46f6-b38a-b3fd6459c9d2",
+  "displayName": "gcp-yul-crsrv-cct-iva-r4b-nluconfig",
+  "genericWebService": {
+    "uri": "https://gcp-yul-crsrv-cct-iva-r4b-nluconfig-qa-01-244522361420.northamerica-northeast1.run.app",
+    "webhookType": "STANDARD",
+    "serviceAgentAuth": "ID_TOKEN"
+  },
+  "timeout": {
+    "seconds": 30
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "4a69c0a4-fa18-4d94-a736-492ccbb14c60",
+  "displayName": "Clear variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.subflowReturnValue",
+      "value": true
+    }, {
+      "parameter": "smsId",
+      "value": "$session.params.accountBalanceSMS"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "8eaefce6-3807-46bc-9ff4-6dc4431a8daf"
+  } ]
+}

@@ -1,0 +1,102 @@
+{
+  "name": "60614225-6292-41fb-bcd6-ea15a0176a32",
+  "displayName": "Get Expiration Date",
+  "form": {
+    "parameters": [ {
+      "displayName": "ccExpirationDate",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter the four digit expiration date of\nyour card." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "40612118-9349-4022-aafb-a1ed1561e1ab"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter the four digit expiration date of\nyour card." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "9cfaa83b-94f0-4281-9852-a6e30eab6b65"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please enter the month and year that the card expires using four digits. For example, March 2028 would be entered as 0328." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "eab5e16a-6fdb-4171-a10c-3b6f531d0ef7"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please enter the month and year that the card expires using four digits. For example, March 2028 would be entered as 0328." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "ec233f2e-6386-471f-94ba-7b6e1b772426"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 4,
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 4
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 3
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "What's the expiration date?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Quelle est la date d’expiration ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Expiration Date Validity",
+    "name": "73a45382-5707-4c41-b836-0898ea2514a4"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Expiration Date Validity",
+    "name": "1f312f5e-f71a-40af-a2df-926b4dad3070"
+  } ]
+}

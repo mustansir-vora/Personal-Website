@@ -1,0 +1,95 @@
+{
+  "name": "0a54daa5-6a7e-43a5-a75a-175b608e9c03",
+  "displayName": "Check PromisedDate 2",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.datePromised2 \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.collectedPtpMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Votre deuxième versement par credit card d’un montant de $ $session.params.amount2 , exigible le $session.params.datePromised2 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "You had a second credit card installment payment for $ $session.params.amount2 that was due by $session.params.datePromised2 ." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Votre deuxième versement par bank d’un montant de $ $session.params.amount2 , exigible le $session.params.datePromised2 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "You had a second bank installment payment for $ $session.params.amount2 that was due by $session.params.datePromised2 ." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Update Multiple Report Payment",
+    "name": "a1384966-464f-4eea-8578-fb3c85500a5e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.collectedPtpMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Votre prochain versement est un paiement par credit card d’un montant de $ $session.params.amount2 , exigible le $session.params.datePromised2 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Your upcoming installment is a credit card payment for $ $session.params.amount2 and is due by $session.params.datePromised2 ." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Votre prochain versement est un paiement par bank d’un montant de $ $session.params.amount2 , exigible le $session.params.datePromised2 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Your upcoming installment is a bank payment for $ $session.params.amount2 and is due by $session.params.datePromised2 ." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Update Multiple Check Intent",
+    "name": "8db1fddc-a375-4c36-8895-5ad3b5ce204d"
+  } ]
+}

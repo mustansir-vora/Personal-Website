@@ -1,0 +1,39 @@
+{
+  "name": "f9a1d97b-0305-4e1e-b35d-4612c063660d",
+  "displayName": "getServiceAddress",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "getServiceAddress"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "check Multiple Address",
+    "name": "d309bd48-f68c-437e-8566-954070d067fd"
+  }, {
+    "condition": "$session.params.returnCode = \"1\" AND $session.params.subscriptionAccountName = \"maestro\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": "MA"
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "47522761-a800-409a-9a30-22c1bf9398ec"
+  }, {
+    "condition": "$session.params.returnCode = \"1\" AND $session.params.subscriptionAccountName != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "serviceAddress",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "31f7c8bc-85ce-42a2-a644-c1039004dcb9"
+  } ]
+}

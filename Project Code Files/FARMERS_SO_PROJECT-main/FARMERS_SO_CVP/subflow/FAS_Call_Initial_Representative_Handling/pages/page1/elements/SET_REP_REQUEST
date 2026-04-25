@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1201447045:1711654581799" name="SET_REP_REQUEST" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">1</setting>
+<setting name="sessNames">S_REP_REQUEST</setting>
+</settings>
+</config>
+</action_element>

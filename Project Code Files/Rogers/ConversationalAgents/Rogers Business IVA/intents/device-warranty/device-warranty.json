@@ -1,0 +1,7 @@
+{
+  "name": "60d3c383-3d1c-4ef3-bcd2-026bd0f18c92",
+  "displayName": "device-warranty",
+  "priority": 500000,
+  "description": "Handles inquiries about warranty coverage, claims, or status for a device.",
+  "numTrainingPhrases": 59
+}

@@ -1,0 +1,41 @@
+{
+  "name": "21ecb982-4f7c-4819-a482-ca927a2cd7c7",
+  "displayName": "Reusable – Create Interaction PLACEHOLDER",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "createInteraction",
+      "setParameterActions": [ {
+        "parameter": "interactionNotes",
+        "value": ""
+      }, {
+        "parameter": "interactionLabel",
+        "value": ""
+      }, {
+        "parameter": "completedSSName",
+        "value": "$sys.func.CONCATENATE(\"$session.params.completedSSName\",\",active-outageNotification\")"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "fromProcessPayment",
+        "value": false
+      }, {
+        "parameter": "skipCardCollection",
+        "value": true
+      }, {
+        "parameter": "reportingVar_completedSSName",
+        "value": "$session.params.completedSSName"
+      } ]
+    },
+    "targetPage": "Confirm Payment Completed",
+    "name": "6e6ed84b-c204-4762-a673-6632610676ca"
+  } ]
+}

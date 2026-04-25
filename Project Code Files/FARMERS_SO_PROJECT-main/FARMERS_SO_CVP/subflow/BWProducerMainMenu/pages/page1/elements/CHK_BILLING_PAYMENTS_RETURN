@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1382038636:1711728533062" name="CHK_BILLING_PAYMENTS_RETURN" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CHK_BILLING_PAYMENTS_RETURN" default_exit_state="Others">
+        <exit_state name="Main_Menu" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="BILLING_PAYMENTS_RETURN" />
+                </data>
+                <constant_string value="Main_Menu" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

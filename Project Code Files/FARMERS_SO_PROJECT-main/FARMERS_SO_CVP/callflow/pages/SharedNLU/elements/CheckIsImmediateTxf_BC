@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1350188721:1730744888313" name="CheckIsImmediateTxf_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.CheckIsImmediateTxf_BC</source>
+</config>
+</decision>

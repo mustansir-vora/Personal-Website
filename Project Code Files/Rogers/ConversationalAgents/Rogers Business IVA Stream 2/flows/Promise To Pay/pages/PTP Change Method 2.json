@@ -1,0 +1,31 @@
+{
+  "name": "51475e61-7eae-41ab-9625-1fb8915924e6",
+  "displayName": "PTP Change Method 2",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.installmentInFocus = first OR $session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpFirstInstallOrSingle",
+        "value": true
+      } ]
+    },
+    "targetPage": "Method 2 Check Change Request Type",
+    "name": "93bd4853-8760-4ba6-9d24-1587c880496a"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpFirstInstallOrSingle",
+        "value": false
+      } ]
+    },
+    "targetPage": "Method 2 Check Change Request Type",
+    "name": "9901754f-5cc4-4170-8202-7cd1ff1dfd57"
+  } ]
+}

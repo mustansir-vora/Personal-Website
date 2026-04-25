@@ -1,0 +1,28 @@
+{
+  "name": "be746879-883a-4859-a285-b1bb2b91227e",
+  "displayName": "CheckSavedIntent_HomePhn",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"home-phone-support\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askForMoreDetails",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "ff61bab0-390d-42e6-b46f-3c9e024e8b26"
+  }, {
+    "condition": "$session.params.savedIntent != \"home-phone-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "41ebfd12-0247-456f-8e60-8cfc8005915b"
+  } ]
+}

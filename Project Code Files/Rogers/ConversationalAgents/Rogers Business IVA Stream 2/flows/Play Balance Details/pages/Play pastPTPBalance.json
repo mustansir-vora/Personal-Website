@@ -1,0 +1,28 @@
+{
+  "name": "793dbc3a-50a7-42d1-b452-9eee71250dc8",
+  "displayName": "Play pastPTPBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Il y a une promesse de paiement sur le compte avec une date de paiement du $session.params.api.billingProfile.playAccountBalanceDates.playptpPaymentDate pour un montant de $session.params.api.billingProfile.ptpAmount par $session.params.ptpPaymentMethodFR." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "There's a promise to pay on the account with a payment date of $session.params.api.billingProfile.playAccountBalanceDates.playptpPaymentDate for $session.params.api.billingProfile.ptpAmount by $session.params.ptpPaymentMethod." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Clear variables",
+    "name": "5501151e-427a-4b98-9193-e1ea22971715"
+  } ]
+}

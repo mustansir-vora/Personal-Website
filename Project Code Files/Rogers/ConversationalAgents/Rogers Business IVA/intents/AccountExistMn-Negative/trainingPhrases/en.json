@@ -1,0 +1,55 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "yeah"
+    }, {
+      "text": " tech"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "yes"
+    }, {
+      "text": " support"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "yes"
+    }, {
+      "text": " technical support"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "nico"
+    }, {
+      "text": " techincal support"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "yeah"
+    }, {
+      "text": "  technical support"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "yeah"
+    }, {
+      "text": " "
+    }, {
+      "text": "nico"
+    }, {
+      "text": " techincal support"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

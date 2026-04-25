@@ -1,0 +1,58 @@
+{
+  "name": "156756f7-e29e-4b78-a83b-cadae795d9b6",
+  "displayName": "Retry Confirmation",
+  "form": {
+    "parameters": [ {
+      "displayName": "DynamicConfirmationMenuResponse",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetPage": "Check Confirmation Menu Response",
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "stdErrorType",
+              "value": "NI"
+            } ]
+          },
+          "name": "8ff3ba15-45a7-45ac-ba65-e5620aa8ac0b"
+        }, {
+          "targetPage": "Check Confirmation Menu Response",
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "stdErrorType",
+              "value": "NM"
+            } ]
+          },
+          "name": "8eed2b5f-5324-44b8-9858-919014bbe0cb"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Si vous appelez au sujet du mobile qui se termine par $session.params.last4Digit, dites oui, ou appuyez sur le 1. Autrement, dites non, ou appuyez sur le 2." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "If you're calling about the mobile number ending in $session.params.last4Digit, say yes, or press 1. If not, say no, or press 2." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.DynamicConfirmationMenuResponse != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Confirmation Menu Response",
+    "name": "b30b05ae-d3ac-440b-8594-43629bee8405"
+  } ]
+}

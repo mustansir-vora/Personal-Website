@@ -1,0 +1,97 @@
+{
+  "name": "12d4da93-7e4b-461d-bf60-5f1a2052e0b9",
+  "displayName": "DMBG - Bus-TechSupp-CLEC-Wir",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vous avez joint le soutien pour les problèmes de transfert de numéro sans‑fil.\r\nSi vous avez déjà demandé de transférer votre numéro vers Rogers et que vous répondez maintenant à un message du centre de transfert ou que vous rencontrez une erreur de transfert, dites « erreur de transfert ».\r\nPour toute autre demande, dites « autre chose »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "You have reached Wireless porting fallout support. \r\nIf you have already requested to port your number to Rogers and now responding to a message from the porting center or experience a porting error then say \"porting error\",\r\nFor something else say \"something else\"" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - Bus-TechSupp-CLEC-Wir - Porting Error",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-TechSupp-CLEC-Wir-port-error"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "c2ae31e7-1612-4cc0-824e-229323c3ee75"
+  }, {
+    "intent": "DMBG - Bus-TechSupp-CLEC-Wir - Something Else",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "nlu-main-menu"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "8756ad4f-a481-4053-aba0-e621d3a198d9"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "7fd061e3-8278-4b7c-8830-e296da7fb83d"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "d439aa86-fbf2-46cd-963e-847bb30681b0"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

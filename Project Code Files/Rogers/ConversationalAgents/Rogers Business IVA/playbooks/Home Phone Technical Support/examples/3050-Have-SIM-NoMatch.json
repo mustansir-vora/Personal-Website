@@ -1,0 +1,48 @@
+{
+  "name": "cd2c90fa-da01-46dd-9d57-f5efdc257575",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Does your home phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "What it means"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If your home phone has a SIM, say yes or press 1. If not, say no, or press 2."
+    }
+  }, {
+    "userUtterance": {
+      "text": "a laptop"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your home phone equipment. Please ensure you're calling from a different phone than the one you need help with."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportHomePhone",
+      "hasNoHPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "3050-Have-SIM-NoMatch",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 288,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

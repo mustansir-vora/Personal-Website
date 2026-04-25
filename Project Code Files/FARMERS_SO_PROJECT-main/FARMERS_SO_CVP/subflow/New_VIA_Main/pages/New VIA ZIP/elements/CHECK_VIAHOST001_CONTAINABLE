@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2072347016:1746803016757" name="CHECK_VIAHOST001_CONTAINABLE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.VIAContainableCheck</source>
+</config>
+</decision>

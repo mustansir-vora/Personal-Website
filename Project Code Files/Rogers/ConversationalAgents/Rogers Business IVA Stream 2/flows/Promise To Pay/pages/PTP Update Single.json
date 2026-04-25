@@ -1,0 +1,63 @@
+{
+  "name": "e0da374c-76be-4334-887e-4e43af1bc846",
+  "displayName": "PTP Update Single",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "ptpOperation",
+      "value": "UPDATE"
+    }, {
+      "parameter": "numberOfInstalls",
+      "value": 1
+    }, {
+      "parameter": "ptpChangeAmount",
+      "value": false
+    }, {
+      "parameter": "ptpChangeDate",
+      "value": false
+    }, {
+      "parameter": "ptpChangeMethod",
+      "value": false
+    }, {
+      "parameter": "collectedPtpAmount",
+      "value": null
+    }, {
+      "parameter": "collectedPtpDate",
+      "value": null
+    }, {
+      "parameter": "collectedPtpMethod",
+      "value": "$session.params.api.response.ptp.paymentMethod"
+    }, {
+      "parameter": "promiseAmount",
+      "value": "$session.params.api.response.ptp.amount"
+    }, {
+      "parameter": "promiseDate",
+      "value": "$session.params.api.response.ptp.datePromised"
+    }, {
+      "parameter": "promiseMethod",
+      "value": "$session.params.api.response.ptp.paymentMethod"
+    }, {
+      "parameter": "fromUpdateSingle",
+      "value": true
+    }, {
+      "parameter": "selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "passive-singleInstallmentPtp"
+    }, {
+      "parameter": "$session.params.ptpCallPendingPTPDetails",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Pending PTP Details",
+    "name": "aa530423-a44d-4168-9862-4b44e0ef23ce"
+  } ]
+}

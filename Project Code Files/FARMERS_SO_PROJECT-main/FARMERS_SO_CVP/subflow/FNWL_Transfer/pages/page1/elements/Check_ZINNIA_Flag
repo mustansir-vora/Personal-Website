@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@158440164:1733294944684" name="Check_ZINNIA_Flag" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_RLUS_Flag" default_exit_state="FALSE">
+        <exit_state name="TRUE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ZINNIA_FLAG" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,46 @@
+{
+  "name": "56821624-a440-4694-91e2-2da791639313",
+  "displayName": "PTP Update Multiple Second Install",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromUpdateMultiple = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Second Install Update Eligibility",
+    "name": "3e3943a1-81a4-47b8-aaee-603f8573a173"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "installmentInFocus",
+        "value": "second"
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      }, {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "passive-secondInstallmentMsg"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-secondInstallmentMsg"
+      } ]
+    },
+    "targetPage": "Check Second Install Promised Date 2",
+    "name": "53d0fc58-3ff0-46c5-807c-fa2d900948d4"
+  } ]
+}

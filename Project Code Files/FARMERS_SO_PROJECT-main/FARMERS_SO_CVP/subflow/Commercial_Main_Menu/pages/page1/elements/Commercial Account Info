@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@600151031:1707377407834" name="Commercial Account Info" version="6.0.1">
+<subflow_call subflow_name="Commercial_Accounts_Info_Flow" target="Element@31:1710343868360">
+<config>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

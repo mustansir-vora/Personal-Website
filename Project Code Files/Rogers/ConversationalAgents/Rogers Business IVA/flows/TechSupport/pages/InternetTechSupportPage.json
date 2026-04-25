@@ -1,0 +1,124 @@
+{
+  "name": "86cde9f0-9c1f-4335-9fe9-e4b81876f187",
+  "displayName": "InternetTechSupportPage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkIntTS",
+      "value": false
+    }, {
+      "parameter": "antenaCheckName",
+      "value": "$sys.func.CONCATENATE(\"is_\", $session.params.npaProvince, \"_Antenna_Offered\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bcInkIntTS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId8"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "503dbfbd-3ac7-4085-82bc-460ddccebb29"
+  }, {
+    "condition": "$session.params.bcInkIntTS = true AND $session.params.flowLanguage = \"en-US\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkIntTS",
+        "value": false
+      } ]
+    },
+    "name": "f64b7001-2a93-41d3-a636-9c31900bbba6",
+    "targetPlaybook": "Internet Tech Support"
+  }, {
+    "condition": "$session.params.bcInkIntTS = true AND $session.params.flowLanguage = \"fr-CA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkIntTS",
+        "value": false
+      } ]
+    },
+    "name": "df8bd4bd-26df-4cf1-8bbb-c297c7487de3",
+    "targetPlaybook": "Internet Tech Support-Fr"
+  }, {
+    "condition": "$session.params.errorMessage = \"codeBlockError\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "applicationError"
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "3c745419-e07a-4122-8759-80bac3b0b4db"
+  }, {
+    "condition": "$session.params.userInput = \"mainmenu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": false
+      }, {
+        "parameter": "userInput",
+        "value": ""
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": "$sys.func.ADD($session.params.mainMenuRequestCounter, 1)"
+      }, {
+        "parameter": "isNluFlow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "c15565e3-0c52-44ae-9329-7730cee04da9",
+    "description": "if the user input is Main menu or 9 it will go to NLU flow"
+  }, {
+    "condition": "$session.params.userInput = \"agent\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "userInput",
+        "value": ""
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "a1a71aa6-244e-4047-9591-da1c7834c05a",
+    "description": "If the user input is 0 or Agent Request then the Call should get routed to PreTransfer"
+  }, {
+    "condition": "$session.params.hasNoProfile = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "hasNoProfile",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_Internet",
+    "name": "eea7a5f1-e26b-4f51-abe1-b2fc5278957f"
+  }, {
+    "condition": "$session.params.no5gHomeInternet = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TechSingleService_Internet",
+    "name": "3da9b977-fd30-4911-ae58-79f8e6d34977"
+  }, {
+    "condition": "$session.params.savedIntent = \"5GHI-Support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CheckSavedIntent_Tv",
+    "name": "15ee2454-28b0-4a8d-ad5b-0a16f4147699"
+  } ]
+}

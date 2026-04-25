@@ -1,0 +1,26 @@
+{
+  "name": "38721df1-6cbf-4da3-a4d7-18e488150f52",
+  "displayName": "Check Caller Id \u0026 Int_Label 1",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.customerIdentified = true AND $session.params.interactionLabel != null AND $session.params.interactionLabel != \"\"",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "createInteraction"
+    },
+    "targetPage": "Check Next Action",
+    "name": "4ace44ed-25bd-4f3c-b919-96cc5fc77956"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Next Action",
+    "name": "93602af9-4082-4a57-94c2-557321880fd3"
+  } ]
+}

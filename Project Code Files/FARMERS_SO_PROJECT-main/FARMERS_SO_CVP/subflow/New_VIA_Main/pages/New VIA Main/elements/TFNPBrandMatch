@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1232788312:1746034391595" name="TFNPBrandMatch" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.TFNPolicyBrandMatch</source>
+</config>
+</decision>

@@ -1,0 +1,93 @@
+{
+  "name": "95130e42-338e-43b0-91fd-3354d19ed531",
+  "displayName": "Problem Fixed Menu",
+  "form": {
+    "parameters": [ {
+      "displayName": "FAQMenuResponse",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "If that fixed the problem, say yes or press 1. If not, say no or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "91788bea-33fb-4b94-9c53-39074583d8ee"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "If that fixed the problem, say yes or press 1. If not, say no or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "790a3cf3-6d0d-47d1-b7ae-7349e23f4195"
+        }, {
+          "targetPage": "Check Caller Id \u0026 Int_Label 1",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "FAQMenuResponse",
+              "value": null
+            } ]
+          },
+          "name": "ca713fbd-51b8-420a-909d-101706bd2fb9"
+        }, {
+          "targetPage": "Check Caller Id \u0026 Int_Label 1",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "FAQMenuResponse",
+              "value": null
+            } ]
+          },
+          "name": "83819cac-3147-4ddc-8087-66fd7bd632f6"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.confirmvoiceScriptContent" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "$session.params.confirmvoiceScriptContent" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.FAQMenuResponse != null AND $session.params.FAQMenuResponse = \"Yes\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "FAQMenuResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "Check Caller Id \u0026 Int_Label 2",
+    "name": "539be1d7-75b1-4125-ad76-44c92bc7dfe1"
+  }, {
+    "condition": "$session.params.FAQMenuResponse != null AND $session.params.FAQMenuResponse = \"No\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "FAQMenuResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "Check Caller Id \u0026 Int_Label 1",
+    "name": "086e2f4a-92e9-4cfb-903b-61a6ef578aab"
+  } ]
+}

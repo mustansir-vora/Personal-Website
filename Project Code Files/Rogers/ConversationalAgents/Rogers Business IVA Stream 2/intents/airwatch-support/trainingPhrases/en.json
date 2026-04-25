@@ -1,0 +1,53 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "We need assistance removing a lost device from "
+    }, {
+      "text": "AirWatch"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The AirWatch console is down, and we can’t manage devices."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Employees are getting errors when accessing corporate email via AirWatch."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "AirWatch compliance policies aren’t applying "
+    }, {
+      "text": "correctly"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We can’t deploy apps through AirWatch MDM."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The AirWatch profile isn’t pushing to new smartphones."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our devices aren’t enrolling in AirWatch—can you help?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

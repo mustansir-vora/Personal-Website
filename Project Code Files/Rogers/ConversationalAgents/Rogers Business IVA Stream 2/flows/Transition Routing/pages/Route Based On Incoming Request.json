@@ -1,0 +1,32 @@
+{
+  "name": "531c70e4-1065-45dd-bdae-20d567b76a4b",
+  "displayName": "Route Based On Incoming Request",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.mainMenuRequest = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Main Menu Request",
+    "name": "cd246480-33c9-4fcb-be9a-39f81b8cd6ff"
+  }, {
+    "condition": "$session.params.agentRequest = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Agent Request",
+    "name": "63395df5-95e0-4bc8-bdce-cc4d4bfd3c53"
+  }, {
+    "condition": "$session.params.preTransfer = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Pre Transfer",
+    "name": "6858fb02-8152-4387-a363-79035f402194"
+  } ]
+}

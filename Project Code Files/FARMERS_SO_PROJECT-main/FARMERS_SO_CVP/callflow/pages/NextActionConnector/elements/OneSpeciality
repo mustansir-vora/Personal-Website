@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1050371319:1711798303356" name="OneSpeciality" version="6.0.1">
+<subflow_call subflow_name="OneSpecialtyMenu" target="Element@31:1711877507339">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

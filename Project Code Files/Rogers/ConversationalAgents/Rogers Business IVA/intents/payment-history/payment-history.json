@@ -1,0 +1,7 @@
+{
+  "name": "61185ae1-7324-4181-abb9-e813902eb09e",
+  "displayName": "payment-history",
+  "priority": 500000,
+  "description": "Handles inquiries about past payments or billing history.",
+  "numTrainingPhrases": 35
+}

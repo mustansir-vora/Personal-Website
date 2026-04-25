@@ -1,0 +1,64 @@
+{
+  "name": "896a4eb9-c295-4e30-9ec9-851d356df484",
+  "displayName": "Start Playing Balance Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.heardIppDetails",
+      "value": false
+    }, {
+      "parameter": "$session.params.subflowInputs.accountBalance.callCurrentBalanceDetailsSubflow",
+      "value": true
+    }, {
+      "parameter": "$session.params.subflowInputs.accountBalance.callInstallmentPaymentPlanDetailsSubflow",
+      "value": true
+    }, {
+      "parameter": "$session.params.subflowInputs.accountBalance.callLastInvoiceDetailsSubflow",
+      "value": true
+    }, {
+      "parameter": "$session.params.subflowInputs.accountBalance.callCreditLimitUsageDetailsSubflow",
+      "value": true
+    }, {
+      "parameter": "$session.params.subflowInputs.accountBalance.callPendingPTPDetailsSubflow",
+      "value": true
+    }, {
+      "parameter": "$session.params.heardIppDetails",
+      "value": false
+    }, {
+      "parameter": "$session.params.app.config.lastInvoiceDetailsEnabled",
+      "value": true
+    }, {
+      "parameter": "$session.params.subflowReturnValue",
+      "value": null
+    }, {
+      "parameter": "$session.params.app.config.lastInvoiceDetailsEnabled",
+      "value": true
+    }, {
+      "parameter": "$session.params.app.config.sentAccountBalanceSms",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowInputs.accountBalance.fromAB",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Play Balance Details",
+    "name": "d814445e-aeb8-4822-a794-4200e384ed0b"
+  }, {
+    "condition": "$session.params.subflowReturnValue = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowReturnValue",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Account Balance Wrapup",
+    "name": "04f6c01d-9f2b-40b8-b67c-a0e7b4b66238"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "7e53ebce-18bf-4763-8b5a-c524b0157367",
+  "displayName": "appointment-service-book",
+  "priority": 500000,
+  "description": "This handles calls for a technician to come to a location.",
+  "numTrainingPhrases": 20
+}

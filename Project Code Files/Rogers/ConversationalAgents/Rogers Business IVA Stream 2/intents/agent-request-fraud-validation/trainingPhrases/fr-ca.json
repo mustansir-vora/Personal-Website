@@ -1,0 +1,315 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’ai besoin de l’aide de l’équipe de validation pour vérifier "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte en raison d’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " activité suspecte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me connecter à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " du "
+    }, {
+      "text": "département"
+    }, {
+      "text": " de validation qui peut résoudre ce problème?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler à l’équipe de validation au sujet de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte annulé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me transférer "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " agent de validation qui gère les problèmes liés à la fraude."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " membre de l’équipe de validation au sujet de la vérification de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je être mis en relation avec "
+    }, {
+      "text": "un"
+    }, {
+      "text": " spécialiste de validation pour confirmer mes informations?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " du "
+    }, {
+      "text": "département"
+    }, {
+      "text": " de validation concernant "
+    }, {
+      "text": "un"
+    }, {
+      "text": " cas de fraude suspecté."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux contacter l’équipe de validation finale pour résoudre "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " problème de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me mettre en relation avec l’équipe qui s’occupe de la validation des comptes?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " assistance immédiate de l’équipe de validation pour vérifier "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " identité."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me connecter "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " agent de validation qui peut m’aider avec l’annulation de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais parler à l’équipe de validation des fraudes concernant "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me transférer au "
+    }, {
+      "text": "département de validation"
+    }, {
+      "text": " "
+    }, {
+      "text": "maintenant"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " spécialiste de la validation pour résoudre "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème de vérification."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "On m’a dit de contacter l’équipe de validation au sujet de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte annulé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me connecter à l’équipe responsable des suspensions de compte pour validation."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " en validation qui peut examiner l’activité de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me mettre en "
+    }, {
+      "text": "communication"
+    }, {
+      "text": " avec l’équipe de validation immédiatement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide du "
+    }, {
+      "text": "département"
+    }, {
+      "text": " de validation pour résoudre "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème lié à la fraude "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je être connecté à l’équipe de validation pour confirmer les détails de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " spécialiste en validation pour régler "
+    }, {
+      "text": "un"
+    }, {
+      "text": " problème d’annulation de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez transférer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appel à l’équipe de validation pour que je puisse vérifier "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler à l’équipe de validation finale concernant l’annulation de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me connecter à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " du "
+    }, {
+      "text": "service"
+    }, {
+      "text": " de validation pour résoudre "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " problème de compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon"
+    }, {
+      "text": " compte a "
+    }, {
+      "text": "été"
+    }, {
+      "text": " annulé pour suspicion de fraude et je dois parler à l’équipe de validation immédiatement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "01acdf9d-c76e-4352-abff-5ea82fcd4fdc",
+  "displayName": "non Maestro Account",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.isSuperSystem = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "getServiceAddress",
+    "name": "c3aa8177-90e3-40d6-a066-0a4bdcdeaf62"
+  }, {
+    "condition": "$session.params.isSuperSystem != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Exist Single Service",
+    "name": "0282ba70-942c-48df-94f9-1ac640a6467f"
+  } ]
+}

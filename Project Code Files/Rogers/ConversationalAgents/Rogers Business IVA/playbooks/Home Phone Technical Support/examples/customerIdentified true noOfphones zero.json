@@ -1,0 +1,33 @@
+{
+  "name": "964f468c-e6aa-422a-88a3-0dc530cf0d75",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your home phone equipment. Please ensure you're calling from a different phone than the one you need help with"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfPhone": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportHomePhone",
+      "hasNoHPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "customerIdentified true noOfphones zero",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 200,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

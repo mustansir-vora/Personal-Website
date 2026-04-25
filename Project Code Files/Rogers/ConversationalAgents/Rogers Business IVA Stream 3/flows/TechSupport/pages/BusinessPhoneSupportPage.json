@@ -1,0 +1,89 @@
+{
+  "name": "fa2e2983-2d4d-4e3e-9d2d-c6540b31d1f5",
+  "displayName": "BusinessPhoneSupportPage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkBusPhnTS",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bcInkBusPhnTS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId10"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "1ff8be9f-01c1-4f76-ae85-a4877409b93c"
+  }, {
+    "condition": "$session.params.bcInkBusPhnTS = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkBusPhnTS",
+        "value": false
+      } ]
+    },
+    "name": "7f25f760-a2a7-4f61-954e-1cfc5d81c9ec",
+    "targetPlaybook": "Business Phone Technical Support"
+  }, {
+    "condition": "$session.params.savedIntent = \"wireless-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CheckSavedIntent_BusPhone",
+    "name": "cb688266-36af-4590-a5b7-6cb6308114f6"
+  }, {
+    "condition": "$session.params.hasNoBPprofile = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "hasNoBPprofile",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_BusPhone",
+    "name": "014e1a53-950f-4cb2-a06b-57f694c9d879"
+  }, {
+    "condition": "$session.params.noWBPhone = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TechSingleService_BusPhone",
+    "name": "05a75cf1-0a75-4bb0-a9cd-185aed1aa31e"
+  }, {
+    "condition": "$session.params.userInputBP = \"mainmenu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "returnToNLU",
+        "value": false
+      }, {
+        "parameter": "userInputBP",
+        "value": ""
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": "$sys.func.ADD($session.params.mainMenuRequestCounter, 1)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "07f1c265-8a0a-4fec-83a6-299c731487e4",
+    "description": "NLU"
+  }, {
+    "condition": "$session.params.userInputBP = \"agent\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "userInputBP",
+        "value": ""
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "5c137fb8-4521-45e9-b42d-5aa53c824ceb",
+    "description": "preTransfer"
+  } ]
+}

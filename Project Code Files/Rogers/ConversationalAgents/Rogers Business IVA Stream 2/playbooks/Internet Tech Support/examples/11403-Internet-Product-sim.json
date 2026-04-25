@@ -1,0 +1,56 @@
+{
+  "name": "6bb182af-d3fe-43da-8aa5-34e047f1a6ea",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Is there an antenna fixed to the outside of your business location?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "no"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Do you access the internet using a SIM or a mobile phone?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "using sim"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your internet equipment"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportWireless,passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "savedIntent": "5GHI-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11403-Internet-Product-sim",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 355,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

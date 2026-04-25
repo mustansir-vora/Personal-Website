@@ -1,0 +1,51 @@
+{
+  "name": "52b272fc-b87f-4111-b010-56deae6f12c8",
+  "displayName": "HomeSecuritySupportPage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkSecMainTS",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bcInkSecMainTS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId9"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "637e2e1f-b9f3-4a49-9c35-256f502b96b1"
+  }, {
+    "condition": "$session.params.bcInkSecMainTS = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkSecMainTS",
+        "value": false
+      } ]
+    },
+    "name": "ad986aff-3269-450e-9e0e-4c6597896dd1",
+    "targetPlaybook": "Home Security Technical Support"
+  }, {
+    "condition": "$session.params.customerNotIdentified = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "customerNotIdentified",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_Security",
+    "name": "f0ce5221-e617-4f8d-a7ed-61157f429775"
+  }, {
+    "condition": "$session.params.hasHomeSecurityProfile = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TechSingleService_Security",
+    "name": "cdd96902-8f2a-49e2-a2d0-d6951c48769c"
+  } ]
+}

@@ -1,0 +1,85 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’ai des questions "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " l’ajout du câble à "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai des questions "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " l’ajout de "
+    }, {
+      "text": "la télévision"
+    }, {
+      "text": " à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte d’"
+    }, {
+      "text": "entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai des questions "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " l’ajout de "
+    }, {
+      "text": "la télévision"
+    }, {
+      "text": " à "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter la télé par câble à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte d’"
+    }, {
+      "text": "entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je cherche à ajouter "
+    }, {
+      "text": "la télévision"
+    }, {
+      "text": " à "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

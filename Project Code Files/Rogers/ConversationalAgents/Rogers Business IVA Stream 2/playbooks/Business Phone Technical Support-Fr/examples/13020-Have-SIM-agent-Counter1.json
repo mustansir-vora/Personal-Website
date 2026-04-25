@@ -1,0 +1,62 @@
+{
+  "name": "75928bc9-b7cf-4c16-b815-5d53d58b6d55",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone d’affaires a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je souhaite parler avec un représentant"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\nVotre téléphone d’affaires a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "oui"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie d’affaires. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportbusinessPhone",
+      "completedSSName": "passive-techSupportbusinessPhone",
+      "completedSelfServe": "passive-techSupportbusinessPhone",
+      "globalAgentRequestCounter": "1",
+      "hasNoBPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportbusinessPhone",
+      "reportingVar_completedSSName": "passive-techSupportbusinessPhone",
+      "savedIntent": "wireless-support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "13020-Have-SIM-agent-Counter1",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 389,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

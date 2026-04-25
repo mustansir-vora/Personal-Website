@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1709395545:1714717794936" name="FWS" version="6.0.1">
+<element height="55" id="Element@674612633:1714717794936" name="FWS" type="Page Entry" width="86" x="415" y="-287">
+<exit_states>
+<exit_state name="next" target="Element@1658691452:1714717891714"/>
+</exit_states>
+</element>
+<element height="55" id="Element@326605557:1714717843026" name="FWS_SBP_HOST_001" type="Decision" width="213" x="383" y="-88">
+<exit_states>
+<exit_state name="SU" target="Element@627660666:1714766665291"/>
+<exit_state name="ER" target="Element@1395250504:1714717964246"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1658691452:1714717891714" name="FWS_WarHead1" type="Subflow Call" width="176" x="402" y="-188">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1712086138525">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@326605557:1714717843026"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1485187540:1714717964246" name="FWS_Subflow Return_1" type="Subflow Return" width="231" x="811" y="-88"/>
+<element height="55" id="Element@1395250504:1714717964246" name="FWS_Transfer1" type="Subflow Call" width="164" x="616" y="-86">
+<subflow_call subflow_name="Transfer" target="Element@31:1709205093586">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1485187540:1714717964246"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1572949357:1714718104981" name="PaymentCodeCheck" type="Page Connector" width="207" x="614" y="164">
+<page_connector target="Element@622219322:1714727335273">PaymentCodeCheck<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1037064057:1714718104981" name="FWS_PolicyStatus" type="Decision" width="186" x="377" y="273">
+<exit_states>
+<exit_state name="Others" target="Element@980915598:1714726517075"/>
+<exit_state name="CANCELLED" target="Element@1723364283:1714718104981"/>
+<exit_state name="ACTIVE" target="Element@998081249:1714718104981"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1723364283:1714718104981" name="FWS_CANCELLED" type="Page Connector" width="187" x="455" y="395">
+<page_connector target="Element@1390367301:1714718390612">FWS_CANCELLED<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1811942086:1714718104981" name="FWS_IsPaymentDirectDNIS" type="Decision" width="261" x="356" y="157">
+<exit_states>
+<exit_state name="Yes" target="Element@1572949357:1714718104981"/>
+<exit_state name="No" target="Element@1037064057:1714718104981"/>
+</exit_states>
+</element>
+<element height="55" id="Element@998081249:1714718104981" name="FWS_ACTIVE" type="Page Connector" width="150" x="265" y="392">
+<page_connector target="Element@1760681556:1714718459517">FWS_ACTIVE<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1905155964:1714719564704" name="FWS_REPEAT_BY_STATUS" type="Page Entry" width="245" x="615" y="274">
+<exit_states>
+<exit_state name="next" target="Element@1037064057:1714718104981"/>
+</exit_states>
+</element>
+<element height="55" id="Element@628732012:1714726517076" name="FWS_SR6" type="Subflow Return" width="124" x="18" y="276"/>
+<element height="55" id="Element@980915598:1714726517075" name="FWS_Transfer8" type="Subflow Call" width="164" x="175" y="276">
+<subflow_call subflow_name="Transfer" target="Element@31:1710690969333">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@628732012:1714726517076"/>
+</exit_states>
+</element>
+<element height="55" id="Element@627660666:1714766665291" name="Is_BillingInfo_Restricted" type="Decision" width="233" x="371" y="34">
+<exit_states>
+<exit_state name="Yes" target="Element@1395250504:1714717964246"/>
+<exit_state name="No" target="Element@1469066644:1753893266327"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1469066644:1753893266327" name="Is_FWS_DNR" type="Decision" width="115" x="223" y="112">
+<exit_states>
+<exit_state name="Yes" target="Element@980915598:1714726517075"/>
+<exit_state name="No" target="Element@1811942086:1714718104981"/>
+</exit_states>
+</element>
+</page>

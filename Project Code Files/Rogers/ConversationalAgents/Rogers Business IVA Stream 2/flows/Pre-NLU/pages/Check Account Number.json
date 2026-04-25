@@ -1,0 +1,99 @@
+{
+  "name": "04b247f8-31da-46ae-ab10-b8b683f6175b",
+  "displayName": "Check Account Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "CheckAccount",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.MATCH($session.params.lastFourAccountNumberList, $session.params.fourdigitaccount) != -1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Parfait, merci." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Perfect, thank you." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "accountNumberIndex",
+        "value": "$sys.func.MATCH($session.params.lastFourAccountNumberList, $session.params.fourdigitaccount)"
+      } ]
+    },
+    "targetPage": "Get Identification Data",
+    "name": "9ebf3275-f02c-46c3-bd14-470860ff0d61"
+  }, {
+    "condition": "$sys.func.MATCH($session.params.lastFourAccountNumberList, $session.params.fourdigitaccount) = -1 AND $session.params.numberOfBillingAccounts = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fourdigitaccount",
+        "value": ""
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "targetPage": "One Billing Account",
+    "name": "442541e3-832e-4a38-8b78-be0a39b2d645"
+  }, {
+    "condition": "$sys.func.MATCH($session.params.lastFourAccountNumberList, $session.params.fourdigitaccount) = -1 AND $session.params.numberOfBillingAccounts = 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "fourdigitaccount",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Two Billing Account",
+    "name": "e03d1535-fea9-4092-8830-9c14489d8248"
+  }, {
+    "condition": "$sys.func.MATCH($session.params.lastFourAccountNumberList, $session.params.fourdigitaccount) = -1 AND $session.params.numberOfBillingAccounts = 3",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "fourdigitaccount",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Three Billing Account",
+    "name": "80f765c3-7b2e-411d-9953-85c85d1aee75"
+  }, {
+    "condition": "$sys.func.MATCH($session.params.lastFourAccountNumberList, $session.params.fourdigitaccount) = -1 AND $session.params.numberOfBillingAccounts = 4",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "fourdigitaccount",
+        "value": ""
+      } ]
+    },
+    "targetPage": "Four Billing Account",
+    "name": "12674bee-effa-4b87-a775-d4dc0d6cf1a4"
+  } ]
+}

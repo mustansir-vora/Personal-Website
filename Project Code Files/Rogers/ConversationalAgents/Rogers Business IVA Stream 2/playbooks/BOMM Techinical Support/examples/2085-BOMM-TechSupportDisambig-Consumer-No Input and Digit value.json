@@ -1,0 +1,64 @@
+{
+  "name": "412e457c-d664-41d7-bd85-8a13503cd2d0",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I couldn't hear that. Please say 'mobile phones' or press 1, 'high speed internet' press 2, 'television services', 3, 'home phone', 4, or 'home security' press 5."
+    }
+  }, {
+    "userUtterance": {
+      "text": "2"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_product",
+      "inputActionParameters": {
+        "userResponse": "high speed internet"
+      },
+      "outputActionParameters": {
+        "result": "Internet"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Internet"
+      },
+      "outputActionParameters": {
+        "result": "internet-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Internet",
+      "savedIntent": "internet-support"
+    }
+  },
+  "displayName": "2085-BOMM-TechSupportDisambig-Consumer-No Input and Digit value",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 320,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

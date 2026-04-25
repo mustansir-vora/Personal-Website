@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1524062701:1710739418544" name="Is_GPC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is_GPC" default_exit_state="N">
+        <exit_state name="017" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FWS_POLICY_GPC" />
+                </data>
+                <constant_string value="017" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

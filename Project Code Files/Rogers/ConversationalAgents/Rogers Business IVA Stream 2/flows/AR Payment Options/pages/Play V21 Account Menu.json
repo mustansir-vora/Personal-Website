@@ -1,0 +1,156 @@
+{
+  "name": "c12b89e1-452e-4249-a984-9b654a4fb705",
+  "displayName": "Play V21 Account Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Which would you like? You can say ‘Account Balance’, ‘Report a payment’, ‘Payment Arrangement’, 'Last Bill Details', ‘Payment History', or ‘Make a Payment’." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Que souhaitez-vous faire ? Vous pouvez dire « solde du compte », « signaler un paiement », « arrangement de paiement », « détails de la dernière facture », « historique des paiements » ou « effectuer un paiement »." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "payment-arrangement",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Payment Arrangement",
+    "name": "a69c2265-f36c-4bea-9a1f-8bcfc832f57e"
+  }, {
+    "intent": "account-balance",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Account Balance",
+    "name": "9113ab72-6738-457e-9333-fec5ce64ff85"
+  }, {
+    "intent": "report-a-payment",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Report a Payment",
+    "name": "43f43a41-4aa3-4a49-b687-e139e2469eee"
+  }, {
+    "intent": "billing-last-bill-details",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Last Bill Details",
+    "name": "a9d8e147-6233-469f-b136-82cc018cf15b"
+  }, {
+    "intent": "payment-history",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Payment History",
+    "name": "59df9bcb-a35e-4a4f-9985-a12b1fe25cb0"
+  }, {
+    "intent": "make-a-payment",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Make a Payment",
+    "name": "17ff75ae-cf46-4222-9272-a0025ae9d4ee"
+  }, {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "95ac3b3a-be17-43a1-b45e-a07d106c4a05"
+  }, {
+    "intent": "agent-request",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "fc51e030-92ad-4763-bb80-57f926a79606"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); ‘request a payment arrangement’ (3); ‘get last bill details’ (4); hear payment history (5), or 'make a payment' (press 6)." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Vous pouvez dire « solde du compte » (ou appuyer sur le 1); « signaler un paiement » (2); « arrangement de paiement » (3); « détails de la dernière facture » (4); « historique des paiements » (5); ou « effectuer un paiement » (appuyez sur le 6)." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "aa9e705e-2226-49b6-a7cc-bf964d43af4d"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); ‘request a payment arrangement’ (3); ‘get last bill details’ (4); hear payment history (5), or 'make a payment' (press 6)." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Vous pouvez dire « solde du compte » (ou appuyer sur le 1); « signaler un paiement » (2); « arrangement de paiement » (3); « détails de la dernière facture » (4); « historique des paiements » (5); ou « effectuer un paiement » (appuyez sur le 6)." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "799c14c7-997d-4b6e-94d5-6b3618a62608"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To hear your account balance, press 1; report a payment, 2; request a payment arrangement, 3; get last bill details, 4; hear payment history, 5, or to make a payment, press 6." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour entendre votre solde de compte, appuyez sur le 1; pour signaler un paiement, le 2; pour demander un arrangement de paiement, le 3; pour obtenir les détails de votre dernière facture, le 4; pour entendre l’historique des paiements, le 5; ou pour effectuer un paiement, appuyez sur le 6." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "3da8f9c4-f585-4f90-b474-b05570c83521"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); ‘request a payment arrangement’ (3); ‘get last bill details’ (4); hear payment history (5), or 'make a payment' (press 6)." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Pour entendre votre solde de compte, appuyez sur le 1; pour signaler un paiement, le 2; pour demander un arrangement de paiement, le 3; pour obtenir les détails de votre dernière facture, le 4; pour entendre l’historique des paiements, le 5; ou pour effectuer un paiement, appuyez sur le 6." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "6002c53e-b940-47bb-86dd-b6567198c0a6"
+  }, {
+    "targetPage": "Check Suspension Resolved",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "0a3c3926-11ca-4ba4-9a62-12fda113263e"
+  }, {
+    "targetPage": "Check Suspension Resolved",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "8053b2b4-72ff-4c89-a335-05d3e9602e4f"
+  } ]
+}

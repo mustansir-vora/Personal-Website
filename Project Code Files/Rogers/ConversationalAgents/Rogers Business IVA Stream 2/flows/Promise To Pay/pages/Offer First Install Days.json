@@ -1,0 +1,124 @@
+{
+  "name": "b61edd88-0c98-4d8b-97f2-69b6ae0ddf0d",
+  "displayName": "Offer First Install Days",
+  "form": {
+    "parameters": [ {
+      "displayName": "firstOfferConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pouvez-vous effectuer un paiement dans $session.params.ptpInstallDays\njours ? Dites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Can you make a payment in $session.params.ptpInstallDays days? Say yes, or press 1. No, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2e754920-178a-4b54-9c94-c9652c0f41e8"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pouvez-vous effectuer un paiement dans $session.params.ptpInstallDays\r\njours ? Dites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Can you make a payment in $session.params.ptpInstallDays days? Say yes, or press 1. No, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "3797d888-b306-4ed3-a22b-2b3e403969d9"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous pouvez effectuer un paiement dans $session.params.ptpInstallDays \njours, appuyez sur le 1. Sinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you can make a payment in $session.params.ptpInstallDays days, press 1. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "5ce953ba-ecbf-4777-9a5f-0abff2f7ba70"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous pouvez effectuer un paiement dans $session.params.ptpInstallDays \r\njours, appuyez sur le 1. Sinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you can make a payment in $session.params.ptpInstallDays days, press 1. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "7065cb1e-5ae0-4bb3-9b07-6348b31ddf91"
+        }, {
+          "targetPage": "PTP Best Offer Transition",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "02207dcd-b784-4450-a144-e51878f2e169"
+        }, {
+          "targetPage": "PTP Best Offer Transition",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "d70bdf3c-cef9-4e73-8bb8-9e078aa0bb9c"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ " La date limite à laquelle je peux accepter un \npaiement est dans $session.params.ptpInstallDays jours. Est-ce que cela vous convient ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "The latest I can accept a payment is in $session.params.ptpInstallDays days. Is that okay?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.firstOfferConfirmation = yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set Collected PTP Date",
+    "name": "82a6d93f-43b4-466f-8ac7-5310576d2f91"
+  }, {
+    "condition": "$session.params.firstOfferConfirmation = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Best Offer Transition",
+    "name": "7bfc16b7-4230-4da7-919b-7afd93b80dca"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

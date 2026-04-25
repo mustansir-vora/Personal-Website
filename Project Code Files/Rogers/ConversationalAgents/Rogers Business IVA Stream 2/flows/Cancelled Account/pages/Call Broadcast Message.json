@@ -1,0 +1,31 @@
+{
+  "name": "95c4b518-f4a8-41e2-9afd-f01d4c8408db",
+  "displayName": "Call Broadcast Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId16"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "80421245-fc45-46d3-bf2c-eab63d3c1867"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowReturnValue",
+        "value": null
+      } ]
+    },
+    "targetPage": "Call Get Billing Profile",
+    "name": "d4de1c02-19eb-47a2-8768-cd4c2b4604bd"
+  } ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "51c962b9-e1d5-4401-9e23-96f29a8472b9",
+  "displayName": "Play Payment Options Intro",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You may also be able to report a payment or make a payment arrangement. And we can provide more details about your balance." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Vous pouvez également signaler un paiement ou établir un arrangement de paiement. Nous pouvons aussi vous fournir plus de détails concernant votre solde." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.heardIntro",
+        "value": true
+      } ]
+    },
+    "targetFlow": "AR Payment Options",
+    "name": "3354a434-ead2-4fe9-ae46-d0bae78f6d9d"
+  } ]
+}

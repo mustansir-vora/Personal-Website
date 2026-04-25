@@ -1,0 +1,28 @@
+{
+  "name": "5e223129-4c71-4db8-86c3-a241b6617c83",
+  "displayName": "Play Credit Limit Exceeded",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Votre service est suspendu parce que le solde du compte a dépassé la limite de crédit." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Your service is suspended because the balance on the account went over the credit limit." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Credit Limit Usage Details",
+    "name": "d3fa8f42-9c7e-4f89-898e-38cd2c2854a1"
+  } ]
+}

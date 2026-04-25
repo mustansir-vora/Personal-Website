@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@43151964:1735291369940" name="Auth_Flag" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">TRUE</setting>
+<setting name="sessNames">FNWL_Auth</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="S_KYC_AUTHENTICATED">YES</data>
+<data create_when="Before" name="FNWL_AUTH">Y</data>
+</session_data>
+</config>
+</action_element>

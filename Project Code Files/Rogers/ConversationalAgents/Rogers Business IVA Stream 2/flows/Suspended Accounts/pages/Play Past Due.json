@@ -1,0 +1,28 @@
+{
+  "name": "196b1d3b-b267-457b-af95-2996a59b9c44",
+  "displayName": "Play Past Due",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Un solde en souffrance est présent sur votre compte." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "There's a past due balance on your account." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Wireless Suspension Acc Status",
+    "name": "86321f24-cecb-4988-b0d6-0939bea6eaf5"
+  } ]
+}

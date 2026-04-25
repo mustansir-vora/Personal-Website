@@ -1,0 +1,7 @@
+{
+  "name": "d6e2389c-2e23-4f74-a20c-e4d67c96fa73",
+  "displayName": "pin-help-vague",
+  "priority": 500000,
+  "description": "Captures unclear or general requests for help with a PIN.",
+  "numTrainingPhrases": 37
+}

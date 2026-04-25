@@ -1,0 +1,31 @@
+{
+  "name": "6a78dc45-1788-402c-b1e8-7b67e64926be",
+  "displayName": "Second Install Check Collected Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003e= $sys.func.TO_NUMBER($session.params.updateSecondInstallmentAmount)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "secondPromiseAmount",
+        "value": "$session.params.collectedPtpAmount"
+      }, {
+        "parameter": "secondPromiseDate",
+        "value": "$session.params.collectedPtpDate"
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "ddfa2acf-451b-4b1c-999a-36a54c05ccdc"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Recommend Install 2",
+    "name": "e380b674-8dc8-4546-b830-22ffa1723f85"
+  } ]
+}

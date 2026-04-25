@@ -1,0 +1,65 @@
+{
+  "name": "72dcc4d1-6b5b-42aa-86fc-b7f645b81d24",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your home phone equipment. Please ensure you're calling from a different phone than the one you need help with"
+    }
+  }, {
+    "toolUse": {
+      "action": "check_wireless_home_phone",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": "true"
+      }
+    }
+  }, {
+    "toolUse": {
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Other",
+          "linkedAccountSystem": "532909633"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportTv",
+      "completedSSName": "passive-techSupportTv",
+      "customerIdentified": "true",
+      "numberOfPhone": "2",
+      "reportingVar_attemptedSSName": "passive-techSupportTv",
+      "reportingVar_completedSSName": "passive-techSupportTv",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportTv,passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportTv,passive-techSupportHomePhone",
+      "reportingVar_attemptedSSName": "passive-techSupportTv,passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportTv,passive-techSupportHomePhone",
+      "savedIntent": "WHP-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Other",
+        "linkedAccountSystem": "532909633"
+      }
+    }
+  },
+  "displayName": " customerIdentified true noOfphones greater2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 421,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

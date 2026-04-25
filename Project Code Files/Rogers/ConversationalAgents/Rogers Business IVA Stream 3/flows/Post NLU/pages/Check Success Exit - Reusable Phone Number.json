@@ -1,0 +1,37 @@
+{
+  "name": "ad3b0a74-8701-4fa9-b599-739332121a9d",
+  "displayName": "Check Success Exit - Reusable Phone Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.reusablePhoneNumberCalledFrom = \"wirelessIdentification\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idType",
+        "value": "phone"
+      }, {
+        "parameter": "itnToMatchSubscription",
+        "value": "$session.params.phoneNumberCollection"
+      } ]
+    },
+    "targetPage": "Play Wait Message",
+    "name": "ba3f062d-a653-47f7-bf4d-e43fc33dc323"
+  }, {
+    "condition": "$session.params.reusablePhoneNumberCalledFrom = \"confirmSubscription\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "itnToMatchSubscription",
+        "value": "$session.params.phoneNumberCollection"
+      }, {
+        "parameter": "subscriptionITNMatchCalledFrom",
+        "value": "confirmSubscription_B"
+      } ]
+    },
+    "targetPage": "Start Subscription ITN Match",
+    "name": "31e5e12a-410d-4e21-af75-296011357bf7"
+  } ]
+}

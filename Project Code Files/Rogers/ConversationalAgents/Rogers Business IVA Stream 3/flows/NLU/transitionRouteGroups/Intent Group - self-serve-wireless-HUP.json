@@ -1,0 +1,18 @@
+{
+  "name": "4f352e26-be2d-4f8a-85d3-e70e4ea02b85",
+  "displayName": "Intent Group - self-serve-wireless-HUP",
+  "transitionRoutes": [ {
+    "intent": "hardware-upgrade",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "hardware-upgrade"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "889873d0-74d3-4be4-907e-3ef02e201b80"
+  } ]
+}

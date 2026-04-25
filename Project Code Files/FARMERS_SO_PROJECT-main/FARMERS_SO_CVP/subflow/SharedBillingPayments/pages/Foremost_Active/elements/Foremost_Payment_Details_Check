@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@310365878:1715004065368" name="Foremost_Payment_Details_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Payment Aailability" default_exit_state="NOT_AVAILABLE">
+        <exit_state name="BOTH_AVAILABLE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_LAST_PMNT_AVAIL" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="S_NEXT_PMNT_AVAIL" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+        <exit_state name="NEXT_PMT_ONLY_AVAIL" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_LAST_PMNT_AVAIL" />
+                </data>
+                <constant_string value="N" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="S_NEXT_PMNT_AVAIL" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,32 @@
+{
+  "name": "cd943541-9299-4a6c-8dbd-8b25565218d1",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide. Plusieurs problèmes peuvent être résolus en éteignant et en redémarrant votre appareil."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "after customer is  not identified",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after condition chceks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "completedSelfServe": "passive-techSupportWireless",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless",
+      "reportingVar_completedSSName": "passive-techSupportWireless",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "wsStepCompleted": "true"
+    }
+  },
+  "displayName": "CustomerIdentified_False",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 205,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

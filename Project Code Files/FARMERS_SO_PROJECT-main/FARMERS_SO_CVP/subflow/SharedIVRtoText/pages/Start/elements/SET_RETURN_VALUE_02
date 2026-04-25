@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1239562837:1730827949950" name="SET_RETURN_VALUE_02" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">R</setting>
+<setting name="sessNames">RETURN_VALUE_FOR_NLU</setting>
+</settings>
+</config>
+</action_element>

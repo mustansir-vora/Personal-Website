@@ -1,0 +1,38 @@
+{
+  "name": "681cb0e7-6fac-4390-9439-5271d930e881",
+  "displayName": "Check Confirmation Menu Tries",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.confirmCounter \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "confirmCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Single Wireless Subscription 2?",
+    "name": "194d6758-d99d-473b-bb94-4bb3dd714820"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Essayons de nouveau." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's try again." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Check NL Voice Script",
+    "name": "02a8665d-e87c-444a-a7ab-3a2e360f8f75"
+  } ]
+}

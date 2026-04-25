@@ -1,0 +1,7 @@
+{
+  "name": "4e2e40b3-8752-4566-b70d-076d0efa557e",
+  "displayName": "phone-hardware-support",
+  "priority": 500000,
+  "description": "Handles issues pertaining to phone hardware wireless and wireline.",
+  "numTrainingPhrases": 40
+}

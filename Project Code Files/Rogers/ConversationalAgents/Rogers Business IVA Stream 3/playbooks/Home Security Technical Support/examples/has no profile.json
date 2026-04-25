@@ -1,0 +1,21 @@
+{
+  "name": "fd73658e-0da6-4a9e-bc77-a93e29c5adaf",
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcasrt",
+    "actionParameters": {
+      "customerNotIdentified": "true",
+      "numberOfHomeSecurity": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after checks",
+    "actionParameters": {
+      "hasHomeSecurityProfile": "false"
+    }
+  },
+  "displayName": "has no profile",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 66,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "undetected"
+}

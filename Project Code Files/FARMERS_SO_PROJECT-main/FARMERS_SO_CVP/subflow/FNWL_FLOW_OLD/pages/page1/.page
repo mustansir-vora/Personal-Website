@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1814608991:1707907148931" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1707907148931" name="FNWL_FLOW" type="Subflow Start" width="151" x="278" y="68">
+<exit_states>
+<exit_state name="next" target="Element@827413228:1707907251142"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1956904198:1707907251142" name="NL_enabled_for_DNIS" type="Decision" width="219" x="272" y="321">
+<exit_states>
+<exit_state name="YES" target="Element@1517412201:1707907251142">
+<bendpoint>
+<dim1 x="176" y="92"/>
+<dim2 x="159" y="-154"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1517412201:1707907251142"/>
+</exit_states>
+</element>
+<element height="55" id="Element@827413228:1707907251142" name="Shared_Entry_Mod" type="Subflow Call" width="197" x="271" y="195">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1712157412359">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1956904198:1707907251142"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1517412201:1707907251142" name="FNWL_AGENT_OR_CUSTOMER" type="Subflow Call" width="289" x="254" y="567">
+<subflow_call subflow_name="FNWL_Agent_Or_Customer" target="Element@31:1712193256612">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@49655840:1709449298066"/>
+</exit_states>
+</element>
+<element height="15" id="Element@265868106:1707990226507" type="Comment" width="224" x="9" y="432">
+<comment><![CDATA[Menu Selection: “Farmers New World Life”]]></comment>
+</element>
+<element height="15" id="Element@1198532872:1707990294600" type="Comment" width="125" x="981" y="423">
+<comment><![CDATA[Intent: policy_life-query]]></comment>
+</element>
+<element height="55" id="Element@49655840:1709449298066" name="Subflow Return_01" type="Subflow Return" width="198" x="291" y="693"/>
+</page>

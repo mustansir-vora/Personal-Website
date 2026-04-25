@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1842199104:1722421800605" name="SET_IA_DISCONNECT_FLAG" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">TRUE</setting>
+<setting name="sessNames">IA_DISCONNECT_FLAG</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@416344572:1749036409133" name="IS_MDM_CALLED" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">TRUE</setting>
+<setting name="sessNames">S_NEW_MDM_CALLED</setting>
+</settings>
+</config>
+</action_element>

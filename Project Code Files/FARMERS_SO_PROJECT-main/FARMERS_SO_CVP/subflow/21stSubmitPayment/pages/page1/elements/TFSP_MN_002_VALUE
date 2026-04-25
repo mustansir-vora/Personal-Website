@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1691465732:1708932042570" name="TFSP_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.TFSP_MN_002_VALUE</source>
+</config>
+</decision>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@299678900:1715004065368" name="Foremost_Current_Bal_Check1" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="FWS_Current_Bal_Check" default_exit_state="LESS_THAN_ZERO">
+        <exit_state name="GREATER_THAN_ZERO" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CURRENTBALANCE" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

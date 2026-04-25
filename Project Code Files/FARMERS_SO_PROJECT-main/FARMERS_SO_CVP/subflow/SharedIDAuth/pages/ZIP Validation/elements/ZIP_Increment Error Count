@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1903331445:1729603672111" name="ZIP_Increment Error Count" version="6.0.1">
+<config>
+<settings>
+<setting name="initial">0</setting>
+<setting name="type">increment</setting>
+<setting name="step">1</setting>
+</settings>
+</config>
+</action_element>

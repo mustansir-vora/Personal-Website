@@ -1,0 +1,18 @@
+{
+  "name": "a14c77e5-dcb3-48c7-898d-5731e55d7996",
+  "displayName": "Start Wireless Identification",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Is Customer Identified?",
+    "name": "613abb30-bd5c-4b43-b228-5d28dce3273b"
+  } ]
+}

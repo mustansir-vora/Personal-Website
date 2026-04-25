@@ -1,0 +1,25 @@
+{
+  "name": "21a8b056-87e4-488b-9bb5-263e627f6df7",
+  "displayName": "Check Confirmed Script Id",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.confirmvoiceScriptId != null AND $session.params.confirmvoiceScriptId != \"\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Problem Fixed Menu",
+    "name": "ee7fe4ec-4cc8-450f-9910-13b29fd31666"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Caller Id \u0026 Int_Label 1",
+    "name": "f4cdf668-46e4-4ea8-9dcc-324db624177e"
+  } ]
+}

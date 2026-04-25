@@ -1,0 +1,7 @@
+{
+  "name": "fd0c8915-a966-4d73-a9b2-e9f46d158496",
+  "displayName": "advantage-wifi-support",
+  "priority": 500000,
+  "description": "Handles calls with advantage wifi issue for business customers.",
+  "numTrainingPhrases": 18
+}

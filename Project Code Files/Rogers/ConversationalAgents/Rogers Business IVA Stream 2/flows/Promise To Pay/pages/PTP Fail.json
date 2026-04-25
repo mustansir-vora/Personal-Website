@@ -1,0 +1,149 @@
+{
+  "name": "59166f46-1c59-4f94-b04c-4be042fbe719",
+  "displayName": "PTP Fail",
+  "form": {
+    "parameters": [ {
+      "displayName": "ptpFailSelection",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "If you need help from a specialist, say yes, or press 1. Otherwise, say no, or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Si vous avez besoin de l’aide d’un spécialiste, \r\ndites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "5fe35893-83aa-45c8-94fd-d2497e36820b"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "If you need help from a specialist, say yes, or press 1. Otherwise, say no, or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Si vous avez besoin de l’aide d’un spécialiste, \r\ndites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "8f9aea07-c96e-4157-8851-06ee24325a62"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "If you need help from a specialist, press 1. If not, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Si vous avez besoin de l’aide d’un spécialiste, \r\nappuyez sur le 1. Sinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "8e5760d3-f522-48a5-8ff3-3c09de44c275"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "If you need help from a specialist, press 1. If not, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Si vous avez besoin de l’aide d’un spécialiste, \r\nappuyez sur le 1. Sinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "31746fc9-f8aa-47f8-b4bb-54bb2113f1b5"
+        }, {
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "transferType",
+              "value": "businessRules"
+            }, {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "793db5a3-1518-4ae1-acae-af91bbd4f24f"
+        }, {
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "transferType",
+              "value": "businessRules"
+            }, {
+              "parameter": "preTransfer",
+              "value": true
+            } ]
+          },
+          "name": "c4c79452-5b17-4a27-ac9e-3b47154e3dc8"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like me to see if a specialist can help you?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous que je vérifie si un spécialiste \npeut vous aider ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpFailSelection = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "88ceed99-7b53-4f58-a6e4-7a3a1da29bbb"
+  }, {
+    "condition": "$session.params.ptpFailSelection = no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can also find help online, at \u003cwebsite\u003e. Or, through the \u003cmobileApp\u003e app." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Vous pouvez également obtenir de l’aide en ligne \r\nau \u003cwebsite\u003e ou par l’entremise de l’application \r\n\u003cmobileApp\u003e. " ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "targetPage": "Check From AR",
+    "name": "b3f91f04-2b68-4faf-a547-c411c70667f1"
+  } ]
+}

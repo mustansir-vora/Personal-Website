@@ -1,0 +1,49 @@
+{
+  "name": "9f9e001e-b010-4cb1-ac56-61d4d6e197c0",
+  "actions": [ {
+    "agentUtterance": {
+      "text": " Is there an antenna fixed to the outside of your residence?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yes"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your internet equipment"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "customerIdentified": "false",
+      "isQuebecAntennaOffered": "true",
+      "npaProvince": "Quebec",
+      "numberOfInternet": "3",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportWireless,passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "savedIntent": "Internet-WHI",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11402-Antenna-Res-Yes-Sim-No",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 325,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

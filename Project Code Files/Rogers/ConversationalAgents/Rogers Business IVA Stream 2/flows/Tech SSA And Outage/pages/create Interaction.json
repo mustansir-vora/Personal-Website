@@ -1,0 +1,19 @@
+{
+  "name": "86b55577-d29f-44bc-b820-35ba5d515d4c",
+  "displayName": "create Interaction",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "createInteraction"
+    },
+    "targetPage": "heardOutage",
+    "name": "47d9a0f2-984d-4624-a3d3-b836a1714a02"
+  } ]
+}

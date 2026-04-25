@@ -1,0 +1,7 @@
+{
+  "name": "ac1d39ef-4c29-4263-9c25-9e221f9d37e5",
+  "displayName": "move-related-changes",
+  "priority": 500000,
+  "description": "handles services related to moving",
+  "numTrainingPhrases": 22
+}

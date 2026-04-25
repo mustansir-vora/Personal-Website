@@ -1,0 +1,43 @@
+{
+  "name": "111d3b49-f59c-495e-b23d-8041b84282f2",
+  "displayName": "Call Credit Limit Usage Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowInputs.accountBalance.callCurrentBalanceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callInstallmentPaymentPlanDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callLastInvoiceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callPendingPTPDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callCreditLimitUsageDetailsSubflow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Play Balance Details",
+    "name": "727026c9-4478-4f83-89c0-95c6cb162904"
+  }, {
+    "condition": "$session.params.subFlowReturnValue = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subFlowReturnValue",
+        "value": null
+      } ]
+    },
+    "targetFlow": "AR Make Payment",
+    "name": "58421fc3-814c-4126-b45a-d6298968a348"
+  } ]
+}

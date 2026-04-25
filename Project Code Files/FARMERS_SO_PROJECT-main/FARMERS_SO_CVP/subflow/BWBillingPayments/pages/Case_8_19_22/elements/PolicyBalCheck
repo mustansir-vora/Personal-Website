@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1868292064:1715071742155" name="PolicyBalCheck" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="PL_BALANCE_CHECK">
+        <exit_state name="Lessthan_0" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_POLICY_BALANCE_LESSTHAN_ZERO" />
+                </data>
+                <constant_string value="True" />
+            </string>
+        </exit_state>
+        <exit_state name="Equals_0" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_POLICY_BALANCE_EQ_ZERO" />
+                </data>
+                <constant_string value="True" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

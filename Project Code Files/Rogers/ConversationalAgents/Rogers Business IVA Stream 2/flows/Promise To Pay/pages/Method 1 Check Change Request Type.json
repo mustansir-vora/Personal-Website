@@ -1,0 +1,59 @@
+{
+  "name": "d9a0f639-a949-41bf-86c8-8bd300098ef8",
+  "displayName": "Method 1 Check Change Request Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeMethod = true AND $session.params.ptpFirstInstallOrSingle = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Method 1 Check Current Promise Method",
+    "name": "3fa0bbae-8578-49b3-ad7f-535ef40f8ec7"
+  }, {
+    "condition": "$session.params.ptpChangeMethod = true AND $session.params.ptpFirstInstallOrSingle = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PTP Install Counter",
+    "name": "52b6986f-5060-4fbf-9947-37d3933152a9"
+  }, {
+    "condition": "$session.params.ptpChangeCC = true AND $session.params.ptpFirstInstallOrSingle = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "CC"
+      } ]
+    },
+    "targetPage": "Check Promise Method Is Collected Method",
+    "name": "e1070e35-192d-455c-842b-df9af4801329"
+  }, {
+    "condition": "$session.params.ptpChangeCC = true AND $session.params.ptpFirstInstallOrSingle = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PTP Install Counter",
+    "name": "9cba40e9-e59b-445e-b1ae-19ac5266845c"
+  }, {
+    "condition": "$session.params.ptpChangePB = true AND $session.params.ptpFirstInstallOrSingle = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "PB"
+      } ]
+    },
+    "targetPage": "Check Promise Method Is Collected Method",
+    "name": "89e87ff9-477a-4b42-b763-2ccb80c35da6"
+  }, {
+    "condition": "$session.params.ptpChangePB = true AND $session.params.ptpFirstInstallOrSingle = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PTP Install Counter",
+    "name": "8cf1c15c-1898-4ba2-9fe0-91b113728fb0"
+  } ]
+}

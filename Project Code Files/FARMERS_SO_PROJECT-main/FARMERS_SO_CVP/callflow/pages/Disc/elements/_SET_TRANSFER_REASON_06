@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@257754583:1733226842506" name="_SET_TRANSFER_REASON_06" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">MEDIA_RESOURCE_UNAVAILABLE_ISSUE</setting>
+<setting name="sessNames">S_TRANSFER_REASON</setting>
+</settings>
+</config>
+</action_element>

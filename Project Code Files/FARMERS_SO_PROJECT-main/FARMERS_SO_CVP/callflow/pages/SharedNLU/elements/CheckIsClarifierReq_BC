@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1521233621:1730744888313" name="CheckIsClarifierReq_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.CheckIsClarifier_BC</source>
+</config>
+</decision>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@570199286:1713828210222" name="Set_Flag_To_Enter_PolicyNo" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">S_LOOKUP_ANOTHER_POLICY</setting>
+</settings>
+</config>
+</action_element>

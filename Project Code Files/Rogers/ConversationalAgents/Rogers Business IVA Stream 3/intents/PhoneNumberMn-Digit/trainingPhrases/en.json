@@ -1,0 +1,174 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "the number "
+    }, {
+      "text": "1098765432",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "mobile number "
+    }, {
+      "text": "2109876543",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "cell number "
+    }, {
+      "text": "3210987654",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "contact number "
+    }, {
+      "text": "4321098765",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "number "
+    }, {
+      "text": "5432109876",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "phone number "
+    }, {
+      "text": "6543210987",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "cell number is "
+    }, {
+      "text": "7654321098",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my contact number is "
+    }, {
+      "text": "8765432109",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my cell is "
+    }, {
+      "text": "9876543210",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "mobile number "
+    }, {
+      "text": "1098765432",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "number is "
+    }, {
+      "text": "2134567890",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "5467901234",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "phone number is "
+    }, {
+      "text": "3245678901",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My mobile number is "
+    }, {
+      "text": "4356789012",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my number is "
+    }, {
+      "text": "5467890123",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "7687090123",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "6574326179",
+      "parameterId": "phoneNumber",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "5647889012",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "mobile number is "
+    }, {
+      "text": "6578095674",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "6579875698",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

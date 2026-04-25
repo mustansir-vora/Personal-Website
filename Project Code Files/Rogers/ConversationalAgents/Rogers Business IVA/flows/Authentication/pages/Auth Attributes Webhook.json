@@ -1,0 +1,85 @@
+{
+  "name": "1fafe97c-bb07-40bc-b2b6-d2ee04612b71",
+  "displayName": "Auth Attributes Webhook",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-nluconfig",
+    "tag": "getAuthenticationAttributes"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Pin Indicator",
+    "name": "5ee6dc1a-63f9-4b9f-92b8-a78dfb6d7bb9"
+  }, {
+    "condition": "$session.params.returnCode = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "086f0206-c739-4121-8366-59b66b9edb93"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "0119599d-9eb7-42b2-a3c0-80419ee7fdcd"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "c59264a9-0e87-465e-9cf2-d84acee14b7b"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "a7d5f84a-68ab-4fe5-9b02-5259593c2ed8"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "name": "16561170-d386-457c-a232-dd6f0745de0e"
+  } ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "2e836ea3-1d44-4fdb-bcb4-fd0b93eb2e1c",
+  "displayName": "ExitType",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.postNLInvoluntaryRidirect = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLInvoluntaryComplete",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "47d091b2-0a24-4c7a-b7b9-9c41b11dbf87"
+  }, {
+    "condition": "$session.params.postNLInvoluntaryRidirect != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Predictive Broadcast",
+    "name": "e186604d-447d-426c-bb82-dbd05f063c24"
+  } ]
+}

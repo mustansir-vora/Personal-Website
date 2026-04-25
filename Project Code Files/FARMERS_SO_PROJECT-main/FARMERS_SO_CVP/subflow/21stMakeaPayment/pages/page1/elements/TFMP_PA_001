@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@162761602:1709104405977" name="TFMP_PA_001" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="TFMP_PA_001.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.S_AMOUNT_TOBE_SENT}</say_it_smart>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="TFMP_PA_001a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{Data.Session.S_LAST_FOUR_CARDDIGITS}</say_it_smart>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="TFMP_PA_001b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyyyy" output_format="month_year" type="date">{Data.Session.S_EXPIRATIONDATE}</say_it_smart>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="TFMP_PA_001c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{Data.Session.S_BILLINGZIPCODE}</say_it_smart>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="TFMP_PA_001d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmddyyyy" output_format="date" type="date">{Data.Session.S_CURRENTDATE}</say_it_smart>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="TFMP_PA_001e.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

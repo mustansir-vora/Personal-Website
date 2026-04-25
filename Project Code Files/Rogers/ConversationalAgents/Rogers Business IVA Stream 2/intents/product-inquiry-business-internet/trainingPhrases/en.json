@@ -1,0 +1,37 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I am inquiring about internet for my business."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My new business requires stable and fast connectivity, I need to speak to someone who can help me."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How much will it cost my business for an internet with "
+    }, {
+      "text": "1"
+    }, {
+      "text": "GB speed?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am opening a new store location and looking for internet to be installed before the store opening."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am adding internet in my small business."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

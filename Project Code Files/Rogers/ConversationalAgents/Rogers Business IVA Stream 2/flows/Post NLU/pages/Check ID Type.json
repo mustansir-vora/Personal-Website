@@ -1,0 +1,62 @@
+{
+  "name": "75ba5d3d-25ab-4e34-bef3-092b54017eec",
+  "displayName": "Check ID Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "AccountRetryCounter",
+      "value": 0
+    }, {
+      "parameter": "PhoneRetryCounter",
+      "value": 0
+    }, {
+      "parameter": "phoneNumberAskedFlag",
+      "value": false
+    }, {
+      "parameter": "accountNumberAskedFlag",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.idType = \"phone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLIDType",
+        "value": "phone"
+      }, {
+        "parameter": "postNLInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Pre NLU",
+    "name": "f2298712-8f00-4eec-a41e-5a7515fdfc32"
+  }, {
+    "condition": "$session.params.idType = \"account\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLIDType",
+        "value": "account"
+      }, {
+        "parameter": "maxAccountRetries",
+        "value": 2
+      }, {
+        "parameter": "maxPhoneRetries",
+        "value": 1
+      }, {
+        "parameter": "postNLInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Pre NLU",
+    "name": "a3688962-8860-4053-a6d0-b9994038fbca"
+  }, {
+    "condition": "$session.params.idType = \"both\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ID Type Disambig",
+    "name": "a212f773-4f39-4f42-a448-4bd0293f1f6f"
+  } ]
+}

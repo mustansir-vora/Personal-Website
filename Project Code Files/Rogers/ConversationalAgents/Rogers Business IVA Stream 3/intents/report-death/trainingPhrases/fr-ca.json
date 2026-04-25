@@ -1,0 +1,249 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Le titulaire est décédé; j’ai besoin d’aide pour fermer le tout."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je rapporte "
+    }, {
+      "text": "un"
+    }, {
+      "text": " décès pour fermer le compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois régler et fermer "
+    }, {
+      "text": "les services"
+    }, {
+      "text": " téléphoniques d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " membre décédé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux clôturer "
+    }, {
+      "text": "les services"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " proche décédé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le titulaire est décédé; je signale le décès."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Un"
+    }, {
+      "text": " proche est décédé; je veux fermer son compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux mettre fin "
+    }, {
+      "text": "au service"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " client décédé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je "
+    }, {
+      "text": "ferme"
+    }, {
+      "text": " le compte au nom de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " conjoint décédé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux signaler "
+    }, {
+      "text": "un"
+    }, {
+      "text": " décès et demander le solde final."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon"
+    }, {
+      "text": " frère est décédé; nous devons annuler "
+    }, {
+      "text": "son service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon"
+    }, {
+      "text": " père est décédé; je dois fermer son téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois fermer le compte d’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " personne décédée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le client est décédé; je veux fermer "
+    }, {
+      "text": "son service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je signale "
+    }, {
+      "text": "un"
+    }, {
+      "text": " décès et demande fermeture du compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Un"
+    }, {
+      "text": " proche est décédé; nous devons fermer le compte "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux déclarer le décès de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " conjoint."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le titulaire est décédé; il faut fermer la ligne."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je signale le décès de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " oncle, titulaire du compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois annuler "
+    }, {
+      "text": "le service"
+    }, {
+      "text": " car le titulaire n’est plus vivant."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma mère est décédée; nous devons fermer son compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux déclarer le décès d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " membre de la famille."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "mari"
+    }, {
+      "text": " est décédé; nous devons fermer "
+    }, {
+      "text": "son service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le client est décédé; je dois fermer le compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon"
+    }, {
+      "text": " père est décédé; je dois annuler son compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois signaler que le titulaire du compte est décédé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

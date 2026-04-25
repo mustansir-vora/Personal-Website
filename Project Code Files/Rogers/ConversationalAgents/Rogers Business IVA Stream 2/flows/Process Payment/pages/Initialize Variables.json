@@ -1,0 +1,18 @@
+{
+  "name": "92074a1b-856a-4530-a7bd-e24317abc6a1",
+  "displayName": "Initialize Variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Payment",
+    "name": "7e1f0dd4-1812-4eb7-937b-76482b4c0365"
+  } ]
+}

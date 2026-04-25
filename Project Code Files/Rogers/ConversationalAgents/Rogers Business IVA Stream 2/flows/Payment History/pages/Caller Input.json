@@ -1,0 +1,67 @@
+{
+  "name": "f3ccd732-770d-4cdd-addf-2459193bd23d",
+  "displayName": "Caller Input",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "go-back",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "PH - collected go back" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Play backUp",
+    "name": "660702b5-c274-490d-a14c-67e91e7e22ed"
+  }, {
+    "intent": "stop",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call SMS subflow",
+    "name": "ea26a3b0-ce90-4212-afc0-122662137abc"
+  }, {
+    "intent": "repeat",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "PH - Repeat" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Add paymentHistoryRepeatCounter",
+    "name": "808796c2-10b4-4da3-8db0-b2395ebb693e"
+  }, {
+    "intent": "next",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check morePaymentAvailable",
+    "name": "bd779ffd-f6a0-40e4-b724-f07376147d44"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Check morePaymentAvailable",
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+    
+    },
+    "name": "fe290bc3-7dee-416e-9353-a3487d64febc"
+  }, {
+    "targetPage": "Check morePaymentAvailable",
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+    
+    },
+    "name": "0779f390-f682-4b51-ac7f-4b5753e9f095"
+  } ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1292201199:1730827882279" name="NLCL_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.SharedClarifierNLU_BC</source>
+</config>
+</decision>

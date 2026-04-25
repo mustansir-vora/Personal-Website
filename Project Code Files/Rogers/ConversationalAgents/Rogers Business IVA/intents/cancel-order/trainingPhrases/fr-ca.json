@@ -1,0 +1,261 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Veuillez supprimer et annuler la commande en ligne que j’ai faite "
+    }, {
+      "text": "pour un"
+    }, {
+      "text": " nouvel appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’aimerais annuler ma commande et vérifier qu’aucun paiement n’a "
+    }, {
+      "text": "été"
+    }, {
+      "text": " traité."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous vérifier si ma commande est encore annulable avant l’expédition?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux annuler la commande récente que j’ai faite en ligne."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez annuler ma commande pour ramassage en "
+    }, {
+      "text": "magasin"
+    }, {
+      "text": " et confirmer l’annulation par courriel."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous annuler la commande de téléphone que j’ai passée plus tôt via l’application?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois annuler ma commande en ligne et en faire "
+    }, {
+      "text": "une"
+    }, {
+      "text": " nouvelle pour le bon article."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai commandé le mauvais produit, pouvez-vous annuler cette commande?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider à annuler "
+    }, {
+      "text": "une"
+    }, {
+      "text": " commande qui est encore en traitement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’aimerais annuler ma récente commande d’appareil et choisir plutôt "
+    }, {
+      "text": "un"
+    }, {
+      "text": " autre modèle."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider à arrêter ma commande "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": " avant qu’elle soit livrée?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux annuler "
+    }, {
+      "text": "une"
+    }, {
+      "text": " commande en ligne et repasser la commande avec "
+    }, {
+      "text": "une"
+    }, {
+      "text": " autre adresse de "
+    }, {
+      "text": "livraison"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez annuler ma commande récente et vous assurer que je ne serai pas facturé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai passé "
+    }, {
+      "text": "une"
+    }, {
+      "text": " commande en double par accident et j’ai besoin d’en annuler "
+    }, {
+      "text": "une"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous confirmer s’il est encore possible d’annuler ma commande pour ramassage en "
+    }, {
+      "text": "magasin"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois annuler "
+    }, {
+      "text": "une"
+    }, {
+      "text": " commande que j’ai passée "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte "
+    }, {
+      "text": "hier"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez m’aider à annuler ma commande avant qu’elle soit traitée ou expédiée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’aimerais annuler la commande que j’ai faite "
+    }, {
+      "text": "pour un"
+    }, {
+      "text": " nouveau téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai passé "
+    }, {
+      "text": "une"
+    }, {
+      "text": " commande en ligne par erreur, pouvez-vous m’aider à l’annuler?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous annuler ma commande d’appareil et émettre "
+    }, {
+      "text": "un"
+    }, {
+      "text": " remboursement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour annuler "
+    }, {
+      "text": "une"
+    }, {
+      "text": " commande que je viens de faire "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " le site Web."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez annuler ma commande "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": " et confirmer qu’elle a "
+    }, {
+      "text": "été"
+    }, {
+      "text": " arrêtée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux annuler "
+    }, {
+      "text": "une"
+    }, {
+      "text": " commande pour ramassage en "
+    }, {
+      "text": "magasin"
+    }, {
+      "text": " que j’ai planifiée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider à annuler la commande de téléphone que j’ai passée plus tôt "
+    }, {
+      "text": "aujourd’hui"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’aimerais annuler ma récente commande en ligne avant qu’elle ne soit expédiée."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

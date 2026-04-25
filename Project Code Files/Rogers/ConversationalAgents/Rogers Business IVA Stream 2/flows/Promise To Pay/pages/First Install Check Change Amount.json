@@ -1,0 +1,31 @@
+{
+  "name": "1bc4a7d2-e06c-405a-b3d8-5b7f7780fbfe",
+  "displayName": "First Install Check Change Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeAmount = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Change 1st Amount",
+    "name": "1d42b39d-f04d-4924-80df-cb07885ea952"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updatemultipleFirstInstall",
+        "value": false
+      }, {
+        "parameter": "firstPromiseDate",
+        "value": "$session.params.collectedPtpDate"
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "63d09cd1-8afe-4496-908a-742e6cb814cd"
+  } ]
+}

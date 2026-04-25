@@ -1,0 +1,62 @@
+{
+  "name": "6c415434-7f33-4f7e-8b03-a516dd007221",
+  "displayName": "Post PTP Product Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.product = internet",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vos services \u003cdata\u003e \u003cinternet\u003e \r\nseront rétablis dans un délai de 30 \r\nminutes. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Your internet services will be restored within 30 minutes." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Set PTP Sms Params",
+    "name": "00aa280a-52fa-4119-9b7d-881ac53a5fd4"
+  }, {
+    "condition": "$session.params.product = wireless",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Votre service \u003cwireless\u003e sera \r\nrétabli dans un délai de 30 \r\nminutes. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Your wireless will be restored within 30 minutes." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Set PTP Sms Params",
+    "name": "f431fc7d-75d5-4ab4-8b42-f9a1256b5365"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "… et votre service pourrait \r\nêtre rétabli dans un délai \r\nde 30 minutes. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "... and your service may be restored within 30 minutes. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Set PTP Sms Params",
+    "name": "98efd073-74c2-4607-9b45-531af1372da5"
+  } ]
+}

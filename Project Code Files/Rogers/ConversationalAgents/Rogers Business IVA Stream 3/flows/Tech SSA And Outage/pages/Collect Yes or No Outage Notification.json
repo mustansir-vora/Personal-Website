@@ -1,0 +1,117 @@
+{
+  "name": "ab65104e-a972-476f-b87d-b12324d1e49b",
+  "displayName": "Collect Yes or No Outage Notification",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.retryCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Would you like to be notified once the service interruption has been resolved?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 1 AND $session.params.stdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that. If you'd like to be notified when the service interruption has been resolved, say yes or press one. Otherwise, say no or press two." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 1 AND $session.params.stdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that. If you'd like to be notified when the service interruption has been resolved, say yes or press one. Otherwise, say no or press two." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "BroadCastMn-Yes",
+    "condition": "$session.params.retryCount \u003c 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Text Or Call",
+    "name": "836f2053-e41b-4b99-89ff-491293569aaf"
+  }, {
+    "intent": "BroadCastMn-No",
+    "condition": "$session.params.retryCount \u003c 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "if you're done, feel free to hang up." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      } ]
+    },
+    "targetPage": "heardOutage",
+    "name": "deb1ab80-f1c1-4aa5-84c0-95481f7cfe73"
+  }, {
+    "condition": "$session.params.retryCount \u003e 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "if you're done, feel free to hang up." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      } ]
+    },
+    "targetPage": "heardOutage",
+    "name": "d13f6a22-8975-42ef-a0f0-90074c7bc19b"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": "$sys.func.ADD($session.params.retryCount, 1)"
+      }, {
+        "parameter": "stdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "caa21b54-8906-4615-b0cc-c418468701ce"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": "$sys.func.ADD($session.params.retryCount, 1)"
+      }, {
+        "parameter": "stdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "a01b9116-057e-44f4-b40a-c39b40ede706"
+  } ],
+  "transitionRouteGroups": [ "Global_Menu_TS" ]
+}

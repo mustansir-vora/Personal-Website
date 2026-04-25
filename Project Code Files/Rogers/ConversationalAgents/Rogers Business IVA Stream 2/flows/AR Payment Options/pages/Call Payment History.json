@@ -1,0 +1,25 @@
+{
+  "name": "13799a70-0816-4daf-982d-91aa699bfabb",
+  "displayName": "Call Payment History",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Payment History",
+    "name": "41cc2aed-5d22-4f2b-955e-d876bc461612"
+  }, {
+    "condition": "$session.params.subFlowReturnValue = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "ef15ab73-2e9f-4950-9a28-766dea17ab70"
+  } ]
+}

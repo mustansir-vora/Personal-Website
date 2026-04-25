@@ -1,0 +1,383 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’ai oublié le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " exigé lorsque j’appelle pour la vérification de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne me souviens plus de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "service"
+    }, {
+      "text": "; peux-tu m’expliquer comment le réinitialiser?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je pense avoir "
+    }, {
+      "text": "changé"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " récemment et "
+    }, {
+      "text": "maintenant"
+    }, {
+      "text": " je ne me souviens plus du nouveau."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour réinitialiser le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " oublié afin d’accéder aux détails de facturation."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai de la difficulté à me rappeler le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte de téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai oublié le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " utilisé pour vérifier "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " identité "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " le compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne me rappelle pas avoir jamais reçu "
+    }, {
+      "text": "un"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": "; comment en obtenir "
+    }, {
+      "text": "un"
+    }, {
+      "text": " "
+    }, {
+      "text": "maintenant"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai perdu le papier où j’avais noté "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": ". Pouvons-nous le réinitialiser?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie de parler au soutien, mais je ne me souviens plus de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de vérification."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai oublié "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de compte et je dois le mettre à jour "
+    }, {
+      "text": "pour un"
+    }, {
+      "text": " nouveau."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai essayé plusieurs "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": ", mais aucun ne fonctionne."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai oublié le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " d’accès lié à ma ligne sans fil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "On m’a demandé "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " pendant l’appel, mais je ne m’en souviens pas."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois réinitialiser "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " pour pouvoir apporter des changements à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne me souviens plus de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " libre-"
+    }, {
+      "text": "service"
+    }, {
+      "text": " et j’ai besoin d’aide pour le réinitialiser."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me vérifier d’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " autre façon? J’ai oublié "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "sécurité"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai oublié le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " associé à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " profil et je dois en créer "
+    }, {
+      "text": "un"
+    }, {
+      "text": " nouveau."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je suis bloqué parce que j’ai entré "
+    }, {
+      "text": "un"
+    }, {
+      "text": " mauvais "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " trop de fois."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois récupérer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " parce que je ne peux pas vérifier "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " identité."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai oublié "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " "
+    }, {
+      "text": "à quatre"
+    }, {
+      "text": " chiffres et je ne peux plus accéder à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne me souviens pas avoir configuré "
+    }, {
+      "text": "un"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": ". Comment puis-je le récupérer?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à réinitialiser "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": "? Je l’ai complètement oublié."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie de me connecter, mais je ne me souviens plus de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai oublié le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte et j’ai besoin d’aide pour le réinitialiser."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

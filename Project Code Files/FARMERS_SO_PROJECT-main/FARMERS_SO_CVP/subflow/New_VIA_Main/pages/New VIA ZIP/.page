@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@976388302:1745495822907" name="New VIA ZIP" version="6.0.1">
+<element height="55" id="Element@692617782:1745495831512" name="VIA_PA_030b" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="154" x="-625" y="404">
+<exit_states>
+<exit_state name="done" target="Element@1444316850:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@674882843:1745495831512" name="VIA_MN_006_Entry" type="Page Connector" width="198" x="562" y="472">
+<page_connector target="Element@928546993:1745495831512">VIA_MN_006_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1657393803:1745495831512" name="ZIP_Increment Error Count" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="257" x="-178" y="348">
+<exit_states>
+<exit_state name="done" target="Element@1525861957:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1204354285:1745495831512" name="VIA_MN_006_VALUE" type="Decision" width="221" x="-181" y="214">
+<exit_states>
+<exit_state name="VALID" target="Element@1202931812:1745504267173"/>
+<exit_state name="INVALID" target="Element@1657393803:1745495831512">
+<bendpoint>
+<dim1 x="-35" y="76"/>
+<dim2 x="-56" y="-58"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1657393803:1745495831512">
+<bendpoint>
+<dim1 x="-128" y="61"/>
+<dim2 x="-149" y="-73"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1657393803:1745495831512">
+<bendpoint>
+<dim1 x="116" y="94"/>
+<dim2 x="117" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1657393803:1745495831512">
+<bendpoint>
+<dim1 x="59" y="68"/>
+<dim2 x="38" y="-66"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@1555637914:1754378084278"/>
+<exit_state name="I Dont Know" target="Element@1349244130:1748964209350">
+<bendpoint>
+<dim1 x="-179" y="-39"/>
+<dim2 x="164" y="-39"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@928546993:1745495831512" name="VIA_MN_006_Entry" type="Page Entry" width="198" x="57" y="144">
+<exit_states>
+<exit_state name="next" target="Element@667723277:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1528276389:1745495831512" name="VIA_PA_028b" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="154" x="403" y="538">
+<exit_states>
+<exit_state name="done" target="Element@674882843:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@361947528:1745495831512" name="ZIP_Collection_Check" type="Decision" width="214" x="-178" y="82">
+<exit_states>
+<exit_state name="NO" target="Element@1699454356:1745495831512"/>
+<exit_state name="YES" target="Element@667723277:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@430541828:1745495831512" name="VIA_PA_030a" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="152" x="-628" y="571">
+<exit_states>
+<exit_state name="done" target="Element@1444316850:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@694627427:1745495831512" name="ZIP_Check Menu Exit State_3" type="Decision" width="272" x="-492" y="488">
+<exit_states>
+<exit_state name="ENTRY INVALID" target="Element@1444316850:1745495831512"/>
+<exit_state name="NM/NI" target="Element@1444316850:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1525861957:1745495831512" name="ZIP_Check Retry Count" type="Decision" width="227" x="-158" y="464">
+<exit_states>
+<exit_state name="2nd Try" target="Element@1680909298:1745495831512"/>
+<exit_state name="Transfer" target="Element@694627427:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1699454356:1745495831512" name="CANCEL_POLICY_ENTRY" type="Page Connector" width="180" x="207" y="62">
+<page_connector target="Element@1232041515:1754377542076">CANCEL_POLICY_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@667723277:1745495831512" name="VIA_MN_006_Call" type="Subflow Call" width="186" x="-163" y="147">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709037514529">
+<config>
+<argument_data>
+<data name="MenuID">VIA_MN_006</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1204354285:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1680909298:1745495831512" name="ZIP_Check Menu Exit State_1" type="Decision" width="272" x="110" y="468">
+<exit_states>
+<exit_state name="ENTRY INVALID" target="Element@1528276389:1745495831512"/>
+<exit_state name="NM/NI" target="Element@1249430000:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1444316850:1745495831512" name="Check_Caller_AUTH_Entry" type="Page Connector" width="247" x="-796" y="477">
+<page_connector target="Element@922763943:1745504565996">Check_Caller_AUTH_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1101267287:1745495831512" name="New VIA ZIP" type="Page Entry" width="148" x="-154" y="18">
+<exit_states>
+<exit_state name="next" target="Element@361947528:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1249430000:1745495831512" name="VIA_PA_028a" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="152" x="398" y="387">
+<exit_states>
+<exit_state name="done" target="Element@674882843:1745495831512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1202931812:1745504267173" name="Check_Caller_Auth" type="Decision" width="192" x="-510" y="214">
+<exit_states>
+<exit_state name="Verified" target="Element@320603482:1750772014954"/>
+<exit_state name="Identified" target="Element@719797038:1745504620880">
+<bendpoint>
+<dim1 x="-208" y="-44"/>
+<dim2 x="125" y="-87"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Authenticated" target="Element@320603482:1750772014954">
+<bendpoint>
+<dim1 x="-156" y="69"/>
+<dim2 x="177" y="26"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@320603482:1750772014954">
+<bendpoint>
+<dim1 x="-206" y="-17"/>
+<dim2 x="127" y="-60"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@922763943:1745504565996" name="Check_Caller_AUTH_Entry" type="Page Entry" width="247" x="-616" y="69">
+<exit_states>
+<exit_state name="next" target="Element@1202931812:1745504267173"/>
+</exit_states>
+</element>
+<element height="55" id="Element@332769115:1745504611515" name="Subflow Return_04" type="Subflow Return" width="198" x="-419" y="391"/>
+<element height="55" id="Element@719797038:1745504620880" name="CANCEL_POLICY_ENTRY" type="Page Connector" width="180" x="-968" y="205">
+<page_connector target="Element@1232041515:1754377542076">CANCEL_POLICY_ENTRY<config/>
+</page_connector>
+</element>
+<element height="52" id="Element@2072347016:1746803016757" name="CHECK_VIAHOST001_CONTAINABLE" type="Decision" width="276" x="-967" y="402">
+<exit_states>
+<exit_state name="SU" target="Element@2132040145:1750338190942"/>
+<exit_state name="YES" target="Element@719797038:1745504620880">
+<bendpoint>
+<dim1 x="-91" y="-105"/>
+<dim2 x="-107" y="83"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@2132040145:1750338190942">
+<bendpoint>
+<dim1 x="195" y="-42"/>
+<dim2 x="-121" y="-66"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1349244130:1748964209350" name="VIA_PA_No_ZIP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="169" x="-426" y="116">
+<exit_states>
+<exit_state name="done" target="Element@1202931812:1745504267173"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2132040145:1750338190942" name="ZIP_IS_CALLED_VIA" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="200" x="-430" y="318">
+<exit_states>
+<exit_state name="done" target="Element@332769115:1745504611515"/>
+</exit_states>
+</element>
+<element height="55" id="Element@320603482:1750772014954" name="SMM_SPCQ_CHECK_05" type="Decision" width="232" x="-813" y="262">
+<exit_states>
+<exit_state name="YES" target="Element@2072347016:1746803016757"/>
+<exit_state name="NO" target="Element@2072347016:1746803016757">
+<bendpoint>
+<dim1 x="14" y="58"/>
+<dim2 x="115" y="-30"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1555637914:1754378084278" name="GLOBAL_REP_ENTRY" type="Page Connector" width="180" x="183" y="235">
+<page_connector target="Element@1828866062:1754498931732">GLOBAL_REP_ENTRY<config/>
+</page_connector>
+</element>
+</page>

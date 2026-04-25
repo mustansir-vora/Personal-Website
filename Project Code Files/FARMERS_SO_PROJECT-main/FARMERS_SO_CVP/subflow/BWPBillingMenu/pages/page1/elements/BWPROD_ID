@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1050071035:1708938914033" name="BWPROD_ID" version="6.0.1">
+<subflow_call subflow_name="BWProdID" target="Element@31:1706163076624">
+<config/>
+</subflow_call>
+</connector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1686177068:1743445116386" name="CALL_FROM_KYC" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">S_CALL_FROM_KYC</setting>
+</settings>
+</config>
+</action_element>

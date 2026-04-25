@@ -1,0 +1,58 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Demain",
+      "parameterId": "changePTPDate"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer pour "
+    }, {
+      "text": "le 3 août",
+      "parameterId": "changePTPDate"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer ",
+      "auto": true
+    }, {
+      "text": "pour le 22 septembre",
+      "parameterId": "changePTPDate"
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer la date "
+    }, {
+      "text": "pour le 4 juillet",
+      "parameterId": "changePTPDate"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Changer la date pour "
+    }, {
+      "text": "demain",
+      "parameterId": "changePTPDate"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

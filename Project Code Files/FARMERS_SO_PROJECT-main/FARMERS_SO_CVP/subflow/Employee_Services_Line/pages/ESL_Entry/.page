@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@387569568:1707991935333" name="ESL_Entry" version="6.0.1">
+<element height="55" id="Element@31:1707991935333" name="Employee_Services_Line" type="Subflow Start" width="176" x="247" y="79">
+<exit_states>
+<exit_state name="next" target="Element@1896554656:1707992010448"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1675379530:1751909941295"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1896554656:1707992010448" name="Shared_Entry_Mod" type="Subflow Call" width="197" x="256" y="181">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1712441739419">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@886936075:1707992040242"/>
+</exit_states>
+</element>
+<element height="55" id="Element@886936075:1707992040242" name="EPSL_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="177" x="256" y="322">
+<exit_states>
+<exit_state name="done" target="Element@2051204027:1708001376227"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2051204027:1708001376227" name="Agent_ID_Confirmation" type="Page Connector" width="234" x="246" y="478">
+<page_connector target="Element@1405375316:1707994323911">Agent_ID_Confirmation<config/>
+</page_connector>
+</element>
+<element height="49" id="Element@1675379530:1751909941295" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="515" y="82">
+<exit_states>
+<exit_state name="done" target="Element@637354740:1751909941295"/>
+</exit_states>
+</element>
+<element height="48" id="Element@897592955:1751909941295" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="923" y="77">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@637354740:1751909941295" name="Shared_Transfer" type="Subflow Call" width="132" x="763" y="80">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@897592955:1751909941295"/>
+</exit_states>
+</element>
+</page>

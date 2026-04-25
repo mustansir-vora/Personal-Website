@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1540655292:1729603734980" name="Check Intent" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check Intent" default_exit_state="Phone Number">
+        <exit_state name="Billing and Payments" conjugate="or">
+            <string operator="equal">
+                <data>
+                    <session name="INTENT" />
+                </data>
+                <constant_string value="BILLING AND PAYMENTS" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="BILLING_PAYMENT" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

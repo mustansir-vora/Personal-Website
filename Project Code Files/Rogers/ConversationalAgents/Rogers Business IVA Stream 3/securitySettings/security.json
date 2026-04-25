@@ -1,0 +1,14 @@
+{
+    "agentDisplayName": "Rogers Business IVA Stream 3",
+    "securitySettings": {
+        "displayName": "Rogers Business IVA Security Profile",
+        "redactionStrategy": "REDACT_WITH_SERVICE",
+        "redactionScope": "REDACT_DISK_STORAGE",
+        "inspectTemplate": "projects/{{PROJECT_ID}}/locations/{{REGION}}/inspectTemplates/r4b-dlp-inspect",
+        "deidentifyTemplate": "projects/{{PROJECT_ID}}/locations/{{REGION}}/deidentifyTemplates/r4b-dlp-deidentify",
+        "retentionWindowDays": 365,
+        "insightsExportSettings": {
+            "enableInsightsExport": true
+        }
+    }
+}

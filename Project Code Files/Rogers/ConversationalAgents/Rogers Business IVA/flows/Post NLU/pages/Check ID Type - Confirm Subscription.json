@@ -1,0 +1,34 @@
+{
+  "name": "3bca237e-8cbb-4987-80ac-b658ef165220",
+  "displayName": "Check ID Type - Confirm Subscription",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.idType = \"account\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "confirmSubscription"
+      } ]
+    },
+    "targetPage": "Start Reusable Phone Number",
+    "name": "e68cc5e3-3147-48d2-a770-7c77aa92aece"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "itnToMatchSubscription",
+        "value": "$session.params.ani"
+      }, {
+        "parameter": "subscriptionITNMatchCalledFrom",
+        "value": "confirmSubscription_A"
+      } ]
+    },
+    "targetPage": "Start Subscription ITN Match",
+    "name": "ed51bab5-6413-4f1e-8054-385934dd383a"
+  } ]
+}

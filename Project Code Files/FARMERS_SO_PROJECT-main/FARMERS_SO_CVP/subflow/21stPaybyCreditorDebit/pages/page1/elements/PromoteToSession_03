@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1285307195:1712762543918" name="PromoteToSession_03" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">PAY_BY_CREDIT_OR_DEBIT</setting>
+<setting name="sessNames">POINT_VALIDATE_CARD_API_INVOKED_FROM</setting>
+</settings>
+</config>
+</action_element>

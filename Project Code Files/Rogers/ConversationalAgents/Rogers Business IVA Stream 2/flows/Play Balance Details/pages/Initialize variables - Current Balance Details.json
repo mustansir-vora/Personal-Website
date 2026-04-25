@@ -1,0 +1,24 @@
+{
+  "name": "aa7703f5-efe3-4efa-a152-4316aff78e0d",
+  "displayName": "Initialize variables - Current Balance Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "$session.params.attemptedSSName",
+      "value": "passive-balanceDetails"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check lastBillingDDate",
+    "name": "052dbff4-4fc7-4f81-ba84-4e41f705a356"
+  } ]
+}

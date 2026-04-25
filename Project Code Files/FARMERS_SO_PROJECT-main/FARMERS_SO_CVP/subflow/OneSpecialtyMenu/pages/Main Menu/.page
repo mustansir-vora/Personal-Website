@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@345692376:1710847489884" name="Main Menu" version="6.0.1">
+<element height="55" id="Element@1273649778:1710847489884" name="POLICY_DATA_IN_KYC_CHECK_ENTRY" type="Page Entry" width="341" x="430" y="17">
+<exit_states>
+<exit_state name="next" target="Element@1102201790:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1075200919:1710847492354" name="OSPM_MN_001_VALUE" type="Decision" width="231" x="477" y="535">
+<exit_states>
+<exit_state name="Claims" target="Element@1135578028:1710847492354"/>
+<exit_state name="Quotes" target="Element@1102798828:1710847492354"/>
+<exit_state name="Policy Assistance" target="Element@1274271602:1710847492354"/>
+<exit_state name="Billing" target="Element@1572250730:1710847492354">
+<bendpoint>
+<dim1 x="395" y="-1"/>
+<dim2 x="0" y="-116"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Make a Payment" target="Element@2067583621:1710847492354"/>
+<exit_state name="ID Cards" target="Element@337651455:1711548417685"/>
+<exit_state name="Cancellations" target="Element@609198377:1759326915092"/>
+<exit_state name="Website Help" target="Element@1463446322:1710847492354"/>
+<exit_state name="Representative" target="Element@1714774071:1730259143742"/>
+<exit_state name="NI" target="Element@1532623634:1710847492354"/>
+<exit_state name="NM" target="Element@194185891:1710847492354">
+<bendpoint>
+<dim1 x="246" y="187"/>
+<dim2 x="245" y="-222"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@194185891:1710847492354">
+<bendpoint>
+<dim1 x="214" y="215"/>
+<dim2 x="213" y="-194"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@2067583621:1710847492354" name="MAKE_A_PAYMENT" type="Page Connector" width="200" x="105" y="611">
+<page_connector target="Element@1460821346:1708937843666">MAKE_A_PAYMENT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1543965175:1710847492354" name="OSPM_MN_001_Call" type="Subflow Call" width="208" x="482" y="359">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113307740">
+<config>
+<argument_data>
+<data name="MenuID">OSPM_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1075200919:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1274271602:1710847492354" name="POLICY_ASSISTANCE" type="Page Connector" width="215" x="100" y="363">
+<page_connector target="Element@749992153:1708937834390">POLICY_ASSISTANCE<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1532623634:1710847492354" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="251" x="863" y="459">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2037118178:1710847492354" name="REPRESENTATIVE" type="Page Connector" width="185" x="111" y="524">
+<page_connector target="Element@485238498:1709114689054">REPRESENTATIVE<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@2062367345:1710847492354" name="OSPM_MN_001_ENTRY" type="Page Entry" width="232" x="236" y="276">
+<exit_states>
+<exit_state name="next" target="Element@1543965175:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1102201790:1710847492354" name="POLICY_DATA_IN_KYC_CHECK" type="Decision" width="282" x="456" y="155">
+<exit_states>
+<exit_state name="Yes" target="Element@1543965175:1710847492354"/>
+<exit_state name="No" target="Element@2110038871:1710847588524"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1082558673:1710847492354" name="HANGUP_ENTRY" type="Page Entry" width="181" x="707" y="371">
+<exit_states>
+<exit_state name="next" target="Element@1532623634:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1102798828:1710847492354" name="QUOTES" type="Page Connector" width="117" x="140" y="443">
+<page_connector target="Element@1216107628:1708937826401">QUOTES<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1135578028:1710847492354" name="OSPM_ADM_010" type="Decision" width="185" x="747" y="599">
+<exit_states>
+<exit_state name="ER" target="Element@194185891:1710847492354">
+<bendpoint>
+<dim1 x="51" y="153"/>
+<dim2 x="286" y="-195"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SU" target="Element@194185891:1710847492354">
+<bendpoint>
+<dim1 x="50" y="154"/>
+<dim2 x="285" y="-194"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1572250730:1710847492354" name="S_ID_AUTH_1" type="Subflow Call" width="155" x="902" y="650">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1711718316881">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@380800236:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@380800236:1710847492354" name="ID_AUTH_CHECK" type="Decision" width="182" x="890" y="784">
+<exit_states>
+<exit_state name="Success" target="Element@1765339549:1710847492354"/>
+<exit_state name="Failure" target="Element@194185891:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1463446322:1710847492354" name="OSPM_ADM_002" type="Decision" width="185" x="497" y="784">
+<exit_states>
+<exit_state name="ER" target="Element@194185891:1710847492354"/>
+<exit_state name="SU" target="Element@194185891:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@194185891:1710847492354" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="380" y="941">
+<page_connector target="Element@1034481077:1710846981544">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1765339549:1710847492354" name="S_BILLING_PAYMENTS_1" type="Subflow Call" width="239" x="867" y="944">
+<subflow_call subflow_name="SharedBillingPayments" target="Element@31:1711718322071">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1831440442:1723532325111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2110038871:1710847588524" name="CALLER_TYPE_MENU_CHECK_ENTRY" type="Page Connector" width="331" x="713" y="249">
+<page_connector target="Element@2093357551:1710847558027">CALLER_TYPE_MENU_CHECK_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@991711430:1711548415861" name="OSPM_ADM_003" type="Decision" width="185" x="296" y="791">
+<exit_states>
+<exit_state name="SU" target="Element@194185891:1710847492354"/>
+<exit_state name="ER" target="Element@194185891:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@337651455:1711548417685" name="OSPM_ADM_004" type="Decision" width="185" x="98" y="781">
+<exit_states>
+<exit_state name="SU" target="Element@194185891:1710847492354"/>
+<exit_state name="ER" target="Element@194185891:1710847492354"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1963571431:1721137063695" name="POLICY_DATA_IN_KYC_CHECK_ENTRY" type="Page Connector" width="294" x="830" y="882">
+<page_connector target="Element@1273649778:1710847489884">POLICY_DATA_IN_KYC_CHECK_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1831440442:1723532325111" name="Is_Route_To" type="Decision" width="141" x="639" y="1040">
+<exit_states>
+<exit_state name="MAIN_MENU" target="Element@1963571431:1721137063695"/>
+<exit_state name="OTHERS" target="Element@194185891:1710847492354"/>
+<exit_state name="NEW_QUOTE" target="Element@1103110495:1723532354206"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1103110495:1723532354206" name="Subflow Return_04" type="Subflow Return" width="173" x="626" y="1151"/>
+<element height="55" id="Element@1714774071:1730259143742" name="Copy_9_of_Global_Rep_Handling" type="Decision" width="223" x="26" y="253">
+<exit_states>
+<exit_state name="CONT" target="Element@2037118178:1710847492354"/>
+<exit_state name="TR" target="Element@194185891:1710847492354"/>
+</exit_states>
+</element>
+<element height="55" id="Element@609198377:1759326915092" name="S_ID_AUTH_3" type="Subflow Call" width="168" x="327" y="716">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1711718316881">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@991711430:1711548415861"/>
+</exit_states>
+</element>
+</page>

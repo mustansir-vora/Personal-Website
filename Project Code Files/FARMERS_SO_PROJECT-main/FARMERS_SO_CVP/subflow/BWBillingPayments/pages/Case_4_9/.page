@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1638147777:1715067552361" name="Case_4_9" version="6.0.1">
+<element height="50" id="Element@1805585130:1715067552361" name="Case_4_9" type="Page Entry" width="109" x="502" y="22">
+<exit_states>
+<exit_state name="next" target="Element@1393587567:1715074476187"/>
+</exit_states>
+</element>
+<element height="55" id="Element@377078033:1715074476187" name="BWBP_PA_011" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="143" x="172" y="814">
+<exit_states>
+<exit_state name="done" target="Element@347515802:1715075214751"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1129948471:1715074476187" name="Relapse_Period" type="Decision" width="150" x="480" y="391">
+<exit_states>
+<exit_state name="True" target="Element@298637952:1715074476187"/>
+<exit_state name="False" target="Element@2110433399:1715074476187"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1393587567:1715074476187" name="RenewalAmt_Date_Exist" type="Decision" width="208" x="462" y="137">
+<exit_states>
+<exit_state name="True" target="Element@612351319:1715074476187"/>
+<exit_state name="False" target="Element@930663863:1715074476187"/>
+</exit_states>
+</element>
+<element height="55" id="Element@612351319:1715074476187" name="TodayDate_LessThan_RenewalEffectiveDate1" type="Decision" width="346" x="407" y="265">
+<exit_states>
+<exit_state name="Ture" target="Element@1129948471:1715074476187"/>
+<exit_state name="False" target="Element@1129948471:1715074476187"/>
+</exit_states>
+</element>
+<element height="55" id="Element@930663863:1715074476187" name="Transfer" type="Page Connector" width="102" x="711" y="136">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@192289989:1715074476187" name="PolicyBal" type="Decision" width="109" x="387" y="628">
+<exit_states>
+<exit_state name="=0" target="Element@1947723333:1721743062201"/>
+<exit_state name="NotEquals_0" target="Element@1947723333:1721743062201"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2110433399:1715074476187" name="Renewal_Pending_Check" type="Decision" width="210" x="354" y="505">
+<exit_states>
+<exit_state name="Ture" target="Element@192289989:1715074476187"/>
+<exit_state name="Flase" target="Element@192289989:1715074476187"/>
+</exit_states>
+</element>
+<element height="55" id="Element@298637952:1715074476187" name="NSF_State_Check" type="Decision" width="161" x="552" y="506">
+<exit_states>
+<exit_state name="Y" target="Element@1604024653:1721743149559"/>
+<exit_state name="Not Y" target="Element@1604024653:1721743149559">
+<bendpoint>
+<dim1 x="45" y="66"/>
+<dim2 x="35" y="-57"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1787879257:1715074476187" name="BWBP_PA_012" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="143" x="555" y="761">
+<exit_states>
+<exit_state name="done" target="Element@347515802:1715075214751"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1685010522:1715075214751" name="EPC_PAYMENTS_US3" type="Subflow Call" width="202" x="247" y="1271">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1711717421472">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1168418102:1715075214751"/>
+</exit_states>
+</element>
+<element height="55" id="Element@347515802:1715075214751" name="Agent_DNIS_Check3" type="Decision" width="183" x="466" y="904">
+<exit_states>
+<exit_state name="Customer" target="Element@1415510138:1715075315726"/>
+<exit_state name="Agent" target="Element@249621843:1722927893930"/>
+</exit_states>
+</element>
+<element height="50" id="Element@478302131:1715075214751" name="Transfer" type="Page Connector" width="102" x="501" y="1277">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1168418102:1715075214751" name="Disc" type="Page Connector" width="78" x="312" y="1379">
+<page_connector target="Element@1134908791:1715070588429">Disc<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1415510138:1715075315726" name="BWBP_MN_003_Call" type="Subflow Call" width="205" x="243" y="1042">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709110016432">
+<config>
+<argument_data>
+<data name="MenuID">BWBP_MN_003</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1137627543:1715075315726"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1137627543:1715075315726" name="BWBP_MN_003_VALUE" type="Decision" width="228" x="238" y="1152">
+<exit_states>
+<exit_state name="YES" target="Element@1685010522:1715075214751"/>
+<exit_state name="NO" target="Element@249621843:1722927893930"/>
+<exit_state name="NOINPUT" target="Element@478302131:1715075214751"/>
+<exit_state name="NOMATCH" target="Element@478302131:1715075214751"/>
+<exit_state name="ER" target="Element@478302131:1715075214751"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1947723333:1721743062201" name="Lang_Check_9" type="Decision" width="201" x="338" y="743">
+<exit_states>
+<exit_state name="Yes" target="Element@377078033:1715074476187"/>
+<exit_state name="No" target="Element@1875635086:1721743092413"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1875635086:1721743092413" name="SP_BWBP_PA_011" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="165" x="361" y="816">
+<exit_states>
+<exit_state name="done" target="Element@347515802:1715075214751"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1604024653:1721743149559" name="Lang_Check_10" type="Decision" width="201" x="542" y="631">
+<exit_states>
+<exit_state name="Yes" target="Element@1787879257:1715074476187"/>
+<exit_state name="No" target="Element@1921730967:1721743191873"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1921730967:1721743191873" name="SP_BWBP_PA_012" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="165" x="740" y="763">
+<exit_states>
+<exit_state name="done" target="Element@347515802:1715075214751"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1891879971:1722927688890" name="REN_ENTRY" type="Page Entry" width="112" x="748" y="901">
+<exit_states>
+<exit_state name="next" target="Element@347515802:1715075214751"/>
+</exit_states>
+</element>
+<element height="46" id="Element@249621843:1722927893930" name="Call_MN2" type="Page Connector" width="101" x="714" y="1043">
+<page_connector target="Element@1699768267:1715068065991">Call_MN2<config/>
+</page_connector>
+</element>
+</page>

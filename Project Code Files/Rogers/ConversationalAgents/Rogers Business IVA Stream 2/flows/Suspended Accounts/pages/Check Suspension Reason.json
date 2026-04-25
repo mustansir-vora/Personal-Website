@@ -1,0 +1,32 @@
+{
+  "name": "5e620267-2fb0-4d87-bb52-724fb2bd505c",
+  "displayName": "Check Suspension Reason",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.BillingProfile.accountStatusReasonCode = CLM OR $session.params.api.BillingProfile.collectionSuspensionDetails.banSuspensionReason = CLM",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Credit Limit Exceeded",
+    "name": "8b230ad4-5c3e-4c72-8ed1-33e267f56362"
+  }, {
+    "condition": "$session.params.api.BillingProfile.accountStatusReasonCode = NP OR $session.params.api.BillingProfile.collectionSuspensionDetails.banSuspensionReason = NP",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Manually Suspended",
+    "name": "95c1d9f4-a93f-453a-9800-26bfc6520a9a"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Past Due",
+    "name": "2b644155-c1aa-4f4f-bc6a-ed99c90579db"
+  } ]
+}

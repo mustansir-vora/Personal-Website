@@ -1,0 +1,44 @@
+{
+  "name": "0ec87057-5b2e-4cdc-aa5d-e31de0aca0be",
+  "displayName": "Intent Group - tech-support-T2-O365",
+  "transitionRoutes": [ {
+    "intent": "custom-APN-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "custom-APN-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "3c9b06a9-6e3b-44e4-9cd2-d1a6cc3dda76"
+  }, {
+    "intent": "GoDaddy-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "GoDaddy-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d577e26c-4a03-4036-99d5-d601e5a80d8c"
+  }, {
+    "intent": "O365-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "O365-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "6f717840-3f09-48c6-8238-e21f97fe7a8c"
+  } ]
+}

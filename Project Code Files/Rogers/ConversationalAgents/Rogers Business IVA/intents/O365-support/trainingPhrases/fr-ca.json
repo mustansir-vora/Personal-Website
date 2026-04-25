@@ -1,0 +1,152 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Après avoir acheté Teams Calling dans le ",
+      "auto": true
+    }, {
+      "text": "Marché d’Applications d’Affaires de Rogers",
+      "auto": true
+    }, {
+      "text": " (",
+      "auto": true
+    }, {
+      "text": "RBAM",
+      "auto": true
+    }, {
+      "text": "), la connexion au réseau téléphonique ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne peux pas créer de groupes d’utilisateurs ou gérer les permissions dans ",
+      "auto": true
+    }, {
+      "text": "le Marché",
+      "auto": true
+    }, {
+      "text": " d’",
+      "auto": true
+    }, {
+      "text": "Applications d’Affaires",
+      "auto": true
+    }, {
+      "text": " de ",
+      "auto": true
+    }, {
+      "text": "Rogers",
+      "auto": true
+    }, {
+      "text": " (",
+      "auto": true
+    }, {
+      "text": "RBAM",
+      "auto": true
+    }, {
+      "text": ").",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour renouveler ou annuler ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " abonnement O",
+      "auto": true
+    }, {
+      "text": "365",
+      "auto": true
+    }, {
+      "text": " dans ",
+      "auto": true
+    }, {
+      "text": "le Marché",
+      "auto": true
+    }, {
+      "text": " d’",
+      "auto": true
+    }, {
+      "text": "Applications",
+      "auto": true
+    }, {
+      "text": " d’",
+      "auto": true
+    }, {
+      "text": "Affaires",
+      "auto": true
+    }, {
+      "text": " de ",
+      "auto": true
+    }, {
+      "text": "Rogers",
+      "auto": true
+    }, {
+      "text": " (",
+      "auto": true
+    }, {
+      "text": "RBAM",
+      "auto": true
+    }, {
+      "text": ").",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mes licences dans le ",
+      "auto": true
+    }, {
+      "text": "Marché d’Applications d’Affaires de Rogers (RBAM) et Office",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "365",
+      "auto": true
+    }, {
+      "text": " ne sont pas synchronisées — pouvez-vous corriger ",
+      "auto": true
+    }, {
+      "text": "cela",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai acheté Office ",
+      "auto": true
+    }, {
+      "text": "365",
+      "auto": true
+    }, {
+      "text": " via le ",
+      "auto": true
+    }, {
+      "text": "Marché d’Applications d’Affaires de Rogers (RBAM)",
+      "auto": true
+    }, {
+      "text": ", mais ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " courriel ne fonctionne pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

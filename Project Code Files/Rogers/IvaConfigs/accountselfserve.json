@@ -1,0 +1,56 @@
+{
+	"env": {
+		"hostName": "https://ivr.npe.rogers.com/",
+		"qa": "qa4/",
+		"timeOutMS": 15000,
+		"tokenRefreshTimeMin": 55,
+		"tokenUrl": "https://login.microsoftonline.com/0ab4cbbf-4bc7-4826-b52c-a14fed5286b9/oauth2/v2.0/token",
+		"scope": "api://f483184c-4847-4ba1-8deb-bab5f1cfb0c6/.default"
+	},
+	"semafoneInitialize": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-semafone/ivr-r4b-semafone-ms/semafone/initialize"
+	},
+	"readSecureData": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-semafone/ivr-r4b-semafone-ms/semafone/readSecureData"
+	},
+	"createToken": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-semafone/ivr-r4b-semafone-ms/semafone/tokenise"
+	},
+	"logout": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-semafone/ivr-r4b-semafone-ms/semafone/logout"
+	},
+	"initSecureData": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-semafone/ivr-r4b-semafone-ms/semafone/initSecureData"
+	},
+	"makeCreditCardPayment": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-payment/ivr-r4b-payment-ms/accounts/INPUT_ACCOUNTNUMBER/brands/INPUT_BRAND/payments/creditcard"
+	},
+	"createUpdatePTP": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-ptp/ivr-r4b-ptp-ms/accounts/INPUT_ACCOUNTNUMBER/ptp"
+	},
+	"billingProfile": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-account/ivr-r4b-account-ms/accounts/billing/profile"
+	},
+	"paymentHistory": {
+		"retries": 2,
+		"useStub": false,
+		"path": "r4b-payment/ivr-r4b-payment-ms/accounts/INPUT_ACCOUNTNUMBER/payments/history"
+	},
+	"test":true
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1315675434:1714718357339" name="FWS_CANCELLED" version="6.0.1">
+<element height="55" id="Element@2074613417:1714718390612" name="FWS_SBP_MN_007_VALUE" type="Decision" width="254" x="301" y="237">
+<exit_states>
+<exit_state name="New Quote" target="Element@680062071:1714718390612"/>
+<exit_state name="NOINPUT" target="Element@410731516:1714718390612">
+<bendpoint>
+<dim1 x="-58" y="63"/>
+<dim2 x="-57" y="-63"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@410731516:1714718390612">
+<bendpoint>
+<dim1 x="56" y="70"/>
+<dim2 x="57" y="-56"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@410731516:1714718390612"/>
+</exit_states>
+</element>
+<element height="55" id="Element@767701034:1714718390612" name="FWS_REPEAT_BY_STATUS" type="Page Connector" width="245" x="628" y="508">
+<page_connector target="Element@1905155964:1714719564704">FWS_REPEAT_BY_STATUS<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@410731516:1714718390612" name="FWS_SBP_MN_005_Call" type="Subflow Call" width="231" x="308" y="379">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709026404246">
+<config>
+<argument_data>
+<data name="MenuID">SBP_MN_005</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@584091036:1714718390612"/>
+</exit_states>
+</element>
+<element height="55" id="Element@670931143:1714718390612" name="FWS_Transfer2" type="Subflow Call" width="168" x="-52" y="709">
+<subflow_call subflow_name="Transfer" target="Element@31:1710691173865">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1868886733:1714718390612"/>
+</exit_states>
+</element>
+<element height="55" id="Element@680062071:1714718390612" name="FWS_SET_ROUTE_TO_NEW_QUOTE" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="322" x="-68" y="223">
+<exit_states>
+<exit_state name="done" target="Element@1868886733:1714718390612"/>
+</exit_states>
+</element>
+<element height="55" id="Element@90183957:1714718390612" name="FWS_SBP_MN_007_Call" type="Subflow Call" width="231" x="298" y="134">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709026814985">
+<config>
+<argument_data>
+<data name="MenuID">SBP_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2074613417:1714718390612"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1073039781:1714718390612" name="MAIN_MENU" type="Page Connector" width="199" x="245" y="725">
+<page_connector target="Element@1654434117:1714726602317">MAIN_MENU<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1868886733:1714718390612" name="FWS_Subflow Return_2" type="Subflow Return" width="231" x="-19" y="422"/>
+<element height="55" id="Element@584091036:1714718390612" name="FWS_SBP_MN_005_VALUE" type="Decision" width="254" x="303" y="509">
+<exit_states>
+<exit_state name="Lienholder" target="Element@670931143:1714718390612">
+<bendpoint>
+<dim1 x="-246" y="50"/>
+<dim2 x="130" y="-150"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Main Menu" target="Element@1073039781:1714718390612"/>
+<exit_state name="Representative" target="Element@670931143:1714718390612">
+<bendpoint>
+<dim1 x="-144" y="125"/>
+<dim2 x="232" y="-75"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-174" y="134"/>
+<dim2 x="202" y="-66"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Billing Questions" target="Element@670931143:1714718390612">
+<bendpoint>
+<dim1 x="-222" y="96"/>
+<dim2 x="154" y="-104"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1868886733:1714718390612"/>
+<exit_state name="NOMATCH" target="Element@670931143:1714718390612">
+<bendpoint>
+<dim1 x="-267" y="3"/>
+<dim2 x="131" y="-197"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@805860072:1731529488521">
+<bendpoint>
+<dim1 x="147" y="-72"/>
+<dim2 x="-109" y="13"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Lookup Another Policy" target="Element@486724768:1714749063150"/>
+<exit_state name="Repeat" target="Element@767701034:1714718390612"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1390367301:1714718390612" name="FWS_CANCELLED" type="Page Entry" width="187" x="309" y="-134">
+<exit_states>
+<exit_state name="next" target="Element@203878088:1714728573966"/>
+</exit_states>
+</element>
+<element height="55" id="Element@805538084:1714720131972" name="FWS_SharedAuth" type="Subflow Call" width="186" x="506" y="721">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1707978989591">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1465298393:1714720250136"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1465298393:1714720250136" name="FWS" type="Page Connector" width="86" x="740" y="727">
+<page_connector target="Element@674612633:1714717794936">FWS<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@203878088:1714728573966" name="BillingInfo_Restricted_Check" type="Decision" width="267" x="279" y="-12">
+<exit_states>
+<exit_state name="TRUE" target="Element@1834539851:1714728685065"/>
+<exit_state name="FALSE" target="Element@90183957:1714718390612"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1834539851:1714728685065" name="FWS_Transfer9" type="Subflow Call" width="164" x="588" y="-18">
+<subflow_call subflow_name="Transfer" target="Element@31:1710691173865">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1449731566:1714728737751"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1449731566:1714728737751" name="FWS_SR9" type="Subflow Return" width="124" x="599" y="129"/>
+<element height="55" id="Element@486724768:1714749063150" name="SET_LOOKUP_ANOTHER_POLICY" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="304" x="471" y="617">
+<exit_states>
+<exit_state name="done" target="Element@805538084:1714720131972"/>
+</exit_states>
+</element>
+<element height="50" id="Element@805860072:1731529488521" name="DISC Entry" type="Page Connector" width="124" x="624" y="426">
+<page_connector target="Element@1782299812:1731529539958">DISC Entry<config/>
+</page_connector>
+</element>
+</page>

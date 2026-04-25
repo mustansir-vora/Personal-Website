@@ -1,0 +1,303 @@
+name: Sub Plan
+
+on:
+  workflow_call:
+    inputs:
+      safe_branch:
+        required: true
+        type: string
+      runner_label:
+        required: true
+        type: string
+      environment:
+        required: true
+        type: string
+      git_tag:
+        required: false
+        type: string
+
+    outputs:
+      build_gdf:
+        value: ${{ jobs.Sub-Plan.outputs.build_gdf }}
+      build_cf:
+        value: ${{ jobs.Sub-Plan.outputs.build_cf }}
+      build_iva:
+        value: ${{ jobs.Sub-Plan.outputs.build_iva }}
+      build_node:
+        value: ${{ jobs.Sub-Plan.outputs.build_node }}
+      changed_cf:
+        value: ${{ jobs.Sub-Plan.outputs.changed_cf }}
+      changed_agents:
+        value: ${{ jobs.Sub-Plan.outputs.changed_agents }}
+      changed_configs:
+        value: ${{ jobs.Sub-Plan.outputs.changed_configs }}
+      rollback:
+        value: ${{ jobs.Sub-Plan.outputs.rollback }}
+      component:
+        value: ${{ jobs.Sub-Plan.outputs.component }}
+
+jobs:
+  Sub-Plan:
+    name: Sub-Plan – ${{ inputs.environment }}
+    runs-on: ${{ inputs.runner_label }}
+    environment: ${{ inputs.environment }}
+
+    outputs:
+      build_gdf: ${{ steps.detect.outputs.build_gdf }}
+      build_cf: ${{ steps.detect.outputs.build_cf }}
+      build_iva: ${{ steps.detect.outputs.build_iva }}
+      build_node: ${{ steps.detect.outputs.build_node }}
+      changed_cf: ${{ steps.detect.outputs.changed_cf }}
+      changed_agents: ${{ steps.detect.outputs.changed_agents }}
+      changed_configs: ${{ steps.detect.outputs.changed_configs }}
+      rollback: ${{ steps.range.outputs.rollback }}
+      component: ${{ steps.component.outputs.component }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.git_tag != '' && inputs.git_tag || github.ref }}
+
+      # ------------------------------------------------
+      # Resolve Comparison Range
+      # ------------------------------------------------
+
+      - name: Resolve Comparison Range
+        id: range
+        run: |
+
+          TAG="${{ inputs.git_tag }}"
+          SAFE="${{ inputs.safe_branch }}"
+
+          rollback=false
+
+          if [ -z "$TAG" ]; then
+
+            echo "PIPELINE=release" >> $GITHUB_ENV
+
+            PREFIX="Release-${SAFE}"
+            PREV_TAG=$(git tag --list "${PREFIX}-v*" | sort -V | tail -n 1)
+
+            if [ -z "$PREV_TAG" ]; then
+              BASE="HEAD~1"
+              TARGET="HEAD"
+            else
+              BASE="$PREV_TAG"
+              TARGET="HEAD"
+            fi
+
+          else
+
+            echo "PIPELINE=deploy" >> $GITHUB_ENV
+
+            PREFIX=$(echo "$TAG" | sed 's/-v[0-9]*$//')
+
+            ALL_TAGS=$(git tag --list "${PREFIX}-v*" | sort -V)
+            LATEST_TAG=$(echo "$ALL_TAGS" | tail -n 1)
+
+
+            PREV_TAG=$(echo "$ALL_TAGS" | awk -v tag="$TAG" '
+              $0 == tag { print prev }
+              { prev = $0 }
+            ')
+
+            TARGET="$TAG"
+
+            if [[ "$PREFIX" == Release-* ]]; then
+
+              if [[ "$TAG" == "$LATEST_TAG" ]]; then
+                if [ -z "$PREV_TAG" ]; then
+                  BASE="ALL"
+                else
+                  BASE="$PREV_TAG"
+                fi
+             else
+               # rollback → full deploy
+               BASE="ALL"
+               rollback=true
+             fi
+
+
+             else
+
+               if [ -z "$PREV_TAG" ]; then
+                # first version
+                 BASE="ALL"
+               else
+                 BASE="$PREV_TAG"
+               fi
+
+              if [[ "$TAG" != "$LATEST_TAG" ]]; then
+               rollback=true   # informational only
+              fi
+            fi
+          fi
+          echo "==== DEBUG RANGE ===="
+          echo "TAG=$TAG"
+          echo "PREFIX=$PREFIX"
+          echo "ALL_TAGS=$ALL_TAGS"
+          echo "PREV_TAG=$PREV_TAG"
+          echo "LATEST_TAG=$LATEST_TAG"
+          echo "BASE=$BASE"
+          echo "TARGET=$TARGET" 
+          echo "rollback=$rollback"
+          echo "==== Outputs ===="
+          echo "BASE=$BASE" >> $GITHUB_ENV
+          echo "TARGET=$TARGET" >> $GITHUB_ENV
+          echo "rollback=$rollback" >> $GITHUB_OUTPUT
+
+      - name: Detect Component
+        id: component
+        run: |
+
+          TAG="${{ inputs.git_tag }}"
+
+          if [ -z "$TAG" ]; then
+            COMPONENT="Release"
+           else
+            COMPONENT="${TAG%%-*}"
+           fi
+
+            echo "Detected component: $COMPONENT"
+
+             echo "component=$COMPONENT" >> $GITHUB_OUTPUT
+             echo "COMPONENT=$COMPONENT" >> $GITHUB_ENV
+
+      # ------------------------------------------------
+      # Detect Changes
+      # ------------------------------------------------
+
+      - name: Detect Changes
+        id: detect
+        run: |
+
+          TAG="${{ inputs.git_tag }}"
+          COMPONENT="$COMPONENT"
+
+          if [ "$COMPONENT" = "Release" ]; then
+            COMPONENT="ALL"
+          fi
+
+          if [ "$BASE" = "ALL" ]; then
+
+            CHANGED=$(git ls-tree -r --name-only "$TARGET")
+
+            build_gdf=true
+            build_cf=true
+            build_iva=true
+            build_node=true
+
+          else
+
+            CHANGED=$(git diff --name-only "$BASE" "$TARGET")
+
+            build_gdf=false
+            build_cf=false
+            build_iva=false
+            build_node=false
+
+            echo "$CHANGED" | grep -q "^ConversationalAgents/" && build_gdf=true || true
+            echo "$CHANGED" | grep -q "^CloudFunctions/" && build_cf=true || true
+            echo "$CHANGED" | grep -q "^IvaConfigs/" && build_iva=true || true
+            echo "$CHANGED" | grep -q "^CommonNodeModules/" && build_node=true || true
+
+          fi
+
+          printf "%s\n" "$CHANGED" | sed '/^$/d' > changed_files.txt
+
+          echo "build_gdf=$build_gdf" >> $GITHUB_OUTPUT
+          echo "build_cf=$build_cf" >> $GITHUB_OUTPUT
+          echo "build_iva=$build_iva" >> $GITHUB_OUTPUT
+          echo "build_node=$build_node" >> $GITHUB_OUTPUT
+
+          CF_LIST=$(grep "^CloudFunctions/" changed_files.txt | cut -d'/' -f2 | sort -u | tr '\n' ' ')
+          AGENT_LIST=$(grep "^ConversationalAgents/" changed_files.txt | cut -d'/' -f2 | sort -u | paste -sd "," -)
+          CONFIG_LIST=$(awk -F/ '/^IvaConfigs\//{print $NF}' changed_files.txt | tr '\n' ' ')
+
+          echo "changed_cf=$CF_LIST" >> $GITHUB_OUTPUT
+          echo "changed_agents=$AGENT_LIST" >> $GITHUB_OUTPUT
+          echo "changed_configs=$CONFIG_LIST" >> $GITHUB_OUTPUT
+
+      # ------------------------------------------------
+      # SUMMARY
+      # ------------------------------------------------
+
+      - name: Summary
+        run: |
+
+          TAG="${{ inputs.git_tag }}"
+          COMPONENT="${TAG%%-*}"
+
+          if [ "$COMPONENT" = "Release" ]; then
+            COMPONENT="ALL"
+          fi
+
+          CHANGED=$(cat changed_files.txt)
+
+          if [ "$PIPELINE" = "release" ]; then
+
+            echo "## 📋 Release Plan Summary" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+
+            grep "^CloudFunctions/" changed_files.txt && {
+              echo "### ⚡ Cloud Functions Files" >> $GITHUB_STEP_SUMMARY
+              grep "^CloudFunctions/" changed_files.txt >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            }
+
+            grep "^CommonNodeModules/" changed_files.txt && {
+              echo "### 📦 Node Module Files" >> $GITHUB_STEP_SUMMARY
+              grep "^CommonNodeModules/" changed_files.txt >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            }
+
+            grep "^IvaConfigs/" changed_files.txt && {
+              echo "### ⚙️ IVA Config Files" >> $GITHUB_STEP_SUMMARY
+              grep "^IvaConfigs/" changed_files.txt >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            }
+
+            AGENTS=$(grep "^ConversationalAgents/" changed_files.txt | cut -d'/' -f2 | sort -u)
+
+            if [ -n "$AGENTS" ]; then
+              echo "### 🤖 IVA Agents" >> $GITHUB_STEP_SUMMARY
+              echo "$AGENTS" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+
+          else
+
+            echo "## 📋 Deployment Plan Summary - $TAG" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+
+            FUNCTIONS=$(grep "^CloudFunctions/" changed_files.txt | cut -d'/' -f2 | sort -u)
+            AGENTS=$(grep "^ConversationalAgents/" changed_files.txt | cut -d'/' -f2 | sort -u)
+            CONFIGS=$(awk -F/ '/^IvaConfigs\//{print $NF}' changed_files.txt)
+
+            if [[ "$COMPONENT" == "CloudFunctions" || "$COMPONENT" == "ALL" ]] && [ -n "$FUNCTIONS" ]; then
+              echo "### ⚡ Cloud Functions To Be Deployed" >> $GITHUB_STEP_SUMMARY
+              echo "$FUNCTIONS" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+
+            if [[ "$COMPONENT" == "GDF" || "$COMPONENT" == "ALL" ]] && [ -n "$AGENTS" ]; then
+              echo "### 🤖 Agents To Be Deployed" >> $GITHUB_STEP_SUMMARY
+              echo "$AGENTS" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+
+            if [[ "$COMPONENT" == "IVA" || "$COMPONENT" == "ALL" ]] && [ -n "$CONFIGS" ]; then
+              echo "### ⚙️ IVA Config Files To Be Deployed" >> $GITHUB_STEP_SUMMARY
+              echo "$CONFIGS" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+
+            if [[ "$COMPONENT" == "NodeModules" || "$COMPONENT" == "ALL" ]] && grep -q "^CommonNodeModules/" changed_files.txt; then
+              NODE_VERSION=$(jq -r '.version' CommonNodeModules/package.json)
+              echo "### 📦 Node Module Version To Be Deployed" >> $GITHUB_STEP_SUMMARY
+              echo "- $NODE_VERSION" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+
+          fi

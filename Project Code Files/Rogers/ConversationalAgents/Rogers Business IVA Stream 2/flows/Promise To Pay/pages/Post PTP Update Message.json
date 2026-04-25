@@ -1,0 +1,62 @@
+{
+  "name": "37b66a5b-05dc-4e03-925e-ad38e3151ef1",
+  "displayName": "Post PTP Update Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpOperation = CREATE AND $session.params.numberOfInstalls = 1 AND $session.params.promiseDate \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci d’avoir signalé votre paiement. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you for reporting your payment. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Post PTP Type Message",
+    "name": "70e95cd8-dc31-41c3-b585-8f95b19cf714"
+  }, {
+    "condition": "$session.params.ptpOperation = CREATE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci. Votre entente de paiement a \r\nété créé. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you. Your payment arrangement has been created. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Post PTP Type Message",
+    "name": "2842d3eb-53ad-454d-81f2-1bd65a98316f"
+  }, {
+    "condition": "$session.params.ptpOperation = UPDATE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci. Votre entente de paiement a \r\nété mis à jour. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you. Your payment arrangement has been updated. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Post PTP Type Message",
+    "name": "230ede8d-8f77-4600-8d93-723aca0d5e86"
+  } ]
+}

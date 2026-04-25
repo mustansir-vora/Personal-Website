@@ -1,0 +1,51 @@
+{
+  "name": "2e5caa7b-93b2-46f2-8543-87349433f8d2",
+  "displayName": "Check ID/Auth Required?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.authLevel = \"none\" AND $session.params.nluConfig.identify = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Post NL router",
+    "name": "840b6743-e548-450f-b411-ec68e511b2df"
+  }, {
+    "condition": "($session.params.nluConfig.authLevel = \"high\" OR $session.params.nluConfig.authLevel = \"low\" OR $session.params.nluConfig.identify = \"true\" OR $session.params.nluConfig.identify = \"optional\") AND ($session.params.idAuthInvoked = null OR $session.params.idAuthInvoked = false)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idAuthInvoked",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Post NLU",
+    "name": "3527eaa4-6c0a-46ff-98cf-44ff33015866"
+  }, {
+    "condition": "$session.params.idAuthComplete = true AND $session.params.idAuthInvoked = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idAuthInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Post NL router",
+    "name": "79a86bc8-61ce-4f1c-b41f-94110ee3cdd6"
+  }, {
+    "condition": "$session.params.idAuthComplete = false AND $session.params.idAuthInvoked = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idAuthInvoked",
+        "value": false
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "b4b6ccc7-4f80-4bd8-b09b-e8a1cce83163"
+  } ]
+}

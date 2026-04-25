@@ -1,0 +1,29 @@
+{
+  "name": "44d7d8ce-cc9a-436d-827d-46ad74e864fb",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone résidentiel a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux aller au menu principal"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "userInputHPTS": "mainmenu"
+    }
+  },
+  "displayName": "13050-Have-SIM-MainMenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 99,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "e2ceb2bf-ad3e-40ed-8c93-128ab55f192f",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+      "text": "what was it"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. Please say 'mobile phones' or press 1, 'high speed internet' press 2, 'television services', 3, 'home phone', 4, or 'home security' press 5."
+    }
+  }, {
+    "userUtterance": {
+      "text": "computer"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "savedIntent": "technical-support-vague"
+    }
+  },
+  "displayName": "Consumer-No Match",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 230,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

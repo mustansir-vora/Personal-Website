@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1468007826:1708926172677" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708926172677" name="EntryHOOP" type="Subflow Start" width="141" x="227" y="7">
+<exit_states>
+<exit_state name="next" target="Element@16305527:1708926179462"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@824723572:1751370341267"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1970951034:1708926179462" name="Subflow Return_01" type="Subflow Return" width="198" x="538" y="122"/>
+<element height="55" id="Element@16305527:1708926179462" name="CallCenter_Open" type="Decision" width="222" x="188" y="128">
+<exit_states>
+<exit_state name="OPEN" target="Element@1970951034:1708926179462"/>
+<exit_state name="CLOSED" target="Element@818439907:1757609517190"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1453546898:1708926179462" name="Entry_HOOP_ADM_002" type="Decision" width="233" x="217" y="507">
+<exit_states>
+<exit_state name="SU" target="Element@199219043:1708926179462"/>
+<exit_state name="ER" target="Element@199219043:1708926179462">
+<bendpoint>
+<dim1 x="32" y="70"/>
+<dim2 x="29" y="-65"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@199219043:1708926179462" name="Entry_HOOP_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="213" x="228" y="624">
+<exit_states>
+<exit_state name="done" target="Element@2073819744:1708930867659"/>
+</exit_states>
+</element>
+<element height="55" id="Element@592278724:1708926179462" name="Is_AfterHours_SelfService_Available" type="Decision" width="326" x="162" y="336">
+<exit_states>
+<exit_state name="YES" target="Element@1541595975:1712652767158"/>
+<exit_state name="NO" target="Element@1563242419:1713540536879"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2073819744:1708930867659" name="Disc" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="115" x="282" y="721">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@675781818:1712645763107" name="DISCONNECT" type="Page Entry" width="158" x="501" y="722">
+<exit_states>
+<exit_state name="next" target="Element@2073819744:1708930867659"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1541595975:1712652767158" name="ValidateBU" type="Decision" width="134" x="-275" y="429">
+<exit_states>
+<exit_state name="One Specialty" target="Element@1024352207:1712652767158"/>
+<exit_state name="Foremost AARP" target="Element@806002820:1712652767158"/>
+<exit_state name="Foremost Agent" target="Element@582188427:1712652767158"/>
+<exit_state name="BW Producer Main Menu" target="Element@582188427:1712652767158"/>
+<exit_state name="Other" target="Element@1453546898:1708926179462"/>
+<exit_state name="ER" target="Element@350037556:1712652767158">
+<bendpoint>
+<dim1 x="270" y="1"/>
+<dim2 x="-1" y="-146"/>
+</bendpoint>
+</exit_state>
+<exit_state name="BW" target="Element@350037556:1712652767158">
+<bendpoint>
+<dim1 x="135" y="113"/>
+<dim2 x="-136" y="-34"/>
+</bendpoint>
+</exit_state>
+<exit_state name="FDS" target="Element@350037556:1712652767158">
+<bendpoint>
+<dim1 x="170" y="40"/>
+<dim2 x="-101" y="-107"/>
+</bendpoint>
+</exit_state>
+<exit_state name="FWS" target="Element@350037556:1712652767158">
+<bendpoint>
+<dim1 x="110" y="142"/>
+<dim2 x="-161" y="-5"/>
+</bendpoint>
+</exit_state>
+<exit_state name="21ST" target="Element@350037556:1712652767158">
+<bendpoint>
+<dim1 x="315" y="-42"/>
+<dim2 x="44" y="-189"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@806002820:1712652767158" name="Speciality_AARP_AfterHours" type="Subflow Call" width="270" x="-685" y="567">
+<subflow_call subflow_name="SpecialtyAARPAfterHours" target="Element@31:1712645668897">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1378357358:1712652767158"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1378357358:1712652767158" name="DISCONNECT" type="Page Connector" width="158" x="-482" y="715">
+<page_connector target="Element@675781818:1712645763107">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@582188427:1712652767158" name="SharedSpeciality_BWAfterHours" type="Subflow Call" width="299" x="-269" y="198">
+<subflow_call subflow_name="SharedSpecialtyBillingAfterAgentHours" target="Element@31:1712645546391">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@207416308:1712652767158"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1024352207:1712652767158" name="Speciality_Cust_AfterHours" type="Subflow Call" width="260" x="-788" y="393">
+<subflow_call subflow_name="SpecialtyCustomerAfterHours" target="Element@31:1712645723875">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@207416308:1712652767158"/>
+</exit_states>
+</element>
+<element height="55" id="Element@350037556:1712652767158" name="SharedAfterHours" type="Subflow Call" width="192" x="-33" y="576">
+<subflow_call subflow_name="SharedAfterHrsMenu" target="Element@31:1712645439529">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@302340035:1713697111669"/>
+</exit_states>
+</element>
+<element height="55" id="Element@207416308:1712652767158" name="DISCONNECT" type="Page Connector" width="158" x="-545" y="293">
+<page_connector target="Element@675781818:1712645763107">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1563242419:1713540536879" name="Holiday_Check" type="Decision" width="165" x="234" y="430">
+<exit_states>
+<exit_state name="NO" target="Element@1453546898:1708926179462"/>
+<exit_state name="Holiday" target="Element@199219043:1708926179462">
+<bendpoint>
+<dim1 x="269" y="134"/>
+<dim2 x="241" y="-116"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@302340035:1713697111669" name="Is_Route_To_SharedMainMenu_Subflow" type="Decision" width="381" x="-151" y="681">
+<exit_states>
+<exit_state name="OTHERS" target="Element@1378357358:1712652767158"/>
+<exit_state name="MAIN_MENU" target="Element@1797614596:1713697970446"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1797614596:1713697970446" name="Subflow Return_02" type="Subflow Return" width="198" x="-15" y="827"/>
+<element height="55" id="Element@240494472:1751370341267" name="Shared_Transfer" type="Subflow Call" width="173" x="651" y="-10">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1195094345:1751370341267"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1195094345:1751370341267" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="851" y="-6">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@824723572:1751370341267" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="245" x="407" y="-5">
+<exit_states>
+<exit_state name="done" target="Element@240494472:1751370341267"/>
+</exit_states>
+</element>
+<element height="55" id="Element@818439907:1757609517190" name="CheckFarmersSalesExpressFlag" type="Decision" width="291" x="187" y="231">
+<exit_states>
+<exit_state name="Y" target="Element@858363681:1758213387584"/>
+<exit_state name="N" target="Element@592278724:1708926179462"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1018592610:1757609735810" name="SalesAfterHoursCallBack" type="Subflow Call" width="241" x="635" y="347">
+<subflow_call subflow_name="SalesAfterHoursCallBack" target="Element@31:1757609801109">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1613657816:1757609978275"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1613657816:1757609978275" name="FarmersSalesExpress_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="257" x="619" y="445">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@858363681:1758213387584" name="IS_CALLBACK_ENABLED" type="Decision" width="261" x="539" y="234">
+<exit_states>
+<exit_state name="Y" target="Element@1018592610:1757609735810"/>
+<exit_state name="N" target="Element@592278724:1708926179462"/>
+</exit_states>
+</element>
+</page>

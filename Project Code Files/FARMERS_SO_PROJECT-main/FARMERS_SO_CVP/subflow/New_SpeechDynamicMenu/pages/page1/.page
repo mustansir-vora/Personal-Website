@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@204943064:1747936533689" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1747936533689" name="NewSpeechDynamicMenu" type="Subflow Start" width="195" x="712" y="46">
+<exit_states>
+<exit_state name="next" target="Element@1360094495:1747936575906"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1360094495:1747936575906" name="CHECK_MENU_LOADER_BC" type="Decision" width="262" x="676" y="159">
+<exit_states>
+<exit_state name="ER" target="Element@1207395457:1747936575906">
+<bendpoint>
+<dim1 x="-46" y="61"/>
+<dim2 x="-46" y="-44"/>
+</bendpoint>
+</exit_state>
+<exit_state name="done" target="Element@1207395457:1747936575906">
+<bendpoint>
+<dim1 x="32" y="63"/>
+<dim2 x="32" y="-42"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1347476631:1747936575906" name="COMBINED_TRIES" src="com.servion.platform.vxml.cvp.elements.ServionIndAndCombTriesForm" type="Voice Element" width="192" x="1021" y="375">
+<exit_states>
+<exit_state name="done" target="Element@1880660425:1747936575906"/>
+<exit_state name="max_nomatch" target="Element@1880660425:1747936575906">
+<bendpoint>
+<dim1 x="135" y="65"/>
+<dim2 x="90" y="-86"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@1880660425:1747936575906">
+<bendpoint>
+<dim1 x="-110" y="69"/>
+<dim2 x="-113" y="-85"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@1880660425:1747936575906"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1448147359:1747936575906" name="Retry_DTMF_Menu" type="Page Connector" width="195" x="437" y="698">
+<page_connector target="Element@574162094:1747936575906">Retry_DTMF_Menu<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1880660425:1747936575906" name="CHECK_DATA_BC" type="Decision" width="183" x="1029" y="529">
+<exit_states>
+<exit_state name="done" target="Element@1626264535:1747936575906">
+<bendpoint>
+<dim1 x="-19" y="65"/>
+<dim2 x="176" y="-52"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1626264535:1747936575906">
+<bendpoint>
+<dim1 x="37" y="86"/>
+<dim2 x="239" y="-35"/>
+</bendpoint>
+</exit_state>
+<exit_state name="retry" target="Element@712717128:1747936575906"/>
+<exit_state name="max_noinput" target="Element@1448380906:1747936575906"/>
+<exit_state name="max_nomatch" target="Element@1626264535:1747936575906"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1626264535:1747936575906" name="SpeechMenuExit" type="Subflow Return" width="198" x="725" y="695"/>
+<element height="55" id="Element@1448380906:1747936575906" name="Play_MaxTries_Prompt" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="230" x="1317" y="688">
+<exit_states>
+<exit_state name="done" target="Element@1626264535:1747936575906"/>
+</exit_states>
+</element>
+<element height="55" id="Element@574162094:1747936575906" name="Retry_DTMF_Menu" type="Page Entry" width="195" x="1013" y="261">
+<exit_states>
+<exit_state name="next" target="Element@1347476631:1747936575906"/>
+</exit_states>
+</element>
+<element height="55" id="Element@712717128:1747936575906" name="Play_Error_Prompt" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="184" x="1412" y="454">
+<exit_states>
+<exit_state name="done" target="Element@1347476631:1747936575906"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1207395457:1747936575906" name="CHECK_PREF_LANG_BC" type="Decision" width="231" x="692" y="264">
+<exit_states>
+<exit_state name="ENG" target="Element@591547076:1747936575906">
+<bendpoint>
+<dim1 x="26" y="66"/>
+<dim2 x="28" y="-44"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SPA" target="Element@591547076:1747936575906">
+<bendpoint>
+<dim1 x="-43" y="68"/>
+<dim2 x="-43" y="-46"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@381350369:1747936575906" name="Form_01" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="119" x="477" y="372">
+<exit_states>
+<exit_state name="done" target="Element@465461364:1747940009792"/>
+<exit_state name="max_nomatch" target="Element@465461364:1747940009792"/>
+<exit_state name="max_noinput" target="Element@465461364:1747940009792"/>
+</exit_states>
+</element>
+<element height="50" id="Element@591547076:1747936575906" name="CHECK_PURE_DTMF" type="Decision" width="181" x="715" y="376">
+<exit_states>
+<exit_state name="PURE_DTMF" target="Element@1347476631:1747936575906"/>
+<exit_state name="OTHERS" target="Element@381350369:1747936575906"/>
+</exit_states>
+</element>
+<element height="46" id="Element@150296156:1747940009792" name="SET_HT_FLAG" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="164" x="726" y="580">
+<exit_states>
+<exit_state name="done" target="Element@178765946:1747940009792"/>
+</exit_states>
+</element>
+<element height="55" id="Element@178765946:1747940009792" name="CHECK_EVENT_DATA_BC" type="Decision" width="241" x="393" y="588">
+<exit_states>
+<exit_state name="done" target="Element@1626264535:1747936575906"/>
+<exit_state name="retry" target="Element@1448147359:1747936575906"/>
+<exit_state name="loop" target="Element@465461364:1747940009792"/>
+<exit_state name="Error" target="Element@1626264535:1747936575906">
+<bendpoint>
+<dim1 x="228" y="37"/>
+<dim2 x="-83" y="-70"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@376077872:1747940009792" name="ERROR_HANDLING_BC" type="Action" width="230" x="732" y="478">
+<exit_states>
+<exit_state name="done" target="Element@150296156:1747940009792"/>
+</exit_states>
+</element>
+<element height="55" id="Element@465461364:1747940009792" name="VirtualAgentVoice" src="com.audium.server.voiceElement.nlu.MNluElement" type="Voice Element" width="217" x="426" y="478">
+<exit_states>
+<exit_state name="done" target="Element@178765946:1747940009792">
+<bendpoint>
+<dim1 x="-137" y="77"/>
+<dim2 x="-23" y="-60"/>
+</bendpoint>
+</exit_state>
+<exit_state name="error" target="Element@376077872:1747940009792"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@150296156:1747940009792"/>
+</exit_states>
+</element>
+</page>

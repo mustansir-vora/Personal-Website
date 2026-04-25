@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1828967828:1707808494906" name="MM_Option2" version="6.0.1">
+<element height="55" id="Element@1276318001:1707808494906" name="CUSTOMER_OR_LENDER_MENU" type="Page Entry" width="300" x="289" y="29">
+<exit_states>
+<exit_state name="next" target="Element@287948056:1731040624361"/>
+</exit_states>
+</element>
+<element height="50" id="Element@287948056:1731040624361" name="FGIA_MN_002_Call" type="Subflow Call" width="172" x="352" y="130">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1730960157199">
+<config>
+<argument_data>
+<data name="MenuID">FGIA_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@960497329:1731040624361"/>
+</exit_states>
+</element>
+<element height="55" id="Element@21522477:1731040624361" name="DISCONNECT" type="Page Connector" width="158" x="59" y="398">
+<page_connector target="Element@501240617:1707990734977">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1338610780:1731040624361" name="SHARED_TRANSFER" type="Page Connector" width="209" x="1081" y="330">
+<page_connector target="Element@2040198894:1707807202720">SHARED_TRANSFER<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@198540947:1731040624361" name="FGIA_MN_007_Call" type="Subflow Call" width="232" x="1203" y="493">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1730960157199">
+<config>
+<argument_data>
+<data name="MenuID">FGIA_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@707268783:1731040624361"/>
+</exit_states>
+</element>
+<element height="50" id="Element@180601754:1731040624361" name="FGIA_MN_005_Call" type="Subflow Call" width="232" x="586" y="447">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1730960157199">
+<config>
+<argument_data>
+<data name="MenuID">FGIA_MN_005</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1918463550:1731040624361"/>
+</exit_states>
+</element>
+<element height="55" id="Element@72208598:1731040624361" name="SHARED_TRANSFER" type="Page Connector" width="209" x="13" y="225">
+<page_connector target="Element@2040198894:1707807202720">SHARED_TRANSFER<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@57234101:1731040624361" name="DISCONNECT" type="Page Connector" width="158" x="467" y="909">
+<page_connector target="Element@501240617:1707990734977">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@843374203:1731040624361" name="FGIA_MN_004_VALUE" type="Decision" width="219" x="685" y="319">
+<exit_states>
+<exit_state name="1" target="Element@180601754:1731040624361"/>
+<exit_state name="2" target="Element@198540947:1731040624361"/>
+<exit_state name="3" target="Element@1338610780:1731040624361"/>
+<exit_state name="NOINPUT" target="Element@638522931:1731040624361"/>
+<exit_state name="NOMATCH" target="Element@180601754:1731040624361">
+<bendpoint>
+<dim1 x="2" y="75"/>
+<dim2 x="94" y="-51"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@180601754:1731040624361">
+<bendpoint>
+<dim1 x="83" y="67"/>
+<dim2 x="175" y="-59"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@960497329:1731040624361" name="FGIA_MN_002_VALUE" type="Decision" width="219" x="321" y="230">
+<exit_states>
+<exit_state name="1" target="Element@1281976667:1731040624361"/>
+<exit_state name="2" target="Element@1099352270:1731040624361"/>
+<exit_state name="NOINPUT" target="Element@1023491145:1731040624361"/>
+<exit_state name="NOMATCH" target="Element@72208598:1731040624361"/>
+<exit_state name="ER" target="Element@72208598:1731040624361"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1099352270:1731040624361" name="FGIA_MN_004_Call" type="Subflow Call" width="232" x="674" y="229">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1730960157199">
+<config>
+<argument_data>
+<data name="MenuID">FGIA_MN_004</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@843374203:1731040624361"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1662849957:1731040624361" name="DISCONNECT" type="Page Connector" width="158" x="788" y="509">
+<page_connector target="Element@501240617:1707990734977">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1074373400:1731040624361" name="SHARED_TRANSFER" type="Page Connector" width="209" x="771" y="769">
+<page_connector target="Element@2040198894:1707807202720">SHARED_TRANSFER<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1023491145:1731040624361" name="DISCONNECT" type="Page Connector" width="158" x="66" y="134">
+<page_connector target="Element@501240617:1707990734977">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@707268783:1731040624361" name="FGIA_MN_007_VALUE" type="Decision" width="219" x="947" y="616">
+<exit_states>
+<exit_state name="1" target="Element@1074373400:1731040624361"/>
+<exit_state name="2" target="Element@1074373400:1731040624361"/>
+<exit_state name="3" target="Element@1074373400:1731040624361"/>
+<exit_state name="4" target="Element@1074373400:1731040624361"/>
+<exit_state name="5" target="Element@1074373400:1731040624361"/>
+<exit_state name="NOINPUT" target="Element@1662849957:1731040624361"/>
+<exit_state name="NOMATCH" target="Element@1074373400:1731040624361"/>
+<exit_state name="ER" target="Element@1074373400:1731040624361">
+<bendpoint>
+<dim1 x="-63" y="113"/>
+<dim2 x="118" y="-40"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1918463550:1731040624361" name="FGIA_MN_005_VALUE" type="Decision" width="219" x="552" y="615">
+<exit_states>
+<exit_state name="1" target="Element@1804578971:1731040624361"/>
+<exit_state name="2" target="Element@1074373400:1731040624361"/>
+<exit_state name="3" target="Element@1074373400:1731040624361"/>
+<exit_state name="4" target="Element@1074373400:1731040624361"/>
+<exit_state name="5" target="Element@1074373400:1731040624361"/>
+<exit_state name="6" target="Element@1074373400:1731040624361"/>
+<exit_state name="7" target="Element@1074373400:1731040624361"/>
+<exit_state name="NOMATCH" target="Element@1074373400:1731040624361"/>
+<exit_state name="NOINPUT" target="Element@1662849957:1731040624361"/>
+<exit_state name="ER" target="Element@1074373400:1731040624361">
+<bendpoint>
+<dim1 x="164" y="60"/>
+<dim2 x="-50" y="-94"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@638522931:1731040624361" name="DISCONNECT" type="Page Connector" width="158" x="1112" y="216">
+<page_connector target="Element@501240617:1707990734977">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1712573986:1731040624361" name="FGIA_MN_003_VALUE" type="Decision" width="219" x="321" y="417">
+<exit_states>
+<exit_state name="1" target="Element@1690567558:1731040624361"/>
+<exit_state name="2" target="Element@1690567558:1731040624361"/>
+<exit_state name="3" target="Element@1690567558:1731040624361"/>
+<exit_state name="NOINPUT" target="Element@21522477:1731040624361"/>
+<exit_state name="NOMATCH" target="Element@72208598:1731040624361"/>
+<exit_state name="ER" target="Element@72208598:1731040624361">
+<bendpoint>
+<dim1 x="-197" y="-81"/>
+<dim2 x="116" y="111"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1804578971:1731040624361" name="FGIA_MN_006_Call" type="Subflow Call" width="232" x="135" y="675">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1730960157199">
+<config>
+<argument_data>
+<data name="MenuID">FGIA_MN_006</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1952332462:1731040624361"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1281976667:1731040624361" name="FGIA_MN_003_Call" type="Subflow Call" width="232" x="426" y="324">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1730960157199">
+<config>
+<argument_data>
+<data name="MenuID">FGIA_MN_003</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1712573986:1731040624361"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1952332462:1731040624361" name="FGIA_MN_006_VALUE" type="Decision" width="219" x="432" y="817">
+<exit_states>
+<exit_state name="1" target="Element@1074373400:1731040624361"/>
+<exit_state name="2" target="Element@1074373400:1731040624361"/>
+<exit_state name="NOINPUT" target="Element@57234101:1731040624361"/>
+<exit_state name="NOMATCH" target="Element@1074373400:1731040624361"/>
+<exit_state name="ER" target="Element@1074373400:1731040624361">
+<bendpoint>
+<dim1 x="187" y="13"/>
+<dim2 x="-147" y="61"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1690567558:1731040624361" name="SHARED_TRANSFER" type="Page Connector" width="209" x="327" y="536">
+<page_connector target="Element@2040198894:1707807202720">SHARED_TRANSFER<config/>
+</page_connector>
+</element>
+</page>

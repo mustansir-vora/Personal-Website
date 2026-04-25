@@ -1,0 +1,7 @@
+{
+  "name": "5cabaae7-e3f6-437c-8168-6b892fac6057",
+  "displayName": "tv-hotel-support",
+  "priority": 500000,
+  "description": "Handles calls about Hospitality TV",
+  "numTrainingPhrases": 10
+}

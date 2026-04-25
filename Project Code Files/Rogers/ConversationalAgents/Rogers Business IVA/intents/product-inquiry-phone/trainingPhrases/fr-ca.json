@@ -1,0 +1,77 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux obtenir plus d’informations concernant l’ajout d’"
+    }, {
+      "text": "un service"
+    }, {
+      "text": " de téléphonie à "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’ajouter "
+    }, {
+      "text": "une"
+    }, {
+      "text": " ligne terrestre pour "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai des questions concernant l’ajout de "
+    }, {
+      "text": "services"
+    }, {
+      "text": " de téléphonie à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte d’"
+    }, {
+      "text": "entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai plusieurs emplacements de "
+    }, {
+      "text": "magasins"
+    }, {
+      "text": " et j’ai besoin de "
+    }, {
+      "text": "services"
+    }, {
+      "text": " de téléphonie pour ceux-ci."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je me renseigne au sujet "
+    }, {
+      "text": "des services"
+    }, {
+      "text": " de téléphonie que je peux utiliser pour "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

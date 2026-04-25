@@ -1,0 +1,42 @@
+{
+  "name": "1094f3c3-c074-49a8-a902-957397698fa7",
+  "displayName": "Check If Report Payment Intent",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = report-a-payment",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Parfait ! Merci d’avoir signalé votre \r\npaiement. Nous mettrons votre \r\ncompte à jour dès que le paiement \r\nsera reçu. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Great! Thank you for reporting your payment. We’ll update your account once we receive the payment." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "01d91d6f-5050-4f48-8fae-fccbd5f4b85b"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Update Eligibility",
+    "name": "72c37c53-356a-464a-b21e-d986885f74c7"
+  } ]
+}

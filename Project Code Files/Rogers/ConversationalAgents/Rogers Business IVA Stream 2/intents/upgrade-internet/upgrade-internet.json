@@ -1,0 +1,7 @@
+{
+  "name": "46075552-3d10-4d0d-9b15-a894218f8107",
+  "displayName": "upgrade-internet",
+  "priority": 500000,
+  "description": "Handles calls for internet upgrade",
+  "numTrainingPhrases": 12
+}

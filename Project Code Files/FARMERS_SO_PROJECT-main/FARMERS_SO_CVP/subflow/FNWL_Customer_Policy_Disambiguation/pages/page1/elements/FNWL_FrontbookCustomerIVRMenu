@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@408615832:1733742882323" name="FNWL_FrontbookCustomerIVRMenu" version="6.0.1">
+<subflow_call subflow_name="FNWL_FrontbookCustomerIVRMenu" target="Element@31:1733743303444">
+<config/>
+</subflow_call>
+</connector>

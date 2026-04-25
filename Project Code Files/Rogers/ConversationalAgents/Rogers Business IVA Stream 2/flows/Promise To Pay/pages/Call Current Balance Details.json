@@ -1,0 +1,43 @@
+{
+  "name": "40b5ff0e-0cc7-43cd-a2dc-86c6d077e953",
+  "displayName": "Call Current Balance Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "ptpCallCurrentBalanceDetails",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCallCurrentBalanceDetails = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowInputs.accountBalance.callCurrentBalanceDetailsSubflow",
+        "value": true
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callPendingPTPDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callInstallmentPaymentPlanDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callLastInvoiceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callCreditLimitUsageDetailsSubflow",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Play Balance Details",
+    "name": "3755cc34-3f69-498c-a1c7-b3e708149048"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Ask Amount",
+    "name": "a3707940-c1ee-4506-8b7f-33c930498eb5"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "034af51c-93ab-49ea-b5bd-2a8b44507e45",
+  "displayName": "streaming-support",
+  "parameters": [ {
+    "id": "e_StreamingService",
+    "entityType": "@e_streamingservice"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 10
+}

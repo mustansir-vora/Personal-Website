@@ -1,0 +1,7 @@
+{
+  "name": "cd97d92c-6bdc-4b0f-b509-f88f9bbc58a3",
+  "displayName": "ReusablePhoneMn-Don't Know",
+  "priority": 500000,
+  "description": "This will trigger when user says i don't know and i don't have an mobile number or phone number",
+  "numTrainingPhrases": 47
+}

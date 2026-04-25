@@ -1,0 +1,24 @@
+{
+  "name": "c8c8286b-c38d-4ad5-98ea-ab5458aa5f50",
+  "displayName": "Start Current Balance Details subflow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "attemptedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"passive-balanceDetails\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      } ]
+    },
+    "targetPage": "Initialize variables - Current Balance Details",
+    "name": "60e84b45-23f0-4125-a205-eba7fcf92699"
+  } ]
+}

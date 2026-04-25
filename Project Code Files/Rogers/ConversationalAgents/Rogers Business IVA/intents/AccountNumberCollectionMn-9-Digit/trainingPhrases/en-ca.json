@@ -1,0 +1,128 @@
+{
+  "trainingPhrases": [ {
+    "id": "d01f99c2-6fdb-446b-958c-a4045ea322a8",
+    "parts": [ {
+      "text": "123457683"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "06c216fb-9e47-46dc-80a6-c9b0ada9eca7",
+    "parts": [ {
+      "text": "323748951039"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d248d2f0-08c4-427d-bd1c-1c8dfa6f4f07",
+    "parts": [ {
+      "text": "123475869"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a918600d-4678-4df0-853a-2b7f62555b21",
+    "parts": [ {
+      "text": "My account number is "
+    }, {
+      "text": "789012345"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2c80e2b7-ee23-4bfd-9a1c-59eb384e21a3",
+    "parts": [ {
+      "text": "The account number I'm looking for is "
+    }, {
+      "text": "678901234567"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "321f9818-fa5e-4b44-99a6-6d6cd4aaf73c",
+    "parts": [ {
+      "text": "I think my account number is "
+    }, {
+      "text": "456789012"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e1f47f41-fff0-4027-b40a-a27626e47eef",
+    "parts": [ {
+      "text": "It's something like "
+    }, {
+      "text": "345678901234"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "57b90b00-4c9a-42fe-a66b-363f6a141628",
+    "parts": [ {
+      "text": "The account number I'm looking for is "
+    }, {
+      "text": "876543210987"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "49ced7c4-41c6-466f-bd51-e556dbfa2e74",
+    "parts": [ {
+      "text": "My account number starts with "
+    }, {
+      "text": "567812345"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3e38aa4d-f2cf-45b4-a33f-f41bce286e11",
+    "parts": [ {
+      "text": "The account number is "
+    }, {
+      "text": "234567890123"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0add38df-a64f-4ba9-8aab-0b8ac1bcf79e",
+    "parts": [ {
+      "text": "My account number is "
+    }, {
+      "text": "987654321"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a12a5ec4-9456-4848-8a56-bcdd5c87ece0",
+    "parts": [ {
+      "text": "123456789"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5162ecf3-2a84-46f7-9e37-850df7ac3164",
+    "parts": [ {
+      "text": "123456789012"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "79fbb660-0316-4a32-a93e-69cde4a001dd",
+    "parts": [ {
+      "text": "my account number is "
+    }, {
+      "text": "123456789012"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6bbe371b-5a82-4122-83eb-a759eddbe88e",
+    "parts": [ {
+      "text": "My Account Number is "
+    }, {
+      "text": "123456789"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "e010b2c5-b475-4184-8922-6c29459af406",
+  "displayName": "Check Max Phone Retry",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.phoneRetryCounter \u003c= $session.params.maxPhoneRetries",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n   Je n'ai trouvé aucun compte associé aux informations que vous avez fournies. Veuillez réessayer. \u003cbreak time=\"200ms\"/\u003e\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n   I couldn't find an account associated with the information you provided. Let's try again  \u003cbreak time=\"200ms\"/\u003e\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "1fd574c9-de32-4d1c-abd0-144c50d9908e"
+  }, {
+    "condition": "$session.params.phoneRetryCounter \u003e $session.params.maxPhoneRetries",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Max Phone Retry",
+    "name": "b07264d4-b6d8-4fe2-8668-efdaaccdb7db"
+  } ]
+}

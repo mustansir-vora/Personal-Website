@@ -1,0 +1,7 @@
+{
+  "name": "2a74b3a3-1591-45bc-8594-aed9f1d8acfb",
+  "displayName": "Main Menu",
+  "priority": 500000,
+  "numTrainingPhrases": 48,
+  "dtmfPattern": "9"
+}

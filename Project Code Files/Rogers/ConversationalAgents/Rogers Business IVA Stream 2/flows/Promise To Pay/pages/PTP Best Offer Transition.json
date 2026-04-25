@@ -1,0 +1,52 @@
+{
+  "name": "2760677c-2b31-442e-b188-93e27a582eb4",
+  "displayName": "PTP Best Offer Transition",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.pastDueBalance = 0 AND $session.params.api.response.ptp.currentBalance \u003c= 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "29e6b8a0-3ffc-4772-9bf0-d0018bed824d"
+  }, {
+    "condition": "$session.params.getAmountFailure = true OR $session.params.getPtpDateFailure = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Essayons plutôt ceci." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let’s try this instead." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "d83232c3-96d7-49e5-b691-0d4d2407d246"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Désolé, mais la date et le montant \r\nrecueillis ne respectent pas les \r\nexigences pour établir une entente de \r\npaiement. Toutefois, je peux vous \r\nproposer cette option. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm sorry but the date and amount collected do not meet the requirements for setting up a payment arrangement. But I can offer you this option instead." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "b90fc32a-3cab-4461-a4ac-38d6ce95a7f7"
+  } ]
+}

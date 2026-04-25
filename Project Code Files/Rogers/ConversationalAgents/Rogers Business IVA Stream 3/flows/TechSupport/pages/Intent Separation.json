@@ -1,0 +1,69 @@
+{
+  "name": "eb25c42c-ade4-4657-8523-fd31a868242a",
+  "displayName": "Intent Separation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"internet-support\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isABusMenu",
+        "value": false
+      } ]
+    },
+    "targetPage": "InternetTechSupportPage",
+    "name": "8e1cd313-a54a-469b-9aef-b065f502a17a"
+  }, {
+    "condition": "$session.params.savedIntent = \"wireless-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "WirelessTechSupportPage",
+    "name": "7ae9c22b-d29e-4e8f-a7bb-a41c93c77a6f"
+  }, {
+    "condition": "$session.params.savedIntent = \"tv-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TvSupportPage",
+    "name": "0acd72cc-a4a8-447a-ab60-f69e64e8e315"
+  }, {
+    "condition": "$session.params.savedIntent = \"security-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "HomeSecuritySupportPage",
+    "name": "e0900ab1-354b-4a79-92ea-da984c3ab8a9"
+  }, {
+    "condition": "$session.params.savedIntent = \"business-phone-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "BusinessPhoneSupportPage",
+    "name": "b94da228-1872-47a4-8295-4b6a4f624b6c"
+  }, {
+    "condition": "$session.params.savedIntent = \"home-phone-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "HomePhoneSupportPage",
+    "name": "193b6bf2-cf4f-4c95-bf9c-be33bdbf1918"
+  }, {
+    "condition": "$session.params.savedIntent = \"technical-support-vague\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "fd4b7bae-ab21-4a4b-b925-9aa312e257ea"
+  } ]
+}

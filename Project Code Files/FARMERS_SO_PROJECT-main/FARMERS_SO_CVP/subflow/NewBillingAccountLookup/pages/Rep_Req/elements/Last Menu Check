@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1349856127:1759318532948" name="Last Menu Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Last Menu Check" default_exit_state="NO">
+        <exit_state name="CIDA_MN_005" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="CIDA_MN_005" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@402904568:1707302355229" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1707302355229" name="Commercial_BIZ_Billing_Flow" type="Subflow Start" width="274" x="554" y="-3">
+<exit_states>
+<exit_state name="next" target="Element@501124564:1709274535273"/>
+</exit_states>
+</element>
+<element height="55" id="Element@791047902:1707302762448" name="CBIZB_MN_001_VALUE" type="Decision" width="227" x="563" y="203">
+<exit_states>
+<exit_state name="Farmers Real Time Billing" target="Element@1595903456:1759319062172">
+<bendpoint>
+<dim1 x="-567" y="23"/>
+<dim2 x="27" y="-299"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Other Billing" target="Element@539488864:1709274611994"/>
+<exit_state name="Standard Pay" target="Element@1595903456:1759319062172"/>
+<exit_state name="NOINPUT" target="Element@771906433:1709723420521"/>
+<exit_state name="NOMATCH" target="Element@74420255:1707304160331">
+<bendpoint>
+<dim1 x="-246" y="174"/>
+<dim2 x="-256" y="-315"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@74420255:1707304160331">
+<bendpoint>
+<dim1 x="218" y="165"/>
+<dim2 x="208" y="-324"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@862613890:1707303927405" name="CBIZB_MN_002_VALUE" type="Decision" width="227" x="590" y="508">
+<exit_states>
+<exit_state name="Invoice and Electronic Payments" target="Element@74420255:1707304160331">
+<bendpoint>
+<dim1 x="-347" y="73"/>
+<dim2 x="-330" y="-144"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Reinstatement" target="Element@74420255:1707304160331">
+<bendpoint>
+<dim1 x="-199" y="121"/>
+<dim2 x="-198" y="-104"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Address and Payment Plan Changes" target="Element@74420255:1707304160331"/>
+<exit_state name="Something Else" target="Element@74420255:1707304160331">
+<bendpoint>
+<dim1 x="204" y="125"/>
+<dim2 x="205" y="-100"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Standard Pay" target="Element@74420255:1707304160331">
+<bendpoint>
+<dim1 x="402" y="136"/>
+<dim2 x="419" y="-81"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@771906433:1709723420521"/>
+<exit_state name="NOMATCH" target="Element@74420255:1707304160331">
+<bendpoint>
+<dim1 x="316" y="72"/>
+<dim2 x="333" y="-145"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@74420255:1707304160331"/>
+</exit_states>
+</element>
+<element height="55" id="Element@74420255:1707304160331" name="Shared Transfer5" type="Subflow Call" width="181" x="596" y="725">
+<subflow_call subflow_name="Transfer" target="Element@31:1710409877935">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1173702082:1709643622171"/>
+</exit_states>
+</element>
+<element height="55" id="Element@501124564:1709274535273" name="CBIZB_MN_001_Call" type="Subflow Call" width="204" x="547" y="106">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709643238960">
+<config>
+<argument_data>
+<data name="MenuID">CBIZB_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@791047902:1707302762448"/>
+</exit_states>
+</element>
+<element height="55" id="Element@539488864:1709274611994" name="CBIZB_MN_002_Call" type="Subflow Call" width="204" x="683" y="333">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709643256597">
+<config>
+<argument_data>
+<data name="MenuID">CBIZB_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@862613890:1707303927405"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1173702082:1709643622171" name="Subflow Return_01" type="Subflow Return" width="198" x="592" y="858"/>
+<element height="55" id="Element@771906433:1709723420521" name="DisConnect" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="448" y="337">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1595903456:1759319062172" name="NewBillingAccountLookup" type="Subflow Call" width="257" x="-46" y="525">
+<subflow_call subflow_name="NewBillingAccountLookup" target="Element@31:1759319071021">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@847036394:1759319093224"/>
+</exit_states>
+</element>
+<element height="55" id="Element@847036394:1759319093224" name="Check_CA_RTB" type="Decision" width="163" x="37" y="754">
+<exit_states>
+<exit_state name="YES" target="Element@74420255:1707304160331"/>
+<exit_state name="NO" target="Element@74420255:1707304160331"/>
+</exit_states>
+</element>
+</page>

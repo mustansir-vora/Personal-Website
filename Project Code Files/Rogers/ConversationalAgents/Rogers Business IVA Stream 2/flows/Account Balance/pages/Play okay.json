@@ -1,0 +1,28 @@
+{
+  "name": "f2ced243-2300-4ffd-a029-f6945b5ea6fc",
+  "displayName": "Play okay",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Okay." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play accountBalanceOnline",
+    "name": "71046179-ad27-40e8-8433-81f7d3d3c761"
+  } ]
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@879102087:1711784371382" name="Clarifier" version="6.0.1">
+<element height="55" id="Element@1476600890:1730827882279" name="Disc" type="Page Connector" width="89" x="1024" y="99">
+<page_connector target="Element@334290118:1730194920663">Disc<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@913163915:1730827882279" name="CheckClarifierIsImmediateTxf_BC" type="Decision" width="303" x="238" y="313">
+<exit_states>
+<exit_state name="ER" target="Element@411510848:1730827882279"/>
+<exit_state name="Y" target="Element@225791659:1730827882279">
+<bendpoint>
+<dim1 x="165" y="-40"/>
+<dim2 x="-101" y="-39"/>
+</bendpoint>
+</exit_state>
+<exit_state name="N" target="Element@1216921106:1730827882279"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1216921106:1730827882279" name="CheckClarifierIsClarifierReq_BC" type="Decision" width="286" x="242" y="409">
+<exit_states>
+<exit_state name="ER" target="Element@411510848:1730827882279"/>
+<exit_state name="AVL" target="Element@411510848:1730827882279">
+<bendpoint>
+<dim1 x="187" y="-26"/>
+<dim2 x="-186" y="-33"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NA" target="Element@411510848:1730827882279">
+<bendpoint>
+<dim1 x="191" y="64"/>
+<dim2 x="-182" y="57"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@380436256:1730827882279" name="Clarifier" type="Page Connector" width="109" x="410" y="507">
+<page_connector target="Element@467254217:1730827882279">Clarifier<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@225791659:1730827882279" name="Transfer" type="Page Connector" width="111" x="570" y="213">
+<page_connector target="Element@1707896882:1711784523557">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1824521143:1730827882278" name="NLCL_MN_002_Call" type="Subflow Call" width="239" x="262" y="108">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653433700">
+<config>
+<argument_data>
+<data name="MenuID">NLCL_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1292201199:1730827882279"/>
+</exit_states>
+</element>
+<element height="55" id="Element@467254217:1730827882279" name="Clarifier" type="Page Entry" width="109" x="343" y="6">
+<exit_states>
+<exit_state name="next" target="Element@1824521143:1730827882278"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1292201199:1730827882279" name="NLCL_MN_002_VALUE" type="Decision" width="232" x="671" y="114">
+<exit_states>
+<exit_state name="NOINPUT" target="Element@1476600890:1730827882279"/>
+<exit_state name="NOMATCH" target="Element@411510848:1730827882279"/>
+<exit_state name="done" target="Element@200673956:1730827882279"/>
+<exit_state name="NLU_FAILURE" target="Element@1476600890:1730827882279">
+<bendpoint>
+<dim1 x="188" y="-37"/>
+<dim2 x="-117" y="-33"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@2074195621:1749648562353">
+<bendpoint>
+<dim1 x="62" y="-72"/>
+<dim2 x="148" y="-5"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SAME_TAG" target="Element@1844608289:1730827882279">
+<bendpoint>
+<dim1 x="111" y="152"/>
+<dim2 x="33" y="-158"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1770666620:1730827882279" name="Copy_of_Clarifier" type="Page Entry" width="182" x="42" y="399">
+<exit_states>
+<exit_state name="next" target="Element@1311584752:1730827882279"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1311584752:1730827882279" name="Is_Clarifier_Already_Invoked" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="267" x="64" y="509">
+<exit_states>
+<exit_state name="done" target="Element@380436256:1730827882279"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1844608289:1730827882279" name="CheckClarifierIsImmediateTxf_BC_2" type="Decision" width="326" x="922" y="237">
+<exit_states>
+<exit_state name="ER" target="Element@411510848:1730827882279">
+<bendpoint>
+<dim1 x="-141" y="119"/>
+<dim2 x="186" y="-60"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Y" target="Element@225791659:1730827882279"/>
+<exit_state name="N" target="Element@411510848:1730827882279"/>
+</exit_states>
+</element>
+<element height="55" id="Element@200673956:1730827882279" name="CheckClarifierAppTagDetails_BC" type="Decision" width="298" x="212" y="196">
+<exit_states>
+<exit_state name="ER" target="Element@411510848:1730827882279">
+<bendpoint>
+<dim1 x="120" y="73"/>
+<dim2 x="-277" y="-147"/>
+</bendpoint>
+</exit_state>
+<exit_state name="done" target="Element@913163915:1730827882279"/>
+</exit_states>
+</element>
+<element height="55" id="Element@747742801:1730827882279" name="SharedIVRText" type="Page Connector" width="161" x="678" y="507">
+<page_connector target="Element@469351914:1730745013310">SharedIVRText<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@411510848:1730827882279" name="CheckClarifierNextAction_BC" type="Decision" width="271" x="623" y="416">
+<exit_states>
+<exit_state name="ER" target="Element@747742801:1730827882279"/>
+<exit_state name="N" target="Element@225791659:1730827882279"/>
+<exit_state name="done" target="Element@747742801:1730827882279"/>
+</exit_states>
+</element>
+<element height="52" id="Element@2074195621:1749648562353" name="CHECK_HT_TRANSFER2" type="Decision" width="217" x="486" y="40">
+<exit_states>
+<exit_state name="YES" target="Element@225791659:1730827882279"/>
+<exit_state name="NO" target="Element@411510848:1730827882279"/>
+</exit_states>
+</element>
+</page>

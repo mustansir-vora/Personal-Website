@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1594041909:1752646441336" name="Set_CallerType_Agent_1" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">01</setting>
+<setting name="sessNames">FNWL_CALLER_TYPE</setting>
+</settings>
+</config>
+</action_element>

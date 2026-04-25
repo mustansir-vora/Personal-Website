@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@434174118:1707108614393" name="Start" version="6.0.1">
+<element height="46" id="Element@31:1707108614393" name="SharedAfterHrsMenu" type="Subflow Start" width="161" x="403" y="10">
+<exit_states>
+<exit_state name="next" target="Element@1064719585:1712680154163"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1094691713:1751910566014"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1095712090:1707223555408" name="Business Unit" type="Decision" width="235" x="384" y="161">
+<exit_states>
+<exit_state name="FWS" target="Element@971660579:1709039345599"/>
+<exit_state name="21ST" target="Element@971660579:1709039345599"/>
+<exit_state name="FARMERS" target="Element@2062188486:1709039385367"/>
+<exit_state name="BW" target="Element@2062188486:1709039385367"/>
+<exit_state name="OTHERS" target="Element@2062188486:1709039385367"/>
+</exit_states>
+</element>
+<element height="55" id="Element@907953774:1707223555408" name="FWS21" type="Page Connector" width="169" x="306" y="447">
+<page_connector target="Element@593930891:1707223898801">FWS21<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1269098310:1707223555408" name="Others" type="Page Connector" width="176" x="570" y="457">
+<page_connector target="Element@882187894:1707223933304">Others<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@971660579:1709039345599" name="SAHM_MN_001_Call" type="Subflow Call" width="209" x="288" y="318">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709039359417">
+<config>
+<argument_data>
+<data name="MenuID">SAHM_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@907953774:1707223555408"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2062188486:1709039385367" name="SAHM_MN_002_Call" type="Subflow Call" width="209" x="549" y="317">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709039408197">
+<config>
+<argument_data>
+<data name="MenuID">SAHM_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1269098310:1707223555408"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1064719585:1712680154163" name="SET_SELF_SERVICE_MENU_INVOKED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="288" x="369" y="87">
+<exit_states>
+<exit_state name="done" target="Element@1095712090:1707223555408"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1034818515:1723527479978" name="MainMenu_Entry" type="Page Entry" width="159" x="735" y="163">
+<exit_states>
+<exit_state name="next" target="Element@1095712090:1707223555408"/>
+</exit_states>
+</element>
+<element height="49" id="Element@1094691713:1751910566014" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="672" y="17">
+<exit_states>
+<exit_state name="done" target="Element@1849327601:1751910566014"/>
+</exit_states>
+</element>
+<element height="48" id="Element@453202216:1751910566014" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="1080" y="12">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1849327601:1751910566014" name="Shared_Transfer" type="Subflow Call" width="132" x="920" y="15">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@453202216:1751910566014"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,42 @@
+{
+  "name": "4d23968c-451c-442e-8d6e-ae194a45f18f",
+  "displayName": "Check Voluntary Redirect",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.voluntaryRedirect != \"ALL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ExitType",
+    "name": "ad033946-fef4-47c0-860f-8199ac02cb38"
+  }, {
+    "condition": "$session.params.voluntaryRedirect = \"ALL\" AND $session.params.accountFound != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ExitType",
+    "name": "9e2c6c4c-9fbe-4997-b1b2-4d8235816515"
+  }, {
+    "condition": "$session.params.voluntaryRedirect = \"ALL\" AND $session.params.accountFound = true AND $session.params.businessInd = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ExitType",
+    "name": "1c7e12d4-dd0d-4bf0-a5e1-1ff6baceb2b1"
+  }, {
+    "condition": "$session.params.voluntaryRedirect = \"ALL\" AND $session.params.accountFound = true AND $session.params.businessInd != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Voluntary Redirect Menu",
+    "name": "2c247968-9522-4659-b0a6-c151e9b07c7c"
+  } ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "0dadbbad-d9fb-48ae-b15c-119a73286af6",
+  "displayName": "Identify Accounts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.numberOfBillingAccounts \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you !" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Merci " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "accountNumberIndex",
+        "value": 0
+      }, {
+        "parameter": "getCallerProfileAPISuccess",
+        "value": true
+      } ]
+    },
+    "targetPage": "Get Identification Data",
+    "name": "ae818dd9-ee3b-4ccd-97e5-a64d422d97e7"
+  }, {
+    "condition": "$session.params.returnCode = \"1\" OR $session.params.numberOfBillingAccounts = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "accountRetryCounter",
+        "value": "$sys.func.ADD($session.params.accountRetryCounter,1)"
+      }, {
+        "parameter": "isApiInvoked",
+        "value": true
+      }, {
+        "parameter": "getCallerProfileAPISuccess",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check Max Account Retry",
+    "name": "fb42e302-bb8c-42f5-9c07-eef1964b5442"
+  } ]
+}

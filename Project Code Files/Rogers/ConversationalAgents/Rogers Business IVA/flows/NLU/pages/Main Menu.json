@@ -1,0 +1,48 @@
+{
+  "name": "9609942c-af67-46a4-b88f-60b77c6b87c7",
+  "displayName": "Main Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.flowLanguage = \"en-US\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "business_agent_attempts",
+        "value": 2
+      } ]
+    },
+    "name": "6123cba3-07b0-451d-873d-7fc3d78417d9",
+    "targetPlaybook": "MainMenu-En"
+  }, {
+    "condition": "$session.params.flowLanguage = \"fr-CA\"",
+    "triggerFulfillment": {
+    
+    },
+    "name": "13097818-2040-455b-b452-c21dc59e266f",
+    "targetPlaybook": "MainMenu-Fr"
+  }, {
+    "condition": "$session.params.savedIntent != null AND $session.params.savedIntent != \"\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "af81c4d8-16ce-4110-8f5b-27669ac497f7"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "2ffc726d-0a16-476f-ab0e-a40818cb3a9a"
+  } ]
+}

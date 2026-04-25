@@ -1,0 +1,11 @@
+{
+  "name": "cf6d8c45-5cc4-4c8d-863b-27282797c160",
+  "displayName": "roaming-support-vague",
+  "parameters": [ {
+    "id": "e_PlaneOrCruise",
+    "entityType": "@e_PlaneOrCruise"
+  } ],
+  "priority": 500000,
+  "description": "Captures unclear or unspecified requests related to roaming.",
+  "numTrainingPhrases": 60
+}

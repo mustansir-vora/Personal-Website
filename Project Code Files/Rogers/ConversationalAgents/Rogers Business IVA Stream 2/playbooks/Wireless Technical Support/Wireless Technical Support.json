@@ -1,0 +1,326 @@
+{
+  "name": "83559794-df5f-47a0-ad34-64cc25f56832",
+  "displayName": "Wireless Technical Support",
+  "goal": "Provide Wireless Technical Support by identifying the caller, validating wireless service eligibility, confirming device and call-back requirements, capturing issue context through a pre-FAQ check, and transferring the customer to the appropriate wireless technical support queue.",
+  "inputParameterDefinitions": [ {
+    "name": "customerIdentified",
+    "description": "for checking the caller is identified or not ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "reportingVar_ANI",
+    "description": "used for storing the caller number ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_ANI",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": "for getting the attempted ss name flag",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "completedSSName",
+    "description": "to read the completedSSName name from session",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "selfServiceCompleted is either true or false",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "selfServiceAttempted is a true or false value",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "subscriptionsList",
+    "description": "subscriptionsList has the values for all the subscriptions",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionsList",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "completedSelfServe",
+    "description": "for save call history",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSelfServe",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "attemptedSSName",
+    "description": "for storing the attempted ss name flag",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "completedSSName",
+    "description": "for storing the  completed ss name ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "for setting self service is completed or not ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "for setting the self service is attempted or not ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "aniNotFound",
+    "description": "aniNotFound is a flag",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "aniNotFound",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "wsStepCompleted",
+    "description": "wsStepCompleted is a step completed flag",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "wsStepCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "reportingVar_attemptedSSName",
+    "description": "reportingVar_attemptedSSName for reporting",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "reportingVar_completedSSName",
+    "description": "for report",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "completedSelfServe",
+    "description": "for save call history",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSelfServe",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "tokenCount": 500,
+  "instruction": {
+    "steps": [ {
+      "text": "Step 1. identify the caller",
+      "steps": [ {
+        "text": "if $customerIdentified is true goto Step 2"
+      }, {
+        "text": "otherwise take them to Step 3"
+      } ]
+    }, {
+      "text": "Step 2. check CTN eligibility",
+      "steps": [ {
+        "text": "if `is_ani_in_wireless_subscriptions` is true goto Step 3"
+      }, {
+        "text": "otherwise set $aniNotFound as true, return do not go to the next step"
+      } ]
+    }, {
+      "text": "Step 3. set wireless support routing",
+      "steps": [ {
+        "text": "Set $selfServiceAttempted as true"
+      }, {
+        "text": "if $attemptedSSName is empty or equal to null",
+        "steps": [ {
+          "text": "Set $attemptedSSName as \"passive-techSupportWireless\""
+        }, {
+          "text": "Set $reportingVar_attemptedSSName as $attemptedSSName"
+        } ]
+      }, {
+        "text": "if $attemptedSSName is not empty or equal to null",
+        "steps": [ {
+          "text": "Set $attemptedSSName as $sys.func.CONCATENATE(\"$session.params.attemptedSSName\",\",passive-techSupportWireless\")"
+        }, {
+          "text": "Set $reportingVar_attemptedSSName as $attemptedSSName"
+        } ]
+      }, {
+        "text": "Set $selfServiceCompleted as true"
+      }, {
+        "text": "if $completedSSName is empty or equal to null",
+        "steps": [ {
+          "text": "Set $completedSSName as \"passive-techSupportWireless\""
+        }, {
+          "text": "Set $reportingVar_completedSSName as $completedSSName"
+        }, {
+          "text": "Set $completedSelfServe as $completedSSName"
+        } ]
+      }, {
+        "text": "if $completedSSName is not empty or equal to null",
+        "steps": [ {
+          "text": "Set $completedSSName as $sys.func.CONCATENATE(\"$session.params.completedSSName\",\",passive-techSupportWireless\")"
+        }, {
+          "text": "Set $reportingVar_completedSSName as $completedSSName"
+        }, {
+          "text": "Set $completedSelfServe as $completedSSName"
+        } ]
+      }, {
+        "text": "goto Step 4"
+      } ]
+    }, {
+      "text": "Step 4. confirm call-from-another-device requirement",
+      "steps": [ {
+        "text": "play \"To troubleshoot your issue, ensure you are calling from a different phone than the one you need help with. Many issues can be resolved by powering down and restarting your device.\""
+      }, {
+        "text": "pause 1.5 seconds"
+      }, {
+        "text": "set $wsStepCompleted as true,return the call"
+      } ]
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "codeBlock": {
+    "code": "@Action\r\ndef is_ani_in_wireless_subscriptions() -\u003e bool:\r\n    \"\"\"Returns True if the ANI exists in Phone subscriptions; otherwise False.\"\"\"\r\n    \r\n    subscriptions = state[\"$session.params.subscriptionsList\"]\r\n    identifiedPhoneNumber = state[\"$session.params.reportingVar_ANI\"]\r\n    \r\n    if not subscriptions or not identifiedPhoneNumber:\r\n        return False\r\n  \r\n    for item in subscriptions:\r\n        service_category = item.get(\"serviceCategory\", {}).get(\"english\")\r\n        if service_category == \"Mobile\":\r\n            if item.get(\"subscriptionSerialNumber\") == identifiedPhoneNumber:\r\n                return True\r\n    \r\n    return False"
+  },
+  "inlineActions": [ "is_ani_in_wireless_subscriptions" ]
+}

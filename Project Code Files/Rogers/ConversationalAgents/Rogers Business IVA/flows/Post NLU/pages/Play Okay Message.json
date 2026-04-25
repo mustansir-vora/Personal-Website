@@ -1,0 +1,31 @@
+{
+  "name": "dc5c3a15-33dc-433e-a3c5-bb045abcad07",
+  "displayName": "Play Okay Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D'accord, j'ai votre compte." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Okay! I have your account" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLInvoluntaryRidirect",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Voluntary/Involuntary",
+    "name": "ecf085bb-5d31-4423-a6ab-40ad98969e33"
+  } ]
+}

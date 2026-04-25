@@ -1,0 +1,44 @@
+{
+  "name": "06a5b88d-fa03-46e2-94e0-41c2cd01bebd",
+  "displayName": "Billing Account Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfBillingAccounts \u003c= 4 AND $session.params.numberOfBillingAccounts != 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.phoneRetryCounter",
+        "value": "$sys.func.ADD($session.params.phoneRetryCounter,1)"
+      } ]
+    },
+    "targetPage": "Account Disambig",
+    "name": "9575b70f-f0ad-47d8-9f21-2f4a3aace5c1"
+  }, {
+    "condition": "($session.params.numberOfBillingAccounts \u003e 4 OR $session.params.numberOfBillingAccounts = 0) AND $session.params.accountRetryCounter \u003e $session.params.maxAccountRetries",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "dd857c2a-390f-41c4-8178-7aba6e4faae8"
+  }, {
+    "condition": "($session.params.numberOfBillingAccounts \u003e 4 OR $session.params.numberOfBillingAccounts = 0) AND $session.params.accountRetryCounter \u003c= $session.params.maxAccountRetries",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "2678368e-a4b3-4aea-8872-a432a567c43f"
+  } ]
+}

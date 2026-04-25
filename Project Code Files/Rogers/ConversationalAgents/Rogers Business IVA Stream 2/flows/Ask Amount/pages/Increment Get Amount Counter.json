@@ -1,0 +1,27 @@
+{
+  "name": "126324c8-d019-4ecb-818c-e53fc46aa014",
+  "displayName": "Increment Get Amount Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "getAmountCounter",
+      "value": "$sys.func.ADD($session.params.getAmountCounter, 1)"
+    }, {
+      "parameter": "paymentAmount",
+      "value": "$sys.func.TO_NUMBER($session.params.paymentAmount )"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "getAmountCounter",
+        "value": "$sys.func.ADD($session.params.getAmountCounter, 1)"
+      } ]
+    },
+    "targetPage": "Valid Amount ?",
+    "name": "a4d63213-b41f-4925-a3d9-6b5d9da82a50"
+  } ]
+}

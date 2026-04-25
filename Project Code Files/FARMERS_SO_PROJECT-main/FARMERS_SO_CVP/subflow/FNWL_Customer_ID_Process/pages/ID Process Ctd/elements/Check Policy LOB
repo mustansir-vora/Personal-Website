@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1601975453:1733463476052" name="Check Policy LOB" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check Policy LOB" default_exit_state="Others">
+        <exit_state name="LIFE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FNWL_POLICY_LOB" />
+                </data>
+                <constant_string value="LIFE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

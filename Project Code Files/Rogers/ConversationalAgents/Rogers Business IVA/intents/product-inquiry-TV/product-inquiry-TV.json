@@ -1,0 +1,7 @@
+{
+  "name": "cf474bbf-62c9-4dc4-b460-bdef28ef551d",
+  "displayName": "product-inquiry-TV",
+  "priority": 500000,
+  "description": "This intent is triggered when user is inquiring about TVs for their business.",
+  "numTrainingPhrases": 10
+}

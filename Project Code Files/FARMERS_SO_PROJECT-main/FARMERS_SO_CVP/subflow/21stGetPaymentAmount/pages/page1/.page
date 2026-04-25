@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@389767802:1708938307691" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708938307691" name="21stGetPaymentAmount" type="Subflow Start" width="244" x="364" y="157">
+<exit_states>
+<exit_state name="next" target="Element@1145302879:1708938323409"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@739725504:1751909635813"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1306945556:1708938323408" name="Is Minimum due value available in API" type="Decision" width="349" x="323" y="431">
+<exit_states>
+<exit_state name="Yes" target="Element@586279259:1709104282411"/>
+<exit_state name="No" target="Element@570000064:1709104153652"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1260411607:1708938323408" name="Is custom amount valid" type="Decision" width="236" x="679" y="781">
+<exit_states>
+<exit_state name="YES" target="Element@1798565617:1711718944362"/>
+<exit_state name="NO_WITH_MIN_DUE" target="Element@1016048330:1708938323409"/>
+<exit_state name="NO_WITHOUT_MIN_DUE" target="Element@983271691:1708938323409"/>
+<exit_state name="INVOKE_INITIAL_VALIDATION" target="Element@2008104687:1712348612459"/>
+<exit_state name="ER" target="Element@1845829485:1710919669277"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1016048330:1708938323409" name="TFGPA_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="166" x="1075" y="930">
+<exit_states>
+<exit_state name="done" target="Element@651282840:1710849417767"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1145302879:1708938323409" name="Check Payment Amount" type="Decision" width="240" x="370" y="287">
+<exit_states>
+<exit_state name="Valid amount" target="Element@1030406950:1711718904343"/>
+<exit_state name="Check Other Options" target="Element@1306945556:1708938323408"/>
+</exit_states>
+</element>
+<element height="55" id="Element@983271691:1708938323409" name="TFGPA_PA_002" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="166" x="1438" y="867">
+<exit_states>
+<exit_state name="done" target="Element@651282840:1710849417767"/>
+</exit_states>
+</element>
+<element height="55" id="Element@570000064:1709104153652" name="TFGPA_MN_001_Call" type="Subflow Call" width="209" x="120" y="568">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709104156600">
+<config>
+<argument_data>
+<data name="MenuID">TFGPA_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2037901313:1710919617783"/>
+</exit_states>
+</element>
+<element height="55" id="Element@586279259:1709104282411" name="TFGPA_MN_002_Call" type="Subflow Call" width="209" x="565" y="572">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709104289429">
+<config>
+<argument_data>
+<data name="MenuID">TFGPA_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@789647396:1710919590015"/>
+</exit_states>
+</element>
+<element height="55" id="Element@651282840:1710849417767" name="TFGPA_MN_003_Call" type="Subflow Call" width="209" x="1209" y="1029">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1711515248990">
+<config>
+<argument_data>
+<data name="MenuID">TFGPA_MN_003</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@581425608:1710849452882"/>
+</exit_states>
+</element>
+<element height="55" id="Element@581425608:1710849452882" name="TFGPA_MN_003_VALUE" type="Decision" width="232" x="776" y="1024">
+<exit_states>
+<exit_state name="Payment Amount" target="Element@1922236361:1712446694370"/>
+<exit_state name="NOINPUT" target="Element@1047650069:1712315896936"/>
+<exit_state name="NOMATCH" target="Element@1845829485:1710919669277">
+<bendpoint>
+<dim1 x="-128" y="-74"/>
+<dim2 x="342" y="345"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-295" y="-119"/>
+<dim2 x="175" y="300"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-295" y="-419"/>
+<dim2 x="175" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1845829485:1710919669277">
+<bendpoint>
+<dim1 x="-310" y="-111"/>
+<dim2 x="160" y="308"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-312" y="-420"/>
+<dim2 x="158" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@789647396:1710919590015" name="TFGPA_MN_002_VALUE" type="Decision" width="232" x="559" y="661">
+<exit_states>
+<exit_state name="NOINPUT" target="Element@1047650069:1712315896936"/>
+<exit_state name="NOMATCH" target="Element@1845829485:1710919669277">
+<bendpoint>
+<dim1 x="-176" y="35"/>
+<dim2 x="45" y="-139"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Custom Amount" target="Element@1260411607:1708938323408"/>
+<exit_state name="ER" target="Element@1845829485:1710919669277">
+<bendpoint>
+<dim1 x="-124" y="46"/>
+<dim2 x="97" y="-128"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-168" y="82"/>
+<dim2 x="53" y="-92"/>
+</bendpoint>
+</exit_state>
+<exit_state name="full balance" target="Element@1798565617:1711718944362"/>
+<exit_state name="minimum due" target="Element@1798565617:1711718944362"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2037901313:1710919617783" name="TFGPA_MN_001_VALUE" type="Decision" width="232" x="116" y="680">
+<exit_states>
+<exit_state name="NOINPUT" target="Element@1047650069:1712315896936"/>
+<exit_state name="NOMATCH" target="Element@1845829485:1710919669277">
+<bendpoint>
+<dim1 x="222" y="67"/>
+<dim2 x="0" y="-88"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Custom Amount" target="Element@1260411607:1708938323408"/>
+<exit_state name="Full Policy Balance" target="Element@1798565617:1711718944362"/>
+<exit_state name="ER" target="Element@1845829485:1710919669277"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1845829485:1710919669277" name="Shared Transfer" type="Subflow Call" width="171" x="334" y="809">
+<subflow_call subflow_name="Transfer" target="Element@31:1711718928452">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1798565617:1711718944362"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1030406950:1711718904343" name="Subflow Return_02" type="Subflow Return" width="198" x="789" y="220"/>
+<element height="55" id="Element@1798565617:1711718944362" name="Subflow Return_03" type="Subflow Return" width="198" x="210" y="1040"/>
+<element height="55" id="Element@1047650069:1712315896936" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="251" x="324" y="912">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2008104687:1712348612459" name="VALIDATE_AMOUNT_PE" type="Page Connector" width="236" x="1214" y="747">
+<page_connector target="Element@1028771724:1712348614342">VALIDATE_AMOUNT_PE<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1028771724:1712348614342" name="VALIDATE_AMOUNT_PE" type="Page Entry" width="236" x="814" y="343">
+<exit_states>
+<exit_state name="next" target="Element@1306945556:1708938323408"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1922236361:1712446694370" name="PromoteToSession_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="224" x="963" y="1143">
+<exit_states>
+<exit_state name="done" target="Element@1260411607:1708938323408"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1952666408:1751909635813" name="Shared_Transfer" type="Subflow Call" width="173" x="818" y="69">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@343281888:1751909635827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@343281888:1751909635827" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="972" y="163">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="49" id="Element@739725504:1751909635813" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="582" y="64">
+<exit_states>
+<exit_state name="done" target="Element@1952666408:1751909635813"/>
+</exit_states>
+</element>
+</page>

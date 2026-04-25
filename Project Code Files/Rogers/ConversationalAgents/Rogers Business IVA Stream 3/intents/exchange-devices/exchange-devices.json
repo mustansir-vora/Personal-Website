@@ -1,0 +1,7 @@
+{
+  "name": "c1041be7-af14-464a-bc31-c893cb533d12",
+  "displayName": "exchange-devices",
+  "priority": 500000,
+  "description": "This intent is triggered when the user wants to exchange a device (Modem, Mobile Phone, Router, etc)",
+  "numTrainingPhrases": 50
+}

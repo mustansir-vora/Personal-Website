@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@764353221:1721836944800" name="FRMST_EPCPaymentUS5" version="6.0.1">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1713010274500">
+<config/>
+</subflow_call>
+</connector>

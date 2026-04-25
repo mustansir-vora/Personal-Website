@@ -1,0 +1,7 @@
+{
+  "name": "e2d3e22b-8db8-4aa4-b927-1e5e9a49a22a",
+  "displayName": "advantage-voice",
+  "priority": 500000,
+  "description": "This intent will be triggered when the user wants to set up a voice feature for their business.",
+  "numTrainingPhrases": 24
+}

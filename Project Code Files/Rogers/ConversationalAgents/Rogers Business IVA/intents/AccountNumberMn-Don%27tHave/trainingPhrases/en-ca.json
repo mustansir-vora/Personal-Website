@@ -1,0 +1,213 @@
+{
+  "trainingPhrases": [ {
+    "id": "1cabf4c0-65c5-4e47-8cb2-d49982040c26",
+    "parts": [ {
+      "text": "I can't seem to remember my account number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "09391235-8035-4a7b-b561-d2ab57cd0b49",
+    "parts": [ {
+      "text": "I don't have any idea about my account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "76d7b0a2-02bb-4f48-8f0e-0ab35725a84f",
+    "parts": [ {
+      "text": "I have no recollection of it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "56382fb0-41d0-459d-9074-9ce16f3ea7d0",
+    "parts": [ {
+      "text": "I've forgotten it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9b2d33a4-a1e9-4ce7-bd6d-379e9ae60076",
+    "parts": [ {
+      "text": "I'm afraid I can't remember."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c3838d05-a29a-4f45-b6b4-faaee91e718c",
+    "parts": [ {
+      "text": "I'm not sure I have ever known it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c1d881df-b35c-45ee-a521-3d3f646f6691",
+    "parts": [ {
+      "text": "I'm not really sure about that."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b4e200ca-34f7-46a5-927e-444078bf49b6",
+    "parts": [ {
+      "text": "No idea, sorry."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ca77e235-d919-49a6-9d98-2182ce6f0ed0",
+    "parts": [ {
+      "text": "I'm totally clueless."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c842114f-41ef-4b19-8ed5-03a9c937c639",
+    "parts": [ {
+      "text": "I haven't a clue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "541c175c-f8ba-4114-9007-7248fd6aee96",
+    "parts": [ {
+      "text": "I'm drawing a blank."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e2e86ff5-be8a-4aa8-b12c-75ad2f8ffdb5",
+    "parts": [ {
+      "text": "I'm completely blanking."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2c684b3f-782c-459e-9f05-15a9c3638500",
+    "parts": [ {
+      "text": "I have absolutely no idea."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "705cd04e-3b53-4e4f-a83f-2d60501b5a11",
+    "parts": [ {
+      "text": "I can't recall."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "fab15a8e-1d3d-4fd7-9a10-2b031374a302",
+    "parts": [ {
+      "text": "I am not sure."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6326f2ea-b337-49c4-9f08-d798f62954fa",
+    "parts": [ {
+      "text": "I don't know, I don't remember"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7428dff9-dd58-40b6-8b90-84387dbafd01",
+    "parts": [ {
+      "text": "I am not aware of any such account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "761b42d3-9755-4377-acfd-c9b777042882",
+    "parts": [ {
+      "text": "I have no idea what it could be"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "136ef942-bd19-4393-a89e-96c597e27e3d",
+    "parts": [ {
+      "text": "I'm unsure if I have an account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d7d505c5-35e5-475f-b7be-e635917700eb",
+    "parts": [ {
+      "text": "I don't remember having one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5e57641c-1938-4280-90a2-61c1d2774627",
+    "parts": [ {
+      "text": "I'm not aware of the account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c6b81506-75ae-448b-975f-c5483d80c29f",
+    "parts": [ {
+      "text": "I can't remember my account number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "49839a0b-dc8a-4a11-8455-3f32add0c83f",
+    "parts": [ {
+      "text": "I am unaware of my account number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2444b963-7343-4473-888d-d12731ee0e11",
+    "parts": [ {
+      "text": "I have no idea what that is"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bb74e4b1-fb1a-49cd-9efa-b9a27a32e6b9",
+    "parts": [ {
+      "text": "I'm not sure what my account number is"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "02fced4e-7a33-4b8a-9b14-cfc059743918",
+    "parts": [ {
+      "text": "I do not know my account number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1f8123d8-376a-4635-bd5e-b11f75fb583d",
+    "parts": [ {
+      "text": "I don't have this information"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "30938de2-3f86-441a-841a-8fb86740e44c",
+    "parts": [ {
+      "text": "I don't have an account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b0fdb538-512d-4b04-9d7f-18c1d72fb44a",
+    "parts": [ {
+      "text": "I don't know it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "415eeeb5-5ce2-42ca-a818-bd227f405ea4",
+    "parts": [ {
+      "text": "I don't have one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

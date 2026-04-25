@@ -1,0 +1,7 @@
+{
+  "name": "ad725534-f999-4f4f-9553-de6554c34ece",
+  "displayName": "plan-add-on",
+  "priority": 500000,
+  "description": "Handles requests to add extra features or services to a plan",
+  "numTrainingPhrases": 47
+}

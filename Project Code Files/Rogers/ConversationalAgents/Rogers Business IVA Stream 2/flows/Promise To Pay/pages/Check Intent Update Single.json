@@ -1,0 +1,25 @@
+{
+  "name": "e50ebc95-8a64-4842-b488-e9798f606f06",
+  "displayName": "Check Intent Update Single",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = report-a-payment",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Report Payment",
+    "name": "d75d9674-731a-45f4-8685-ec8a35154dd0"
+  }, {
+    "condition": "$session.params.savedIntent = payment-arrangement",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Pay Now",
+    "name": "20792856-e17b-41cd-826f-cecb378efa49"
+  } ]
+}

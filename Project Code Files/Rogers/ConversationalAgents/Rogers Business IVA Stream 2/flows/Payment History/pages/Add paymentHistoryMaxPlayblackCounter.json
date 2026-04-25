@@ -1,0 +1,21 @@
+{
+  "name": "19c1c16a-3e95-413e-96c1-692c46a9ce70",
+  "displayName": "Add paymentHistoryMaxPlayblackCounter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.paymentHistoryMaxPlaybackCounter",
+      "value": "$sys.func.ADD($session.params.paymentHistoryMaxPlaybackCounter, 1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check maxPlayback",
+    "name": "3f501099-6743-4844-a1bf-596d90440714"
+  } ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "6c351953-0460-4634-adbf-26180a20e532",
+  "displayName": "Check availableCredit",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.creditEvaluationDetails.availableCreditLimitAmount \u003c= 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play noAvailableCredit",
+    "name": "31aaf6b2-ed07-44f4-a9ef-b69f41e4c772"
+  }, {
+    "condition": "$session.params.api.billingProfile.creditEvaluationDetails.availableCreditLimitAmount \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play AvailableCredit",
+    "name": "39e62d68-6713-497c-ae36-2e8cb18ac422"
+  } ]
+}

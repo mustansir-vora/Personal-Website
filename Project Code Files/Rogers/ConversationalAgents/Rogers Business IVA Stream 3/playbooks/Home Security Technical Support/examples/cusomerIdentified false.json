@@ -1,0 +1,38 @@
+{
+  "name": "01899d02-bd8e-4ad5-bc73-2cb5efa0cb07",
+  "actions": [ {
+    "toolUse": {
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220000183"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcasrt",
+    "actionParameters": {
+      "customerNotIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after checks",
+    "actionParameters": {
+      "customerNotIdentified": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220000183"
+      }
+    }
+  },
+  "displayName": "cusomerIdentified false",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 152,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "undetected"
+}

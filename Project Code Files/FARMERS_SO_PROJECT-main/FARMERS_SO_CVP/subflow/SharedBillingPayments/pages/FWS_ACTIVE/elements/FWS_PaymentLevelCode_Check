@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2130608062:1714724406056" name="FWS_PaymentLevelCode_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="FWS_PaymentLevelCode_Check" default_exit_state="OTHERS">
+        <exit_state name="P" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PAYMENT_LEVEL_CODE" />
+                </data>
+                <constant_string value="P" />
+            </string>
+        </exit_state>
+        <exit_state name="A" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PAYMENT_LEVEL_CODE" />
+                </data>
+                <constant_string value="A" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

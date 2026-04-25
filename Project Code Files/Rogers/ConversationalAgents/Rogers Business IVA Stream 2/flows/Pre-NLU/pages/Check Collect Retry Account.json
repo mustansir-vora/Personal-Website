@@ -1,0 +1,39 @@
+{
+  "name": "b0ad7316-a44d-470d-84c1-2f407b85dd61",
+  "displayName": "Check Collect Retry Account",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectRetryCounter = 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Max Account Retry",
+    "name": "1844cb5d-35de-4735-b800-bc02eb34dd3c"
+  }, {
+    "condition": "$session.params.collectRetryCounter \u003c 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D'accord, essayons encore." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay, let's try again. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectRetryCounter",
+        "value": "$sys.func.ADD($session.params.collectRetryCounter,1)"
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "c741ba71-3a38-4ea5-acab-259d854c1fcc"
+  } ]
+}

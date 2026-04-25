@@ -1,0 +1,25 @@
+{
+  "name": "0c54f73e-5d0b-4ec8-95b9-03f842090f04",
+  "displayName": "Check From",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAR = true OR $session.params.fromPreauthPayment = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "df32def3-ed82-499f-a420-ab31a8e81ba2"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Reset Intents",
+    "name": "c65617da-e231-48ec-b521-6508e0b3e0d2"
+  } ]
+}

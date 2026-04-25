@@ -1,0 +1,112 @@
+{
+  "name": "23c95b10-8317-4eee-98ba-5888f8c73955",
+  "displayName": "Use Previous Card",
+  "form": {
+    "parameters": [ {
+      "displayName": "usePreviousCardChoice",
+      "required": true,
+      "entityType": "@e_UsePreviousCardChoice",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To use the card you previously entered, say\nyes or press 1. To enter a different card, say no or press 2. If you need\nmore time, say hold on or press pound." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "7a43d856-08f1-4be8-9c3d-e7444580425c"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To use the card you previously entered, say\nyes or press 1. To enter a different card, say no or press 2. If you need\nmore time, say hold on or press pound." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "387d0325-d269-4120-b843-1f63d20f9516"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 5
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 5
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to use the same card again?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.usePreviousCardChoice = use_previous",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SKIP CC",
+    "name": "09f189d0-2b64-46af-8a92-7b05ac8f8606"
+  }, {
+    "condition": "$session.params.usePreviousCardChoice = hold",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "95 HOLD PLACEHOLDER",
+    "name": "d8c38065-693e-4acb-9a1a-08dddd793c10"
+  }, {
+    "condition": "$session.params.usePreviousCardChoice = enter_new",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC Details Counter",
+    "name": "42e0a6f8-38e9-44a2-9d42-2585fb96d098"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC Details Counter",
+    "name": "4d011043-cf6c-462f-87a2-ae151234f66d",
+    "description": "by default let the user go to ccDetails counter"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To use the card you previously entered, say\nyes or press 1. To enter a different card, say no or press 2. If you need\nmore time, say hold on or press pound." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6097dab7-3ad2-474b-9502-abbcdb199a9c"
+  }, {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To use the card you previously entered, say\nyes or press 1. To enter a different card, say no or press 2. If you need\nmore time, say hold on or press pound." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a984cf37-9a21-40cd-ba8f-fe04d8978f96"
+  } ]
+}

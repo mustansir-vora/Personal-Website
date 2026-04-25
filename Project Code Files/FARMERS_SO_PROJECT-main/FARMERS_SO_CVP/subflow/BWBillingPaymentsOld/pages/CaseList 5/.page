@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@834415706:1708938541296" name="CaseList 5" version="6.0.1">
+<element height="55" id="Element@1116037051:1708938699827" name="NSF_STATE_CHECK_2" type="Decision" width="214" x="477" y="670">
+<exit_states>
+<exit_state name="Y" target="Element@1675506064:1708938699827"/>
+<exit_state name="Not Y" target="Element@1675506064:1708938699827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@774996199:1708938699828" name="RE_EFFDT_PLUS_RELAPSE_CHECK_2" type="Decision" width="327" x="429" y="577">
+<exit_states>
+<exit_state name="True" target="Element@1116037051:1708938699827"/>
+<exit_state name="False" target="Element@1116037051:1708938699827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@932419414:1708938699828" name="POLICY_STATUS_CHECK" type="Decision" width="236" x="468" y="238">
+<exit_states>
+<exit_state name="Y" target="Element@1090568912:1708938699828"/>
+<exit_state name="Not Y" target="Element@1090568912:1708938699828"/>
+</exit_states>
+</element>
+<element height="55" id="Element@613578997:1708938699827" name="CL_5" type="Page Entry" width="92" x="525" y="14">
+<exit_states>
+<exit_state name="next" target="Element@1289594087:1708938699827"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1090568912:1708938699828" name="POLICY_QUALIFICATION_CHECK" type="Decision" width="304" x="441" y="361">
+<exit_states>
+<exit_state name="Y" target="Element@1786958977:1708938699828"/>
+<exit_state name="N" target="Element@1786958977:1708938699828"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1304659529:1708938699828" name="BWBP_MN_002_ENTRY" type="Page Connector" width="229" x="775" y="909">
+<page_connector target="Element@1230557031:1708938735464">BWBP_MN_002_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1978127394:1708938699827" name="EPC_PAYMENTS_3" type="Subflow Call" width="191" x="498" y="1335">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1711717632019">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1536199369:1710827925981"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1289594087:1708938699827" name="POLICY_MODE_CHECK" type="Decision" width="228" x="472" y="126">
+<exit_states>
+<exit_state name="Yes" target="Element@932419414:1708938699828"/>
+<exit_state name="No" target="Element@932419414:1708938699828"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1602449048:1708938699828" name="BWBP_ADM_006" type="Decision" width="182" x="488" y="909">
+<exit_states>
+<exit_state name="Customer" target="Element@414760988:1709110076756"/>
+<exit_state name="Agent" target="Element@1304659529:1708938699828"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1786958977:1708938699828" name="POLICY_BALANCE_CHECK_3" type="Decision" width="269" x="449" y="479">
+<exit_states>
+<exit_state name="&gt;=0" target="Element@774996199:1708938699828"/>
+<exit_state name="No" target="Element@774996199:1708938699828"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1675506064:1708938699827" name="BWBP_PA_017" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="162" x="695" y="772">
+<exit_states>
+<exit_state name="done" target="Element@1602449048:1708938699828"/>
+</exit_states>
+</element>
+<element height="55" id="Element@414760988:1709110076756" name="BWBP_MN_007_Call" type="Subflow Call" width="205" x="478" y="1049">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709110104594">
+<config>
+<argument_data>
+<data name="MenuID">BWBP_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1533313390:1710827700160"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1533313390:1710827700160" name="BWBP_MN_007_VALUE" type="Decision" width="228" x="477" y="1174">
+<exit_states>
+<exit_state name="Make a Payment" target="Element@1978127394:1708938699827"/>
+<exit_state name="Outstanding Balance" target="Element@1978127394:1708938699827">
+<bendpoint>
+<dim1 x="-264" y="77"/>
+<dim2 x="-266" y="-84"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NI" target="Element@1536199369:1710827925981"/>
+<exit_state name="NM" target="Element@1765272218:1710827922824"/>
+<exit_state name="ER" target="Element@1765272218:1710827922824"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1765272218:1710827922824" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="254" y="1335">
+<page_connector target="Element@1517881637:1710826549667">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1536199369:1710827925981" name="HANGUP_ENTRY" type="Page Connector" width="181" x="768" y="1331">
+<page_connector target="Element@795750700:1710826769493">HANGUP_ENTRY<config/>
+</page_connector>
+</element>
+</page>

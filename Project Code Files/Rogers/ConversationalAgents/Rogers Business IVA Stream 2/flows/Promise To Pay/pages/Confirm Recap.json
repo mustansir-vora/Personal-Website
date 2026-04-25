@@ -1,0 +1,160 @@
+{
+  "name": "2eeed785-8c2a-4dc3-8af2-8c5239c8747d",
+  "displayName": "Confirm Recap",
+  "form": {
+    "parameters": [ {
+      "displayName": "recapConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Est-ce que cet entente de paiement est exact \n? Dites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2. Pour \nl’entendre de nouveau, dites « répéter » ou appuyez sur l’étoile." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Does that payment arrangement sound correct? Say yes, or press 1. No, or press 2. To hear it again, say repeat or press star. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "82827aa4-ff2d-4685-a21b-4f6d5c74e798"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Est-ce que cet entente de paiement est exact \r\n? Dites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2. Pour \r\nl’entendre de nouveau, dites « répéter » ou appuyez sur l’étoile." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Does that payment arrangement sound correct? Say yes, or press 1. No, or press 2. To hear it again, say repeat or press star. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "ab1723f2-4cd9-4638-a3c2-90b6eefea0a4"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si cet entente de paiement vous convient, \r\nappuyez sur le 1. Sinon, appuyez sur le 2. Pour l’entendre de nouveau, \r\nappuyez sur l’étoile. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you're good with that payment arrangement, press 1. If not, press 2. To hear it again, press star. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "0d04de0e-29bc-4a17-b73f-af5e0d41c734"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si cet entente de paiement vous convient, \nappuyez sur le 1. Sinon, appuyez sur le 2. Pour l’entendre de nouveau, \nappuyez sur l’étoile." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you're good with that payment arrangement, press 1. If not, press 2. To hear it again, press star. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "5337cb84-d607-48cb-9741-daa7d85ea256"
+        }, {
+          "targetPage": "PTP Offer Best Option",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "42680378-2bbb-4fe1-8129-86198bae09a5"
+        }, {
+          "targetPage": "PTP Offer Best Option",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "7d0d60a4-5f80-46b4-804c-0a3fc595fc8a"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ " Est-ce exact ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ " Is that right?" ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "$session.params.ptpConfirmation",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "repeat",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Bien sûr. Voici le \r\nrécapitulatif de \r\nnouveau. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Sure. Here’s the recap again. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "PTP Recap",
+    "name": "d8683671-6745-4525-8ce5-94c1e09d4b30"
+  }, {
+    "condition": "$session.params.recapConfirmation = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "recapConfirmation",
+        "value": null
+      } ]
+    },
+    "targetPage": "PTP Process PTP",
+    "name": "0635a85c-8b9e-44dd-806a-ff532ef0a707"
+  }, {
+    "condition": "$session.params.recapConfirmation = no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpConfirmNo",
+        "value": true
+      }, {
+        "parameter": "ptpRecapNoCounter",
+        "value": "$sys.func.ADD($session.params.ptpRecapNoCounter, 1)"
+      }, {
+        "parameter": "$session.params.ptpConfirmation",
+        "value": true
+      }, {
+        "parameter": "recapConfirmation",
+        "value": null
+      } ]
+    },
+    "targetPage": "PTP Change Details",
+    "name": "f2078b16-a2d7-435f-941f-19f7689804d2"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

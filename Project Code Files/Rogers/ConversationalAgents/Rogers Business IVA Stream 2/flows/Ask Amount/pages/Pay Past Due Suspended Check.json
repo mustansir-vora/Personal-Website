@@ -1,0 +1,62 @@
+{
+  "name": "e8ce3d0b-a1d6-4d60-b5a4-669a6a85712d",
+  "displayName": "Pay Past Due Suspended Check",
+  "form": {
+    "parameters": [ {
+      "displayName": "userPayPastDueSuspendedConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetPage": "End Flow",
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+          
+          },
+          "name": "5da633bc-bd4b-45ab-b83b-cb681e093b72"
+        }, {
+          "targetPage": "End Flow",
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+          
+          },
+          "name": "fb994644-81cc-4517-a635-00a7baf36eee"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "To restore your service, would you like to pay the required amount of $session.params.pastDueBalance?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Pour rétablir votre service, souhaitez-vous payer le montant requis de $session.params.pastDueBalance ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.userPayPastDueSuspendedConfirmation = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$sys.func.TO_NUMBER($session.params.pastDueBalance)"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "010f6cf5-5dbb-4267-a91e-89159d3c937f"
+  }, {
+    "condition": "$session.params.userPayPastDueSuspendedConfirmation = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "be0f7570-f0be-4208-99f6-ccc93d45c5b7"
+  } ]
+}

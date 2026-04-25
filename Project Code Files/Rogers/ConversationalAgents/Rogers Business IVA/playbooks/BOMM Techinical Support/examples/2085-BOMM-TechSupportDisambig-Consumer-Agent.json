@@ -1,0 +1,63 @@
+{
+  "name": "2ef40dfe-d255-4c13-86d0-92869f14edf2",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to talk with representative"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Our specialists are unable to assist with this transaction, but I can help you with it here in the automated system. Let's try again.\nWhich of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to talk with representative"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "globalAgentRequestCounter": "0",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInputBMTS": "agent"
+    }
+  },
+  "displayName": "2085-BOMM-TechSupportDisambig-Consumer-Agent",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 336,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "07af9ae8-15ae-4b6a-8da2-c18517fca339",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez être à la maison afin d’avoir accès à votre équipement de télévision."
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After Broad cast",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "customerIdentified": "true",
+      "numberOfTV": "2"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Customer is Identified and Business account",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportTv",
+      "completedSSName": "passive-techSupportTv",
+      "completedSelfServe": "passive-techSupportTv",
+      "hasTvProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportTv",
+      "reportingVar_completedSSName": "passive-techSupportTv",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220002283"
+      }
+    }
+  },
+  "displayName": "Consumer",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 288,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

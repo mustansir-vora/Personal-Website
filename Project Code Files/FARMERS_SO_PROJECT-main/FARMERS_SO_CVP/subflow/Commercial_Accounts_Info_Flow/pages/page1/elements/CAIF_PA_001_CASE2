@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@998482611:1711190555345" name="CAIF_PA_001_CASE2" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CAIF_PA_001a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmdd" output_format="month_day" type="date">{Data.Session.S_CURR_YEAR}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="month_day" type="wav">http://{Data.Session.S_VXML_SERVER_IP}/FARMERS_SO_CVP/EN/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CAIF_PA_001b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="dollars_cents" type="currency">{Data.Session.S_COMM_LAST_PMT_AMT}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="standard" type="wav">http://{Data.Session.S_VXML_SERVER_IP}/FARMERS_SO_CVP/EN/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CAIF_PA_001d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmdd" output_format="month_day" type="date">{Data.Session.S_COMM_LAST_PMT_DATE}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="month_day" type="wav">http://{Data.Session.S_VXML_SERVER_IP}/FARMERS_SO_CVP/EN/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CAIF_PA_001g.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="dollars_cents" type="currency">{Data.Session.S_COMM_PMT_DUE_AMT}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="standard" type="wav">http://{Data.Session.S_VXML_SERVER_IP}/FARMERS_SO_CVP/EN/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CAIF_PA_001c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmdd" output_format="month_day" type="date">{Data.Session.S_COMM_PMT_DUE_DATE}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="month_day" type="wav">http://{Data.Session.S_VXML_SERVER_IP}/FARMERS_SO_CVP/EN/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CAIF_PA_001e.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="dollars_cents" type="currency">{Data.Session.S_COMM_TOT_OUT_BAL}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="standard" type="wav">http://{Data.Session.S_VXML_SERVER_IP}/FARMERS_SO_CVP/EN/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CAIF_PA_001h.wav"><![CDATA[your account has been cancelled]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1126480102:1711797147907" name="FAS Call Init Request" version="6.0.1">
+<subflow_call subflow_name="FAS_Call_Initial_Representative_Handling" target="Element@31:1711877889051">
+<config/>
+</subflow_call>
+</connector>

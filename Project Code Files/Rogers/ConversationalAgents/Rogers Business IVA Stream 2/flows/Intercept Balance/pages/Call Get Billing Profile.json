@@ -1,0 +1,26 @@
+{
+  "name": "26deedf0-0561-4415-9358-90db0a5b688c",
+  "displayName": "Call Get Billing Profile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "billingProfile"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.returnCode != 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Goto Transtion Routing",
+    "name": "ba205685-8a83-4bb3-8767-629a7c725acd"
+  }, {
+    "condition": "$session.params.api.billingProfile.returnCode = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Current Balance",
+    "name": "855e201c-e4e2-4968-9f61-352c339f6920"
+  } ]
+}

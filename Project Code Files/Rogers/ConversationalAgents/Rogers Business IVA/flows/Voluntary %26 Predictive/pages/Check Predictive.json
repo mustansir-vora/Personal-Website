@@ -1,0 +1,72 @@
+{
+  "name": "9c758193-6c1f-4b95-88d9-e0a6e66af389",
+  "displayName": "Check Predictive",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA\", true, false)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "a22d88a4-d7f7-4148-a79d-c9d17c68ce01"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.enabled != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA\", true, false)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "a70aebab-cd02-4a6a-ba73-ea1ea8594a06"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.enabled = true AND $session.params.predictiveMessageAvailable = true AND $session.params.questionOrMessage = \"message\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.voiceScriptContent" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "$session.params.voiceScriptContent" ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "$session.params.predictiveIntent"
+      } ]
+    },
+    "targetPage": "Predictive Message",
+    "name": "9664e96a-34e6-4158-abe1-7b2162635e1e"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.enabled = true AND $session.params.predictiveMessageAvailable = true AND $session.params.questionOrMessage != \"message\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Predictive Menu",
+    "name": "9963ba87-1d4f-4eb2-830b-7d2cfc460e7d"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.enabled = true AND $session.params.predictiveMessageAvailable != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "$session.params.predictiveIntent"
+      } ]
+    },
+    "targetPage": "Predictive Message",
+    "name": "f1227552-7de8-41e5-8dc0-af4758b8eb08"
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "ba405a26-be18-407b-bc17-01648c9d46e9",
+  "displayName": "RepeatMn",
+  "priority": 500000,
+  "description": "This will trigger when user says repeat the informations/message/menu",
+  "numTrainingPhrases": 65,
+  "dtmfPattern": "^\\*$"
+}

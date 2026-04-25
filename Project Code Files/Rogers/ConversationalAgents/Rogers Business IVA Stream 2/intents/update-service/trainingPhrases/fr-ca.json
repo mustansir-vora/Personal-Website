@@ -1,0 +1,166 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Nous voulons ajouter des chaînes prémium pour ",
+      "auto": true
+    }, {
+      "text": "notre salon",
+      "auto": true
+    }, {
+      "text": " d’",
+      "auto": true
+    }, {
+      "text": "affaires",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous devons passer ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " autre forfait câble pour ",
+      "auto": true
+    }, {
+      "text": "l’entreprise",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre contact de facturation a ",
+      "auto": true
+    }, {
+      "text": "changé",
+      "auto": true
+    }, {
+      "text": " et nous devons mettre à jour les détails du compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous voulons retirer certaines chaînes de notre forfait ",
+      "auto": true
+    }, {
+      "text": "actuel",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous sommes en expansion et devons mettre à jour notre abonnement câble.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous devons ajouter des décodeurs supplémentaires pour ",
+      "auto": true
+    }, {
+      "text": "les nouvelles salles",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "de réunion",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos heures d’",
+      "auto": true
+    }, {
+      "text": "affaires",
+      "auto": true
+    }, {
+      "text": " ont ",
+      "auto": true
+    }, {
+      "text": "changé",
+      "auto": true
+    }, {
+      "text": " et nous devons ajuster les paramètres de ",
+      "auto": true
+    }, {
+      "text": "service",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous voulons passer ",
+      "auto": true
+    }, {
+      "text": "à un",
+      "auto": true
+    }, {
+      "text": " forfait câble avec ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " vitesse plus élevée.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre bureau",
+      "auto": true
+    }, {
+      "text": " a déménagé et nous devons mettre à jour l’adresse de ",
+      "auto": true
+    }, {
+      "text": "service",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous devons ajouter plus de chaînes à notre forfait câble d’",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

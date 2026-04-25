@@ -1,0 +1,122 @@
+{
+  "name": "f3fc2063-1a68-48fd-8441-cb2ac1c4ce8c",
+  "displayName": "Pay Current Balance",
+  "form": {
+    "parameters": [ {
+      "displayName": "userPayCurrentBalanceConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ " Would you like to pay your current balance of\n${session.params.currentBalance} ?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Souhaitez-vous payer votre solde courant de ${session.params.currentBalance} ?" ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "f457fd02-416d-4b86-94a7-722ddb85ea69"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ " Would you like to pay your current balance of\n${session.params.currentBalance} ?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Souhaitez-vous payer votre solde courant de ${session.params.currentBalance} ?" ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "0c9b3e0e-4e5d-407b-98e4-e08b4da3fc5d"
+        }, {
+          "targetPage": "In That Case",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+          
+          },
+          "name": "901db6c7-e786-4f29-8c30-b41c16f309e9"
+        }, {
+          "targetPage": "In That Case",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+          
+          },
+          "name": "2fa82926-7602-4e07-adb0-37a3af70ca84"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Souhaitez-vous payer votre solde courant de $session.params.currentBalance ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ " Would you like to pay your current balance of\n$session.params.currentBalance ?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous payer votre solde courant de ${session.params.currentBalance} ?" ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.userPayCurrentBalanceConfirmation = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.currentBalance"
+      } ]
+    },
+    "targetPage": "Continue To Credit Operations",
+    "name": "604baac3-3062-430d-a821-a442f518c258"
+  }, {
+    "condition": "$session.params.userPayCurrentBalanceConfirmation = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "In That Case",
+    "name": "75890b52-52f1-44f9-a2f8-fd8d6d2e4e10"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " Would you like to pay your current balance of\n$session.params.currentBalance ?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "4a9c1ba3-b351-42cd-af41-47aa37ab6b87"
+  }, {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " Would you like to pay your current balance of\n$session.params.currentBalance ?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c62cb37a-9346-4f15-9962-6de8c75cfed1"
+  } ]
+}

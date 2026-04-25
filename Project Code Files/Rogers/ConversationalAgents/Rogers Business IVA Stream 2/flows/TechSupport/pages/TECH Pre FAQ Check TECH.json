@@ -1,0 +1,30 @@
+{
+  "name": "a8977bf8-91fc-40bf-91f4-6cf39332f96d",
+  "displayName": "TECH Pre FAQ Check TECH",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.IsBusinessApp = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": false
+      }, {
+        "parameter": "savedIntent",
+        "value": "$sys.func.CONCATENATE(\"postTS-\", $session.params.savedIntent)"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "isNluFlow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "c3e6a4a9-9ef5-437a-b48a-be5d3922728a"
+  } ]
+}

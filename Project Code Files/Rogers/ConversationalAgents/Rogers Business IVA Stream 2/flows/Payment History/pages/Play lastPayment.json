@@ -1,0 +1,23 @@
+{
+  "name": "5dc2f9b2-3151-4837-89ad-f11ebe653cdf",
+  "displayName": "Play lastPayment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "That’s all the payment history that I have." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call SMS subflow",
+    "name": "ff0b51ae-f7db-4d4e-a0ee-28b1cb8deb8d"
+  } ]
+}

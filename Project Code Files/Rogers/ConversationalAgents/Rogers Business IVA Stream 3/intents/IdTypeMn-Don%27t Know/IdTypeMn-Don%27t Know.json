@@ -1,0 +1,7 @@
+{
+  "name": "8d0c134b-f481-481c-80d2-ab7f97ccb127",
+  "displayName": "IdTypeMn-Don't Know",
+  "priority": 500000,
+  "description": "to collect the id type from user",
+  "numTrainingPhrases": 58
+}

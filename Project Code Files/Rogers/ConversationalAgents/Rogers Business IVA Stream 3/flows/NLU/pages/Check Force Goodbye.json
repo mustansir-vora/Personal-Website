@@ -1,0 +1,28 @@
+{
+  "name": "308c6a5e-9a35-4313-9d6d-4a690e30995f",
+  "displayName": "Check Force Goodbye",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.closedDoorTFN = true OR $session.params.closed_door_SS = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "aa3e92fc-4a23-4b3b-a2b6-80852dc76660"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "NLU Return",
+    "name": "de9e9699-09be-4e3c-8a6d-7dfc3036da66"
+  } ]
+}

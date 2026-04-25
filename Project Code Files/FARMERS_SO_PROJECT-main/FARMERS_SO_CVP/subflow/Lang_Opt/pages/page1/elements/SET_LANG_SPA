@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@52344315:1708000074406" name="SET_LANG_SPA" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">SP</setting>
+<setting name="sessNames">S_PREF_LANG</setting>
+</settings>
+</config>
+</action_element>

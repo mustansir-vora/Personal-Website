@@ -1,0 +1,31 @@
+{
+  "name": "0806fbbc-c10b-48d4-9c84-60784a4dac37",
+  "displayName": "Play Alright for Yes",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Alright." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "D’accord." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.fromInterceptBalance",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Make A Payment",
+    "name": "0b560c09-dfbf-4070-91af-c2df7ea0221a"
+  } ]
+}

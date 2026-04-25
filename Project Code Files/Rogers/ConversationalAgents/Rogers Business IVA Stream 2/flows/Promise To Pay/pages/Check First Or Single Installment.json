@@ -1,0 +1,25 @@
+{
+  "name": "43155d83-6e7a-49f7-8456-c84c15d61ede",
+  "displayName": "Check First Or Single Installment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.installmentInFocus = first OR $session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Change One Install",
+    "name": "64936f21-156a-4879-a95c-9087384bee43"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Change Two Install Initial",
+    "name": "6e187240-0e49-432e-a3e5-cba387622fdd"
+  } ]
+}

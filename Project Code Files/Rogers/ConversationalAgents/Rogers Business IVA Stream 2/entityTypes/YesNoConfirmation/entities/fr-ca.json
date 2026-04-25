@@ -1,0 +1,13 @@
+{
+  "entities": [ {
+    "value": "Yes",
+    "synonyms": [ "Oui", "Oui, s'il vous plaît", "Bien sûr", "D'accord", "Absolument", "Tout à fait", "Parfait", "C'est exact", "Ouais", "Ça marche", "Ça roule", "Carrément", "Oui, ça va", "Avec plaisir", "Volontiers" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "1"
+  }, {
+    "value": "No",
+    "synonyms": [ "Absolument pas", "Ce n'est pas nécessaire", "Laisse tomber", "Nan", "Non", "Non, c'est bon", "Non, merci", "Non, pas là", "Pas du tout", "Pas vraiment", "Rien pour moi, merci" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "2"
+  } ]
+}

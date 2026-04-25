@@ -1,0 +1,46 @@
+{
+  "name": "aabc04cb-3a18-42aa-98b4-6a893fe3abea",
+  "displayName": "Iterate Subscriptions",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "wirelessOnly",
+      "value": "$sys.func.FILTER(\"$session.params.subscriptionsList\", \"$[?(@.serviceCategory.english == 'Mobile')]\")"
+    }, {
+      "parameter": "currentSubscriptionObject",
+      "value": "$sys.func.GET($session.params.wirelessOnly, $session.params.subscriptionIndexCounter)"
+    }, {
+      "parameter": "currentSubscriptionSerial",
+      "value": "$sys.func.GET_FIELD($session.params.currentSubscriptionObject, \"subscriptionSerialNumber\")"
+    }, {
+      "parameter": "subscriptionIndexCounter",
+      "value": "$sys.func.ADD($session.params.subscriptionIndexCounter, 1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.currentSubscriptionSerial = $session.params.itnToMatchSubscription",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subscriptionMatch",
+        "value": true
+      }, {
+        "parameter": "subscriptionIndexCounter",
+        "value": 0
+      }, {
+        "parameter": "subscriptionNumber",
+        "value": "$session.params.itnToMatchSubscription"
+      } ]
+    },
+    "targetPage": "Check Success Exit - Subscription ITN Match",
+    "name": "cd9796bb-b1a0-4808-b287-0a50f9cbd9b8"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Subscription ITN Match Router",
+    "name": "f3de3c1a-efcd-4c10-8fea-ca6d14283987"
+  } ]
+}

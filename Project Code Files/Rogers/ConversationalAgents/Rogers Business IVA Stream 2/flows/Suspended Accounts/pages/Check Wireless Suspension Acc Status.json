@@ -1,0 +1,32 @@
+{
+  "name": "7e29f17c-c557-415f-b89c-5697e2577f82",
+  "displayName": "Check Wireless Suspension Acc Status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.accountStatus = S",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Suspended",
+    "name": "99c45790-6faa-45e9-b234-4854d25adf97"
+  }, {
+    "condition": "$session.params.api.BillingProfile.accountStatus = O OR $session.params.api.BillingProfile.collectionSuspensionDetails.wirDataSuspendedInd = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Data",
+    "name": "e1fa097b-f813-4077-b0ca-c63d338250b4"
+  }, {
+    "condition": "$session.params.api.BillingProfile.collectionSuspensionDetails.internetSuspendedInd = Y",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Internet",
+    "name": "cd4f3064-a408-425d-8e13-64ea394d932f"
+  } ]
+}

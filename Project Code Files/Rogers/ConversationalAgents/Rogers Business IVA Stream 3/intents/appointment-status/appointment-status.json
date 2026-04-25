@@ -1,0 +1,7 @@
+{
+  "name": "1266156d-886e-4a61-bb62-24cce71b01e8",
+  "displayName": "appointment-status",
+  "priority": 500000,
+  "description": "This intent is triggered when the user is calling to check on the status of their scheduled appointment.",
+  "numTrainingPhrases": 50
+}

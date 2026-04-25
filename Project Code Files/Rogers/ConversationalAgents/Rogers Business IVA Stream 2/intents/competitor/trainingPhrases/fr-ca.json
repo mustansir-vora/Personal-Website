@@ -1,0 +1,241 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux changer de fournisseur et vérifier si vous avez "
+    }, {
+      "text": "une"
+    }, {
+      "text": " meilleure offre."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu "
+    }, {
+      "text": "une"
+    }, {
+      "text": " offre de "
+    }, {
+      "text": "Virgin"
+    }, {
+      "text": " et je veux voir si vous pouvez l’égaler."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu "
+    }, {
+      "text": "une"
+    }, {
+      "text": " offre de "
+    }, {
+      "text": "Fizz"
+    }, {
+      "text": " et je veux voir si vous pouvez l’égaler."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous égaler ce que "
+    }, {
+      "text": "Lucky Mobile"
+    }, {
+      "text": " offre?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous égaler ce que "
+    }, {
+      "text": "Fizz"
+    }, {
+      "text": " offre?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir si vous pouvez égaler le prix qui m’a "
+    }, {
+      "text": "été"
+    }, {
+      "text": " donné par "
+    }, {
+      "text": "Koodo"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai "
+    }, {
+      "text": "une"
+    }, {
+      "text": " offre de "
+    }, {
+      "text": "Telus"
+    }, {
+      "text": " et je me demandais si vous pouviez l’égaler."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous égaler le prix de "
+    }, {
+      "text": "Videotron"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous égaler le prix de "
+    }, {
+      "text": "Public Mobile"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux égaler "
+    }, {
+      "text": "une"
+    }, {
+      "text": " offre de "
+    }, {
+      "text": "Lucky Mobile"
+    }, {
+      "text": " et parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux égaler "
+    }, {
+      "text": "une"
+    }, {
+      "text": " offre de "
+    }, {
+      "text": "Bell"
+    }, {
+      "text": " et parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon"
+    }, {
+      "text": " contrat arrive à échéance et je me demande si vous pouvez m’offrir "
+    }, {
+      "text": "un"
+    }, {
+      "text": " meilleur prix parce que "
+    }, {
+      "text": "Telus"
+    }, {
+      "text": " offre quelque chose de mieux."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour voir si je pourrais égaler la "
+    }, {
+      "text": "même"
+    }, {
+      "text": " offre que je recevais "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " ma facture "
+    }, {
+      "text": "Rogers"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je me demande si vous pouvez égaler ce que "
+    }, {
+      "text": "Virgin"
+    }, {
+      "text": " offre "
+    }, {
+      "text": "en ce moment"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je me demande si vous pouvez égaler ce que "
+    }, {
+      "text": "Freedom"
+    }, {
+      "text": " offre "
+    }, {
+      "text": "en ce moment"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu "
+    }, {
+      "text": "une"
+    }, {
+      "text": " offre de "
+    }, {
+      "text": "Videotron"
+    }, {
+      "text": " et j’appelle pour voir si vous pouvez l’égaler."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu "
+    }, {
+      "text": "une"
+    }, {
+      "text": " offre de "
+    }, {
+      "text": "Bell"
+    }, {
+      "text": " et j’appelle pour voir si vous pouvez l’égaler."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Égaler "
+    }, {
+      "text": "un"
+    }, {
+      "text": " prix."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

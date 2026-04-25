@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@224996071:1729603501859" name="SET_API_NAME1" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">PolicyInquiry</setting>
+<setting name="sessNames">S_API_NAME</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,69 @@
+{
+  "name": "a5225814-af08-4a48-a866-7628e9f19a63",
+  "displayName": "PTP Check Amount And Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.ptpCheckAmountAndDate",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpMethod = CC AND $session.params.collectedPtpDate \u003e $session.params.api.response.ptp.ccInstallmentDate1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Collected Amount Meets Recommended Amount",
+    "name": "6ed7efdb-41b5-470e-9f7d-58ad4e809d36"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = PB AND $session.params.collectedPtpDate \u003e $session.params.api.response.ptp.pbInstallmentDate1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Collected Amount Meets Recommended Amount",
+    "name": "ad3bf3de-eef1-4d89-8a58-326b21d05542"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = CC AND $session.params.collectedPtpDate \u003c $session.params.api.response.ptp.ccCollectedDate",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Report Payment",
+    "name": "0588825f-7cc8-4cd6-936a-2e5dfd75edd2"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = PB AND $session.params.collectedPtpDate \u003c $session.params.api.response.ptp.pbCollectedDate",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Report Payment",
+    "name": "3c7590a8-0ad5-4561-849d-40acae275e7c"
+  }, {
+    "condition": "$session.params.collectedPtpDate \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Offer Additional Payment",
+    "name": "21b29eb7-8b5d-4526-86fe-3ef75305fdec"
+  }, {
+    "condition": "$sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003e= $sys.func.TO_NUMBER($session.params.recomInstallAmount1)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfInstalls",
+        "value": 2
+      }, {
+        "parameter": "installmentInFocus",
+        "value": "first"
+      } ]
+    },
+    "targetPage": "PTP Offer Additional Payment",
+    "name": "25882741-d653-4c40-a884-adbfec93915b"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Best Offer Transition",
+    "name": "1aecba7c-3e76-4b3d-b127-4d0c2f663234"
+  } ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@265937362:1732873226333" name="FNWL_Customer_Policy_Disambiguation" version="6.0.1">
+<subflow_call subflow_name="FNWL_Customer_Policy_Disambiguation" target="Element@31:1733818273107">
+<config/>
+</subflow_call>
+</connector>

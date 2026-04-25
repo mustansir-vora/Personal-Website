@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@739493124:1707893483939" name="Start" version="6.0.1">
+<element height="55" id="Element@31:1707893483939" name="FWS_Sales_Zip_Auth" type="Subflow Start" width="210" x="230" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1591378190:1710408821206"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1692003857:1708427015145" name="FWSSZ_ADM_001" type="Decision" width="191" x="232" y="309">
+<exit_states>
+<exit_state name="ZIPCODE_MATCH" target="Element@1990507267:1708427977358">
+<bendpoint>
+<dim1 x="-109" y="84"/>
+<dim2 x="-110" y="-53"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ZIPCODE_NO MATCH" target="Element@1990507267:1708427977358">
+<bendpoint>
+<dim1 x="120" y="70"/>
+<dim2 x="119" y="-67"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1990507267:1708427977358" name="SHARED_TRANSFER" type="Page Connector" width="209" x="224" y="446">
+<page_connector target="Element@1069995467:1708427936271">SHARED_TRANSFER<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1591378190:1710408821206" name="FWSSZ_MN_001" type="Subflow Call" width="179" x="239" y="118">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709977922418">
+<config>
+<argument_data>
+<data name="MenuID">FWSSZ_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@282789893:1731528231791"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2038605913:1731528178421" name="DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="93" x="21" y="204">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@282789893:1731528231791" name="FWSSZ_MN_001_VALUE" type="Decision" width="237" x="231" y="204">
+<exit_states>
+<exit_state name="SU" target="Element@1692003857:1708427015145">
+<bendpoint>
+<dim1 x="54" y="55"/>
+<dim2 x="76" y="-50"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1692003857:1708427015145">
+<bendpoint>
+<dim1 x="-105" y="58"/>
+<dim2 x="-83" y="-47"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1692003857:1708427015145"/>
+<exit_state name="NOINPUT" target="Element@2038605913:1731528178421"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,64 @@
+{
+  "name": "7810292a-fd59-4f2f-a38a-4ff0eed446c4",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Y a-t-il une antenne fixée à l’extérieur de votre résidence ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Qu'est-ce que c'est"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je n’ai pas compris. S’il y a une antenne fixée à l’extérieur de votre résidence, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2."
+    }
+  }, {
+    "userUtterance": {
+      "text": "ordinateur"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Accédez-vous à Internet à l’aide d’une carte SIM ou d’un téléphone mobile ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "non"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement Internet."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "customerIdentified": "false",
+      "isQuebecAntennaOffered": "true",
+      "npaProvince": "Quebec",
+      "numberOfInternet": "3",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportWireless,passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11402-Antenna-Res-NoMatch",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 454,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

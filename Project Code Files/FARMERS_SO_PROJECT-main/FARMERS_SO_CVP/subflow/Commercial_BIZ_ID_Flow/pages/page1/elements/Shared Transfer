@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@178765946:1711535436201" name="Shared Transfer" version="6.0.1">
+<subflow_call subflow_name="Transfer" target="Element@31:1710408720216">
+<config/>
+</subflow_call>
+</connector>

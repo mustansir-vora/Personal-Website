@@ -1,0 +1,53 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "The streaming apps on my box are not working."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can’t access "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " through my TV service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " is not playing any videos."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " app keeps freezing."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " isn’t loading on my TV box."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

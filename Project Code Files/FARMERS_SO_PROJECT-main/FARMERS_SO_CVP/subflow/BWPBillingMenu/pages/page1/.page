@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1161422918:1708938904256" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708938904256" name="BWPBillingMenu" type="Subflow Start" width="179" x="508" y="7">
+<exit_states>
+<exit_state name="next" target="Element@1173024419:1711642029002"/>
+</exit_states>
+</element>
+<element height="55" id="Element@832793923:1708938914033" name="SHARED_TRANSFER" type="Subflow Call" width="209" x="496" y="622">
+<subflow_call subflow_name="Transfer" target="Element@31:1711717680250">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@286381615:1711700032311"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1024834317:1708938914033" name="BW_POLICY_PAYMENT_STATUS" type="Subflow Call" width="293" x="124" y="483">
+<subflow_call subflow_name="BWBillingPayments" target="Element@31:1711717705794">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@832793923:1708938914033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@763482934:1708938914033" name="BWBM_MN_001_VALUE" type="Decision" width="234" x="486" y="264">
+<exit_states>
+<exit_state name="Customer Billing" target="Element@1050071035:1708938914033">
+<bendpoint>
+<dim1 x="-238" y="3"/>
+<dim2 x="1" y="-117"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Policy Status" target="Element@1050071035:1708938914033"/>
+<exit_state name="Refunds" target="Element@832793923:1708938914033"/>
+<exit_state name="Commissions" target="Element@832793923:1708938914033">
+<bendpoint>
+<dim1 x="-96" y="185"/>
+<dim2 x="-96" y="-173"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Other Billing" target="Element@832793923:1708938914033">
+<bendpoint>
+<dim1 x="99" y="185"/>
+<dim2 x="99" y="-173"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NI" target="Element@232422160:1710828302496"/>
+<exit_state name="NM" target="Element@832793923:1708938914033"/>
+<exit_state name="ER" target="Element@832793923:1708938914033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1050071035:1708938914033" name="BWPROD_ID" type="Subflow Call" width="150" x="219" y="387">
+<subflow_call subflow_name="BWProdID" target="Element@31:1706163076624">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1024834317:1708938914033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1126594940:1709111178603" name="BWBM_MN_001_Call" type="Subflow Call" width="211" x="491" y="130">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709111180739">
+<config>
+<argument_data>
+<data name="MenuID">BWBM_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@763482934:1708938914033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@232422160:1710828302496" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="217" x="773" y="383">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1173024419:1711642029002" name="CHECKENTRYPOINT_BC" type="Decision" width="235" x="137" y="1">
+<exit_states>
+<exit_state name="ER" target="Element@1126594940:1709111178603"/>
+<exit_state name="NLU" target="Element@462554948:1711830547141"/>
+<exit_state name="CONT" target="Element@1126594940:1709111178603"/>
+<exit_state name="INITIAL" target="Element@1126594940:1709111178603">
+<bendpoint>
+<dim1 x="178" y="2"/>
+<dim2 x="-128" y="-51"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@286381615:1711700032311" name="Subflow Return_01" type="Subflow Return" width="198" x="499" y="730"/>
+<element height="55" id="Element@462554948:1711830547141" name="NLU_CHECK" type="Decision" width="144" x="45" y="105">
+<exit_states>
+<exit_state name="REFUND" target="Element@604898846:1712165424872">
+<bendpoint>
+<dim1 x="-151" y="96"/>
+<dim2 x="-162" y="-116"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Policy Status" target="Element@1092871071:1714139078872"/>
+<exit_state name="BM_PROD_BILLING_COMMISSIONS" target="Element@604898846:1712165424872">
+<bendpoint>
+<dim1 x="-24" y="122"/>
+<dim2 x="-35" y="-90"/>
+</bendpoint>
+</exit_state>
+<exit_state name="OTHER_BILLING" target="Element@1092871071:1714139078872">
+<bendpoint>
+<dim1 x="204" y="-22"/>
+<dim2 x="-69" y="-95"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@604898846:1712165424872" name="SetTransferKey_BWProdBillingMenu" type="Action" width="328" x="-36" y="317">
+<exit_states>
+<exit_state name="done" target="Element@173780465:1714139034678"/>
+</exit_states>
+</element>
+<element height="55" id="Element@173780465:1714139034678" name="BWPROD_ID_1" type="Subflow Call" width="164" x="6" y="424">
+<subflow_call subflow_name="BWProdID" target="Element@31:1706163076624">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@832793923:1708938914033"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1092871071:1714139078872" name="SetTransferKey_PolicyStatus" type="Action" width="328" x="218" y="199">
+<exit_states>
+<exit_state name="done" target="Element@1050071035:1708938914033"/>
+</exit_states>
+</element>
+</page>

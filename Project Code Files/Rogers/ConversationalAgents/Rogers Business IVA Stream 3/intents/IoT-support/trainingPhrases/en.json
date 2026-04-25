@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Alerts from our IoT system aren’t triggering as expected."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We need assistance integrating IoT devices with our existing platform."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help troubleshoot our LTE-M connection for IoT devices?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The IoT dashboard is showing offline status for multiple devices."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re having trouble activating new IoT SIM cards."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The fleet tracking devices stopped updating location."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our IoT sensors aren’t sending data—can you check the connectivity?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

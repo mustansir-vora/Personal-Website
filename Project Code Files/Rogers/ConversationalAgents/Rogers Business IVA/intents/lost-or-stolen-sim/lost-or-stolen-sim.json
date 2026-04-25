@@ -1,0 +1,11 @@
+{
+  "name": "d1b16546-5d95-4cf7-8e10-6f9731f26873",
+  "displayName": "lost-or-stolen-sim",
+  "parameters": [ {
+    "id": "e_simtype",
+    "entityType": "@e_SIMType"
+  } ],
+  "priority": 500000,
+  "description": "Handles requests related to a lost or stolen SIM card.",
+  "numTrainingPhrases": 26
+}

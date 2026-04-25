@@ -1,0 +1,133 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I can't retrieve a voicemail in our "
+    }, {
+      "text": "main line"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My auto attendant is only ringing in "
+    }, {
+      "text": "one"
+    }, {
+      "text": " phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the voicemail feature is has an issue."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My hunt group phone is not working."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My dual persona is not working."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The auto attendant in our office is not working."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our softphone is not working."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "advantage wifi support Unison."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need help with the advantage voice plan"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have an issue with my Unison or advantage voice service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We can’t log in to the Advantage Voice portal to manage settings."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Calls are dropping or audio is poor during conferences."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Voicemail isn’t picking up or forwarding to email."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Auto attendant or hunt group isn’t working as expected."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We can’t place or receive calls on any lines."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re having trouble with call "
+    }, {
+      "text": "forwarding"
+    }, {
+      "text": " and hunt group settings."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Voicemail-to-email isn’t working. We need this fixed quickly."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our auto attendant isn’t routing calls "
+    }, {
+      "text": "correctly"
+    }, {
+      "text": ". Customers are getting stuck or disconnected."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our Advantage Voice phones aren’t working—we can’t make or receive calls, and this is impacting our operations."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

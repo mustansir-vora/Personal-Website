@@ -1,0 +1,14 @@
+{
+  "name": "0309e78a-8ec0-4367-9927-f886a489c4b5",
+  "displayName": "payment-arrangement",
+  "parameters": [ {
+    "id": "currency",
+    "entityType": "@sys.number"
+  }, {
+    "id": "e_AmountName",
+    "entityType": "@e_AmountName"
+  } ],
+  "priority": 500000,
+  "description": "Handles requests to set up or manage a payment arrangement",
+  "numTrainingPhrases": 80
+}

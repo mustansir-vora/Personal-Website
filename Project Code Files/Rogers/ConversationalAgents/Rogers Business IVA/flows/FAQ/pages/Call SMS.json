@@ -1,0 +1,31 @@
+{
+  "name": "6359203d-5fe6-4d98-a4a9-ba6554653d3b",
+  "displayName": "Call SMS",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.SMSInvoked = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "SMSInvoked",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Send SMS",
+    "name": "652cd92e-054f-4abd-97e0-eb57bae5c801"
+  }, {
+    "condition": "$session.params.SMSInvoked = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "SMSInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check Confirmed Script Id",
+    "name": "8ddec638-87ca-4aac-8c57-cc4e79fcc48e"
+  } ]
+}

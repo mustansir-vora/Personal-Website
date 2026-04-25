@@ -1,0 +1,67 @@
+{
+  "name": "a216d88a-fa1e-4b96-b866-61b55ba9d3c2",
+  "displayName": "Switch Language",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "\u003cspeak\u003e\n  Pour le compte affaires se terminant par, \n  \u003cprosody rate=\"65%\" pitch=\"-1st\"\u003e\n    \u003csay-as interpret-as=\"character\"\u003e1. 2. 3. 4. 5. 6. 7. 8. 9. 0.\u003c/say-as\u003e\n  \u003c/prosody\u003e\n\u003c/speak\u003e" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "\u003cspeak\u003e\n  Pour le compte affaires se terminant par, \n  \u003cprosody rate=\"60%\"\u003e\n    \u003csay-as interpret-as=\"character\"\u003e1 2 3 4 5\u003c/say-as\u003e\n  \u003c/prosody\u003e\n  \u003cprosody rate=\"60%\"\u003e\n    \u003csay-as interpret-as=\"character\"\u003e6 7 8 9 0\u003c/say-as\u003e\n  \u003c/prosody\u003e\n\u003c/speak\u003e" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Pour le compte  affaires se terminant par, 1-2-2-3-4-0" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Pour le compte  affaires se terminant par, 1...2...2...3...4...0" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "\u003cspeak\u003e\n  \u003csay-as interpret-as=\"digits\"\u003e1 2 3 4 5 6 7 8 9 0\u003c/say-as\u003e\n\u003c/speak\u003e" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "numberOfHolds",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "collectPhoneNumberCounter",
+        "value": 0
+      }, {
+        "parameter": "globalAgentRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "agentRequestCounter",
+        "value": 0
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "7d12c6f5-6c42-46d9-a9be-e152348b4139"
+  } ]
+}

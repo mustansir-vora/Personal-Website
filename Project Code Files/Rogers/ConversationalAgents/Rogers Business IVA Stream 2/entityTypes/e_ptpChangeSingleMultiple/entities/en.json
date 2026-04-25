@@ -1,0 +1,49 @@
+{
+  "entities": [ {
+    "value": "date",
+    "synonyms": [ "change the date", "date" ],
+    "languageCode": "en"
+  }, {
+    "value": "amount",
+    "synonyms": [ "amount", "change the amount" ],
+    "languageCode": "en"
+  }, {
+    "value": "method",
+    "synonyms": [ "change the method", "change the payment method", "method" ],
+    "languageCode": "en"
+  }, {
+    "value": "amount_and_date",
+    "synonyms": [ "amount and date" ],
+    "languageCode": "en"
+  }, {
+    "value": "credit_card",
+    "synonyms": [ "card", "credit card" ],
+    "languageCode": "en"
+  }, {
+    "value": "bank",
+    "synonyms": [ "bank" ],
+    "languageCode": "en"
+  }, {
+    "value": "amount_and_method",
+    "synonyms": [ "amount and method" ],
+    "languageCode": "en"
+  }, {
+    "value": "date_and_method",
+    "synonyms": [ "date and method" ],
+    "languageCode": "en"
+  }, {
+    "value": "all_of_them",
+    "synonyms": [ "all of them" ],
+    "languageCode": "en"
+  }, {
+    "value": "no",
+    "synonyms": [ "no", "nope", "wrong" ],
+    "languageCode": "en",
+    "dtmfPattern": "2"
+  }, {
+    "value": "yes",
+    "synonyms": [ "correct", "right", "yeah", "yes" ],
+    "languageCode": "en",
+    "dtmfPattern": "1"
+  } ]
+}

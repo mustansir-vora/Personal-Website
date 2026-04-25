@@ -1,0 +1,32 @@
+{
+  "name": "e67f285f-d3fa-43f8-85d9-3510cdb52e67",
+  "displayName": "Logout",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "logout"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.consumerSemafone.logout.success = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Semafone Fail ?",
+    "name": "eebe26f1-dd49-443d-b15e-e4baef5347de"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "6930dd4a-97fc-4cd5-b516-71415d7e4aad"
+  } ]
+}

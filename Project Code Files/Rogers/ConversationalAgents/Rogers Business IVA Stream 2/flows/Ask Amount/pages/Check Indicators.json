@@ -1,0 +1,32 @@
+{
+  "name": "0d7bf291-4145-46de-9271-360bef4a48d3",
+  "displayName": "Check Indicators",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectionSuspendedInd = true AND $session.params.paymentAmount \u003c $session.params.pastDueBalance",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suspended Check",
+    "name": "5bbc589d-0838-4e2e-95d5-d3b9907a4a8d"
+  }, {
+    "condition": "$session.params.delinquentInd = true AND $session.params.paymentAmount \u003c $session.params.pastDueBalance",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Delinquent Check",
+    "name": "58356565-8c77-4c22-97ab-d2e885cf5681"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Past Due Check",
+    "name": "8f67b796-297b-4275-ad2c-a02ca15cbcf5"
+  } ]
+}

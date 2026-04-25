@@ -1,0 +1,5 @@
+#Global - includes root directory 
+* @RogersCommunications/rogers-cct-gc-admin @pavithranapa-1709 @Logesh-07B @Rogers-Mustansir
+
+/.github/workflows/*Deploy* @RogersCommunications/rogers-cct-gc-admin
+/.github/CODEOWNERS @RogersCommunications/rogers-cct-gc-admin

@@ -1,0 +1,7 @@
+{
+  "name": "8a801fcb-3dcc-49a4-ad8d-e78130180cbb",
+  "displayName": "Outage_Notification-Phone",
+  "priority": 500000,
+  "numTrainingPhrases": 9,
+  "dtmfPattern": "2"
+}

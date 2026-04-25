@@ -1,0 +1,28 @@
+{
+  "name": "a666101e-98fa-4145-8030-aca1720ba93e",
+  "displayName": "Check morePaymentAvailable",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.paymentIndex",
+      "value": "$sys.func.ADD($session.params.paymentIndex, 1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.paymentIndex \u003e= $session.params.api.paymentHistory.numberOfPastPayments",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play lastPayment",
+    "name": "74aaf767-189b-4a33-965d-7a79a6f05d71"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Add paymentHistoryMaxPlayblackCounter",
+    "name": "959643c8-398a-4a05-89ce-2f48d5907539"
+  } ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@80702448:1709791391132" name="ValidateMobileNo" version="6.0.1">
+<config>
+<source type="Class">com.farmers.pewc.ValidateMobileNo</source>
+</config>
+</decision>

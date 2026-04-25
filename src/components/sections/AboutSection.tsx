@@ -95,14 +95,14 @@ export default function AboutSection() {
           >
             <div className="glass p-6 md:p-12 rounded-3xl relative overflow-hidden">
               {/* Subtle accent glow */}
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/20 blur-3xl rounded-full"></div>
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-[radial-gradient(circle,rgba(16,185,129,0.2)_0%,transparent_70%)] rounded-full pointer-events-none"></div>
 
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
-                  initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
-                  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, y: -10, filter: 'blur(4px)' }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
                 >
                   <h3 className="text-2xl font-bold text-white mb-6">{activeTab}</h3>

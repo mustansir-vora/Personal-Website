@@ -1,0 +1,35 @@
+{
+  "name": "b866e73a-9bde-4597-bc1f-e6505ad205a1",
+  "displayName": "Play Alright for No",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Alright." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "D’accord." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.heardIntro = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Payment Options",
+    "name": "0c8f7638-e8a6-4cb0-ae79-d55b9fa52ac0"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Payment Options Intro",
+    "name": "3e4dd7ab-1400-4eb8-b5a7-f1e23e9e8ebb"
+  } ]
+}

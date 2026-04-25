@@ -1,0 +1,137 @@
+{
+  "name": "98c6ecaa-ec41-4492-9412-7fd60d0de8b3",
+  "displayName": "BOMM-MMAR",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "To make sure we direct you to the right place, please choose one of the following options:\nTo make a payment or access other self-serve transactions, Press 1\nFor Sales, Press 2\nFor Technical Support, Press 3\nFor all other inquiries, Press 4" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Pour faire un paiement ou pour accéder à d’autres transactions libre-service, appuyez sur le 1.\r\nPour le service des Ventes, appuyez sur le 2.\r\nPour le soutien technique, appuyez sur le 3.\r\nPour toute autre question, appuyez sur le 4." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "BOMM - Make a payment or other self service",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "billing-vague_BM"
+      }, {
+        "parameter": "fromFallback",
+        "value": true
+      }, {
+        "parameter": "$session.params.nluConfig.intentGroup",
+        "value": "service"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "BusinessRules"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "e9ad04ab-1c59-463b-894d-01b488351cee"
+  }, {
+    "intent": "BOMM - Sales",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "sales-vague_BM"
+      }, {
+        "parameter": "fromFallback",
+        "value": true
+      }, {
+        "parameter": "$session.params.nluConfig.intentGroup",
+        "value": "sales"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "BusinessRules"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "03b452fb-3fb3-4dc7-9823-783e47b3e577"
+  }, {
+    "intent": "BOMM - Technical support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "tech-support-vague_BM"
+      }, {
+        "parameter": "fromFallback",
+        "value": true
+      }, {
+        "parameter": "$session.params.nluConfig.intentGroup",
+        "value": "tech-support"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "BusinessRules"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "3988a717-07b0-4b82-a4c6-352b44010d99"
+  }, {
+    "intent": "BOMM - Other inquiries",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "service-vague_BM"
+      }, {
+        "parameter": "fromFallback",
+        "value": true
+      }, {
+        "parameter": "$session.params.nluConfig.intentGroup",
+        "value": "service"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "BusinessRules"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "bb667786-b3ff-452f-bb4e-ae948cb06204"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "7385bcf7-49cb-416f-b76e-d03b9d1359fb"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "867f0154-bfe7-411e-8528-d6c0a8e57794"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "c839065f-78ee-41ef-853c-d22e41ad2ab6"
+  } ]
+}

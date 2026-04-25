@@ -1,0 +1,346 @@
+{
+  "name": "9c69e03d-f162-4892-be91-6e7090d5322c",
+  "displayName": "PTP Recap",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfInstalls = 2 AND $session.params.ptpAdditionalPayment = true AND $session.params.firstPromiseDate \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vous avez effectué un paiement de \n$ $session.params.firstPromiseAmount le \n$session.params.firstPromiseDate et il est prévu que \nvous allez effectuer un deuxième \npaiement de \n$ $session.params.secondPromiseAmount le \n$session.params.secondPromiseDate ." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "You made a payment of $ $session.params.firstPromiseAmount ... on $session.params.firstPromiseDate ... and you're scheduled to make a second payment of $ $session.params.secondPromiseAmount ... on $session.params.secondPromiseDate . " ]
+        },
+        "languageCode": "en"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.promiseMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "… à l’aide de votre carte de" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "crédit." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "... using your credit card." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "… par l’entremise de votre" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "banque." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "... at the bank." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Check Skip Is That Right",
+    "name": "05cc6d5d-3079-44b9-9d7e-1797bd29959e"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2 AND $session.params.ptpAdditionalPayment = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vous avez accepté d’effectuer un \npaiement de $ $session.params.firstPromiseAmount le \n$session.params.firstPromiseDate et un paiement \nsubséquent de \n$ $session.params.secondPromiseAmount le \n$session.params.secondPromiseDate . " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "You agreed to make a payment of $ $session.params.firstPromiseAmount ... on $session.params.firstPromiseDate ... and a follow-up payment of $ $session.params.secondPromiseAmount ... on $session.params.secondPromiseDate ." ]
+        },
+        "languageCode": "en"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.promiseMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Les deux paiements seront effectués par carte de crédit." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Both payments will be made by credit card." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Les deux paiements seront" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "effectués par l’entremise de" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "votre banque." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Both payments will be made at the bank." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Check Skip Is That Right",
+    "name": "4937094c-dc71-4eff-9931-274f3c85560b"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vous mettez en place une entente de \npaiement avec 2 versements. Le premier \npaiement de $ $session.params.firstPromiseAmount à \npayer le $session.params.firstPromiseDate et un \ndeuxième paiement de \n$ $session.params.secondPromiseAmount à payer le \n$session.params.secondPromiseDate . " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "You’re setting up a payment arrangement with 2 installments. The first payment of $ $session.params.firstPromiseAmount ... to be paid on $session.params.firstPromiseDate ... and a second payment of $ $session.params.secondPromiseAmount\n ... to be paid on $session.params.secondPromiseDate ." ]
+        },
+        "languageCode": "en"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.promiseMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Les deux paiements seront effectués par carte de crédit." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Both payments will be made by credit card." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Les deux paiements seront" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "effectués par l’entremise de" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "votre banque." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Both payments will be made at the bank." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Check Skip Is That Right",
+    "name": "ca40f139-a105-4a15-8601-d776df8fde3e"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 1 AND $session.params.promiseDate \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vous avez effectué un paiement de \n $session.params.promiseAmount le $session.params.promiseDate ." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "You made a payment of $ $session.params.promiseAmount ... on $session.params.promiseDate . " ]
+        },
+        "languageCode": "en"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.promiseMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "… à l’aide de votre carte de" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "crédit." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "... using your credit card." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "… par l’entremise de votre" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "banque." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "... at the bank." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Check Skip Is That Right",
+    "name": "7b19760d-a601-420f-b6d4-e05926facf38"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vous établissez une entente de paiement \net effectuerez un paiement de \n$ $session.params.promiseAmount le $session.params.promiseDate . " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "You’re setting up a payment arrangement and will make a payment of $ $session.params.promiseAmount ... on $session.params.promiseDate . " ]
+        },
+        "languageCode": "en"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.promiseMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "… à l’aide de votre carte de" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "crédit." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "... using your credit card." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "… par l’entremise de votre" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "banque." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "... at the bank." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Check Skip Is That Right",
+    "name": "b90a3531-eb65-46ef-9d7f-2692418f1a1d"
+  } ]
+}

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@361273106:1710448653184" name="CCSC_MN_001" version="6.0.1">
+<config>
+<settings>
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">4s</setting>
+<setting name="max_noinput_count">1</setting>
+<setting name="max_nomatch_count">1</setting>
+<setting name="dtmf_grammar"/>
+<setting name="dtmf_keypress">1</setting>
+<setting name="dtmf_keypress">2</setting>
+<setting name="dtmf_keypress">3</setting>
+<setting name="help_dtmf_keypress"/>
+<setting name="modal">false</setting>
+<setting name="field_name">foundation_fld</setting>
+<setting name="slot_name"/>
+<setting name="slot_element_data"/>
+<setting name="combinedTriesFlag">Y</setting>
+<setting name="combinedTriesCount">3</setting>
+<setting name="secure_logging">false</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="NoMatch.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="NoMatch.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MaxTriesNM.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001a.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001b.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001c.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="CCSC_MN_001d.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="Press3.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MaxTriesNI.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,31 @@
+{
+  "name": "841e8ad9-7404-4a01-82af-3bd8fa38f349",
+  "displayName": "Single Service Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.isSSAEnabled = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "check Service Address",
+    "name": "73a02e4a-3a5f-4ba9-b2bb-5f47b86b145e"
+  }, {
+    "condition": "$session.params.isSSAEnabled != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tsSingleService",
+        "value": true
+      }, {
+        "parameter": "isReturnFromTSS",
+        "value": true
+      } ]
+    },
+    "targetPage": "Exist Single Service",
+    "name": "1e4cdb2a-748b-4f45-b7cc-d3ac546b7861"
+  } ]
+}

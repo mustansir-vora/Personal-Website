@@ -1,0 +1,114 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "123457683123",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "123475869567",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My account number is "
+    }, {
+      "text": "789012345890",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The account number I'm looking for is "
+    }, {
+      "text": "678901231908",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think my account number is "
+    }, {
+      "text": "456789012678",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It's something like "
+    }, {
+      "text": "345678901563",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The account6 number I'm looking for is "
+    }, {
+      "text": "87654321045",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My account number starts with "
+    }, {
+      "text": "567812345567",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The account number is "
+    }, {
+      "text": "234567890566",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My account number is "
+    }, {
+      "text": "987654321676",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "12345678989",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my account number is "
+    }, {
+      "text": "123456789890",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My Account Number is "
+    }, {
+      "text": "123456789876",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

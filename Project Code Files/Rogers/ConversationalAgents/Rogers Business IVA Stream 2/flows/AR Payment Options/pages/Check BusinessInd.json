@@ -1,0 +1,32 @@
+{
+  "name": "ac402eb9-f7b6-4058-a4c3-8478e13fe231",
+  "displayName": "Check BusinessInd",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.systemOfRecords = \"SS\" AND $session.params.businessInd = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Business SS Acc Menu",
+    "name": "a80c1f58-b7ca-4d98-840d-d3d77fca0e45"
+  }, {
+    "condition": "$session.params.api.billingProfile.systemOfRecords = \"V21\" AND $session.params.businessInd = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Business V21 Acc Menu",
+    "name": "85ba7d6d-10ec-4faf-b99d-3b4daf29b97b"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Account Type",
+    "name": "cdb5d0e1-64f0-4b43-b881-a381d671e157"
+  } ]
+}

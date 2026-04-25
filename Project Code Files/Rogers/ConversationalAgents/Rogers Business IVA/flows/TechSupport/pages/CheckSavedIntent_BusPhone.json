@@ -1,0 +1,28 @@
+{
+  "name": "348af3ff-c969-4945-be66-db8408f9620b",
+  "displayName": "CheckSavedIntent_BusPhone",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"business-phone-support\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askForMoreDetails",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "0d9fecdd-b84c-4a6d-beb3-ea5f56fdfa97"
+  }, {
+    "condition": "$session.params.savedIntent != \"business-phone-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "abbc2a1d-0e09-4714-9ea5-15aea7f7cc52"
+  } ]
+}

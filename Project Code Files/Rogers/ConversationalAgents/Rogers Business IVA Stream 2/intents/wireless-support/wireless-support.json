@@ -1,0 +1,7 @@
+{
+  "name": "2224ede9-1f36-429f-9980-d600e7ebdc70",
+  "displayName": "wireless-support",
+  "priority": 500000,
+  "description": "Handles broad support requests related to mobile wireless services.",
+  "numTrainingPhrases": 62
+}

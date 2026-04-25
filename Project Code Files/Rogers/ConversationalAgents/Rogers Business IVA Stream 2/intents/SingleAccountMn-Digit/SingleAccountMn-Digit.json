@@ -1,0 +1,8 @@
+{
+  "name": "0af43e74-10e8-433d-ad9d-7d23122235b4",
+  "displayName": "SingleAccountMn-Digit",
+  "priority": 500000,
+  "description": "This Will Trigger when user says yes/ this is my account / go with that",
+  "numTrainingPhrases": 53,
+  "dtmfPattern": "1"
+}

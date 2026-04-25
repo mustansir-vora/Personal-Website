@@ -1,0 +1,66 @@
+name: APITesting
+on:
+  workflow_dispatch:
+  # push: {}
+  # pull_request: {}
+
+run-name: "[${{github.ref_name}}][${{github.actor}}] ${{ github.event.head_commit.message != null && github.event.head_commit.message || 'Manually Triggered' }}"
+
+jobs:
+  APITesting:
+    environment: ${{  github.ref_name == 'Prod' && 'Prod' || github.ref_name == 'Qa' && 'Qa' || 'Dev' }}
+    runs-on: ${{ github.ref_name == 'Prod' && vars.RUNNER_LABEL_PROD || vars.RUNNER_LABEL_DEFAULT }}
+
+    env:
+      PROJECT_ID: ${{ vars.PROJECT_ID }}
+      REGION: ${{ vars.REGION }}
+      AGENT_DISPLAY_NAMES: ${{ vars.AGENT_DISPLAY_NAME }}
+      AGENT_IDS: ${{ vars.AGENT_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: TestPrint
+        run: |
+          echo "$AGENT_IDS"
+      # - name: GoogleAPIGetAllAgents
+      #   run: |
+      #     echo "REGION, PROJECT_ID: $REGION, $PROJECT_ID"
+
+      #     SERVICE_URL="https://${REGION}-dialogflow.googleapis.com/v3/projects/${PROJECT_ID}/locations/${REGION}/agents"
+
+      #     echo "SERVICE_URL: $SERVICE_URL"
+
+      #     ACCESS_TOKEN=$(gcloud auth print-access-token)
+
+      #     if [ -z "$ACCESS_TOKEN" ]; then
+      #       echo "ERROR: Failed to generate access token."
+      #       exit 1
+      #     fi
+      #     RESPONSE=$(curl -s -X GET \
+      #           $SERVICE_URL \
+      #           -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+      #           -H "x-goog-user-project: ${PROJECT_ID}")
+
+      #     echo "API Response: $RESPONSE"
+      # - name: GoogleAPIGetAllDataStores
+      #   run: |
+      #     echo "REGION, PROJECT_ID: $REGION, $PROJECT_ID"
+
+      #     ACCESS_TOKEN=$(gcloud auth print-access-token)
+
+      #     if [ -z "$ACCESS_TOKEN" ]; then
+      #       echo "ERROR: Failed to generate access token."
+      #       exit 1
+      #     fi
+      #     RESPONSE=$(curl -s -X GET \
+      #           "https://discoveryengine.googleapis.com/v1alpha/projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores" \
+      #           -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+      #           -H "x-goog-user-project: ${PROJECT_ID}")
+
+      #     echo "API Response: $RESPONSE"
+      - name: PythonGoogleApiTesting
+        shell: bash
+        run: |
+          python3 -u .github/python/APITesting.py
+

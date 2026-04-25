@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@414905695:1747831295183" name="KYCMF_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.KYCMF_MN_001_VALUE</source>
+</config>
+</decision>

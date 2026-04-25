@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2085358208:1708932024816" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708932024816" name="21stSubmitPayment" type="Subflow Start" width="209" x="206" y="122">
+<exit_states>
+<exit_state name="next" target="Element@1928859545:1709102686983"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1902004952:1751909793342"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1139746695:1708932042570" name="TFSP_PA_002" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="153" x="236" y="852">
+<exit_states>
+<exit_state name="done" target="Element@562772677:1709102776857"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1691465732:1708932042570" name="TFSP_MN_002_VALUE" type="Decision" width="219" x="206" y="1129">
+<exit_states>
+<exit_state name="Main Menu" target="Element@895706647:1712652267790"/>
+<exit_state name="Hang Up" target="Element@783654411:1712314963960"/>
+<exit_state name="Repeat" target="Element@461021993:1708932042570">
+<bendpoint>
+<dim1 x="-206" y="2"/>
+<dim2 x="-206" y="417"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-202" y="-416"/>
+<dim2 x="-203" y="-1"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@783654411:1712314963960">
+<bendpoint>
+<dim1 x="230" y="-71"/>
+<dim2 x="-229" y="-37"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@823805097:1708932042570"/>
+<exit_state name="ER" target="Element@823805097:1708932042570">
+<bendpoint>
+<dim1 x="250" y="-260"/>
+<dim2 x="-292" y="151"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1391412309:1708932042570" name="TFSP_MN_001_VALUE" type="Decision" width="219" x="738" y="564">
+<exit_states>
+<exit_state name="DifferentCard" target="Element@1269402485:1712866663105"/>
+<exit_state name="BankAccount" target="Element@767710408:1712347801365">
+<bendpoint>
+<dim1 x="408" y="188"/>
+<dim2 x="-40" y="-185"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@823805097:1708932042570"/>
+<exit_state name="NOINPUT" target="Element@783654411:1712314963960">
+<bendpoint>
+<dim1 x="198" y="204"/>
+<dim2 x="271" y="-327"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@823805097:1708932042570">
+<bendpoint>
+<dim1 x="285" y="57"/>
+<dim2 x="280" y="-97"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@823805097:1708932042570">
+<bendpoint>
+<dim1 x="77" y="77"/>
+<dim2 x="67" y="-77"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@461021993:1708932042570" name="TFSP_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="155" x="231" y="640">
+<exit_states>
+<exit_state name="done" target="Element@1139746695:1708932042570"/>
+</exit_states>
+</element>
+<element height="55" id="Element@823805097:1708932042570" name="Shared Transfer" type="Subflow Call" width="171" x="767" y="718">
+<subflow_call subflow_name="Transfer" target="Element@31:1711719506818">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@425003534:1711719524361"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1928859545:1709102686983" name="Warhead_Check" type="Subflow Call" width="174" x="225" y="225">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1709102704292">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1483547093:1711528265028"/>
+</exit_states>
+</element>
+<element height="55" id="Element@562772677:1709102776857" name="TFSP_MN_002_Call" type="Subflow Call" width="196" x="213" y="982">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709102780612">
+<config>
+<argument_data>
+<data name="MenuID">TFSP_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1691465732:1708932042570"/>
+</exit_states>
+</element>
+<element height="55" id="Element@207063732:1710843874785" name="TFSP_MN_001_Call" type="Subflow Call" width="196" x="491" y="569">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1710843879285">
+<config>
+<argument_data>
+<data name="MenuID">TFSP_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1391412309:1708932042570"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1483547093:1711528265028" name="TFSP_HOST_001" type="Decision" width="178" x="226" y="444">
+<exit_states>
+<exit_state name="SU" target="Element@461021993:1708932042570"/>
+<exit_state name="ER" target="Element@207063732:1710843874785"/>
+</exit_states>
+</element>
+<element height="55" id="Element@425003534:1711719524361" name="Subflow Return_02" type="Subflow Return" width="198" x="843" y="1153"/>
+<element height="55" id="Element@783654411:1712314963960" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="251" x="615" y="1029">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@767710408:1712347801365" name="PromoteToSession_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="224" x="1183" y="937">
+<exit_states>
+<exit_state name="done" target="Element@425003534:1711719524361"/>
+</exit_states>
+</element>
+<element height="55" id="Element@895706647:1712652267790" name="SET_ROUTE_TO_MAIN_MENU" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="279" x="203" y="1274">
+<exit_states>
+<exit_state name="done" target="Element@783654411:1712314963960"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1269402485:1712866663105" name="Copy_of_PromoteToSession_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="297" x="423" y="723">
+<exit_states>
+<exit_state name="done" target="Element@425003534:1711719524361"/>
+</exit_states>
+</element>
+<element height="49" id="Element@1902004952:1751909793342" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="302" y="11">
+<exit_states>
+<exit_state name="done" target="Element@1526095583:1751909793342"/>
+</exit_states>
+</element>
+<element height="48" id="Element@123410703:1751909793342" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="710" y="6">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1526095583:1751909793342" name="Shared_Transfer" type="Subflow Call" width="132" x="550" y="9">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@123410703:1751909793342"/>
+</exit_states>
+</element>
+</page>

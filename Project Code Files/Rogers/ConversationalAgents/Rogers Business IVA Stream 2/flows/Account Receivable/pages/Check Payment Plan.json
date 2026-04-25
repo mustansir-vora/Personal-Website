@@ -1,0 +1,32 @@
+{
+  "name": "81ffbdda-5f90-494d-9122-f05b3f7b846b",
+  "displayName": "Check Payment Plan",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.pendingPTP = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PTP Payment Method",
+    "name": "9891b568-8bcd-489d-a993-b3e10cfb235f"
+  }, {
+    "condition": "$session.params.api.billingProfile.ippDetails.ippStatus = Active",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play IPP Balance",
+    "name": "0b22bb53-f663-4979-82ac-6e6b8e8a2241"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Make Payment",
+    "name": "b2c679de-d71a-45eb-93d6-6f3dda1c7743"
+  } ]
+}

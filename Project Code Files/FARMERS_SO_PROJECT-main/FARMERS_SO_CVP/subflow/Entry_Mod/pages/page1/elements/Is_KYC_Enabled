@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@905895598:1707395019422" name="Is_KYC_Enabled" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is_KYC_Enabled" default_exit_state="NO">
+        <exit_state name="YES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_KYC_ENABLED" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

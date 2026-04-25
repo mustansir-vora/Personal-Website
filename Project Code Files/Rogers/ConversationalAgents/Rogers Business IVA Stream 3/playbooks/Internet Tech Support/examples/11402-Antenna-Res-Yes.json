@@ -1,0 +1,66 @@
+{
+  "name": "6f2258bf-99e2-43bf-823b-c381da0ea39c",
+  "actions": [ {
+    "agentUtterance": {
+      "text": " Is there an antenna fixed to the outside of your residence?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yes"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your internet equipment"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "customerIdentified": "false",
+      "is_Quebec_AntennaOffered": "true",
+      "npaProvince": "Quebec",
+      "numberOfInternet": "3",
+      "productLabelsMixEn": "TV,Home Phone,Home Security,5G Home Internet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "savedIntent": "5GHI-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220002283"
+      }
+    }
+  },
+  "displayName": "11402-Antenna-Res-Yes",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 414,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

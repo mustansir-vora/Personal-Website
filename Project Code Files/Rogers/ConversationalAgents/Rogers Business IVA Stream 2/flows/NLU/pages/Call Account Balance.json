@@ -1,0 +1,15 @@
+{
+  "name": "e78abf7c-caa9-4231-a425-3bce40ce34f4",
+  "displayName": "Call Account Balance",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Account Balance",
+    "name": "2bf1421f-daf2-4a87-a583-9f5cf5d294ee"
+  } ]
+}

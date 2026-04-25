@@ -1,0 +1,37 @@
+{
+  "name": "c2b1030d-d7f4-4b12-80ab-489fda639719",
+  "displayName": "PTP Offer Additional Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "ptpAdditionalPayment",
+      "value": false
+    }, {
+      "parameter": "remainingPastDueAmount",
+      "value": "$sys.func.MINUS($sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance), $sys.func.TO_NUMBER($session.params.collectedPtpAmount))"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.additionalPaymentDate",
+        "value": "$session.params.api.response.ptp.ccInstallmentDate2"
+      } ]
+    },
+    "targetPage": "Play Offer Additional Payment",
+    "name": "3cbab40b-f130-4d57-bbda-3fb867ca7cd3"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.additionalPaymentDate",
+        "value": "$session.params.api.response.ptp.pbInstallmentDate2"
+      } ]
+    },
+    "targetPage": "Play Offer Additional Payment",
+    "name": "ff75a2cb-931c-41d0-931d-c878ffd79ec4"
+  } ]
+}

@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "amount",
+    "synonyms": [ " changer le montant", "amount", "montant", "montant du paiement" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "card",
+    "synonyms": [ " carte", " carte de crédit", " changer la carte", "card" ],
+    "languageCode": "fr-ca"
+  } ]
+}

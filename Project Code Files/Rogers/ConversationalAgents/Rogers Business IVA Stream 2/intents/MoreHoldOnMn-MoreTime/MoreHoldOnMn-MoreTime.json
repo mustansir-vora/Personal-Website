@@ -1,0 +1,8 @@
+{
+  "name": "c3b2f4e7-c8b6-4cba-a22c-87463831e242",
+  "displayName": "MoreHoldOnMn-MoreTime",
+  "priority": 500000,
+  "description": "this wll trigger when user says i need more time.",
+  "numTrainingPhrases": 66,
+  "dtmfPattern": "9"
+}

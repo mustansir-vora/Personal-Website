@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@496352356:1707818218882" name="SPT_HOST_007" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.Commercial_SRM_CTI_API</source>
+</config>
+</decision>

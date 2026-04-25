@@ -1,0 +1,122 @@
+{
+  "trainingPhrases": [ {
+    "id": "8f6971c0-7aa5-4bab-833c-e7fe114fdaad",
+    "parts": [ {
+      "text": "no, thank you"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f57ec024-f92d-4c1d-a523-b7bcbdabe53f",
+    "parts": [ {
+      "text": "not at the moment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "05ecd215-8751-452d-81a8-39f08e2ad13f",
+    "parts": [ {
+      "text": "I'm alright"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e8e20f74-c184-423b-b4e5-9bbbbcce2d8c",
+    "parts": [ {
+      "text": "not interested"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a30218ec-b26a-47c0-a8ca-f15ac925f726",
+    "parts": [ {
+      "text": "absolutely not"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a669b777-1474-4b40-9417-2474dd50af7d",
+    "parts": [ {
+      "text": "negative"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e35dfc0c-0770-4b6a-b692-578fb8179e22",
+    "parts": [ {
+      "text": "nah"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "509cb44b-f001-48e1-b2f2-85a4114c15fc",
+    "parts": [ {
+      "text": "I don't think so"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7c0015f2-df15-4706-bef5-33a21e694c01",
+    "parts": [ {
+      "text": "I am fine"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "adacdcd7-50de-412a-a387-b1230d61bfc4",
+    "parts": [ {
+      "text": "nothing"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f44ddf8b-d27a-4a46-bd38-7f4959f57c5e",
+    "parts": [ {
+      "text": "no thanks"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "23c0c66b-d55d-48b8-945d-e1598dc48a99",
+    "parts": [ {
+      "text": "not now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d45cc6f2-ce7c-4454-8fcf-5d4abc7f2752",
+    "parts": [ {
+      "text": "no help"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b65329cc-d677-434d-93a7-d8d31c5a0bd6",
+    "parts": [ {
+      "text": "i don't need any help"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d38a1760-70c3-4a19-ae83-b6758a4b34f0",
+    "parts": [ {
+      "text": "nay"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c90379cd-4f11-4d1f-879a-255c67c7adc0",
+    "parts": [ {
+      "text": "nope"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "dbbad9fd-5a13-4c50-9891-4a73204ffc9c",
+    "parts": [ {
+      "text": "no"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

@@ -1,0 +1,178 @@
+{
+  "name": "96ca4751-f378-4052-b971-e7dfadb6d78b",
+  "displayName": "PTP Update Multiple First Install",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "installmentInFocus",
+      "value": "first"
+    }, {
+      "parameter": "$session.params.umFirstInstall",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.datePromised1 \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.collectedPtpMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "You had a credit card installment payment for $ $session.params.amount1 that was due by $session.params.api.billingProfile.playAccountBalanceDates.playptpPaymentDate ." ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Vous aviez un versement par credit" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "card d’un montant de" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$ $session.params.amount1 , exigible le" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.datePromised1 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "You had a bank installment payment for $ $session.params.amount1 that was due by $session.params.api.billingProfile.playAccountBalanceDates.playptpPaymentDate ." ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Vous aviez un versement par bank d’un montant de" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$ $session.params.amount1 , exigible le" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.datePromised1 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Update Multiple First Install Report Payment",
+    "name": "085650f3-034f-414b-995b-eda7d1e85ac0"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.collectedPtpMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Your upcoming installment is a credit card payment for $ $session.params.amount1 and is due by $session.params.datePromised1 ." ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Votre prochain versement est un" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "paiement par credit card d’un" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "montant de $ $session.params.amount1 , exigible le" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.datePromised1 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Your upcoming installment is a bank payment for $ $session.params.amount1 and is due by $session.params.datePromised1 ." ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Votre prochain versement est un" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "paiement par bank d’un" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "montant de $ $session.params.amount1 , exigible le" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.datePromised1 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Check If Report Payment Intent",
+    "name": "a1567686-b388-4968-9784-d27163aca4e0"
+  } ]
+}

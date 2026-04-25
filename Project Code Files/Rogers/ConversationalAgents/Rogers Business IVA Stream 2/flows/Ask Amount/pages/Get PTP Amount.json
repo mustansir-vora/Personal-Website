@@ -1,0 +1,88 @@
+{
+  "name": "58c8f4c1-536a-4be0-9e0d-b14fa549a708",
+  "displayName": "Get PTP Amount",
+  "form": {
+    "parameters": [ {
+      "displayName": "amountNumber",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 5,
+          "finishDigit": "#",
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 4
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 2
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "How much will you pay?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Quel montant allez-vous payer ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Quel montant allez-vous payer ?" ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "payment-current-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.api.billingProfile.balanceDetails.currentBalance"
+      }, {
+        "parameter": "amountNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "dc753199-7d7b-48e5-af88-195d347053d9"
+  }, {
+    "intent": "payment-past-due-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.api.billingProfile.balanceDetails.pastDueBalance"
+      }, {
+        "parameter": "amountNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "2af73f46-e1ec-44e3-88cb-1143d21eaf62"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$sys.func.TO_NUMBER($session.params.amountNumber)"
+      }, {
+        "parameter": "amountNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "7e782f8a-b089-485a-a188-cf03de78ae52"
+  } ]
+}

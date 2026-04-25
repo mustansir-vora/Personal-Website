@@ -1,0 +1,48 @@
+{
+  "name": "3f1900fb-8530-4180-bf3d-22ca77da57cf",
+  "displayName": "Identify subscription Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.identifySubscriptionResult = \"Identified\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Identified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "0ab59d2d-3102-4be4-9642-341f0da42198"
+  }, {
+    "condition": "$session.params.identifySubscriptionResult = \"Unidentified\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "11cfb6c8-f5ad-4d62-b094-f75abbaf2883"
+  }, {
+    "condition": "$session.params.identifySubscriptionResult = \"DifferentPhone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "wirelessIdentification"
+      } ]
+    },
+    "targetPage": "Start Reusable Phone Number",
+    "name": "060b83ae-23cb-4589-b5c5-5ca414740185"
+  }, {
+    "condition": "$session.params.identifySubscriptionResult = \"DifferentAccount\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Wait Message",
+    "name": "a568be73-07c8-457b-a911-3292d30a555a"
+  } ]
+}

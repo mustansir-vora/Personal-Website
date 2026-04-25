@@ -1,0 +1,42 @@
+{
+  "name": "81d46207-25b2-427a-b685-5cdc3c156126",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+      "text": "0"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "-1"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "When the code block gets failed",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "errorMessage": "codeBlockError"
+    }
+  },
+  "displayName": "Code Block Failure Case",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 181,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

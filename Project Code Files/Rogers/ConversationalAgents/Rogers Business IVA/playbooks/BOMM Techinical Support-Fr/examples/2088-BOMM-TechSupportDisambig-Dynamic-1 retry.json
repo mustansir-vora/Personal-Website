@@ -1,0 +1,53 @@
+{
+  "name": "916f046b-373b-44f9-bc46-73750764d320",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire Internet ,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "qu'est-ce que c'était"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Veuillez dire Internet ,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Internet"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Internet"
+      },
+      "outputActionParameters": {
+        "result": "internet-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixFr": "Internet,Télévision,Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Internet",
+      "savedIntent": "internet-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-1 retry",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 229,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

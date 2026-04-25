@@ -1,0 +1,207 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Mon NIP est le "
+    }, {
+      "text": "5543",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "C'est le "
+    }, {
+      "text": "1029",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le code est le "
+    }, {
+      "text": "9982",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "D'accord, c'est le "
+    }, {
+      "text": "4821",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon code secret est le "
+    }, {
+      "text": "0012",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Utilisez le NIP "
+    }, {
+      "text": "7765",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je vais vous donner mon code, c'est le "
+    }, {
+      "text": "3341",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le numéro que vous voulez est le "
+    }, {
+      "text": "1209",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je pense que mon NIP est le "
+    }, {
+      "text": "4490",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Bien sûr, le NIP est le "
+    }, {
+      "text": "6621",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'entre mon NIP maintenant, le "
+    }, {
+      "text": "9018",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je suis en train de le taper, le "
+    }, {
+      "text": "8765",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Laissez-moi vous donner le code de sécurité, le "
+    }, {
+      "text": "0123",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Voici le NIP, le "
+    }, {
+      "text": "1234",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je vous donne mon NIP, le "
+    }, {
+      "text": "8432",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je vais l'entrer : "
+    }, {
+      "text": "9102",
+      "parameterId": "pinNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Attendez, c'est en fait le "
+    }, {
+      "text": "1122",
+      "parameterId": "pinNumber",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Non, désolé, c'est le "
+    }, {
+      "text": "5544",
+      "parameterId": "pinNumber",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Laissez-moi essayer le "
+    }, {
+      "text": "0000",
+      "parameterId": "pinNumber",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Attendez, le code est le "
+    }, {
+      "text": "3321",
+      "parameterId": "pinNumber",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "En fait, utilisez le "
+    }, {
+      "text": "8876",
+      "parameterId": "pinNumber",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je m'en suis souvenu, c'est le "
+    }, {
+      "text": "1234",
+      "parameterId": "pinNumber",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

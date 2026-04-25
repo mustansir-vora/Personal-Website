@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1281853229:1710610773292" name="SIDC_MN_004_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.GET_SIDC_MN_004</source>
+</config>
+</decision>

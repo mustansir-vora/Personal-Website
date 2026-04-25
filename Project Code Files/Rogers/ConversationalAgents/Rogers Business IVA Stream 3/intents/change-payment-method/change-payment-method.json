@@ -1,0 +1,7 @@
+{
+  "name": "3380b3d7-1ba5-4766-8d11-1ea250f82558",
+  "displayName": "change-payment-method",
+  "priority": 500000,
+  "description": "Handles requests to update, add, or switch the payment method on an account",
+  "numTrainingPhrases": 50
+}

@@ -1,0 +1,132 @@
+{
+  "name": "f97472c2-ee9f-4b1b-ab02-c5448e144937",
+  "displayName": "Pre-NLU",
+  "transitionRoutes": [ {
+    "condition": "$session.params.postNLIDType != null AND $session.params.postNLIDType = account AND $session.params.postNLInvoked = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "maxAccountRetries",
+        "value": 2
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "maxPhoneRetries",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "a78b6fd5-ba2d-41fb-84d9-7856adb93c35"
+  }, {
+    "condition": "$session.params.postNLIDType != null AND $session.params.postNLIDType = phone AND $session.params.postNLInvoked = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "maxPhoneRetries",
+        "value": 2
+      }, {
+        "parameter": "phoneRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "collectPhoneNumberCounter",
+        "value": 0
+      }, {
+        "parameter": "accountNumberAskedFlag",
+        "value": false
+      }, {
+        "parameter": "maxAccountRetries",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "7a0c86a4-8497-454d-9471-75b349e79830"
+  }, {
+    "condition": "$session.params.postNLANIConfirm = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ani Confirmation",
+    "name": "5d1e3f44-02c3-4cad-bd9c-d130558856ae"
+  }, {
+    "condition": "$session.params.aniConfirm = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ani Confirmation",
+    "name": "c904e2ea-4567-44ea-8f63-a8d46c84cd45"
+  }, {
+    "condition": "$session.params.aniConfirm = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Account Check",
+    "name": "67be98c6-4443-4f5d-b914-7c1b0600997a"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a5a40f96-1c41-4a25-8285-ea1b8ec442e7"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a9fcd2bf-1901-48a7-af6b-bdd67e8eafbb"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "6408b894-264d-4a2d-9812-7023afade1cc"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true,
+    "playbackInterruptionSettings": {
+      "allowPlaybackInterruption": true
+    }
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

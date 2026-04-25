@@ -1,0 +1,129 @@
+{
+  "name": "56f295f2-ef3a-406e-8bee-93313fdf83e8",
+  "displayName": "4 Digit Security Code",
+  "form": {
+    "parameters": [ {
+      "displayName": "cvvFourDigit",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter your card's four-digit security\ncode." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Dites ou entrez le code de sécurité à quatre chiffres de votre carte." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "648a4fd2-d678-4d9c-97fc-b71ca65b81c7"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter your card's four-digit security\ncode." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Veuillez entrer le code de sécurité à quatre chiffres de votre carte." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "bb79850c-ae91-4a0a-9a3d-5ecb84fa4397"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please key-in your card's four-digit security\ncode." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Dites ou entrez le code de sécurité à quatre chiffres de votre carte." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "7a94f567-8a18-4d61-9baa-da2ee4b44a8c"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please key-in your card's four-digit security code." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Veuillez entrer le code de sécurité à quatre chiffres de votre carte." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "1d096182-900c-48b2-8f34-b2185a16b5e3"
+        }, {
+          "targetPage": "Third Invalid Attempt",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "a1017092-db8d-49df-b0a2-ae0c06d2b81b"
+        }, {
+          "targetPage": "Third Invalid Attempt",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "cb22ecde-fc04-4be6-9cf2-926ffbea0278"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 4,
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 5
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 5
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "And the four-digit security code?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Et le code de sécurité à quatre chiffres ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Validate CVV",
+    "name": "48fa96f5-f42a-4414-bb21-4575fea91d49"
+  } ]
+}

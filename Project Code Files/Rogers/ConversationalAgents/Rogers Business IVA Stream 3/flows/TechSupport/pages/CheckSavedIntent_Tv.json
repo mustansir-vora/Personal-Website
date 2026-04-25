@@ -1,0 +1,28 @@
+{
+  "name": "1763efb5-2967-4572-aec4-99a846d0c74e",
+  "displayName": "CheckSavedIntent_Tv",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"tv-support\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askForMoreDetails",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "72db3c91-b641-40b1-8890-ec913ca1e753"
+  }, {
+    "condition": "$session.params.savedIntent != \"tv-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "02fef70f-7b07-42a9-8297-34f302396f65"
+  } ]
+}

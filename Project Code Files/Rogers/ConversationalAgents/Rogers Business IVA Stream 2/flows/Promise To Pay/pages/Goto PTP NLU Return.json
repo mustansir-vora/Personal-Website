@@ -1,0 +1,50 @@
+{
+  "name": "e2e101aa-66f6-4441-90b8-ab2c6330e521",
+  "displayName": "Goto PTP NLU Return",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfInstalls = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-singleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "bfd3f45b-e5db-467e-bd79-fd38dd68f3e7"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "a344772c-2b1f-4609-824a-e482f76c0195"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "active-updatePtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "e128d673-6032-4d58-8399-f0ede191c7a2"
+  } ]
+}

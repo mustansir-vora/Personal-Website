@@ -1,0 +1,449 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je voudrais réinitialiser le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte et confirmer le changement avec le support."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Merci de m’aider à changer le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte "
+    }, {
+      "text": "pour un"
+    }, {
+      "text": " nouveau code."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois mettre à jour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "sécurité"
+    }, {
+      "text": " car je ne me souviens plus de l’ancien."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je réinitialiser le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte en ligne ou ai-je besoin d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " agent ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux définir "
+    }, {
+      "text": "un"
+    }, {
+      "text": " nouveau "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " et supprimer l’ancien."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour réinitialiser le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " "
+    }, {
+      "text": "à quatre"
+    }, {
+      "text": " chiffres associé à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois changer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " pour les vérifications de "
+    }, {
+      "text": "sécurité"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Aidez-moi à mettre à jour le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de ma ligne "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais réinitialiser le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte afin de retrouver l’accès à "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois supprimer le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": " et le remplacer par "
+    }, {
+      "text": "un"
+    }, {
+      "text": " autre."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je modifier le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte "
+    }, {
+      "text": "pour un"
+    }, {
+      "text": " nouveau numéro ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux réinitialiser "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " parce que je suspecte que quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " le connaît."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour mettre à jour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de compte "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je changer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": " au téléphone avec "
+    }, {
+      "text": "un"
+    }, {
+      "text": " agent ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais mettre à jour le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte "
+    }, {
+      "text": "pour un"
+    }, {
+      "text": " nouveau code "
+    }, {
+      "text": "à quatre"
+    }, {
+      "text": " chiffres."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Aidez-moi à réinitialiser "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " avant que j’essaie de me reconnecter à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " que j’utilise "
+    }, {
+      "text": "actuellement"
+    }, {
+      "text": " pour accéder à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " peut-il me "
+    }, {
+      "text": "guider"
+    }, {
+      "text": " pour mettre à jour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de façon sécuritaire ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai oublié le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte et je dois le réinitialiser."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Merci de m’aider à changer le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " associé à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux supprimer le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": " et en définir "
+    }, {
+      "text": "un"
+    }, {
+      "text": " nouveau "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je réinitialiser le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte avec votre soutien ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais mettre à jour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": " pour des raisons de "
+    }, {
+      "text": "sécurité"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider à changer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de compte "
+    }, {
+      "text": "à quatre"
+    }, {
+      "text": " chiffres ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois réinitialiser le "
+    }, {
+      "text": "NIP"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte immédiatement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

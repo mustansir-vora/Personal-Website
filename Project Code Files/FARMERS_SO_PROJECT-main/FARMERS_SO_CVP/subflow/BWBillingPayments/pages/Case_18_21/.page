@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1355285692:1715067610172" name="Case_18_21" version="6.0.1">
+<element height="50" id="Element@445129021:1715067610172" name="Case_18_21" type="Page Entry" width="125" x="468" y="10">
+<exit_states>
+<exit_state name="next" target="Element@1417311454:1715077277967"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1316092132:1715077190742" name="BWBP_PA_021" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="162" x="790" y="712">
+<exit_states>
+<exit_state name="done" target="Element@911620059:1715077910534"/>
+</exit_states>
+</element>
+<element height="55" id="Element@200861239:1715077190743" name="BWBP_PA_020" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="162" x="104" y="765">
+<exit_states>
+<exit_state name="done" target="Element@911620059:1715077910534"/>
+</exit_states>
+</element>
+<element height="55" id="Element@752659933:1715077190743" name="NSF_STATE_CHECK_3" type="Decision" width="214" x="421" y="534">
+<exit_states>
+<exit_state name="Y" target="Element@441888617:1721743678235"/>
+<exit_state name="Not Y" target="Element@90100842:1721743824401"/>
+</exit_states>
+</element>
+<element height="55" id="Element@933258138:1715077277966" name="PolicyUpForRenewal6" type="Decision" width="207" x="421" y="246">
+<exit_states>
+<exit_state name="Y" target="Element@2032974155:1715077277967"/>
+<exit_state name="Not Y" target="Element@2032974155:1715077277967"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2032974155:1715077277967" name="PolicyQualifiedForReinstateWithLapse6" type="Decision" width="308" x="373" y="368">
+<exit_states>
+<exit_state name="Y" target="Element@752659933:1715077190743">
+<bendpoint>
+<dim1 x="-45" y="88"/>
+<dim2 x="-51" y="-78"/>
+</bendpoint>
+</exit_state>
+<exit_state name="N" target="Element@752659933:1715077190743">
+<bendpoint>
+<dim1 x="47" y="76"/>
+<dim2 x="41" y="-90"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1417311454:1715077277967" name="IsPolicyInCollectionMode6" type="Decision" width="224" x="425" y="126">
+<exit_states>
+<exit_state name="Yes" target="Element@933258138:1715077277966"/>
+<exit_state name="No" target="Element@933258138:1715077277966"/>
+</exit_states>
+</element>
+<element height="55" id="Element@911620059:1715077910534" name="Agent_DNIS_Check6" type="Decision" width="183" x="432" y="801">
+<exit_states>
+<exit_state name="Customer" target="Element@1977220491:1715077910534"/>
+<exit_state name="Agent" target="Element@1667399890:1722927831049"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1977220491:1715077910534" name="BWBP_MN_010_Call" type="Subflow Call" width="205" x="274" y="929">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709110104594">
+<config>
+<argument_data>
+<data name="MenuID">BWBP_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@491093603:1715077989258"/>
+</exit_states>
+</element>
+<element height="50" id="Element@329527954:1715077910534" name="Disc" type="Page Connector" width="78" x="187" y="1275">
+<page_connector target="Element@1134908791:1715070588429">Disc<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1422458808:1715077910534" name="EPC_PAYMENTS_US6" type="Subflow Call" width="185" x="151" y="1162">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1711717421472">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@329527954:1715077910534"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1271759955:1715077910534" name="Transfer" type="Page Connector" width="102" x="404" y="1160">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@491093603:1715077989258" name="BWBP_MN_010_VALUE" type="Decision" width="199" x="268" y="1044">
+<exit_states>
+<exit_state name="YES" target="Element@1422458808:1715077910534"/>
+<exit_state name="NO" target="Element@1667399890:1722927831049"/>
+<exit_state name="NOINPUT" target="Element@1271759955:1715077910534"/>
+<exit_state name="NOMATCH" target="Element@1271759955:1715077910534"/>
+<exit_state name="ER" target="Element@1271759955:1715077910534"/>
+</exit_states>
+</element>
+<element height="50" id="Element@441888617:1721743678235" name="Lang_Check_15" type="Decision" width="209" x="216" y="641">
+<exit_states>
+<exit_state name="Yes" target="Element@200861239:1715077190743"/>
+<exit_state name="No" target="Element@703885929:1721743717219"/>
+</exit_states>
+</element>
+<element height="55" id="Element@703885929:1721743717219" name="SP_BWBP_PA_020" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="203" x="305" y="723">
+<exit_states>
+<exit_state name="done" target="Element@911620059:1715077910534"/>
+</exit_states>
+</element>
+<element height="50" id="Element@90100842:1721743824401" name="Lang_Check_16" type="Decision" width="209" x="597" y="621">
+<exit_states>
+<exit_state name="Yes" target="Element@1316092132:1715077190742"/>
+<exit_state name="No" target="Element@1060827353:1721743838107"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1060827353:1721743838107" name="SP_BWBP_PA_021" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="203" x="553" y="710">
+<exit_states>
+<exit_state name="done" target="Element@911620059:1715077910534"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1667399890:1722927831049" name="Call_MN2" type="Page Connector" width="101" x="678" y="941">
+<page_connector target="Element@1699768267:1715068065991">Call_MN2<config/>
+</page_connector>
+</element>
+</page>

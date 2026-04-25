@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@100570047:1740466250494" name="PreTransfer" version="6.0.1">
+<config>
+<source type="Class">com.farmers.util.PreTransfer</source>
+</config>
+</action>

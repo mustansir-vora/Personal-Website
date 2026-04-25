@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@860110435:1711787905138" name="CheckReturnPoint" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.CheckFlowNLUPoint_BC</source>
+</config>
+</decision>

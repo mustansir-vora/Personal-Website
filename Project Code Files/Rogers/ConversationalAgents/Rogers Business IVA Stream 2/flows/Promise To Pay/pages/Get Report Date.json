@@ -1,0 +1,147 @@
+{
+  "name": "514ee2dc-96ec-4015-8be9-ad5307d756df",
+  "displayName": "Get Report Date",
+  "form": {
+    "parameters": [ {
+      "displayName": "getReportDate",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "What date did you make the payment? Say it now, or enter it using two digits for the date. two for the month. and four for the year." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ " À quelle date avez-vous effectué le paiement \r\n? Dites-la maintenant ou entrez-la à l’aide de deux chiffres pour le jour, \r\ndeux pour le mois et quatre pour l’année. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "6cafaa06-06a0-461f-83fa-1e7abfe646c2"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "What date did you make the payment? Say it now, or enter it using two digits for the date. two for the month. and four for the year." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ " À quelle date avez-vous effectué le paiement \r\n? Dites-la maintenant ou entrez-la à l’aide de deux chiffres pour le jour, \r\ndeux pour le mois et quatre pour l’année. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "a514544e-2cd1-498b-b7cc-3556f802478c"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Enter the date you made the payment. Use two digits for the date. two for the month. and four for the year. For example, March 8, 2030, would be entered as 0 8, 0 3, 2 0, 3 0." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Entrez la date à laquelle vous avez effectué le \r\npaiement. Utilisez deux chiffres pour le jour, deux pour le mois et quatre \r\npour l’année. Par exemple, le 8 mars 2030 serait entré comme 0 8, 0 3, 2 0, \r\n3 0. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "e92f8fac-d6f0-4f25-b5a8-29a1fa167f65"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Enter the date you made the payment. Use two digits for the date. two for the month. and four for the year. For example, March 8, 2030, would be entered as 0 8, 0 3, 2 0, 3 0." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Entrez la date à laquelle vous avez effectué le \r\npaiement. Utilisez deux chiffres pour le jour, deux pour le mois et quatre \r\npour l’année. Par exemple, le 8 mars 2030 serait entré comme 0 8, 0 3, 2 0, \r\n3 0. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "db0abfc5-4c8a-4627-970b-299be40c7bac"
+        }, {
+          "targetPage": "Return From Get Date",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "collectedPtpDate",
+              "value": null
+            }, {
+              "parameter": "getPtpDateFailure",
+              "value": true
+            } ]
+          },
+          "name": "f7c96988-a0fc-477f-b492-69a272cdeb60"
+        }, {
+          "targetPage": "Return From Get Date",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "getPtpDateFailure",
+              "value": true
+            }, {
+              "parameter": "collectedPtpDate",
+              "value": null
+            } ]
+          },
+          "name": "3f8949eb-416a-4866-a23a-e3e21b517078"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 8,
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 5
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 5
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "When did you make the payment?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ " Quand avez-vous effectué le paiement ? " ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpDate",
+        "value": "$sys.func.FORMAT_DATE($session.params.getReportDate, \"yyyy-MM-dd\")"
+      }, {
+        "parameter": "getReportDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Get Date",
+    "name": "daa89cc8-4a43-4711-b5bb-8ca1682db3e5"
+  } ]
+}

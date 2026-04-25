@@ -1,0 +1,95 @@
+{
+  "name": "1ceda10f-4063-457c-89b9-64d829a783e2",
+  "displayName": "Check Second Install Promised Date 2",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.datePromised2 \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.collectedPtpMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Votre deuxième versement par credit card d’un montant de $ $session.params.amount2 , exigible le $session.params.datePromised2 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Your second credit card installment payment for $ $session.params.amount2 that was due by $session.params.datePromised2 ." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Votre deuxième versement par bank d’un montant de $ $session.params.amount2 , exigible le $session.params.datePromised2 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Your second bank installment payment for $ $session.params.amount2 that was due by $session.params.datePromised2 ." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Check Second Install Update Eligibility",
+    "name": "c60128a4-1bbd-4abd-9a92-d84fba18ab3c"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.collectedPtpMethod = CC",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Votre prochain versement est un paiement par credit card d’un montant de $ $session.params.amount2 , exigible le $session.params.datePromised2 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Your next installment is a credit card payment for $ $session.params.amount2 and is due by $session.params.datePromised2 ." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Votre prochain versement est un paiement par bank d’un montant de $ $session.params.amount2 , exigible le $session.params.datePromised2 ." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Your next installment is a bank payment for $ $session.params.amount2 and is due by $session.params.datePromised2 ." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Check Second Install Update Eligibility",
+    "name": "56acaa25-7288-420e-8932-182a251f0b70"
+  } ]
+}

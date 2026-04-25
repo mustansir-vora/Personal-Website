@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@417500741:1707817328487" name="KYC_Brand_Auth1" version="6.0.1">
+<subflow_call subflow_name="KYC_Brand_Authentication" target="Element@31:1729664977545">
+<config/>
+</subflow_call>
+</connector>

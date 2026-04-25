@@ -1,0 +1,71 @@
+{
+  "name": "ce2e7005-1a36-4b7a-92ef-a2fa494c67b6",
+  "displayName": "Check Id Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.idType = \"phone\" OR $session.params.idType = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "maxAccountRetries",
+        "value": 1
+      }, {
+        "parameter": "maxPhoneRetries",
+        "value": 2
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "phoneNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "phoneRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "1a4b962c-3ab7-4790-af53-9396d9636756"
+  }, {
+    "condition": "$session.params.idType = \"account\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "maxAccountRetries",
+        "value": 2
+      }, {
+        "parameter": "maxPhoneRetries",
+        "value": 1
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "c6d420ef-75bb-4ffd-8fb5-47439619cbfd"
+  }, {
+    "condition": "$session.params.idType = \"both\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "maxAccountRetries",
+        "value": 1
+      }, {
+        "parameter": "maxPhoneRetries",
+        "value": 1
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Or Phone Number ",
+    "name": "62553c98-253d-40d0-a65c-a36512e03bd3"
+  } ]
+}

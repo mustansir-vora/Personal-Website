@@ -1,0 +1,82 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Nous avons besoin d’assistance pour retirer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " appareil perdu dans AirWatch.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La console AirWatch est en panne et nous ne pouvons pas gérer les appareils.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les employés reçoivent des erreurs lorsqu’ils accèdent au courriel d’",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    }, {
+      "text": " via AirWatch.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les politiques de conformité ",
+      "auto": true
+    }, {
+      "text": "AirWatch",
+      "auto": true
+    }, {
+      "text": " ne s’appliquent pas correctement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous ne pouvons pas déployer d’applications via ",
+      "auto": true
+    }, {
+      "text": "AirWatch MDM",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le profil AirWatch ne ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " pousse pas vers les nouveaux téléphones intelligents.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos appareils ne s’enrôlent pas dans AirWatch — pouvez-vous aider?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

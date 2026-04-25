@@ -1,0 +1,10 @@
+{
+  "name": "fd4c10fb-ebfa-4cc7-9f1a-32a196533667",
+  "displayName": "SSA_PostalCode",
+  "parameters": [ {
+    "id": "postalCode",
+    "entityType": "@PostalCode"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 42
+}

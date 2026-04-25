@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1269289435:1707108534044" name="Start" version="6.0.1">
+<element height="46" id="Element@31:1707108534044" name="SharedIDAuth" type="Subflow Start" width="123" x="362" y="-47">
+<exit_states>
+<exit_state name="next" target="Element@1488382405:1749051614058"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@552824089:1751910593642"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1551900457:1729603469633" name="Phone Number" type="Page Connector" width="149" x="-177" y="756">
+<page_connector target="Element@1177361062:1729603558054">Phone Number<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1340866862:1729603469633" name="IS_AUTH_IN_KYC" type="Decision" width="180" x="750" y="294">
+<exit_states>
+<exit_state name="YES" target="Element@1282915624:1729603469633"/>
+<exit_state name="NO" target="Element@255835607:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1522095211:1729603469633" name="SPECIALTY_SIDA_MN_001_Call" type="Subflow Call" width="249" x="351" y="710">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709038830159">
+<config>
+<argument_data>
+<data name="MenuID">SPECIALTY_SIDA_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@699202570:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1928057980:1729603469633" name="Go to Mob No Prompt" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="199" x="-199" y="653">
+<exit_states>
+<exit_state name="done" target="Element@1551900457:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1282915624:1729603469633" name="Subflow Return_09" type="Subflow Return" width="198" x="1022" y="166"/>
+<element height="50" id="Element@1276302130:1729603469633" name="Subflow Return" type="Page Entry" width="151" x="1046" y="66">
+<exit_states>
+<exit_state name="next" target="Element@1282915624:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2014169774:1729603469633" name="SIDA_MN_001_Entry" type="Page Connector" width="182" x="-527" y="496">
+<page_connector target="Element@527103839:1729603469633">SIDA_MN_001_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@573855896:1729603469633" name="SIDA_PA_016" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="155" x="-223" y="559">
+<exit_states>
+<exit_state name="done" target="Element@530226354:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@159791145:1729603469633" name="Transfer Entry" type="Page Connector" width="139" x="737" y="562">
+<page_connector target="Element@216904604:1729603726604">Transfer Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1273779905:1729603469633" name="Phone Number" type="Page Connector" width="149" x="100" y="217">
+<page_connector target="Element@1177361062:1729603558054">Phone Number<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@255835607:1729603469633" name="Policy_Identification_Check" type="Decision" width="259" x="710" y="409">
+<exit_states>
+<exit_state name="Yes" target="Element@1686177068:1743445116386"/>
+<exit_state name="No" target="Element@2043062243:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@846383973:1729603469633" name="SIDA_MN_ALPHANUM_Entry" type="Page Entry" width="238" x="684" y="497">
+<exit_states>
+<exit_state name="next" target="Element@1984954505:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1815520696:1729603469633" name="Transfer Entry" type="Page Connector" width="139" x="-242" y="380">
+<page_connector target="Element@216904604:1729603726604">Transfer Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1984954505:1729603469633" name="SIDA_MN_ALPHANUM_CALL" type="Subflow Call" width="251" x="346" y="497">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709037344342">
+<config>
+<argument_data>
+<data name="MenuID">SIDA_MN_ALPHANUM_CHECK</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@650950831:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1038903987:1729603469633" name="Rep_Req" type="Page Connector" width="108" x="753" y="649">
+<page_connector target="Element@1624203201:1729603726604">Rep_Req<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@863953673:1729603469633" name="Valid Entry" type="Page Connector" width="120" x="55" y="797">
+<page_connector target="Element@2104087336:1729603501859">Valid Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@454421594:1729603469633" name="Standard Error-PolicyCollection" type="Page Connector" width="257" x="238" y="789">
+<page_connector target="Element@2014660147:1729603734980">Standard Error-PolicyCollection<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@699202570:1729603469633" name="SIDA_MN_001_VALUE" type="Decision" width="230" x="55" y="494">
+<exit_states>
+<exit_state name="Representative" target="Element@1701990023:1730258301014"/>
+<exit_state name="Dont have it" target="Element@1928057980:1729603469633"/>
+<exit_state name="VALID" target="Element@1177059655:1729603469633"/>
+<exit_state name="NOINPUT" target="Element@454421594:1729603469633">
+<bendpoint>
+<dim1 x="138" y="168"/>
+<dim2 x="-58" y="-125"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@454421594:1729603469633">
+<bendpoint>
+<dim1 x="6" y="191"/>
+<dim2 x="0" y="-66"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1734780540:1749649798270"/>
+<exit_state name="Hold on" target="Element@573855896:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@706873464:1729603469633" name="SPECIALTY_SIDA_MN_001_Entry" type="Page Entry" width="257" x="677" y="710">
+<exit_states>
+<exit_state name="next" target="Element@1522095211:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@973283924:1729603469633" name="CheckIfAlreadyAuth_BC" type="Decision" width="234" x="722" y="166">
+<exit_states>
+<exit_state name="Yes" target="Element@1282915624:1729603469633"/>
+<exit_state name="No" target="Element@1340866862:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@747453328:1729603469633" name="SIDA_MN_006_Entry" type="Page Connector" width="182" x="1066" y="414">
+<page_connector target="Element@1405662674:1729603672111">SIDA_MN_006_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@273844952:1729603469633" name="Set Rep_Prompt" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="156" x="395" y="58">
+<exit_states>
+<exit_state name="done" target="Element@713634146:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2043062243:1729603469633" name="Check if BU is Specialty" type="Decision" width="207" x="372" y="412">
+<exit_states>
+<exit_state name="SPECIALTY" target="Element@1984954505:1729603469633"/>
+<exit_state name="OTHERS" target="Element@1420062238:1729603469633"/>
+<exit_state name="BW" target="Element@1273779905:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1177059655:1729603469633" name="Set policy Collection Flag" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="218" x="8" y="708">
+<exit_states>
+<exit_state name="done" target="Element@863953673:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@530226354:1729603469633" name="SPECIALTY_POLICY_COLLECTION_CHECK" type="Decision" width="315" x="-593" y="585">
+<exit_states>
+<exit_state name="SPECIALTY_COLLECTION" target="Element@876120693:1729603469633"/>
+<exit_state name="OTHERS" target="Element@2014169774:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1165148085:1729603469633" name="Rep_Req" type="Page Connector" width="108" x="-212" y="458">
+<page_connector target="Element@1624203201:1729603726604">Rep_Req<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1420062238:1729603469633" name="SIDA_MN_001_Call" type="Subflow Call" width="198" x="80" y="412">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653622813">
+<config>
+<argument_data>
+<data name="MenuID">SIDA_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@699202570:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@828272280:1729603469633" name="Disable_Lookup_Policy" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="227" x="362" y="306">
+<exit_states>
+<exit_state name="done" target="Element@2043062243:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@876120693:1729603469633" name="SPECIALTY_SIDA_MN_001_Entry" type="Page Connector" width="257" x="-563" y="680">
+<page_connector target="Element@706873464:1729603469633">SPECIALTY_SIDA_MN_001_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@650950831:1729603469633" name="SIDA_MN_ALPHANUM_VALUE" type="Decision" width="261" x="344" y="596">
+<exit_states>
+<exit_state name="YES" target="Element@1420062238:1729603469633"/>
+<exit_state name="NO" target="Element@1522095211:1729603469633"/>
+<exit_state name="NOMATCH" target="Element@159791145:1729603469633"/>
+<exit_state name="NOINPUT" target="Element@159791145:1729603469633">
+<bendpoint>
+<dim1 x="211" y="-53"/>
+<dim2 x="-121" y="-17"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@159791145:1729603469633">
+<bendpoint>
+<dim1 x="217" y="4"/>
+<dim2 x="-115" y="40"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@1210560428:1730258336041"/>
+</exit_states>
+</element>
+<element height="55" id="Element@713634146:1729603469633" name="Is_Looup_Another_Policy" type="Decision" width="244" x="353" y="167">
+<exit_states>
+<exit_state name="Y" target="Element@828272280:1729603469633"/>
+<exit_state name="N" target="Element@973283924:1729603469633"/>
+</exit_states>
+</element>
+<element height="50" id="Element@527103839:1729603469633" name="SIDA_MN_001_Entry" type="Page Entry" width="182" x="80" y="316">
+<exit_states>
+<exit_state name="next" target="Element@1420062238:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1701990023:1730258301014" name="Global_Rep_Handling" type="Decision" width="214" x="-474" y="282">
+<exit_states>
+<exit_state name="CONT" target="Element@1165148085:1729603469633"/>
+<exit_state name="TR" target="Element@1815520696:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1210560428:1730258336041" name="Copy_of_Global_Rep_Handling" type="Decision" width="214" x="591" y="786">
+<exit_states>
+<exit_state name="CONT" target="Element@1038903987:1729603469633"/>
+<exit_state name="TR" target="Element@159791145:1729603469633"/>
+</exit_states>
+</element>
+<element height="52" id="Element@1686177068:1743445116386" name="CALL_FROM_KYC" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="159" x="988" y="326">
+<exit_states>
+<exit_state name="done" target="Element@747453328:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1372071587:1749051614058" name="NEW_VIA_MAIN" type="Subflow Call" width="177" x="-63" y="35">
+<subflow_call subflow_name="New_VIA_Main" target="Element@31:1746127241294">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@91104252:1749051614058"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1488382405:1749051614058" name="IS_VIA_ENABLED" type="Decision" width="199" x="155" y="27">
+<exit_states>
+<exit_state name="YES" target="Element@1372071587:1749051614058"/>
+<exit_state name="NO" target="Element@273844952:1729603469633"/>
+</exit_states>
+</element>
+<element height="55" id="Element@91104252:1749051614058" name="Subflow Return_01" type="Subflow Return" width="198" x="-54" y="132"/>
+<element height="52" id="Element@1734780540:1749649798270" name="CHECK_HT_TRANSFER" type="Decision" width="169" x="-196" y="272">
+<exit_states>
+<exit_state name="YES" target="Element@1815520696:1729603469633"/>
+<exit_state name="NO" target="Element@1815520696:1729603469633">
+<bendpoint>
+<dim1 x="28" y="54"/>
+<dim2 x="89" y="-53"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="49" id="Element@552824089:1751910593642" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="620" y="-41">
+<exit_states>
+<exit_state name="done" target="Element@125633583:1751910593642"/>
+</exit_states>
+</element>
+<element height="48" id="Element@1039840203:1751910593642" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="1028" y="-46">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@125633583:1751910593642" name="Shared_Transfer" type="Subflow Call" width="132" x="868" y="-43">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1039840203:1751910593642"/>
+</exit_states>
+</element>
+</page>

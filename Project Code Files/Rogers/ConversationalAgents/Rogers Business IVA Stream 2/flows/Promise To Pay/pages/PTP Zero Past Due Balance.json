@@ -1,0 +1,132 @@
+{
+  "name": "58f9065b-355e-489e-a4bd-c95b33fb2d1e",
+  "displayName": "PTP Zero Past Due Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "selfServiceCompleted",
+      "value": true
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.ptpCurrentBalanceSplit = true",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "D’accord, puisque vous n’avez aucun" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "solde en souffrance pour le moment," ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "vous ne pouvez effectuer une demande" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "d’entente de paiement." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Alright, since you don’t have a past due balance at this time, I have no other offers for you and we won't be able to continue with your payment arrangement request." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Puisqu’il n’y a aucun solde en" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "souffrance sur ce compte, une entente" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "de paiement n’est pas nécessaire pour" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "le moment." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Since there isn’t an outstanding balance on this account, a payment arrangement is not necessary at this time." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpOperation = CREATE",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "completedSSName",
+        "value": "active-createPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "b3ca0bcc-47dd-40ba-a4ed-3f092993f9f9"
+  }, {
+    "condition": "$session.params.ptpOperation = UPDATE AND $session.params.numberOfInstalls = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "completedSSName",
+        "value": "passive-singleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "6b025e29-6813-4644-aff2-18d4712a44e1"
+  }, {
+    "condition": "$session.params.ptpOperation = UPDATE AND $session.params.numberOfInstalls = 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "d4ba7ceb-598f-45ad-8ef2-97d503ec6ce1"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "completedSSName",
+        "value": "active-updatePtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "79309bdd-93a3-490d-b7a2-c3750eceea8e"
+  } ]
+}

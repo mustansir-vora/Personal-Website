@@ -1,0 +1,25 @@
+{
+  "name": "95d267cc-0050-47d2-8662-af77d5111cca",
+  "displayName": "Check NL Voice Script",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.voiceScript != null AND $session.params.nluConfig.voiceScript != \"\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Dynamic Message",
+    "name": "fab0f388-2045-4f56-8791-1236511b7d6a"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Confirmation Counter",
+    "name": "a42bd868-122f-4ab0-b739-244509a8a1ab"
+  } ]
+}

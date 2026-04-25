@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1013780730:1707817145657" name="KYCNP_BRANDCHECK" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.KYCNP_BrandCheck</source>
+</config>
+</decision>

@@ -1,0 +1,7 @@
+{
+  "name": "ca1f4069-8274-4920-96a0-4edee9431966",
+  "displayName": "meraki-or-security-support",
+  "priority": 500000,
+  "description": "Handles calls with advantage Meraki or security issue for business customers.",
+  "numTrainingPhrases": 17
+}

@@ -1,0 +1,55 @@
+{
+  "name": "af9487be-ae18-4829-a1dc-75dbb216fe0e",
+  "displayName": "Return From PTP Pay Now",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromUpdateSingle = true AND $session.params.api.response.ptp.ptpUpdateEligibilityInd = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Update Single Details",
+    "name": "6b240c95-797c-41db-9592-8e93bcf17f2d"
+  }, {
+    "condition": "$session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Les modifications à \ncette entente de \npaiement ne sont pas \nautorisées." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Changes to this payment arrangement are not allowed. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-singleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "1641801e-211e-4f22-8315-b346ee01e22c"
+  }, {
+    "condition": "$session.params.updatemultipleFirstInstall = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updatemultipleFirstInstall",
+        "value": false
+      }, {
+        "parameter": "fromUpdateMultiple",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Update Multiple Second Install",
+    "name": "d08d76a9-c81c-4fa2-8dab-91611fbec206"
+  } ]
+}

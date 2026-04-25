@@ -1,0 +1,50 @@
+{
+  "name": "1ca71998-2ea5-44da-ae05-3510ad740c87",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to be at home to have access to your TV equipment."
+    }
+  }, {
+    "toolUse": {
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220002283"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After Broad cast",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "customerIdentified": "true",
+      "numberOfTV": "2"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Customer is Identified and Business account",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportTv",
+      "completedSSName": "passive-techSupportTv",
+      "hasTvProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportTv",
+      "reportingVar_completedSSName": "passive-techSupportTv",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220002283"
+      }
+    }
+  },
+  "displayName": "Consumer",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 274,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

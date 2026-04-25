@@ -1,0 +1,162 @@
+{
+  "name": "697d125c-50e9-49d4-8b8d-d36d748f118a",
+  "displayName": "End Call",
+  "transitionRoutes": [ {
+    "condition": "$session.params.wrapUp = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "terminationType",
+        "value": "endCall"
+      } ]
+    },
+    "targetPage": "Save Call History",
+    "name": "218c1cd1-05c9-48af-b1bd-e3ae2a5c752b"
+  }, {
+    "condition": "$session.params.endReason != \"Transfer\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "End"
+      }, {
+        "parameter": "terminationType",
+        "value": "endCall"
+      }, {
+        "parameter": "reportingVar_callEndState",
+        "value": "systemHangup"
+      }, {
+        "parameter": "reportingVar_callEndTime",
+        "value": "$sys.func.FORMAT_DATE($sys.func.NOW(),\"yyyy-MM-dd hh:mm:ss.SSS\")"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.terminationFlag = true"
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Merci d'avoir choisi Rogers. Bonne journée !" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Thank you for choosing Rogers. Have a nice day!" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Save Call History",
+    "name": "8380dbfd-4162-4e6a-8730-af5100b6667d"
+  }, {
+    "condition": "$session.params.endReason = \"Transfer\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "terminationType",
+        "value": "Transfer"
+      }, {
+        "parameter": "reportingVar_transferType",
+        "value": "$session.params.transferType"
+      }, {
+        "parameter": "reportingVar_callEndState",
+        "value": "transfer"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.isTerminationFromCSV = true",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Veuillez patienter pendant que votre appel est acheminé à un spécialiste Affaires. Votre appel, y compris le temps passé en attente, sera enregistré à des fins d’assurance de la qualité, de formation, de sécurité et d’identification." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Please hold while your call is transferred to a Business Specialist. Your call including any time spent on hold will be recorded, for quality assurance, training, security, and identification purposes." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+        
+        } ]
+      } ]
+    },
+    "targetPage": "Save Call History",
+    "name": "38c1bff7-9535-425c-806d-0168102fe15d"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "End Call",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "applicationError"
+      }, {
+        "parameter": "endReason",
+        "value": "Transfer"
+      } ]
+    },
+    "name": "0c1a5088-d2e0-45c4-9bdf-bd2af0699498"
+  }, {
+    "targetFlow": "End Call",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "Transfer"
+      }, {
+        "parameter": "transferType",
+        "value": "applicationError"
+      } ]
+    },
+    "name": "d36b1801-bf49-47a2-a92f-c54856ff1d97"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "346b15d5-416c-4851-8466-b78b51251cc5"
+  }, {
+    "targetFlow": "End Call",
+    "event": "sys.unknown-event",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "Transfer"
+      }, {
+        "parameter": "transferType",
+        "value": "applicationError"
+      } ]
+    },
+    "name": "1c418657-4364-4e35-b9b8-4309559d5712"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "fr-ca"
+  }, {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

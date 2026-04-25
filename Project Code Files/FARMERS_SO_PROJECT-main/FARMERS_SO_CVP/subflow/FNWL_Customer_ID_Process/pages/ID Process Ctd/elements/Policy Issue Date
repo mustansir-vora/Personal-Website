@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1111260494:1733464704495" name="Policy Issue Date" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Policy Issue Date" default_exit_state="Before 10/1/2019">
+        <exit_state name="After 10/1/2019" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FNWL_POLICY_ISSUE_DATE" />
+                </data>
+                <constant_string value="After" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

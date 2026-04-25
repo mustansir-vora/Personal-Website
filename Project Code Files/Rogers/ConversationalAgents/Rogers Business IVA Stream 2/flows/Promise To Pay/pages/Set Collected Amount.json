@@ -1,0 +1,28 @@
+{
+  "name": "6e05b7c6-1d05-4781-877a-5799f5f177c3",
+  "displayName": "Set Collected Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpAmount != null AND $session.params.ptpAmount != \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpAmount",
+        "value": "$session.params.ptpAmount"
+      } ]
+    },
+    "targetPage": "Set Collected Date",
+    "name": "c5b61602-c37f-49a2-85c5-26111d180a77"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set Collected Date",
+    "name": "3c52228d-a0dc-4db4-9443-70271cc7c3f0"
+  } ]
+}

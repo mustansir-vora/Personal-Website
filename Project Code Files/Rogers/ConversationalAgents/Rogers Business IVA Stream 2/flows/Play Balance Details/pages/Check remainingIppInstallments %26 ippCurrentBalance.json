@@ -1,0 +1,25 @@
+{
+  "name": "07f6d4a0-3596-42f1-8bba-1feb3903ee17",
+  "displayName": "Check remainingIppInstallments \u0026 ippCurrentBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.ippDetails.remainingInstallments \u003e 0 AND $session.params.api.billingProfile.ippDetails.ippCurrentBalance \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play IPPBalance",
+    "name": "75eefa54-94e1-47a7-9f43-e7fb49dc254d"
+  }, {
+    "condition": "$session.params.api.billingProfile.ippDetails.ippCurrentBalance \u003c= 0 OR $session.params.api.billingProfile.ippDetails.remainingInstallments \u003c= 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start LastInvoiceDetails subflow",
+    "name": "843309b4-ccff-4aa3-881b-2d535cd0bc48"
+  } ]
+}

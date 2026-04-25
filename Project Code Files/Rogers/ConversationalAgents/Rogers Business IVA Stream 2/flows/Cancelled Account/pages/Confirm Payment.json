@@ -1,0 +1,54 @@
+{
+  "name": "295e4337-e275-4c0c-9af6-598646061ca3",
+  "displayName": "Confirm Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Okay. Make a payment." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "D’accord. Effectuer un paiement." ]
+      },
+      "languageCode": "fr-ca"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "$session.params.app.auth.authLevelNeeded",
+      "value": 1
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "nluConfig",
+        "value": {
+          "authLevel": "low"
+        }
+      } ]
+    },
+    "targetFlow": "Authentication",
+    "name": "41da65a3-f636-4469-b9f1-4cb1b3648fbb"
+  }, {
+    "condition": "$session.params.authResult = \"Continue\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Make a Payment",
+    "name": "dd527756-7f85-43b9-afbf-a43b83ec233e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "d09e72b5-0214-4c07-8f11-5bf237e2aaf3"
+  } ]
+}

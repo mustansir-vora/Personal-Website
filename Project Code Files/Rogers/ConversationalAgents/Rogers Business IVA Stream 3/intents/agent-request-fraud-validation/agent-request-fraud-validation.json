@@ -1,0 +1,7 @@
+{
+  "name": "35ff50a2-5671-4718-ac46-b7dda847791c",
+  "displayName": "agent-request-fraud-validation",
+  "priority": 500000,
+  "description": "Handles requests where the user seeks verification or confirmation from an agent.",
+  "numTrainingPhrases": 50
+}

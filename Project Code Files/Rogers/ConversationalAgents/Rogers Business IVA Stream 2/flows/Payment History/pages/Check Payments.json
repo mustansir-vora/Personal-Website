@@ -1,0 +1,25 @@
+{
+  "name": "d7b775b2-094c-43eb-b9a1-6a2d706fcf61",
+  "displayName": "Check Payments",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.paymentHistory.numberOfPastPayments \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Payment Details",
+    "name": "228695ab-f58f-4ba2-a554-da23f7df9a50"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play noPaymentHistory",
+    "name": "4b777d9f-2c6a-44ee-b283-e9cb023dac34"
+  } ]
+}

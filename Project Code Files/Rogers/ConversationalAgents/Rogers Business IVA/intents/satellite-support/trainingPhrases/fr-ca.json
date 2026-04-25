@@ -1,0 +1,106 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Sommes‑nous hors de la zone de couverture? Nous sommes au nord du ",
+      "auto": true
+    }, {
+      "text": "58",
+      "auto": true
+    }, {
+      "text": "e parallèle.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez désactiver ",
+      "auto": true
+    }, {
+      "text": "deux",
+      "auto": true
+    }, {
+      "text": " récepteurs ou rafraîchir le signal satellite.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les messages texte via satellite ne s’envoient pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous sommes à l’extérieur sous ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ciel dégagé, mais l’appareil ne ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " connecte pas.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous devons désactiver ou rafraîchir quelques récepteurs satellite. Les invités ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " plaignent de ne pas avoir de signal télé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos appareils affichent « ",
+      "auto": true
+    }, {
+      "text": "ROGERS",
+      "auto": true
+    }, {
+      "text": " SATELLITE » mais les messages ne passent pas. Y a‑t‑il ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " panne?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au nom de la companie. Nous sommes dans ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " endroit éloigné et ",
+      "auto": true
+    }, {
+      "text": "notre service",
+      "auto": true
+    }, {
+      "text": " satellite ne fonctionne pas. Nous ne pouvons pas envoyer de messages ni nous connecter à nos systèmes.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,87 @@
+{
+  "name": "809d745a-b8da-4655-93ab-951ae642716b",
+  "displayName": "Transfer To Genesys",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ivrApplicationId",
+        "value": "$session.params.applicationId"
+      }, {
+        "parameter": "customerEnteredPhone",
+        "value": "$sys.func.IF(\"$session.params.itn = null\", \"NA\", \"$session.params.itn\")"
+      }, {
+        "parameter": "accountAssociatePhoneNumber",
+        "value": "$session.params.reportingVar_ANI"
+      }, {
+        "parameter": "displayLanguage",
+        "value": "$session.params.flowLanguage"
+      }, {
+        "parameter": "productLine",
+        "value": "NA"
+      }, {
+        "parameter": "accountLOB",
+        "value": "$sys.func.IF(\"$session.params.lob = null\", \"NA\", \"$session.params.lob\")"
+      }, {
+        "parameter": "subscriptionNumber",
+        "value": "$sys.func.IF(\"$session.params.subscriptionId = null\", \"NA\", \"$session.params.subscriptionId\")"
+      }, {
+        "parameter": "icmECID",
+        "value": "NA"
+      }, {
+        "parameter": "vBioAccNum",
+        "value": "NA"
+      }, {
+        "parameter": "cableFootprint",
+        "value": "NA"
+      }, {
+        "parameter": "product",
+        "value": "NA"
+      }, {
+        "parameter": "queueName",
+        "value": "$session.params.transferVQ"
+      }, {
+        "parameter": "outputDID",
+        "value": "$session.params.transferDID"
+      }, {
+        "parameter": "ivaIntent",
+        "value": "$session.params.savedIntent"
+      }, {
+        "parameter": "qAMessageHeard",
+        "value": "NA"
+      }, {
+        "parameter": "qAMessagePlayed",
+        "value": "NA"
+      }, {
+        "parameter": "customerAuthenticateType",
+        "value": "NA"
+      }, {
+        "parameter": "sFContactId",
+        "value": "NA"
+      }, {
+        "parameter": "email",
+        "value": "NA"
+      }, {
+        "parameter": "authenticatingSystem",
+        "value": "R4B_IVA"
+      }, {
+        "parameter": "eNTBillingSystemToPop",
+        "value": "ICM"
+      }, {
+        "parameter": "reportingVar_systemOverride",
+        "value": "$session.params.systemOverride"
+      }, {
+        "parameter": "reportingVar_preRouteOverride",
+        "value": "$session.params.preRouteOverrideRuleId"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "3e1b1b4c-ff95-4733-88b7-0a59186e588b"
+  } ]
+}

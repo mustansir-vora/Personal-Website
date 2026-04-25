@@ -1,0 +1,8 @@
+/.metadata/
+/.vscode
+
+#Ignore compiled Class files
+*.class
+
+#Ignore all files in target folder of middleware client
+FarmersAPIClient/target/

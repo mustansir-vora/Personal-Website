@@ -1,0 +1,28 @@
+{
+  "name": "73fa3264-d9af-41e6-908b-95048c6e7f66",
+  "displayName": "Check If Date Available",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpDate = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.changePTPDate",
+        "value": true
+      } ]
+    },
+    "targetPage": "Get Date",
+    "name": "98c07d43-8e09-4bc8-bc89-20e7f4c599d3"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set Installment Date",
+    "name": "fec4278c-2467-4569-ab17-a429898b446d"
+  } ]
+}

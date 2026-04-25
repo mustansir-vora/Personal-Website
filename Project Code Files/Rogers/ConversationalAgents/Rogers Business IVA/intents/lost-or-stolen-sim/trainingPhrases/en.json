@@ -1,0 +1,153 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Lost or stolen "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Report "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " lost or stolen"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Lost stolen "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " was stolen"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Report a stolen "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Stolen "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Lost or stolen "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Report a "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " lost or stolen"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Report "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " lost or stolen"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Report a lost "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Missing "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " is missing"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Lost "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I lost my "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

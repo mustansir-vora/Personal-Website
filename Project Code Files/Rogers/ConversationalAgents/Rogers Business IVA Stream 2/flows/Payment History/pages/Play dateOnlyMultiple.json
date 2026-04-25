@@ -1,0 +1,23 @@
+{
+  "name": "1564ac49-c0a0-41de-8b8d-79022467354d",
+  "displayName": "Play dateOnlyMultiple",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "A payment was received on $session.params.api.pastPaymentObject.paymentDate" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check paymentStatus",
+    "name": "a5e7b281-7775-47c5-b1c8-b354e184c7d5"
+  } ]
+}

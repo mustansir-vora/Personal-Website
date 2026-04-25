@@ -1,0 +1,28 @@
+{
+  "name": "ba280733-1865-4a3f-a874-0e0fc010ed9a",
+  "displayName": "Check Identify Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.idCounter \u003e= 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identifySubscriptionResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Identify subscription Router",
+    "name": "f406a340-0394-45d7-ad0f-558bad9158d4"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Account Change",
+    "name": "282cef41-8876-4e5a-bedd-e9416f2c1657"
+  } ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "f4e8e957-054e-44bb-9f55-3c755c3fedf0",
+  "displayName": "Return From Change 1st PTP Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromUpdateSingle = true AND $session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Fail",
+    "name": "83363eb7-709d-455c-8d3f-cb612876f9e0"
+  }, {
+    "condition": "$session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Collected Amount Is Greater Than Past Due",
+    "name": "bed9522b-2c6d-4f14-bb4e-e5698cf46a3e"
+  }, {
+    "condition": "$session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Fail",
+    "name": "c3289723-c442-4a0c-bc15-199110c71278"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "2b3204d3-faa1-4cbc-bcf1-b8d789ee527d"
+  } ]
+}

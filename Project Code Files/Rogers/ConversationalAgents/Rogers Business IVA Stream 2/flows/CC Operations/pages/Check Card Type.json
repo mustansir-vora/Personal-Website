@@ -1,0 +1,25 @@
+{
+  "name": "1f740e2a-e5b5-48ce-a086-c977f4613d8b",
+  "displayName": "Check Card Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.consumerSemafone.readSecureData.cardScheme = \"AMEX\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "4 Digit Security Code",
+    "name": "3d4eac89-d605-4be4-92ad-6a68934a268d"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "3 Digit Security Code",
+    "name": "72cf40e1-4167-446c-91f5-be512a2b3b31"
+  } ]
+}

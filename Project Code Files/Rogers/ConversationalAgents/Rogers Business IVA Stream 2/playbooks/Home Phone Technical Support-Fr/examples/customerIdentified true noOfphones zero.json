@@ -1,0 +1,33 @@
+{
+  "name": "9c0e14c7-4423-4b54-a37f-b3dfcf3fb758",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie résidentielle. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfPhone": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportHomePhone",
+      "hasNoHPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "customerIdentified true noOfphones zero",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 212,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

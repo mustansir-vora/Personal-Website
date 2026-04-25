@@ -1,0 +1,136 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Nos cartes ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "auto": true
+    }, {
+      "text": " ne s’authentifient pas ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " l’",
+      "auto": true
+    }, {
+      "text": "APN",
+      "auto": true
+    }, {
+      "text": " personnalisé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons besoin d’assistance pour dépanner l’intégration ",
+      "auto": true
+    }, {
+      "text": "VPN",
+      "auto": true
+    }, {
+      "text": " avec notre ",
+      "auto": true
+    }, {
+      "text": "APN",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous confirmer si notre ",
+      "auto": true
+    }, {
+      "text": "APN",
+      "auto": true
+    }, {
+      "text": " personnalisé est actif et configuré correctement?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous éprouvons des problèmes de connectivité de données après être passés à ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "APN",
+      "auto": true
+    }, {
+      "text": " personnalisé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les réglages ",
+      "auto": true
+    }, {
+      "text": "APN",
+      "auto": true
+    }, {
+      "text": " que nous avons appliqués ne fonctionnent pas — pouvez-vous les vérifier?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons besoin d’aide pour configurer l’",
+      "auto": true
+    }, {
+      "text": "APN",
+      "auto": true
+    }, {
+      "text": " personnalisé ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " plusieurs appareils.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos appareils ",
+      "auto": true
+    }, {
+      "text": "IoT",
+      "auto": true
+    }, {
+      "text": " ne ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " connectent pas au réseau en utilisant l’",
+      "auto": true
+    }, {
+      "text": "APN",
+      "auto": true
+    }, {
+      "text": " personnalisé.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

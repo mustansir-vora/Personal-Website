@@ -1,0 +1,25 @@
+{
+  "name": "9f0dd32d-d745-44da-8f44-eb7a23b534d7",
+  "displayName": "Check Current Balance Split",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCurrentBalanceSplit = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Zero Past Due Balance",
+    "name": "b85c71ae-7165-4988-a124-0e2c18d019cc"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If PTP Method Is Bank",
+    "name": "7409eb63-67ef-42fe-8c7b-169a97613a56"
+  } ]
+}

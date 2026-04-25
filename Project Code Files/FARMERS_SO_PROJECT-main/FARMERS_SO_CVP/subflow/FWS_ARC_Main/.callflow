@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<callflow id="Callflow@1312845787:1707802974686" version="6.0.1">
+<page closed="false" id="Page@1249899084:1707802974686">Start</page>
+<page closed="false" id="Page@1584848671:1707805192386">SharedTransfer</page>
+<page closed="false" id="Page@197478758:1707990516438">Disconnect</page>
+</callflow>

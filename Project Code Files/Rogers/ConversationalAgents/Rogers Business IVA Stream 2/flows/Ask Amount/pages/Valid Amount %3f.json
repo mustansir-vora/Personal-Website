@@ -1,0 +1,50 @@
+{
+  "name": "f0d5555c-2169-4629-a9c9-7b06f0fad580",
+  "displayName": "Valid Amount ?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.paymentAmount \u003e $session.params.maxAmountToCompare OR $session.params.paymentAmount \u003c $session.params.minAmountToCompare",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Invalid Amount",
+    "name": "499e83a0-62e7-48da-87ae-870980e20121"
+  }, {
+    "condition": "$session.params.accountStatus = N",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "4ab83c6f-3cae-4dba-8ee4-47ec985ff3aa"
+  }, {
+    "condition": "$session.params.savedIntent = payment-arrangement",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "5d933153-ed70-48e3-a444-a418aeeb4fa5"
+  }, {
+    "condition": "$session.params.paymentAmount \u003c $session.params.pastDueBalance OR $session.params.paymentAmount \u003c $session.params.api.billingProfile.balanceDetails.pastDueBalance",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Amount",
+    "name": "2b4ea44c-8862-4b9c-81a3-e001aabbae7d",
+    "description": "Check Amount is combined here, so the return success also happens when Check Amount page is successful."
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askAmountSuccess",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "85ed76d1-1bb6-4a24-92dc-26d4d7355ac6"
+  } ]
+}

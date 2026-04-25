@@ -1,0 +1,499 @@
+{
+  "name": "86d96bb4-0afb-44a8-8274-15f4b35b4331",
+  "displayName": "Intent Group - service",
+  "transitionRoutes": [ {
+    "intent": "account-support-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "account-support-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "487d0394-55ca-469f-90e8-aec7b0360ef6"
+  }, {
+    "intent": "agent-request-fraud-validation",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "agent-request-fraud-validation"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "38ec7535-c5f6-41e2-8bad-d5584191d4aa"
+  }, {
+    "intent": "advantage-voice",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "advantage-voice"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "6ab29f23-ef95-4270-84fe-66b7b4034a12"
+  }, {
+    "intent": "agent-request-enterprise",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "agent-request-enterprise"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "298949e4-ab1a-4132-a4f8-bc0d4382bbbe"
+  }, {
+    "intent": "bill-history",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "bill-history"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "0b507e6d-6867-4ea8-9ef9-483770a1529f"
+  }, {
+    "intent": "billing-last-bill-details",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "billing-last-bill-details"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "9424b59a-7ea2-4d9e-bb80-869a0d36f4b9"
+  }, {
+    "intent": "cancel-device-protection",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "cancel-device-protection"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "af8badb0-b60a-4c37-8967-cc729b497c56"
+  }, {
+    "intent": "change-account-name",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "change-account-name"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "f0f37e55-97e6-40c7-9aec-c559c9fad8e6"
+  }, {
+    "intent": "forgot-pin",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "forgot-pin"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "0d080aa2-d823-4920-9a77-868ff40f9133"
+  }, {
+    "intent": "incorrect-charges",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "incorrect-charges"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "b43ade64-3845-4f12-beec-4470f1e015a7"
+  }, {
+    "intent": "Inquiry-manage-mobility",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Inquiry-manage-mobility"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "165b1809-e50d-49d2-8b8a-a02464ed0ee9"
+  }, {
+    "intent": "online-password",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "online-password"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "10f4ac92-b186-478d-98d6-d122780bf694"
+  }, {
+    "intent": "pin-help-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "pin-help-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d1435e83-0937-428f-aba5-aefeda0722c9"
+  }, {
+    "intent": "plan-details",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "plan-details"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "59c614a1-9a74-4b07-800e-43fe8712525c"
+  }, {
+    "intent": "port-in-number",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "port-in-number"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "3c701c84-43a5-4e4a-8389-cfab71e765aa"
+  }, {
+    "intent": "price-increase",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "price-increase"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "40e4d98c-d34e-4fdc-9146-92490c2fe4d9"
+  }, {
+    "intent": "reset-account-pin",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "reset-account-pin"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "cf77a37c-bd1c-465d-b935-6c729ee7e99d"
+  }, {
+    "intent": "roaming-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "roaming-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "7812edea-bd56-4db3-820c-c4ade3c39908"
+  }, {
+    "intent": "separate-lines-into-multiple-accounts",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "separate-lines-into-multiple-accounts"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d5342747-8671-435f-af49-2d5efe5ef48a"
+  }, {
+    "intent": "setup-account",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "setup-account"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "051f2684-1f8e-4f0e-80c5-b72cd2dafaa3"
+  }, {
+    "intent": "transaction-id",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "transaction-id"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "30659f99-7594-4f74-a5eb-27747c33f903"
+  }, {
+    "intent": "transfer-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "transfer-balance"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "bb46d7f2-32fc-4a61-8c04-4c8ff80c67b6"
+  }, {
+    "intent": "update-service",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "update-service"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d4c8e4d1-0bb4-4057-8201-1baf697e3b9c"
+  }, {
+    "intent": "upgrade-internet",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "upgrade-internet"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "57e66225-e2ca-4efc-939f-08901dfb91eb"
+  }, {
+    "intent": "move-related-changes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "move-related-changes"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "2e9ebc66-3af1-4b39-b0bd-fadc3002b1a3"
+  }, {
+    "intent": "agent-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "agent-request"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "31508635-bebc-4a3d-80a8-d13a3af9c4ee"
+  }, {
+    "intent": "agent-request-business",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "agent-request-business"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "2184b1c2-022c-44c7-9eab-84c97d5bcdd2"
+  }, {
+    "intent": "add-streaming-services",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "add-streaming-services"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "754c75af-d997-429a-b6e3-8798282b5e12"
+  }, {
+    "intent": "call-history",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "call-history"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "1dd90515-ba06-4549-9dbe-fb61ac2a94c5"
+  }, {
+    "intent": "cancel-streaming-services",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "cancel-streaming-services"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "0d923199-35fd-4c47-a3e9-12d589bccca9"
+  }, {
+    "intent": "change-contact-info",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "change-contact-info"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "094c246a-c1aa-450c-87fd-a66612520076"
+  }, {
+    "intent": "device-protection",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "device-protection"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "0c08a72f-0a8a-4c85-926d-1f10630a8ab0"
+  }, {
+    "intent": "phone-activation",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "phone-activation"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "b737557b-331b-4f8d-aafd-a316e76e2a8f"
+  }, {
+    "intent": "plan-add-on",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "plan-add-on"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "202db0ce-c160-44ba-82f7-9214b8ee32ae"
+  }, {
+    "intent": "report-fraud",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "report-fraud"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "38e045e3-605e-4a69-bfc7-7b1841afbc7f"
+  }, {
+    "intent": "view-bill",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "view-bill"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "020ea469-65f3-4094-9e56-dc30b709a4f7"
+  }, {
+    "intent": "price-plan-change",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "price-plan-change"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "0aef13f0-16d9-40ee-89ca-6aa3089ad296"
+  }, {
+    "intent": "lost-or-stolen-sim",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "lost-or-stolen-sim"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "8b545dd4-7eba-4bbe-a041-8e8e87d13d83"
+  } ]
+}

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1324258117:1707108601185" name="Start" version="6.0.1">
+<element height="55" id="Element@31:1707108601185" name="SharedPolicyCHQA" type="Subflow Start" width="200" x="172" y="-57">
+<exit_states>
+<exit_state name="next" target="Element@2113350099:1751463560627"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1876251950:1751910653824"/>
+</exit_states>
+</element>
+<element height="55" id="Element@534690797:1707299345259" name="NLU_Avail" type="Decision" width="226" x="241" y="184">
+<exit_states>
+<exit_state name="Yes" target="Element@330823947:1720003504959"/>
+<exit_state name="No" target="Element@590017909:1709039244286"/>
+</exit_states>
+</element>
+<element height="55" id="Element@461539018:1707301869969" name="SPCQ_MN_001_VALUE" type="Decision" width="226" x="220" y="486">
+<exit_states>
+<exit_state name="General Policy" target="Element@1670466563:1707302798764"/>
+<exit_state name="Other Query" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Auto Change" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Auto Change Vehicle" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Auto Renew" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Cancellation Query" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Client Info Change" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Coverage Change" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Effective Date Change" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Homeowners Change" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Homeowners Renew" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Mortgagee Change" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Umbrella Vague" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Add" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Add Remove Person" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Billing Query" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Cancel" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Relate Household" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Renew" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Transfer" target="Element@1670466563:1707302798764"/>
+<exit_state name="Policy Information Verify" target="Element@1670466563:1707302798764"/>
+<exit_state name="Representative Request" target="Element@1670466563:1707302798764"/>
+<exit_state name="Representative" target="Element@1670466563:1707302798764"/>
+<exit_state name="Make a Coverage Change" target="Element@1670466563:1707302798764">
+<bendpoint>
+<dim1 x="106" y="109"/>
+<dim2 x="114" y="-89"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Remove a Vehicle" target="Element@1725655851:1708414532843"/>
+<exit_state name="Add a Vehicle" target="Element@1725655851:1708414532843"/>
+<exit_state name="NOINPUT" target="Element@1415376835:1731530368960"/>
+<exit_state name="NOMATCH" target="Element@317637980:1710688404576">
+<bendpoint>
+<dim1 x="-145" y="-33"/>
+<dim2 x="113" y="82"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@317637980:1710688404576"/>
+<exit_state name="Add or remove a vehicle" target="Element@1725655851:1708414532843"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1670466563:1707302798764" name="SPCQ_001_SET" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="180" x="235" y="684">
+<exit_states>
+<exit_state name="done" target="Element@315058049:1707472298600"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1612954717:1707302820667" name="SPCQ_002_SET" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="167" x="499" y="600">
+<exit_states>
+<exit_state name="done" target="Element@315058049:1707472298600"/>
+</exit_states>
+</element>
+<element height="55" id="Element@315058049:1707472298600" name="Call_SharedTransfer" type="Subflow Call" width="201" x="488" y="697">
+<subflow_call subflow_name="Transfer" target="Element@31:1707472311376">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1764787311:1711441987965"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1725655851:1708414532843" name="SPCQ_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="181" x="-5" y="563">
+<exit_states>
+<exit_state name="done" target="Element@1670466563:1707302798764"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2099660827:1709039209178" name="SPCQ_MN_001_Call" type="Subflow Call" width="203" x="222" y="389">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709039220659">
+<config>
+<argument_data>
+<data name="MenuID">SPCQ_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@461539018:1707301869969"/>
+</exit_states>
+</element>
+<element height="55" id="Element@590017909:1709039244286" name="SPCQ_MN_002_Call" type="Subflow Call" width="203" x="500" y="179">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709039266300">
+<config>
+<argument_data>
+<data name="MenuID">SPCQ_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@765578266:1710611101004"/>
+</exit_states>
+</element>
+<element height="55" id="Element@765578266:1710611101004" name="SPCQ_MN_002_VALUE" type="Decision" width="226" x="479" y="394">
+<exit_states>
+<exit_state name="NO" target="Element@1612954717:1707302820667"/>
+<exit_state name="YES" target="Element@1612954717:1707302820667">
+<bendpoint>
+<dim1 x="-67" y="117"/>
+<dim2 x="-57" y="-89"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@774495324:1731530385616"/>
+<exit_state name="NOMATCH" target="Element@458898684:1710688581949"/>
+<exit_state name="ER" target="Element@1612954717:1707302820667">
+<bendpoint>
+<dim1 x="108" y="104"/>
+<dim2 x="118" y="-102"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@317637980:1710688404576" name="Transfer_0" type="Subflow Call" width="128" x="66" y="370">
+<subflow_call subflow_name="Transfer" target="Element@31:1710688504764">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@600579041:1710688484871"/>
+</exit_states>
+</element>
+<element height="55" id="Element@600579041:1710688484871" name="Subflow Return_02" type="Subflow Return" width="198" x="50" y="274"/>
+<element height="55" id="Element@458898684:1710688581949" name="Call_01" type="Subflow Call" width="128" x="792" y="332">
+<subflow_call subflow_name="Transfer" target="Element@31:1710688653684">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@279901088:1710688637487"/>
+</exit_states>
+</element>
+<element height="55" id="Element@279901088:1710688637487" name="Subflow Return_03" type="Subflow Return" width="198" x="781" y="432"/>
+<element height="55" id="Element@1764787311:1711441987965" name="Subflow Return_04" type="Subflow Return" width="198" x="478" y="795"/>
+<element height="55" id="Element@1457887983:1711695107763" name="CHECK_ENTRYPOINT" type="Decision" width="218" x="224" y="73">
+<exit_states>
+<exit_state name="CONT" target="Element@534690797:1707299345259"/>
+<exit_state name="ER" target="Element@534690797:1707299345259">
+<bendpoint>
+<dim1 x="155" y="58"/>
+<dim2 x="153" y="-47"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NLU" target="Element@48129861:1739803169878"/>
+<exit_state name="INITIAL" target="Element@330823947:1720003504959">
+<bendpoint>
+<dim1 x="-59" y="170"/>
+<dim2 x="-74" y="-36"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@330823947:1720003504959" name="Lang_Check" type="Decision" width="142" x="257" y="294">
+<exit_states>
+<exit_state name="SPANISH" target="Element@590017909:1709039244286"/>
+<exit_state name="ENGLISH" target="Element@2099660827:1709039209178"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1415376835:1731530368960" name="DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="93" x="71" y="477">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@774495324:1731530385616" name="DISC 1" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="104" x="764" y="234">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@48129861:1739803169878" name="INTENT_AUTO_VAGUE_CHECK" type="Decision" width="284" x="-108" y="137">
+<exit_states>
+<exit_state name="YES" target="Element@1725655851:1708414532843"/>
+<exit_state name="NO" target="Element@330823947:1720003504959"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2113350099:1751463560627" name="SMM_SPCQ_CHECK_BC" type="Decision" width="233" x="217" y="9">
+<exit_states>
+<exit_state name="YES" target="Element@590017909:1709039244286"/>
+<exit_state name="NO" target="Element@1457887983:1711695107763"/>
+</exit_states>
+</element>
+<element height="49" id="Element@1876251950:1751910653824" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="473" y="-52">
+<exit_states>
+<exit_state name="done" target="Element@1653489997:1751910653824"/>
+</exit_states>
+</element>
+<element height="48" id="Element@114952008:1751910653824" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="881" y="-57">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1653489997:1751910653824" name="Shared_Transfer" type="Subflow Call" width="132" x="721" y="-54">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@114952008:1751910653824"/>
+</exit_states>
+</element>
+</page>

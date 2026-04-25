@@ -1,0 +1,32 @@
+{
+  "name": "71160252-16bc-4eb9-ae7a-e60b1585d125",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Internet,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to talk with agent"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Internet,Tv, Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "userInputBMTS": "agent"
+    }
+  },
+  "displayName": "Agent",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 133,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

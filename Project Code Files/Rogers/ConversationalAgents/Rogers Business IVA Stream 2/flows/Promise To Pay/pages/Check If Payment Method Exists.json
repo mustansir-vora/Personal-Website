@@ -1,0 +1,25 @@
+{
+  "name": "39fe3260-139f-44ee-9f30-5ec98fbaf9b3",
+  "displayName": "Check If Payment Method Exists",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpMethod != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Amount Exists",
+    "name": "05428e0f-ce05-4e36-b542-8ce47b9e0862"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Get Pay Method",
+    "name": "f418a4a9-bd77-41bc-9d10-d08466483087"
+  } ]
+}

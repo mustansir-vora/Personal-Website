@@ -1,0 +1,173 @@
+{
+  "name": "8e52ace2-4ecf-46a3-90bc-92a6e1b430b2",
+  "displayName": "SMS Wrap Up",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.smsStatus = \"api_success\" AND $session.params.passiveSms = true AND $session.params.smsAllowPassiveMessageInd = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": true
+      }, {
+        "parameter": "smsId",
+        "value": ""
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.smsPlaySuccessMsgScript = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.smsPlaySuccessMsgScript" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.smsPlaySuccessMsgScript" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "2821e9c6-9f5d-44a8-be2e-fb854b24cac5"
+  }, {
+    "condition": "$session.params.smsStatus = \"api_success\" AND $session.params.passiveSms != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": true
+      }, {
+        "parameter": "smsId",
+        "value": ""
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.smsPlaySuccessMsgScript = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.smsPlaySuccessMsgScript" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.smsPlaySuccessMsgScript" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "a2513932-0150-41ce-b12b-6eb8fce77bcb"
+  }, {
+    "condition": "$session.params.smsStatus = \"api_success\" AND $session.params.passiveSms = true AND $session.params.smsAllowPassiveMessageInd != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": true
+      }, {
+        "parameter": "smsId",
+        "value": ""
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "f486ebff-6cab-4974-b1cb-c7686eb75a3c"
+  }, {
+    "condition": "$session.params.smsStatus != \"api_success\" AND $session.params.passiveSms = true AND $session.params.smsAllowPassiveMessageInd = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": false
+      }, {
+        "parameter": "smsId",
+        "value": ""
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.smsPlayFailMsgScript = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.smsPlayFailMsgScript" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.smsPlayFailMsgScript" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "dba65224-683a-4440-ae8f-5efedf564e5c"
+  }, {
+    "condition": "$session.params.smsStatus != \"api_success\" AND $session.params.passiveSms != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": false
+      }, {
+        "parameter": "smsId",
+        "value": ""
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.smsPlayFailMsgScript = \"NA\""
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$session.params.smsPlayFailMsgScript" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "$session.params.smsPlayFailMsgScript" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "dc197ec5-0492-41ec-85c3-7d523eb1d3ae"
+  }, {
+    "condition": "$session.params.smsStatus != \"api_success\" AND $session.params.passiveSms = true AND $session.params.smsAllowPassiveMessageInd != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": false
+      }, {
+        "parameter": "smsId",
+        "value": ""
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "478633c7-da2f-4b80-b57f-33285774d31f"
+  } ]
+}

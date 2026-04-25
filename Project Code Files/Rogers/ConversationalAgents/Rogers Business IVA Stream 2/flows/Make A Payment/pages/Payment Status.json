@@ -1,0 +1,64 @@
+{
+  "name": "2b072358-3997-4194-a483-703b1a98a25c",
+  "displayName": "Payment Status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.paymentStatus = IPP",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subflowInputs.accountBalance.callCurrentBalanceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "accountBalance.callInstallmentPaymentPlanDetailsSubflow",
+        "value": true
+      }, {
+        "parameter": "accountBalance.callLastInvoiceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "accountBalance.callCreditLimitUsageDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "accountBalance.callPendingPTPDetailsSubflow",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Play Balance Details",
+    "name": "442e0e6b-22d7-4a78-8fa7-c1bf9ca0e888",
+    "description": "TO:DO - will need to check for success on \"Installment Payment Plan Details\" flow and route to Select Case Page\n\nAdd subflow params for calling Installment Payment Plan"
+  }, {
+    "condition": "$session.params.paymentStatus = PTP",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "callCurrentBalanceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "callInstallmentPaymentPlanDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "callLastInvoiceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "callCreditLimitUsageDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "callPendingPTPDetailsSubflow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Play Balance Details",
+    "name": "bb501985-799d-4220-a2cf-b3b908730b1c",
+    "description": "TO:DO - will need to check for success on \"Pending PTP Details\" flow and route to Select Case Page"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Select Case: Check for specific amount",
+    "name": "cd5f8ce3-29ec-4976-8310-21638f1a942d"
+  } ]
+}

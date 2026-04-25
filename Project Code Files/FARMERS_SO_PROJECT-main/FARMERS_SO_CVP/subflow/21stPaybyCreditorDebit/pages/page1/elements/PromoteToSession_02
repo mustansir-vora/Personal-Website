@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1862228144:1712350529727" name="PromoteToSession_02" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">MAKE_A_PAYMENT</setting>
+<setting name="sessNames">S_PAY_BY_DEBIT_OR_CREDIT_CASE</setting>
+</settings>
+</config>
+</action_element>

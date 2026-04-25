@@ -1,0 +1,28 @@
+{
+  "name": "769dc7c9-b0e8-423a-a44c-9e27165297bd",
+  "displayName": "Play CreditBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your account has a credit balance of $ $session.params.api.billingProfile.balanceInfo.currentBalance . There is no payment due at this time." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Votre compte présente un solde créditeur de $session.params.api.billingProfile.balanceInfo.currentBalance . Aucun paiement n’est requis pour le moment.\r\n" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Goto Transtion Routing",
+    "name": "c0ab27e0-4139-4db5-a8ca-e44b6b633a95"
+  } ]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@871005637:1708938544660" name="CaseList 8" version="6.0.1">
+<element height="55" id="Element@1997086269:1708938646894" name="POLICY_MODE_CHECK_3" type="Decision" width="245" x="400" y="128">
+<exit_states>
+<exit_state name="Y" target="Element@1743579296:1708938646894"/>
+<exit_state name="Not Y" target="Element@1743579296:1708938646894"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2049114268:1708938646894" name="CL_8" type="Page Entry" width="92" x="467" y="18">
+<exit_states>
+<exit_state name="next" target="Element@1997086269:1708938646894"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1924729879:1708938646894" name="BWBP_ADM_010" type="Decision" width="182" x="433" y="447">
+<exit_states>
+<exit_state name="Customer" target="Element@43186762:1708938646894"/>
+<exit_state name="Agent" target="Element@43186762:1708938646894"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1300106099:1708938646894" name="POLICY_BALANCE_CHECK_5" type="Decision" width="269" x="396" y="331">
+<exit_states>
+<exit_state name="Yes" target="Element@1924729879:1708938646894"/>
+<exit_state name="No" target="Element@1924729879:1708938646894"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1743579296:1708938646894" name="POLICY_STATUS_CHECK_2" type="Decision" width="253" x="403" y="230">
+<exit_states>
+<exit_state name="Y" target="Element@1300106099:1708938646894"/>
+<exit_state name="Not Y" target="Element@1300106099:1708938646894"/>
+</exit_states>
+</element>
+<element height="55" id="Element@43186762:1708938646894" name="S_TRANSFER_5" type="Subflow Call" width="168" x="439" y="571">
+<subflow_call subflow_name="Transfer" target="Element@31:1711717653831">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@796951038:1711700007772"/>
+</exit_states>
+</element>
+<element height="55" id="Element@796951038:1711700007772" name="RETURN_ENTRY" type="Page Connector" width="174" x="434" y="675">
+<page_connector target="Element@42027262:1711699809129">RETURN_ENTRY<config/>
+</page_connector>
+</element>
+</page>

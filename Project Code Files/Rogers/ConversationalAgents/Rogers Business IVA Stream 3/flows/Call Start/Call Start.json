@@ -1,0 +1,238 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Call Start",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Salut !", "Bonjour !", "Salutations !", "Bienvenue !" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Salut !", "Bonjour !", "Salutations !", "Bienvenue !" ]
+        },
+        "languageCode": "fr"
+      } ]
+    },
+    "name": "b41b9ec4-d879-4337-82ad-4269c6cf4c5f"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr"
+      } ]
+    },
+    "name": "00edcb19-4b3e-417d-a6ee-579f875dbc78"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "J'ai du mal à comprendre cette question.", "J'ai mal compris votre demande.", "Je n'ai pas saisi ce que vous avez dit.", "Je crois que je ne vous suis pas.", "Je ne comprends pas de quoi vous me parlez." ]
+        },
+        "languageCode": "fr"
+      } ]
+    },
+    "name": "0c6d3c3f-ffab-4b36-9498-0e33aa0eeefa"
+  }, {
+    "targetPage": "Configuration Lookup",
+    "event": "callStart",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sessionId-Google",
+        "value": "$request.session-id"
+      }, {
+        "parameter": "numberOfHolds",
+        "value": 0
+      }, {
+        "parameter": "reportingVar_DNIS",
+        "value": "$session.params.dnis"
+      }, {
+        "parameter": "reportingVar_ANI",
+        "value": "$session.params.ani"
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "phoneRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "reportingVar_conversationID",
+        "value": "$session.params.conversationId"
+      }, {
+        "parameter": "sessionId",
+        "value": "$session.params.conversationId"
+      }, {
+        "parameter": "reportingVar_callStartTime",
+        "value": "$sys.func.FORMAT_DATE($sys.func.NOW(),\"yyyy-MM-dd hh:mm:ss.SSS\")"
+      }, {
+        "parameter": "agentRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "collectPhoneNumberCounter",
+        "value": 0
+      }, {
+        "parameter": "agentRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "globalAgentRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": 0
+      }, {
+        "parameter": "savedIntent",
+        "value": "$sys.func.IF(\"$session.params.ivaIntent = null\", \"NA\", \"$session.params.ivaIntent\")"
+      }, {
+        "parameter": "callStartTime",
+        "value": "$sys.func.FORMAT_DATE($sys.func.NOW(),\"yyyy-MM-dd hh:mm:ss.SSS\")"
+      }, {
+        "parameter": "IsBusinessApp",
+        "value": "$sys.func.IF(\"$session.params.accountNumber = null\", true, false)"
+      }, {
+        "parameter": "smsIdArray",
+        "value": null
+      }, {
+        "parameter": "heardBackOffMenu",
+        "value": false
+      }, {
+        "parameter": "authenticationCounter",
+        "value": 0
+      }, {
+        "parameter": "ani",
+        "value": "9626697768"
+      }, {
+        "parameter": "atest",
+        "value": "$sys.func.SUBSTITUTE($session.params.ani, \"(.)(?=.)\", \"$1...\")"
+      } ]
+    },
+    "name": "c01bfeee-b230-4ab5-ac91-c3b83267c319"
+  }, {
+    "targetPage": "Switch Language",
+    "event": "mainMenu",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isSwitchInvoked",
+        "value": true
+      } ]
+    },
+    "name": "702f0c1f-78c6-4f99-b7ea-7373bc8cf314"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "2b1e6219-14f9-4cef-b2d1-3836f1beea9c"
+  }, {
+    "targetPage": "Switch Language",
+    "event": "TestFr",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "profileInfo",
+        "value": {
+          "accountSessionList": [ "1774003362-532899089" ],
+          "ani": "4165486478",
+          "aniConfirm": true,
+          "aniLookup": true,
+          "aniMatch": true,
+          "applicationId": "Bus_Main_SMB",
+          "brand": "ROGERS",
+          "callHistory": true,
+          "callerIdType": "phone",
+          "closedDoorTFN": false,
+          "disclaimerScriptFr": "Message d\\NULLavertissement du test",
+          "dnis": "9876543210",
+          "flowLanguage": "fr-CA",
+          "idType": "both",
+          "identifyAccount": true,
+          "involuntaryRedirectInd": true,
+          "mwInstance": "qa1",
+          "numberOfBillingAccounts": 1,
+          "predictiveInd": true,
+          "reportingVar_callStartTime": "2026-03-20 06:42:39.412",
+          "savedIntent": "NA",
+          "searchBusinessContact": true,
+          "searchHomeContact": false,
+          "searchMobileContact": true,
+          "sessionId": "9194411a-5fb8-43a1-9ea0-fbdeb9f74d4d",
+          "sessionIdGoogle": "081SnyZU43xRH-gydkk5VICjQ",
+          "switchLanguage": true,
+          "systemOverride": "NA",
+          "tn": "4165486478",
+          "tnType": "ANI",
+          "validAni": true,
+          "voluntaryRedirect": "none"
+        }
+      }, {
+        "parameter": "switchedLanguage",
+        "value": "fr-CA"
+      }, {
+        "parameter": "mwInstance",
+        "value": "qa4"
+      }, {
+        "parameter": "savedIntent",
+        "value": "NA"
+      }, {
+        "parameter": "isSwitchInvoked",
+        "value": true
+      }, {
+        "parameter": "savedIntent",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA \", \"NA\", \"$session.params.savedIntent\")"
+      } ]
+    },
+    "name": "90fdc22c-e13f-4a91-8595-474bcb6eeb46"
+  }, {
+    "targetFlow": "End Call",
+    "event": "test",
+    "triggerFulfillment": {
+    
+    },
+    "name": "02df5a57-14f8-416f-a035-117e91a7abde"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true,
+    "playbackInterruptionSettings": {
+    
+    }
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  }, {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "fr-ca"
+  } ]
+}

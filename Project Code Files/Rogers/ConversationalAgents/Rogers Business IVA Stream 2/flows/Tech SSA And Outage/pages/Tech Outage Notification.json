@@ -1,0 +1,28 @@
+{
+  "name": "3ea98e71-0a08-4fc2-8642-22e4e53c98de",
+  "displayName": "Tech Outage Notification",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "C’est toute l’information dont je dispose pour le moment." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "That's all the information I have at this point." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "check Ticket Number",
+    "name": "e84cc345-9e67-4764-a46e-de591910d34f"
+  } ]
+}

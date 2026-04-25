@@ -1,0 +1,163 @@
+{
+  "name": "eb34acd4-f030-46ce-b13e-08b24b715da6",
+  "displayName": "DMBG - WifiCallingSupportVagueDmbg",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Que souhaitez-vous faire : dites point d’accès mobile, appels Wi-Fi, problème avec le Wi-Fi ou questions générales." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Which would you like: say \"mobile hotspot\", \"wifi calling\", \"problem with wifi\", or \"general questions\"." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - WifiCallingSupportVagueDmbg - Mobile Hotspot",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_WifiCallingSupportVagueDmbg",
+        "value": "mobile_hotspot"
+      }, {
+        "parameter": "savedIntent",
+        "value": "mobile-hotspot"
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "7807a262-ef10-4c85-97d5-aafd1e45a8f8"
+  }, {
+    "intent": "DMBG - WifiCallingSupportVagueDmbg - Wifi Calling",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_WifiCallingSupportVagueDmbg",
+        "value": "wifi_calling"
+      }, {
+        "parameter": "savedIntent",
+        "value": "wifi-calling-support"
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "31b13369-8a3a-4b97-bea4-4e9fc84e1a01"
+  }, {
+    "intent": "DMBG - WifiCallingSupportVagueDmbg - Problem With Wifi",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_WifiCallingSupportVagueDmbg",
+        "value": "problem_wifi"
+      }, {
+        "parameter": "savedIntent",
+        "value": "troubleshoot-wifi"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "75ba400e-9033-4953-bcc1-951731d64319"
+  }, {
+    "intent": "DMBG - WifiCallingSupportVagueDmbg - General Questions",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_WifiCallingSupportVagueDmbg",
+        "value": "general_questions"
+      }, {
+        "parameter": "savedIntent",
+        "value": "wifi-support-general"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "b5cd27b9-8aea-4b7c-9095-24eed33d6401"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "bae54a41-cc34-46b6-b639-caa63c9f0b64"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "f4f7ac66-0bd4-4de1-b888-60baf78187e7"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

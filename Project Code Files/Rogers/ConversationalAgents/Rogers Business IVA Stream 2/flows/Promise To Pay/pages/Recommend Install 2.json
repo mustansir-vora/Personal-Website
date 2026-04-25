@@ -1,0 +1,130 @@
+{
+  "name": "7e1d4723-1ad0-4c41-b731-a5ab08af7852",
+  "displayName": "Recommend Install 2",
+  "form": {
+    "parameters": [ {
+      "displayName": "recommendInstall2Selection",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Le montant de votre deuxième versement \ndoit être d’au moins $ $session.params.api.response.ptp.recomInstallAmount2 . Dois-je mettre à jour votre \npaiement à ce montant ? Dites « oui » ou appuyez sur le 1. « Non » ou \nappuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Your second installment amount needs to be at least $ $session.params.api.response.ptp.recomInstallAmount2 . Should I update your payment to that amount? Say yes, or press 1. No, or press 2" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "996d1dd0-caef-4f4a-afa0-1434a0bb9ad3"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Le montant de votre deuxième versement \r\ndoit être d’au moins $ $session.params.api.response.ptp.recomInstallAmount2 . Dois-je mettre à jour votre \r\npaiement à ce montant ? Dites « oui » ou appuyez sur le 1. « Non » ou \r\nappuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Your second installment amount needs to be at least $ $session.params.api.response.ptp.recomInstallAmount2 . Should I update your payment to that amount? Say yes, or press 1. No, or press 2" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "afdad934-1aca-4f3e-b175-0e3bf88d1198"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour mettre à jour votre paiement à \n$ $session.params.api.response.ptp.recomInstallAmount2 , appuyez sur le 1. Sinon, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To update your payment to $ $session.params.api.response.ptp.recomInstallAmount2 , press 1. Otherwise, press 2" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2a517815-0848-4d0d-8525-3709c8a1408a"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour mettre à jour votre paiement à \r\n$ $session.params.api.response.ptp.recomInstallAmount2 , appuyez sur le 1. Sinon, appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To update your payment to $ $session.params.api.response.ptp.recomInstallAmount2 , press 1. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "cf7687d2-1f17-4cfc-af0d-78b186c4af75"
+        }, {
+          "targetPage": "PTP Offer Best Option",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "aaca271a-f70b-4a57-93b6-540592c627d7"
+        }, {
+          "targetPage": "PTP Offer Best Option",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "30bb5d5d-9bdc-49dc-ad18-7575cd972a42"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Pour maintenir votre compte en règle, le montant \nde votre deuxième versement doit être d’au moins \n$ $session.params.api.response.ptp.recomInstallAmount2 . Souhaitez-vous que je mette à jour votre paiement à ce montant ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "To keep your account in good standing, your second installment amount must be at least $ $session.params.api.response.ptp.recomInstallAmount2 . Should I go ahead and update your payment to that amount?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.recommendInstall2Selection = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "secondPromiseAmount",
+        "value": "$session.params.api.response.ptp.recomInstallAmount2"
+      }, {
+        "parameter": "secondPromiseDate",
+        "value": "$session.params.collectedPtpDate"
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "edd68c1b-95d3-4d56-924b-f26ba2a6e5c8"
+  }, {
+    "condition": "$session.params.recommendInstall2Selection = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "2c0bde61-ae1b-4d83-9b86-3009734bc7ca"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

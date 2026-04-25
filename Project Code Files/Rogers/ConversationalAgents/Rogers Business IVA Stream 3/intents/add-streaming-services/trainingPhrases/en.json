@@ -1,0 +1,243 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I’d like to subscribe to "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " and "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService1",
+      "auto": true
+    }, {
+      "text": " at once."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please include "
+    }, {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " and "
+    }, {
+      "text": "Disney Plus",
+      "parameterId": "e_StreamingService1",
+      "auto": true
+    }, {
+      "text": " in my services."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you add "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " and "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService1",
+      "auto": true
+    }, {
+      "text": " to my plan?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " and "
+    }, {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService1",
+      "auto": true
+    }, {
+      "text": " activated together."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " active so I can watch shows."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please enable "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " on my plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to start a "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " membership."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you set up "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " for me on my subscription?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I would like to add "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " to my account and start watching."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Add "
+    }, {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " to my subscriptions and activate it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I get "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " added to my services and start using it?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please add "
+    }, {
+      "text": "Disney Plus",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " and enable it for me."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want "
+    }, {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " on my account and have it ready."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Add "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " to my plan and make it active."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I would like to subscribe to "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " and start the service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you add "
+    }, {
+      "text": "Crave TV",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " to my plan and activate it?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please add "
+    }, {
+      "text": "Disney Plus",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " to my services so I can watch it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to add "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " to my account and start using it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

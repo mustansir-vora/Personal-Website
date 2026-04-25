@@ -1,0 +1,34 @@
+{
+  "name": "f6486602-439e-4a25-864e-62ec8ee3229f",
+  "displayName": "TechSingleService_Internet",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.no5gHomeInternet = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "no5gHomeInternet",
+        "value": false
+      }, {
+        "parameter": "invokedTSSFrom",
+        "value": "TechInternetSupport"
+      } ]
+    },
+    "targetFlow": "Tech SSA And Outage",
+    "name": "a39cc8ce-d960-4769-bd59-baf2f1d7986c"
+  }, {
+    "condition": "$session.params.inTSFromOutageStatus = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "inTSFromOutageStatus",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_Internet",
+    "name": "38e8c9c2-703c-415d-836c-ebb762a12a10"
+  } ]
+}

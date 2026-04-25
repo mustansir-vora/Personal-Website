@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1019098496:1759318398790" name="Global Rep Handling" version="6.0.1">
+<element height="55" id="Element@1741004414:1759318451491" name="GLOBAL_REP_ENTRY" type="Page Entry" width="209" x="297" y="47">
+<exit_states>
+<exit_state name="next" target="Element@128820745:1759318451490"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1949413972:1759318451491" name="Rep_Req" type="Page Connector" width="117" x="193" y="302">
+<page_connector target="Element@1487166199:1759318503548">Rep_Req<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1556993174:1759318451491" name="SET_REP_REQ_FLAG" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="205" x="488" y="237">
+<exit_states>
+<exit_state name="done" target="Element@1032109744:1759318749727"/>
+</exit_states>
+</element>
+<element height="55" id="Element@128820745:1759318451490" name="REP_COUNT_CHECK" type="Decision" width="207" x="304" y="132">
+<exit_states>
+<exit_state name="CONT" target="Element@1949413972:1759318451491"/>
+<exit_state name="TR" target="Element@1556993174:1759318451491"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1032109744:1759318749727" name="Subflow Return_03" type="Subflow Return" width="198" x="531" y="346"/>
+</page>

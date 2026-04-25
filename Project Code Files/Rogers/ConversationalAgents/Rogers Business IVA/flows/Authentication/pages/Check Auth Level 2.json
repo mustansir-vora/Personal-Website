@@ -1,0 +1,43 @@
+{
+  "name": "6ea02c45-1a36-4e7b-b236-7cbcea53d833",
+  "displayName": "Check Auth Level 2",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.authLevel = \"low\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authLevelAchieved",
+        "value": "low"
+      }, {
+        "parameter": "callerAuthenticated",
+        "value": true
+      }, {
+        "parameter": "authenticated",
+        "value": true
+      }, {
+        "parameter": "authResult",
+        "value": "Continue"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "e97de82e-1905-4f93-a45d-a8b72e02eb32"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "authFailure",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "4e541424-3488-4082-b8dd-30b0133d643b"
+  } ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "a052b3d5-dd7a-4ce0-9ff4-7fb4c935ed18",
+  "displayName": "Get Amount Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.getAmountCounter \u003c 3",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Try Again",
+    "name": "2a1a7a59-3f30-4eaa-ae87-6f4701165866",
+    "description": "get amount counter is already incremented above in step 1543 of visio diagram"
+  }, {
+    "condition": "$session.params.getAmountCounter \u003e 3",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Initialize Failure",
+    "name": "0ba9628f-a67b-4182-ba94-e488eb927adc"
+  } ]
+}

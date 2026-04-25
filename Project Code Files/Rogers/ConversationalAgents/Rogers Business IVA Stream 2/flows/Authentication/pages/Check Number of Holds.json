@@ -1,0 +1,37 @@
+{
+  "name": "f43eb9f6-deed-4c9f-a878-363816792a67",
+  "displayName": "Check Number of Holds",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfHolds \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "holdAuthFailure",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "authFailure",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "0df06e21-6c39-4039-b08a-ebbd8c27357d"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "More Hold On Menu",
+    "name": "078ae516-00bb-4e5e-9c83-73270b7fc835"
+  } ]
+}

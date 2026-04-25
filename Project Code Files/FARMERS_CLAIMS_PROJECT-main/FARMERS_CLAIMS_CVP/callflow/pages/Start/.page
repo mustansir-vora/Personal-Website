@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@621071152:1737638897787" name="Start" version="6.0.1">
+<element height="50" id="Element@557534159:1737638897787" name="Start Of Call" start_of_call="true" type="Page Entry" width="130" x="598" y="-9">
+<exit_states>
+<exit_state name="next" target="Element@660682951:1737638911131"/>
+</exit_states>
+</element>
+<element height="55" id="Element@823114788:1737638911131" name="VirtualAgentVoice" src="com.audium.server.voiceElement.nlu.MNluElement" type="Voice Element" width="217" x="556" y="249">
+<exit_states>
+<exit_state name="done" target="Element@222441998:1740051602589"/>
+<exit_state name="error" target="Element@894846617:1741239312524">
+<bendpoint>
+<dim1 x="282" y="-30"/>
+<dim2 x="0" y="-223"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@660682951:1737638911131" name="Form_01" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="119" x="604" y="82">
+<exit_states>
+<exit_state name="done" target="Element@538461500:1740070024648"/>
+<exit_state name="max_nomatch" target="Element@538461500:1740070024648"/>
+<exit_state name="max_noinput" target="Element@538461500:1740070024648"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2030806232:1737638961289" name="Disconnect" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="202" x="235" y="510">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="50" id="Element@222441998:1740051602589" name="Check Event Data" type="Decision" width="165" x="582" y="382">
+<exit_states>
+<exit_state name="ER" target="Element@894846617:1741239312524">
+<bendpoint>
+<dim1 x="132" y="62"/>
+<dim2 x="-150" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="LOOP" target="Element@823114788:1737638911131">
+<bendpoint>
+<dim1 x="232" y="-2"/>
+<dim2 x="232" y="129"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="231" y="-131"/>
+<dim2 x="231" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="LANGUAGE_SWITCH" target="Element@538461500:1740070024648">
+<bendpoint>
+<dim1 x="-303" y="3"/>
+<dim2 x="-305" y="212"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-305" y="-210"/>
+<dim2 x="-304" y="-1"/>
+</bendpoint>
+</exit_state>
+<exit_state name="IVR_DISCONNECT" target="Element@2030806232:1737638961289">
+<bendpoint>
+<dim1 x="-328" y="59"/>
+<dim2 x="1" y="-72"/>
+</bendpoint>
+</exit_state>
+<exit_state name="AGENT_HANDOFF" target="Element@100570047:1740466250494"/>
+</exit_states>
+</element>
+<element height="50" id="Element@538461500:1740070024648" name="Application_Modifier" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="222" x="552" y="173">
+<exit_states>
+<exit_state name="done" target="Element@823114788:1737638911131"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1952158171:1740466148929" name="Agent_Transfer" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="574" y="628">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@100570047:1740466250494" name="PreTransfer" type="Action" width="164" x="582" y="508">
+<exit_states>
+<exit_state name="done" target="Element@1952158171:1740466148929"/>
+</exit_states>
+</element>
+<element height="50" id="Element@894846617:1741239312524" name="ER_Update_DR_Flag" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="230" x="831" y="444">
+<exit_states>
+<exit_state name="done" target="Element@100570047:1740466250494">
+<bendpoint>
+<dim1 x="0" y="67"/>
+<dim2 x="282" y="1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1747659930:1741239427224" name="Error_Entry" type="Page Entry" width="121" x="1146" y="443">
+<exit_states>
+<exit_state name="next" target="Element@894846617:1741239312524"/>
+</exit_states>
+</element>
+</page>

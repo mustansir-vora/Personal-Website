@@ -1,0 +1,37 @@
+{
+  "name": "f429b286-f975-449c-9733-b288f31a63b0",
+  "displayName": "Check Product On Account",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.accountProduct = Internet",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Internet Restored",
+    "name": "b8a96065-9c9c-4823-a113-3db9d12e4dcf"
+  }, {
+    "condition": "$session.params.accountProduct = Include AND Wireless",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Wireless Restored",
+    "name": "d558d89a-017e-4c44-91c5-de8781432787"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your service may be restored within 30 minutes." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Service Restored",
+    "name": "6ea7655e-c190-4088-91be-eda4a00896a9"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "b00afaf9-0f91-48b1-899b-3854cd64bf5b",
+  "displayName": "wifi-calling-support",
+  "priority": 500000,
+  "description": "Provides general FAQ explanations for Wi-Fi Calling setup, requirements, and feature use",
+  "numTrainingPhrases": 50
+}

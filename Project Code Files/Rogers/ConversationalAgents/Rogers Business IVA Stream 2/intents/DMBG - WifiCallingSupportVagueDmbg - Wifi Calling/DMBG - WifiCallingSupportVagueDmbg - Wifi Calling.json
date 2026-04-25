@@ -1,0 +1,7 @@
+{
+  "name": "755f5562-f8b6-4ba5-a017-eccd79f2f2e9",
+  "displayName": "DMBG - WifiCallingSupportVagueDmbg - Wifi Calling",
+  "priority": 500000,
+  "numTrainingPhrases": 2,
+  "dtmfPattern": "2"
+}

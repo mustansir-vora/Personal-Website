@@ -1,0 +1,33 @@
+{
+  "name": "09179a11-5080-4e7f-9b27-809735e0d7e6",
+  "displayName": "Check byPass getBillingProfile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAcctBalance = true OR $session.params.fromAcctRecievable = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check lastInvoice \u0026 lastBillingDate",
+    "name": "8f263ac2-00ee-4ac3-959f-3844def3a828"
+  }, {
+    "condition": "$session.params.fromAcctBalance = false AND $session.params.fromAcctReceievable = false",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "billingProfile"
+    },
+    "targetPage": "Check lastInvoice \u0026 lastBillingDate",
+    "name": "16c91d73-4ea2-4221-85d4-6e62865a82ef"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check lastInvoice \u0026 lastBillingDate",
+    "name": "8abe3464-361e-4347-bc79-24658419609c"
+  } ]
+}

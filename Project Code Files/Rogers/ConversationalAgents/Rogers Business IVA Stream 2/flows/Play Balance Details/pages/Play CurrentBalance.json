@@ -1,0 +1,39 @@
+{
+  "name": "7a2d2e1a-15ea-4004-9418-830b118dfc98",
+  "displayName": "Play CurrentBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your current balance is $$session.params.api.billingProfile.balanceDetails.currentBalance." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Votre solde actuel est $$session.params.api.billingProfile.balanceDetails.currentBalance." ]
+      },
+      "languageCode": "fr-ca"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "accountBalanceSMS",
+      "value": "accountBalancePosCurrBalance"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.balanceDetails.pastDueBalance \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play PastDueBalance",
+    "name": "554efd2c-95c9-47f0-b3d1-68ecd994e2dd"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check billCloseDate",
+    "name": "bd18d40d-2053-4624-8f8d-181794c4ee85"
+  } ]
+}

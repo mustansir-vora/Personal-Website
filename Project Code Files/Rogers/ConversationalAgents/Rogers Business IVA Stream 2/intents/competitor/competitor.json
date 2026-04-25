@@ -1,0 +1,11 @@
+{
+  "name": "8d4a266c-4947-451b-823c-5fa6fe9df6be",
+  "displayName": "competitor",
+  "parameters": [ {
+    "id": "e_Competitor",
+    "entityType": "@e_Competitor"
+  } ],
+  "priority": 500000,
+  "description": "Related price matching",
+  "numTrainingPhrases": 36
+}

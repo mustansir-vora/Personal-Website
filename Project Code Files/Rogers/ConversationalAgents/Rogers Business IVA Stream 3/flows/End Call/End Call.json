@@ -1,0 +1,179 @@
+{
+  "name": "697d125c-50e9-49d4-8b8d-d36d748f118a",
+  "displayName": "End Call",
+  "transitionRoutes": [ {
+    "condition": "$session.params.wrapUp = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "terminationType",
+        "value": "endCall"
+      } ]
+    },
+    "targetPage": "Save Call History",
+    "name": "218c1cd1-05c9-48af-b1bd-e3ae2a5c752b"
+  }, {
+    "condition": "$session.params.endReason != \"Transfer\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "End"
+      }, {
+        "parameter": "terminationType",
+        "value": "endCall"
+      }, {
+        "parameter": "reportingVar_callEndState",
+        "value": "systemHangup"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.terminationFlag = true"
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Thank you for choosing Rogers. Have a nice day!" ]
+              },
+              "languageCode": "en"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Merci d'avoir choisi Rogers. Bonne journée !" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Save Call History",
+    "name": "8380dbfd-4162-4e6a-8730-af5100b6667d"
+  }, {
+    "condition": "$session.params.endReason = \"Transfer\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "terminationType",
+        "value": "Transfer"
+      }, {
+        "parameter": "reportingVar_transferType",
+        "value": "$session.params.transferType"
+      }, {
+        "parameter": "reportingVar_callEndState",
+        "value": "transfer"
+      } ]
+    },
+    "targetPage": "Save Call History",
+    "name": "38c1bff7-9535-425c-806d-0168102fe15d"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "0c1a5088-d2e0-45c4-9bdf-bd2af0699498"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "d36b1801-bf49-47a2-a92f-c54856ff1d97"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "346b15d5-416c-4851-8466-b78b51251cc5"
+  }, {
+    "targetPage": "End Session",
+    "event": "flow.failed",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "flow failed" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "35225e04-946f-46a8-ab39-8ef38b3a0d76"
+  }, {
+    "targetPage": "End Session",
+    "event": "flow.cancelled",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "flow cancelled" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3cb5de8d-8850-42d3-829f-872c4dade21f"
+  }, {
+    "targetPage": "End Session",
+    "event": "flow.failed.human-escalation",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "flow failed human escalation" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "ac3ba39e-af28-40e3-9d32-98051a5b2303"
+  }, {
+    "targetPage": "End Session",
+    "event": "sys.unknown-event",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Unknown event" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "9a17f96e-ac74-4554-83c7-196d08e06976"
+  }, {
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "not founf" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "907c5135-b177-4239-a72e-85617fca3f88"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  }, {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "fr-ca"
+  } ]
+}

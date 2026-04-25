@@ -1,0 +1,21 @@
+{
+  "name": "d9722107-6121-493a-a709-4ccef814c310",
+  "displayName": "Reset paymentIndex",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.paymentIndex",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get currentPaymentHistoryObject",
+    "name": "2088c92c-3e2f-4fdf-a512-5770ed00eba2"
+  } ]
+}

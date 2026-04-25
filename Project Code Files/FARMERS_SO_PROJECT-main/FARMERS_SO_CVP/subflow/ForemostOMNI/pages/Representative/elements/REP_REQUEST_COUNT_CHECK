@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@177362296:1708937183408" name="REP_REQUEST_COUNT_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule default_exit_state="Repeat" name="CheckCount">
+        <exit_state conjugate="and" name="Exit">
+            <number operator="greater">
+                <data>
+                    <element name="REP_REQUEST_COUNT" variable="count"/>
+                </data>
+                <constant_number value="2"/>
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>
+]]></source>
+</config>
+</decision>

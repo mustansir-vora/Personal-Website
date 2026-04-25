@@ -1,0 +1,26 @@
+{
+  "name": "e758a091-c063-4dc5-9f3d-427f31742b42",
+  "displayName": "Save Call History",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.callHistory = true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-callend",
+      "tag": "saveCallHistory"
+    },
+    "targetPage": "Delete Session",
+    "name": "6a0179ef-d50c-49bc-bbfe-17f03b7717dd"
+  }, {
+    "condition": "$session.params.callHistory != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Delete Session",
+    "name": "a000316a-e201-420b-97a1-1a524bb264e2"
+  } ]
+}

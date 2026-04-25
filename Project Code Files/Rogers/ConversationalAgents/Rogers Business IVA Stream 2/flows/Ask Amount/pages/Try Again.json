@@ -1,0 +1,33 @@
+{
+  "name": "e8c42751-6e7d-4698-98e6-b6f3287706b9",
+  "displayName": "Try Again",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Essayons de nouveau." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Essayons de nouveau." ]
+      },
+      "languageCode": "fr"
+    }, {
+      "text": {
+        "text": [ "Let's try again" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call From",
+    "name": "6d9d5b52-7313-4aab-90ae-fa2bbfd7a628"
+  } ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@765986091:1714167175092" name="RecordingDisable" version="6.0.1">
+<config>
+<source type="Class">com.farmers.verint.recordingDisable</source>
+</config>
+</decision>

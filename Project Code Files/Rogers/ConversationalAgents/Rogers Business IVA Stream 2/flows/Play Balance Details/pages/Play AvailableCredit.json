@@ -1,0 +1,28 @@
+{
+  "name": "3e2dd87c-d013-4e9c-baa8-dd61eaa12c1a",
+  "displayName": "Play AvailableCredit",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Votre crédit disponible est de $session.params.api.billingProfile.creditEvaluationDetails.availableCreditLimitAmount" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Your available credit is $session.params.api.billingProfile.creditEvaluationDetails.availableCreditLimitAmount" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start pendingPTPDetails subflow",
+    "name": "f1e8700f-e42a-4a1b-ace5-cce7f1127c78"
+  } ]
+}

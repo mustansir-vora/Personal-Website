@@ -1,0 +1,44 @@
+{
+  "name": "a0698e36-bb1d-4030-8802-b34f44c61203",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Advantage Voice,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I need to talk with an agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "globalAgentRequestCounter": "1",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Advantage Voice,Tv, Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInputBMTS": "agent"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-Agent-Counter2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 194,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

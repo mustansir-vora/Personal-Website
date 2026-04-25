@@ -1,0 +1,50 @@
+{
+  "name": "5de527c0-680d-44b9-92b3-a1f0d82138ad",
+  "displayName": "Play repeat",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Voulez-vous que je répète ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Would you like me to repeat that?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "intent_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play okay",
+    "name": "312ec07b-b134-4143-bedb-efe049d71df0"
+  }, {
+    "intent": "Yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set accountBalanceRepeatCounter",
+    "name": "477ddebc-f4c0-40dc-bd7d-5933a4b5345b"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Play maxError",
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+    
+    },
+    "name": "98b65e7f-4dc9-4140-9a8d-af30066d3914"
+  }, {
+    "targetPage": "Play maxError",
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+    
+    },
+    "name": "213cd1a4-0a35-4cd3-b04c-0b2598121834"
+  } ]
+}

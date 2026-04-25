@@ -1,0 +1,40 @@
+{
+  "name": "34aec43e-b781-4165-b01d-c05dff872505",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Does your business phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I don't know"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Okay. Let's continue.\nTo troubleshoot your issue, you'll need to have access to your business phone equipment. Please ensure you're calling from a different phone than the one you need help with."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportbusinessPhone",
+      "completedSSName": "passive-techSupportbusinessPhone",
+      "completedSelfServe": "passive-techSupportbusinessPhone",
+      "hasNoBPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportbusinessPhone",
+      "reportingVar_completedSSName": "passive-techSupportbusinessPhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "13020-Have-SIM-dont know",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 238,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

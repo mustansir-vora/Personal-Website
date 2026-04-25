@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1284911838:1715067643615" name="Case_20" version="6.0.1">
+<element height="50" id="Element@1310615445:1715067643615" name="Case_20" type="Page Entry" width="103" x="364" y="29">
+<exit_states>
+<exit_state name="next" target="Element@209681117:1715079476625"/>
+</exit_states>
+</element>
+<element height="55" id="Element@209681117:1715079476625" name="IsPolicyInCollectionMode8" type="Decision" width="240" x="298" y="154">
+<exit_states>
+<exit_state name="Yes" target="Element@1012340691:1715079513951"/>
+<exit_state name="No" target="Element@1012340691:1715079513951">
+<bendpoint>
+<dim1 x="61" y="82"/>
+<dim2 x="63" y="-69"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1012340691:1715079513951" name="Is_Renewal_Pending8" type="Decision" width="205" x="314" y="305">
+<exit_states>
+<exit_state name="Yes" target="Element@1765581602:1715079540351"/>
+<exit_state name="No" target="Element@1765581602:1715079540351">
+<bendpoint>
+<dim1 x="56" y="72"/>
+<dim2 x="53" y="-67"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1765581602:1715079540351" name="PolicyBalCheck8" type="Decision" width="186" x="326" y="444">
+<exit_states>
+<exit_state name="Greaterthan_0" target="Element@1062697814:1715079584946"/>
+<exit_state name="Lessthan_Eqalus_0" target="Element@1062697814:1715079584946">
+<bendpoint>
+<dim1 x="153" y="71"/>
+<dim2 x="154" y="-69"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1062697814:1715079584946" name="Agent_DNIS_Check8" type="Decision" width="206" x="315" y="584">
+<exit_states>
+<exit_state name="Customer" target="Element@450852643:1715079615784">
+<bendpoint>
+<dim1 x="-98" y="72"/>
+<dim2 x="-114" y="-58"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Agent" target="Element@450852643:1715079615784"/>
+</exit_states>
+</element>
+<element height="50" id="Element@450852643:1715079615784" name="Transfer" type="Page Connector" width="102" x="389" y="718">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+</page>

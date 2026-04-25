@@ -1,0 +1,19 @@
+{
+  "name": "006f9d68-ebd8-494d-a7b9-d97d212e28e4",
+  "displayName": "Get currentPaymentHistoryObject",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "getPaymentObject"
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check includeAmount",
+    "name": "97788d5e-6152-46d2-b406-dab13d57ed09"
+  } ]
+}

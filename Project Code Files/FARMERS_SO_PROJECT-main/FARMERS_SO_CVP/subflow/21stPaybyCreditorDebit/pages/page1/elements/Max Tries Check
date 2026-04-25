@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1797231371:1709188877727" name="Max Tries Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_02" default_exit_state="False">
+        <exit_state name="True" conjugate="and">
+            <number operator="greater_equal">
+                <data>
+                    <element name="Counter_01" variable="count" />
+                </data>
+                <constant_number value="3" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

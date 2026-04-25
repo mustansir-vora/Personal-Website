@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@765578266:1710611101004" name="SPCQ_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.GET_SPCQ_MN_002</source>
+</config>
+</decision>

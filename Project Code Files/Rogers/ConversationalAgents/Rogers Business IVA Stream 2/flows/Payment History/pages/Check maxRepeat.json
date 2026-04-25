@@ -1,0 +1,25 @@
+{
+  "name": "2ce574aa-e1e9-452c-9929-dce2601c9477",
+  "displayName": "Check maxRepeat",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.paymentHistoryRepeatCounter \u003e= $session.params.paymentHistoryMaxRepeat",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play maxRepeat",
+    "name": "a6dc547c-bf18-4776-8d57-33cf0433453e"
+  }, {
+    "condition": "$session.params.paymentHistoryRepeatCounter \u003c $session.params.paymentHistoryMaxRepeat",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check includeAmount",
+    "name": "5dce0e5a-9ebc-4e37-9e47-8ecb2da04c4a"
+  } ]
+}

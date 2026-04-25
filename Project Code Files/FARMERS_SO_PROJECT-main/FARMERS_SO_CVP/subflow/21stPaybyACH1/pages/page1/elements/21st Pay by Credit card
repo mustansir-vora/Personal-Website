@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@875541429:1708931552065" name="21st Pay by Credit card" version="6.0.1">
+<subflow_call subflow_name="21stPaybyCreditorDebit" target="Element@31:1711719095942">
+<config/>
+</subflow_call>
+</connector>

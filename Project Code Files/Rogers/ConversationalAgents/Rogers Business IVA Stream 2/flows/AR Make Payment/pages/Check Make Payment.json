@@ -1,0 +1,128 @@
+{
+  "name": "498dbe41-5d0d-43d8-968b-3dd221c628b9",
+  "displayName": "Check Make Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Souhaitez-vous effectuer un paiement maintenant ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Would you like to make a payment now?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright for Yes",
+    "name": "51debbb3-5110-4092-816b-4b6c9b13ec0e"
+  }, {
+    "intent": "intent_no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright for No",
+    "name": "b5c68c22-2725-4f87-9d7c-2522b45c3ade"
+  }, {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright for No",
+    "name": "99a42161-cc69-44db-a65f-fb76afa7e04a"
+  }, {
+    "intent": "agent-request",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Alright for No",
+    "name": "232d33ef-8dd3-4fef-82a1-97515895a234"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "0d3fdb94-b466-467e-8289-fe00f64ae6cb"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cd474e0f-8da1-4882-9df7-eae2f2496f09"
+  }, {
+    "targetPage": "Play Alright for No",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "83c3f89b-bed6-4002-b396-862288f36798"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3a07dc58-0143-4930-8552-05a89b449fb9"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Pour effectuer un paiement maintenant, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "To make a payment now, say yes or press 1. Otherwise, say no, or press 2." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "aa685878-70e8-415a-829c-056847837d15"
+  }, {
+    "targetPage": "Play Alright for No",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "257b25b7-ec3a-400b-83da-fc04ccaa119c"
+  } ]
+}

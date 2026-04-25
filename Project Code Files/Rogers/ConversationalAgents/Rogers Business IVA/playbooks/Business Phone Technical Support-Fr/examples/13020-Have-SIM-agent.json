@@ -1,0 +1,62 @@
+{
+  "name": "d6cd9e9d-6c05-4e9c-a1bc-0fe4694af29f",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone d’affaires a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je souhaite parler avec un représentant"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\nVotre téléphone d’affaires a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je souhaite parler avec un représentant"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "CustomerIdentified",
+    "actionParameters": {
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "0",
+      "savedIntent": "wireless-support"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "CustomerIdentified",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInputBP": "agent"
+    }
+  },
+  "displayName": "13020-Have-SIM-agent",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 292,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "d6e5d2ad-b1c2-4d04-9c76-1ca5296c39dc",
+  "displayName": "Internet support",
+  "parameters": [ {
+    "id": "intention",
+    "entityType": "@sys.any"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

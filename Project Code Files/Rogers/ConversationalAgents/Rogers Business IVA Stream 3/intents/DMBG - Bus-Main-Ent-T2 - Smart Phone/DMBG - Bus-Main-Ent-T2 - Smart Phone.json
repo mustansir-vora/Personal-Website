@@ -1,0 +1,7 @@
+{
+  "name": "a5b94120-e966-420d-850e-9fc2d8868603",
+  "displayName": "DMBG - Bus-Main-Ent-T2 - Smart Phone",
+  "priority": 500000,
+  "numTrainingPhrases": 8,
+  "dtmfPattern": "2"
+}

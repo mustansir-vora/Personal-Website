@@ -1,0 +1,28 @@
+{
+  "name": "b12bae0c-a8b6-41a8-9d28-9fc0dc1cbc35",
+  "displayName": "Play PTP Balance CC",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "\u003cspeak\u003eThere's an existing payment arrangement on file for $ $session.params.api.billingProfile.ptpAmount to be paid on \u003csay-as interpret-as=\"date\" format=\"md\"\u003e $session.params.api.billingProfile.playAccountBalanceDates.playptpPaymentDate\u003csay-as\u003e by credit card.\u003c/speak\u003e" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Il existe une entente de paiement au dossier pour un montant de $session.params.api.billingProfile.ptpAmount à payer le $session.params.api.billingProfile.ptpPaymentDate par carte de crédit." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Reason",
+    "name": "226cabc6-9b11-4ae3-98b8-85d4749ad66d"
+  } ]
+}

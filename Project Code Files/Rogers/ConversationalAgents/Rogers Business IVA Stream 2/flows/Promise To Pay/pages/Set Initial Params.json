@@ -1,0 +1,45 @@
+{
+  "name": "9f954046-4767-40e2-b556-105e305590ad",
+  "displayName": "Set Initial Params",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadcastId",
+        "value": "ptp"
+      }, {
+        "parameter": "fromPTP",
+        "value": true
+      }, {
+        "parameter": "ptpAdditionalPayment",
+        "value": false
+      }, {
+        "parameter": "skipRecapPreamble",
+        "value": false
+      }, {
+        "parameter": "skipIsThatRight",
+        "value": false
+      }, {
+        "parameter": "ptpConfirmNo",
+        "value": false
+      }, {
+        "parameter": "ptpRecapNoCounter",
+        "value": 0
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Call Broadcast Message",
+    "name": "2a0bdf3e-5377-4a42-8104-127cd8815f87"
+  } ]
+}

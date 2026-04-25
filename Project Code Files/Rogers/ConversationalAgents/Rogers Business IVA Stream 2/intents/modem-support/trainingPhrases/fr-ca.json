@@ -1,0 +1,311 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Le modem affiche un voyant "
+    }, {
+      "text": "rouge fixe",
+      "parameterId": "e_lightColor"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Il continue de "
+    }, {
+      "text": "vert clignotant",
+      "parameterId": "e_lightColor"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le voyant est "
+    }, {
+      "text": "rouge",
+      "parameterId": "e_lightColor"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon modem est en "
+    }, {
+      "text": "orange clignotant",
+      "parameterId": "e_lightColor"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le voyant est "
+    }, {
+      "text": "vert clignotant",
+      "parameterId": "e_lightColor"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "C’est vert "
+    }, {
+      "text": "clignotant",
+      "parameterId": "e_lightColor"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Activer l’authentification multifacteur."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Il "
+    }, {
+      "text": "clignote"
+    }, {
+      "text": " en "
+    }, {
+      "text": "blanc"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le "
+    }, {
+      "text": "modem"
+    }, {
+      "text": " clignotait."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Il "
+    }, {
+      "text": "clignote"
+    }, {
+      "text": " encore."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai redémarré le "
+    }, {
+      "text": "modem"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai essayé de redémarrer le "
+    }, {
+      "text": "modem"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Il continue de "
+    }, {
+      "text": "clignoter"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de redémarrer le routeur."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le voyant "
+    }, {
+      "text": "clignote"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je suis en train de redémarrer le modem."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Il "
+    }, {
+      "text": "clignote"
+    }, {
+      "text": " constamment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le modem "
+    }, {
+      "text": "clignote"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de redémarrer le "
+    }, {
+      "text": "modem"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai essayé de redémarrer le modem."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai redémarré le modem."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je me renseigne au sujet d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " numéro de récupération sans fil pour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux en savoir plus sur "
+    }, {
+      "text": "un"
+    }, {
+      "text": " numéro de récupération pour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au sujet d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " numéro de récupération sans fil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois ajouter "
+    }, {
+      "text": "un"
+    }, {
+      "text": " numéro de récupération sans fil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois ajouter "
+    }, {
+      "text": "une"
+    }, {
+      "text": " récupération sans fil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter "
+    }, {
+      "text": "un"
+    }, {
+      "text": " numéro de récupération sans fil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter la récupération sans fil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter "
+    }, {
+      "text": "un"
+    }, {
+      "text": " numéro de récupération sans fil à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter "
+    }, {
+      "text": "un"
+    }, {
+      "text": " numéro de récupération."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter "
+    }, {
+      "text": "une"
+    }, {
+      "text": " récupération."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

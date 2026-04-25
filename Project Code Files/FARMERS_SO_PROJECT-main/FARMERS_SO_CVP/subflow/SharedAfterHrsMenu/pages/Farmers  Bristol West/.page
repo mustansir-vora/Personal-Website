@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1800991692:1707223925224" name="Farmers  Bristol West" version="6.0.1">
+<element height="55" id="Element@654278627:1707223933304" name="SAHM_MN_002_VALUE" type="Decision" width="245" x="161" y="65">
+<exit_states>
+<exit_state name="Claims" target="Element@221633152:1707223933304"/>
+<exit_state name="Billing and Payments" target="Element@1753598726:1707223933304"/>
+<exit_state name="ID Cards" target="Element@1839816209:1707223933304"/>
+<exit_state name="Agent Information" target="Element@1885187993:1707223933304"/>
+<exit_state name="NOINPUT" target="Element@851111397:1707223933304">
+<bendpoint>
+<dim1 x="-85" y="81"/>
+<dim2 x="-78" y="-61"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1064855345:1710689687533">
+<bendpoint>
+<dim1 x="-146" y="62"/>
+<dim2 x="96" y="-60"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@969820613:1710689711020"/>
+<exit_state name="Representative" target="Element@851111397:1707223933304"/>
+<exit_state name="Policy Status" target="Element@1753598726:1707223933304"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1753598726:1707223933304" name="Set_Bil_PaYM" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="215" x="553" y="178">
+<exit_states>
+<exit_state name="done" target="Element@399980502:1707223933304"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1839816209:1707223933304" name="Set_TransferIDApp" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="195" x="576" y="59">
+<exit_states>
+<exit_state name="done" target="Element@2080241028:1707223933304"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2080241028:1707223933304" name="SharedIDCards" type="Page Connector" width="209" x="818" y="48">
+<page_connector target="Element@1847213552:1707227968473">SharedIDCards<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1885187993:1707223933304" name="Set_Agent_Entry" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="177" x="571" y="299">
+<exit_states>
+<exit_state name="done" target="Element@209763515:1712658086888"/>
+</exit_states>
+</element>
+<element height="55" id="Element@882187894:1707223933304" name="Others" type="Page Entry" width="200" x="190" y="-36">
+<exit_states>
+<exit_state name="next" target="Element@654278627:1707223933304"/>
+</exit_states>
+</element>
+<element height="55" id="Element@903389586:1707223933304" name="Shared_Transfer_Entry" type="Page Connector" width="209" x="823" y="-50">
+<page_connector target="Element@1404494426:1712658489075">Shared_Transfer_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@851111397:1707223933304" name="DISCONNECT" type="Page Connector" width="209" x="172" y="207">
+<page_connector target="Element@208763510:1712656788349">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@399980502:1707223933304" name="Billing_Entry" type="Page Connector" width="209" x="805" y="182">
+<page_connector target="Element@1170303323:1707296737048">Billing_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@221633152:1707223933304" name="Set_TransferApp" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="177" x="586" y="-47">
+<exit_states>
+<exit_state name="done" target="Element@903389586:1707223933304"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1064855345:1710689687533" name="Transfer_1" type="Subflow Call" width="128" x="-23" y="187">
+<subflow_call subflow_name="Transfer" target="Element@31:1710689732235">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@969820613:1710689711020"/>
+</exit_states>
+</element>
+<element height="55" id="Element@969820613:1710689711020" name="Subflow Return_03" type="Subflow Return" width="198" x="-45" y="62"/>
+<element height="55" id="Element@209763515:1712658086888" name="Shared_ID_AUTH" type="Subflow Call" width="170" x="829" y="294">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1712658129983">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@683099134:1712658086888"/>
+</exit_states>
+</element>
+<element height="55" id="Element@683099134:1712658086888" name="Shared_Agent_Contact_Info" type="Subflow Call" width="231" x="819" y="390">
+<subflow_call subflow_name="SharedAgentContactInformation" target="Element@31:1712658155978">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1083798693:1713696253128"/>
+</exit_states>
+</element>
+<element height="55" id="Element@171612337:1712658172486" name="DISCONNECT" type="Page Connector" width="140" x="860" y="487">
+<page_connector target="Element@208763510:1712656788349">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1083798693:1713696253128" name="Is_Route_To_SharedMainMenu_Subflow" type="Decision" width="381" x="1101" y="445">
+<exit_states>
+<exit_state name="OTHERS" target="Element@171612337:1712658172486"/>
+<exit_state name="MAIN_MENU" target="Element@776396594:1723566886626"/>
+</exit_states>
+</element>
+<element height="50" id="Element@776396594:1723566886626" name="MainMenu_Entry" type="Page Connector" width="159" x="1214" y="570">
+<page_connector target="Element@1034818515:1723527479978">MainMenu_Entry<config/>
+</page_connector>
+</element>
+</page>

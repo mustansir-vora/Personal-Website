@@ -1,0 +1,190 @@
+{
+  "name": "3a61ad61-3f0d-417d-bace-d238fe224585",
+  "displayName": "Predictive Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.voiceScriptContent. Please say \"yes\" or \"No\"" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.voiceScriptContent ,Veuillez répondre « oui » ou « non »" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that,  $session.params.voiceScriptContent , please say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai pas entendu. $session.params.voiceScriptContent ,Veuillez répondre par oui ou par non." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that. $session.params.voiceScriptContent , please say yes or no." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, j'ai pas compris. $session.params.voiceScriptContent ,Veuillez répondre par oui ou par non." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I still couldn't hear that.  $session.params.voiceScriptContent ,Please say \"yes\" or Press 1, otherwise say \"no\" or press 2" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Désolé, je n'ai toujours pas entendu. $session.params.voiceScriptContent ,S'il vous plaît, dites oui ou appuyez sur 1, sinon dites non ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I still didn't get that,  $session.params.voiceScriptContent ,Please say \"yes\" or Press 1, otherwise say \"no\" or press 2" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai toujours pas compris. $session.params.voiceScriptContent ,Veuillez répondre oui ou appuyer sur 1, sinon répondez non ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "BroadCastMn-Yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "savedIntent",
+        "value": "$session.params.predictiveIntent"
+      } ]
+    },
+    "targetPage": "Predictive Message",
+    "name": "2e786616-0ff7-46d9-9e27-37433d2874e0"
+  }, {
+    "intent": "BroadCastMn-No",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA\", true, false)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "d852289c-8dba-4a52-a1bc-19ade52485ed"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "288e8cbb-58aa-42f8-a2fd-3a2314ce9e44"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": ""
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "328abdba-3d3b-43ad-a69d-350db2b8fa87"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "a5510714-7871-435d-86a9-b64e0e450c74"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA\", true, false)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "ebd24e97-6749-4c30-89a0-cea7c9795d07"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "8dbf0cd4-4fcd-40ba-af28-47ef23c3d95c"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "210f1ece-88de-4646-b646-313dc820d023"
+  } ]
+}

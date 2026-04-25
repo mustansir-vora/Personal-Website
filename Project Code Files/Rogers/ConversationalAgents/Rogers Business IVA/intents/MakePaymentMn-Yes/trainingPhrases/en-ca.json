@@ -1,0 +1,234 @@
+{
+  "trainingPhrases": [ {
+    "id": "8f0cb212-e1f8-43d4-8563-aa4d9e529c8b",
+    "parts": [ {
+      "text": "Yes, go ahead and process it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8277dfd7-4214-4138-848b-88976cf6fe1a",
+    "parts": [ {
+      "text": "Yes, let's finalize the payment now."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1d58c964-87e9-4141-85c2-7746babc3e91",
+    "parts": [ {
+      "text": "Okay, let's move forward with the payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bd920403-b479-44e6-9241-c39c26b57097",
+    "parts": [ {
+      "text": "Great, go ahead and take the payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9939e258-4b57-4e52-bbf3-ff96b2a645b7",
+    "parts": [ {
+      "text": "Yes, please continue with the payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f48bc9bb-89f7-41c2-abfa-27d4c07d7a2c",
+    "parts": [ {
+      "text": "Yes, I'm ready to pay the amount."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "290af1d5-c961-4e56-b269-732eb4501c8c",
+    "parts": [ {
+      "text": "Great, I want to make the payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6f2479ac-2e3c-4353-b2ea-3555fc462515",
+    "parts": [ {
+      "text": "Yes, you can proceed with the transaction."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "332fd64c-5ea8-4a3a-a0c0-9f95854f0afe",
+    "parts": [ {
+      "text": "Yes, I want to make my payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3fb9fc5f-544f-41eb-b6a2-4fc778716a91",
+    "parts": [ {
+      "text": "Perfect, let's get this payment processed"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f7f32681-c686-4621-a8e9-d04907cb3900",
+    "parts": [ {
+      "text": "Yes, I'm ready to make a payment now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a202d9c2-d24d-4db5-b4a5-8472181cf994",
+    "parts": [ {
+      "text": "Yes, go ahead and process the payment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9443b7e4-392a-4f8e-98a6-3cc1753a3afd",
+    "parts": [ {
+      "text": "Okay, I'm ready to pay now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e87382b1-c3ad-4b6b-89f9-53d57b7b4f73",
+    "parts": [ {
+      "text": "Yes, please charge my card"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1697d3ab-8e7e-4287-83aa-1e86693f2aa1",
+    "parts": [ {
+      "text": "Sounds good, proceed with the payment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9815e963-8940-4875-8f19-b4ca75361c0f",
+    "parts": [ {
+      "text": "go ahead and charge me"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3301f5f9-b416-49b0-94b4-263fd9d7520c",
+    "parts": [ {
+      "text": "yes, I want to make the payment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a551760f-b0b9-4a1a-9a9a-26c190aaad46",
+    "parts": [ {
+      "text": "ok, make the payment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "72ef251f-9b20-4cb2-858a-29cbcfb87c49",
+    "parts": [ {
+      "text": "yes, proceed"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5f032b43-fd40-4fa6-9404-c68665c4804e",
+    "parts": [ {
+      "text": "okay proceed with the payment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ece11611-a9a8-44fd-9565-fe3038b59b52",
+    "parts": [ {
+      "text": "you can go ahead"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6bf53327-f23b-40d5-b839-de16d2b8ead4",
+    "parts": [ {
+      "text": "correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "23c650aa-092d-4883-851e-cfae3f572790",
+    "parts": [ {
+      "text": "affirmative"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e19ad089-1b2d-468b-86ec-ff09c6d86e20",
+    "parts": [ {
+      "text": "alright"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7116634f-d23f-4397-90df-b45f89e864bd",
+    "parts": [ {
+      "text": "let's make the payment now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "fba0195a-eedf-44d9-b1bc-d035958a93db",
+    "parts": [ {
+      "text": "yes please"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1ff005af-4713-47bd-85d3-1af65515b002",
+    "parts": [ {
+      "text": "okay, let's do it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "4267328d-6bb1-4c55-a6de-6dd1ec85a766",
+    "parts": [ {
+      "text": "ok proceed"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "940ff8fb-3057-4927-be60-2453a460fda9",
+    "parts": [ {
+      "text": "I'm ready to pay"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "79673efb-0ed2-4007-a73a-5fd5635af01f",
+    "parts": [ {
+      "text": "go ahead"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b1cc7b65-4b65-4f41-a221-4c93848e951e",
+    "parts": [ {
+      "text": "yup"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d725858a-c205-4731-9cc1-cdf4c21ae0e6",
+    "parts": [ {
+      "text": "yeah"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "830834e2-b4e6-4662-8760-8dc8f19b20b7",
+    "parts": [ {
+      "text": "yes"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

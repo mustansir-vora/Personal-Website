@@ -1,0 +1,47 @@
+{
+  "name": "1d1197f8-7933-4b75-a0dc-98b65601641a",
+  "displayName": "Check SMS Params",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.smsOptInQuestionScriptContent != \"NA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "passiveSMS",
+        "value": false
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "SMS OptIn Menu",
+    "name": "832fb511-8552-4d5e-a2ed-e200355e4c3f"
+  }, {
+    "condition": "$session.params.smsOptInQuestionScriptContent = \"NA\" AND $session.params.smsLeadInScriptContent = \"NA\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SMS Phone Number",
+    "name": "0c254124-d0c8-47aa-8ddf-870f197ca303"
+  }, {
+    "condition": "$session.params.smsOptInQuestionScriptContent = \"NA\" AND $session.params.smsLeadInScriptContent != \"NA\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.smsLeadInScriptContent" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "passiveSMS",
+        "value": false
+      } ]
+    },
+    "targetPage": "SMS Phone Number",
+    "name": "0b933c85-fb8d-4758-b665-75c596484536"
+  } ]
+}

@@ -1,0 +1,145 @@
+{
+  "name": "bdcd17aa-dcab-4573-b66d-bb85626e3935",
+  "displayName": "Switch From Bank To Card",
+  "form": {
+    "parameters": [ {
+      "displayName": "switchPaymentMethodSelection",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "En utilisant une carte de crédit, seriez-vous \nen mesure d’effectuer un paiement de $ $session.params.recomInstallAmount1 d’ici le \n$session.params.api.response.ptp.ccInstallmentDate1 et un deuxième paiement de \n$ $session.params.recomInstallAmount2 d’ici le $session.params.api.response.ptp.ccInstallmentDate2 ? Dites « oui » ou \nappuyez sur le 1. « Non » ou appuyez sur le 2" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If we switch to credit card, could you make a payment of $ $session.params.recomInstallAmount1 ... by $session.params.api.response.ptp.ccInstallmentDate1... and a second payment of $ $session.params.recomInstallAmount2 ... by $session.params.api.response.ptp.ccInstallmentDate2 ? Say yes, or press 1. No, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "0d66a638-9e82-4605-9af6-7199f9b9ca12"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "En utilisant une carte de crédit, seriez-vous \r\nen mesure d’effectuer un paiement de $ $session.params.recomInstallAmount1 d’ici le \r\n$session.params.api.response.ptp.ccInstallmentDate1 et un deuxième paiement de \r\n$ $session.params.recomInstallAmount2 d’ici le $session.params.api.response.ptp.ccInstallmentDate2 ? Dites « oui » ou \r\nappuyez sur le 1. « Non » ou appuyez sur le 2" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If we switch to credit card, could you make a payment of $ $session.params.recomInstallAmount1 ... by $session.params.api.response.ptp.ccInstallmentDate1... and a second payment of $ $session.params.recomInstallAmount2 ... by $session.params.api.response.ptp.ccInstallmentDate2 ? Say yes, or press 1. No, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "689703fc-9852-4e61-9d8d-a3dca923fa6d"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "En utilisant une carte de crédit, pourriez-vous \neffectuer un paiement de $ $session.params.recomInstallAmount1 d’ici le \n$session.params.api.response.ptp.ccInstallmentDate1 et un deuxième paiement de \n$ $session.params.recomInstallAmount2 d’ici le $session.params.api.response.ptp.ccInstallmentDate2 ? Dites « oui » ou \nappuyez sur le 1. « Non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you can use your credit card to make a payment of $ $session.params.recomInstallAmount1 ... by $session.params.api.response.ptp.ccInstallmentDate1... and a second payment of $ $session.params.recomInstallAmount2 ... by $session.params.api.response.ptp.ccInstallmentDate2 , press 1 now. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a9f85789-dd54-443c-b04f-d8fcd211f30c"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "En utilisant une carte de crédit, pourriez-vous \r\neffectuer un paiement de $ $session.params.recomInstallAmount1 d’ici le \r\n$session.params.api.response.ptp.ccInstallmentDate1 et un deuxième paiement de \r\n$ $session.params.recomInstallAmount2 d’ici le $session.params.api.response.ptp.ccInstallmentDate2 ? Dites « oui » ou \r\nappuyez sur le 1. « Non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you can use your credit card to make a payment of $ $session.params.recomInstallAmount1 ... by $session.params.api.response.ptp.ccInstallmentDate1... and a second payment of $ $session.params.recomInstallAmount2 ... by $session.params.api.response.ptp.ccInstallmentDate2 , press 1 now. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "ff1ccdab-61cc-4866-85b8-522a95428631"
+        }, {
+          "targetPage": "PTP Fail",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "4167e81a-3afc-4988-8839-0e406cf4fc94"
+        }, {
+          "targetPage": "PTP Fail",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "b4378ba0-121d-45f1-bc1c-ca5def1518bf"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord, si nous passons plutôt à un paiement \npar carte de crédit, seriez-vous en mesure d’effectuer un paiement de \n$ $session.params.recomInstallAmount1 d’ici le $session.params.api.response.ptp.ccInstallmentDate1 et un deuxième \npaiement de $ $session.params.recomInstallAmount2 d’ici le $session.params.api.response.ptp.ccInstallmentDate2 ? " ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Alright, well, if we switch to a credit card payment instead, would you be able to make a payment of $ $session.params.recomInstallAmount1 ... by $session.params.api.response.ptp.ccInstallmentDate1... and a second payment of $ $session.params.recomInstallAmount2 ... by $session.params.api.response.ptp.ccInstallmentDate2 ? " ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.switchPaymentMethodSelection = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfInstalls",
+        "value": 2
+      }, {
+        "parameter": "skipIsThatRight",
+        "value": true
+      }, {
+        "parameter": "promiseMethod",
+        "value": "CC"
+      }, {
+        "parameter": "firstPromiseAmount",
+        "value": "$session.params.recomInstallAmount1"
+      }, {
+        "parameter": "firstPromiseDate",
+        "value": "$session.params.api.response.ptp.ccInstallmentDate1"
+      }, {
+        "parameter": "secondPromiseAmount",
+        "value": "$session.params.recomInstallAmount2"
+      }, {
+        "parameter": "secondPromiseDate",
+        "value": "$session.params.api.response.ptp.ccInstallmentDate2"
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "70946137-9f76-41be-8e5f-625ffa9ea972"
+  }, {
+    "condition": "$session.params.switchPaymentMethodSelection = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Fail",
+    "name": "1c694f72-72fb-4cc3-a667-bece07838dde"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

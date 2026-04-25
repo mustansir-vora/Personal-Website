@@ -1,0 +1,32 @@
+{
+  "name": "df284450-6c8a-47d8-b27a-f62baae4991d",
+  "displayName": "Play Report a Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Signaler un paiement." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "OK. Report a payment." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "savedIntent",
+      "value": "report-a-payment"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Report a Payment",
+    "name": "e1e6c416-6f80-4cce-a823-5ee9f1b34c05"
+  } ]
+}

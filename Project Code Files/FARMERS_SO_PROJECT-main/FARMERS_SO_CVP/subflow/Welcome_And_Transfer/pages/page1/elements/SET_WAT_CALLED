@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@660907859:1710583719902" name="SET_WAT_CALLED" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">YES</setting>
+<setting name="sessNames">IS_WAT_CALLED</setting>
+</settings>
+</config>
+</action_element>

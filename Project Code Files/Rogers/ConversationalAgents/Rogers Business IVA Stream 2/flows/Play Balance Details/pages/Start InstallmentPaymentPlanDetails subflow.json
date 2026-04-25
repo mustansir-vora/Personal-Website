@@ -1,0 +1,35 @@
+{
+  "name": "14d2bccb-5171-4705-a192-0493a6731fe8",
+  "displayName": "Start InstallmentPaymentPlanDetails subflow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.callInstallmentPaymentPlanDetails",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.subflowInputs.accountBalance.callInstallmentPaymentPlanDetailsSubflow = true AND $session.params.api.billingProfile.systemOfRecords = \"V21\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"passive-ippDetails\")"
+      }, {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check ippStatus ",
+    "name": "b56a4abd-845a-4f43-a796-2a6ed02bf365",
+    "description": "If trigger installment payment plan details flag = true"
+  }, {
+    "condition": "$session.params.subflowInputs.accountBalance.callInstallmentPaymentPlanDetailsSubflow = false OR $session.params.api.billingProfile.systemOfRecords != \"V21\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start LastInvoiceDetails subflow",
+    "name": "fe384ff5-0fc3-4076-9cda-b06e9d4858a0"
+  } ]
+}

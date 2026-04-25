@@ -1,0 +1,61 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Are we outside the coverage area? We’re north of the "
+    }, {
+      "text": "58"
+    }, {
+      "text": "th parallel."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please deactivate "
+    }, {
+      "text": "two"
+    }, {
+      "text": " receivers or refresh the satellite signal."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Text messages over satellite aren’t sending."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re outdoors with clear sky, but the device won’t connect."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We need to deactivate or refresh a "
+    }, {
+      "text": "couple"
+    }, {
+      "text": " of satellite receivers. Guests are complaining about "
+    }, {
+      "text": "no"
+    }, {
+      "text": " TV signal."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our devices show ‘ROGERS SATELLITE’ but messages aren’t going through. Is there an outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling from my business. We’re in a remote location and our satellite service isn’t working. We can’t send messages or connect to our systems."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

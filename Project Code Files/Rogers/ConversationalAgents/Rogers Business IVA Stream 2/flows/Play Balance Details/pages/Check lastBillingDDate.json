@@ -1,0 +1,25 @@
+{
+  "name": "9a811b86-0d8f-43cd-b4d9-4501dd71cc6d",
+  "displayName": "Check lastBillingDDate",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.lastPaymentDetails.lastBillingDate = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": " Play CurrentBalanceUnavailable",
+    "name": "be85936b-e65c-44e1-9797-d8666a0fc5dc"
+  }, {
+    "condition": "$session.params.api.billingProfile.lastPaymentDetails.lastBillingDate != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check currentBalance",
+    "name": "316a27b9-e29f-4709-99bd-d93cb9b3fb89"
+  } ]
+}

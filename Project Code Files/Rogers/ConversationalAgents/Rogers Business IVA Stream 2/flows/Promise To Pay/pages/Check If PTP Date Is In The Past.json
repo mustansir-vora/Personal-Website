@@ -1,0 +1,48 @@
+{
+  "name": "0f4ab51d-c695-4e3d-b957-3c247d285822",
+  "displayName": "Check If PTP Date Is In The Past",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpDate \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuons." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's move on." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "promiseMethod",
+        "value": "$session.params.collectedPtpMethod"
+      }, {
+        "parameter": "promiseAmount",
+        "value": "$session.params.collectedPtpAmount"
+      }, {
+        "parameter": "promiseDate",
+        "value": "$session.params.collectedPtpDate"
+      }, {
+        "parameter": "skipRecapPreamble",
+        "value": true
+      } ]
+    },
+    "targetPage": "Return From Offer Additional Payment",
+    "name": "009dea96-72b1-4de0-a027-77b6f178947f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Best Offer Transition",
+    "name": "ed802b26-aca3-4402-a65b-be4787bd39c4"
+  } ]
+}

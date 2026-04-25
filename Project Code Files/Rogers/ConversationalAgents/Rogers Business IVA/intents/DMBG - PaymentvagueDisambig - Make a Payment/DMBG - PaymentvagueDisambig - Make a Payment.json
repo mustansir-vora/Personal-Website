@@ -1,0 +1,7 @@
+{
+  "name": "3294f0ef-c756-4c9f-914f-8e13ec1936b9",
+  "displayName": "DMBG - PaymentvagueDisambig - Make a Payment",
+  "priority": 500000,
+  "numTrainingPhrases": 2,
+  "dtmfPattern": "1"
+}

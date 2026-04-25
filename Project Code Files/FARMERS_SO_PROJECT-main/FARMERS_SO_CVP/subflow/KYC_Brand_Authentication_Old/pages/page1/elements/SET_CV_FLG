@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@968052103:1724179600067" name="SET_CV_FLG" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">YES</setting>
+<setting name="sessNames">S_KYC_AUTHENTICATED_CCAI</setting>
+</settings>
+</config>
+</action_element>

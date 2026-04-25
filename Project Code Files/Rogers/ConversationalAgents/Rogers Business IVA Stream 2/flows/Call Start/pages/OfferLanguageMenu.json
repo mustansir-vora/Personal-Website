@@ -1,0 +1,51 @@
+{
+  "name": "a829eeba-41df-4821-a191-66fffc2b8b86",
+  "displayName": "OfferLanguageMenu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "reportingVar_brand",
+      "value": "$session.params.brand"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.flowLanguage = \"en-US\" AND $session.params.offerLanguageMenu = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "LanguageSelection-Fr",
+    "name": "536d6ca1-9c30-4eb4-91f9-fdbba62951f7"
+  }, {
+    "condition": "$session.params.flowLanguage = \"en-US\" AND $session.params.offerLanguageMenu = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "switchLanguage",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check Switch Language",
+    "name": "79223a50-ffdc-4d00-a3be-e930b629501b"
+  }, {
+    "condition": "$session.params.flowLanguage = \"fr-CA\" AND $session.params.offerLanguageMenu = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "LanguageSelection-En",
+    "name": "9bdde4a3-2fbb-4034-a431-9046fc9bf382"
+  }, {
+    "condition": "$session.params.flowLanguage = \"fr-CA\" AND $session.params.offerLanguageMenu = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "switchLanguage",
+        "value": true
+      }, {
+        "parameter": "switchedLanguage",
+        "value": "fr-CA"
+      } ]
+    },
+    "targetPage": "Check Switch Language",
+    "name": "579df12b-68ea-419c-a9c5-725ff8bc49b4"
+  } ]
+}

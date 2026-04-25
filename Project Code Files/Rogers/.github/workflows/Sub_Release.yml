@@ -1,0 +1,158 @@
+name: Sub Release
+
+on:
+  workflow_call:
+    inputs:
+      runner_label:
+        required: true
+        type: string
+      environment:
+        required: true
+        type: string
+      common_tag:
+        type: string
+      tag_gdf:
+        type: string
+      tag_cf:
+        type: string
+      tag_iva:
+        type: string
+      tag_node:
+        type: string
+
+jobs:
+  Sub-Release:
+    name: Sub-Release – ${{ inputs.environment }}
+    runs-on: ${{ inputs.runner_label }}
+    environment: ${{ inputs.environment }}
+
+    env:
+      GIT_USER: github-actions
+      GIT_EMAIL: actions@github.com
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.environment }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GIT_USER"
+          git config user.email "$GIT_EMAIL"
+
+      - name: Ensure latest commit
+        run: |
+          git fetch origin ${{ inputs.environment }}
+          git reset --hard origin/${{ inputs.environment }}
+
+      - name: Fetch Tags
+        run: git fetch --tags
+
+      - name: Push Release Tags
+        id: push_tags
+        run: |
+
+          push_tag_with_retry() {
+
+            TAG="$1"
+            PREFIX=$(echo "$TAG" | sed -E 's/-v[0-9]+$//')
+
+            echo "Trying initial push for $TAG" >&2
+
+            git fetch --tags
+
+            # create local tag
+            git tag "$TAG" 2>/dev/null || true
+
+            # try pushing the build-generated tag first
+            if git push origin "$TAG"; then
+              echo "$TAG"
+              return
+            fi
+
+            echo "Initial push failed. Switching to safe retry logic..." >&2
+
+            for i in 1 2 3; do
+
+              git fetch --tags
+
+              LAST=$(git tag --list "${PREFIX}-v*" | sort -V | tail -n 1)
+
+              NUM=$(echo "$LAST" | grep -oE '[0-9]+$')
+
+              TAG="${PREFIX}-v$((NUM+1))"
+
+              echo "Retry $i → trying $TAG" >&2
+
+              git tag "$TAG" 2>/dev/null || true
+
+              if git push origin "$TAG"; then
+                echo "$TAG"
+                return
+              fi
+
+            done
+
+            echo "Failed to push tag after retries" >&2
+            exit 1
+          }
+
+          COMMON=""
+          CF=""
+          GDF=""
+          IVA=""
+          NODE=""
+
+          if [ -n "${{ inputs.common_tag }}" ]; then
+            COMMON=$(push_tag_with_retry "${{ inputs.common_tag }}")
+            echo "common=$COMMON" >> $GITHUB_OUTPUT
+          fi
+
+          if [ -n "${{ inputs.tag_cf }}" ]; then
+            CF=$(push_tag_with_retry "${{ inputs.tag_cf }}")
+            echo "cf=$CF" >> $GITHUB_OUTPUT
+          fi
+
+          if [ -n "${{ inputs.tag_gdf }}" ]; then
+            GDF=$(push_tag_with_retry "${{ inputs.tag_gdf }}")
+            echo "gdf=$GDF" >> $GITHUB_OUTPUT
+          fi
+
+          if [ -n "${{ inputs.tag_iva }}" ]; then
+            IVA=$(push_tag_with_retry "${{ inputs.tag_iva }}")
+            echo "iva=$IVA" >> $GITHUB_OUTPUT
+          fi
+
+          if [ -n "${{ inputs.tag_node }}" ]; then
+            NODE=$(push_tag_with_retry "${{ inputs.tag_node }}")
+            echo "node=$NODE" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Release Summary
+        run: |
+          echo "## 📋 Release Versions Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          echo "| Component | Version |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----------|---------|" >> $GITHUB_STEP_SUMMARY
+
+          if [ -n "${{ steps.push_tags.outputs.common }}" ]; then
+            echo "| Common Release | ${{ steps.push_tags.outputs.common }} |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -n "${{ steps.push_tags.outputs.cf }}" ]; then
+            echo "| Cloud Functions | ${{ steps.push_tags.outputs.cf }} |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -n "${{ steps.push_tags.outputs.gdf }}" ]; then
+            echo "| IVA Agents | ${{ steps.push_tags.outputs.gdf }} |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -n "${{ steps.push_tags.outputs.iva }}" ]; then
+            echo "| IVA Configs | ${{ steps.push_tags.outputs.iva }} |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -n "${{ steps.push_tags.outputs.node }}" ]; then
+            echo "| Node Modules | ${{ steps.push_tags.outputs.node }} |" >> $GITHUB_STEP_SUMMARY
+          fi

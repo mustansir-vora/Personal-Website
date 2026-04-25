@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "physical_sim",
+    "synonyms": [ "carte SIM", "carte SIM physique", "physical_sim", "SIM amovible", "SIM en plastique", "SIM mobile physique", "SIM normale", "SIM physique", "SIM régulière", "SIM standard", "SIM téléphonique physique", "SIM traditionnelle" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "e_sim",
+    "synonyms": [ "carte eSIM", "e_sim", "eSIM", "ligne eSIM", "numéro eSIM", "profil eSIM", "SIM électronique", "SIM numérique", "SIM virtuelle", "service eSIM" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "ambig_sim",
+    "synonyms": [ "ambig_sim", "carte SIM", "ligne SIM", "numéro de SIM", "service SIM", "SIM", "SIM de service", "SIM de téléphone", "SIM du compte", "SIM mobile", "SIM sans-fil" ],
+    "languageCode": "fr-ca"
+  } ]
+}

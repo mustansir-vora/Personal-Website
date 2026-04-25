@@ -1,0 +1,10 @@
+{
+  "name": "c58b9e6d-897e-44ed-ae21-66ff465daf29",
+  "displayName": "modem-support",
+  "parameters": [ {
+    "id": "e_lightColor",
+    "entityType": "@e_lightColor"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 61
+}

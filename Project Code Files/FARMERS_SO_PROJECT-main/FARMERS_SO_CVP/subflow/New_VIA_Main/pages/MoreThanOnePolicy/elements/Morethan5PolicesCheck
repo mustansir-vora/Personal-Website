@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@219281159:1755157753459" name="Morethan5PolicesCheck" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Morethan5PolicesCheck">
+        <exit_state name="YES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_Morethan5Policies" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+        <exit_state name="NO" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_Morethan5Policies" />
+                </data>
+                <constant_string value="N" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

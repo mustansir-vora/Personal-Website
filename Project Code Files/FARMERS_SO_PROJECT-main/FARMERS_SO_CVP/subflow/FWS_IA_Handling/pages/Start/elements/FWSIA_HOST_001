@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@222690806:1710675415882" name="FWSIA_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.fws.host.Validate_FWSIA_HOST_001</source>
+</config>
+</decision>

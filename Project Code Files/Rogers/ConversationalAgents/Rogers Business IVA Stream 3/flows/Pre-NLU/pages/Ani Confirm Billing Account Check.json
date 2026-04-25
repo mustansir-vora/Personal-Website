@@ -1,0 +1,55 @@
+{
+  "name": "cfe3ccf0-86ca-4952-842a-a8248fdef86b",
+  "displayName": "Ani Confirm Billing Account Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"1\" AND $session.params.switchLanguage = true AND $session.params.postNLANIConfirm = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      } ]
+    },
+    "targetFlow": "Voluntary \u0026 Predictive",
+    "name": "45c7985e-c787-4b81-b00e-6e85516a0752"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Exist Confirm",
+    "name": "8dba2235-c13a-4bb9-88ce-91b83f19d8bc"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts \u003e 4",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "J’ai trouvé plusieurs comptes associés à votre numéro de téléphone, et on a besoin de plus de renseignements pour acheminer votre appel au bon endroit." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I have found multiple accounts associated with your phone number, and we need more information to route you accordingly." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Ani Confirm Id Check",
+    "name": "2975d098-27fd-4049-912b-d0699ff752d5"
+  }, {
+    "condition": "$session.params.numberOfBillingAccounts \u003e 0 AND $session.params.numberOfBillingAccounts \u003c= 4",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Account Disambig",
+    "name": "4892fcd9-1d17-451a-967d-667cb087c30d"
+  } ]
+}

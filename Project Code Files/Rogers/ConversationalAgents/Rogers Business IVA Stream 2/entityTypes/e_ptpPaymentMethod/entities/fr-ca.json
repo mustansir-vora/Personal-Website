@@ -1,0 +1,13 @@
+{
+  "entities": [ {
+    "value": "credit_card",
+    "synonyms": [ "carte de crédit", "payer par carte de crédit", "carte" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "1"
+  }, {
+    "value": "bank",
+    "synonyms": [ "banque", "payer par l'intermédiaire de la banque", "payer par l'intermédiaire de ma banque" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "2"
+  } ]
+}

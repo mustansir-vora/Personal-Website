@@ -1,0 +1,103 @@
+{
+  "name": "ca07adce-7726-4848-9ab8-cdd783a62cc0",
+  "displayName": "DMBG - PaymentvagueDisambig",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "which are you calling about? Say make a payment or check my account balance" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "À propos de quoi appelez‑vous? Dites faire un paiement ou vérifier le solde." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - PaymentvagueDisambig - Make a Payment",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_PaymentvagueDisambig",
+        "value": "make_payment"
+      }, {
+        "parameter": "savedIntent",
+        "value": "make-a-payment"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "75308aeb-db34-48e4-a3f6-c3d63fedf3f5"
+  }, {
+    "intent": "DMBG - PaymentvagueDisambig - Account Balance",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you, let's continue" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "e_PaymentvagueDisambig",
+        "value": "account_balance"
+      }, {
+        "parameter": "savedIntent",
+        "value": "account-balance"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "da16b21e-d96e-48be-a77d-1f5464921326"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "9b0a7ce7-b844-4072-8ff2-929d0582d68b"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "04ab7d41-5ee2-45c5-9631-7e7ae8897a24"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1421087445:1721743918341" name="Lang_Check_17" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Lang_Check_BC" default_exit_state="No">
+        <exit_state name="Yes" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PREF_LANG" />
+                </data>
+                <constant_string value="EN" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

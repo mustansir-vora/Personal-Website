@@ -1,0 +1,38 @@
+{
+  "name": "fee60002-212c-42ab-bf23-f9e93c3111fe",
+  "displayName": "repeat",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.outageRepeatCounter \u003c 2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Souhaitez-vous que je répète ?" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Would you like me to repeat that?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "collect yes or no",
+    "name": "4fa4c963-8ac1-403c-a857-347d21902736"
+  }, {
+    "condition": "$session.params.outageRepeatCounter \u003e= 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isFromOutageNotification",
+        "value": false
+      } ]
+    },
+    "targetPage": "Tech Outage Notification",
+    "name": "5e3e3222-09e1-401f-873a-d0d8ddb66b69"
+  } ]
+}

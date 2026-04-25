@@ -1,0 +1,7 @@
+{
+  "name": "60436f2d-1793-4190-8c52-47bc5961bafb",
+  "displayName": "BOMM - Other inquiries",
+  "priority": 500000,
+  "numTrainingPhrases": 11,
+  "dtmfPattern": "4"
+}

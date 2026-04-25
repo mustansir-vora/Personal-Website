@@ -1,0 +1,69 @@
+{
+  "name": "9a0fde2d-4846-4601-a7ef-af47c86c8109",
+  "displayName": "In That Case",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "OK. In that case" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "D’accord. Dans ce cas…" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "D’accord. Dans ce cas…" ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "ask amount" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Ask Amount",
+    "name": "84adad44-f7d2-4fa4-a5b5-c690d6a05f43"
+  }, {
+    "condition": "$session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "fail - $session.params.getAmountFailure" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "9dc2d8e6-1698-46c9-ba5e-34ed68b93288"
+  }, {
+    "condition": "$session.params.getAmountFailure = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.getAmountFailure" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Continue To Credit Operations",
+    "name": "1c44ed1b-78a0-4392-9642-4c925c62fc06"
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "fa354710-7143-4c54-a85d-b2a44c8fdc0a",
+  "displayName": "AccountExistConfirmMn-No",
+  "priority": 500000,
+  "description": "This will Trigger when user says no i don't have business account or say no to the question do you have business account",
+  "numTrainingPhrases": 62,
+  "dtmfPattern": "2"
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@725814534:1711642394950" name="CheckNextAction_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckNextAction_BC" default_exit_state="NA">
+        <exit_state name="FAS_POLICY_AUTO_POLICYCHANGE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_POLICY_AUTO_POLICYCHANGE" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_POLICY_AUTO" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_POLICY_AUTO" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_AUTO_MENU_DISCOUNT " conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_AUTO_MENU_DISCOUNT " />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_AUTO" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_AUTO" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_AUTO_UNDERWRITING" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_AUTO_UNDERWRITING" />
+            </string>
+        </exit_state>
+        <exit_state name="FAS_ELIGIBILITY" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_ELIGIBILITY" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

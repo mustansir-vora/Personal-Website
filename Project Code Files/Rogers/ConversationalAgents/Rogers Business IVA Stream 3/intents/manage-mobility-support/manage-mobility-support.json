@@ -1,0 +1,7 @@
+{
+  "name": "4b9dd5ea-b814-4adb-b4e7-707a6942d3a8",
+  "displayName": "manage-mobility-support",
+  "priority": 500000,
+  "description": "Handle call specific to T2 device",
+  "numTrainingPhrases": 14
+}

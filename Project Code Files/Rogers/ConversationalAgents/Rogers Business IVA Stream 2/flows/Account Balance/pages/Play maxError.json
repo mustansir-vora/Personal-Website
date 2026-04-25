@@ -1,0 +1,28 @@
+{
+  "name": "29012440-7e82-4e53-be71-ba0084676167",
+  "displayName": "Play maxError",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Let's move on." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Continuons." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play accountBalanceOnline",
+    "name": "d0cf6081-6274-41d8-b709-fe55aadf7ea9"
+  } ]
+}

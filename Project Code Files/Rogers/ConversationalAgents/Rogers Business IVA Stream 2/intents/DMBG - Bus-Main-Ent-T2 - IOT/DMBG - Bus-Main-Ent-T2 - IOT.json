@@ -1,0 +1,7 @@
+{
+  "name": "edde0080-1ac2-4a47-b0da-d732822b0cbf",
+  "displayName": "DMBG - Bus-Main-Ent-T2 - IOT",
+  "priority": 500000,
+  "numTrainingPhrases": 11,
+  "dtmfPattern": "4"
+}

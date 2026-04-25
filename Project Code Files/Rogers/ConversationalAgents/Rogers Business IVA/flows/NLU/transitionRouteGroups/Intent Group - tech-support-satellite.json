@@ -1,0 +1,18 @@
+{
+  "name": "e8bd67a2-06c5-4e36-9b73-993769914d60",
+  "displayName": "Intent Group - tech-support-satellite",
+  "transitionRoutes": [ {
+    "intent": "satellite-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "satellite-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "47dcd100-194f-4f78-b96f-103701023f66"
+  } ]
+}

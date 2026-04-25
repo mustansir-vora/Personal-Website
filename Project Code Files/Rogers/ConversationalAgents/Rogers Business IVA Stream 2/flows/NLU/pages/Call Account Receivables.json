@@ -1,0 +1,15 @@
+{
+  "name": "5242c19a-c446-40f6-af63-f88a6235364d",
+  "displayName": "Call Account Receivables",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Account Receivable",
+    "name": "e05ae377-bfd3-45b6-b23e-3fcc1e1c4eb6"
+  } ]
+}

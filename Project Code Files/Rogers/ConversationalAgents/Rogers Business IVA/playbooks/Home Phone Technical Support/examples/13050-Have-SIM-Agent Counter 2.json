@@ -1,0 +1,42 @@
+{
+  "name": "609f1c4c-f7a9-41a7-aaca-82a51524db0a",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Does your home phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to talk with representative"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false",
+      "globalAgentRequestCounter": "1"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInput": "agent"
+    }
+  },
+  "displayName": "13050-Have-SIM-Agent Counter 2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 157,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

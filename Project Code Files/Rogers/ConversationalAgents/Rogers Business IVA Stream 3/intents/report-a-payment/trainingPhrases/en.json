@@ -1,0 +1,189 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I want to report that I paid my monthly invoice and check that it was applied."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just completed a payment online and want to ensure it’s credited "
+    }, {
+      "text": "correctly"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I already made a payment, but my last transaction isn’t showing on my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to report a bill payment I made recently for tracking purposes."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a payment, but my device is still not active, so I’m reporting it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to inform customer service that I paid my phone bill "
+    }, {
+      "text": "this morning"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I paid my account "
+    }, {
+      "text": "yesterday"
+    }, {
+      "text": " and need to make sure it’s recorded properly."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just made a payment, but I’m still being charged an overage."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to report a payment I made for my home Internet service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I already submitted a payment, but it hasn’t reflected on my account yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to report that I paid my monthly service charges "
+    }, {
+      "text": "today"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just paid my Rogers bill at the bank, please confirm receipt."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a late payment and need to notify customer service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to report a payment I made through my bank’s mobile app."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I paid my bill "
+    }, {
+      "text": "yesterday"
+    }, {
+      "text": ", but my account still shows an outstanding balance."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I recently paid my invoice and would like to update the payment status."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just submitted my phone bill payment and want to report it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a payment for my Internet service and need confirmation it was processed."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I paid "
+    }, {
+      "text": "eighty-two dollars"
+    }, {
+      "text": " earlier and want to make sure it was applied "
+    }, {
+      "text": "correctly"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just completed a payment online and need to notify customer service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to report a recent payment I made at the bank."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I paid my monthly bill "
+    }, {
+      "text": "yesterday"
+    }, {
+      "text": " and want to ensure it’s reflected in my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a payment earlier "
+    }, {
+      "text": "today"
+    }, {
+      "text": " and need to report it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I already paid my bill, but my service is still inactive."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just made a payment on my account and want to confirm it was received."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

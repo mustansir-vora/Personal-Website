@@ -1,0 +1,225 @@
+{
+  "name": "a78aaabb-a22c-420b-b181-01fc4d352194",
+  "displayName": "Make Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Would you like to make a payment now?" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Voulez-vous effectuer un paiement maintenant ?" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that. Would you like to make a payment now? you can say yes or no" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n’ai pas compris. Voulez-vous effectuer un paiement maintenant ? Vous pouvez dire « oui » ou « non »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't hear that. Would you like to make a payment now? you can say yes or no" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je ne vous ai pas entendu. Voulez-vous effectuer un paiement maintenant ? Vous pouvez dire « oui » ou « non »." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "If you would like to make  payment say yes or press 1. Otherwise say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Si vous voulez effectuer un paiement, dites « oui » ou appuyez sur 1. Sinon, dites « non » ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "If you would like to make  payment say yes or press 1. Otherwise say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Si vous voulez effectuer un paiement, dites « oui » ou appuyez sur 1. Sinon, dites « non » ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "MakePaymentMn-Yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "savedIntent",
+        "value": "make-a-payment"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        }
+      }
+    },
+    "targetFlow": "NLU",
+    "name": "4d99ca8d-e0fb-4808-a86d-44a8df563023"
+  }, {
+    "intent": "MakePaymentMn-No",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "preRouteOverride",
+        "value": "cancelledAccount"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        }
+      }
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "f2a5e9b4-cc7d-4ca7-9c2f-99fb03ab4933"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        }
+      }
+    },
+    "targetPage": "Current Page",
+    "name": "bd47bce9-df4f-44d7-973e-ad7bff5a0a26"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        }
+      }
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "fb7234fb-0934-420d-b89f-5c9cb75e2fcb"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preRouteOverride",
+        "value": "cancelledAccount"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "04f795d4-9c4a-4040-83da-d539ebed594d"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "666d92d6-bade-41b9-8cf5-d99581210bfa"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "7517f0b7-0a24-474f-8f54-54be7d6b90e8"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "c72f358c-2756-4475-83a7-2ec31177e1f3"
+  } ]
+}

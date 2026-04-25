@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@615933066:1708938708013" name="RE_CANCEL_EFFECTIVE_DT_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="RE_CANCEL_EFFECTIVE_DT_CHECK" default_exit_state="False">
+        <exit_state name="True" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_RE_CANCELDT_EQ_RE_EFFDT" />
+                </data>
+                <constant_string value="True" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

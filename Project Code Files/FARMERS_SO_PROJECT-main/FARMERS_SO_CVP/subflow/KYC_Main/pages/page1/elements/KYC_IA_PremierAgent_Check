@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2115177986:1747831295183" name="KYC_IA_PremierAgent_Check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.KYC_IA_PremierAgent_Check</source>
+</config>
+</decision>

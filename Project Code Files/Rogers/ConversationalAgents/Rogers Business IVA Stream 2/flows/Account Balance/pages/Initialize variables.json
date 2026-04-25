@@ -1,0 +1,60 @@
+{
+  "name": "c54e94b9-10c6-4ac6-a50f-2202da97234b",
+  "displayName": "Initialize variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.broadcastId",
+      "value": "accountBalance"
+    }, {
+      "parameter": "$session.params.fromAcctBalance",
+      "value": true
+    }, {
+      "parameter": "$session.params.sentAccountBalanceSms",
+      "value": false
+    }, {
+      "parameter": "$session.params.selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "active-accountBalance"
+    }, {
+      "parameter": "$session.params.subflowReturnValue",
+      "value": true
+    }, {
+      "parameter": "$session.params.fromAcctReceiveable",
+      "value": false
+    }, {
+      "parameter": "$flow.accountBalanceRepeatCounter",
+      "value": 0
+    } ]
+  },
+  "eventHandlers": [ {
+    "targetPage": "Start Broadcast Message subflow",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "6fdd818e-85f3-4cd6-80b5-bece84976062"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "nanos": 100000000
+      },
+      "models": [ {
+        "key": "en",
+        "value": "telephony_short"
+      } ]
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

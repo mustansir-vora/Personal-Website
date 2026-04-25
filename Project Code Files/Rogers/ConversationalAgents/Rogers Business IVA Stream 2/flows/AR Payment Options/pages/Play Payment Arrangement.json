@@ -1,0 +1,32 @@
+{
+  "name": "5bf30c87-5928-43b4-9c7f-9ca4273b17b2",
+  "displayName": "Play Payment Arrangement",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Entente de paiement." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "OK. Payment arrangement." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "savedIntent",
+      "value": "payment-arrangement"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Report a Payment",
+    "name": "b2f216ba-d38e-4420-bb97-8638335e8215"
+  } ]
+}

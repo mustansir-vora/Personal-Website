@@ -1,0 +1,174 @@
+{
+  "name": "5a7db24f-6b17-4e03-b3ad-a2c7231f6f14",
+  "displayName": "Category N Menu",
+  "form": {
+    "parameters": [ {
+      "displayName": "categoryNMenuSelection",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To keep your account in good standing, would you like to make a one-time credit card payment now? Say yes, or press 1. No, or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Pour maintenir votre compte en règle, souhaitez-vous effectuer un paiement unique par carte de crédit maintenant ? Dites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "466008a5-629c-41c3-9c6f-28e8fb4766aa"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To make a one-time credit card payment, press 1. Otherwise, if you still want to setup a payment arrangement, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Pour effectuer un paiement unique par carte de crédit, appuyez sur le 1. Sinon, si vous souhaitez tout de même établir une entente de paiement, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "537ff3a1-1a4e-4276-a981-ca2f806d03c1"
+        }, {
+          "targetPage": "PTP Create New",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Let’s go ahead and set up a payment arrangement." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "e4b6c91f-3156-4278-a38f-fc3aac369540"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To keep your account in good standing, would you like to make a one-time credit card payment now? Say yes, or press 1. No, or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Pour maintenir votre compte en règle, souhaitez-vous effectuer un paiement unique par carte de crédit maintenant ? Dites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "318fec2a-1d68-4948-bcee-b66e55737181"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To make a one-time credit card payment, press 1. Otherwise, if you still want to setup a payment arrangement, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Pour effectuer un paiement unique par carte de crédit, appuyez sur le 1. Sinon, si vous souhaitez tout de même établir une entente de paiement, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "5b969906-6578-43fa-81f6-97ac8ee5abdf"
+        }, {
+          "targetPage": "PTP Create New",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Let’s go ahead and set up a payment arrangement." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "444115fd-4b71-4f41-9892-4093969bd643"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "With that in mind, would you like to make a one time credit card payment instead?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ " Dans ce cas, souhaitez-vous plutôt effectuer un paiement unique par carte de crédit ? " ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "repeat",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Bien sûr." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "targetPage": "High Risk Check Saved Intent",
+    "name": "983e71e7-0153-4460-ae1d-03bdc29c1966"
+  }, {
+    "condition": "$session.params.categoryNMenuSelection = no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Let’s go ahead and set up a payment arrangement." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Allons de l’avant et établissons une entente de paiement. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "categoryNMenuSelection",
+        "value": null
+      } ]
+    },
+    "targetPage": "PTP Create New",
+    "name": "cb6408fb-2b15-459b-842e-2e9331f75cc6"
+  }, {
+    "condition": "$session.params.categoryNMenuSelection = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "active-createPtp"
+      }, {
+        "parameter": "categoryNMenuSelection",
+        "value": null
+      } ]
+    },
+    "targetPage": "Go To Make A Payment",
+    "name": "b570e1d6-6d47-4323-97df-fe0957d3527f"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

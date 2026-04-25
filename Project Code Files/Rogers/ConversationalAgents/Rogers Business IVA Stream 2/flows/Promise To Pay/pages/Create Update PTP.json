@@ -1,0 +1,100 @@
+{
+  "name": "687e22d8-92d2-48b6-bfe1-3d0ad13afd4c",
+  "displayName": "Create Update PTP",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "createUpdatePTP"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.createUpdatePTP.success = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, but I’m having trouble updating your account for that payment arrangement." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Désolé, j’ai de la difficulté à mettre à \r\njour votre compte pour cette entente \r\nde paiement. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "017828fd-0d55-4abe-ba99-8e43c24e45cd"
+  }, {
+    "condition": "$session.params.ptpOperation = CREATE",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "active-createPtp"
+      }, {
+        "parameter": "ptpAccountStatusBeforeUpdate",
+        "value": "$session.params.api.response.ptp.accountStatus"
+      } ]
+    },
+    "targetPage": "PTP Wrap Up",
+    "name": "e8ca55d7-f050-40ff-b047-aee6d5116b54"
+  }, {
+    "condition": "$session.params.ptpOperation = UPDATE AND $session.params.numberOfInstalls = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-singleInstallmentPtp"
+      }, {
+        "parameter": "ptpAccountStatusBeforeUpdate",
+        "value": "$session.params.api.response.ptp.accountStatus"
+      } ]
+    },
+    "targetPage": "PTP Wrap Up",
+    "name": "bce4a54b-4a94-4007-9426-06706e124e95"
+  }, {
+    "condition": "$session.params.ptpOperation = UPDATE AND $session.params.numberOfInstalls = 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      }, {
+        "parameter": "ptpAccountStatusBeforeUpdate",
+        "value": "$session.params.api.response.ptp.accountStatus"
+      } ]
+    },
+    "targetPage": "PTP Wrap Up",
+    "name": "57cc7198-bf65-400c-b737-bf0fc8e38d49"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "active-updatePtp"
+      }, {
+        "parameter": "ptpAccountStatusBeforeUpdate",
+        "value": "$session.params.api.response.ptp.accountStatus"
+      } ]
+    },
+    "targetPage": "PTP Wrap Up",
+    "name": "283cfc20-fc47-4893-9ade-c033b846dc02"
+  } ]
+}

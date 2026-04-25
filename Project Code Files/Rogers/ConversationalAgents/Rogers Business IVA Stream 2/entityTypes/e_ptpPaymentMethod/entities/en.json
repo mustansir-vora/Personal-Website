@@ -1,0 +1,13 @@
+{
+  "entities": [ {
+    "value": "creditcard",
+    "synonyms": [ "credit card", "pay by credit card" ],
+    "languageCode": "en",
+    "dtmfPattern": "1"
+  }, {
+    "value": "bank",
+    "synonyms": [ "bank", "pay through bank", "pay through my bank" ],
+    "languageCode": "en",
+    "dtmfPattern": "2"
+  } ]
+}

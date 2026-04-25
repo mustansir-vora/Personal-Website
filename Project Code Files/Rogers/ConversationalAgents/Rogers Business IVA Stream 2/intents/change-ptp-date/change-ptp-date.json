@@ -1,0 +1,10 @@
+{
+  "name": "53d3349b-841b-4594-8327-916c6e8bb543",
+  "displayName": "change-ptp-date",
+  "parameters": [ {
+    "id": "changePTPDate",
+    "entityType": "@sys.date"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 12
+}

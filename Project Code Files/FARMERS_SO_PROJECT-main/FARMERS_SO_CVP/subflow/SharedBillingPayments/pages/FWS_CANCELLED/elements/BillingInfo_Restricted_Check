@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@203878088:1714728573966" name="BillingInfo_Restricted_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BillingInfo_Restricted_Check" default_exit_state="FALSE">
+        <exit_state name="TRUE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_BILLING_INFO_RESTRICTED" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@615767413:1712169447361" name="SetSharedServiceElementData" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">FMST_AGENT_MAIN_MENU</setting>
+<setting name="sessNames">ElementKey</setting>
+</settings>
+</config>
+</action_element>

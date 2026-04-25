@@ -1,0 +1,28 @@
+{
+  "name": "f2e0b82b-0878-44e6-af4b-25d9e3e34ef8",
+  "displayName": "Play hearAgain",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Le voici de nouveau." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Okay. Here it is again." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Playing Balance Details",
+    "name": "808ab2ad-e066-408c-9d64-573a2ef3443c"
+  } ]
+}

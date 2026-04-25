@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@862613890:1707303927405" name="CBIZB_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.CBIZB_MN_002_VALUE</source>
+</config>
+</decision>

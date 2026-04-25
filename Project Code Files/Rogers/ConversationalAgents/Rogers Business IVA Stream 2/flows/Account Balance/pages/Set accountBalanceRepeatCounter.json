@@ -1,0 +1,21 @@
+{
+  "name": "1e2fd36c-437d-4422-8d50-0f9fa7e2b1e2",
+  "displayName": "Set accountBalanceRepeatCounter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$flow.accountBalanceRepeatCounter",
+      "value": 1
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play hearAgain",
+    "name": "dbe4885b-b101-46eb-a371-312027a7851d"
+  } ]
+}

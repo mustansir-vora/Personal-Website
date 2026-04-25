@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@160585323:1730194901337" name="WelcomeTransfer" version="6.0.1">
+<subflow_call subflow_name="Welcome_And_Transfer" target="Element@31:1710752214098">
+<config/>
+</subflow_call>
+</connector>

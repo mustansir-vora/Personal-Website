@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@255587973:1729664898821" name="KYCBA_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.PolicyInquiryAPI_DOBCheck</source>
+</config>
+</decision>

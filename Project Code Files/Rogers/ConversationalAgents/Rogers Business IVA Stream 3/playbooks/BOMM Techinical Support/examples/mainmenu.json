@@ -1,0 +1,32 @@
+{
+  "name": "420f71f9-68b8-449a-a031-bf31de8c5fb3",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Internet,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to go for mainmenu"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Internet,Tv, Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "userInputBMTS": "mainmenu"
+    }
+  },
+  "displayName": "mainmenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 135,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

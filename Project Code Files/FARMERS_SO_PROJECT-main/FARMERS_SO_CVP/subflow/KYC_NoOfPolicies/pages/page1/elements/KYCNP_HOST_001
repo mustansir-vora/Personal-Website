@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@758110036:1707816353943" name="KYCNP_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.AccLinkAniLookup</source>
+</config>
+</decision>

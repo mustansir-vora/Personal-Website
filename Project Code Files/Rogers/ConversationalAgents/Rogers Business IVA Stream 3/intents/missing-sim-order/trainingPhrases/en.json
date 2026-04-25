@@ -1,0 +1,315 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I placed a "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " order and I still haven’t received it; can you help?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was expecting a "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": ", but it hasn’t been delivered to my address."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The delivery for my "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " hasn’t happened yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I ordered a "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " but I still don’t have it in hand."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " hasn’t been shipped to me yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I haven’t received the replacement "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " for my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I placed a request for a new "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": ", but it hasn’t been delivered."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " I was supposed to get hasn’t arrived yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need help because the "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " I ordered hasn’t been received."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received nothing for my "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " order."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My new "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " shipment hasn’t reached my address."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m still waiting for the "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " I ordered "
+    }, {
+      "text": "last month"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " I applied for has not been delivered as of "
+    }, {
+      "text": "today"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling because my "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " hasn’t arrived yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I placed an order for a "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " online, and it hasn’t reached me."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I haven’t received the "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " that I ordered for my new line."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " I requested is still missing from my delivery."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I ordered a "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "last week"
+    }, {
+      "text": " and it hasn’t arrived yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " order shows as shipped, but I never received it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was expecting my new "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": ", but it hasn’t come."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I applied for a replacement "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " and I haven’t received it yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " I ordered hasn’t been delivered to me."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I still haven’t gotten the "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " I requested online."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My new "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " was supposed to arrive, but it hasn’t shown up."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I placed an order for a "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_SIMType",
+      "auto": true
+    }, {
+      "text": " but I haven’t received it yet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

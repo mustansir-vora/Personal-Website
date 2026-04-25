@@ -1,0 +1,48 @@
+{
+  "name": "b0ce08e4-afea-4e53-bb30-dcc8ffec967d",
+  "displayName": "Call SMS subflow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "smsAttributes",
+      "value": "$sys.func.TO_OBJECT(\"{'last4Acct':'$session.params.last4acct','lastPaymentDate':'$session.params.api.pastPaymentObject.paymentDate'}\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Send SMS",
+    "name": "87371414-f078-43d8-9030-b7378f41bd5a"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "createInteraction",
+      "setParameterActions": [ {
+        "parameter": "interactionNotes",
+        "value": "IVA - Payment History"
+      }, {
+        "parameter": "interactionLabel",
+        "value": "PaymentHistory"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "$sys.func.CONCATENATE(\"$session.params.completedSSName\",\",active-paymentHistory\")"
+      }, {
+        "parameter": "reportingVar_completedSSName",
+        "value": "$session.params.completedSSName"
+      }, {
+        "parameter": "reportingVar_attemptedSSName",
+        "value": "$session.params.completedSSName"
+      } ]
+    },
+    "targetPage": "Check from AR",
+    "name": "2b826e07-22bd-4e08-b787-a27774ed3105"
+  } ]
+}

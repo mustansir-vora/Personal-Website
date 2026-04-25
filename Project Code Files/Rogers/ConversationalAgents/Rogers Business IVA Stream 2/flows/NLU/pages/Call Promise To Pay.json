@@ -1,0 +1,15 @@
+{
+  "name": "987c7e04-37eb-4840-aad8-1c3ee10f8fac",
+  "displayName": "Call Promise To Pay",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Promise To Pay",
+    "name": "c5c84fb8-1e12-4ddc-acac-6f3ef6388063"
+  } ]
+}

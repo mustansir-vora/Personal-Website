@@ -1,0 +1,183 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’appelle pour compléter "
+    }, {
+      "text": "un"
+    }, {
+      "text": " transfert de responsabilité."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je transférer "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": " sans fil "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " nouveau propriétaire."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer le titulaire du compte pour "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider à transférer la responsabilité de cette ligne "
+    }, {
+      "text": "à une"
+    }, {
+      "text": " autre personne ou "
+    }, {
+      "text": "à une"
+    }, {
+      "text": " autre "
+    }, {
+      "text": "entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois transférer la propriété de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte d’"
+    }, {
+      "text": "entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me donner l’identifiant d’interaction afin que je puisse transférer la propriété de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "On m’a dit que je pouvais conserver "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone, mais que je serais responsable de le payer."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je transfère "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone corporatif vers "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte personnel."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai quitté "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " emploi mais je conserve "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je fais "
+    }, {
+      "text": "un"
+    }, {
+      "text": " transfert de responsabilité."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je prends en charge la responsabilité de payer le téléphone que j’utilise."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je transfère "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de téléphone vers "
+    }, {
+      "text": "un"
+    }, {
+      "text": " compte personnel."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je quitte "
+    }, {
+      "text": "l’entreprise"
+    }, {
+      "text": " et je conserve "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " identifiant d’interaction afin de pouvoir transférer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de téléphone vers "
+    }, {
+      "text": "un"
+    }, {
+      "text": " compte personnel."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

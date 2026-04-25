@@ -1,0 +1,11 @@
+{
+  "name": "7545fb0e-30c7-49e4-b247-c11b0a19257d",
+  "displayName": "add-a-line",
+  "parameters": [ {
+    "id": "e_lineType",
+    "entityType": "@e_lineType"
+  } ],
+  "priority": 500000,
+  "description": "Handles requests to add an additional line to an existing account or service.",
+  "numTrainingPhrases": 87
+}

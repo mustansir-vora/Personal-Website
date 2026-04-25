@@ -1,0 +1,54 @@
+{
+  "name": "7aabf625-55c3-4c3b-967e-b8319c885922",
+  "displayName": "WirelessTechSupportPage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkWirTS",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bcInkWirTS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId11"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "c796cbd3-0f46-4f6b-b4e0-c88f0b6a7613"
+  }, {
+    "condition": "$session.params.bcInkWirTS = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkWirTS",
+        "value": false
+      } ]
+    },
+    "name": "d975fc81-1f8b-46d4-a49a-d5dccc793ba5",
+    "targetPlaybook": "Wireless Technical Support"
+  }, {
+    "condition": "$session.params.aniNotFound = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "aniNotFound",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_Wireless",
+    "name": "1e9cc021-1f55-4809-92ac-dec14d6d49cb"
+  }, {
+    "condition": "$session.params.wsStepCompleted = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wsStepCompleted",
+        "value": false
+      } ]
+    },
+    "targetPage": "CheckSavedIntent_Wireless",
+    "name": "7dfe247d-a3e1-4d2e-a990-e698565d8609"
+  } ]
+}

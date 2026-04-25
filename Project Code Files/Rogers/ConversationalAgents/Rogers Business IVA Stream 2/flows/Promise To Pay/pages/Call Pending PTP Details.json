@@ -1,0 +1,47 @@
+{
+  "name": "5daa4827-a9d8-4931-ace7-4ca533339d9e",
+  "displayName": "Call Pending PTP Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCallPendingPTPDetails = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowInputs.accountBalance.callPendingPTPDetailsSubflow",
+        "value": true
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callInstallmentPaymentPlanDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callLastInvoiceDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callCreditLimitUsageDetailsSubflow",
+        "value": false
+      }, {
+        "parameter": "$session.params.subflowInputs.accountBalance.callCurrentBalanceDetailsSubflow",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Play Balance Details",
+    "name": "c558d7ae-75ae-4568-a30f-6671aa056469"
+  }, {
+    "condition": "$session.params.promiseDate \u003c $session.params.currentDate",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Pay Now",
+    "name": "a7ba8cd3-74e7-47c3-aef3-631e77a975f9"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Intent Update Single",
+    "name": "8ca7898d-46d3-4914-a295-256f870a3e50"
+  } ]
+}

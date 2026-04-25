@@ -1,0 +1,71 @@
+{
+  "name": "1022c4c6-3963-4f68-bd68-fedd51235d4d",
+  "displayName": "Amount Known",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAR = true AND $session.params.paymentAmount = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Select Case: Check for specific amount",
+    "name": "e1475beb-c01a-4ee7-9182-22c46e384c90"
+  }, {
+    "condition": "$session.params.fromCancelledAccount = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Ask Amount",
+    "name": "18c31d99-7ca0-4bbf-82c8-c5dbcb970244"
+  }, {
+    "condition": "$session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "4e272676-8557-4522-b845-d14af4b88d77",
+    "description": "If askAmount fails, we transfer"
+  }, {
+    "condition": "$session.params.getAmountFailure = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Continue To Credit Operations",
+    "name": "520ec8e2-676b-4179-ab6a-1c507d38af75",
+    "description": "Once askAmount is completed, it needs to go to CC Operations"
+  }, {
+    "condition": "$session.params.paymentAmount != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Continue To Credit Operations",
+    "name": "957d782d-aea6-4f24-aaae-d875e9a4200f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadcastId",
+        "value": "$session.params.broadCastId17"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "f3d50485-8b00-434a-8341-8b1843a966cc"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check PTP Details",
+    "name": "1b1e615c-fffc-42cc-ae94-c78637c0167c"
+  } ]
+}

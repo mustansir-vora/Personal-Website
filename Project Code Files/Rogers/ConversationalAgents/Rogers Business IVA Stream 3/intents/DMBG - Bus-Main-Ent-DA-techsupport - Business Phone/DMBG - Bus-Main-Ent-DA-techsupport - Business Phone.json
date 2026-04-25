@@ -1,0 +1,7 @@
+{
+  "name": "10927d73-5555-41ab-a74a-3baf1506e292",
+  "displayName": "DMBG - Bus-Main-Ent-DA-techsupport - Business Phone",
+  "priority": 500000,
+  "numTrainingPhrases": 2,
+  "dtmfPattern": "3"
+}

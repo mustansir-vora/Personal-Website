@@ -1,0 +1,45 @@
+{
+  "name": "43850327-49a3-4774-a5d3-152ed5dd341f",
+  "displayName": "Check Valid Response",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.checkCCExpirationDate.valid = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "CC CVV",
+    "name": "d04b4ce3-0ad1-4a91-bfc9-05de6a5981cb",
+    "description": "If valid response XX YY"
+  }, {
+    "condition": "$session.params.ccExpirationErrorCounter \u003c 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ccExpirationErrorCounter",
+        "value": "$sys.func.ADD($session.params.ccExpirationErrorCounter, 1)"
+      }, {
+        "parameter": "ccExpirationDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Get Expiration Date",
+    "name": "a4830aa0-7df7-4483-8172-c4734bb7c4dc"
+  }, {
+    "condition": "$session.params.ccExpirationErrorCounter \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ccExpirationErrorCounter",
+        "value": "$sys.func.ADD($session.params.ccExpirationErrorCounter, 1)"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "dbdfce88-9489-4ed7-a1cd-0939c7b38553"
+  } ]
+}

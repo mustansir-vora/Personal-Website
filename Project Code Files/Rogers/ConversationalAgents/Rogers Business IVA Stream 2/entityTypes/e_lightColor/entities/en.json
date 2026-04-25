@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "green",
+    "synonyms": [ "flashing green", "green", "solid green" ],
+    "languageCode": "en"
+  }, {
+    "value": "orange",
+    "synonyms": [ " flashing orange", "amber", "orange" ],
+    "languageCode": "en"
+  }, {
+    "value": "red",
+    "synonyms": [ "flashing red", "red", "solid red" ],
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@495181733:1711654314977" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1711654314977" name="FAS_Call_Initial_Representative_Handling" type="Subflow Start" width="365" x="68" y="20">
+<exit_states>
+<exit_state name="next" target="Element@531104292:1711889691759"/>
+</exit_states>
+</element>
+<element height="55" id="Element@509261373:1711654624335" name="FAS Policy CollectionID" type="Subflow Call" width="231" x="476" y="249">
+<subflow_call subflow_name="FASPolicyCollection" target="Element@31:1711748879975">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@63750910:1711748914398"/>
+</exit_states>
+</element>
+<element height="55" id="Element@589871465:1711733352428" name="Caller_NL_Node_Check" type="Decision" width="226" x="752" y="125">
+<exit_states>
+<exit_state name="N" target="Element@264674899:1712733189781"/>
+<exit_state name="YES" target="Element@345199572:1712734874871"/>
+</exit_states>
+</element>
+<element height="55" id="Element@429044465:1711733429889" name="Rep_Requested_MoreThan2" type="Decision" width="234" x="461" y="135">
+<exit_states>
+<exit_state name="RETRY" target="Element@589871465:1711733352428"/>
+<exit_state name="MAXTRY" target="Element@1838455192:1711733547350"/>
+<exit_state name="ER" target="Element@1838455192:1711733547350">
+<bendpoint>
+<dim1 x="-328" y="43"/>
+<dim2 x="95" y="-89"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1838455192:1711733547350" name="Shared_transfer" type="Subflow Call" width="172" x="69" y="267">
+<subflow_call subflow_name="Transfer" target="Element@31:1711733560565">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@63750910:1711748914398"/>
+</exit_states>
+</element>
+<element height="55" id="Element@63750910:1711748914398" name="Subflow Return_01" type="Subflow Return" width="198" x="493" y="415"/>
+<element height="55" id="Element@531104292:1711889691759" name="CheckEntryPoint_BC" type="Decision" width="205" x="127" y="109">
+<exit_states>
+<exit_state name="NLU" target="Element@429044465:1711733429889"/>
+<exit_state name="CONT" target="Element@429044465:1711733429889"/>
+<exit_state name="INITIAL" target="Element@429044465:1711733429889">
+<bendpoint>
+<dim1 x="184" y="-18"/>
+<dim2 x="-163" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@429044465:1711733429889">
+<bendpoint>
+<dim1 x="186" y="-33"/>
+<dim2 x="-161" y="-79"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@264674899:1712733189781" name="IsPolicyInvoked_BC" type="Decision" width="160" x="771" y="254">
+<exit_states>
+<exit_state name="Y" target="Element@63750910:1711748914398"/>
+<exit_state name="N" target="Element@509261373:1711654624335"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1039700213:1712733498201" name="FAS Policy CollectionID_NL" type="Subflow Call" width="231" x="1039" y="245">
+<subflow_call subflow_name="FASPolicyCollection" target="Element@31:1711748879975">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@63750910:1711748914398"/>
+</exit_states>
+</element>
+<element height="55" id="Element@345199572:1712734874871" name="SetNLFlag1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="164" x="1076" y="131">
+<exit_states>
+<exit_state name="done" target="Element@1039700213:1712733498201"/>
+</exit_states>
+</element>
+</page>

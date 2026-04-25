@@ -1,0 +1,31 @@
+{
+  "entities": [ {
+    "value": "black_friday",
+    "synonyms": [ "black_friday", "Black Friday deals", "Black Friday event", "Black Friday offers" ],
+    "languageCode": "en"
+  }, {
+    "value": "cyber_monday",
+    "synonyms": [ "cyber_monday", "Cyber Monday deals", "Cyber Monday event", "Cyber Monday offer" ],
+    "languageCode": "en"
+  }, {
+    "value": "cyber_week",
+    "synonyms": [ "cyber_week", "Cyber Week", "Cyber Week event" ],
+    "languageCode": "en"
+  }, {
+    "value": "holiday_deals",
+    "synonyms": [ "holiday_deals", "Holiday deals", "Holiday events", "HoliDeals", "Wrapped in Red" ],
+    "languageCode": "en"
+  }, {
+    "value": "boxing_day",
+    "synonyms": [ "boxing_day", "Boxing Day", "Boxing Day deals" ],
+    "languageCode": "en"
+  }, {
+    "value": "boxing_week",
+    "synonyms": [ "boxing_week", "Boxing Week", "Boxing Week event" ],
+    "languageCode": "en"
+  }, {
+    "value": "rogers_advertised_offers",
+    "synonyms": [ "rogers_advertised_offers", "Rogers advertised offers" ],
+    "languageCode": "en"
+  } ]
+}

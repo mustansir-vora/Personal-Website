@@ -1,0 +1,8 @@
+{
+  "name": "232ce66b-b085-4ebc-b609-a11540674512",
+  "displayName": "voluntaryMenu-Service",
+  "priority": 500000,
+  "description": "This will trigger when user says i want service account",
+  "numTrainingPhrases": 70,
+  "dtmfPattern": "2"
+}

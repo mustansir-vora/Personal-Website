@@ -1,0 +1,37 @@
+{
+  "name": "07a279c0-d7b1-4314-a42e-be743869bb35",
+  "displayName": "Start LastInvoiceDetails subflow",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.callLastInvoiceDetails",
+      "value": true
+    }, {
+      "parameter": "$session.params.astInvoiceDetailsEnabled",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.subflowInputs.accountBalance.callLastInvoiceDetailsSubflow = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"passive-lastBillDetails\")"
+      }, {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check lastInvoiceDetailsEnabled",
+    "name": "2720f242-39ba-425b-a99d-53f7b2e9473d"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start creditLimitUsageDetails subflow",
+    "name": "ba2de646-db11-4662-900c-d5558a4caa2d"
+  } ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1448775108:1711794287674" name="FAS Main Menu_Return" version="6.0.1">
+<subflow_call subflow_name="FAS_Main_Menu" target="Element@31:1711955842661">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

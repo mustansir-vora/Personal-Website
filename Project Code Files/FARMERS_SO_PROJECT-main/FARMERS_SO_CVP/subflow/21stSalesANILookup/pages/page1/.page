@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@921832107:1708932481601" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708932481601" name="21stSalesANILookup" type="Subflow Start" width="214" x="402" y="-13">
+<exit_states>
+<exit_state name="next" target="Element@287998715:1712910193856"/>
+</exit_states>
+</element>
+<element height="55" id="Element@451338700:1708932602594" name="Shared Entry_Mod" type="Subflow Call" width="195" x="407" y="126">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1711719403352">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@871829128:1709102314977"/>
+</exit_states>
+</element>
+<element height="55" id="Element@162945557:1708932602594" name="TFSAL_MN_001_VALUE" type="Decision" width="229" x="160" y="1041">
+<exit_states>
+<exit_state name="YES" target="Element@401905709:1712905257917"/>
+<exit_state name="NO" target="Element@914349512:1708932602594">
+<bendpoint>
+<dim1 x="397" y="45"/>
+<dim2 x="-282" y="42"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1458162670:1712314863255"/>
+<exit_state name="NOMATCH" target="Element@914349512:1708932602594">
+<bendpoint>
+<dim1 x="372" y="149"/>
+<dim2 x="-307" y="146"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@914349512:1708932602594">
+<bendpoint>
+<dim1 x="387" y="93"/>
+<dim2 x="-292" y="90"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@1383619949:1730252928493"/>
+<exit_state name="Default" target="Element@401905709:1712905257917"/>
+</exit_states>
+</element>
+<element height="55" id="Element@914349512:1708932602594" name="Shared Transfer" type="Subflow Call" width="171" x="694" y="803">
+<subflow_call subflow_name="Transfer" target="Element@31:1711719408234">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@877324388:1711719418642"/>
+</exit_states>
+</element>
+<element height="55" id="Element@871829128:1709102314977" name="Warhead_Check" type="Subflow Call" width="174" x="418" y="224">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1709102344747">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@393709606:1717662053073"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1663436849:1710832476076" name="TFSAL_MN_001_Call" type="Subflow Call" width="206" x="74" y="804">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1711517775119">
+<config>
+<argument_data>
+<data name="MenuID">TFSAL_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@162945557:1708932602594"/>
+</exit_states>
+</element>
+<element height="55" id="Element@319222938:1711610073349" name="TFSAL_HOST_001" type="Decision" width="188" x="412" y="330">
+<exit_states>
+<exit_state name="Cancelled_policy_not_found" target="Element@914349512:1708932602594"/>
+<exit_state name="Cancelled_policy_found" target="Element@1663436849:1710832476076"/>
+<exit_state name="ER" target="Element@914349512:1708932602594">
+<bendpoint>
+<dim1 x="264" y="0"/>
+<dim2 x="-9" y="-473"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@877324388:1711719418642" name="Subflow Return_02" type="Subflow Return" width="198" x="390" y="1321"/>
+<element height="55" id="Element@874378235:1712169157347" name="NLUReturn" type="Subflow Return" width="197" x="96" y="1306"/>
+<element height="55" id="Element@1458162670:1712314863255" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="251" x="267" y="885">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@401905709:1712905257917" name="SET_ROUTE_TO_MAIN_MENU" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="279" x="98" y="1164">
+<exit_states>
+<exit_state name="done" target="Element@874378235:1712169157347"/>
+</exit_states>
+</element>
+<element height="55" id="Element@287998715:1712910193856" name="Skip_MainMenu" type="Decision" width="175" x="26" y="52">
+<exit_states>
+<exit_state name="Y" target="Element@1663436849:1710832476076"/>
+<exit_state name="N" target="Element@451338700:1708932602594"/>
+</exit_states>
+</element>
+<element height="55" id="Element@393709606:1717662053073" name="IVRProperty_isANIBypassed" type="Decision" width="239" x="716" y="224">
+<exit_states>
+<exit_state name="YES" target="Element@914349512:1708932602594"/>
+<exit_state name="NO" target="Element@319222938:1711610073349"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1383619949:1730252928493" name="Global_Rep_Handling" type="Decision" width="214" x="-42" y="939">
+<exit_states>
+<exit_state name="CONT" target="Element@401905709:1712905257917"/>
+<exit_state name="TR" target="Element@914349512:1708932602594"/>
+</exit_states>
+</element>
+</page>

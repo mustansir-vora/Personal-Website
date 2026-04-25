@@ -1,0 +1,63 @@
+{
+  "name": "8adbfe84-3002-426d-a2a4-71336a242935",
+  "displayName": "Find Account Index Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "safeAccounts",
+      "value": "$sys.func.IF(\"$session.params.accountNumberList = null\", [], $session.params.accountNumberList)"
+    }, {
+      "parameter": "count",
+      "value": "$sys.func.COUNT($session.params.safeAccounts)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.linkedAccountNumber = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subscriptionMatch",
+        "value": false
+      }, {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "08bfecba-4fc8-47ed-a03e-73f3ecac417d"
+  }, {
+    "condition": "$session.params.count = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subscriptionMatch",
+        "value": false
+      }, {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "331b89b3-b224-4388-893b-81037a26a46b"
+  }, {
+    "condition": "$session.params.idx \u003e= $session.params.count",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subscriptionMatch",
+        "value": false
+      }, {
+        "parameter": "wirelessIdentificationResult",
+        "value": "Unidentified"
+      } ]
+    },
+    "targetPage": "Wireless Identification Router",
+    "name": "420c64a6-2d04-4117-9347-6940fed4f04d"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Iterate Find Account Index",
+    "name": "0ba13bde-f5ee-4e97-8010-6471d939e1ff"
+  } ]
+}

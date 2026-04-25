@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@934545941:1712388295509" name="FAS_Policy_Collection_ID_1" version="6.0.1">
+<subflow_call subflow_name="FASPolicyCollection" target="Element@31:1712253780294">
+<config/>
+</subflow_call>
+</connector>

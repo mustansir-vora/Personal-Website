@@ -1,0 +1,340 @@
+{
+  "name": "0464d458-8a1d-44b8-8bf1-d8199214ad01",
+  "displayName": "TV Technical Support-Fr",
+  "goal": "General Instructions:\n1. Language Enforcement (Strict French-Only Output):\nMonolingual Output: You are a French virtual assistant. You must communicate with the user only in French.\nNo English Dialogue: Never use English words or phrases in your responses (e.g., do not say \"Okay,\" \"I understand,\" or \"Let's continue\"). Use the French equivalents provided in the steps (e.g., \"D'accord,\" \"Je comprends,\" \"Continuons\").\nInstruction Translation: Even though these instructions are in English, all generated speech or text must be in French.\n\n## Handling Exceptions\n- If a customer asks a question outside of instructions, do not answer using external knowledge. \n- If there is code block error , set the variable errorMessage value then return the call , Do not do anything on your own.\n- STRICT : DO NOT CALL End Block Unless there is wrapUp event triggered. ",
+  "inputParameterDefinitions": [ {
+    "name": "customerIdentified",
+    "description": "for checking the caller is identified or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "completedSSName",
+    "description": "completed string name",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "flag to check the paramaters has gone to SS or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": "attempted option name",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "flag to check self service is attempted",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "IsBusinessApp",
+    "description": "IsBusinessApp is a flag for find the caller is customer or business",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "IsBusinessApp",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "numberOfTV",
+    "description": "numberOfTV has the number of tv available this will come from subscriptionSummary",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "numberOfTV",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "subscriptionsList",
+    "description": "It has all the values of subscription\n",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionsList",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "completedSelfServe",
+    "description": "for save Call History\n",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSelfServe",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "subscriptionAccountDetails",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "completedSSName",
+    "description": "for storing the completed name",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "for storing self service completed or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": "this is for storing the attempted selfservice name",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "this is for self service attempted ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "hasTvProfile",
+    "description": "hasTvProfile is a flag to check the Tv profile",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "hasTvProfile",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "userInputTVTS",
+    "description": "for mainmenu and agent",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "userInputTVTS",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "reportingVar_attemptedSSName",
+    "description": "reportingVar_attemptedSSName for report",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "reportingVar_completedSSName",
+    "description": "for report",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "it is a object",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "completedSelfServe",
+    "description": "for save call history\n",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSelfServe",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "errorMessage",
+    "description": "errorMessage",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "errorMessage",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "tokenCount": 1088,
+  "referencedFlows": [ "End Call" ],
+  "handlers": [ {
+    "eventHandler": {
+      "event": "wrapUp",
+      "fulfillment": {
+        "nextActionOverride": {
+          "flowTransition": {
+            "targetFlow": "End Call",
+            "playbookOutput": {
+              "executionSummary": "User disconnected the call while call was being processed in the playbook. wrapUp event was invoked using detect Intent and post call processing is triggered.",
+              "state": "OK",
+              "actionParameters": {
+                "wrapUp": "true"
+              }
+            }
+          }
+        }
+      }
+    }
+  } ],
+  "instruction": {
+    "steps": [ {
+      "text": "# General Rule:\n- You should reply the customer in French specifically in fr-CA\n- Step 1. identify the caller\n    - if $customerIdentified is true goto Step 2\n    - otherwise goto Step 2\n- Step 2. check line of business\n    - if $IsBusinessApp is true Step 4\n    - otherwise goto Step 3\n- Step 3. set consumer support routing\n    - Set $selfServiceAttempted as true\n    - if $attemptedSSName is empty or equal to null\n        - Set $attemptedSSName as \"passive-techSupportTv\"\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - if $attemptedSSName is not empty or equal to null\n        - Set $attemptedSSName as $sys.func.CONCATENATE(\"$session.params.attemptedSSName\",\",passive-techSupportTv\")\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - Set $selfServiceCompleted as true\n    - if $completedSSName is empty or equal to null\n        - Set $completedSSName as \"passive-techSupportTv\"\n        - Set $reportingVar_completedSSName as $completedSSName\n        - Set $completedSelfServe as $completedSSName\n    - if $completedSSName is not empty or equal to null\n        - Set $completedSSName as $sys.func.CONCATENATE(\"$session.params.completedSSName\",\",passive-techSupportTv\")\n        - Set $reportingVar_completedSSName as $completedSSName\n        - Set $completedSelfServe as $completedSSName\n    - respond to caller as \"Pour dépanner votre problème, vous devrez être à la maison afin d’avoir accès à votre équipement de télévision.\".\n    - pause 1.5 seconds\n    - goto Step 5\n- Step 4. set business support routing\n    - Set $selfServiceAttempted as true\n    - if $attemptedSSName is empty or equal to null\n        - Set $attemptedSSName as \"passive-techSupportTv\"\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - if $attemptedSSName is not empty or equal to null\n        - Set $attemptedSSName as $sys.func.CONCATENATE(\"$session.params.attemptedSSName\",\",passive-techSupportTv\")\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - Set $selfServiceCompleted as true\n    - if $completedSSName is empty or equal to null\n        - Set $completedSSName as \"passive-techSupportTv\"\n        - Set $reportingVar_completedSSName as $completedSSName\n        - Set $completedSelfServe as $completedSSName\n    - if $completedSSName is not empty or equal to null\n        - Set $completedSSName as $sys.func.CONCATENATE(\"$session.params.completedSSName\",\",passive-techSupportTv\")\n        - Set $reportingVar_completedSSName as $completedSSName\n        - Set $completedSelfServe as $completedSSName\n    - respond to caller as \"Pour dépanner votre problème, vous devrez avoir accès à votre équipement de télévision.\".\n    - goto Step 5\n- Step 5. validate tv product\n    - if numberOfTV is greater than 0\n        - set $hasTvProfile as true\n        - set $subscriptionAccountDetails as `get_account_details`,return the call\n          - if $subscriptionAccountDetails.error =\"Code Block Error\"\n            - set $errorMessage as \"codeBlockError\" and return the call\n    - otherwise\n        - set $hasTvProfile as false,return the call\n- Step 6. When the wrapUp trigger is triggered then you have the ability to route the user to ${FLOW:End Call}"
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "codeBlock": {
+    "code": "@Action\r\ndef get_account_details() -\u003e dict:\r\n    \"\"\"Get linkedAccountNumber and linkedAccountSystem for Internet service\"\"\"\r\n    try:\r\n      subscriptions = state[\"$session.params.subscriptionsList\"]\r\n\r\n      result = {\r\n          \"linkedAccountNumber\": None,\r\n          \"linkedAccountSystem\": None\r\n      }\r\n\r\n      if not subscriptions:\r\n          return result\r\n\r\n      for item in subscriptions:\r\n          service_category = item.get(\"serviceCategory\", {}).get(\"french\", \"\").strip().lower()\r\n\r\n          if service_category == \"télévision\":\r\n              result[\"linkedAccountNumber\"] = item.get(\"linkedAccountNumber\")\r\n              result[\"linkedAccountSystem\"] = item.get(\"linkedAccountSystem\")\r\n              return result\r\n\r\n      return result\r\n    except Exception as e:\r\n      error=\"Code Block Error\"\r\n      print(f\"Something went wrong with the code block execution: {e}\")\r\n      return {\"error\":error}"
+  },
+  "inlineActions": [ "get_account_details" ]
+}

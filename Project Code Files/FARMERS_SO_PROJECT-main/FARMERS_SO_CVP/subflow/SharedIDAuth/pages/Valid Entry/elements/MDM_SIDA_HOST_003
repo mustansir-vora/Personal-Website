@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@121729362:1738039963753" name="MDM_SIDA_HOST_003" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.MdmPhoneNoPolicyLookup</source>
+</config>
+</decision>

@@ -1,0 +1,63 @@
+{
+  "name": "07b45e27-34ff-45b4-a3b0-f84ca38127dd",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Advantage Voice,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I need to talk with an agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Our specialists are unable to assist with this transaction, but I can help you with it here in the automated system. Let's try again.\nWhich of the following are you calling about?You can say Advantage Voice,Tv, Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I need to talk with an agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "globalAgentRequestCounter": "0",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixEn": "Advantage Voice,Tv, Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInputBMTS": "agent"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-Agent",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 322,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

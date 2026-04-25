@@ -1,0 +1,38 @@
+{
+  "name": "348b8625-3cb9-48b6-b2cd-e4ce09dbff64",
+  "displayName": "Return From Change Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.ptpChangeDetails",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpConfirmation = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpConfirmation",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check PTP Operation",
+    "name": "9b178e7d-1cba-4434-bba6-49ef3ec5cf4f"
+  }, {
+    "condition": "$session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Change Date",
+    "name": "25f04bb1-3bc7-4c84-ac98-f677954bf844"
+  }, {
+    "condition": "$session.params.updateMultipleOptions2 = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Change Date",
+    "name": "9eeb3087-447e-49ff-9d13-0c26b1018664"
+  } ]
+}

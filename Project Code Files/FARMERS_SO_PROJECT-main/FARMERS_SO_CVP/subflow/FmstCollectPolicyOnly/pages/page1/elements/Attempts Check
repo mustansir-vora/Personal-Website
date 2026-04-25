@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@686564160:1708938089183" name="Attempts Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_01" default_exit_state="No">
+        <exit_state name="yes" conjugate="and">
+            <number operator="greater">
+                <data>
+                    <element name="Counter_01" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

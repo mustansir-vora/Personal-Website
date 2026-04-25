@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@919657692:1708938542262" name="CaseList 6" version="6.0.1">
+<element height="55" id="Element@65310232:1708938692877" name="CL_6" type="Page Entry" width="92" x="505" y="27">
+<exit_states>
+<exit_state name="next" target="Element@1503805008:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1155748031:1708938692877" name="BWBP_MN_002_ENTRY" type="Page Connector" width="229" x="567" y="1168">
+<page_connector target="Element@1230557031:1708938735464">BWBP_MN_002_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1843868634:1708938692877" name="NSF_STATE_CHECK_3" type="Decision" width="214" x="690" y="696">
+<exit_states>
+<exit_state name="Y" target="Element@1537157556:1708938692877"/>
+<exit_state name="Not Y" target="Element@1077264299:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1537157556:1708938692877" name="BWBP_PA_020" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="162" x="560" y="830">
+<exit_states>
+<exit_state name="done" target="Element@1543358449:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1239580635:1708938692877" name="NSF_STATE_CHECK_ENTRY" type="Page Entry" width="256" x="762" y="537">
+<exit_states>
+<exit_state name="next" target="Element@1843868634:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@583176603:1708938692877" name="NSF_STATE_CHECK_ENTRY" type="Page Connector" width="256" x="192" y="805">
+<page_connector target="Element@1239580635:1708938692877">NSF_STATE_CHECK_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@2090835873:1708938692877" name="POLICY_REWRITE_OFFER_CHECK" type="Decision" width="306" x="420" y="537">
+<exit_states>
+<exit_state name="Y" target="Element@1761613149:1708938692877"/>
+<exit_state name="Not Y" target="Element@1843868634:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1503805008:1708938692877" name="POLICY_MODE_CHECK_1" type="Decision" width="245" x="445" y="164">
+<exit_states>
+<exit_state name="Y" target="Element@1897186717:1708938692877"/>
+<exit_state name="Not Y" target="Element@1897186717:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1543358449:1708938692877" name="BWBP_ADM_008" type="Decision" width="182" x="412" y="967">
+<exit_states>
+<exit_state name="Customer" target="Element@410804177:1709110120553"/>
+<exit_state name="Agent" target="Element@1155748031:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@391821552:1708938692877" name="EPC_PAYMENTS_4" type="Subflow Call" width="191" x="271" y="1313">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1711717639566">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@560858028:1710828064687"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1897186717:1708938692877" name="POLICY_STATUS_CHCEK_1" type="Decision" width="253" x="442" y="272">
+<exit_states>
+<exit_state name="Y" target="Element@926271338:1708938692877"/>
+<exit_state name="Not Y" target="Element@926271338:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1761613149:1708938692877" name="TODAY_DT_REWRITE_OFFER_END_DT_CHECK" type="Decision" width="402" x="134" y="703">
+<exit_states>
+<exit_state name="True" target="Element@583176603:1708938692877"/>
+<exit_state name="false" target="Element@583176603:1708938692877">
+<bendpoint>
+<dim1 x="91" y="57"/>
+<dim2 x="94" y="-45"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1077264299:1708938692877" name="BWBP_PA_021" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="162" x="843" y="830">
+<exit_states>
+<exit_state name="done" target="Element@1543358449:1708938692877">
+<bendpoint>
+<dim1 x="0" y="136"/>
+<dim2 x="422" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1712527168:1708938692877" name="BWBP_MN_010_VALUE" type="Decision" width="228" x="255" y="1168">
+<exit_states>
+<exit_state name="YES" target="Element@391821552:1708938692877"/>
+<exit_state name="NO" target="Element@1155748031:1708938692877"/>
+<exit_state name="NI" target="Element@560858028:1710828064687"/>
+<exit_state name="NM" target="Element@1407947296:1710828062666"/>
+<exit_state name="ER" target="Element@1407947296:1710828062666"/>
+</exit_states>
+</element>
+<element height="55" id="Element@926271338:1708938692877" name="POLICY_QUALIFICATION_CHECK_1" type="Decision" width="321" x="414" y="407">
+<exit_states>
+<exit_state name="Y" target="Element@2090835873:1708938692877"/>
+<exit_state name="Not Y" target="Element@2090835873:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@410804177:1709110120553" name="BWBP_MN_010_Call" type="Subflow Call" width="205" x="260" y="1062">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709110122467">
+<config>
+<argument_data>
+<data name="MenuID">BWBP_MN_010</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1712527168:1708938692877"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1407947296:1710828062666" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="65" y="1313">
+<page_connector target="Element@1517881637:1710826549667">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@560858028:1710828064687" name="HANGUP_ENTRY" type="Page Connector" width="181" x="474" y="1313">
+<page_connector target="Element@795750700:1710826769493">HANGUP_ENTRY<config/>
+</page_connector>
+</element>
+</page>

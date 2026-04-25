@@ -1,0 +1,28 @@
+{
+  "name": "678fcf3d-91aa-45d2-8a9d-186c2281e1b3",
+  "displayName": "Play Subsequent Limited AR",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Afin de suspendre les activités de recouvrement, veuillez effectuer un paiement ou établir un arrangement de paiement pour le solde en souffrance." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "In order to hold collection activities, please make a payment or set up a payment arrangement for the past due balance." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check BusinessInd",
+    "name": "30ac7735-74a3-4267-80fe-f7bf9b5d7c13"
+  } ]
+}

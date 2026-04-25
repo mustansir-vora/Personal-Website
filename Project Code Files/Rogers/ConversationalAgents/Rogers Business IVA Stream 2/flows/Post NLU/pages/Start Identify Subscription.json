@@ -1,0 +1,21 @@
+{
+  "name": "37006dd2-52f7-443b-9857-742fbeb3764d",
+  "displayName": "Start Identify Subscription",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "idCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Start Confirm Subscription",
+    "name": "71d269ce-acf6-482e-81db-92f4750036f4"
+  } ]
+}

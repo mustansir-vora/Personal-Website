@@ -1,0 +1,28 @@
+{
+  "name": "f12428e4-7040-45b6-a230-9a90da7d4ec1",
+  "displayName": "CheckSavedIntent_Internet",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"internet-support\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askForMoreDetails",
+        "value": true
+      } ]
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "40243c94-3b97-4eb5-b483-fed5c8fb8df4"
+  }, {
+    "condition": "$session.params.savedIntent != \"internet-support\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "TECH Pre FAQ Check TECH",
+    "name": "d45fc98a-40e5-4f8b-8f6b-2587044889d5"
+  } ]
+}

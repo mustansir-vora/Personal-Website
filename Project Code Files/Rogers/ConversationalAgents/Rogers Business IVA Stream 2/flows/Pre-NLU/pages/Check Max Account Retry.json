@@ -1,0 +1,39 @@
+{
+  "name": "38b423e5-6e46-49e8-b4a3-e7212aa1c960",
+  "displayName": "Check Max Account Retry",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.accountRetryCounter \u003c= $session.params.maxAccountRetries",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n  Je n'ai trouvé aucun compte associé aux informations que vous avez fournies. Veuillez réessayer.  \u003cbreak time=\"200ms\"/\u003e\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n   I couldn't find an account associated with the information you provided. Let's try again \u003cbreak time=\"200ms\"/\u003e\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "7e7954b5-2b45-4e22-b526-7c3e20dc839f"
+  }, {
+    "condition": "$session.params.accountRetryCounter \u003e $session.params.maxAccountRetries",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Max Account Retry",
+    "name": "de84ad61-ec1b-40cc-a738-4bd0a5fe1fdf"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "30f4cf27-dc57-4e84-a6af-0e7621d83a12",
+  "displayName": "technical-support",
+  "priority": 500000,
+  "description": "Handles general requests for technical assistance with services or devices.",
+  "numTrainingPhrases": 42
+}

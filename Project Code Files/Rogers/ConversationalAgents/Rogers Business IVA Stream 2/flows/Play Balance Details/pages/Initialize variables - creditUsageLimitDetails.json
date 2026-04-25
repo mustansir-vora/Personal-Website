@@ -1,0 +1,18 @@
+{
+  "name": "b5cb8707-1702-4917-a70e-97ab2f90c1ae",
+  "displayName": "Initialize variables - creditUsageLimitDetails",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check creditLimitAmount",
+    "name": "c1eaf464-4256-4079-a7ff-eebae736c3d3"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "04182d31-bda8-4dfb-a257-d1899c259183",
+  "displayName": "order-tracking",
+  "priority": 500000,
+  "description": "Handles inquiries about tracking the status of a mobile device or accessory order.",
+  "numTrainingPhrases": 72
+}

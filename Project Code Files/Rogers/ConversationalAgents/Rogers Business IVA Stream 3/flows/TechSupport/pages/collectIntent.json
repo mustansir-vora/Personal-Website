@@ -1,0 +1,52 @@
+{
+  "name": "ec5591f6-7408-4c7a-8a59-435f2d8d1cc9",
+  "displayName": "collectIntent",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "Internet support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": false
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "0f16c628-9d68-4244-a544-5c503d6cc85b"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "d5216979-eefb-47e2-a04b-77c35e381b89"
+  }, {
+    "targetFlow": "Pre Transfer",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "businessRules”"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "name": "fbddd9e0-73f6-49f3-8604-fd04e7b2ba60"
+  } ],
+  "transitionRouteGroups": [ "Global_menu_TS" ]
+}

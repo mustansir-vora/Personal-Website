@@ -1,0 +1,8 @@
+{
+  "name": "fee601c0-a24e-4641-8ef0-6a38bc5c91d0",
+  "displayName": "voluntaryMn-Business",
+  "priority": 500000,
+  "description": "This Will trigger when user says i want business product",
+  "numTrainingPhrases": 67,
+  "dtmfPattern": "1"
+}

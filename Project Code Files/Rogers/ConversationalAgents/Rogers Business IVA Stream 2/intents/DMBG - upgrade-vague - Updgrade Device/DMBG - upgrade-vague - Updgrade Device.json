@@ -1,0 +1,7 @@
+{
+  "name": "8191d6e3-2b5e-4ac9-a51e-9b8f0c2e91ef",
+  "displayName": "DMBG - upgrade-vague - Updgrade Device",
+  "priority": 500000,
+  "numTrainingPhrases": 3,
+  "dtmfPattern": "1"
+}

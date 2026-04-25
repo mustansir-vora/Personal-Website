@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@347829919:1736664545222" name="Check Tries Count" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check Tries Count" default_exit_state="Loop">
+        <exit_state name="Max Tries" conjugate="and">
+            <number operator="greater_equal">
+                <data>
+                    <element name="Increment Tries Count" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

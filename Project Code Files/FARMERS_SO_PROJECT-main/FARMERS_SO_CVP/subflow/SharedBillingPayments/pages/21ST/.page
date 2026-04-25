@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@318263801:1715185251006" name="21ST" version="6.0.1">
+<element height="55" id="Element@1931462250:1715185251006" name="21ST" type="Page Entry" width="110" x="780" y="47">
+<exit_states>
+<exit_state name="next" target="Element@1574281292:1715185276559"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1700296854:1715185276559" name="21ST_SBP_HOST_001" type="Decision" width="216" x="727" y="292">
+<exit_states>
+<exit_state name="SU" target="Element@319762070:1715185276559"/>
+<exit_state name="ER" target="Element@1258645013:1715185276559"/>
+</exit_states>
+</element>
+<element height="55" id="Element@757912630:1715185276559" name="21ST_Subflow Return" type="Subflow Return" width="217" x="1340" y="287"/>
+<element height="55" id="Element@1464348446:1715185276559" name="21ST_CANCELLED" type="Page Connector" width="190" x="918" y="709">
+<page_connector target="Element@117700350:1715185323575">21ST_CANCELLED<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@661601407:1715185276559" name="21ST_Transfer_1" type="Subflow Call" width="237" x="305" y="555">
+<subflow_call subflow_name="Transfer" target="Element@31:1710690969333">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1195194841:1715185276559"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1315688903:1715185276559" name="21ST_ACTIVE" type="Page Connector" width="153" x="568" y="702">
+<page_connector target="Element@385968765:1715185294214">21ST_ACTIVE<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1574281292:1715185276559" name="21ST_WarHead1" type="Subflow Call" width="249" x="711" y="187">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1712086138525">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1700296854:1715185276559"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1195194841:1715185276559" name="21ST_Return" type="Subflow Return" width="197" x="325" y="700"/>
+<element height="55" id="Element@319762070:1715185276559" name="21ST_PolicyStatus" type="Decision" width="259" x="706" y="550">
+<exit_states>
+<exit_state name="Others" target="Element@661601407:1715185276559"/>
+<exit_state name="CANCELLED" target="Element@1464348446:1715185276559"/>
+<exit_state name="ACTIVE" target="Element@1315688903:1715185276559"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1258645013:1715185276559" name="21ST_Transfer" type="Subflow Call" width="157" x="1085" y="291">
+<subflow_call subflow_name="Transfer" target="Element@31:1709205093586">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@757912630:1715185276559"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1946065192:1715185276559" name="21ST_REPEAT_BY_STATUS" type="Page Entry" width="248" x="1081" y="547">
+<exit_states>
+<exit_state name="next" target="Element@319762070:1715185276559"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,19 @@
+{
+  "entities": [ {
+    "value": "current balance",
+    "synonyms": [ "current balance", "montant actuel", "solde", "solde dû" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "ipp",
+    "synonyms": [ "ipp", "plan de paiement différé", "plan de paiement échelonné" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "past due balance",
+    "synonyms": [ "ce que je dois", "montant en retard", "past due balance", "solde en retard", "solde en souffrance", "solde impayé" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "ptp",
+    "synonyms": [ "arrangement de paiement prévu", "cédulé une entente de paiement", "céduler des paiements", "entente de paiement", "gérer mes paiements", "gestion des paiements", "paiement programmé", "promesse de paiement", "ptp", "solde tardif" ],
+    "languageCode": "fr-ca"
+  } ]
+}

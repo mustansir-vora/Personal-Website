@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1747337795:1729603517252" name="Phone Number" version="6.0.1">
+<element height="55" id="Element@1866530352:1729603558054" name="SIDA_MN_002_VALUE" type="Decision" width="221" x="718" y="408">
+<exit_states>
+<exit_state name="Representative" target="Element@1327380087:1730258384414"/>
+<exit_state name="Dont have it" target="Element@702266122:1729603558054">
+<bendpoint>
+<dim1 x="216" y="-48"/>
+<dim2 x="-152" y="50"/>
+</bendpoint>
+</exit_state>
+<exit_state name="VALID" target="Element@84890410:1729603558054"/>
+<exit_state name="NOINPUT" target="Element@1613562883:1729603558054">
+<bendpoint>
+<dim1 x="-170" y="36"/>
+<dim2 x="184" y="35"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1613562883:1729603558054">
+<bendpoint>
+<dim1 x="-170" y="-33"/>
+<dim2 x="184" y="-34"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@689174562:1749649833248">
+<bendpoint>
+<dim1 x="200" y="-83"/>
+<dim2 x="-168" y="15"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@84890410:1729603558054" name="Valid_Entry_PhoneNo" type="Page Connector" width="189" x="733" y="535">
+<page_connector target="Element@1999657468:1729603501859">Valid_Entry_PhoneNo<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@702266122:1729603558054" name="Transfer Entry" type="Page Connector" width="139" x="1127" y="312">
+<page_connector target="Element@216904604:1729603726604">Transfer Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1842781381:1729603558054" name="Rep_Req" type="Page Connector" width="108" x="1134" y="409">
+<page_connector target="Element@1624203201:1729603726604">Rep_Req<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@532974895:1729603558054" name="SIDA_MN_002_Entry" type="Page Entry" width="182" x="452" y="282">
+<exit_states>
+<exit_state name="next" target="Element@193910098:1729603558054"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1177361062:1729603558054" name="Phone Number" type="Page Entry" width="149" x="757" y="50">
+<exit_states>
+<exit_state name="next" target="Element@2027302183:1729603558054"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1851085718:1729603558054" name="Subflow Return_02" type="Subflow Return" width="173" x="458" y="160"/>
+<element height="50" id="Element@2027302183:1729603558054" name="IS_FOREMOST_DNIS" type="Decision" width="183" x="739" y="159">
+<exit_states>
+<exit_state name="YES" target="Element@1851085718:1729603558054"/>
+<exit_state name="NO" target="Element@193910098:1729603558054"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1613562883:1729603558054" name="Standar Error_Phone Number" type="Page Connector" width="242" x="353" y="411">
+<page_connector target="Element@1243221484:1729603744729">Standar Error_Phone Number<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@193910098:1729603558054" name="SIDA_MN_002_Call" type="Subflow Call" width="198" x="732" y="278">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653635757">
+<config>
+<argument_data>
+<data name="MenuID">SIDA_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1866530352:1729603558054"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1327380087:1730258384414" name="Copy_2_of_Global_Rep_Handling" type="Decision" width="223" x="952" y="502">
+<exit_states>
+<exit_state name="CONT" target="Element@1842781381:1729603558054"/>
+<exit_state name="TR" target="Element@702266122:1729603558054"/>
+</exit_states>
+</element>
+<element height="52" id="Element@689174562:1749649833248" name="CHECK_HT_TRANSFER_02" type="Decision" width="217" x="990" y="183">
+<exit_states>
+<exit_state name="YES" target="Element@702266122:1729603558054"/>
+<exit_state name="NO" target="Element@702266122:1729603558054">
+<bendpoint>
+<dim1 x="-31" y="97"/>
+<dim2 x="-129" y="-31"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

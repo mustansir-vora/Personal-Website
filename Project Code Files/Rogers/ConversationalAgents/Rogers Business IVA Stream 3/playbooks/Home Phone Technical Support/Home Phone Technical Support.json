@@ -1,0 +1,306 @@
+{
+  "name": "d6e7fc2d-dd4c-4136-9c6f-439d6cb3c469",
+  "displayName": "Home Phone Technical Support",
+  "goal": "Provide Home Phone Technical Support by identifying the caller, validating home phone service eligibility, confirming SIM and equipment access requirements, checking outage status, performing a pre-FAQ diagnostic, and transferring the customer to the appropriate technical support queue when required.",
+  "inputParameterDefinitions": [ {
+    "name": "customerIdentified",
+    "description": "flag to identify the caller is identified or not ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "completedSSName",
+    "description": "name of completed ss",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": "name of the attemptedSSName",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "flag for completed self service",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "selfServiceAttempted",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "subscriptionsList",
+    "description": "contains all subscriptions values",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionsList",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "counterValue",
+    "description": "counter value",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "counterValue",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "globalAgentRequestCounter",
+    "description": "counter",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "globalAgentRequestCounter",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "completedSSName",
+    "description": "name of the completed ss names",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": "name of the ss attempted",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "flag to check ss is completed or not ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "flag to check the ss is attempted or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "userInputHPTS",
+    "description": "for mainmenu and agent",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "userInputHPTS",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "hasNoHPprofile",
+    "description": "flag for checking if the profile is available or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "hasNoHPprofile",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "noWHBPhone",
+    "description": "flag to check wireless home phone is available or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "noWHBPhone",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "reportingVar_attemptedSSName",
+    "description": "for report",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "reportingVar_completedSSName",
+    "description": "reportingVar_completedSSName for report",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "it is a object value",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "counterValue",
+    "description": "counter value",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "counterValue",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "globalAgentRequestCounter",
+    "description": "counter",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "globalAgentRequestCounter",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  } ],
+  "tokenCount": 1125,
+  "instruction": {
+    "steps": [ {
+      "text": "# General Rule:\n- Only one try should be given for both no match and no input scenarios\n- At any point during the call\n  - if user provides \"main menu\" or presses 9\n    - set $userInputHPTS as mainmenu, return the call\n  - if user provides \"agent\" or \"representative\" or presses 0\n    - set $userInputHPTS as agent, return the call\n- Step 1. identify the caller\n    - if $customerIdentified is true goto Step 3\n    - otherwise go to Step 2\n- Step 2. business phone sim check\n    - give this intial prompt to caller as \"Does your home phone have a SIM?\"\n    - give only one try for no input and no match\n    - for every no match retry give this prompt \"I'm sorry, I didn't get that. If your home phone has a SIM, say yes or press 1. If not, say no, or press 2.\"\n    - for every no input retry give this prompt \"I'm sorry, I couldn't hear that. If your home phone has a SIM, say yes or press 1. If not, say no, or press 2.\"\n    - Accept DTMF input here and consider 1 or 2 or 0 or 9 as valid input\n    - if user provides valid input\n        - if user provides don't know\n            - play \"Okay. Let's continue.\"\n            - goto Step 3\n        - if user provides no or 2\n            - goto Step 3\n        - if user provides yes or 1\n            - set $savedIntent as \"WHP-Support\"\n            - take to Step 3\n        - if user provides \"main menu\" or 9\n            - set $userInputHPTS as mainmenu, return the call\n        - if user provides \"agent\" or \"representative\" or 0 ,\n            - set $counterValue `check_saved_intent`\n            - if $counterValue is 0\n                - set $userInput as agent,return the call\n            - if $counterValue is 1\n                - give the prompt as \"Our specialists are unable to assist with this transaction, but I can help you with it here in the automated system. Let's try again.\"\n                - set $globalAgentRequestCounter as $counterValue\n                - goto Step 4\n            - if $counterValue is 2\n                - set $userInput as agent,return the call\n        - if user provides \"main menu\" or presses 9\n            - set $userInput as mainmenu, return the call\n    - if user provides any value other than the above value , it is invalid input\n        - apply the no match no input rule for that and give only one retry\n    - otherwise if maxexceeded goto Step 3\n- Step 3. set business phone support routing\n    - Set $selfServiceAttempted as true\n    - if $attemptedSSName is empty or equal to null\n        - Set $attemptedSSName as \"passive-techSupportHomePhone\"\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - if $attemptedSSName is not empty or equal to null\n        - Set $attemptedSSName as $sys.func.CONCATENATE(\"$session.params.attemptedSSName\",\",passive-techSupportHomePhone\")\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - Set $selfServiceCompleted as true\n    - if $completedSSName is empty or equal to null\n        - Set $completedSSName as \"passive-techSupportHomePhone\"\n        - Set $reportingVar_completedSSName as $completedSSName\n    - if $completedSSName is not empty or equal to null\n        - Set $completedSSName as $sys.func.CONCATENATE(\"$session.params.completedSSName\",\",passive-techSupportHomePhone\")\n        - Set $reportingVar_completedSSName as $completedSSName\n    - play \"To troubleshoot your issue, you'll need to have access to your home phone equipment. Please ensure you're calling from a different phone than the one you need help with.\"\n    - pause 1.5 seconds\n    - goto Step 4\n- Step 4.check product has the business phone\n    - if $numberOfPhone is 0 or null or NA or empty\n        - set $hasNoHPprofile as true ,return the call\n    - if $numberOfPhone is greater than 0 and `check_wireless_home_phone` is true\n        - set $savedIntent as \"WHP-Support\"\n        - set $subscriptionAccountDetails as `get_account_details`,return the call\n    - otherwise \n        - set $noWHBPhone as true\n        - set $subscriptionAccountDetails as `get_account_details`,return the call"
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "codeBlock": {
+    "code": "@Action\r\ndef check_wireless_home_phone() -\u003e bool:\r\n    \"\"\"Checks if the given subscriptionSerialNumber exists in session subscriptions.\"\"\"\r\n    subscriptions = state[\"$session.params.subscriptionsList\"]\r\n    if not subscriptions:\r\n        return False\r\n    for item in subscriptions:\r\n      if item.get(\"serviceCategory\") == \"Home Phone\":\r\n            if item.get(\"subscriptionName\") == \"C\":\r\n                return True\r\n    return False\r\n\r\n@Action\r\ndef get_account_details() -\u003e dict:\r\n    \"\"\"Get linkedAccountNumber and linkedAccountSystem for Internet service\"\"\"\r\n\r\n    subscriptions = state[\"$session.params.subscriptionsList\"]\r\n\r\n    result = {\r\n        \"linkedAccountNumber\": None,\r\n        \"linkedAccountSystem\": None\r\n    }\r\n\r\n    if not subscriptions:\r\n        return result\r\n\r\n    for item in subscriptions:\r\n        service_category = item.get(\"serviceCategory\", {}).get(\"english\", \"\").strip().lower()\r\n\r\n        if service_category == \"internet\":\r\n            result[\"linkedAccountNumber\"] = item.get(\"linkedAccountNumber\")\r\n            result[\"linkedAccountSystem\"] = item.get(\"linkedAccountSystem\")\r\n            return result\r\n\r\n    return result\r\n\r\n\r\n@Action\r\ndef check_saved_intent() -\u003e int:\r\n    \"\"\"Update counter based on intent and current value\"\"\"\r\n    \r\n    intent_map = state[\"$session.params.forcedSelfServIntent\"]\r\n\r\n    counter = state[\"$session.params.globalAgentRequestCounter\"]\r\n    saved_intent = state[\"$session.params.savedIntent\"]\r\n\r\n    if intent_map[saved_intent] == True:\r\n        if counter == 0:\r\n            counter += 1\r\n            return counter\r\n        else:\r\n            counter +=1\r\n            return counter\r\n    else:\r\n        return counter"
+  },
+  "inlineActions": [ "check_wireless_home_phone", "get_account_details", "check_saved_intent" ]
+}

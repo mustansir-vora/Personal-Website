@@ -1,0 +1,21 @@
+{
+  "name": "81c160de-0394-4f8a-875d-01ff64f5e1f6",
+  "displayName": "Return From PTP Update Multiple Options 1",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updatemultipleFirstInstall",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Date",
+    "name": "aac4e31a-cc46-4159-bbe8-8aab3051fcc3"
+  } ]
+}

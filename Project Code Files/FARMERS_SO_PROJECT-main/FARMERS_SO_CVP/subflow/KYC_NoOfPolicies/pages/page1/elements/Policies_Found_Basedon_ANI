@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1969667870:1707816593267" name="Policies_Found_Basedon_ANI" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Policies_Found_Basedon_ANI" default_exit_state="ER">
+        <exit_state name="S_SINGLE_POLICY_FOUND" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_NOOF_POLICIES_ACCLINKANI_EXITSTATE" />
+                </data>
+                <constant_string value="S_SINGLE_POLICY_FOUND" />
+            </string>
+        </exit_state>
+        <exit_state name="S_MULTIPLE_POLICIES_SINGLE_PRODUCTTYPE_FOUND" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_NOOF_POLICIES_ACCLINKANI_EXITSTATE" />
+                </data>
+                <constant_string value="S_MULTIPLE_POLICIES_SINGLE_PRODUCTTYPE_FOUND" />
+            </string>
+        </exit_state>
+        <exit_state name="S_MULTIPLE_POLICIES_MULTIPLE_PRODUCTTYPE_FOUND" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_NOOF_POLICIES_ACCLINKANI_EXITSTATE" />
+                </data>
+                <constant_string value="S_MULTIPLE_POLICIES_MULTIPLE_PRODUCTTYPE_FOUND" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

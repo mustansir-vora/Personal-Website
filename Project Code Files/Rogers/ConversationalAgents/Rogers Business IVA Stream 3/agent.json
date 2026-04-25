@@ -1,0 +1,101 @@
+{
+  "displayName": "Rogers Business IVA Stream 3",
+  "defaultLanguageCode": "en",
+  "supportedLanguageCodes": [
+    "fr",
+    "fr-ca"
+  ],
+  "timeZone": "America/New_York",
+  "enableLogging": true,
+  "projectNumber": 106267503728,
+  "speechToTextSettings": {
+    "enableSpeechAdaptation": true
+  },
+  "startFlow": "Call Start",
+  "enableStackdriverLogging": true,
+  "enableSpellCorrection": true,
+  "advancedSettings": {
+    "enabled": true,
+    "audioExportGcsDestination": {
+      "uri": "gs://gcp-yul-csb-cct-iva-r4b-callrecording-qa-01"
+    },
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 5
+      },
+      "useTimeoutBasedEndpointing": true,
+      "models": [
+        {
+          "key": "en",
+          "value": "telephony_short"
+        },
+        {
+          "key": "fr-ca",
+          "value": "telephony_short"
+        }
+      ],
+      "overrideRequestSpeechModel": true
+    },
+    "playbackInterruptionSettings": {
+      "allowPlaybackInterruption": true
+    },
+    "dtmfSettings": {
+      "enabled": true,
+      "customRule": {},
+      "interdigitTimeoutDuration": {
+        "seconds": 5
+      },
+      "endpointingTimeoutDuration": {
+        "seconds": 2
+      }
+    },
+    "loggingSettings": {
+      "enableStackdriverLogging": true,
+      "enableInteractionLogging": true
+    },
+    "speechAdaptationSettings": {}
+  },
+  "dataResidencyOption": "DATA_RESIDENCY_IN_USE_COMPLIANT",
+  "speakerIdSettings": {},
+  "textToSpeechSettings": {
+    "synthesizeSpeechConfigs": [
+      {
+        "key": "en",
+        "value": {
+          "speakingRate": 1,
+          "pitch": 2,
+          "voice": {
+            "name": "en-US-Chirp3-HD-Sulafat",
+            "ssmlGender": "SSML_VOICE_GENDER_FEMALE"
+          }
+        }
+      },
+      {
+        "key": "fr",
+        "value": {
+          "speakingRate": 1,
+          "pitch": 2,
+          "voice": {}
+        }
+      },
+      {
+        "key": "fr-ca",
+        "value": {
+          "speakingRate": 0.84999999999999998,
+          "pitch": 2,
+          "voice": {
+            "name": "fr-CA-Chirp3-HD-Aoede",
+            "ssmlGender": "SSML_VOICE_GENDER_FEMALE"
+          }
+        }
+      }
+    ],
+    "overrideRequestSynthesizeSpeechConfig": true
+  },
+  "duplexSettings": {},
+  "answerFeedbackSettings": {},
+  "webClientSettings": {
+    "boxBorderRadius": "0"
+  }
+}

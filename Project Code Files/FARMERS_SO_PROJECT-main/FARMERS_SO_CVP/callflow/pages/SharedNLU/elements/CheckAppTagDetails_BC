@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@154897721:1730744888313" name="CheckAppTagDetails_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.CheckAppTagDetails_BC</source>
+</config>
+</decision>

@@ -1,0 +1,24 @@
+{
+  "name": "0f565222-e311-46fb-93ca-289ccd2aeec7",
+  "displayName": "Create Variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"active-interceptBalance\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Get Billing Profile",
+    "name": "4173a6c3-015c-43c8-ac7a-491a05a53b8b"
+  } ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1773322979:1707393801357" name="EM_PA_001" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.farmers.audio.DynamicAudioAdmin</dynamic>
+<audio>
+<audio_group barge_in="false" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.EM_PA_001_WAV}"><![CDATA[{Data.Session.EM_PA_001_TTS}]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="Before" name="S_WELCOME_PLAYED">YES</data>
+</session_data>
+</config>
+</voice_element>

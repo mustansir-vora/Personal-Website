@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "plane",
+    "synonyms": [ "plane", "flight" ],
+    "languageCode": "en"
+  }, {
+    "value": "cruise",
+    "synonyms": [ "cruise", "boat" ],
+    "languageCode": "en"
+  } ]
+}

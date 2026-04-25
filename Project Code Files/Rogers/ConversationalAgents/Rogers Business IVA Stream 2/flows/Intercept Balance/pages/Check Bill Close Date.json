@@ -1,0 +1,25 @@
+{
+  "name": "2a8f2574-ee14-442e-87a1-631d98568656",
+  "displayName": "Check Bill Close Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.billingPaymentDetails.billingCycle.billCloseDate = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Payment",
+    "name": "0261474d-abe9-4c55-aeaf-22e057e17231"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Bill Close Date",
+    "name": "8859710e-a48c-4254-b7a3-2b2d5a7c8b4f"
+  } ]
+}

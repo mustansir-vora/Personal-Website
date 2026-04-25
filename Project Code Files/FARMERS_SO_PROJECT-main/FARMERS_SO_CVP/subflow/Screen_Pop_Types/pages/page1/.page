@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1224620848:1707392709343" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1707392709343" name="Screen_Pop_Types" type="Subflow Start" width="192" x="814" y="53">
+<exit_states>
+<exit_state name="next" target="Element@1828963755:1707817763789"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1828963755:1707817763789" name="ScreenPopUp_Utilize_Group" type="Decision" width="267" x="778" y="166">
+<exit_states>
+<exit_state name="ER" target="Element@1298608433:1711215138734"/>
+<exit_state name="A_CISCO_SRM_CTI_API" target="Element@1558573089:1707818013614"/>
+<exit_state name="A_KM2_API" target="Element@524869019:1707818031824"/>
+<exit_state name="A_CLEAR_HARBOR" target="Element@1853076153:1707818071005"/>
+<exit_state name="A_FWS_SRM_CTI" target="Element@2052221272:1707818099148"/>
+<exit_state name="A_COMM_SRM_CTI" target="Element@496352356:1707818218882"/>
+<exit_state name="A_APEX" target="Element@536691992:1707818199353"/>
+<exit_state name="A_AFNI" target="Element@1064855345:1707818114124"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1558573089:1707818013614" name="SPT_HOST_001" type="Decision" width="169" x="81" y="214">
+<exit_states>
+<exit_state name="SU" target="Element@416706633:1707818258910"/>
+<exit_state name="ER" target="Element@416706633:1707818258910"/>
+</exit_states>
+</element>
+<element height="55" id="Element@524869019:1707818031824" name="SPT_HOST_002" type="Decision" width="169" x="326" y="295">
+<exit_states>
+<exit_state name="SU" target="Element@416706633:1707818258910"/>
+<exit_state name="ER" target="Element@416706633:1707818258910"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1853076153:1707818071005" name="SPT_HOST_003" type="Decision" width="169" x="609" y="379">
+<exit_states>
+<exit_state name="SU" target="Element@416706633:1707818258910"/>
+<exit_state name="ER" target="Element@416706633:1707818258910"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2052221272:1707818099148" name="SPT_HOST_004" type="Decision" width="169" x="838" y="505">
+<exit_states>
+<exit_state name="SU" target="Element@416706633:1707818258910"/>
+<exit_state name="ER" target="Element@416706633:1707818258910"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1064855345:1707818114124" name="SPT_HOST_005" type="Decision" width="169" x="1148" y="347">
+<exit_states>
+<exit_state name="SU" target="Element@416706633:1707818258910"/>
+<exit_state name="ER" target="Element@416706633:1707818258910"/>
+</exit_states>
+</element>
+<element height="55" id="Element@536691992:1707818199353" name="SPT_HOST_006" type="Decision" width="169" x="1452" y="280">
+<exit_states>
+<exit_state name="SU" target="Element@416706633:1707818258910">
+<bendpoint>
+<dim1 x="50" y="441"/>
+<dim2 x="656" y="-39"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@416706633:1707818258910">
+<bendpoint>
+<dim1 x="50" y="441"/>
+<dim2 x="656" y="-39"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@496352356:1707818218882" name="SPT_HOST_007" type="Decision" width="169" x="1595" y="190">
+<exit_states>
+<exit_state name="SU" target="Element@416706633:1707818258910">
+<bendpoint>
+<dim1 x="11" y="552"/>
+<dim2 x="760" y="-18"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@416706633:1707818258910">
+<bendpoint>
+<dim1 x="10" y="548"/>
+<dim2 x="759" y="-22"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@416706633:1707818258910" name="Subflow Return_01" type="Subflow Return" width="198" x="831" y="760"/>
+<element height="55" id="Element@1298608433:1711215138734" name="Subflow Return_02" type="Subflow Return" width="209" x="1215" y="65"/>
+</page>

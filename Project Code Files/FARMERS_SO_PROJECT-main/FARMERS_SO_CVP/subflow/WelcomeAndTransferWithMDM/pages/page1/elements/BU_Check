@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@579654589:1752160752921" name="BU_Check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.BU_Check_MDM</source>
+</config>
+</decision>

@@ -1,0 +1,18 @@
+{
+  "name": "77365d7a-832f-4149-8491-4fd0cc55035c",
+  "displayName": "Initialize variables - pendingPTPDetails ",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check pendingPTP",
+    "name": "7f03d204-414f-4319-b0a1-7a496e5741fc"
+  } ]
+}

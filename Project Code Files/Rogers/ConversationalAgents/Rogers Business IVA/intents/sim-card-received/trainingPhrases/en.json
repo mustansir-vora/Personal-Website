@@ -1,0 +1,199 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "The "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " arrived, and I want to make sure it’s ready for service before using it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just got my "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " and need assistance adding it to my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received the "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " I ordered, and I’m not sure how to set it up for my phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just got my "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " and want to transfer my number from the old device."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " arrived, and I need to activate it for my "
+    }, {
+      "text": "mobile line"
+    }, {
+      "text": " immediately."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received my new "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "today"
+    }, {
+      "text": " and need guidance on inserting it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just got the "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " and want to confirm it will work with my existing plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got my "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": ", but my phone isn’t recognizing it properly."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just received my "
+    }, {
+      "text": "SIM cards",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " for my phone, and I’m calling to verify activation steps."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " I ordered has arrived, and I need help configuring it on my device."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just received the "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": ", and I want to make sure it’s activated for service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got my "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " in the mail, and I need assistance transferring my number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received the new "
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " for my line, and I’m unsure how to insert it "
+    }, {
+      "text": "correctly"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " arrived "
+    }, {
+      "text": "today"
+    }, {
+      "text": ", and I was told to call to get it set up."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I just received my "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " and need help activating it on my phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

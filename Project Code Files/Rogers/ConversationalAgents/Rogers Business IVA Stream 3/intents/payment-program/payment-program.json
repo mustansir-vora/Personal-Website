@@ -1,0 +1,7 @@
+{
+  "name": "e17efc8e-3c27-4056-a879-34ffa9cc483f",
+  "displayName": "payment-program",
+  "priority": 500000,
+  "description": "Handles requests or questions about available payment programs",
+  "numTrainingPhrases": 50
+}

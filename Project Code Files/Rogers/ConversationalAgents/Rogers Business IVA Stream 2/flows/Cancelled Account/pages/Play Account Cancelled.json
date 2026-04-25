@@ -1,0 +1,32 @@
+{
+  "name": "13a222d6-685b-4e90-8026-5158ba6c283e",
+  "displayName": "Play Account Cancelled",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I see your account is cancelled, but there's an outstanding balance." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Je vois que votre compte est annulé, mais qu’il reste un solde impayé." ]
+      },
+      "languageCode": "fr-ca"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "selfServiceCompleted",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Make Payment",
+    "name": "588efeff-7201-4ce5-828b-edfef4945f47"
+  } ]
+}

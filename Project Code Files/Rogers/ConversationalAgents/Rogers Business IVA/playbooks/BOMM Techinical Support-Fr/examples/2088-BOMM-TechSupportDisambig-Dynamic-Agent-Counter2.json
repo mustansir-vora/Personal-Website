@@ -1,0 +1,44 @@
+{
+  "name": "799e192f-aa7e-4963-bfe2-8ea4b27f0d7b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire Internet,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux parler à l'agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "1"
+      },
+      "outputActionParameters": {
+        "result": "2"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "globalAgentRequestCounter": "1",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixFr": "Internet,Télévision,Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "globalAgentRequestCounter": "2",
+      "userInputBMTS": "agent"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-Agent-Counter2",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 193,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

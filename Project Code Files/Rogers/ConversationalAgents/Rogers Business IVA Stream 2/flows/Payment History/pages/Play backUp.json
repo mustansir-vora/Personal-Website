@@ -1,0 +1,21 @@
+{
+  "name": "5d4c66aa-0520-446b-ad34-3d6968bfc738",
+  "displayName": "Play backUp",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.paymentIndex",
+      "value": "$sys.func.ADD($session.params.paymentIndex, -1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check isTheNewestPayment",
+    "name": "39b694a5-701b-4430-b29b-a69157eb30fb"
+  } ]
+}

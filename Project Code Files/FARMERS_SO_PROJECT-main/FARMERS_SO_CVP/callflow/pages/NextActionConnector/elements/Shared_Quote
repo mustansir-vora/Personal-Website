@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@449576988:1713320817017" name="Shared_Quote" version="6.0.1">
+<subflow_call subflow_name="SharedQuotes" target="Element@31:1712303989274">
+<config/>
+</subflow_call>
+</connector>

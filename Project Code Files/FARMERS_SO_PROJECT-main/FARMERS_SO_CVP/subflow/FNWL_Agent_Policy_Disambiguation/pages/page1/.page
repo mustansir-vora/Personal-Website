@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@345382449:1733743541037" name="page1" version="6.0.1">
+<element height="50" id="Element@31:1733743541037" name="FNWL_Agent_Policy_Disambiguation" type="Subflow Start" width="291" x="523" y="50">
+<exit_states>
+<exit_state name="next" target="Element@1793400427:1733743571454"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1793400427:1733743571454" name="LIFE_Policy_Type_Check" type="Decision" width="202" x="568" y="159">
+<exit_states>
+<exit_state name="True" target="Element@274841769:1733743670802"/>
+<exit_state name="False" target="Element@1866519022:1737047573977"/>
+</exit_states>
+</element>
+<element height="50" id="Element@274841769:1733743670802" name="Is_More_Than_1_Policy" type="Decision" width="199" x="568" y="268">
+<exit_states>
+<exit_state name="YES" target="Element@885217839:1733744388900"/>
+<exit_state name="NO" target="Element@2116722625:1733743778298"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2116722625:1733743778298" name="Check_Policy_Type" type="Decision" width="170" x="582" y="371">
+<exit_states>
+<exit_state name="VUL" target="Element@965109827:1735630017070"/>
+<exit_state name="IUL" target="Element@701137285:1733744028922"/>
+<exit_state name="All Others" target="Element@1716405883:1733744155177"/>
+</exit_states>
+</element>
+<element height="50" id="Element@701137285:1733744028922" name="Policy Issue Date" type="Decision" width="160" x="585" y="499">
+<exit_states>
+<exit_state name="Before 10/1/2019" target="Element@785756736:1735629853341"/>
+<exit_state name="After10/1/2019" target="Element@563347103:1733744461442"/>
+</exit_states>
+</element>
+<element height="50" id="Element@600362587:1733744097155" name="FNWL_Shared_Transfer" type="Subflow Call" width="199" x="1160" y="562">
+<subflow_call subflow_name="FNWL_Transfer" target="Element@31:1749637739647">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1167175716:1733745036730"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1716405883:1733744155177" name="Book_Type_Check" type="Decision" width="166" x="304" y="382">
+<exit_states>
+<exit_state name="F" target="Element@885217839:1733744388900"/>
+<exit_state name="M" target="Element@563347103:1733744461442"/>
+<exit_state name="B" target="Element@563347103:1733744461442">
+<bendpoint>
+<dim1 x="70" y="94"/>
+<dim2 x="61" y="-102"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Blank/Null" target="Element@563347103:1733744461442">
+<bendpoint>
+<dim1 x="-60" y="97"/>
+<dim2 x="-69" y="-99"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@885217839:1733744388900" name="FNWL_FrontbookAgentIVRMenu" type="Subflow Call" width="262" x="256" y="263">
+<subflow_call subflow_name="FNWL_FrontbookAgentIVRMenu" target="Element@31:1733744642102">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1167175716:1733745036730">
+<bendpoint>
+<dim1 x="-243" y="1"/>
+<dim2 x="-773" y="-432"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-155" y="429"/>
+<dim2 x="-1026" y="0"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-187" y="430"/>
+<dim2 x="-579" y="1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@563347103:1733744461442" name="FNWL_MidBackbookAgentIVRMenu" type="Subflow Call" width="285" x="254" y="578">
+<subflow_call subflow_name="FNWL_MidBackbookAgentIVRMenu" target="Element@31:1733744634203">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1167175716:1733745036730">
+<bendpoint>
+<dim1 x="1" y="115"/>
+<dim2 x="-861" y="1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1167175716:1733745036730" name="Subflow Return_01" type="Subflow Return" width="173" x="1173" y="693"/>
+<element height="50" id="Element@560117378:1735629711341" name="FWS_FGIA_MENU" type="Subflow Call" width="164" x="1448" y="157">
+<subflow_call subflow_name="FWS_FGIA" target="Element@31:1735629721007">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1167175716:1733745036730">
+<bendpoint>
+<dim1 x="140" y="-4"/>
+<dim2 x="410" y="-537"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="139" y="534"/>
+<dim2 x="410" y="-2"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@785756736:1735629853341" name="setMSP_IssueDateAgentDisambig" type="Decision" width="272" x="903" y="503">
+<exit_states>
+<exit_state name="SU" target="Element@60624943:1749637795051">
+<bendpoint>
+<dim1 x="71" y="-78"/>
+<dim2 x="-95" y="54"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@60624943:1749637795051">
+<bendpoint>
+<dim1 x="101" y="-50"/>
+<dim2 x="-65" y="82"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@965109827:1735630017070" name="setMSP_PolicyTypeAgentDisambig" type="Decision" width="277" x="806" y="372">
+<exit_states>
+<exit_state name="SU" target="Element@60624943:1749637795051">
+<bendpoint>
+<dim1 x="140" y="-19"/>
+<dim2 x="-121" y="-18"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@60624943:1749637795051">
+<bendpoint>
+<dim1 x="140" y="18"/>
+<dim2 x="-121" y="19"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@2068353877:1737041335942" name="IS_FNWL_DNIS" type="Decision" width="147" x="1184" y="158">
+<exit_states>
+<exit_state name="YES" target="Element@60624943:1749637795051"/>
+<exit_state name="NO" target="Element@560117378:1735629711341"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1866519022:1737047573977" name="setMSP_NonLifePolicyAgentDisambig" type="Decision" width="298" x="836" y="157">
+<exit_states>
+<exit_state name="SU" target="Element@2068353877:1737041335942">
+<bendpoint>
+<dim1 x="176" y="-22"/>
+<dim2 x="-95" y="-23"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@2068353877:1737041335942">
+<bendpoint>
+<dim1 x="175" y="21"/>
+<dim2 x="-90" y="21"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@60624943:1749637795051" name="Set_RLUS_Flag" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="145" x="1186" y="288">
+<exit_states>
+<exit_state name="done" target="Element@600362587:1733744097155"/>
+</exit_states>
+</element>
+</page>

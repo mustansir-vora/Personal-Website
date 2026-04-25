@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@721367139:1715185376633" name="21ST_SBP_MN_007_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.FWS_SBP_MN_007</source>
+</config>
+</decision>

@@ -1,0 +1,129 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux transférer "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": " Internet "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " nouvel endroit."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je déménage — est?ce que je peux garder "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " forfait "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de changer l’adresse de "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je déménage et j’ai besoin d’aide avec "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est?ce que je peux déplacer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " nouvel emplacement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux transférer "
+    }, {
+      "text": "mes services à une nouvelle"
+    }, {
+      "text": " adresse."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je déménage et j’ai besoin de mettre à jour "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Transférer le compte "
+    }, {
+      "text": "à une"
+    }, {
+      "text": " nouvelle adresse."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Changer l’adresse dans "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je déménage et je veux transférer "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": " à ma nouvelle maison."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai "
+    }, {
+      "text": "Besoin"
+    }, {
+      "text": " de mettre à jour l’adresse dans "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

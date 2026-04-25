@@ -1,0 +1,62 @@
+{
+  "name": "5bca746a-418a-496a-9687-c1d8fb8a857b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie résidentielle. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide."
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_wireless_home_phone",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": "false"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Other",
+          "linkedAccountSystem": "532909633"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfPhone": "2"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportHomePhone",
+      "noWHBPhone": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Other",
+        "linkedAccountSystem": "532909633"
+      }
+    }
+  },
+  "displayName": "customerIdentified true noOfphones zero no WHP ",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 351,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

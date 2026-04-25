@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1221957654:1730261606836" name="SET_TI_SCORE_HIGH" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">HIGH</setting>
+<setting name="sessNames">S_TI_SCORE</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="S_AGENT_IDENTIFIED">true</data>
+</session_data>
+</config>
+</action_element>

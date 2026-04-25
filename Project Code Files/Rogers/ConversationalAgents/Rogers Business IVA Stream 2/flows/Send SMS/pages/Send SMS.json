@@ -1,0 +1,19 @@
+{
+  "name": "218dc1d6-9a01-467d-a585-c656a626834f",
+  "displayName": "Send SMS",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callend",
+    "tag": "sendSmsMessage"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\" OR $session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SMS Wrap Up",
+    "name": "f0893506-a860-4d97-9495-80ea836bbcc7"
+  } ]
+}

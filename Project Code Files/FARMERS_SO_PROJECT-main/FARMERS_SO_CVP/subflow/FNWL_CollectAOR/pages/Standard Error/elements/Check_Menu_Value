@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@808849528:1755616716992" name="Check_Menu_Value" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_Menu_Value">
+        <exit_state name="NOMATCH" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FNWL_MN_002_VALUE" />
+                </data>
+                <constant_string value="NOMATCH" />
+            </string>
+        </exit_state>
+        <exit_state name="NOINPUT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FNWL_MN_002_VALUE" />
+                </data>
+                <data>
+                    <session name="NOINPUT" />
+                </data>
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

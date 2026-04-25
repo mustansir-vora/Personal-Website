@@ -1,0 +1,105 @@
+{
+  "name": "b5f00b50-937b-42a8-9e52-d2fbbf9e1d55",
+  "displayName": "Max Account Retry",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.idType = \"phone\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nous n’avons pas pu trouver votre compte. Vous pouvez essayer avec votre numéro de téléphone." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "We couldn't find your account. Let's continue for now" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unIdentifiedCustomer"
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "1eb3167e-e6b8-497a-853e-c913691e8106"
+  }, {
+    "condition": "$session.params.idType != \"phone\" AND $session.params.phoneNumberAskedFlag = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nous n’avons pas pu trouver votre compte. Continuons pour l’instant." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "We couldn't find your account. Let's continue for now" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unIdentifiedCustomer"
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "64e9e87a-0ded-4adb-86e5-a3dc3825c6bf"
+  }, {
+    "condition": "$session.params.idType != \"phone\" AND $session.params.phoneNumberAskedFlag != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "phoneNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.isApiInvoked = true",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Nous n’avons pas pu trouver votre compte. Vous pouvez essayer avec votre numéro de téléphone." ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "I am having an issue finding your account. Let's try something else." ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Nous n'avons pas pu trouver votre compte. Vous pouvez essayer d'utiliser votre numéro de téléphone" ]
+              },
+              "languageCode": "fr-ca"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "We couldn't find your account. You can try using your phone number" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "431b67d9-66a4-4f01-8a0c-2b25500f7542"
+  } ]
+}

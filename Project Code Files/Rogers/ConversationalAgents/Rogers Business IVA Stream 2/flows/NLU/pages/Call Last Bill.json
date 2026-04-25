@@ -1,0 +1,21 @@
+{
+  "name": "ee0013e6-ecee-4035-a500-e78b5c2fe88e",
+  "displayName": "Call Last Bill",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.app\", \"config\", \"lastInvoiceDetailsEnabled\")",
+        "value": true
+      }, {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.subflowInputs\", \"accountBalance\", \"callLastInvoiceDetailsSubflow\")",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Play Balance Details",
+    "name": "c01f13e9-7c36-4f6c-a73d-0391b88cbb37"
+  } ]
+}

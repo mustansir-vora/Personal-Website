@@ -1,0 +1,96 @@
+{
+  "name": "0d4fb036-f820-4079-9899-dfb70f3d3861",
+  "displayName": "Intent Group - sales",
+  "transitionRoutes": [ {
+    "intent": "product-inquiry-phone",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "product-inquiry-phone"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "248c3ecd-95f8-4e4d-a56d-6f38bff61a85"
+  }, {
+    "intent": "add-a-product",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "add-a-product"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "94a691c2-70d3-4ce6-bf7b-3bcf186dac37"
+  }, {
+    "intent": "inquiry-O365",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "inquiry-O365"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "c127ddf7-169a-490c-ac90-24ab140c64cb"
+  }, {
+    "intent": "sales-satellite",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "sales-satellite"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "34ea53ec-fcb4-4278-9ace-6a42d00ab09e"
+  }, {
+    "intent": "upgrade-product",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "upgrade-product"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d6182a29-f91f-45b3-a956-2bbf1748e5e1"
+  }, {
+    "intent": "product-inquiries",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "product-inquiries"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "f1e71637-ec6f-45ab-b5ef-5f37433b9a7f"
+  }, {
+    "intent": "upgrade-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "upgrade-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "cf55e809-a5fe-4fce-8c78-4d48f7ce181b"
+  } ]
+}

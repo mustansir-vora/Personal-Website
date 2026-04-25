@@ -1,0 +1,39 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je déménage et je n’ai pas besoin de mes téléphones."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je passe au sans-fil et j’annule mes téléphones de "
+    }, {
+      "text": "bureau"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai "
+    }, {
+      "text": "deux"
+    }, {
+      "text": " employés qui ont quitté la compagnie et je dois annuler leurs téléphones."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour annuler le téléphone sans fil de "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

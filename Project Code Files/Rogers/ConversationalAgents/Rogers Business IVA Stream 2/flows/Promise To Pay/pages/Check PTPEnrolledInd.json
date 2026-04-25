@@ -1,0 +1,40 @@
+{
+  "name": "4acf4e0e-ea95-4e45-b813-80e86c4ad6a9",
+  "displayName": "Check PTPEnrolledInd",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.ptpEnrolledInd = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"active-updatePTP\")"
+      } ]
+    },
+    "targetPage": "Check Total Installments",
+    "name": "fde805f8-39da-4f4e-94cf-9b2dbed26240"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"active-createPTP\")"
+      }, {
+        "parameter": "savedIntent",
+        "value": "payment-arrangement"
+      } ]
+    },
+    "targetPage": "Check PTPCreate Eligibility",
+    "name": "b2997f21-8483-4952-9dbc-2e0eb0647960"
+  } ]
+}

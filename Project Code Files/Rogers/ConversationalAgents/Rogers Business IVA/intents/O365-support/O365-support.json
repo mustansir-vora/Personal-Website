@@ -1,0 +1,7 @@
+{
+  "name": "157abacb-89a7-4e11-bb01-a901dd34570b",
+  "displayName": "O365-support",
+  "priority": 500000,
+  "description": "Handles calls pertaining to T2 O365 or RBAM Issues.",
+  "numTrainingPhrases": 10
+}

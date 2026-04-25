@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1581228507:1747831295183" name="KYC commercial flow" version="6.0.1">
+<subflow_call subflow_name="KYC_Commercial" target="Element@31:1709732792535">
+<config/>
+</subflow_call>
+</connector>

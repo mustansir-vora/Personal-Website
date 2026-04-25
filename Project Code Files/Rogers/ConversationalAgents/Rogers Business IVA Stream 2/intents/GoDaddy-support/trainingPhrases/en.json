@@ -1,0 +1,49 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "We’re getting SSL certificate errors on our GoDaddy-hosted site."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can’t access my "
+    }, {
+      "text": "GoDaddy"
+    }, {
+      "text": " dashboard through RBAM."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The DNS settings aren’t updating—can you assist?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need help renewing my GoDaddy subscription in the Rogers portal."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My website hosted on GoDaddy is down—can you confirm if there’s an outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re having trouble setting up our GoDaddy email accounts."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I bought GoDaddy through Rogers, but my domain isn’t working—I need help."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

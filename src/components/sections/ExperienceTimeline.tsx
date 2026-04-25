@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
 
 const experiences = [
@@ -128,47 +128,56 @@ export default function ExperienceTimeline() {
                   {/* Content Card */}
                   <div className={`w-full md:w-1/2 pl-8 md:pl-0 ${isEven ? 'md:pr-16 text-left md:text-right' : 'md:pl-16 text-left'}`}>
                     <motion.div 
-                      layout
                       onClick={() => setExpandedId(isExpanded ? null : exp.id)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setExpandedId(isExpanded ? null : exp.id);
+                        }
+                      }}
+                      role="button"
+                      tabIndex={0}
                       initial={{ opacity: 0, x: isEven ? 50 : -50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true, margin: "-50px" }}
-                      className="glass p-6 md:p-8 rounded-3xl cursor-pointer hover:bg-white/10 transition-colors border border-white/10 hover:border-emerald-500/50"
+                      className="glass p-6 md:p-8 rounded-3xl cursor-pointer hover:bg-white/10 transition-colors border border-white/10 hover:border-emerald-500/50 outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                     >
-                      <motion.div layout className="flex items-center gap-3 mb-2 justify-start md:justify-start">
+                      <div className="flex items-center gap-3 mb-2 justify-start md:justify-start">
                         <Briefcase className="w-5 h-5 text-lime-300 hidden md:block" />
                         <h3 className="text-xl md:text-2xl font-bold text-white">{exp.role}</h3>
-                      </motion.div>
+                      </div>
                       
-                      <motion.p layout className="text-lime-300 font-medium mb-1">{exp.company}</motion.p>
-                      <motion.p layout className="text-sm text-muted-foreground mb-4">{exp.period}</motion.p>
+                      <p className="text-lime-300 font-medium mb-1">{exp.company}</p>
+                      <p className="text-sm text-muted-foreground mb-4">{exp.period}</p>
                       
-                      <motion.p layout className="text-white/80">
+                      <p className="text-white/80">
                         {exp.shortDesc}
-                      </motion.p>
+                      </p>
 
                       {/* Expandable Content Area */}
-                      {isExpanded && (
-                        <motion.div 
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="mt-4 pt-4 border-t border-white/10 text-muted-foreground"
-                        >
-                          <ul className="space-y-2 text-sm md:text-base">
-                            {exp.bullets.map((bullet, i) => (
-                              <li key={i} className="flex items-start gap-2">
-                                <span className="text-emerald-400 mt-1 shrink-0">▸</span>
-                                <span>{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </motion.div>
-                      )}
+                      <AnimatePresence initial={false}>
+                        {isExpanded && (
+                          <motion.div 
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="mt-4 pt-4 border-t border-white/10 text-muted-foreground"
+                          >
+                            <ul className="space-y-2 text-sm md:text-base">
+                              {exp.bullets.map((bullet, i) => (
+                                <li key={i} className="flex items-start gap-2">
+                                  <span className="text-emerald-400 mt-1 shrink-0">▸</span>
+                                  <span>{bullet}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
 
-                      <motion.div layout className="mt-4 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+                      <div className="mt-4 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
                         {isExpanded ? 'Show Less' : 'Click for Details'}
-                      </motion.div>
+                      </div>
 
                     </motion.div>
                   </div>

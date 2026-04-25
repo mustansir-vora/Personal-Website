@@ -1,0 +1,23 @@
+{
+  "name": "d128520a-a788-44de-b392-4e46e4c76816",
+  "displayName": "Play maxRepeat",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You've reached the maximum number of times that payment history can be repeated." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call SMS subflow",
+    "name": "e85d677b-032a-48da-b7a5-3b1b31314e19"
+  } ]
+}

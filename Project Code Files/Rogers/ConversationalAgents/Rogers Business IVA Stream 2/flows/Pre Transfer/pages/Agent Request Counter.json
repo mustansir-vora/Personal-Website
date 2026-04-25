@@ -1,0 +1,42 @@
+{
+  "name": "00507eab-94e3-4d19-81f9-ba3668516ae9",
+  "displayName": "Agent Request Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.globalAgentRequestCounter = 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Our specialists are unable to assist with this transaction, but I can help you with it here in the automated system. Let's try again. " ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "6b01c5d9-13d1-46b6-a41e-504e16f4ca60"
+  }, {
+    "condition": "$session.params.globalAgentRequestCounter != 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": " transferType",
+        "value": "agentRequest"
+      } ]
+    },
+    "targetPage": "Pre Transfer",
+    "name": "0e387b44-5a03-47c1-b77a-ce4518948d25"
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "a339eb33-4161-42e6-8ade-5add85ff6d2f",
+  "displayName": "Call Make a Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "paymentAmount",
+      "value": null
+    }, {
+      "parameter": "fromCancelledAccount",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Make A Payment",
+    "name": "4f332f39-f1e6-4337-913c-83632a779600"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subFlowReturnValue",
+        "value": null
+      }, {
+        "parameter": "fromCancelledAccount",
+        "value": false
+      } ]
+    },
+    "targetPage": "Clear PreRoute Override",
+    "name": "8a0b6275-0beb-4fa4-9af0-b71089e583be"
+  } ]
+}

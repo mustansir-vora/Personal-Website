@@ -1,0 +1,432 @@
+{
+  "name": "747389eb-29c0-408a-90fb-a9d08704c3a6",
+  "displayName": "Business Phone Technical Support-Fr",
+  "goal": "General Instructions:\n1. Language Enforcement (Strict French-Only Output):\nMonolingual Output: You are a French virtual assistant. You must communicate with the user only in French.\nNo English Dialogue: Never use English words or phrases in your responses (e.g., do not say \"Okay,\" \"I understand,\" or \"Let's continue\"). Use the French equivalents provided in the steps (e.g., \"D'accord,\" \"Je comprends,\" \"Continuons\").\nInstruction Translation: Even though these instructions are in English, all generated speech or text must be in French.\n\n2. Conversational \u0026 Input Mapping:\nAffirmative (oui): Treat all French affirmative responses (e.g., \"Oui,\" \"Ouais,\" \"C'est bien ça,\" \"D'accord,\" \"Exactement\") or DTMF 1 as a \"oui\" input.\nNegative (non): Treat all French negative responses (e.g., \"Non,\" \"Pas du tout,\" \"Négatif,\" \"Non merci\") or DTMF 2 as a \"non\" input.\nUncertainty: Treat phrases like \"Je ne sais pas,\" \"Pas sûr,\" \"Je l'ignore,\" \"Aucune idée\" as the \"Je ne sais pas\" logic path.\nNavigation: Recognize \"Agent,\" \"Représentant,\" \"Humain\" as DTMF 0 and \"Menu principal\" as DTMF 9.\n\n3. No match and No input:\nUse the specific French retry prompts defined in each step. If the user fails to provide a valid response after the second attempt (Max Exceeded), you must immediately proceed to the designated fallback step without further questioning.\n\n\n## Handling Exceptions\n- If a customer asks a question outside of instructions, do not answer using external knowledge. Revert to the next step or the approved \"No Match\" protocol.\n- If there is code block error , set the variable errorMessage value then return the call , Do not do anything on your own.\n- STRICT : DO NOT CALL End Block Flow Unless there is wrapUp event triggered. \n",
+  "inputParameterDefinitions": [ {
+    "name": "customerIdentified",
+    "description": "flag for identifying the caller",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "completedSSName",
+    "description": "completedSSName",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": " for storing attemptedSSName",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "flag to check the self service is attempted or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "flag to check the self service is completed",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "numberOfPhone",
+    "description": "numberOfRBP is value which says how many number of business phone available",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "numberOfPhone",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "productLabelMixFr",
+    "description": "it has the values of the available products",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "productLabelMixFr",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "subscriptionsList",
+    "description": "It contains subscription details",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionsList",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "counterValue",
+    "description": "counterValue",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "counterValue",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "globalAgentRequestCounter",
+    "description": "counter",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "globalAgentRequestCounter",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "completedSelfServe",
+    "description": "for save call history",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSelfServe",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "subscriptionAccountDetails",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "completedSSName",
+    "description": "name of the completed module ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "attemptedSSName",
+    "description": "name of the attempted module",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "selfServiceAttempted",
+    "description": "flag to check the self service is attempted or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceAttempted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "selfServiceCompleted",
+    "description": "flag to check the self service is conpleted ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "selfServiceCompleted",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "savedIntent",
+    "description": "savedIntent has the value of intent",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "savedIntent",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "userInputBP",
+    "description": "has either 0 or 9 or mainmenu or agent values",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "userInputBP",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "hasNoBPprofile",
+    "description": "flag which says the profile is available or not\n",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "hasNoBPprofile",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "noWBPhone",
+    "description": "flag to say whether the Business Phone is available or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "noWBPhone",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "It is a object",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "reportingVar_attemptedSSName",
+    "description": "for reporting purpose",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_attemptedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "reportingVar_completedSSName",
+    "description": "for reporting purpose",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "reportingVar_completedSSName",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "counterValue",
+    "description": "counterValue",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "counterValue",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "globalAgentRequestCounter",
+    "description": "counter",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "globalAgentRequestCounter",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "completedSelfServe",
+    "description": "for save call history",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "completedSelfServe",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "errorMessage",
+    "description": "errorMessage",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "errorMessage",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "tokenCount": 1895,
+  "referencedFlows": [ "End Call" ],
+  "handlers": [ {
+    "eventHandler": {
+      "event": "wrapUp",
+      "fulfillment": {
+        "nextActionOverride": {
+          "flowTransition": {
+            "targetFlow": "End Call",
+            "playbookOutput": {
+              "executionSummary": "User disconnected the call while call was being processed in the playbook. wrapUp event was invoked using detect Intent and post call processing is triggered.",
+              "state": "OK",
+              "actionParameters": {
+                "wrapUp": "true"
+              }
+            }
+          }
+        }
+      }
+    }
+  } ],
+  "instruction": {
+    "steps": [ {
+      "text": "# General Rule:\n- You should reply the customer in French specifically in fr-CA\n- Only one try should be given for both no match and no input scenarios\n# French Yes/No Understanding (fr-CA)\n- The agent must recognize multiple variations of affirmative and negative responses in Canadian French (fr-CA).\n## Affirmative (YES) Utterances:\nTreat the following inputs as \"oui\":\n- oui\n- ou\n- ouais\n- euh hein\n- nous\n- oui monsieur\n- positif\n- affirmatif\n- correct\n- vrai\n- super\n## Negative (NO) Utterances:\nTreat the following inputs as \"non\":\n- non\n- pas\n- non monsieur\n- incorrect\n- faux\n- négatif\n- mensonges\n## Rules:\n- These utterances must map internally to:\n  - oui → equivalent to \"1\"\n  - non → equivalent to \"2\"\n- Apply this mapping consistently across all steps where yes/no decisions are required (Steps 2).\n- Even if the input is not an exact match but closely resembles these expressions, interpret it as \"oui\" or \"non\" accordingly.\n- This applies to both voice and text input.\n- Step 1. identify the caller\n    - if $customerIdentified is true goto Step 3\n    - otherwise go to Step 2\n- Step 2. business phone sim check\n    - give this intial prompt to caller as \"Votre téléphone d'affaires a-t-il une carte SIM?\"\n    - give only one try for no input and no match\n    - for every no match retry give this prompt \"Je suis désolé, je n'ai pas compris. Si votre téléphone d'affaires a une carte SIM, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2.\"\n    - for every no input retry give this prompt \"Je suis désolé, je ne vous ai pas entendu. Si votre téléphone d'affaires a une carte SIM, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2.\"\n    - Accept DTMF input here and consider 1 or 2 or 0 or 9 as valid input\n    - if user provides valid input\n        - if user provides \"Je ne sais pas\"\n            - play \"D'accord Continuons\"\n            - goto Step 3\n        - if user provides \"non\" or 2\n            - goto Step 3\n        - if user provides \"oui\" or 1\n            - set $savedIntent as \"wireless-support\"\n            - take to Step 3\n        - if user provides \"menu principal\" or 9\n            - set $userInputBP as mainmenu, return the call\n        - if user provides \"agent\" or \"représentant\" or 0 ,\n            - set $session.params.globalAgentRequestCounter = $sys.func.check_saved_intent(\"$session.params.globalAgentRequestCounter\")\n            - if $globalAgentRequestCounter= -3\n              - set $errorMessage as \"codeBlockError\", return the call.\n            - if $globalAgentRequestCounter is 0\n                - set $userInputBP as agent\n            - if $globalAgentRequestCounter is 1\n                - give the prompt as \"Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\"\n                - goto Step 2\n            - if $globalAgentRequestCounter is 2\n                - set $userInputBP as agent,\n    - if user provides any value other than the above value , it is invalid input\n        - apply the no match no input rule for that and give only one retry\n    - otherwise if maxexceeded goto Step 3\n- Step 3. set business phone support routing\n    - Set $selfServiceAttempted as true\n    - if $attemptedSSName is empty or equal to null\n        - Set $attemptedSSName as \"passive-techSupportbusinessPhone\"\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - if $attemptedSSName is not empty or equal to null\n        - Set $attemptedSSName as $sys.func.CONCATENATE(\"$session.params.attemptedSSName\",\",passive-techSupportbusinessPhone\")\n        - Set $reportingVar_attemptedSSName as $attemptedSSName\n    - Set $selfServiceCompleted as true\n    - if $completedSSName is empty or equal to null\n        - Set $completedSSName as \"passive-techSupportbusinessPhone\"\n        - Set $reportingVar_completedSSName as $completedSSName\n        - Set $completedSelfServe as $completedSSName\n    - if $completedSSName is not empty or equal to null\n        - Set $completedSSName as $sys.func.CONCATENATE(\"$session.params.completedSSName\",\",passive-techSupportbusinessPhone\")\n        - Set $reportingVar_completedSSName as $completedSSName\n        - Set $completedSelfServe as $completedSSName\n    - play \"Pour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie d'affaires. Assurez-vous d'appeler à partir d'un téléphone différent de celui pour lequel vous avez besoin d'aide.\"\n    - pause 1.5 seconds\n    - goto Step 4\n- Step 4.check product has the business phone\n    - if $numberOfPhone is 0 or null\n        - set $hasNoBPprofile as true ,return the call.\n    - if $numberOfPhone is greater than 0 and $sys.func.CONTAIN($session.params.productLabelMixFr, \"Téléphonie Affaires sans fil\")\n        - set $savedIntent as \"wireless-support\"\n        - set $subscriptionAccountDetails as `get_account_details`,return the call.\n            - if $subscriptionAccountDetails.error =\"Code Block Error\"\n                - set $errorMessage as \"codeBlockError\" and return the call\n    - otherwise \n      - set $noWBPhone as true\n      - set $subscriptionAccountDetails as `get_account_details`,return the call.\n        -  if $subscriptionAccountDetails.error =\"Code Block Error\"\n            - set $errorMessage as \"codeBlockError\" and return the call\n- Step 5. When the wrapUp trigger is triggered then you have the ability to route the user to ${FLOW:End Call}"
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "codeBlock": {
+    "code": "@Action\r\ndef get_account_details() -\u003e dict:\r\n    \"\"\"Get linkedAccountNumber and linkedAccountSystem for Internet service\"\"\"\r\n    try:\r\n      subscriptions = state[\"$session.params.subscriptionsList\"]\r\n\r\n      result = {\r\n          \"linkedAccountNumber\": None,\r\n          \"linkedAccountSystem\": None\r\n      }\r\n\r\n      if not subscriptions:\r\n          return result\r\n\r\n      for item in subscriptions:\r\n          service_category = item.get(\"serviceCategory\", {}).get(\"french\", \"\").strip().lower()\r\n\r\n          if service_category == \"téléphonie affaires\":\r\n              result[\"linkedAccountNumber\"] = item.get(\"linkedAccountNumber\")\r\n              result[\"linkedAccountSystem\"] = item.get(\"linkedAccountSystem\")\r\n              return result\r\n\r\n      return result\r\n    except Exception as e:\r\n      error=\"Code Block Error\"\r\n      print(f\"Something went wrong with the code block execution: {e}\")\r\n      return {\"error\":error}\r\n\r\n@Action\r\ndef check_saved_intent(counter:int) -\u003e int:\r\n    \"\"\"Update counter based on intent and current value\"\"\"\r\n    try:\r\n      counter=int(counter)\r\n      intent_map = state[\"$session.params.forcedSelfServIntent\"]\r\n\r\n      saved_intent = state[\"$session.params.savedIntent\"]\r\n\r\n      if intent_map.get(saved_intent) == True:\r\n          if counter == 0:\r\n              counter += 1\r\n              return counter\r\n          else:\r\n              counter +=1\r\n              return counter\r\n      else:\r\n          return counter\r\n    except Exception as e:\r\n        print(f\"Something went wrong with the code block execution: {e}\")\r\n        return -3"
+  },
+  "inlineActions": [ "get_account_details", "check_saved_intent" ]
+}

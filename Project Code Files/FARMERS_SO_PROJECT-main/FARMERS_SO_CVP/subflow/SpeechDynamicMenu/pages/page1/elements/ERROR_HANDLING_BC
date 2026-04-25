@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@1489234026:1731040468327" name="ERROR_HANDLING_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.speechflow.VAVErrorHandling</source>
+</config>
+</action>

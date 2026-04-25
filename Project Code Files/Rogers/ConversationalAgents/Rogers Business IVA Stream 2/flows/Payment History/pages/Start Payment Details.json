@@ -1,0 +1,18 @@
+{
+  "name": "fc16e18d-1554-4be9-b01b-511e254e186c",
+  "displayName": "Start Payment Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Introduction",
+    "name": "61603b39-6c95-47b1-abc3-b3b149dde320"
+  } ]
+}

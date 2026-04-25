@@ -1,0 +1,183 @@
+{
+  "name": "ed11747b-b836-4907-9eb9-6a9dadbd465b",
+  "displayName": "Play Offer Additional Payment",
+  "form": {
+    "parameters": [ {
+      "displayName": "ptpAdditionalPaymentConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seriez-vous en mesure d’effectuer un \r\npaiement additionnel de $ $session.params.remainingPastDueAmount d’ici le $session.params.additionalPaymentDate ? \r\nDites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Would you be able to make an additional payment of $session.params.remainingPastDueAmount by $session.params.additionalPaymentDate ? Say yes, or press 1.  No, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "92756e48-b752-4b16-ae14-677779c35ba6"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seriez-vous en mesure d’effectuer un \r\npaiement additionnel de $ $session.params.remainingPastDueAmount d’ici le $session.params.additionalPaymentDate ? \r\nDites « oui » ou appuyez sur le 1. « Non » ou appuyez sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Would you be able to make an additional payment of $session.params.remainingPastDueAmount by $session.params.additionalPaymentDate ? Say yes, or press 1.  No, or press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "dcd151c2-7fd7-49f3-bed2-929caf4b5311"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous pouvez effectuer un paiement \nadditionnel de $ $session.params.remainingPastDueAmount d’ici le $session.params.additionalPaymentDate , appuyez sur le \n1. Sinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you can make an additional payment of \n$session.params.remainingPastDueAmount by $session.params.additionalPaymentDate , press 1. If you can't, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "551ca712-0645-454b-91f3-5b7959f59982"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous pouvez effectuer un paiement \r\nadditionnel de $ $session.params.remainingPastDueAmount d’ici le $session.params.additionalPaymentDate , appuyez sur le \r\n1. Sinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "If you can make an additional payment of \r\n$session.params.remainingPastDueAmount by $session.params.additionalPaymentDate , press 1. If you can't, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "e5c6f676-98de-40bb-b4fa-4b6c8ad940b3"
+        }, {
+          "targetPage": "Check If PTP Date Is In The Past",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "e6769516-a51d-42c1-83c3-fb7b225518e0"
+        }, {
+          "targetPage": "Check If PTP Date Is In The Past",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "70499ac6-4293-4718-9377-3c26e13c2900"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Pour maintenir votre compte en règle, seriez\u0002vous en mesure d’effectuer un paiement additionnel de \n$ $session.params.remainingPastDueAmount d’ici le $session.params.additionalPaymentDate ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "To keep your account in good standing, would you be able to make an additional payment of $ $session.params.remainingPastDueAmount by $session.params.additionalPaymentDate ? " ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpAdditionalPaymentConfirmation = yes AND $session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfInstalls",
+        "value": 2
+      }, {
+        "parameter": "ptpAdditionalPayment",
+        "value": true
+      }, {
+        "parameter": "promiseMethod",
+        "value": "$session.params.collectedPtpMethod"
+      }, {
+        "parameter": "firstPromiseAmount",
+        "value": "$session.params.collectedPtpAmount"
+      }, {
+        "parameter": "firstPromiseDate",
+        "value": "$session.params.collectedPtpDate"
+      }, {
+        "parameter": "secondPromiseAmount",
+        "value": "$session.params.remainingPastDueAmount"
+      }, {
+        "parameter": "secondPromiseDate",
+        "value": "$session.params.api.response.ptp.ccInstallmentDate2"
+      } ]
+    },
+    "targetPage": "Return From Offer Additional Payment",
+    "name": "257033ba-af61-4400-ba9e-5e9ba9412419"
+  }, {
+    "condition": "$session.params.ptpAdditionalPaymentConfirmation = yes AND $session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfInstalls",
+        "value": 2
+      }, {
+        "parameter": "ptpAdditionalPayment",
+        "value": true
+      }, {
+        "parameter": "promiseMethod",
+        "value": "$session.params.collectedPtpMethod"
+      }, {
+        "parameter": "firstPromiseAmount",
+        "value": "$session.params.collectedPtpAmount"
+      }, {
+        "parameter": "firstPromiseDate",
+        "value": "$session.params.collectedPtpDate"
+      }, {
+        "parameter": "secondPromiseAmount",
+        "value": "$session.params.remainingPastDueAmount"
+      }, {
+        "parameter": "secondPromiseDate",
+        "value": "$session.params.api.response.ptp.pbInstallmentDate2"
+      } ]
+    },
+    "targetPage": "Return From Offer Additional Payment",
+    "name": "8316059b-18ee-4da6-8a9d-7c6f6e6230e2"
+  }, {
+    "condition": "$session.params.ptpAdditionalPaymentConfirmation = no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Check If PTP Date Is In The Past",
+    "name": "3675abae-e78f-48c0-9d31-c72b1f61e67d"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

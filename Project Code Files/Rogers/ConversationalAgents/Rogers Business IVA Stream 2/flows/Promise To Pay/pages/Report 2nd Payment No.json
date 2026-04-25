@@ -1,0 +1,35 @@
+{
+  "name": "a458cdf2-baee-409d-ba5b-7e22db6b1680",
+  "displayName": "Report 2nd Payment No",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "C’est tout ce que j’ai au dossier concernant \r\ncette entente en suspens. Une nouvelle \r\nentente de paiement ne peut pas être créée \r\npour le moment. " ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "That's all I have on file with this pending arrangement. A new payment arrangement can't be created at this time." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "selfServiceCompleted",
+      "value": true
+    }, {
+      "parameter": "completedSSName",
+      "value": "passive-multipleInstallmentPtp"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "7b82f96c-3141-4917-8698-df1076e821cf"
+  } ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "a4303522-6970-47a7-af1b-3b5ef2988e69",
+  "displayName": "Check Current Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.balanceDetails.currentBalance = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Goto Transtion Routing",
+    "name": "bd4403a9-1a96-4621-8dc3-46672c17750d"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Balance Amount",
+    "name": "521b6b39-cef1-4555-855b-03b2199b23a1"
+  } ]
+}

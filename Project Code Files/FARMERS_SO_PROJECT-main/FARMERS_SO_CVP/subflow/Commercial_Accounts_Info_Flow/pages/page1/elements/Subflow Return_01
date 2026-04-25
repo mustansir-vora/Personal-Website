@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subflow_return id="Element@1279044898:1709544267443" name="Subflow Return_01" version="6.0.1">
+<config>
+<return_data>
+<data name="Return_Value" type="String">{Data.Session.S_SUBFLOW_RETURN}</data>
+</return_data>
+</config>
+</subflow_return>

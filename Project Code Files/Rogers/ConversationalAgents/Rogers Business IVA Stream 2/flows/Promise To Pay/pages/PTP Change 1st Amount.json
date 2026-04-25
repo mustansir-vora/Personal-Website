@@ -1,0 +1,31 @@
+{
+  "name": "8335afd8-f6a8-4eab-84a7-7acc84aaf5c6",
+  "displayName": "PTP Change 1st Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "changeFirstPTPAmount",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpAmount = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "changeFirstPTPAmount",
+        "value": true
+      } ]
+    },
+    "targetPage": "Call Current Balance Details",
+    "name": "1dbe9b18-4e59-4837-b60e-0fb15cf04bb6"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Where From",
+    "name": "e09862b4-192a-460c-ab28-2ef48b4d0d00"
+  } ]
+}

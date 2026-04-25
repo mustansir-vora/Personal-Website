@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1656973076:1732862406690" name="FWS_FGIA_MENU" version="6.0.1">
+<subflow_call subflow_name="FWS_FGIA" target="Element@31:1733463213077">
+<config/>
+</subflow_call>
+</connector>

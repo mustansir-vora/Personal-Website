@@ -1,0 +1,8 @@
+{
+  "name": "453aadd3-c870-4a3f-8e8e-150fe5f74406",
+  "displayName": "IdTypeMn-Phone",
+  "priority": 500000,
+  "description": "To Collect Id Type From User",
+  "numTrainingPhrases": 60,
+  "dtmfPattern": "2"
+}

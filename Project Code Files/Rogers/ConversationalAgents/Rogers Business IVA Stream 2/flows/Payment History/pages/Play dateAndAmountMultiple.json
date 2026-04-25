@@ -1,0 +1,23 @@
+{
+  "name": "227dec3f-f2eb-43fd-9a12-c53c8c31a4c0",
+  "displayName": "Play dateAndAmountMultiple",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "A payment of $ $session.params.api.pastPaymentObject.paymentAmount was received on $session.params.api.pastPaymentObject.paymentDate." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check paymentStatus",
+    "name": "5bac71ed-7098-4d85-8b87-49f47bce3303"
+  } ]
+}

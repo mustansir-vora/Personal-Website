@@ -1,0 +1,34 @@
+{
+  "name": "f2ed2437-469e-487d-99a7-f7f1aa473d3b",
+  "displayName": "Play Manually Suspended",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your service is suspended." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Votre service est suspendu." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.app.transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "3e30fc17-2759-43af-b41b-fcdae93dfd10"
+  } ]
+}

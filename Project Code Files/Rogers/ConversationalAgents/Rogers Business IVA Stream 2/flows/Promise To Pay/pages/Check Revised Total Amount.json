@@ -1,0 +1,40 @@
+{
+  "name": "45e175c8-7a17-4092-ad00-104904c8b4dd",
+  "displayName": "Check Revised Total Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.revisedTotalAmount) \u003e= $sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "firstPromiseAmount",
+        "value": "$session.params.collectedPtpAmount"
+      }, {
+        "parameter": "firstPromiseDate",
+        "value": "$session.params.collectedPtpDate"
+      }, {
+        "parameter": "promiseMethod",
+        "value": "$session.params.collectedPtpMethod"
+      }, {
+        "parameter": "fromUpdateMultiple",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Update Multiple Second Install",
+    "name": "85a21f8b-35c0-4995-98b7-2d6c8b1c3bcb"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "updateSecondInstallmentAmount",
+        "value": "$sys.func.MINUS($sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance), $sys.func.TO_NUMBER($session.params.collectedPtpAmount))"
+      } ]
+    },
+    "targetPage": "Update 2nd Install",
+    "name": "d34d11c6-5b4c-4d2c-a0ee-d7d847b723c1"
+  } ]
+}

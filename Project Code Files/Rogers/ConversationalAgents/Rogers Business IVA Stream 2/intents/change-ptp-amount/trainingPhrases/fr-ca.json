@@ -1,0 +1,47 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Puis-je faire le paiement de "
+    }, {
+      "text": "200",
+      "parameterId": "changePTPAmount"
+    }, {
+      "text": " dollars?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer le paiement à "
+    }, {
+      "text": "400",
+      "parameterId": "changePTPAmount"
+    }, {
+      "text": " dollars."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Changer le paiement à "
+    }, {
+      "text": "150",
+      "parameterId": "changePTPAmount"
+    }, {
+      "text": " dollars"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ajuster le paiement à "
+    }, {
+      "text": "300",
+      "parameterId": "changePTPAmount"
+    }, {
+      "text": " $"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

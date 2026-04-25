@@ -1,0 +1,25 @@
+{
+  "name": "05670272-499e-4422-9d23-1783565133b4",
+  "displayName": "Check pendingPTP",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.pendingPTP = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check ptpPendingBalance \u0026 ptpPendingDate \u0026 ptpPendingPaymentMethod",
+    "name": "99401fe1-1bfa-401f-a648-00d213f7a44e"
+  }, {
+    "condition": "$session.params.api.billingProfile.pendingPTP = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Clear variables",
+    "name": "e6bea13c-20a6-4232-ad94-aac6601565d5"
+  } ]
+}

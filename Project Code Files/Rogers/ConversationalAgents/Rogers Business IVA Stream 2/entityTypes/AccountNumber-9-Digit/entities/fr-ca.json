@@ -1,0 +1,16 @@
+{
+  "entities": [ {
+    "value": "([0-9][-\\s]?){9}",
+    "synonyms": [ "([0-9][-\\s]?){9}" ],
+    "languageCode": "fr-ca",
+    "dtmfPattern": "dtmf_digits_[0-9]{9}$"
+  }, {
+    "value": "^\\d{9}$",
+    "synonyms": [ "^\\d{9}$" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "^\\d(?:\\s?\\d){9}$",
+    "synonyms": [ "^\\d(?:\\s?\\d){9}$" ],
+    "languageCode": "fr-ca"
+  } ]
+}

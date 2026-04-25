@@ -1,0 +1,32 @@
+{
+  "name": "cc4fbd3b-b97f-41db-adb8-7c79eeb9bf10",
+  "displayName": "Check billCloseDate",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromPTP = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start InstallmentPaymentPlanDetails subflow",
+    "name": "2d7fa850-1218-43d0-a7c0-2ff5af204f9d"
+  }, {
+    "condition": "$session.params.api.billingProfile.billingPaymentDetails.billingCycle.billCloseDate != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play BillCloseDate",
+    "name": "d1f548a8-cd33-4f69-96c1-48a6c8b81c15"
+  }, {
+    "condition": "$session.params.api.billingProfile.billingPaymentDetails.billingCycle.billCloseDate = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start InstallmentPaymentPlanDetails subflow",
+    "name": "c3f6958f-274c-4aa1-937d-a00a330d5925"
+  } ]
+}

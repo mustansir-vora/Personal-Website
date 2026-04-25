@@ -1,0 +1,7 @@
+{
+  "name": "6d3a2d33-9233-407b-8674-b620d3214b47",
+  "displayName": "cancel-device-protection",
+  "priority": 500000,
+  "description": "Handles requests to cancel or remove device protection or insurance plans.",
+  "numTrainingPhrases": 50
+}

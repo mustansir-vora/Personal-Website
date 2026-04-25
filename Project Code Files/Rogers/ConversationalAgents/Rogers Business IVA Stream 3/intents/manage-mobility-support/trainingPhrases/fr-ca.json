@@ -1,0 +1,112 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Le portail est en panne et nous ne pouvons pas gérer nos appareils.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre solution ",
+      "auto": true
+    }, {
+      "text": "BYOD",
+      "auto": true
+    }, {
+      "text": " de compartimentation ne fonctionne pas — les employés peuvent accéder aux données d’",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    }, {
+      "text": " en dehors de l’application sécurisée.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons besoin d’aide pour retirer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " appareil perdu ou ",
+      "auto": true
+    }, {
+      "text": "volé",
+      "auto": true
+    }, {
+      "text": " du système.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les rapports de dépenses dans ",
+      "auto": true
+    }, {
+      "text": "Mobilité",
+      "auto": true
+    }, {
+      "text": " gérée n’affichent pas ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " utilisation exacte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Impossible de pousser des applications ou des mises à jour à notre flotte de téléphones intelligents.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nos politiques ",
+      "auto": true
+    }, {
+      "text": "MDM",
+      "auto": true
+    }, {
+      "text": " ne ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " synchronisent pas correctement ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " les appareils.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous ne pouvons pas enrôler de nouveaux appareils dans le portail de ",
+      "auto": true
+    }, {
+      "text": "Mobilité",
+      "auto": true
+    }, {
+      "text": " gérée — pouvez-vous vérifier?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

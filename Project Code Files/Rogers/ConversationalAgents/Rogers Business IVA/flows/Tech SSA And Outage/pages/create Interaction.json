@@ -1,0 +1,116 @@
+{
+  "name": "86b55577-d29f-44bc-b820-35ba5d515d4c",
+  "displayName": "create Interaction",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "createInteraction"
+    },
+    "targetPage": "heardOutage",
+    "name": "47d9a0f2-984d-4624-a3d3-b836a1714a02"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "02374776-83c7-4543-8064-5c0bb7dfc427"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "1dafdc6c-2342-4efb-a742-de63d0f1895b"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "9f1c5f4b-abca-4b84-a987-c12f9edefe5a"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "df5dde83-9bda-405d-8799-603079d08b8f"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "60103ee0-d6ad-4d77-a21d-f492f33c06b6"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "863996c8-95b1-4d78-ac61-8d6311420b8d"
+  } ]
+}

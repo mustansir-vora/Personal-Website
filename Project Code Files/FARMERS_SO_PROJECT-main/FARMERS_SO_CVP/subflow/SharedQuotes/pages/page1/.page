@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1181646858:1707108607739" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1707108607739" name="SharedQuotes" type="Subflow Start" width="221" x="377" y="-21">
+<exit_states>
+<exit_state name="next" target="Element@1494992570:1711694910367"/>
+</exit_states>
+</element>
+<element height="55" id="Element@491052796:1707304508433" name="SQT_MN_001_VALUE" type="Decision" width="241" x="361" y="317">
+<exit_states>
+<exit_state name="NO" target="Element@730401633:1707305643707"/>
+<exit_state name="YES" target="Element@1694131512:1712908872333"/>
+<exit_state name="Representative" target="Element@1002599871:1707305232584"/>
+<exit_state name="NOINPUT" target="Element@641748283:1731530450772"/>
+<exit_state name="NOMATCH" target="Element@274547248:1710689806755">
+<bendpoint>
+<dim1 x="144" y="-43"/>
+<dim2 x="-95" y="12"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@274547248:1710689806755">
+<bendpoint>
+<dim1 x="157" y="5"/>
+<dim2 x="-82" y="60"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@574583116:1707304508433" name="Authenticated" type="Decision" width="236" x="367" y="145">
+<exit_states>
+<exit_state name="Yes" target="Element@1579633548:1709038466640"/>
+<exit_state name="No" target="Element@488890786:1709038414370"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1117474438:1707304508433" name="SQT_MN_002_VALUE" type="Decision" width="260" x="841" y="308">
+<exit_states>
+<exit_state name="New Quote" target="Element@1694131512:1712908872333">
+<bendpoint>
+<dim1 x="-136" y="160"/>
+<dim2 x="332" y="29"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Policy Change" target="Element@1933030712:1707472668469"/>
+<exit_state name="Policy Question" target="Element@1605129559:1707472681221"/>
+<exit_state name="NOINPUT" target="Element@641748283:1731530450772"/>
+<exit_state name="NOMATCH" target="Element@274547248:1710689806755">
+<bendpoint>
+<dim1 x="-104" y="-67"/>
+<dim2 x="147" y="-21"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@274547248:1710689806755">
+<bendpoint>
+<dim1 x="-148" y="-2"/>
+<dim2 x="103" y="44"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1002599871:1707305232584" name="Rep_Trans" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="199" x="22" y="346">
+<exit_states>
+<exit_state name="done" target="Element@788999476:1707472487295"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1939430496:1707305254749" name="Subflow Return_01" type="Subflow Return" width="198" x="60" y="167"/>
+<element height="55" id="Element@825639860:1707305275437" name="Entry_DNIS" type="Decision" width="225" x="377" y="546">
+<exit_states>
+<exit_state name="FWS" target="Element@1447131136:1711345642186"/>
+<exit_state name="FOREMOST" target="Element@1474746463:1711345650353"/>
+<exit_state name="FARMERS" target="Element@571284989:1711345653003"/>
+<exit_state name="21ST" target="Element@1101362327:1711345655834"/>
+<exit_state name="BW" target="Element@571284989:1711345653003"/>
+<exit_state name="OTHERS" target="Element@571284989:1711345653003"/>
+</exit_states>
+</element>
+<element height="55" id="Element@865290904:1707305480243" name="Subflow Return_02" type="Subflow Return" width="198" x="365" y="814"/>
+<element height="55" id="Element@1291039950:1707305503003" name="Policy_Change" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="162" x="894" y="538">
+<exit_states>
+<exit_state name="done" target="Element@1475156844:1707305562724"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1968766599:1707305537026" name="Policy_Question" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="174" x="1295" y="442">
+<exit_states>
+<exit_state name="done" target="Element@1475156844:1707305562724"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1475156844:1707305562724" name="Subflow Return_03" type="Subflow Return" width="198" x="1057" y="452"/>
+<element height="55" id="Element@730401633:1707305643707" name="SharedIDAuth" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="199" x="139" y="548">
+<exit_states>
+<exit_state name="done" target="Element@429902292:1707472553571"/>
+</exit_states>
+</element>
+<element height="55" id="Element@788999476:1707472487295" name="Call_SharedTransfer" type="Subflow Call" width="201" x="55" y="248">
+<subflow_call subflow_name="Transfer" target="Element@31:1707472509451">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1939430496:1707305254749"/>
+</exit_states>
+</element>
+<element height="55" id="Element@429902292:1707472553571" name="Call_ShareIDAuth" type="Subflow Call" width="185" x="-2" y="654">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1711190509106">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1121790557:1707472601391"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1475583705:1707472578876" name="SQT_MN_002Entry" type="Page Entry" width="195" x="953" y="79">
+<exit_states>
+<exit_state name="next" target="Element@1579633548:1709038466640"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1121790557:1707472601391" name="SQT_MN_002Entry" type="Page Connector" width="195" x="-10" y="753">
+<page_connector target="Element@1475583705:1707472578876">SQT_MN_002Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1933030712:1707472668469" name="Call_01" type="Subflow Call" width="105" x="914" y="410">
+<subflow_call subflow_name="Transfer" target="Element@31:1707472692837">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1291039950:1707305503003"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1605129559:1707472681221" name="Call_02" type="Subflow Call" width="105" x="1308" y="339">
+<subflow_call subflow_name="Transfer" target="Element@31:1707472696269">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1968766599:1707305537026"/>
+</exit_states>
+</element>
+<element height="105" id="Element@670558789:1707472724966" type="Comment" width="134" x="1068" y="555">
+<comment><![CDATA[21st
+ – 100200291025
+BW HI – 100200291035
+Foremost – 100206094162
+BW – 100206394211
+Farmers – 100205994076
+FWS – 100207100088]]></comment>
+</element>
+<element height="90" id="Element@1357470929:1707472756242" type="Comment" width="126" x="10" y="7">
+<comment><![CDATA[21st – 100206192036
+BW HI – 100200291025
+Foremost –
+BW – 100206394218
+Farmers – 100205994044
+FWS – 100207100065]]></comment>
+</element>
+<element height="55" id="Element@488890786:1709038414370" name="SQT_MN_001_Call" type="Subflow Call" width="214" x="375" y="236">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709038431014">
+<config>
+<argument_data>
+<data name="MenuID">SQT_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@491052796:1707304508433"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1579633548:1709038466640" name="SQT_MN_002_Call" type="Subflow Call" width="190" x="644" y="93">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709038481076">
+<config>
+<argument_data>
+<data name="MenuID">SQT_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1117474438:1707304508433"/>
+</exit_states>
+</element>
+<element height="55" id="Element@274547248:1710689806755" name="Transfer_0" type="Subflow Call" width="128" x="656" y="262">
+<subflow_call subflow_name="Transfer" target="Element@31:1710689875256">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@527404810:1710689829536"/>
+</exit_states>
+</element>
+<element height="55" id="Element@527404810:1710689829536" name="Subflow Return_04" type="Subflow Return" width="198" x="651" y="179"/>
+<element height="55" id="Element@1447131136:1711345642186" name="FWS_Sales_Zip_Code_Auth" type="Subflow Call" width="190" x="374" y="732">
+<subflow_call subflow_name="FWS_Sales_Zip_Auth" target="Element@31:1711446866248">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@865290904:1707305480243"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1474746463:1711345650353" name="OneSpeciality" type="Subflow Call" width="122" x="229" y="738">
+<subflow_call subflow_name="OneSpecialtyMenu" target="Element@31:1712290258923">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@865290904:1707305480243"/>
+</exit_states>
+</element>
+<element height="55" id="Element@571284989:1711345653003" name="Farmers_SLS" type="Subflow Call" width="115" x="637" y="733">
+<subflow_call subflow_name="FarmersSales" target="Element@31:1712910065655">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@865290904:1707305480243"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1101362327:1711345655834" name="21St_VanityFriends" type="Subflow Call" width="147" x="811" y="730">
+<subflow_call subflow_name="21stSalesVanityFriendsandFamily" target="Element@31:1712911086472">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@865290904:1707305480243"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1494992570:1711694910367" name="CHECK_ENTRYPOINT" type="Decision" width="218" x="381" y="59">
+<exit_states>
+<exit_state name="CONT" target="Element@574583116:1707304508433"/>
+<exit_state name="ER" target="Element@574583116:1707304508433"/>
+<exit_state name="NLU" target="Element@488890786:1709038414370"/>
+<exit_state name="INITIAL" target="Element@574583116:1707304508433"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1694131512:1712908872333" name="Set_Skip_MM" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="175" x="416" y="443">
+<exit_states>
+<exit_state name="done" target="Element@825639860:1707305275437"/>
+</exit_states>
+</element>
+<element height="55" id="Element@641748283:1731530450772" name="DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="93" x="680" y="396">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

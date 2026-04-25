@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1245457085:1729603657216" name="DOB_Check Retry Count" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="DOB_Check Retry Count">
+        <exit_state name="2nd Try" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <element name="DOB Increment Error Count" variable="count" />
+                </data>
+                <constant_number value="1" />
+            </number>
+        </exit_state>
+        <exit_state name="ZIP Validation" conjugate="and">
+            <number operator="greater_equal">
+                <data>
+                    <element name="DOB Increment Error Count" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

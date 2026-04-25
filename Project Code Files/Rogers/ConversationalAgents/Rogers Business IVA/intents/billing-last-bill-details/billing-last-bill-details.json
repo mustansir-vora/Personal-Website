@@ -1,0 +1,7 @@
+{
+  "name": "8c544d46-9b37-4efd-8f17-37be0b6ab689",
+  "displayName": "billing-last-bill-details",
+  "priority": 500000,
+  "description": "Handles requests for details about the most recent bill or statement.",
+  "numTrainingPhrases": 42
+}

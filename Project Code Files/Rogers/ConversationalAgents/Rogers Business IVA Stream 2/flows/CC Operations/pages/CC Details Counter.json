@@ -1,0 +1,32 @@
+{
+  "name": "5f4501c1-6334-4dfe-9acd-7de4564cd0cb",
+  "displayName": "CC Details Counter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ccDetailsCounter \u003c 3 OR $session.params.ccDetailsCounter = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Semafone Initialize",
+    "name": "cd827849-3650-4e9d-80c8-18955fa0159e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "8b07d6d0-a23e-445d-9691-a56301adb627",
+    "description": "After 2 failure, set transferType = systemError"
+  } ]
+}

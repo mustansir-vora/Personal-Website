@@ -1,0 +1,11 @@
+{
+  "name": "c0a805dd-1b47-49d3-ae40-96cebdd920cd",
+  "displayName": "missing-sim-order",
+  "parameters": [ {
+    "id": "e_SIMType",
+    "entityType": "@e_SIMType"
+  } ],
+  "priority": 500000,
+  "description": "Handles inquiries about SIM card orders that have not been received.",
+  "numTrainingPhrases": 50
+}

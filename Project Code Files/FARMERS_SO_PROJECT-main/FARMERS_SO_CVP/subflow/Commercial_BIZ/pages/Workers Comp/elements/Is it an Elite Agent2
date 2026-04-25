@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1992741595:1707388979821" name="Is it an Elite Agent2" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.CBIZ_EliteMSPkey</source>
+</config>
+</decision>

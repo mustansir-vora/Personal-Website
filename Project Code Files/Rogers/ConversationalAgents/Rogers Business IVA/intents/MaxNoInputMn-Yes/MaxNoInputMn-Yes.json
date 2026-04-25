@@ -1,0 +1,8 @@
+{
+  "name": "44c47748-9679-4365-860c-2f5114a6002c",
+  "displayName": "MaxNoInputMn-Yes",
+  "priority": 500000,
+  "description": "This will trigger when user says, yes/i'm there/ yeah ",
+  "numTrainingPhrases": 75,
+  "dtmfPattern": "1"
+}

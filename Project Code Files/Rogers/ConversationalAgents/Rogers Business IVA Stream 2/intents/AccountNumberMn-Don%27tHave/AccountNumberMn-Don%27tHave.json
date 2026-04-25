@@ -1,0 +1,7 @@
+{
+  "name": "e227a44b-0f1f-4629-b9ee-bdfb22f30923",
+  "displayName": "AccountNumberMn-Don'tHave",
+  "priority": 500000,
+  "description": "this will be triggered when user said  don't know ",
+  "numTrainingPhrases": 52
+}

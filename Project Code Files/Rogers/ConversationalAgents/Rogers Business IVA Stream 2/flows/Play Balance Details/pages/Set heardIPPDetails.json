@@ -1,0 +1,21 @@
+{
+  "name": "316f945d-fd98-4631-8658-907cad7772a1",
+  "displayName": "Set heardIPPDetails",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.heardIppDetails",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start LastInvoiceDetails subflow",
+    "name": "eb88675c-59ae-44cb-9508-c5c742a1340d"
+  } ]
+}

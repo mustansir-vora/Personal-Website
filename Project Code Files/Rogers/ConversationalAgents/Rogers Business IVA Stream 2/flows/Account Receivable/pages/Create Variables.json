@@ -1,0 +1,30 @@
+{
+  "name": "02d002be-8dd7-47d9-b38e-9a5b0a010949",
+  "displayName": "Create Variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.subflowInputs.broadcastMessage",
+      "value": "accountsReceivable"
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"active-accountsReceivable\")"
+    }, {
+      "parameter": "selfServiceAttempted",
+      "value": "true"
+    }, {
+      "parameter": "wasInARComp",
+      "value": "true"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Broadcast Message",
+    "name": "549ec9ae-c7fe-4226-bfde-8086c7200572"
+  } ]
+}

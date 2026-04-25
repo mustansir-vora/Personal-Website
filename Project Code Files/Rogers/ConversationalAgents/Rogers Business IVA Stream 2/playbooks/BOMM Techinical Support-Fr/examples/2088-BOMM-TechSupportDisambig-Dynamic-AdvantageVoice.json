@@ -1,0 +1,45 @@
+{
+  "name": "175e94ea-8549-4f9f-a1af-9e6c383a6159",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire Voix Avantage,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Voix Avantage"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Voix Avantage"
+      },
+      "outputActionParameters": {
+        "result": "wireless-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixFr": "Voix Avantage,Télévision,Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Voix Avantage",
+      "savedIntent": "wireless-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-AdvantageVoice",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 205,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

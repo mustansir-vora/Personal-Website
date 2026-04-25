@@ -1,0 +1,7 @@
+{
+  "name": "c699dd4f-921d-42fa-978d-1ada58357992",
+  "displayName": "auto-pay",
+  "priority": 500000,
+  "description": "Handles requests to set up, manage, or inquire about automatic payments.",
+  "numTrainingPhrases": 50
+}

@@ -1,0 +1,21 @@
+{
+  "name": "b784e8b7-8ae6-4490-be87-eea96badc995",
+  "displayName": "Goto NLU Main Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "e88cc648-7d98-478d-b369-c1f89afa5881"
+  } ]
+}

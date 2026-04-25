@@ -1,0 +1,64 @@
+{
+  "name": "bcf09649-376d-45ad-a659-615961618d59",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire « voix avantage », « téléphones mobiles », « Internet haute vitesse », « services de télévision » ou « téléphonie d’affaires »."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je ne vous ai pas entendu. Veuillez dire « voix avantage » ou appuyer sur le 1, « téléphones mobiles » ou appuyer sur le 2, « Internet haute vitesse » ou appuyer sur le 3, « services de télévision » ou appuyer sur le 4, ou « téléphonie d’affaires » ou appuyer sur le 5."
+    }
+  }, {
+    "userUtterance": {
+      "text": "4"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_product",
+      "inputActionParameters": {
+        "userResponse": "services de télévision"
+      },
+      "outputActionParameters": {
+        "result": "Télévision"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Télévision"
+      },
+      "outputActionParameters": {
+        "result": "tv-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Télévision",
+      "savedIntent": "tv-support"
+    }
+  },
+  "displayName": "2086-BOMM-Bus-TechSupportDisambig-NoMatch1try",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 359,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

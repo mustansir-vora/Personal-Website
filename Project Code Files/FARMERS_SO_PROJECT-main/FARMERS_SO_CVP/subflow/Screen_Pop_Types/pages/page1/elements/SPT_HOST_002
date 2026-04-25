@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@524869019:1707818031824" name="SPT_HOST_002" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.KM2API</source>
+</config>
+</decision>

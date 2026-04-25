@@ -1,0 +1,15 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Voicemail"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Voicemail Password"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

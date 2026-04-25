@@ -1,0 +1,28 @@
+{
+  "name": "c399ce4b-c529-4331-859f-e0c1a7e78304",
+  "displayName": "Institutional Decline",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "La transaction a été refusée par l’émetteur de votre carte de crédit. Veuillez communiquer avec celui-ci pour plus de détails. ", ".............", "Autrement…" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "The transaction was declined by your credit card\nprovider. Please contact them for more details", "Otherwise" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Change Amount Or Card",
+    "name": "41a075f6-b8ed-4321-8bad-e2204496f762"
+  } ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1761613149:1708938692877" name="TODAY_DT_REWRITE_OFFER_END_DT_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="TODAY_DT_REWRITE_OFFER_END_DT_CHECK" default_exit_state="false">
+        <exit_state name="True" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CURR_DT_GT_RE_OFF_EXP_DT" />
+                </data>
+                <constant_string value="True" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

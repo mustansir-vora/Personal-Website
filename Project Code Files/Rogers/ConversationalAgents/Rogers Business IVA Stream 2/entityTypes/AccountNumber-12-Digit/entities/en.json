@@ -1,0 +1,16 @@
+{
+  "entities": [ {
+    "value": "([0-9][-\\s]?){12}",
+    "synonyms": [ "([0-9][-\\s]?){12}" ],
+    "languageCode": "en",
+    "dtmfPattern": "dtmf_digits_[0-9]{12}$"
+  }, {
+    "value": "^\\d{12}$",
+    "synonyms": [ "^\\d{12}$" ],
+    "languageCode": "en"
+  }, {
+    "value": "^\\d(?:\\s?\\d){12}$",
+    "synonyms": [ "^\\d(?:\\s?\\d){12}$" ],
+    "languageCode": "en"
+  } ]
+}

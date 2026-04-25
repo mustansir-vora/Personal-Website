@@ -1,0 +1,43 @@
+{
+  "name": "e7d3870b-c6d8-4b76-ab8a-cbeccf2aab65",
+  "displayName": "PTP Create New",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.createNew",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpConfirmNo = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Payment Method Exists",
+    "name": "8b4dcb2d-d12e-47ea-937d-a2e356219cd5"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpOperation",
+        "value": "CREATE"
+      }, {
+        "parameter": "numberOfInstalls",
+        "value": 1
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      }, {
+        "parameter": "collectedPtpMethod",
+        "value": null
+      } ]
+    },
+    "targetPage": "Set Collected Amount",
+    "name": "5720b546-ce7f-41ac-9026-a0d3a807c652"
+  } ]
+}

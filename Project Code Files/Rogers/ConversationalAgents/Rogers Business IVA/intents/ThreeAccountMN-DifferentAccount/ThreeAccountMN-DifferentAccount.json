@@ -1,0 +1,7 @@
+{
+  "name": "4eaa5999-25c0-4447-bcf0-7b3ebcef54cc",
+  "displayName": "ThreeAccountMN-DifferentAccount",
+  "priority": 500000,
+  "numTrainingPhrases": 123,
+  "dtmfPattern": "4"
+}

@@ -1,0 +1,217 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I recieved the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " tv box in my shipment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " equipment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got a different box than I ordered."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " tv box."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " device for my home internet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was sent a different internet device."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got a different router than I ordered."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "You sent me the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " internet device."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " modem."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " device for my internet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was sent a different phone model."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The device I received doesn’t match my order."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " device in my shipment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The phone that arrived is incorrect."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "This is not the device I ordered."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received a different phone than expected."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was sent the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " phone color."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The phone I received is the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " color."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " phone model."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " device model."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The device I received is not the "
+    }, {
+      "text": "one"
+    }, {
+      "text": " I ordered."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got a different device than I ordered."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "You sent me the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was sent the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " device."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I received the "
+    }, {
+      "text": "wrong"
+    }, {
+      "text": " phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

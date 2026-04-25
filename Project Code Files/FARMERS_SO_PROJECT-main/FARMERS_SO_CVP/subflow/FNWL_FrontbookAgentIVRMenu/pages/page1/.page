@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@655882554:1732796436694" name="page1" version="6.0.1">
+<element height="50" id="Element@31:1732796436694" name="FNWL_FrontbookAgentIVRMenu" type="Subflow Start" width="262" x="610" y="50">
+<exit_states>
+<exit_state name="next" target="Element@467935686:1732796445451"/>
+</exit_states>
+</element>
+<element height="50" id="Element@467935686:1732796445451" name="FNWL_MN_007_Call" type="Subflow Call" width="180" x="652" y="144">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1754660355794">
+<config>
+<argument_data>
+<data name="MenuID">FNWL_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@657643705:1732796822331"/>
+</exit_states>
+</element>
+<element height="50" id="Element@657643705:1732796822331" name="FNWL_MN_007_VALUE" type="Decision" width="198" x="646" y="236">
+<exit_states>
+<exit_state name="Policy Services" target="Element@1063482862:1752559328742">
+<bendpoint>
+<dim1 x="391" y="139"/>
+<dim2 x="0" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Pending Applications" target="Element@751764052:1754304991418"/>
+<exit_state name="Technical Support" target="Element@804744955:1732797048263">
+<bendpoint>
+<dim1 x="157" y="180"/>
+<dim2 x="158" y="-114"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@649715662:1736173915427">
+<bendpoint>
+<dim1 x="673" y="93"/>
+<dim2 x="-2" y="-109"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1063482862:1752559328742">
+<bendpoint>
+<dim1 x="388" y="90"/>
+<dim2 x="-3" y="-113"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1997892014:1733821882842"/>
+<exit_state name="ER" target="Element@804744955:1732797048263"/>
+</exit_states>
+</element>
+<element height="50" id="Element@804744955:1732797048263" name="FNWL_Shared_Transfer" type="Subflow Call" width="199" x="645" y="530">
+<subflow_call subflow_name="FNWL_Transfer" target="Element@31:1733821943517">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@686912713:1732797049974"/>
+</exit_states>
+</element>
+<element height="50" id="Element@686912713:1732797049974" name="Subflow Return_01" type="Subflow Return" width="173" x="304" y="529"/>
+<element height="55" id="Element@1997892014:1733821882842" name="Disconnect" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="123" x="1068" y="234">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1219623197:1736173915427" name="Count" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="116" x="1366" y="551">
+<exit_states>
+<exit_state name="done" target="Element@1063482862:1752559328742">
+<bendpoint>
+<dim1 x="-177" y="-116"/>
+<dim2 x="110" y="0"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@649715662:1736173915427" name="Global_Rep_Handling" type="Decision" width="214" x="1314" y="434">
+<exit_states>
+<exit_state name="CONT" target="Element@1219623197:1736173915427"/>
+<exit_state name="TR" target="Element@1063482862:1752559328742"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1063482862:1752559328742" name="Set_Zinnia_Flag" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="1048" y="435">
+<exit_states>
+<exit_state name="done" target="Element@804744955:1732797048263">
+<bendpoint>
+<dim1 x="2" y="92"/>
+<dim2 x="395" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@751764052:1754304991418" name="FNWL_PA_019" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="184" x="1036" y="103">
+<exit_states>
+<exit_state name="done" target="Element@1997892014:1733821882842"/>
+</exit_states>
+</element>
+</page>

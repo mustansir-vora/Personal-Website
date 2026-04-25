@@ -1,0 +1,15 @@
+{
+  "name": "e3c28cb5-c141-4860-8f9a-2636cc4b5f6a",
+  "displayName": "Check BroadCast Id",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get BroadcastMessage",
+    "name": "c76181db-1316-44e2-9c53-4b15177a7735"
+  } ]
+}

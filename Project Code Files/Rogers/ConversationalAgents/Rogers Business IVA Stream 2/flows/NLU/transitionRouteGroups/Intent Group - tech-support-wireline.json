@@ -1,0 +1,265 @@
+{
+  "name": "c4b32186-2757-4ef9-abb0-4c8e8c9bab01",
+  "displayName": "Intent Group - tech-support-wireline",
+  "transitionRoutes": [ {
+    "intent": "appointment-change ",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "appointment-change"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "58000eb2-b9c3-4139-ba44-3636f1359977"
+  }, {
+    "intent": "appointment-new",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "appointment-new"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "49043259-f15d-40a8-86ed-11402f54ed88"
+  }, {
+    "intent": "appointment-status",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "appointment-status"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "2ae1fd29-6819-4463-9ddc-b403719ee172"
+  }, {
+    "intent": "appointment-service-book",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "appointment-service-book"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "0680dfb1-f384-495f-bac3-264337bdaf2b"
+  }, {
+    "intent": "cable-burial-status",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "cable-burial-status"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "6cac490d-a3ef-4c90-9130-6dd96a1f3301"
+  }, {
+    "intent": "cable-PIN-reset",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "cable-PIN-reset"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "2177932d-20d4-46ae-930f-24acf745aba6"
+  }, {
+    "intent": "equipment-return-residential",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "equipment-return-residential"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "8b9090d1-5d47-406d-a3d2-ff26b077cd4c"
+  }, {
+    "intent": "hotel-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "hotel-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "226002d5-cd39-4514-93e0-b7199359b874"
+  }, {
+    "intent": "inquire-box-decommission",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "inquire-box-decommission"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "e0e9deaf-8a01-42de-991f-6b02a786d353"
+  }, {
+    "intent": "internet-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "internet-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "f0535661-0f62-4c9e-ab7f-410b3533741c"
+  }, {
+    "intent": "issue-internet",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "issue-internet"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "af913b42-e6ec-4d37-82da-7bff14418e25"
+  }, {
+    "intent": "tv-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "tv-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "2037c27f-6e01-43f9-8802-9e9d08f20d6d"
+  }, {
+    "intent": "modem-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "modem-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "661b5941-aa82-426d-bafa-770115dcef59"
+  }, {
+    "intent": "network-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "network-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "7149c88b-f283-4ca6-aa7d-9454aa3fbfc3"
+  }, {
+    "intent": "outage-check",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "outage-check"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "1f7ba88d-595c-490b-97a2-f7923998e457"
+  }, {
+    "intent": "reset-digital-box",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "reset-digital-box"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "9e268e44-9bd0-4e6b-856c-872e7eddd443"
+  }, {
+    "intent": "reset-router",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "reset-router"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "b0c93005-e0fc-4b83-ad14-ec05ef988747"
+  }, {
+    "intent": "streaming-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "streaming-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "4d1bf25b-2b9d-458d-b8b3-599f09d2840a"
+  }, {
+    "intent": "tv-hotel-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "tv-hotel-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "9b672a8d-0dde-4940-9206-65ad069c0d44"
+  }, {
+    "intent": "technical-support-wifi-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "technical-support-wifi-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "ab2a176b-e766-44df-bb02-834e91ff2819"
+  } ]
+}

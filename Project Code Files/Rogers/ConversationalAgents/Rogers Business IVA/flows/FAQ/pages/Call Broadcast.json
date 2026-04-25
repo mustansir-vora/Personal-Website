@@ -1,0 +1,34 @@
+{
+  "name": "fc6631a6-1747-4acb-8029-53666bfb298d",
+  "displayName": "Call Broadcast",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "broadCastId",
+      "value": "$session.params.broadCastId14"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.faqBroadCastInvoked = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "faqBroadCastInvoked",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "1b02d929-c15e-41a0-bedc-6956bc742eee"
+  }, {
+    "condition": "$session.params.faqBroadCastInvoked = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "faqBroadCastInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call getFAQws Webhook",
+    "name": "8b537e2f-b0c7-4f96-977d-07381327379a"
+  } ]
+}

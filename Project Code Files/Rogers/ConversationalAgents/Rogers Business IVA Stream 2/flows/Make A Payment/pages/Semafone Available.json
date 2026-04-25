@@ -1,0 +1,31 @@
+{
+  "name": "bcd972c6-2301-42c6-944f-1c90ba85fe00",
+  "displayName": "Semafone Available",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.semafoneAvailable = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "c1ca0a3f-482c-45b7-928e-a9c68a9eca60"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check From",
+    "name": "5b62cb3a-019d-4fa1-9dd3-3b4799a9c170"
+  } ]
+}

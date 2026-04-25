@@ -1,0 +1,52 @@
+{
+  "name": "3247b7cd-7c46-48fb-a1ef-80cee54bb36c",
+  "displayName": "Check Confirmation Menu Response",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.DynamicConfirmationMenuResponse = \"Yes\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "confirmSubscriptionResult",
+        "value": "subscriptionNumber"
+      }, {
+        "parameter": "subscriptionId",
+        "value": "$session.params.itnToMatchSubscription"
+      } ]
+    },
+    "targetPage": "Confirm Subscription Router",
+    "name": "327134aa-3dc2-4193-8da8-ad2a3afe3f85"
+  }, {
+    "condition": "$session.params.DynamicConfirmationMenuResponse = \"No\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "okay." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Single Wireless Subscription 2?",
+    "name": "77015d94-f0c2-4fd7-9e25-6eec08617f2f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "confirmCounter",
+        "value": "$sys.func.ADD($session.params.confirmCounter, 1)"
+      } ]
+    },
+    "targetPage": "Check Confirmation Menu Tries",
+    "name": "00080658-2955-4f84-9ed2-638d910869c7"
+  } ]
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1847921201:1745494472546" name="MoreThanOneProductType" version="6.0.1">
+<element height="55" id="Element@734817865:1745494551131" name="VIA_MN_007_Call" type="Subflow Call" width="222" x="237" y="191">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709037946046">
+<config>
+<argument_data>
+<data name="MenuID">VIA_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@830266906:1745494551131"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2107527518:1745494551131" name="CANCEL_POLICY_ENTRY" type="Page Connector" width="210" x="-176" y="339">
+<page_connector target="Element@1232041515:1754377542076">CANCEL_POLICY_ENTRY<config/>
+</page_connector>
+</element>
+<element height="58" id="Element@654823907:1745494551131" name="Selected_Policy_LookUp" type="Page Connector" width="237" x="588" y="285">
+<page_connector target="Element@1188893570:1747923957640">Selected_Policy_LookUp<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@752452795:1745494551131" name="MoreThanOneProductType" type="Page Entry" width="262" x="232" y="93">
+<exit_states>
+<exit_state name="next" target="Element@734817865:1745494551131"/>
+</exit_states>
+</element>
+<element height="55" id="Element@830266906:1745494551131" name="VIA_MN_007_VALUE" type="Decision" width="250" x="227" y="299">
+<exit_states>
+<exit_state name="NOINPUT" target="Element@795605120:1750773450085"/>
+<exit_state name="NOMATCH" target="Element@795605120:1750773450085">
+<bendpoint>
+<dim1 x="-205" y="54"/>
+<dim2 x="82" y="-83"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@795605120:1750773450085">
+<bendpoint>
+<dim1 x="-144" y="141"/>
+<dim2 x="143" y="4"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ValidSinglePolicy" target="Element@654823907:1745494551131"/>
+<exit_state name="ValidMultiplePolicy" target="Element@505564342:1745494551131"/>
+<exit_state name="Something Else" target="Element@1241111910:1745494551131"/>
+<exit_state name="Representative" target="Element@539261066:1747317876626"/>
+</exit_states>
+</element>
+<element height="55" id="Element@505564342:1745494551131" name="MoreThanOnePolicy" type="Page Connector" width="208" x="260" y="428">
+<page_connector target="Element@290275169:1745494498268">MoreThanOnePolicy<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1241111910:1745494551131" name="CANCEL_POLICY_ENTRY" type="Page Connector" width="180" x="557" y="405">
+<page_connector target="Element@1232041515:1754377542076">CANCEL_POLICY_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@766190669:1747317869397" name="VIA_MN_007_ENTRY" type="Page Entry" width="210" x="10" y="193">
+<exit_states>
+<exit_state name="next" target="Element@734817865:1745494551131"/>
+</exit_states>
+</element>
+<element height="55" id="Element@539261066:1747317876626" name="GLOBAL_REP_ENTRY" type="Page Connector" width="209" x="515" y="183">
+<page_connector target="Element@1828866062:1754498931732">GLOBAL_REP_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@795605120:1750773450085" name="SMM_SPCQ_CHECK_08" type="Decision" width="305" x="-87" y="436">
+<exit_states>
+<exit_state name="YES" target="Element@1316514935:1750773569759"/>
+<exit_state name="NO" target="Element@2107527518:1745494551131"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1316514935:1750773569759" name="Subflow Return_10" type="Subflow Return" width="198" x="23" y="280"/>
+</page>

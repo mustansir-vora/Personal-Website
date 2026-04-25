@@ -1,0 +1,105 @@
+{
+  "name": "ad59b718-625d-49d9-bdd4-562fe1e561d0",
+  "displayName": "Method 2 Check Change Request Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeAM = true AND $session.params.ptpFirstInstallOrSingle = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je ne suis pas en mesure de modifier \r\nvotre mode de paiement pour ce \r\nversement en ce moment. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm unable to change your payment method for this installment right now." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      }, {
+        "parameter": "ptpChangeAmount",
+        "value": true
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 2",
+    "name": "44a30622-3197-447a-a0c6-395db5c36402"
+  }, {
+    "condition": "$session.params.ptpChangeAll = true AND $session.params.ptpFirstInstallOrSingle = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je ne suis pas en mesure de modifier \r\nvotre mode de paiement pour ce \r\nversement en ce moment. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm unable to change your payment method for this installment right now." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      }, {
+        "parameter": "ptpChangeAmount",
+        "value": true
+      }, {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 2",
+    "name": "724c9f54-be68-400e-955f-03177ad8422b"
+  }, {
+    "condition": "$session.params.ptpChangeDM = true AND $session.params.ptpFirstInstallOrSingle = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je ne suis pas en mesure de modifier \r\nvotre mode de paiement pour ce \r\nversement en ce moment. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm unable to change your payment method for this installment right now. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      }, {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 2",
+    "name": "9d928b56-20e9-4ed7-908c-63cd9e0b0490"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Method 2 Check Current Promise Method",
+    "name": "cee806c4-d76e-47be-8b67-aa0e7e0c12c1"
+  } ]
+}

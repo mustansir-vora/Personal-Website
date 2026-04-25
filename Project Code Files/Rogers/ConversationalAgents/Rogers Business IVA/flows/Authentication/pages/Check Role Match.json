@@ -1,0 +1,52 @@
+{
+  "name": "a89837fa-cc4a-4364-bab5-66d112d89691",
+  "displayName": "Check Role Match",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.authRoleMatch = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Continue"
+      }, {
+        "parameter": "authenticated",
+        "value": true
+      }, {
+        "parameter": "callerAuthenticated",
+        "value": true
+      }, {
+        "parameter": "customerAuthenticated",
+        "value": true
+      }, {
+        "parameter": "authenticationCounter",
+        "value": "$sys.func.ADD($session.params.authenticationCounter, 1)"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "6514df7a-542e-4995-984f-917e77889ced"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, you don't seem to have the correct authentication level for this request." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "transferType",
+        "value": "applicationError"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "c58f774c-3181-45dd-af68-e34d6b5b92b8"
+  } ]
+}

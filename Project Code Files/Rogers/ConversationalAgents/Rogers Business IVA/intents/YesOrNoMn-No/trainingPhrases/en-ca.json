@@ -1,0 +1,213 @@
+{
+  "trainingPhrases": [ {
+    "id": "2a69b3ae-2076-4979-9226-96dcfe0e44b6",
+    "parts": [ {
+      "text": "That's not quite right"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "05547999-2ec1-4c3f-afca-a75c35fa8a79",
+    "parts": [ {
+      "text": "Incorrect"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "48650bdc-5cac-462e-a359-4df8c1118bb3",
+    "parts": [ {
+      "text": "That's not true"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2b3f1016-d614-4886-a270-12d2aaf611eb",
+    "parts": [ {
+      "text": "I don't want that"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "008c0a68-ea7c-4793-aa08-e49e4a3ed3e7",
+    "parts": [ {
+      "text": "I'm not interested"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8046c56a-fef3-468f-b827-959a37f24771",
+    "parts": [ {
+      "text": "I don't agree"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "38a7ff6b-2dbf-4f22-a18e-69722a4319e7",
+    "parts": [ {
+      "text": "Definitely not"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5ecc9539-c728-4f16-a67c-3899da034ffe",
+    "parts": [ {
+      "text": "No, never"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1d57386b-a83c-411a-a684-d9066fb192db",
+    "parts": [ {
+      "text": "That's not what I meant"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e96c6c29-12ae-46fc-be56-c57c50aa867e",
+    "parts": [ {
+      "text": "That is not what I said"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "780787c8-b025-441f-9da7-56bd5caccb9a",
+    "parts": [ {
+      "text": "That's wrong"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d4fc3bb0-355c-4191-976b-bc70c5e46599",
+    "parts": [ {
+      "text": "I don't think that's the case"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "db1db7d8-fc55-4f55-bac0-e4429b8935d7",
+    "parts": [ {
+      "text": "No, that isn't right"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1f5d0638-4760-4ab5-96f6-62e941dd3bcd",
+    "parts": [ {
+      "text": "That's not correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "acac23c2-c576-4399-8845-e6f3aebf10f4",
+    "parts": [ {
+      "text": "That's not it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "28302e06-a392-4439-a68c-42c89d47134f",
+    "parts": [ {
+      "text": "I refuse"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "71a82e72-972f-49a1-b44d-9f392efa915f",
+    "parts": [ {
+      "text": "I decline"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0c009497-c932-49cd-84bd-411929335682",
+    "parts": [ {
+      "text": "No, that is not what I meant"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "82f40cc4-9066-4c4d-a474-de27701a8865",
+    "parts": [ {
+      "text": "That's incorrect"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9f18764f-2ea9-45b7-87c3-ee287d24b7f8",
+    "parts": [ {
+      "text": "I don't think so"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0d87d2e0-ae0c-4b0c-80cc-a83642b151dc",
+    "parts": [ {
+      "text": "I disagree"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7dfb6eb6-790e-483e-a5ee-6eb24f50c06b",
+    "parts": [ {
+      "text": "No, negative"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "319144bd-e31f-44ed-be34-d760d39565a5",
+    "parts": [ {
+      "text": "No way"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9549b395-a23e-40c3-bbc0-d9b5afa09e23",
+    "parts": [ {
+      "text": "Not at all"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3e3cbe34-fecf-47e1-bf3c-a25900aa906c",
+    "parts": [ {
+      "text": "Absolutely not"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f4aabf57-010f-4026-8402-c30cb1c9b70c",
+    "parts": [ {
+      "text": "No, I don't want that"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "454fa37a-0ca8-449b-aaa6-9a338ad07865",
+    "parts": [ {
+      "text": "No, thank you"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0a865502-3d08-4426-ac2e-7b56399d52c1",
+    "parts": [ {
+      "text": "No, that's not right"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bc959a0c-b1ef-4761-96bd-52df0203c304",
+    "parts": [ {
+      "text": "Nope"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0c890b96-dac2-4b65-8c6f-c35f5a54937f",
+    "parts": [ {
+      "text": "No"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

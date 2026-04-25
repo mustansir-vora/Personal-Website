@@ -1,0 +1,25 @@
+{
+  "name": "74eb162e-270b-4fb7-ad25-5d69a89db8ee",
+  "displayName": "PTP Update Single Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpConfirmNo = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Change Date",
+    "name": "6e3285f8-9024-4320-9ff5-5ca805a82873"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Change PTP Single",
+    "name": "656f6571-27dd-4d0e-babe-592379e21223"
+  } ]
+}

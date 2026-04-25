@@ -1,0 +1,7 @@
+{
+  "name": "329fdab1-3908-4ab7-9568-5194795a9f01",
+  "displayName": "phone-help-vague",
+  "priority": 500000,
+  "description": "Tech support for business phone device",
+  "numTrainingPhrases": 66
+}

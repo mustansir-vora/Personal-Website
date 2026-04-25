@@ -1,0 +1,28 @@
+{
+  "name": "657878cd-0db8-4e9b-b5a5-bcf8ea3d5b72",
+  "displayName": "Second Install Check Change Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeAmount = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Change 2nd Amount",
+    "name": "11525fc9-51a7-4e41-bc87-7ca3e3323b91"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "secondPromiseDate",
+        "value": "$session.params.collectedPtpDate"
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "fd03c03b-ad94-482d-a5d6-1f89776fc2ed"
+  } ]
+}

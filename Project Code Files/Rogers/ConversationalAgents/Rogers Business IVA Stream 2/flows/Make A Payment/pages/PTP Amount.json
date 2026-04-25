@@ -1,0 +1,114 @@
+{
+  "name": "04c7dc07-44a8-413b-bd96-9a1a50a77d89",
+  "displayName": "PTP Amount",
+  "form": {
+    "parameters": [ {
+      "displayName": "userPTPAmountConfirmation",
+      "required": true,
+      "entityType": "@e_YesNo",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant de $session.params.pendingPTPInstallment/ $session.params.amount ?" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Would you like to pay ${session.params.pendingPTPInstallment} ?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant de ${session.params.pendingPTPInstallment}" ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "be8600f0-d97f-4b3e-bb48-674c2840e2bb"
+        }, {
+          "targetPage": "In That Case",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant de ${session.params.pendingPTPInstallment}" ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "9dbb97ea-a7dc-4caf-937d-8b003aaef359"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant de $session.params.pendingPTPInstallment/ $session.params.amount ?" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Would you like to pay ${session.params.pendingPTPInstallment} ?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Souhaitez-vous payer le montant de ${session.params.pendingPTPInstallment}" ]
+              },
+              "languageCode": "fr"
+            } ]
+          },
+          "name": "33d476d9-8ad7-4a45-8055-ce1e3726d732"
+        }, {
+          "targetPage": "In That Case",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+          
+          },
+          "name": "fc4a8af2-37be-4d26-bdbe-16eb3e222d68"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Souhaitez-vous payer le montant de $session.params.pendingPTPInstallment/ $session.params.amount ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Would you like to pay $session.params.pendingPTPInstallment" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Souhaitez-vous payer le montant de ${session.params.pendingPTPInstallment}" ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.userPTPAmountConfirmation = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "In That Case",
+    "name": "7128b14c-4486-463f-9362-e5bf63141f75"
+  }, {
+    "condition": "$session.params.userPTPAmountConfirmation = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.pendingPTPInstallment"
+      } ]
+    },
+    "targetPage": "Continue To Credit Operations",
+    "name": "0783a1fd-3905-4c49-886e-bdd424eeea23"
+  } ]
+}

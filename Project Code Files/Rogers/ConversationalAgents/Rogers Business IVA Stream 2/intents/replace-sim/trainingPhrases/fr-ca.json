@@ -1,0 +1,86 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J'ai perdu ma ",
+      "auto": true
+    }, {
+      "text": "carte SIM",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma carte ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "auto": true
+    }, {
+      "text": " est endommagée.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma ",
+      "auto": true
+    }, {
+      "text": "carte SIM",
+      "auto": true
+    }, {
+      "text": " ne fonctionne plus.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " nouvelle carte ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " nouvelle carte ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'une nouvelle carte SIM."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

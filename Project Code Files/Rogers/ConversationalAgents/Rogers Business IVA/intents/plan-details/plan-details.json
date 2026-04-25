@@ -1,0 +1,7 @@
+{
+  "name": "4734b822-899d-4a35-b431-e183262848e4",
+  "displayName": "plan-details",
+  "priority": 500000,
+  "description": "Handles inquiries about plan features, pricing, or usage.",
+  "numTrainingPhrases": 42
+}

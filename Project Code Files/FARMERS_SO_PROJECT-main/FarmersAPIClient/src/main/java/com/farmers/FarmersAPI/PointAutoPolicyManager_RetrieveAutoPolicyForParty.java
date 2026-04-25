@@ -1,0 +1,154 @@
+package com.farmers.FarmersAPI;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.json.simple.JSONObject;
+
+import com.farmers.APIUtil.Constants;
+import com.farmers.APIUtil.Encrypt_Decrypt;
+import com.farmers.APIUtil.stacktrace;
+import com.farmers.bean.RequestBean;
+
+public class PointAutoPolicyManager_RetrieveAutoPolicyForParty {
+	
+	//private Logger logger = LogManager.getLogger(Constants.LOGGER_NAME);
+
+	public JSONObject start(String url, String tid, String userid, String systemname, String firstname, String lastname,String telephonenumber, int conntimeout, int readtimeout, LoggerContext context) {
+
+		Logger logger = context.getLogger(Constants.FARMERS_LOGGER_NAME);
+		logger.info(tid+" : Parameters Passed from CVP : "+url+", "+tid+", "+userid+", "+systemname+", "+firstname+", "+", "+lastname+", "+telephonenumber+", "+conntimeout+", "+readtimeout);
+		//String url = "https://api-np-ss.farmersinsurance.com/PLE/agentms/v2/agents?operation=retrieveByPhonenumber";
+		JSONObject response = new JSONObject();
+		APIConnection connection = null;
+		String Scope = "api.agentinfo.read";
+
+		try {
+			connection = new APIConnection();
+
+			String requestBody = formRequestBody(tid, userid, systemname, firstname, lastname, telephonenumber);
+
+			HashMap<String, String> headers = (HashMap<String, String>) getHeaders(Scope, tid, logger);
+			if (null != headers && headers.containsKey("TOKEN_ERROR")) {
+				response = formatErrorResponse("OAUTH TOKEN_ERROR", 1);
+			} else {
+				RequestBean requestBean = new RequestBean(url, requestBody, "POST", headers);
+				response = connection.sendHttpRequest(requestBean, logger, tid,conntimeout, readtimeout);
+				logger.info(tid+" : Final Response = "+response);
+			}
+		} catch (Exception e) {
+			// Handle other exceptions
+			logger.error(tid+" : Unexpected error occurred : " + e.getMessage());
+			stacktrace.printStackTrace(logger, e);
+			e.printStackTrace();
+		}
+		return response;
+	}
+
+	private Map<String, String> getHeaders(String Scope, String tid, Logger logger) {
+
+		Map<String, String> headers = null;
+		try {
+			Properties prop = new Properties();
+	        prop.load(new FileInputStream(Constants.CONFIG_PATH));
+	        
+	        String client_id = prop.getProperty("Farmers.Host.ClientID");
+	        String client_secret = prop.getProperty("Farmers.Host.ClientSecret");
+	        Encrypt_Decrypt Decryptor = new Encrypt_Decrypt();
+	        client_id = Decryptor.decrypt(client_id);
+	        client_secret = Decryptor.decrypt(client_secret);
+			
+			headers = new HashMap<String, String>();
+			headers.put("frms_source", prop.getProperty("Farmers.Host.frms_source"));
+			headers.put("frms_appid", prop.getProperty("Farmers.Host.frms_appid"));
+			headers.put("frms_tid", tid);
+			headers.put("Content-Type", "application/json");
+			headers.put("client_id", client_id);
+			headers.put("client_secret", client_secret);
+			headers.put("frms_region", prop.getProperty("Farmers.Host.frms_region"));
+			headers.put("frms_ipaddress", "1.1.1.1");
+			
+			// access_token = new String();
+			TokenInvocation tokeninvocation = new TokenInvocation();
+			String access_token = tokeninvocation.getAccessToken(Scope, logger, tid);
+			if (null != access_token) {
+				headers.put("Authorization", "Bearer " + access_token);
+			} else {
+				headers.put("TOKEN_ERROR", "true");
+			}
+			
+			logger.info(tid+" : Headers : "+headers);
+			
+		} catch (Exception e) {
+			// Handle other exceptions
+			logger.error(tid+" : Unexpected error occurred : " + e.getMessage());
+			stacktrace.printStackTrace(logger, e);
+			e.printStackTrace();
+		}
+		return headers;
+	}
+
+	public JSONObject formatErrorResponse(String error, int statusCode) {
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("responseCode", statusCode);
+		jsonObject.put("responseMsg", error);
+		return jsonObject;
+	}
+
+	public String formRequestBody(String tid, String userid, String systemname, String firstname, String lastname,String telephonenumber) {
+
+		JSONObject Criteria = null;
+		JSONObject reqBody = null;
+		try {
+			
+			Criteria = new JSONObject();
+			Criteria.put("userId", userid);
+			Criteria.put("systemName", systemname);
+			Criteria.put("messageReference", tid);
+			Criteria.put("firstName", firstname);
+			Criteria.put("lastName", lastname);
+			
+			if (telephonenumber == null || telephonenumber.equalsIgnoreCase("") || telephonenumber.isEmpty()) {
+				Criteria.put("telephoneNumber", "default");
+			}
+			else {
+				Criteria.put("telephoneNumber", telephonenumber);	
+			}
+			
+			reqBody = new JSONObject();
+			reqBody.put("criteria", Criteria);
+
+		} catch (Exception e) {
+
+		}
+		return reqBody.toString();
+
+	}
+
+	
+	  public static void main(String[] args) {
+	  
+		  LoggerContext context = (org.apache.logging.log4j.core.LoggerContext) LogManager.getContext(false);;
+	      File file = new File(new StringBuffer("C:\\Servion\\FARMERS_SO_CVP\\Config\\").append("log4j2.xml").toString());
+	      context.setConfigLocation(file.toURI());
+		  
+	  String url = "https://api-ss.farmersinsurance.com/searchpolicyms/v1/policies?operation=searchByParty";
+	  JSONObject resp = null; 
+	  String tid = "Ciscotest"; 
+	  String userid = "138";
+	  String systemname = "IVR";
+	  String firstname = "";
+	  String lastname = "";
+	  String telephonenumber = "8183900175";
+	  PointAutoPolicyManager_RetrieveAutoPolicyForParty test = new PointAutoPolicyManager_RetrieveAutoPolicyForParty();
+	  resp = test.start(url, tid, userid, systemname, firstname, lastname, telephonenumber, 10000, 10000, context);
+	  }
+	 
+
+}

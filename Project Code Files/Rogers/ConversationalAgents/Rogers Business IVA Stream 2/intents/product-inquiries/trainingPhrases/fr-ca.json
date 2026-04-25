@@ -1,0 +1,137 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je cherche "
+    }, {
+      "text": "un"
+    }, {
+      "text": " ensemble de produits et "
+    }, {
+      "text": "services"
+    }, {
+      "text": " pour "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": " ainsi que "
+    }, {
+      "text": "des occasions"
+    }, {
+      "text": " d’économiser."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voulais installer des télévisions dans "
+    }, {
+      "text": "mon restaurant et"
+    }, {
+      "text": " je cherche les options disponibles."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " qui peut me donner de l’information "
+    }, {
+      "text": "sur une"
+    }, {
+      "text": " solution de téléphonie flexible pour "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je "
+    }, {
+      "text": "voyage"
+    }, {
+      "text": " beaucoup et je cherche des vitesses plus rapides et "
+    }, {
+      "text": "une"
+    }, {
+      "text": " couverture nationale pour ma mobilité."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais me renseigner "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " l’Internet d’"
+    }, {
+      "text": "affaires"
+    }, {
+      "text": ", le coût et les options disponibles."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais obtenir les prix et les détails de déploiement pour "
+    }, {
+      "text": "mon entreprise de taille moyenne"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai "
+    }, {
+      "text": "une entreprise"
+    }, {
+      "text": " de "
+    }, {
+      "text": "transport"
+    }, {
+      "text": " et je cherche "
+    }, {
+      "text": "une"
+    }, {
+      "text": " solution de gestion de flotte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ouvre "
+    }, {
+      "text": "un magasin"
+    }, {
+      "text": " et j’ai besoin d’Internet et de téléphonie pour "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai "
+    }, {
+      "text": "une entreprise"
+    }, {
+      "text": " avec n employés et je cherche des produits et "
+    }, {
+      "text": "services"
+    }, {
+      "text": " qui conviendraient bien à ma compagnie."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

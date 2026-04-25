@@ -1,0 +1,310 @@
+{
+  "name": "41925065-9de2-4e1c-885a-b9ea5d5f9ca6",
+  "displayName": "Play Implicit Confirmation",
+  "form": {
+    "parameters": [ {
+      "displayName": "ImplicitConfirmationResponse",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "$session.params.NLUImplicitQuestion" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "$session.params.NLUImplicitQuestion" ]
+              },
+              "languageCode": "en"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "implicitTriesCounter",
+              "value": "$sys.func.ADD($session.params.implicitTriesCounter, 1)"
+            }, {
+              "parameter": "erType",
+              "value": "NI"
+            } ],
+            "generators": [ {
+              "generator": "projects/gcp-prj-rogers-cct-iva-dev-01/locations/northamerica-northeast1/agents/b5efb30f-b992-4b73-9ad7-8b8d8f7ad897/generators/658a6fa6-fef0-494d-8091-c62bbd1cb85d",
+              "inputParameters": [ {
+                "key": "erType",
+                "value": "$session.params.erType"
+              }, {
+                "key": "implicitTriesCounter",
+                "value": "$session.params.implicitTriesCounter"
+              }, {
+                "key": "savedIntent",
+                "value": "$session.params.savedIntent"
+              }, {
+                "key": "savedUtterance",
+                "value": "$session.params.savedUtterance"
+              } ],
+              "outputParameter": "$session.params.NLUImplicitQuestion"
+            } ]
+          },
+          "name": "649f3e1d-bf8a-4c38-afc7-789f42bff423"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "$session.params.NLUImplicitQuestion" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "$session.params.NLUImplicitQuestion" ]
+              },
+              "languageCode": "en"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "implicitTriesCounter",
+              "value": "$sys.func.ADD($session.params.implicitTriesCounter, 1)"
+            }, {
+              "parameter": "erTypr",
+              "value": "NI"
+            } ],
+            "generators": [ {
+              "generator": "projects/gcp-prj-rogers-cct-iva-dev-01/locations/northamerica-northeast1/agents/b5efb30f-b992-4b73-9ad7-8b8d8f7ad897/generators/658a6fa6-fef0-494d-8091-c62bbd1cb85d",
+              "inputParameters": [ {
+                "key": "erType",
+                "value": "$session.params.erType"
+              }, {
+                "key": "implicitTriesCounter",
+                "value": "$session.params.implicitTriesCounter"
+              }, {
+                "key": "savedIntent",
+                "value": "$session.params.savedIntent"
+              }, {
+                "key": "savedUtterance",
+                "value": "$session.params.savedUtterance"
+              } ],
+              "outputParameter": "$session.params.NLUImplicitQuestion"
+            } ]
+          },
+          "name": "34d9a316-42f5-40b2-b8cc-643facd2b426"
+        }, {
+          "targetPage": "FallBack Router",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "LastStdError",
+              "value": "NI"
+            }, {
+              "parameter": "fallbackReason",
+              "value": "NLUMainMenu"
+            }, {
+              "parameter": "implicitTriesCounter",
+              "value": 0
+            }, {
+              "parameter": "erType",
+              "value": null
+            }, {
+              "parameter": "savedUtterance",
+              "value": null
+            } ]
+          },
+          "name": "3efc4d83-5fd1-4139-a61e-6525bd0e3c49"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "$session.params.NLUImplicitQuestion" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "$session.params.NLUImplicitQuestion" ]
+              },
+              "languageCode": "en"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "implicitTriesCounter",
+              "value": "$sys.func.ADD($session.params.implicitTriesCounter, 1)"
+            }, {
+              "parameter": "erType",
+              "value": "NM"
+            } ],
+            "generators": [ {
+              "generator": "projects/gcp-prj-rogers-cct-iva-dev-01/locations/northamerica-northeast1/agents/b5efb30f-b992-4b73-9ad7-8b8d8f7ad897/generators/658a6fa6-fef0-494d-8091-c62bbd1cb85d",
+              "inputParameters": [ {
+                "key": "erType",
+                "value": "$session.params.erType"
+              }, {
+                "key": "implicitTriesCounter",
+                "value": "$session.params.implicitTriesCounter"
+              }, {
+                "key": "savedIntent",
+                "value": "$session.params.savedIntent"
+              }, {
+                "key": "savedUtterance",
+                "value": "$session.params.savedUtterance"
+              } ],
+              "outputParameter": "$session.params.NLUImplicitQuestion"
+            } ]
+          },
+          "name": "2eb33cc1-a9f6-47b8-94a5-5533ec9ce809"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "$session.params.NLUImplicitQuestion" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "$session.params.NLUImplicitQuestion" ]
+              },
+              "languageCode": "en"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "implicitTriesCounter",
+              "value": "$sys.func.ADD($session.params.implicitTriesCounter, 1)"
+            }, {
+              "parameter": "erType",
+              "value": "NM"
+            } ],
+            "generators": [ {
+              "generator": "projects/gcp-prj-rogers-cct-iva-dev-01/locations/northamerica-northeast1/agents/b5efb30f-b992-4b73-9ad7-8b8d8f7ad897/generators/658a6fa6-fef0-494d-8091-c62bbd1cb85d",
+              "inputParameters": [ {
+                "key": "erType",
+                "value": "$session.params.erType"
+              }, {
+                "key": "implicitTriesCounter",
+                "value": "$session.params.implicitTriesCounter"
+              }, {
+                "key": "savedIntent",
+                "value": "$session.params.savedIntent"
+              }, {
+                "key": "savedUtterance",
+                "value": "$session.params.savedUtterance"
+              } ],
+              "outputParameter": "$session.params.NLUImplicitQuestion"
+            } ]
+          },
+          "name": "01e3fadd-84c4-491a-b1b3-d930d06277d4"
+        }, {
+          "targetPage": "FallBack Router",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "LastStdError",
+              "value": "NM"
+            }, {
+              "parameter": "fallbackReason",
+              "value": "NLUMainMenu"
+            }, {
+              "parameter": "implicitTriesCounter",
+              "value": 0
+            }, {
+              "parameter": "erType",
+              "value": null
+            }, {
+              "parameter": "savedUtterance",
+              "value": null
+            } ]
+          },
+          "name": "d3921a85-b94f-4e91-a589-17a4aba9167f"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.NLUImplicitQuestion" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "$session.params.NLUImplicitQuestion" ]
+      },
+      "languageCode": "en"
+    } ],
+    "generators": [ {
+      "generator": "projects/gcp-prj-rogers-cct-iva-dev-01/locations/northamerica-northeast1/agents/b5efb30f-b992-4b73-9ad7-8b8d8f7ad897/generators/658a6fa6-fef0-494d-8091-c62bbd1cb85d",
+      "inputParameters": [ {
+        "key": "erType",
+        "value": "$session.params.erType"
+      }, {
+        "key": "implicitTriesCounter",
+        "value": "$session.params.implicitTriesCounter"
+      }, {
+        "key": "savedIntent",
+        "value": "$session.params.savedIntent"
+      }, {
+        "key": "savedUtterance",
+        "value": "$session.params.savedUtterance"
+      } ],
+      "outputParameter": "$session.params.NLUImplicitQuestion"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "cb224ad8-08f1-4d7e-8c05-a7b9231dc9a1"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "8b382abf-765d-42aa-88dd-ecb04f672190"
+  }, {
+    "condition": "$session.params.ImplicitConfirmationResponse = Yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ImplicitConfirmationResponse",
+        "value": null
+      }, {
+        "parameter": "implicitTriesCounter",
+        "value": 0
+      }, {
+        "parameter": "erType",
+        "value": null
+      }, {
+        "parameter": "savedUtterance",
+        "value": null
+      } ]
+    },
+    "targetPage": "Check Destination Type",
+    "name": "4edfcefb-65bf-49d9-89f2-e12ebf941d3f"
+  }, {
+    "condition": "$session.params.ImplicitConfirmationResponse = No",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "disconfirmed_Intent",
+        "value": true
+      }, {
+        "parameter": "ImplicitConfirmationResponse",
+        "value": null
+      }, {
+        "parameter": "disconfirmIntentCounter",
+        "value": "$sys.func.ADD($session.params.disconfirmIntentCounter, 1)"
+      }, {
+        "parameter": "implicitTriesCounter",
+        "value": 0
+      }, {
+        "parameter": "erType",
+        "value": null
+      }, {
+        "parameter": "savedUtterance",
+        "value": null
+      } ]
+    },
+    "targetPage": "Check Disconfirmed Intent Attempts",
+    "name": "8b3975fb-86fe-4f14-afc9-2e0316408fd6"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "d7813738-2a48-45aa-bf0e-902cce9a56ed",
+  "displayName": "intent_repeat",
+  "priority": 500000,
+  "numTrainingPhrases": 19,
+  "dtmfPattern": "^\\*$"
+}

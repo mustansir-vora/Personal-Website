@@ -1,0 +1,46 @@
+{
+  "name": "625a3c88-b022-4c67-a464-3b78ae8b6877",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire Internet,Télévision, Mobile,Téléphonie Affaires"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Téléphonie Affaires"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Téléphonie Affaires"
+      },
+      "outputActionParameters": {
+        "result": "wireless-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "productLabelMixFr": "Internet Mobile,Télévision,Tablette,Téléphonie Affaires sans fil",
+      "serviceCategoryMixFr": "Internet,Télévision, Mobile,Téléphonie Affaires",
+      "serviceCategoryMixLength": "4"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Téléphonie Affaires",
+      "savedIntent": "wireless-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-WBP",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 225,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

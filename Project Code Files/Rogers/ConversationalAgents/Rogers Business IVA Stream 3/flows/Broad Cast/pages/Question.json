@@ -1,0 +1,177 @@
+{
+  "name": "2201d7b8-4486-489d-9623-00c826ae92c9",
+  "displayName": "Question",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.StdErrorCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.primaryMessage ,Veuillez répondre « oui » ou « non »" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.primaryMessage .Please say \"Yes\" or \"No\"" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai pas entendu. $session.params.primaryMessage ,Veuillez répondre par oui ou par non." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I couldn't hear that. $session.params.primaryMessage. Please say \"Yes\" or \"No\"" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, j'ai pas compris. $session.params.primaryMessage ,Veuillez répondre par oui ou par non." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I didn't get that. $session.params.primaryMessage. Please say \"Yes\" or \"No\"" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Désolé, je n'ai toujours pas entendu. $session.params.primaryMessage ,S'il vous plaît, dites oui ou appuyez sur 1, sinon dites non ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I still couldn't hear that. $session.params.primaryMessage" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Please Say yes or press 1,Otherwise say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Je suis désolé, je n'ai toujours pas compris. $session.params.primaryMessage ,Veuillez répondre oui ou appuyer sur 1, sinon répondez non ou appuyez sur 2." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, I still didn't get that.$session.params.primaryMessage" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Please Say yes or press 1,Otherwise say no or press 2." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "BroadCastMn-Yes",
+    "condition": "$session.params.StdErrorCount \u003c= 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "SecondaryMessage",
+    "name": "dda348e3-ffbd-48cf-987b-618b94da2cfa"
+  }, {
+    "intent": "BroadCastMn-No",
+    "condition": "$session.params.StdErrorCount \u003c= 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Exit BroadCast",
+    "name": "d0719c50-5b47-400b-8392-d8bcae7e142d"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "c2d7c313-9744-4302-9cda-f221f1ba20f8"
+  }, {
+    "condition": "$session.params.StdErrorCount \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Exit BroadCast",
+    "name": "611c89bf-cab1-4210-bc16-1d13b7b5af93"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Exit BroadCast",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "name": "4bc9d354-041e-4816-82de-6aa06ec7afee"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "a27a83fe-b663-4fd3-bc1d-43d1bbcc4411"
+  } ]
+}

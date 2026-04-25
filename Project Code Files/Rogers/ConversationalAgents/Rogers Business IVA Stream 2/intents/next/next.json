@@ -1,0 +1,7 @@
+{
+  "name": "93586f0c-3699-476e-a789-f6f8548ec18d",
+  "displayName": "next",
+  "priority": 500000,
+  "numTrainingPhrases": 4,
+  "dtmfPattern": "#"
+}

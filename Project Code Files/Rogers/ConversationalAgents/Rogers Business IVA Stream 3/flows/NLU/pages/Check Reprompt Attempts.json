@@ -1,0 +1,28 @@
+{
+  "name": "19aaa3ef-84d0-4163-84f5-3b6ddf83dad6",
+  "displayName": "Check Reprompt Attempts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.repromptCounter \u003c= 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Main Menu",
+    "name": "4ead9f18-8b96-4dc9-b132-4dcf5780f60e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fallbackReason",
+        "value": "NLUMainMenu"
+      } ]
+    },
+    "targetPage": "FallBack Router",
+    "name": "5d35bde4-780b-4ab2-ab09-b101aa9fc28e"
+  } ]
+}

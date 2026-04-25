@@ -1,0 +1,110 @@
+{
+  "name": "c9d20c82-c4b8-48bf-b183-d77e167c905c",
+  "displayName": "Call Ask Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.ptpCallAskAmount",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCallAskAmount = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Ask Amount",
+    "name": "84cdb78d-83fc-4d5f-a650-554fcf4f1d8a"
+  }, {
+    "condition": "$session.params.fromValidatePTPAmount = true AND $session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "$session.params.fromValidatePTPAmount",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Fail",
+    "name": "176796fe-5d80-41e3-83b1-8bbea7046da1"
+  }, {
+    "condition": "$session.params.fromValidatePTPAmount = true AND $session.params.getAmountFailure = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpAmount",
+        "value": "$session.params.paymentAmount"
+      }, {
+        "parameter": "$session.params.fromValidatePTPAmount",
+        "value": false
+      } ]
+    },
+    "targetPage": "Return From Validate PTP Amount",
+    "name": "74d06378-0bfd-44c5-9360-0d4b83f6ae40"
+  }, {
+    "condition": "$session.params.changeFirstPTPAmount = true AND $session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "changeFirstPTPAmount",
+        "value": false
+      } ]
+    },
+    "targetPage": "Return From Change 1st PTP Amount",
+    "name": "8998821a-9baa-444f-9cd5-48fc0149153f"
+  }, {
+    "condition": "$session.params.changeFirstPTPAmount = true AND $session.params.getAmountFailure = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpAmount",
+        "value": "$session.params.paymentAmount"
+      }, {
+        "parameter": "changeFirstPTPAmount",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check Where From",
+    "name": "4478f2af-7974-430e-a7ce-79f176308ce2"
+  }, {
+    "condition": "$session.params.changeSecondAmount = true AND $session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.changeSecondAmount",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Fail",
+    "name": "e7b91dad-98b7-4e18-826b-7aeb4ed66295"
+  }, {
+    "condition": "$session.params.changeSecondAmount = true AND $session.params.getAmountFailure = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.changeSecondAmount",
+        "value": false
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": "$session.params.paymentAmount"
+      } ]
+    },
+    "targetPage": "Second Install Check Collected Amount",
+    "name": "bbf3bdbf-c666-422f-a51c-caa5f5c6ccb7"
+  }, {
+    "condition": "$session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Best Offer Transition",
+    "name": "85ca717f-7376-4f81-a049-bbf1d070e2d8"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpAmount",
+        "value": "$session.params.paymentAmount"
+      } ]
+    },
+    "targetPage": "Check If Date Exists",
+    "name": "5a1affc4-10f1-490a-8a7e-f0585b6489e2"
+  } ]
+}

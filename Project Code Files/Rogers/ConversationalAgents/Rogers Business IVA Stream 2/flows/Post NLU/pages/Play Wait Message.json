@@ -1,0 +1,28 @@
+{
+  "name": "d3b5b54d-2c6b-4a75-adfb-c14c63534827",
+  "displayName": "Play Wait Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Je vous remercie de votre patience pendant que je récupère les détails de votre compte." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "I appreciate your patience while I retrieve your account details." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Identify Billing Accounts",
+    "name": "0d0ab825-9151-490e-88bd-f752c035144e"
+  } ]
+}

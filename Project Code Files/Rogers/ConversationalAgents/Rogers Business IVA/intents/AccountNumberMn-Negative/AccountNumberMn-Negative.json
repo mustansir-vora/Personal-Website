@@ -1,0 +1,11 @@
+{
+  "name": "ddd8d86e-e75f-4696-bf1e-00ea4cce0c47",
+  "displayName": "AccountNumberMn-Negative",
+  "parameters": [ {
+    "id": "location",
+    "entityType": "@sys.location"
+  } ],
+  "priority": 500000,
+  "description": "This will trigger when user says other than business related",
+  "numTrainingPhrases": 6
+}

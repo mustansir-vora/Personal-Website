@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1954588721:1729603644265" name="ZIP Validation" version="6.0.1">
+<element height="50" id="Element@1405662674:1729603672111" name="SIDA_MN_006_Entry" type="Page Entry" width="182" x="1104" y="220">
+<exit_states>
+<exit_state name="next" target="Element@2021575541:1729603672111"/>
+</exit_states>
+</element>
+<element height="50" id="Element@869108158:1729603672111" name="ZIP_Collection_Check" type="Decision" width="189" x="789" y="111">
+<exit_states>
+<exit_state name="NO" target="Element@922871391:1729603672111"/>
+<exit_state name="YES" target="Element@2021575541:1729603672111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1081473339:1729603672111" name="SIDA_MN_006_VALUE" type="Decision" width="221" x="775" y="306">
+<exit_states>
+<exit_state name="VALID" target="Element@603502500:1743445296699"/>
+<exit_state name="INVALID" target="Element@1903331445:1729603672111">
+<bendpoint>
+<dim1 x="-52" y="122"/>
+<dim2 x="-51" y="-36"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1903331445:1729603672111">
+<bendpoint>
+<dim1 x="-111" y="94"/>
+<dim2 x="-110" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1903331445:1729603672111">
+<bendpoint>
+<dim1 x="116" y="94"/>
+<dim2 x="117" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1903331445:1729603672111">
+<bendpoint>
+<dim1 x="51" y="124"/>
+<dim2 x="52" y="-34"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ForemostMenu" target="Element@178192174:1729603672111"/>
+<exit_state name="Representative" target="Element@1077292097:1730258512959"/>
+</exit_states>
+</element>
+<element height="50" id="Element@149901247:1729603672111" name="Transfer Entry" type="Page Connector" width="139" x="135" y="583">
+<page_connector target="Element@216904604:1729603726604">Transfer Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@178192174:1729603672111" name="Subflow Return" type="Page Connector" width="151" x="503" y="507">
+<page_connector target="Element@1276302130:1729603469633">Subflow Return<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@2021575541:1729603672111" name="SIDA_MN_006_Call" type="Subflow Call" width="198" x="786" y="217">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709037514529">
+<config>
+<argument_data>
+<data name="MenuID">SIDA_MN_006</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1081473339:1729603672111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@346204950:1729603672111" name="SIDA_PA_028b" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="218" x="1401" y="654">
+<exit_states>
+<exit_state name="done" target="Element@1122610295:1729603672111"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1757597360:1729603672111" name="ZIP_Check Menu Exit State_1" type="Decision" width="237" x="1092" y="581">
+<exit_states>
+<exit_state name="ENTRY INVALID" target="Element@346204950:1729603672111"/>
+<exit_state name="NM/NI" target="Element@758785226:1729603672111"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1903331445:1729603672111" name="ZIP_Increment Error Count" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="222" x="774" y="466">
+<exit_states>
+<exit_state name="done" target="Element@149293505:1729603672111"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1444512296:1729603672111" name="ZIP Validation" type="Page Entry" width="142" x="812" y="14">
+<exit_states>
+<exit_state name="next" target="Element@869108158:1729603672111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@758785226:1729603672111" name="SIDA_PA_028a" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="217" x="1398" y="517">
+<exit_states>
+<exit_state name="done" target="Element@1122610295:1729603672111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1312567616:1729603672111" name="SIDA_PA_030b" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="285" x="67" y="487">
+<exit_states>
+<exit_state name="done" target="Element@149901247:1729603672111"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1122610295:1729603672111" name="SIDA_MN_006_Entry" type="Page Connector" width="182" x="1691" y="586">
+<page_connector target="Element@1405662674:1729603672111">SIDA_MN_006_Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@922871391:1729603672111" name="Transfer Entry" type="Page Connector" width="139" x="568" y="112">
+<page_connector target="Element@216904604:1729603726604">Transfer Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1078912129:1729603672111" name="Rep_Req" type="Page Connector" width="139" x="1173" y="309">
+<page_connector target="Element@1624203201:1729603726604">Rep_Req<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@149293505:1729603672111" name="ZIP_Check Retry Count" type="Decision" width="197" x="785" y="580">
+<exit_states>
+<exit_state name="2nd Try" target="Element@1757597360:1729603672111"/>
+<exit_state name="Transfer" target="Element@463943649:1729603672111"/>
+</exit_states>
+</element>
+<element height="49" id="Element@629636335:1729603672111" name="ZIP_IS_CALLED_SHARED_ID_AUTH" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="229" x="178" y="430">
+<exit_states>
+<exit_state name="done" target="Element@178192174:1729603672111"/>
+</exit_states>
+</element>
+<element height="50" id="Element@463943649:1729603672111" name="ZIP_Check Menu Exit State_3" type="Decision" width="237" x="426" y="578">
+<exit_states>
+<exit_state name="ENTRY INVALID" target="Element@1312567616:1729603672111"/>
+<exit_state name="NM/NI" target="Element@588347070:1729603672111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@588347070:1729603672111" name="SIDA_PA_030a" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="284" x="68" y="668">
+<exit_states>
+<exit_state name="done" target="Element@149901247:1729603672111"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1077292097:1730258512959" name="Copy_4_of_Global_Rep_Handling" type="Decision" width="223" x="1020" y="396">
+<exit_states>
+<exit_state name="CONT" target="Element@1078912129:1729603672111"/>
+<exit_state name="TR" target="Element@922871391:1729603672111"/>
+</exit_states>
+</element>
+<element height="46" id="Element@441601409:1743445296699" name="SIDA_RetentionCheckFlag3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="192" x="301" y="274">
+<exit_states>
+<exit_state name="done" target="Element@1858084797:1743445296699"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1858084797:1743445296699" name="CustomerRetentionCheck3" type="Subflow Call" width="192" x="212" y="351">
+<subflow_call subflow_name="CustomerRetentionCheck" target="Element@31:1742397842229">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@629636335:1729603672111"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1795654586:1743445296699" name="CHECK_CALL_FROM_KYC" type="Decision" width="186" x="539" y="339">
+<exit_states>
+<exit_state name="Y" target="Element@1250699063:1743445385271"/>
+<exit_state name="N" target="Element@441601409:1743445296699"/>
+</exit_states>
+</element>
+<element height="46" id="Element@603502500:1743445296699" name="IS_RETENTION_DONE2" type="Decision" width="211" x="472" y="192">
+<exit_states>
+<exit_state name="YES" target="Element@629636335:1729603672111"/>
+<exit_state name="NO" target="Element@1795654586:1743445296699"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1250699063:1743445385271" name="KYC_RetentionCheckFlag" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="189" x="521" y="416">
+<exit_states>
+<exit_state name="done" target="Element@1858084797:1743445296699"/>
+</exit_states>
+</element>
+</page>

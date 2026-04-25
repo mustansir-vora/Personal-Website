@@ -1,0 +1,25 @@
+{
+  "name": "cff32a8e-811b-4910-9a35-c90713126d8c",
+  "displayName": "check Service Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.serviceAddress != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Exist Single Service",
+    "name": "c6a8e2c4-725c-4b7c-a24a-f4368bd0c534"
+  }, {
+    "condition": "$session.params.serviceAddress = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "check Maestro Account",
+    "name": "0ef14794-87b4-4824-89b7-2a0bd7213418"
+  } ]
+}

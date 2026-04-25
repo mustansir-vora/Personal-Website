@@ -1,0 +1,28 @@
+{
+  "name": "b79071b6-5ffe-4f62-ba21-6a162d964dc8",
+  "displayName": "Check If Date Exists",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpDate != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Collected Amount Is Sufficient",
+    "name": "5068aaf8-197e-4498-8e5c-647903b01c63"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.createNew",
+        "value": true
+      } ]
+    },
+    "targetPage": "Get Date",
+    "name": "362a36be-2f67-4839-88b3-9b3245da1f85"
+  } ]
+}

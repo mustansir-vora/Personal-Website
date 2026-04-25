@@ -1,0 +1,76 @@
+{
+  "name": "17fd80a9-e019-48a9-999c-064e03a7e506",
+  "displayName": "Method 2 Check Change Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeAM = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      }, {
+        "parameter": "ptpChangeAmount",
+        "value": true
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 2",
+    "name": "b203b57c-f812-4183-bd1f-fe397758e40b"
+  }, {
+    "condition": "$session.params.ptpChangeAll = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "La prochaine étape consiste à \r\najuster la date et le montant. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Next, we'll work on the date and the amount. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      }, {
+        "parameter": "ptpChangeAmount",
+        "value": true
+      }, {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 2",
+    "name": "309dddf0-68d3-41a2-93a4-800c6ca26be9"
+  }, {
+    "condition": "$session.params.ptpChangeDM = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      }, {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 2",
+    "name": "c36d09f0-f29a-4e69-a249-3b302947043a"
+  } ]
+}

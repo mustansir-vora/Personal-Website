@@ -1,0 +1,18 @@
+{
+  "name": "30a19f7f-1371-4f02-be18-1b5cf32c6928",
+  "displayName": "Payment Wrap Up",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Initialize Payment Wrap Up",
+    "name": "d039ade5-eadf-4c64-a4c6-bbd650c92db0"
+  } ]
+}

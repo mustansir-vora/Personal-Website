@@ -1,0 +1,32 @@
+{
+  "name": "2d5d6bd4-5f1c-4651-9112-cbc98be9a30b",
+  "displayName": "Play Last Bill Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Détails de la dernière facture." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "OK. Last bill details." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "savedIntent",
+      "value": "billing-last-bill-details"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Last Invoice Details",
+    "name": "87cb1b7a-9566-4e6c-8126-938e7ae57e4b"
+  } ]
+}

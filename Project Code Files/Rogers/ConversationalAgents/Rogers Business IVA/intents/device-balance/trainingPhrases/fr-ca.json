@@ -1,0 +1,331 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’appelle parce que "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " relevé affiche "
+    }, {
+      "text": "un"
+    }, {
+      "text": " solde d’appareil que je ne comprends pas."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " quand "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " prochain paiement de solde d’appareil est dû."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je vérifie si "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil est complètement payé ou encore sous financement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’envoyer les détails du solde de financement de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone par courriel ou texto?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais voir combien j’ai déjà payé et ce qu’il reste "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quelle est la différence entre le solde de facturation et le solde de l’appareil?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’essaie de vérifier le montant de rachat de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je viens de faire "
+    }, {
+      "text": "une"
+    }, {
+      "text": " mise à niveau, mais je veux vérifier si j’ai encore "
+    }, {
+      "text": "un"
+    }, {
+      "text": " solde d’appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je payer le solde restant de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil plus tôt sans pénalité?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux confirmer le solde dû avant de faire la mise à niveau de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Dis-moi si "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " dernier paiement a "
+    }, {
+      "text": "été"
+    }, {
+      "text": " appliqué et ce qu’il reste à payer "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais savoir si le solde de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil sera facturé "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " ma facture finale."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment savoir combien "
+    }, {
+      "text": "de mois"
+    }, {
+      "text": " il reste "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " plan de paiements de téléphone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais vérifier si "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil a encore des paiements à venir."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu détailler le solde "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": " de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone, incluant les taxes ou frais?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux payer le solde restant de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil "
+    }, {
+      "text": "aujourd’hui"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je voir le solde de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil dans le libre-"
+    }, {
+      "text": "service"
+    }, {
+      "text": " ou en ligne?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois connaître le montant exact restant pour payer complètement "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " quel est le solde de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil indiqué "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour connaître le solde restant "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez fournir le montant total que je dois encore pour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " plan de versements de téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux simplement confirmer le solde impayé de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone "
+    }, {
+      "text": "financé"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " combien il me reste à payer pour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais vérifier le solde qu’il me reste à payer "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

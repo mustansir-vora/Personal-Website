@@ -1,0 +1,545 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux faire ",
+      "auto": true
+    }, {
+      "text": "2",
+      "auto": true
+    }, {
+      "text": " comptes ",
+      "auto": true
+    }, {
+      "text": "Ã",
+      "auto": true
+    }, {
+      "text": "  partir d'",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ",
+      "auto": true
+    }, {
+      "text": "divisÃ©",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "en deux",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux sÃ©parer ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " ligne et transfÃ©rer la ",
+      "auto": true
+    }, {
+      "text": "propriÃ©tÃ© Ã",
+      "auto": true
+    }, {
+      "text": "  ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu mâ€™aider avec ",
+      "auto": true
+    }, {
+      "text": "la facturation sÃ©parÃ©e",
+      "auto": true
+    }, {
+      "text": " pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux crÃ©er ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau compte pour ",
+      "auto": true
+    }, {
+      "text": "lâ€™une",
+      "auto": true
+    }, {
+      "text": " des lignes ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux demander ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Transfert",
+      "auto": true
+    }, {
+      "text": " de responsabilitÃ© afin que la facturation passe ",
+      "auto": true
+    }, {
+      "text": "Ã  un",
+      "auto": true
+    }, {
+      "text": " nouveau propriÃ©taire.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez mâ€™aider avec ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Transfert",
+      "auto": true
+    }, {
+      "text": " de responsabilitÃ© et changer le nom principal du compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux complÃ©ter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " Transfert de responsabilitÃ© parce que quelquâ€™un dâ€™autre sera le nouveau titulaire.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu mâ€™aider avec le processus de ",
+      "auto": true
+    }, {
+      "text": "Transfert de responsabilitÃ©",
+      "auto": true
+    }, {
+      "text": " pour ce compte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois commencer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " transfert de ",
+      "auto": true
+    }, {
+      "text": "responsabilitÃ©",
+      "auto": true
+    }, {
+      "text": " pour dÃ©placer ce compte vers ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais transfÃ©rer ",
+      "auto": true
+    }, {
+      "text": "Ã",
+      "auto": true
+    }, {
+      "text": "  la fois la propriÃ©tÃ© et la facturation de ce compte ",
+      "auto": true
+    }, {
+      "text": "Ã  un",
+      "auto": true
+    }, {
+      "text": " autre utilisateur.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois mettre ",
+      "auto": true
+    }, {
+      "text": "Ã",
+      "auto": true
+    }, {
+      "text": "  jour le nom du compte parce quâ€™il est ",
+      "auto": true
+    }, {
+      "text": "actuellement",
+      "auto": true
+    }, {
+      "text": " au mauvais nom.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu mâ€™aider Ã  transfÃ©rer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "Ã  un",
+      "auto": true
+    }, {
+      "text": " nouveau titulaire principal?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer le ",
+      "auto": true
+    }, {
+      "text": "nom",
+      "auto": true
+    }, {
+      "text": " du compte parce que je ne suis plus responsable de ce ",
+      "auto": true
+    }, {
+      "text": "service",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais retirer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " nom du compte et le transfÃ©rer ",
+      "auto": true
+    }, {
+      "text": "Ã  une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez ",
+      "auto": true
+    }, {
+      "text": "mâ€™aider Ã  transfÃ©rer",
+      "auto": true
+    }, {
+      "text": " la propriÃ©tÃ© du compte de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " nom Ã  celui de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " conjoint.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux transfÃ©rer la ",
+      "auto": true
+    }, {
+      "text": "responsabilitÃ©",
+      "auto": true
+    }, {
+      "text": " de ce compte ",
+      "auto": true
+    }, {
+      "text": "Ã  un",
+      "auto": true
+    }, {
+      "text": " nouveau propriÃ©taire.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux changer le titulaire du compte parce que je transfÃ¨re ",
+      "auto": true
+    }, {
+      "text": "les services",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Ã  une",
+      "auto": true
+    }, {
+      "text": " autre personne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux transfÃ©rer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte au nom et ",
+      "auto": true
+    }, {
+      "text": "Ã",
+      "auto": true
+    }, {
+      "text": "  la responsabilitÃ© de facturation de quelquâ€™un dâ€™autre.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu ",
+      "auto": true
+    }, {
+      "text": "mâ€™aider Ã  transfÃ©rer",
+      "auto": true
+    }, {
+      "text": " la propriÃ©tÃ© de ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "Ã  une",
+      "auto": true
+    }, {
+      "text": " autre personne?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai utilisé ",
+      "auto": true
+    }, {
+      "text": "une",
+      "auto": true
+    }, {
+      "text": " mauvaise adresse courriel et ",
+      "auto": true
+    }, {
+      "text": "maintenant",
+      "auto": true
+    }, {
+      "text": " je ne peux plus accéder au portail en ligne.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je n’ai pas reçu ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " courriel d’activation.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne suis pas capable de me connecter à ",
+      "auto": true
+    }, {
+      "text": "Mon Carrefour",
+      "auto": true
+    }, {
+      "text": " d'affaire.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour configurer ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte ",
+      "auto": true
+    }, {
+      "text": "Mon Carrefour",
+      "auto": true
+    }, {
+      "text": " d'affaire.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois ajouter ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nouveau contact autorisé à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte afin qu’",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "NIP",
+      "auto": true
+    }, {
+      "text": " soit configuré.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de configurer ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "NIP",
+      "auto": true
+    }, {
+      "text": " dans ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

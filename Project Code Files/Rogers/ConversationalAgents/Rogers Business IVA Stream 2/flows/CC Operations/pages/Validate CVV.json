@@ -1,0 +1,35 @@
+{
+  "name": "abce3fa3-0da3-4549-9685-79565b638eff",
+  "displayName": "Validate CVV",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "validateCVV"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.checkCVV.valid = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "validCCOperation",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "8acddd3a-fad5-4d0b-a3de-3ecddd16adc3"
+  }, {
+    "condition": "$session.params.api.checkCVV.valid = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cvvFourDigit",
+        "value": null
+      }, {
+        "parameter": "cvvThreeDigit",
+        "value": null
+      } ]
+    },
+    "targetPage": "Third Invalid Attempt",
+    "name": "994a0e54-f618-4dfd-abdf-a38aa71fe214"
+  } ]
+}

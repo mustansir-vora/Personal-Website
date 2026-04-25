@@ -1,0 +1,208 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux me désabonner de tout ce que j’ai ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Arrêter tous mes comptes de diffusion en continu.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais mettre fin à mon abonnement pour "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " et "
+    }, {
+      "text": "Disney+",
+      "parameterId": "e_StreamingService1"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous retirer tous mes abonnements de diffusion en continu?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux annuler ",
+      "auto": true
+    }, {
+      "text": "mes services",
+      "auto": true
+    }, {
+      "text": " de diffusion en continu.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais mettre fin à mon abonnement "
+    }, {
+      "text": "crave TV",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me désabonner de "
+    }, {
+      "text": "crave",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Annuler mon abonnement "
+    }, {
+      "text": "Disney+",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment puis-je me désabonner de "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne veux plus "
+    }, {
+      "text": "Disney+",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment annuler "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " sur mon compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais me désabonner de "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez arrêter mon service "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous retirer "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " de mon compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux annuler mon abonnement "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je me demandais si je pourrais annuler "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voulais annuler le "
+    }, {
+      "text": "crave",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": " sur mon abonnement de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais annuler mon abonnement "
+    }, {
+      "text": "crave",
+      "parameterId": "e_StreamingService"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

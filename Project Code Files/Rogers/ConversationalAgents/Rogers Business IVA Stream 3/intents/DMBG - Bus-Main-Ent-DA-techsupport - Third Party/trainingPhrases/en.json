@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "T P I A"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Third"
+    }, {
+      "text": " party"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

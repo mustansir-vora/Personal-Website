@@ -1,0 +1,36 @@
+{
+  "name": "24adb037-c51b-4833-aa1d-93ac07ce2d2a",
+  "displayName": "Play Landmark Confirmation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$request.generative.NLULandmarkConfirmation" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "$request.generative.NLULandmarkConfirmation" ]
+      },
+      "languageCode": "en"
+    } ],
+    "generators": [ {
+      "generator": "projects/gcp-prj-rogers-cct-iva-dev-01/locations/northamerica-northeast1/agents/b5efb30f-b992-4b73-9ad7-8b8d8f7ad897/generators/30931c86-97c5-4fa3-927d-054491a62f56",
+      "inputParameters": [ {
+        "key": "savedIntent",
+        "value": "$session.params.savedIntent"
+      } ],
+      "outputParameter": "$request.generative.NLULandmarkConfirmation"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Destination Type",
+    "name": "4f797c10-681d-45f5-87cc-b65842c53d1f"
+  } ]
+}

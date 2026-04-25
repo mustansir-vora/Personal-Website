@@ -1,0 +1,129 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Puis-je parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " qui s’occupe "
+    }, {
+      "text": "des services"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "affaires"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " représentant d’"
+    }, {
+      "text": "affaires"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mettez-moi en contact avec "
+    }, {
+      "text": "un conseiller"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "affaires"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais parler à "
+    }, {
+      "text": "un consultant"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " pour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte d’"
+    }, {
+      "text": "affaires"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler à "
+    }, {
+      "text": "un consultant"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "affaires"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "parler avec "
+    }, {
+      "text": "un consultant"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "affaires"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "parler à "
+    }, {
+      "text": "mon consultant"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "affaires"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Consultant"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "affaires"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler à "
+    }, {
+      "text": "un consultant"
+    }, {
+      "text": " d’"
+    }, {
+      "text": "affaires"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

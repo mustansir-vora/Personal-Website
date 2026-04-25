@@ -1,0 +1,7 @@
+{
+  "name": "7995d6c1-5895-4718-9c38-37676d5bd086",
+  "displayName": "phone-support",
+  "priority": 500000,
+  "description": "Handles requests for technical support or troubleshooting for a phone.",
+  "numTrainingPhrases": 40
+}

@@ -1,0 +1,7 @@
+{
+  "name": "db335070-2d24-46bc-9b7b-a20d55243a19",
+  "displayName": "network-support",
+  "priority": 500000,
+  "description": "Handles inquiries or issues related to network connectivity or coverage.",
+  "numTrainingPhrases": 37
+}

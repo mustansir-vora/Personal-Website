@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@823114788:1737638911131" name="VirtualAgentVoice" version="6.0.1">
+<config>
+<settings>
+<setting name="config_id">{Data.Session.S_DF_AGENT_CONFIGID}</setting>
+<setting name="secure_logging">false</setting>
+<setting name="event_name">{Data.Session.Event_Name}</setting>
+<setting name="event_data">'strOriginalANI':'{Data.Session.DF_ORIGINALANI}','strOriginalDNIS':'{Data.Session.DF_ORIGINALDNIS}','strBUid':'{Data.Session.DF_BUID}','strActiveLang':'{Data.Session.strActiveLang}','strCGUID':'{Data.Session.DF_GUID}','strANI':'{Data.Session.DF_OANI}','strDNIS':'{Data.Session.DF_ODNIS}','transition_flow':'{Data.Session.transition_flow}','transition_page':'{Data.Session.transition_page}','strOCallID':'{Data.Session.DF_ONPREMCALLID}'</setting>
+<setting name="sipHeadersRestricted">1</setting>
+</settings>
+<session_data>
+<data create_when="After" name="Confidence_Score">{Data.Element.VirtualAgentVoice.confidence}</data>
+</session_data>
+</config>
+</voice_element>

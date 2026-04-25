@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hotevent id="Element@1982361387:1741075926548" name="UNAVAILABLE_ASR_HT" version="6.0.1">
+<config>
+<event name="error.com.cisco.media.resource.unavailable.asr">
+<class>com.farmers.global.VXMLError_Event</class>
+<has_exit_state/>
+</event>
+</config>
+</hotevent>

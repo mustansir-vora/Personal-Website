@@ -1,0 +1,67 @@
+{
+  "name": "9feb77be-e0b2-4648-b1ad-8facb32f136a",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Y a-t-il une antenne fixée à l’extérieur de votre lieu d’affaires ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Ca c'était quoi"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je n’ai pas compris. S’il y a une antenne fixée à l’extérieur de votre lieu d’affaires, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je ne comprends pas pourquoi vous dites cela."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Accédez-vous à Internet à l’aide d’une carte SIM ou d’un téléphone mobile ?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "John prend la parole : quel est le problème ?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je n’ai pas compris. Si vous accédez à Internet à l’aide d’une carte SIM ou de votre téléphone mobile, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2."
+    }
+  }, {
+    "userUtterance": {
+      "text": "3"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement Internet."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "customerIdentified": "false",
+      "isQuebecAntennaOffered": "true",
+      "npaProvince": "Quebec"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportInternet",
+      "completedSSName": "passive-techSupportInternet",
+      "completedSelfServe": "passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportInternet",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11401-Antenna-Bus-no match",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 478,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

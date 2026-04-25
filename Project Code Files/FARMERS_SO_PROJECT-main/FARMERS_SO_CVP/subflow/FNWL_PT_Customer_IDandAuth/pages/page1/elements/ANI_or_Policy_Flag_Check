@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1125279621:1733737277661" name="ANI_or_Policy_Flag_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ANI_or_Policy_Flag_Check" default_exit_state="NO">
+        <exit_state name="YES" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <session name="MDM_ANI_MATCH" />
+                </data>
+                <constant_string value="TRUE" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

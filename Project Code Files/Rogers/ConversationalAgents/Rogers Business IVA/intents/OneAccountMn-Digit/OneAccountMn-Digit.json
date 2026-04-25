@@ -1,0 +1,8 @@
+{
+  "name": "866dde28-dd69-4c3c-a199-12027791ad3e",
+  "displayName": "OneAccountMn-Digit",
+  "priority": 500000,
+  "description": "This will trigger when user says last four digit of account number or This will trigger when user choose first one from selection",
+  "numTrainingPhrases": 63,
+  "dtmfPattern": "1"
+}

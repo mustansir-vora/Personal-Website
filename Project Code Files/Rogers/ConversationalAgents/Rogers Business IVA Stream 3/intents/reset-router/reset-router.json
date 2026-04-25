@@ -1,0 +1,7 @@
+{
+  "name": "0a10bcda-9def-4459-b34e-93e8bc4cd738",
+  "displayName": "reset-router",
+  "priority": 500000,
+  "description": "Handles requests to reset or reboot the customer’s Internet modem or router.",
+  "numTrainingPhrases": 10
+}

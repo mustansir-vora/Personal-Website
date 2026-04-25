@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2018173071:1754500737905" name="SET_REP_REQ_FLAG" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">S_REP_REQ</setting>
+</settings>
+</config>
+</action_element>

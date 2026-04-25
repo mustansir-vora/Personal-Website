@@ -1,0 +1,519 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je n'ai pas réusi à payer ma facture, je voudrais arranger des paiements.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Est-ce que je pourrais avoir ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " peu plus de temps pour payer ma facture.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de faire un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour éviter une déconnexion."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux prendre des dispositions à l’aide d’un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour mon solde en retard."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je ne peux pas payer aujourd’hui et j’ai besoin d’une "
+    }, {
+      "text": "prolongation",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois mettre à jour ma ",
+      "auto": true
+    }, {
+      "text": "promesse de paiement",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "actuelle",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais organiser un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour la fin du mois."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux mettre en place un "
+    }, {
+      "text": "plan de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux demander une "
+    }, {
+      "text": "prolongation",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour ma facture."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais prendre des dispositions de paiement à l’aide d’un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je planifier un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour une date ultérieure?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois organiser un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour ma facture en retard."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux mettre en place un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " préautorisé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour établir un "
+    }, {
+      "text": "plan de paiement",
+      "parameterId": "e_AmountName"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux reporter ma facture avec un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais faire un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour vendredi."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois changer la ",
+      "auto": true
+    }, {
+      "text": "date",
+      "auto": true
+    }, {
+      "text": " de ma ",
+      "auto": true
+    }, {
+      "text": "promesse de paiement",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma ",
+      "auto": true
+    }, {
+      "text": "promesse de paiement",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " est due ",
+      "auto": true
+    }, {
+      "text": "aujourd’hui",
+      "auto": true
+    }, {
+      "text": ", mais je dois la déplacer.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux diviser mon paiement en deux dans le cadre de mon "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois prolonger mon "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais une "
+    }, {
+      "text": "prolongation",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " sur ma facture de téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois ajuster mon "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais modifier mon "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " actuel."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux créer un nouvel "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de repousser mon "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais organiser un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour la semaine prochaine."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux reprogrammer ma ",
+      "auto": true
+    }, {
+      "text": "promesse de paiement",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois changer la date de mon "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " actuel."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais planifier un "
+    }, {
+      "text": "arrangement de paiement.",
+      "parameterId": "e_AmountName"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux organiser un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour mon solde en retard."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de plus de temps pour payer et je veux organiser un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je obtenir une "
+    }, {
+      "text": "prolongation",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour mon paiement?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’une "
+    }, {
+      "text": "prolongation",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour ma facture."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais établir ",
+      "auto": true
+    }, {
+      "text": "une"
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "promesse de paiement",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je mettre en place un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " aujourd’hui?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux faire un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour ma facture."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois établir un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je obtenir une "
+    }, {
+      "text": "prolongation",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " pour mon paiement de "
+    }, {
+      "text": "50$",
+      "parameterId": "currency"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais établir une "
+    }, {
+      "text": "promesse de paiement",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " de "
+    }, {
+      "text": "50$",
+      "parameterId": "currency"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Puis-je mettre en place un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " de "
+    }, {
+      "text": "50$",
+      "parameterId": "currency"
+    }, {
+      "text": " aujourd’hui?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux faire un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " de "
+    }, {
+      "text": "50$",
+      "parameterId": "currency"
+    }, {
+      "text": " pour ma facture."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois établir un "
+    }, {
+      "text": "arrangement de paiement",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": " de "
+    }, {
+      "text": "50$",
+      "parameterId": "currency"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

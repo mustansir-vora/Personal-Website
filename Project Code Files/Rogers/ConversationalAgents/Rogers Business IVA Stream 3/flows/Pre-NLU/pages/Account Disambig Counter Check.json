@@ -1,0 +1,166 @@
+{
+  "name": "ba1e4c83-52d0-4b87-bf62-dde5aac50054",
+  "displayName": "Account Disambig Counter Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.idType = \"phone\" AND $session.params.phoneRetryCounter \u003e $session.params.maxPhoneRetries AND $session.params.accountNumberAskedFlag = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuons." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's continue.\r\n" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "UnidentifiedCustomer"
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "103ace23-eb32-4def-ac84-74bf89eed98f"
+  }, {
+    "condition": "$session.params.idType = \"phone\" AND $session.params.phoneRetryCounter \u003e $session.params.maxPhoneRetries AND $session.params.accountNumberAskedFlag != true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Essayons d’une autre façon." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's try another way." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "04d591eb-06de-4bf2-8480-53defff74a8f"
+  }, {
+    "condition": "$session.params.idType = \"phone\" AND $session.params.phoneRetryCounter \u003c= $session.params.maxPhoneRetries",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "621e2aa4-e8a1-43ad-9d44-5232d3a4d7b6"
+  }, {
+    "condition": "$session.params.idType != \"phone\" AND $session.params.accountRetryCounter \u003c= $session.params.maxPhoneRetries",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Essayons d’une autre façon." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's try another way." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "be3c5e59-a7db-457e-bdc2-06e147ebce6c"
+  }, {
+    "condition": "$session.params.idType != \"phone\" AND $session.params.accountRetryCounter \u003e $session.params.maxPhoneRetries AND $session.params.phoneRetryCounter \u003e $session.params.maxPhoneRetries AND $session.params.accountNumberAskedFlag = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuons." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "UnidentifiedCustomer\""
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "cffc1b28-08fa-419c-8613-073a95dcac36"
+  }, {
+    "condition": "$session.params.idType != \"phone\" AND $session.params.accountRetryCounter \u003e $session.params.maxPhoneRetries AND $session.params.phoneRetryCounter \u003e $session.params.maxPhoneRetries AND $session.params.accountNumberAskedFlag != true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Essayons d’une autre façon." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Let's try another way" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "b5bce7e8-9bc7-417a-b262-4c4a218c078a"
+  }, {
+    "condition": "$session.params.idType != \"phone\" AND $session.params.accountRetryCounter \u003e $session.params.maxPhoneRetries AND $session.params.phoneRetryCounter \u003c= $session.params.maxPhoneRetries",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "collectRetryCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "b018cdb8-b25b-41bf-a30e-875224635ff7"
+  } ]
+}

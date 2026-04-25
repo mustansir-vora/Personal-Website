@@ -1,0 +1,32 @@
+{
+  "name": "2211cf13-f7c0-42c0-8423-0900a87df67a",
+  "displayName": "Play Account Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Solde du compte." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "OK. Account balance." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "savedIntent",
+      "value": "account-balance"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Account Balance",
+    "name": "f34b7a47-7bc8-43b7-a950-ab97f43999f0"
+  } ]
+}

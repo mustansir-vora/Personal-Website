@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@538187083:1733835824361" name="Set_EN_AudioPath" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.SetAudioPathWithEN</source>
+</config>
+</decision>

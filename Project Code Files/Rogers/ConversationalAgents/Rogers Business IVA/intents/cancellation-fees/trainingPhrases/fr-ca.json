@@ -1,0 +1,309 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je voudrais savoir si des frais de résiliation anticipée ou de débranchement s’appliqueront à la fermeture de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu expliquer comment les frais d’annulation sont calculés pour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Y a-t-il des frais de débranchement ou d’annulation si je mets fin "
+    }, {
+      "text": "au service"
+    }, {
+      "text": " "
+    }, {
+      "text": "aujourd’hui"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier s’il y a des frais associés à l’annulation de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " forfait d’appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Fournis-moi l’information "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " les pénalités pour l’annulation du "
+    }, {
+      "text": "service"
+    }, {
+      "text": " avant la fin du contrat."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais vérifier si des frais de résiliation anticipée s’appliquent à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " si je serai facturé des frais de résiliation si je transfère mes numéros ailleurs?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les frais d’annulation sont-ils différents si je "
+    }, {
+      "text": "ferme"
+    }, {
+      "text": " plusieurs "
+    }, {
+      "text": "services"
+    }, {
+      "text": " en "
+    }, {
+      "text": "même"
+    }, {
+      "text": " temps?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin des détails "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " les frais de résiliation anticipée pour chacune de mes lignes."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Explique-moi les frais que je pourrais avoir si je mets fin à "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": " "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": " prématurément."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir s’il y a des frais de débranchement pour l’annulation de "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à calculer le total des frais de résiliation pour "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Y a-t-il des frais si je retire "
+    }, {
+      "text": "une"
+    }, {
+      "text": " ligne de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais connaître le coût de la résiliation anticipée de "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu préciser si des frais d’annulation s’appliqueront à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte si je "
+    }, {
+      "text": "le ferme"
+    }, {
+      "text": " "
+    }, {
+      "text": "maintenant"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir s’il y "
+    }, {
+      "text": "a une"
+    }, {
+      "text": " pénalité pour débrancher "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": " avant la fin du contrat."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez fournir les détails "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " les frais liés à l’annulation de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " abonnement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais comprendre les frais associés à la résiliation anticipée de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu confirmer si je dois payer des frais de résiliation pour mes "
+    }, {
+      "text": "trois"
+    }, {
+      "text": " lignes?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Y a-t-il des frais d’annulation si je transfère "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " autre fournisseur?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois savoir si l’annulation de ma ligne téléphonique entraînera des frais."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Explique-moi les frais de débranchement que je pourrais avoir si j’annule "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Y a-t-il des frais de résiliation anticipée si je mets fin à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat avant la fin du "
+    }, {
+      "text": "terme"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir si je vais être facturé des frais d’"
+    }, {
+      "text": "annulation"
+    }, {
+      "text": " pour la fermeture de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " s’il y a des frais pour annuler "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": " avant la fin du "
+    }, {
+      "text": "terme"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

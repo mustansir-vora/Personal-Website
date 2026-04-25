@@ -1,0 +1,151 @@
+{
+  "name": "96fae657-dad1-48a6-8b86-d81d51d3fdc6",
+  "displayName": "DMBG - Bus-Main-Ent-DA-billing",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Pour les produits filaires d’entreprise avec un numéro de compte à six chiffres, dites « filaire entreprise ».\r\nProduits de centre de données et Internet des objets avec un numéro de compte à cinq chiffres. Dites « centre de données ou internet des objets ».\r\nServices gérés, dites « services gérés ».\r\nPour toutes les autres demandes, dites « autre »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "For enterprise wireline products with six-digit account number, say \"enterprise wireline\",\nFor Data centre and Internet of Things products with five-digit account number, Say \"data centre or internet of things\",\nFor Managed Services, say \"managed services\",\nFor All other inquiries say \"other\"." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "DMBG - Bus-Main-Ent-DA-billing - Enterprise Wireline",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, Let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-billing-wireline"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "4ef535ce-3c77-4160-8290-e391ddf0b758"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-DA-billing - Data Centre or IOT",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-billing-data-centre"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "7dbd938c-42b9-4ec8-ad9b-906ff3bbc3db"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-DA-billing - Managed Services",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-billing-managed-services"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "63a15659-4e24-47db-b075-a56a0bf6cdfd"
+  }, {
+    "intent": "DMBG - Bus-Main-Ent-DA-billing - Other",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Thank you, let's continue." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "Bus-Main-Ent-DA-billing-other"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "ba78dabe-ec80-4ce8-b4ab-3eb22d490d6d"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "c024da7a-7e33-4a13-988c-8a7936a56295"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "fb45ed8e-41a0-4760-8daf-9ba094c0a3a2"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

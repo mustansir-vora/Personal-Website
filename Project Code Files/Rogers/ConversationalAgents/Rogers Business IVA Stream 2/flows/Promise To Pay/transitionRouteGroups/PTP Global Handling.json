@@ -1,0 +1,22 @@
+{
+  "name": "1e850f54-6a56-4167-86b1-eff667007769",
+  "displayName": "PTP Global Handling",
+  "transitionRoutes": [ {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "ab2a4a21-5154-49d1-9e3b-bff9dc5ab71a"
+  }, {
+    "intent": "agent-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isAgent",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "64dc1879-0ce9-47f5-8c00-a8742a76eb72"
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ff9da84b-2a4b-4441-9964-35d204c9467d",
+  "displayName": "Call Voluntary/Involuntary",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.postNLInvoluntaryRidirect = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLInvoluntaryRidirect",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Voluntary \u0026 Predictive",
+    "name": "446f26db-c679-4ad9-a64c-93d7c924a283"
+  }, {
+    "condition": "$session.params.postNLInvoluntaryComplete = true AND $session.params.postNLInvoluntaryRidirect = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLInvoluntaryRidirect",
+        "value": false
+      }, {
+        "parameter": "postNLInvoluntaryComplete",
+        "value": false
+      }, {
+        "parameter": "authInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Authentication",
+    "name": "c223a969-0d5f-4324-b95e-53de584c0b0f"
+  } ]
+}

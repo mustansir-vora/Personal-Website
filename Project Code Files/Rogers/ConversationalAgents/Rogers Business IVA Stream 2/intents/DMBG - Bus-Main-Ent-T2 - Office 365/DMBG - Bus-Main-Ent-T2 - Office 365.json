@@ -1,0 +1,7 @@
+{
+  "name": "efd76e8a-018c-44eb-9083-4544a14e7b26",
+  "displayName": "DMBG - Bus-Main-Ent-T2 - Office 365",
+  "priority": 500000,
+  "numTrainingPhrases": 12,
+  "dtmfPattern": "3"
+}

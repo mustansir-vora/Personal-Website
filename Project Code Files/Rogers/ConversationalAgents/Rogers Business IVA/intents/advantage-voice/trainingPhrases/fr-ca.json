@@ -1,0 +1,135 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J’ai besoin de configurer "
+    }, {
+      "text": "une"
+    }, {
+      "text": " réception automatisé pour "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai "
+    }, {
+      "text": "un restaurant et"
+    }, {
+      "text": " je cherche "
+    }, {
+      "text": "un service"
+    }, {
+      "text": " pour aider "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": ", par exemple pour prendre des commandes "
+    }, {
+      "text": "sur une"
+    }, {
+      "text": " tablette."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai plusieurs lignes téléphoniques et j’ai besoin d’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " fonctionnalité qui fait sonner tous mes téléphones lorsqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " appel entre."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " fonctionnalité vocale pour mes téléphones sans fil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je cherche "
+    }, {
+      "text": "une"
+    }, {
+      "text": " fonctionnalité téléphonique pouvant être configurée comme "
+    }, {
+      "text": "un"
+    }, {
+      "text": " groupe de "
+    }, {
+      "text": "chasse"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais ajouter "
+    }, {
+      "text": "un"
+    }, {
+      "text": " softphone à "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": " sans fil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Avantage"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Compte Avantage"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Support Wi-Fi Avantage"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide avec le forfait "
+    }, {
+      "text": "Avantage Voix"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Questions concernant "
+    }, {
+      "text": "Avantage Voix"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Avantage Voix"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

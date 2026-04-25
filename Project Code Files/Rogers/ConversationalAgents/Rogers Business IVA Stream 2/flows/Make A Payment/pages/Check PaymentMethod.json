@@ -1,0 +1,25 @@
+{
+  "name": "cd6a92b1-5b57-4268-8283-4b5dee534bd0",
+  "displayName": "Check PaymentMethod",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.paymentMethod = PreAuthBank OR $session.params.paymentMethod = PreAuthCC",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Existing PAP",
+    "name": "c717b125-255d-4d41-bb16-db8ba3be9639"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Payment Status",
+    "name": "8af2434a-7973-47a9-8cd5-7c822021a467"
+  } ]
+}

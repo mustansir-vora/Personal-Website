@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1483547093:1711528265028" name="TFSP_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.PointOneTimePayment_BC</source>
+</config>
+</decision>

@@ -1,0 +1,7 @@
+{
+  "name": "e2eadf39-0125-4baf-8a82-f92fb66ec8ff",
+  "displayName": "upgrade-product",
+  "priority": 500000,
+  "description": "Handle questions about upgrading existing products and servcices",
+  "numTrainingPhrases": 19
+}

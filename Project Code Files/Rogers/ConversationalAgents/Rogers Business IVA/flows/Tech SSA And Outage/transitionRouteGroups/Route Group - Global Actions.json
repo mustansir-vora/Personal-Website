@@ -1,0 +1,43 @@
+{
+  "name": "b803d7c1-c902-4925-916b-ec4c548f40f7",
+  "displayName": "Route Group - Global Actions",
+  "transitionRoutes": [ {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": null
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": "$sys.func.ADD($session.params.mainMenuRequestCounter, 1)"
+      } ]
+    },
+    "name": "1ca7de05-7799-4a44-a138-5d744c640acc"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+    
+    },
+    "name": "290f8f17-801f-4cbc-be30-611f29f5f132"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "3039e6c9-f7b6-415b-956f-c384cf709e2e"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "ec5181b7-7116-4e46-b526-bc85d2125f52"
+  } ]
+}

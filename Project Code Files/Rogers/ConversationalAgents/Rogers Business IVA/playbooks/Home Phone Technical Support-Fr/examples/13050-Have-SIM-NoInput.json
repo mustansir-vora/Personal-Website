@@ -1,0 +1,48 @@
+{
+  "name": "fd7b97e2-2a0b-462c-abd5-f029446b7cb2",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone résidentiel a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Je suis désolé, je ne vous ai pas entendu. Si votre téléphone résidentiel a une carte SIM, dites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2."
+    }
+  }, {
+    "userUtterance": {
+    
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Pour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie résidentielle. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportHomePhone",
+      "hasNoHPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "13050-Have-SIM-NoInput",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 311,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,155 @@
+{
+  "name": "5970ca70-4e5f-4bbd-8db4-4a655fd1e749",
+  "displayName": "Get BroadcastMessage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callstart",
+    "tag": "getBroadcastMessage",
+    "setParameterActions": [ {
+      "parameter": "reportingVar_language",
+      "value": "$session.params.switchedlanguage"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"1\" OR $session.params.broadcastId = \"NA\"",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.BC1 = true",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.disclaimerScriptFr = \"NA\""
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cspeak\u003e\u003cbreak time=\"150ms\"/\u003e$session.params.disclaimerScriptFr\u003cbreak time=\"350ms\"/\u003e\u003c/speak\u003e" ]
+                    },
+                    "languageCode": "fr-ca"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Exit BroadCast",
+    "name": "85d21273-2fb2-421d-87a1-a45f7df43fc7"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.enabled = false",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.BC1 = true",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.disclaimerScriptFr = \"NA\""
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cspeak\u003e\u003cbreak time=\"150ms\"/\u003e$session.params.disclaimerScriptFr\u003cbreak time=\"350ms\"/\u003e\u003c/speak\u003e" ]
+                    },
+                    "languageCode": "fr-ca"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Exit BroadCast",
+    "name": "ad6cb031-1c22-4964-ab0f-8ac076f3dbec"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.enabled = true AND $session.params.questionOrMessage = \"question\" AND $session.params.primaryMessage = \"NA\"",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.BC1 = true",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.disclaimerScriptFr = \"NA\""
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cspeak\u003e\u003cbreak time=\"150ms\"/\u003e$session.params.disclaimerScriptFr\u003cbreak time=\"350ms\"/\u003e\u003c/speak\u003e" ]
+                    },
+                    "languageCode": "fr-ca"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Exit BroadCast",
+    "name": "aeed5a8e-7566-4e58-af38-1663fd886484"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.enabled = true AND $session.params.questionOrMessage = \"question\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.BC1 = true",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.disclaimerScriptFr = \"NA\""
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cspeak\u003e\u003cbreak time=\"150ms\"/\u003e$session.params.disclaimerScriptFr\u003cbreak time=\"350ms\"/\u003e\u003c/speak\u003e" ]
+                    },
+                    "languageCode": "fr-ca"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Question",
+    "name": "7024afa5-c23b-4bdd-a52c-98859aef1acf"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.enabled = true AND $session.params.questionOrMessage = \"message\"",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.BC1 = true",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.disclaimerScriptFr = \"NA\""
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cspeak\u003e\u003cbreak time=\"150ms\"/\u003e$session.params.disclaimerScriptFr\u003cbreak time=\"350ms\"/\u003e\u003c/speak\u003e" ]
+                    },
+                    "languageCode": "fr-ca"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "Message",
+    "name": "dbd28062-7834-4188-9206-090607656c77"
+  } ]
+}

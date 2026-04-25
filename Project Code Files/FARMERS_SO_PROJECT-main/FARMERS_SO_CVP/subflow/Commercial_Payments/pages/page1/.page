@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1766961846:1707383538252" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1707383538252" name="Commercial_Payments" type="Subflow Start" width="172" x="349" y="-219">
+<exit_states>
+<exit_state name="next" target="Element@1217206140:1707383667350"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1605912600:1751909923609"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1217206140:1707383667350" name="Caller already KYC Authenticated" type="Decision" width="305" x="318" y="-117">
+<exit_states>
+<exit_state name="Yes" target="Element@216459890:1710841243657"/>
+<exit_state name="No" target="Element@1889073436:1707384289360"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1889073436:1707384289360" name="Commercial ID Auth" type="Subflow Call" width="210" x="516" y="-42">
+<subflow_call subflow_name="Commercial_ID_Plus_Auth" target="Element@31:1710455884243">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@354951476:1710841283500"/>
+</exit_states>
+</element>
+<element height="55" id="Element@766230677:1707384739728" name="Payment Blocked Indicator" type="Decision" width="260" x="524" y="312">
+<exit_states>
+<exit_state name="Y" target="Element@1978628788:1707385089211"/>
+<exit_state name="N" target="Element@1364852177:1707385162432"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1978628788:1707385089211" name="Shared Transfer" type="Subflow Call" width="171" x="844" y="432">
+<subflow_call subflow_name="Transfer" target="Element@31:1710324414065">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@348755810:1710324429084"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1364852177:1707385162432" name="Is Active RTB Account" type="Decision" width="220" x="542" y="444">
+<exit_states>
+<exit_state name="T" target="Element@1978628788:1707385089211"/>
+<exit_state name="F" target="Element@1463957526:1707385278141"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1463957526:1707385278141" name="EPC Paymentus" type="Subflow Call" width="171" x="271" y="439">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1710699879844">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1119139350:1710317251121"/>
+</exit_states>
+</element>
+<element height="55" id="Element@787240962:1709210215640" name="CPF_HOST_001" type="Decision" width="170" x="496" y="217">
+<exit_states>
+<exit_state name="SU" target="Element@766230677:1707384739728"/>
+<exit_state name="ER" target="Element@1463957526:1707385278141"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1119139350:1710317251121" name="Subflow Return_01" type="Subflow Return" width="198" x="-12" y="438"/>
+<element height="55" id="Element@348755810:1710324429084" name="Subflow Return_02" type="Subflow Return" width="198" x="823" y="318"/>
+<element height="55" id="Element@1628423348:1710344538217" name="CPF_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="145" x="262" y="326">
+<exit_states>
+<exit_state name="done" target="Element@766230677:1707384739728">
+<bendpoint>
+<dim1 x="150" y="37"/>
+<dim2 x="-151" y="23"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@719188660:1710344580534" name="CPF_HOST_002" type="Decision" width="170" x="254" y="226">
+<exit_states>
+<exit_state name="SU" target="Element@1628423348:1710344538217"/>
+<exit_state name="ER" target="Element@787240962:1709210215640"/>
+</exit_states>
+</element>
+<element height="55" id="Element@215324956:1710841243657" name="Warhead" type="Subflow Call" width="120" x="253" y="106">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710838177515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@719188660:1710344580534"/>
+</exit_states>
+</element>
+<element height="55" id="Element@216459890:1710841243657" name="SET_API_NAME" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="274" y="-20">
+<exit_states>
+<exit_state name="done" target="Element@215324956:1710841243657"/>
+</exit_states>
+</element>
+<element height="55" id="Element@354951476:1710841283500" name="SET_API_NAME1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="523" y="40">
+<exit_states>
+<exit_state name="done" target="Element@1972428778:1710841283500"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1972428778:1710841283500" name="Warhead1" type="Subflow Call" width="130" x="509" y="130">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710838177515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@787240962:1709210215640"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1605912600:1751909923609" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="178" x="637" y="-212">
+<exit_states>
+<exit_state name="done" target="Element@752103490:1751909923609"/>
+</exit_states>
+</element>
+<element height="48" id="Element@1617640297:1751909923609" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="1016" y="-220">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@752103490:1751909923609" name="Shared_Transfer" type="Subflow Call" width="132" x="856" y="-217">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1617640297:1751909923609"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1956382226:1708938484067" name="BW_BILLING_PAYMENTS" version="6.0.1">
+<subflow_call subflow_name="BWBillingPayments" target="Element@31:1711641562950">
+<config/>
+</subflow_call>
+</connector>

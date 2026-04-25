@@ -1,0 +1,183 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Going to be decommissioned at the "
+    }, {
+      "text": "end of November",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Going to be decommissioned on the "
+    }, {
+      "text": "last day of the next month",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Boxes will be decommissioned as of "
+    }, {
+      "text": "27th of Feb",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "TV box is going to be decommissioned as of "
+    }, {
+      "text": "day after tomorrow",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The box is going to be decommissioned as of "
+    }, {
+      "text": "tomorrow",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Decommissioned on the "
+    }, {
+      "text": "last day of the last month",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Decommissioned on "
+    }, {
+      "text": "16th of last month",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Decommissioned at the "
+    }, {
+      "text": "end of March",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "To be decommissioned at the "
+    }, {
+      "text": "end of this year",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "To be decommissioned as of "
+    }, {
+      "text": "October 5th",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The box will be decommissioned as of "
+    }, {
+      "text": "next month",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The box will be decommissioned as of "
+    }, {
+      "text": "January",
+      "parameterId": "date"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It is being decommissioned."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It was going to be decommissioned."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It would be decommissioned."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It is going to be decommissioned."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "TV boxes are being decommissioned."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Boxes are going to be decommissioned."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The TV box will be decommissioned."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The box is going to be decommissioned."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

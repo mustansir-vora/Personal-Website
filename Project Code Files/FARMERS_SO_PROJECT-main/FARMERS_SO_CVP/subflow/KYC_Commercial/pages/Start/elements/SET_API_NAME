@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1086746294:1710871832260" name="SET_API_NAME" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">NO</setting>
+<setting name="sessNames">S_API_NAME</setting>
+</settings>
+</config>
+</action_element>

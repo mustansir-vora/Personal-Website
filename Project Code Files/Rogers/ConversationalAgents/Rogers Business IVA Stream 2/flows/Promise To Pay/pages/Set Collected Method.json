@@ -1,0 +1,28 @@
+{
+  "name": "8200959e-cd6f-4f46-ba45-248a3f500b1f",
+  "displayName": "Set Collected Method",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpMethod != null AND $session.params.ptpMethod != \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "$session.params.ptpMethod"
+      } ]
+    },
+    "targetPage": "Check If Payment Method Exists",
+    "name": "e52bab28-1abc-4dee-b871-cf7edd159069"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Payment Method Exists",
+    "name": "a4b12b25-d3f0-418f-a88c-7a8ac8b1dd67"
+  } ]
+}

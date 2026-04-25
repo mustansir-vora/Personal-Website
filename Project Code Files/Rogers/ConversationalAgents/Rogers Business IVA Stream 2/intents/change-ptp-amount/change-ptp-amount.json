@@ -1,0 +1,10 @@
+{
+  "name": "c38a09b3-4d1c-49f5-b073-8a9eef4eb209",
+  "displayName": "change-ptp-amount",
+  "parameters": [ {
+    "id": "changePTPAmount",
+    "entityType": "@sys.unit-currency"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 8
+}

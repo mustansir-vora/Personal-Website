@@ -1,0 +1,270 @@
+{
+  "name": "c5b6263a-e0c7-4e58-a027-d2b8ac5907e0",
+  "displayName": "Tech Support Main PB",
+  "goal": "Act as a classification engine to resolve three key variables: User Identity, Interaction History, and Product Complexity. Your success depends on correctly navigating the logic gates to set $savedIntent or $enableBOMM, ensuring no user is sent to a generic menu if a specific product path is available.",
+  "inputParameterDefinitions": [ {
+    "name": "customerIdentified",
+    "description": "used to check the caller is identified or not ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "savedIntent",
+    "description": "support intent for routing the caller specific product support",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "savedIntent",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "heardBackOffMenu",
+    "description": "this is for checking bomm menu is already accessed or not ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "heardBackOffMenu",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "productLabelsMixEn",
+    "description": "list of products",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "productLabelsMixEn",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "serviceCategoryMixEn",
+    "description": "serviceCategoryMix has values in string",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "serviceCategoryMixEn",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "product",
+    "description": "product name",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "product",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "product",
+    "description": "for storing the product name",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "product",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "savedIntent",
+    "description": "for storing the support intent",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "savedIntent",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "serviceCategoryMixLength",
+    "description": "the length of the serviceCategoryMix will ge calculated and stored here by default it is 0",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "serviceCategoryMixLength",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "userInputTM",
+    "description": "for mainmenu and agent",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "userInputTM",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "transferType",
+    "description": "flag for transferType",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "transferType",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "enableBOMM",
+    "description": "flag to check if bomm is called ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "enableBOMM",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "errorMessage",
+    "description": "errorMessage",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "errorMessage",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "tokenCount": 356,
+  "referencedFlows": [ "End Call" ],
+  "handlers": [ {
+    "eventHandler": {
+      "event": "wrapUp",
+      "fulfillment": {
+        "nextActionOverride": {
+          "flowTransition": {
+            "targetFlow": "End Call",
+            "playbookOutput": {
+              "executionSummary": "User disconnected the call while call was being processed in the playbook. wrapUp event was invoked using detect Intent and post call processing is triggered.",
+              "state": "OK",
+              "actionParameters": {
+                "wrapUp": "true"
+              }
+            }
+          }
+        }
+      }
+    }
+  } ],
+  "instruction": {
+    "steps": [ {
+      "text": "Step 1.identify the  Caller",
+      "steps": [ {
+        "text": "if $customerIdentified is true goto Step 2"
+      }, {
+        "text": "otherwise , take them to Step 2"
+      } ]
+    }, {
+      "text": "Step 2.check heardBackOff",
+      "steps": [ {
+        "text": "if $heardBackOffMenu is true",
+        "steps": [ {
+          "text": "set $savedIntent as \"technical-support-vague\", return the call"
+        } ]
+      }, {
+        "text": "otherwise,goto Step 3"
+      } ]
+    }, {
+      "text": "Step 3.check the product count",
+      "steps": [ {
+        "text": "Call the `get_service_category_mix_length` action and set the return value to $serviceCategoryMixLength"
+      }, {
+        "text": "if serviceCategoryMixLength = -3",
+        "steps": [ {
+          "text": "set $errorMessage as \"codeBlockError\""
+        } ]
+      }, {
+        "text": "if $serviceCategoryMixLength is equal to 1",
+        "steps": [ {
+          "text": "set $product as \"$session.params.serviceCategoryMixEn\""
+        }, {
+          "text": "set $savedIntent as `set_support_intent($session.params.product)` and return",
+          "steps": [ {
+            "text": "if $savedIntent = \"Code Block Error\"",
+            "steps": [ {
+              "text": "set $errorMessage as \"codeBlockError\""
+            } ]
+          } ]
+        } ]
+      }, {
+        "text": "otherwise, set $enableBOMM as true"
+      } ]
+    }, {
+      "text": "Step 4.When the wrapUp trigger is triggered then you have the ability to route the user to ${FLOW:End Call}"
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "codeBlock": {
+    "code": "@Action\r\ndef get_service_category_mix_length() -\u003e int:\r\n    \"\"\"Returns the number of categories in the serviceCategoryMix session parameter.\"\"\"\r\n    try:\r\n      value = state[\"$session.params.serviceCategoryMixEn\"]\r\n      if not value:\r\n          return 0\r\n      categories = value.split(\",\")\r\n      return len(categories)\r\n    except Exception as e:\r\n        print(f\"Something went wrong with the code block execution: {e}\")\r\n        return -3\r\n\r\n@Action\r\ndef set_support_intent(service: str) -\u003e str:\r\n    \"\"\"Returns the support intent name based on the service type.\"\"\"\r\n    try:\r\n\r\n      intent_map = {\r\n          \"tv\": \"tv-support\",\r\n          \"internet\": \"internet-support\",\r\n          \"home phone\": \"home-phone-support\",\r\n          \"business phone\": \"business-phone-support\",\r\n          \"home security\": \"security-support\",\r\n          \"mobile\": \"wireless-support\",\r\n          \"advantage voice\":\"wireless-support\"\r\n      }\r\n\r\n      if not service:\r\n          return \"no value\"\r\n\r\n      service = service.strip().lower()\r\n      intent = intent_map.get(service, \"technical-support-vague\")\r\n      productsMix=state[\"$session.params.productLabelsMixEn\"]\r\n\r\n      # 🔹 Additional logic for business phone\r\n      if service == \"business phone\" and productsMix:\r\n          if \"wireless business phone\" in productsMix.lower():\r\n              intent = \"wireless-support\"\r\n\r\n      return intent\r\n    except Exception as e:\r\n        print(f\"Something went wrong with the code block execution: {e}\")\r\n        return -1\r\n  \r\n\r\n"
+  },
+  "inlineActions": [ "get_service_category_mix_length", "set_support_intent" ]
+}

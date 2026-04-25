@@ -1,0 +1,43 @@
+{
+  "name": "6279dd44-7353-4ca1-b225-f0b801b1c7a6",
+  "displayName": "Set AuthLevelNeeded",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.app.auth.authLevelNeeded",
+      "value": 2
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "nluConfig",
+        "value": {
+          "authLevel": "low"
+        }
+      } ]
+    },
+    "targetFlow": "Authentication",
+    "name": "2a1d5ef3-5d30-4b9f-8ec8-721f499c6566"
+  }, {
+    "condition": "$session.params.authResult = \"Continue\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Get Billing Profile",
+    "name": "d101bda3-fbfe-4e63-b0a1-eae3ae5d83e2"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "30bd4eed-c211-403a-b463-1ec4aec99888"
+  } ]
+}

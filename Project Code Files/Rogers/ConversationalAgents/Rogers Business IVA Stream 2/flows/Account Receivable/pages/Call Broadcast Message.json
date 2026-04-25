@@ -1,0 +1,31 @@
+{
+  "name": "50412f56-4eef-42c8-8621-ff9f6417db83",
+  "displayName": "Call Broadcast Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId21"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "f018ce6b-dbb1-4c66-b294-2d3498455bde"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowReturnValue",
+        "value": null
+      } ]
+    },
+    "targetPage": "Set AuthLevelNeeded",
+    "name": "97e9842c-0013-4dc6-a9c3-580532f0bb3b"
+  } ]
+}

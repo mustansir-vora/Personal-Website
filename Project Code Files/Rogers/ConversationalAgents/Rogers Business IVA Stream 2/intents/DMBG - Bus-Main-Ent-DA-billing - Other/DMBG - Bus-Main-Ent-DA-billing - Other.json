@@ -1,0 +1,7 @@
+{
+  "name": "a2585804-3390-4c7a-9dac-2b66e520a585",
+  "displayName": "DMBG - Bus-Main-Ent-DA-billing - Other",
+  "priority": 500000,
+  "numTrainingPhrases": 5,
+  "dtmfPattern": "4"
+}

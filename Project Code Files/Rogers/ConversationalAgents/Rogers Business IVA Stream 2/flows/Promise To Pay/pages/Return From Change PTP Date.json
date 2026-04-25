@@ -1,0 +1,59 @@
+{
+  "name": "c76fcd8b-92d5-471e-a352-179d3237bb0c",
+  "displayName": "Return From Change PTP Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromUpdateSingle = true AND $session.params.getPtpDateFailure = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Fail",
+    "name": "af85ff5a-499c-4124-8ce4-c8a504138b1c"
+  }, {
+    "condition": "$session.params.fromUpdateSingle = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If Change Amount",
+    "name": "248c103e-ea58-4083-8664-9654699c7430"
+  }, {
+    "condition": "$session.params.updatemultipleFirstInstall = true AND $session.params.getPtpDateFailure = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Fail",
+    "name": "5c03fa82-4cda-4d85-947e-d91693a058f3"
+  }, {
+    "condition": "$session.params.updatemultipleFirstInstall = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "First Install Check Change Amount",
+    "name": "e782750c-de94-44f2-a90d-c2ccbc5c2e41"
+  }, {
+    "condition": "$session.params.updateMultipleOptions2 = true AND $session.params.getPtpDateFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updateMultipleOptions2",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Fail",
+    "name": "03a6b5e3-f0dd-4c78-9c38-dc332c5565ec"
+  }, {
+    "condition": "$session.params.updateMultipleOptions2 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updateMultipleOptions2",
+        "value": false
+      } ]
+    },
+    "targetPage": "Second Install Check Change Amount",
+    "name": "4c499c61-bf6a-41db-9b26-4accfa36b5a8"
+  } ]
+}

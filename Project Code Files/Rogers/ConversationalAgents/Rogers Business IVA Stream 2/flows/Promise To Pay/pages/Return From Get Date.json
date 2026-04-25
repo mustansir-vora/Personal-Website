@@ -1,0 +1,51 @@
+{
+  "name": "f7f42727-e103-4940-ad00-cb93d6a8cd23",
+  "displayName": "Return From Get Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.createNew = true AND $session.params.getPtpDateFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.createNew",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Best Offer Transition",
+    "name": "363aa31f-a79c-4c26-8800-13206fe6ac8e"
+  }, {
+    "condition": "$session.params.createNew = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.createNew",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check If Collected Amount Is Sufficient",
+    "name": "2d83607b-748f-4b80-b7ce-64a7b3400f04"
+  }, {
+    "condition": "$session.params.changePTPDate = true AND $session.params.getPtpDateFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.changePTPDate",
+        "value": false
+      } ]
+    },
+    "targetPage": "Return From Change PTP Date",
+    "name": "e1bb3988-fdfa-4249-a9a5-bd7c80455a2e"
+  }, {
+    "condition": "$session.params.changePTPDate = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.changePTPDate",
+        "value": false
+      } ]
+    },
+    "targetPage": "Set Installment Date",
+    "name": "65438975-4dc5-4f1a-a80a-80e7ea85e8df"
+  } ]
+}

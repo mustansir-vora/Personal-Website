@@ -1,0 +1,180 @@
+{
+  "name": "140525ee-7b8e-4e86-b3bc-01bac5293828",
+  "displayName": "createOutageNotification",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "createOutageNotification"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n\nThank you. You'll be notified once the service interruption has been resolved.\n\u003cbreak time=\"300ms\"/\u003e\nIf you're done and want to end this call, simply hang up. \n\u003cbreak time=\"900ms\"/\u003e\n\n\u003c/speak\u003e" ]
+        },
+        "languageCode": "en"
+      }, {
+        "outputAudioText": {
+          "ssml": "\u003cspeak\u003e\n\n\nMerci. Vous serez avisé une fois que l’interruption de service aura été résolue.\n\u003cbreak time=\"1.5s\"/\u003e\nSi vous avez terminé et souhaitez mettre fin à cet appel, raccrochez simplement.\n\u003cbreak time=\"3s\"/\u003e\n\n\u003c/speak\u003e"
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Merci. Vous serez avisé une fois que l’interruption de service aura été résolue.\n\u003cbreak time=\"1.5s\"/\u003e\nSi vous avez terminé et souhaitez mettre fin à cet appel, raccrochez simplement.\n\u003cbreak time=\"3s\"/\u003e" ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      }, {
+        "parameter": "interactionNotes",
+        "value": "IVR - Cx optin for Outage Notification"
+      }, {
+        "parameter": "interactionLabel",
+        "value": "OutageNotification"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "$sys.func.CONCATENATE(\"$session.params.completedSSName\",\",active-outageNotification\")"
+      }, {
+        "parameter": "reportingVar_completedSSName",
+        "value": "$session.params.completedSSName"
+      }, {
+        "parameter": "completedSelfServe",
+        "value": "$session.params.completedSSName"
+      }, {
+        "parameter": "phoneNumberCollection",
+        "value": null
+      } ]
+    },
+    "targetPage": "create Interaction",
+    "name": "562e6025-36c6-4da0-8e48-92ccb40eb047"
+  }, {
+    "condition": "$session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm unable to send a notification. if you're done, feel free to hang up." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Je ne suis paas en mesure d’envoyer une notification. Si vous avez terminé, vous pouvez raccrocher." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      }, {
+        "parameter": "phoneNumberCollection",
+        "value": null
+      } ]
+    },
+    "targetPage": "heardOutage",
+    "name": "f1605d25-d8ac-47c9-a5f1-fc6deae0ccf3"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "83399cd1-d859-4c80-bebc-a1f71114a9f5"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "5fab4275-124d-492a-857f-81577838ca82"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "efc591cf-ed51-492f-968f-77950a618302"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "8d01988a-3cc4-4431-a19a-8dd8a6608964"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "0894d98b-b288-4a95-a0c4-2bb19b99ae3f"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "transferType"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "b73e0147-5f8a-4ee0-9cb2-db727ac3d6be"
+  } ]
+}

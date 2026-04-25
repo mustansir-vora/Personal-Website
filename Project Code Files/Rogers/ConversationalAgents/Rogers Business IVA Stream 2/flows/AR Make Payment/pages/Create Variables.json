@@ -1,0 +1,27 @@
+{
+  "name": "a4acc54c-e19d-4b12-a11a-00deb07d27ba",
+  "displayName": "Create Variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "paymentAmount",
+      "value": null
+    }, {
+      "parameter": "fromAR",
+      "value": true
+    }, {
+      "parameter": "fromAcctReceiveable",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Make A Payment",
+    "name": "6daa1b0a-00ad-4185-af7b-e0564d66200b"
+  } ]
+}

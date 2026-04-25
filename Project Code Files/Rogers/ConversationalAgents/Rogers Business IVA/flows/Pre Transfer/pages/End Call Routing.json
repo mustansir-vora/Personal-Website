@@ -1,0 +1,18 @@
+{
+  "name": "9bd7242a-5fb6-402f-8fb8-d5c10170aebc",
+  "displayName": "End Call Routing",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "End Call",
+    "name": "ef6b973c-aa81-43a6-b1b0-b314a8125fc6"
+  } ]
+}

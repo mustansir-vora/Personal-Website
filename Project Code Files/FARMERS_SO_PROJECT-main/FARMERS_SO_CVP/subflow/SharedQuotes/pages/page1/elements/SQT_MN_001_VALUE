@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@491052796:1707304508433" name="SQT_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.GET_SQT_MN_001</source>
+</config>
+</decision>

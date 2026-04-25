@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@534125441:1708064795192" name="Auto_Menu" version="6.0.1">
+<subflow_call subflow_name="FAS_Auto_Menu" target="Element@31:1711648520169">
+<config/>
+</subflow_call>
+</connector>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1889302911:1712994240012" name="FWS_Routing_Check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.adminHost.FWSRouting</source>
+</config>
+</decision>

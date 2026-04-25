@@ -1,0 +1,80 @@
+{
+  "name": "5a6b1782-af20-447e-a25d-f47bf786466f",
+  "displayName": "Check paymentStatus",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.pastPaymentObject.backoutInd = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The payment was not applied because your financial institution did not authorize the transaction." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.subflowInputs\", \"sms\", \"smsId\")",
+        "value": "paymentHistoryLastPaymentBackout"
+      }, {
+        "parameter": "smsId",
+        "value": "paymentHistoryLastPaymentBackout"
+      }, {
+        "parameter": "last4Acct",
+        "value": "$sys.func.MID($session.params.accountNumber, $sys.func.MINUS($sys.func.LEN($session.params.accountNumber), 3), 4)"
+      }, {
+        "parameter": "smsAttributes",
+        "value": "$sys.func.TO_OBJECT(\"{'last4Acct': '$session.params.last4Acct'}\")"
+      } ]
+    },
+    "targetPage": "Caller Input",
+    "name": "503f84b6-420c-46ec-9cf1-1c9d5c3ebf72"
+  }, {
+    "condition": "$session.params.api.pastPaymentObject.refundedInd = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "but the payment was refunded." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.subflowInputs\", \"sms\", \"smsId\")",
+        "value": "paymentHistoryLastPaymentRefunded"
+      }, {
+        "parameter": "smsId",
+        "value": "paymentHistoryLastPaymentRefunded"
+      }, {
+        "parameter": "last4Acct",
+        "value": "$sys.func.MID($session.params.accountNumber, $sys.func.MINUS($sys.func.LEN($session.params.accountNumber), 3), 4)"
+      }, {
+        "parameter": "smsAttributes",
+        "value": "$sys.func.TO_OBJECT(\"{'last4Acct': '$session.params.last4Acct'}\")"
+      } ]
+    },
+    "targetPage": "Caller Input",
+    "name": "dbd5a8da-b2d5-474b-ac42-9269857d0466"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$sys.func.NESTED_FIELD(\"$session.params.subflowInputs\", \"sms\", \"smsId\")",
+        "value": "paymentHistoryGeneral"
+      }, {
+        "parameter": "smsId",
+        "value": "paymentHistoryGeneral"
+      }, {
+        "parameter": "last4Acct",
+        "value": "$sys.func.MID($session.params.accountNumber, $sys.func.MINUS($sys.func.LEN($session.params.accountNumber), 3), 4)"
+      }, {
+        "parameter": "smsAttributes",
+        "value": "$sys.func.TO_OBJECT(\"{'last4Acct': '$session.params.last4Acct', 'paymentDate': '$session.params.api.pastPaymentObject.paymentDate' }\")"
+      } ]
+    },
+    "targetPage": "Caller Input",
+    "name": "d1629240-e376-44fb-9a3d-27266a2d424c"
+  } ]
+}

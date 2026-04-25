@@ -1,0 +1,24 @@
+{
+  "name": "380d0ff0-bc00-42ae-b8c2-aafee5ca7411",
+  "displayName": "Invalid Credit Card Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "96ef9b5d-95b1-4679-b492-f4c92a64139b"
+  } ]
+}

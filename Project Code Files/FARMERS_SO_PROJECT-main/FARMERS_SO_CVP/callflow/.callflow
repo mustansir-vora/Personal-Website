@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<callflow id="Callflow@304353318:1707392574134" version="6.0.1">
+<page closed="false" id="Page@1735338969:1707392574133">Start</page>
+<page closed="false" id="Page@1916055781:1707907960644">FindIVRFlow</page>
+<page closed="false" id="Page@1995687921:1711787882060">CheckFlowEntry_NLU</page>
+<page closed="false" id="Page@258098713:1711783835160">SharedNLU</page>
+<page closed="false" id="Page@879102087:1711784371382">Clarifier</page>
+<page closed="false" id="Page@469567221:1711784419919">Transfer</page>
+<page closed="false" id="Page@1635772593:1712496278386">IVRText</page>
+<page closed="false" id="Page@1445910168:1711784456093">NextActionConnector</page>
+<page closed="false" id="Page@791058001:1709354755046">Disc</page>
+</callflow>

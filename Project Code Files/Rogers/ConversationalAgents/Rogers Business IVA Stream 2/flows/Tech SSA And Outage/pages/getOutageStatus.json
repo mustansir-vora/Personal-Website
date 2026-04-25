@@ -1,0 +1,47 @@
+{
+  "name": "76de0390-2056-4ba0-b42d-1564882aba32",
+  "displayName": "getOutageStatus",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "getOutages"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ticketNumber",
+        "value": "$session.params.outages[0].ticketNumber"
+      }, {
+        "parameter": "outageMessage",
+        "value": "$session.params.outages[0].voiceScriptContent"
+      }, {
+        "parameter": "parentCaseId",
+        "value": "$session.params.outages[0].parentCaseId"
+      }, {
+        "parameter": "outageNumber",
+        "value": "$session.params.outages[0].outageNumber"
+      }, {
+        "parameter": "outageCode",
+        "value": "$session.params.outages[0].outageCode"
+      }, {
+        "parameter": "priority",
+        "value": "Medium"
+      }, {
+        "parameter": "postalCode",
+        "value": "$session.params.outages[0].postalCode"
+      } ]
+    },
+    "targetPage": "check Affected Outage",
+    "name": "9a70e339-6072-4bb9-bac3-db2c6cc8696f"
+  }, {
+    "condition": "$session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "check  Passive Message",
+    "name": "44935565-3639-4e7a-867e-ca97027a9399"
+  } ]
+}

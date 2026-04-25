@@ -1,0 +1,46 @@
+{
+  "name": "6b437603-c5e5-4b89-970c-ba86f4e03033",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire Internet,Télévision, Mobile,Téléphonie Affaires"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Téléphonie Affaires"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Téléphonie Affaires"
+      },
+      "outputActionParameters": {
+        "result": "business-phone-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "productLabelMixFr": "Internet Mobile,Télévision,Tablette,Téléphonie Affaires",
+      "serviceCategoryMixFr": "Internet,Télévision, Mobile,Téléphonie Affaires",
+      "serviceCategoryMixLength": "4"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Téléphonie Affaires",
+      "savedIntent": "business-phone-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-BusinessPhone",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 227,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "6ba3cdfb-02e5-4f57-8cd2-045c79b7075a",
+  "displayName": "Play IPPBalance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "According to our records, you’re on an Installment Payment Plan and have $session.params.api.billingProfile.ippDetails.remainingInstallments payments remaining. Your next installment amount is $session.params.api.billingProfile.ippDetails.ippCurrentBalance." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Selon nos dossiers, vous avez un plan de versements et il vous reste $session.params.api.billingProfile.ippDetails.remainingInstallments versements. Le montant de votre prochain versement est de $session.params.api.billingProfile.ippDetails.ippCurrentBalance." ]
+      },
+      "languageCode": "fr-ca"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "completedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"passive-ippDetails\")"
+    }, {
+      "parameter": "selfServiceCompleted",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "heardIppDetails",
+        "value": true
+      } ]
+    },
+    "targetPage": "Start LastInvoiceDetails subflow",
+    "name": "544e3cb6-3e6e-465c-a082-7fde4e44e306"
+  } ]
+}

@@ -1,0 +1,135 @@
+{
+  "name": "0b0c67ea-80d4-4880-8225-aab52434aefe",
+  "displayName": "Home Security Technical Support",
+  "goal": "Provide Home Security Technical Support by identifying the caller, validating the home security product, checking outage status, guiding pre-FAQ troubleshooting, and transferring the customer to the appropriate technical support when required.",
+  "inputParameterDefinitions": [ {
+    "name": "customerIdentified",
+    "description": "It is a flag for customer identification",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "numberOfHomeSecurity",
+    "description": "numberOfSHM ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "numberOfHomeSecurity",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "subscriptionsList",
+    "description": "list of all values",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionsList",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "hasHomeSecurityProfile",
+    "description": "flag for checking if the customer has home security profile or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "hasHomeSecurityProfile",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "customerNotIdentified",
+    "description": "it is flag to know whether the customer is identified or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerNotIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "it is a object",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "tokenCount": 167,
+  "instruction": {
+    "steps": [ {
+      "text": "Step 1. identify the caller",
+      "steps": [ {
+        "text": "if $customerIdentified is true goto Step 2"
+      }, {
+        "text": "otherwise",
+        "steps": [ {
+          "text": "set $customerNotIdentified as true"
+        }, {
+          "text": "set $subscriptionAccountDetails as `get_account_details`, return the call"
+        } ]
+      } ]
+    }, {
+      "text": "Step 2. validate home security product",
+      "steps": [ {
+        "text": "if $numberOfHomeSecurity is greater than 0",
+        "steps": [ {
+          "text": "set $hasHomeSecurityProfile as true"
+        }, {
+          "text": "set $subscriptionAccountDetails as `get_account_details`, return the call"
+        } ]
+      }, {
+        "text": "otherwise",
+        "steps": [ {
+          "text": "set $hasHomeSecurityProfile as false, return the call"
+        } ]
+      } ]
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "codeBlock": {
+    "code": "@Action\r\ndef get_account_details() -\u003e dict:\r\n    \"\"\"Get linkedAccountNumber and linkedAccountSystem for Internet service\"\"\"\r\n\r\n    subscriptions = state[\"$session.params.subscriptionsList\"]\r\n\r\n    result = {\r\n        \"linkedAccountNumber\": None,\r\n        \"linkedAccountSystem\": None\r\n    }\r\n\r\n    if not subscriptions:\r\n        return result\r\n\r\n    for item in subscriptions:\r\n        service_category = item.get(\"serviceCategory\", {}).get(\"english\", \"\").strip().lower()\r\n\r\n        if service_category == \"home security\":\r\n            result[\"linkedAccountNumber\"] = item.get(\"linkedAccountNumber\")\r\n            result[\"linkedAccountSystem\"] = item.get(\"linkedAccountSystem\")\r\n            return result\r\n\r\n    return result"
+  },
+  "inlineActions": [ "get_account_details" ]
+}

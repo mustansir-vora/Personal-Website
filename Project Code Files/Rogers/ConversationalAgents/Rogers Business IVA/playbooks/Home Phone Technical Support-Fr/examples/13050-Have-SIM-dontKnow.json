@@ -1,0 +1,40 @@
+{
+  "name": "9374ccc0-9c68-421e-802e-db3ea617ad0e",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Votre téléphone résidentiel a-t-il une carte SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "je ne sais pas"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "D'accord Continuons\nPour dépanner votre problème, vous devrez avoir accès à votre équipement de téléphonie résidentielle. Assurez-vous d’appeler à partir d’un téléphone différent de celui pour lequel vous avez besoin d’aide"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportHomePhone",
+      "hasNoHPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": " 13050-Have-SIM-dontKnow",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 253,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

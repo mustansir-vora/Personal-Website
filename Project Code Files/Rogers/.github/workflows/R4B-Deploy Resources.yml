@@ -1,0 +1,76 @@
+name: R4B-Deploy Resources
+run-name: "Deploy Resources • ${{ github.event.inputs.git_tag }} • #${{ github.run_number }}"
+
+on:
+    workflow_dispatch:
+        inputs:
+            git_tag:
+                description: Git Tag To Deploy
+                required: true
+
+            dry_run:
+                description: Execute Dry Run Only
+                required: true
+                type: boolean
+                default: false
+
+permissions:
+    contents: read
+
+jobs:
+    Init:
+        uses: ./.github/workflows/Sub_Init.yml
+        with:
+            git_tag: ${{ github.event.inputs.git_tag }}
+
+    Plan:
+        needs: Init
+        uses: ./.github/workflows/Sub_Plan.yml
+        with:
+            safe_branch: ${{ needs.Init.outputs.safe_branch }}
+            runner_label: ${{ needs.Init.outputs.runner_label }}
+            environment: ${{ needs.Init.outputs.environment }}
+            git_tag: ${{ github.event.inputs.git_tag }}
+
+    # =====================================================
+    # Parallel Deploy Jobs
+    # =====================================================
+
+    Deploy_Node-Packages:
+        needs: [Init, Plan]
+        if: ${{ github.event.inputs.dry_run != 'true' && needs.Plan.outputs.build_node == 'true'  && needs.Plan.outputs.rollback != 'true' && (needs.Plan.outputs.component == 'Release' || needs.Plan.outputs.component == 'NodeModules') }}
+        uses: ./.github/workflows/Sub_Deploy_Node-Modules.yml
+        with:
+            environment: ${{ needs.Init.outputs.environment }}
+            runner_label: ${{ needs.Init.outputs.runner_label }}
+            git_tag: ${{ github.event.inputs.git_tag }}
+
+    Deploy_Cloud-Functions:
+        needs: [Init, Plan]
+        if: ${{ github.event.inputs.dry_run != 'true' && needs.Plan.outputs.build_cf == 'true' && (needs.Plan.outputs.component == 'Release' || needs.Plan.outputs.component == 'CloudFunctions') }}
+        uses: ./.github/workflows/Sub_Deploy_Cloud-Functions.yml
+        with:
+            functions: ${{ needs.Plan.outputs.changed_cf }}
+            environment: ${{ needs.Init.outputs.environment }}
+            runner_label: ${{ needs.Init.outputs.runner_label }}
+            git_tag: ${{ github.event.inputs.git_tag }}
+
+    Deploy_IVA-Agent:
+        needs: [Init, Plan]
+        if: ${{  github.event.inputs.dry_run != 'true' && needs.Plan.outputs.build_gdf == 'true'  && (needs.Plan.outputs.component == 'Release' || needs.Plan.outputs.component == 'GDF') }}
+        uses: ./.github/workflows/Sub_Deploy_IVA-Agent.yml
+        with:
+            agents: ${{ needs.Plan.outputs.changed_agents }}
+            environment: ${{ needs.Init.outputs.environment }}
+            runner_label: ${{ needs.Init.outputs.runner_label }}
+            git_tag: ${{ github.event.inputs.git_tag }}
+
+    Deploy_IVA-Configs:
+        needs: [Init, Plan]
+        if: ${{  github.event.inputs.dry_run != 'true' && needs.Plan.outputs.build_iva == 'true' && (needs.Plan.outputs.component == 'Release' || needs.Plan.outputs.component == 'IVA') }}
+        uses: ./.github/workflows/Sub_Deploy_IVA-Config.yml
+        with:
+            configs: ${{ needs.Plan.outputs.changed_configs }}
+            environment: ${{ needs.Init.outputs.environment }}
+            git_tag: ${{ github.event.inputs.git_tag }}
+            runner_label: ${{ needs.Init.outputs.runner_label }}

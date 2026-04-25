@@ -1,0 +1,7 @@
+{
+  "name": "1d881d5f-121f-4282-98a8-55fe3d8fe144",
+  "displayName": "internet-support",
+  "priority": 500000,
+  "description": "Handles requests for help, troubleshooting, or issues related to internet service.",
+  "numTrainingPhrases": 80
+}

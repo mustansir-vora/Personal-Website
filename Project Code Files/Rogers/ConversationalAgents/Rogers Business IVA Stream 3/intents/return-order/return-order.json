@@ -1,0 +1,7 @@
+{
+  "name": "517c82d9-71be-446c-8852-2bb129fce03c",
+  "displayName": "return-order",
+  "priority": 500000,
+  "description": "Handles requests to return a phone device.",
+  "numTrainingPhrases": 34
+}

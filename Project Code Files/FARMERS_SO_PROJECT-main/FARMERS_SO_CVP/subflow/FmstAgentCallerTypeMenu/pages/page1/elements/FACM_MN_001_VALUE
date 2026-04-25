@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2122989722:1723485325585" name="FACM_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.FACM_MN_001_VALUE</source>
+</config>
+</decision>

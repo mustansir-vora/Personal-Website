@@ -1,0 +1,90 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je dois inclure Internet dans ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait d’",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider à ajouter ",
+      "auto": true
+    }, {
+      "text": "un service",
+      "auto": true
+    }, {
+      "text": " Internet",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux ajouter Internet à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte d’",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’obtenir Internet pour ",
+      "auto": true
+    }, {
+      "text": "mon entreprise",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je souhaite obtenir ",
+      "auto": true
+    }, {
+      "text": "des services",
+      "auto": true
+    }, {
+      "text": " Internet pour ",
+      "auto": true
+    }, {
+      "text": "mon entreprise",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ajouter Internet à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte d’",
+      "auto": true
+    }, {
+      "text": "entreprise",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

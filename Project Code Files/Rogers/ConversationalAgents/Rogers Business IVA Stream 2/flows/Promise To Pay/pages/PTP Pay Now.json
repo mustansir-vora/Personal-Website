@@ -1,0 +1,25 @@
+{
+  "name": "98a53f29-546d-42fe-855b-1fa85d82d3e5",
+  "displayName": "PTP Pay Now",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Make Payment CC",
+    "name": "605b4c95-a9c6-4886-866c-8f9d35f6875c"
+  }, {
+    "condition": "$session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Make Payment PB",
+    "name": "0d8e4eab-e512-4049-8221-a250789fcf4c"
+  } ]
+}

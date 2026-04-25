@@ -1,0 +1,40 @@
+{
+  "name": "e15ad4db-45be-4788-8c04-af638f1d488b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Does your home phone have a SIM?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "i don't know"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Okay. Let's continue.\nTo troubleshoot your issue, you'll need to have access to your home phone equipment. Please ensure you're calling from a different phone than the one you need help with."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "After conditional checks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportHomePhone",
+      "completedSSName": "passive-techSupportHomePhone",
+      "completedSelfServe": "passive-techSupportHomePhone",
+      "hasNoHPprofile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportHomePhone",
+      "reportingVar_completedSSName": "passive-techSupportHomePhone",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": " 13050-Have-SIM-dontKnow",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 240,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

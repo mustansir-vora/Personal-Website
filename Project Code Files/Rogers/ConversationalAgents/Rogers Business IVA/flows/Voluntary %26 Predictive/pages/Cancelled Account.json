@@ -1,0 +1,59 @@
+{
+  "name": "2989b720-f6fe-417e-91c3-8fa87e05c635",
+  "displayName": "Cancelled Account",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callstart",
+    "tag": "getBillingProfile"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je ne peux pas accéder à l’information de votre compte en ce moment." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I can't Access your account information right now." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "SystemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "4b3ce05e-1867-42a9-8525-7c10324938c2"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.actualBalance \u003c= 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": ""
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check Voluntary Redirect",
+    "name": "6b482ecc-ffbf-4712-a5f2-6ebbc49da974"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.actualBalance \u003e 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Make Payment",
+    "name": "d60a3bdd-04e4-436a-a97a-7fd1113eb7ae"
+  } ]
+}

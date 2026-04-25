@@ -1,0 +1,31 @@
+{
+  "name": "13a609b3-f110-4efc-9f37-6c253dc274f8",
+  "displayName": "Check creditLimitAmount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.creditEvaluationDetails.creditLimitAmount \u003e 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "completedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"passive-creditLimitUsage\")"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      } ]
+    },
+    "targetPage": "Play CLAAmount",
+    "name": "fafc6f71-b68b-4ef8-8c7e-91e49c9575cd"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start pendingPTPDetails subflow",
+    "name": "5fa42ca6-7c62-408e-bc1a-362cec700bc4"
+  } ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "1443ffc4-5b37-4aa4-8c44-b03d6fce98f1",
+  "displayName": "Play lastInoviceDetails",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "\u003cspeak\u003eLe montant de votre facture la plus récente était de $session.params.api.billingProfile.lastPaymentDetails.lastInvoiceAmount $ en date du \u003csay-as interpret-as=\"date\" format=\"md\"\u003e$session.params.api.billingProfile.playAccountBalanceDates.playlastBillingDate\u003c/say-as\u003e.\u003c/speak\u003e" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "\u003cspeak\u003eThe amount on your most recent bill was $ $session.params.api.billingProfile.lastPaymentDetails.lastInvoiceAmount dated \u003csay-as interpret-as=\"date\" format=\"md\"\u003e $session.params.api.billingProfile.playAccountBalanceDates.playlastBillingDate\u003c/say-as\u003e.\u003c/speak\u003e" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check from AB or AR",
+    "name": "86d70e72-ccb8-40a9-8edc-b97f77519278"
+  } ]
+}

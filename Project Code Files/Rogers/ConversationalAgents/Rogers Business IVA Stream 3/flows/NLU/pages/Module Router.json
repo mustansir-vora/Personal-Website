@@ -1,0 +1,115 @@
+{
+  "name": "1439cabb-2374-42c8-82c3-b4ce9b98c21c",
+  "displayName": "Module Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nluConfig.destination = BOMM",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fallbackReason",
+        "value": "NLUMainMenu"
+      } ]
+    },
+    "targetPage": "FallBack Router",
+    "name": "625b00d0-70fb-4631-846c-6fad56956d17"
+  }, {
+    "condition": "$session.params.nluConfig.destination = MainMenuAgentRequest",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Agent Request Router",
+    "name": "2f510934-bfed-4b0b-b4f7-12b13e7f06a0"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"FAQ\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call FAQ",
+    "name": "e3a28126-e94d-4243-8071-776090486737"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"NLUMainMenu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "b09619f3-9455-4eab-8c25-9544d02ce51f"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"InternetTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "d782195a-67e3-4389-a95c-cf201173ca28"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"WirelessTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "83747125-73a2-4eab-bd07-ada825e5c367"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"BusinessPhoneTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "8d8f4025-3794-4194-917d-6c131072640c"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"WirelessTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "4f3b51cd-4ebb-43d9-bd29-de3fc251bc76"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"TVTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "f10633a6-47e6-4840-aa97-1afaa1409df8"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"OutageStatus\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "96b55217-3841-46c4-b74e-c90350d4c692"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"BusinessPhoneTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "d3bf2183-f339-4c73-b412-8b33a2a3c03c"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"TechnicalInternetMain\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "d3eb9b2c-2c0c-4675-acd9-f800e70b9155"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"WirelessTechnicalSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "c2d0d67d-ab22-4377-9631-17227f6d2f56"
+  }, {
+    "condition": "$session.params.nluConfig.destination = \"TechnicalSupportMain\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Tech Support",
+    "name": "0cd04606-e4a3-42aa-9d4e-8976b473397a"
+  } ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "663a23fb-1de0-41f4-bc75-fda66966c34b",
+  "displayName": "Account Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.aniMatch = true AND $session.params.identifyAccount = false AND $session.params.numberOfBillingAccounts = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "customerIdentified",
+        "value": true
+      }, {
+        "parameter": "customerIdentification",
+        "value": "notConfirmed"
+      }, {
+        "parameter": "accountNumberIndex",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get Identification Data",
+    "name": "a6bbbdcd-91d9-4746-ac97-ccb83321715d"
+  }, {
+    "condition": "($session.params.aniMatch != true OR $session.params.identifyAccount != false OR $session.params.numberOfBillingAccounts != 1) AND $session.params.accountNumber != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "customerIdentification",
+        "value": "accountConfirmed"
+      }, {
+        "parameter": "accountNumberIndex",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get Identification Data",
+    "name": "6dddb97b-1764-4b23-933f-42670ac0e70e"
+  }, {
+    "condition": "($session.params.aniMatch != true OR $session.params.identifyAccount != false OR $session.params.numberOfBillingAccounts != 1) AND ($session.params.accountNumber = null OR $session.params.customerIdentified != true) AND $session.params.identifyAccount != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      } ]
+    },
+    "targetFlow": "Voluntary \u0026 Predictive",
+    "name": "e9ba3899-7ba3-42d8-8011-d2f9a5d5d432"
+  }, {
+    "condition": "($session.params.aniMatch != true OR $session.params.identifyAccount != false OR $session.params.numberOfBillingAccounts != 1) AND ($session.params.accountNumber = null OR $session.params.identificationApi != true) AND $session.params.identifyAccount = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Id Type",
+    "name": "8c4a03d9-2a91-472a-a3fd-51effbd353f1"
+  } ]
+}

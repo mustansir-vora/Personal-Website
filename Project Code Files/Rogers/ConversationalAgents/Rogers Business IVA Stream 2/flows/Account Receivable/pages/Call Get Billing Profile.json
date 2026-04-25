@@ -1,0 +1,41 @@
+{
+  "name": "4808ba83-094b-489f-bdfe-c1d361538d17",
+  "displayName": "Call Get Billing Profile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "billingProfile"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.returnCode != 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.app.transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "subflowReturnValue",
+        "value": null
+      } ]
+    },
+    "targetPage": "Call Transfer",
+    "name": "3ca703e2-615f-4fa4-952a-dbdd54f2047f"
+  }, {
+    "condition": "$session.params.api.billingProfile.returnCode = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "subFlowReturnValue",
+        "value": null
+      }, {
+        "parameter": "completedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"active-accountsReceivable\")"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "Check Account Status",
+    "name": "a79a83b3-bedc-46b7-8631-7fa0872a452a"
+  } ]
+}

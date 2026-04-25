@@ -1,0 +1,7 @@
+{
+  "name": "16bba627-ec32-4d93-b4bf-094c88d8fded",
+  "displayName": "reset-account-pin",
+  "priority": 500000,
+  "description": "Handles requests to reset the account PIN.",
+  "numTrainingPhrases": 51
+}

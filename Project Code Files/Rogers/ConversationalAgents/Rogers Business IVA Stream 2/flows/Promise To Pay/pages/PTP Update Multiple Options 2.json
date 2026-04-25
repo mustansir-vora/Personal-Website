@@ -1,0 +1,153 @@
+{
+  "name": "4341f6aa-77ae-4bd9-8fa3-0643e7ff79ea",
+  "displayName": "PTP Update Multiple Options 2",
+  "form": {
+    "parameters": [ {
+      "displayName": "changePTPMultipleSelection",
+      "required": true,
+      "entityType": "@e_ptpChangeSingleMultiple",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous souhaitez modifier ce versement, \ndites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ " If you'd like to change your second installment, say yes, or press 1. If not, say no, or press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "66e68df9-deca-4af7-ab05-d63cc3a25038"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Si vous souhaitez modifier ce versement, \r\ndites « oui » ou appuyez sur le 1. Sinon, dites « non » ou appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ " If you'd like to change your second installment, say yes, or press 1. If not, say no, or press 2. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "bcfd2249-e4f1-4d7d-88d8-c0f8d5dd7066"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour modifier votre deuxième versement, \r\nappuyez sur le 1. Sinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To change your second installment, press 1. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "5b72f4e2-4898-4197-a282-c1064ec18deb"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour modifier votre deuxième versement, \r\nappuyez sur le 1. Sinon, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To change your second installment, press 1. Otherwise, press 2." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d5033ed8-5132-41b3-86d5-88bab162843e"
+        }, {
+          "targetPage": "PTP Confirmation",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "skipRecapPreamble",
+              "value": true
+            } ]
+          },
+          "name": "6d9fb7f8-7318-432e-8a4d-377dfbf3a324"
+        }, {
+          "targetPage": "PTP Confirmation",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "skipRecapPreamble",
+              "value": true
+            } ]
+          },
+          "name": "c783dd69-a8c7-4983-b652-14bf74c149e5"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Souhaitez-vous modifier ce versement ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Would you like to change this installment?" ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "$session.params.updateMultipleOptions2",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.changePTPMultipleSelection = yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "changeEntity",
+        "value": null
+      }, {
+        "parameter": "$session.params.updateMultipleOptions2",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Details",
+    "name": "49443431-c508-484e-87f8-cae118755d14"
+  }, {
+    "condition": "$session.params.changePTPMultipleSelection = no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "ee7d4731-6585-44a0-bb85-0ca86b435e7a"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "changeEntity",
+        "value": "$session.params.changePTPSingleSelection"
+      }, {
+        "parameter": "$session.params.updateMultipleOptions2",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Details",
+    "name": "28845d17-c917-473e-80ed-a503f6b97e38"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

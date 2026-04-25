@@ -1,0 +1,122 @@
+{
+  "name": "f7c6fc72-14e0-4770-8088-de294cf81b11",
+  "displayName": "TechMain",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "bcInkTechMainTS",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.bcInkTechMainTS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId6"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "137c89ae-c136-4103-8075-419efb5a2fe5"
+  }, {
+    "condition": "$session.params.bcInkTechMainTS = true AND $session.params.flowLanguage = \"en-US\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkTechMainTS",
+        "value": false
+      } ]
+    },
+    "name": "7b884e97-7c3f-4bb4-b04e-ecef4b54a74f",
+    "targetPlaybook": "Tech Support Main PB"
+  }, {
+    "condition": "$session.params.bcInkTechMainTS = true AND $session.params.flowLanguage = \"fr-CA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "bcInkTechMainTS",
+        "value": false
+      } ]
+    },
+    "name": "871e78af-8429-42d2-9238-0dbb892ed758",
+    "targetPlaybook": "Tech Support Main PB-Fr"
+  }, {
+    "condition": "$session.params.savedIntent = \"technical-support-vague\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "e2bac89a-e249-4cde-b589-c92c2041e600"
+  }, {
+    "condition": "$session.params.enableBOMM = true AND $session.params.flowLanguage = \"en-US\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "enableBOMM",
+        "value": false
+      } ]
+    },
+    "name": "707202c3-9c18-4eb4-bc2a-5413a6aae379",
+    "targetPlaybook": "BOMM Techinical Support"
+  }, {
+    "condition": "$session.params.enableBOMM = true AND $session.params.flowLanguage = \"fr-CA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "enableBOMM",
+        "value": false
+      } ]
+    },
+    "name": "4cdda248-21d9-4157-99ec-953642948b19",
+    "targetPlaybook": "BOMM Techinical Support-Fr"
+  }, {
+    "condition": "$session.params.userInputBMTS = \"agent\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "userInputBMTS",
+        "value": ""
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "8930d5ec-f86b-43df-bade-1bc2a2a8ef51"
+  }, {
+    "condition": "$session.params.userInputBMTS = \"mainmenu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "returnToNLU",
+        "value": false
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": "$sys.func.ADD($session.params.mainMenuRequestCounter, 1)"
+      }, {
+        "parameter": "userInputBMTS",
+        "value": ""
+      }, {
+        "parameter": "isNluFlow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "d8f782b4-7c9c-4515-a6cd-802ae9c9e4a0"
+  }, {
+    "condition": "$session.params.savedIntent != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Intent Separation",
+    "name": "c21bf1b6-fa9e-45df-a5a1-0a0876aa1d7c"
+  } ]
+}

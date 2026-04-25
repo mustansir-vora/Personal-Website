@@ -1,0 +1,42 @@
+{
+  "name": "a30640a9-89df-4f8f-8df0-65b811cd7410",
+  "displayName": "Play noPaymentHistory",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I wasn't able to retrieve any payments for this account." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "selfServiceCompleted",
+      "value": true
+    }, {
+      "parameter": "completedSSName",
+      "value": "$sys.func.CONCATENATE(\"$session.params.completedSSName\",\",active-paymentHistory\")"
+    }, {
+      "parameter": "reportingVar_completedSSName",
+      "value": "$session.params.completedSSName"
+    }, {
+      "parameter": "reportingVar_attemptedSSName",
+      "value": "$session.params.completedSSName"
+    }, {
+      "parameter": "interactionLabel",
+      "value": "PaymentHistory"
+    }, {
+      "parameter": "interactionNotes",
+      "value": "IVA - Payment History"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check from AR",
+    "name": "d1c99e2a-2664-4b5d-ae53-d1429fdbe075"
+  } ]
+}

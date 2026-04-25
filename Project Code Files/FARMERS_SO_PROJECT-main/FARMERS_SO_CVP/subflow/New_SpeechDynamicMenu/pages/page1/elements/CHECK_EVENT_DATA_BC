@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@178765946:1747940009792" name="CHECK_EVENT_DATA_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.NewSpeechflow.CheckEventData</source>
+</config>
+</decision>

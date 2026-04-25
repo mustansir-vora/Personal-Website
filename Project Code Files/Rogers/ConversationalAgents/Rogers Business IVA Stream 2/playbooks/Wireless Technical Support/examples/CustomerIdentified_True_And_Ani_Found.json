@@ -1,0 +1,43 @@
+{
+  "name": "4db277b2-b91d-4121-a25c-9faf6bbd1d2a",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "is_ani_in_wireless_subscriptions",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": "true"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, ensure you are calling from a different phone than the one you need help with. Many issues can be resolved by powering down and restarting your device."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "after customer is identified",
+    "actionParameters": {
+      "customerIdentified": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after condition chceks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "completedSelfServe": "passive-techSupportWireless",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless",
+      "reportingVar_completedSSName": "passive-techSupportWireless",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "wsStepCompleted": "true"
+    }
+  },
+  "displayName": "CustomerIdentified_True_And_Ani_Found",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 235,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

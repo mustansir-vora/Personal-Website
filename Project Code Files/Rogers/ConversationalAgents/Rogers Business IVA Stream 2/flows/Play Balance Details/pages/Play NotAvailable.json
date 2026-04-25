@@ -1,0 +1,28 @@
+{
+  "name": "97bf4360-a338-42ce-98ec-655ce2130372",
+  "displayName": "Play NotAvailable",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Je n'ai pas les détails de votre dernière facture pour le moment." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "I don't have the details from your last bill at this time." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check from AB or AR",
+    "name": "1efac36e-4132-4158-8dc1-04a82507ab7f"
+  } ]
+}

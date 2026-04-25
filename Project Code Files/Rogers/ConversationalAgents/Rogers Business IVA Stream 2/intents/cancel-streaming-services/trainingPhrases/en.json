@@ -1,0 +1,203 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I want to unsubscribe from everything I have on my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Stop all my streaming accounts."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to end my subscription for "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " and "
+    }, {
+      "text": "Disney+",
+      "parameterId": "e_StreamingService1",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you remove all my streaming subscriptions?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my streaming services."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to end my "
+    }, {
+      "text": "crave TV",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " subscription."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please unsubscribe me from "
+    }, {
+      "text": "crave",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Cancel my "
+    }, {
+      "text": "Disney+",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " membership."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How can I unsubscribe from "
+    }, {
+      "text": "Disney",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I "
+    }, {
+      "text": "no"
+    }, {
+      "text": " longer want "
+    }, {
+      "text": "Disney+",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I cancel "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " on my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’d like to unsubscribe from "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please stop my "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " service."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you remove "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " from my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cancel my "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " subscription."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was wondering I would like to cancel "
+    }, {
+      "text": "Netflix",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I wanted to cancel the "
+    }, {
+      "text": "crave",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " on my account subscription"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'd like to cancel my "
+    }, {
+      "text": "crave",
+      "parameterId": "e_StreamingService",
+      "auto": true
+    }, {
+      "text": " for subscription"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

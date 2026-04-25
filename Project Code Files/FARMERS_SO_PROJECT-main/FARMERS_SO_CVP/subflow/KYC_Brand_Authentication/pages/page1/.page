@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@733828346:1729664885313" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1729664885313" name="KYC_Brand_Authentication" type="Subflow Start" width="192" x="296" y="40">
+<exit_states>
+<exit_state name="next" target="Element@159527831:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1903224468:1729664898821" name="Is_DOB_Correct" type="Decision" width="171" x="300" y="839">
+<exit_states>
+<exit_state name="YES" target="Element@1363381521:1729664898821"/>
+<exit_state name="NO" target="Element@1734713259:1729664898821"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1855329823:1729664898821" name="DOB_Collection_Check" type="Decision" width="171" x="309" y="469">
+<exit_states>
+<exit_state name="NO" target="Element@1649495864:1743444816513"/>
+<exit_state name="YES" target="Element@958221238:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1881288144:1729664898821" name="SET_API_NAME5" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="554" y="201">
+<exit_states>
+<exit_state name="done" target="Element@1468149778:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1755621064:1729664898821" name="KYCBA_MN_001_VALUE" type="Decision" width="233" x="246" y="607">
+<exit_states>
+<exit_state name="SU" target="Element@411143385:1729664898821"/>
+<exit_state name="ER" target="Element@1731283626:1749649933980"/>
+<exit_state name="I Dont Know" target="Element@1649495864:1743444816513">
+<bendpoint>
+<dim1 x="222" y="-51"/>
+<dim2 x="-99" y="79"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1649495864:1743444816513">
+<bendpoint>
+<dim1 x="258" y="-33"/>
+<dim2 x="-63" y="97"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1649495864:1743444816513">
+<bendpoint>
+<dim1 x="285" y="-14"/>
+<dim2 x="-36" y="116"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@1897494460:1743444934190"/>
+</exit_states>
+</element>
+<element height="55" id="Element@411143385:1729664898821" name="SET_DOB_COLLECTED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="221" x="270" y="699">
+<exit_states>
+<exit_state name="done" target="Element@1558917030:1729664898821"/>
+</exit_states>
+</element>
+<element height="52" id="Element@926599191:1729664898821" name="SET_CV_FLG" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="187" x="126" y="990">
+<exit_states>
+<exit_state name="done" target="Element@273791087:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@592019427:1729664898821" name="Copy_of_Subflow Return_02" type="Subflow Return" width="233" x="606" y="323"/>
+<element height="55" id="Element@1381283938:1729664898821" name="Subflow Return_02" type="Subflow Return" width="198" x="795" y="485"/>
+<element height="55" id="Element@1468149778:1729664898821" name="Warhead3" type="Subflow Call" width="130" x="319" y="317">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710838177515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@255587973:1729664898821"/>
+</exit_states>
+</element>
+<element height="50" id="Element@159527831:1729664898821" name="BU_Check" type="Decision" width="114" x="323" y="105">
+<exit_states>
+<exit_state name="BW" target="Element@1652706039:1729664898821"/>
+<exit_state name="FDS" target="Element@1739692883:1729664898821"/>
+<exit_state name="FM" target="Element@2131559432:1729664898821"/>
+<exit_state name="FWS" target="Element@1593814799:1729664898821"/>
+<exit_state name="21" target="Element@1881288144:1729664898821"/>
+<exit_state name="Others" target="Element@1468149778:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1558917030:1729664898821" name="PolicyInfo" type="Decision" width="180" x="296" y="768">
+<exit_states>
+<exit_state name="SU" target="Element@1903224468:1729664898821"/>
+<exit_state name="ER" target="Element@1381283938:1729664898821">
+<bendpoint>
+<dim1 x="257" y="-135"/>
+<dim2 x="-251" y="148"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@273791087:1729664898821" name="Active_Claim_Found_InAPI" type="Decision" width="256" x="309" y="1059">
+<exit_states>
+<exit_state name="YES" target="Element@336593050:1729664898821"/>
+<exit_state name="NO" target="Element@72445487:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1734713259:1729664898821" name="SET_EMAILFLAG_AS_NO" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="255" x="630" y="872">
+<exit_states>
+<exit_state name="done" target="Element@336593050:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@285449121:1729664898821" name="Subflow Return_01" type="Subflow Return" width="198" x="793" y="1178"/>
+<element height="55" id="Element@336593050:1729664898821" name="SET_TI_SCORE_MEDIUM" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="239" x="551" y="971">
+<exit_states>
+<exit_state name="done" target="Element@300432022:1743444996956"/>
+</exit_states>
+</element>
+<element height="55" id="Element@72445487:1729664898821" name="SET_TI_SCORE_HIGH" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="211" x="158" y="1176">
+<exit_states>
+<exit_state name="done" target="Element@300432022:1743444996956"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1739692883:1729664898821" name="SET_API_NAME2" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="207" y="203">
+<exit_states>
+<exit_state name="done" target="Element@1468149778:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@255587973:1729664898821" name="KYCBA_HOST_001" type="Decision" width="192" x="302" y="400">
+<exit_states>
+<exit_state name="SU" target="Element@1652742207:1745584888748"/>
+<exit_state name="ER" target="Element@592019427:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2131559432:1729664898821" name="SET_API_NAME3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="392" y="202">
+<exit_states>
+<exit_state name="done" target="Element@1468149778:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1593814799:1729664898821" name="SET_API_NAME4" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="715" y="202">
+<exit_states>
+<exit_state name="done" target="Element@1468149778:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1363381521:1729664898821" name="SET_KYC_AUTHENTICATED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="257" x="274" y="912">
+<exit_states>
+<exit_state name="done" target="Element@926599191:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1652706039:1729664898821" name="SET_API_NAME1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="158" x="47" y="201">
+<exit_states>
+<exit_state name="done" target="Element@1468149778:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@958221238:1729664898821" name="KYCBA_MN_001_Call" type="Subflow Call" width="210" x="279" y="532">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653685709">
+<config>
+<argument_data>
+<data name="MenuID">KYCBA_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1755621064:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@324795698:1730257971822" name="Global_Rep_Handling" type="Decision" width="214" x="843" y="721">
+<exit_states>
+<exit_state name="CONT" target="Element@1381283938:1729664898821"/>
+<exit_state name="TR" target="Element@1601955551:1730258003433"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1601955551:1730258003433" name="Transfer_01" type="Subflow Call" width="138" x="1062" y="456">
+<subflow_call subflow_name="Transfer" target="Element@31:1711272133644">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@786205520:1730258003433"/>
+</exit_states>
+</element>
+<element height="55" id="Element@786205520:1730258003433" name="DISC_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="251" x="886" y="359">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@482347628:1743444816513" name="CustomerRetentionCheck1" type="Subflow Call" width="192" x="612" y="401">
+<subflow_call subflow_name="CustomerRetentionCheck" target="Element@31:1742397842229">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@592019427:1729664898821"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1649495864:1743444816513" name="KYC_RetentionCheckFlag" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="183" x="592" y="477">
+<exit_states>
+<exit_state name="done" target="Element@482347628:1743444816513"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1897494460:1743444934190" name="KYC_RetentionCheckFlag2" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="189" x="551" y="756">
+<exit_states>
+<exit_state name="done" target="Element@73261285:1743444934190"/>
+</exit_states>
+</element>
+<element height="46" id="Element@73261285:1743444934190" name="CustomerRetentionCheck2" type="Subflow Call" width="192" x="690" y="643">
+<subflow_call subflow_name="CustomerRetentionCheck" target="Element@31:1742397842229">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@324795698:1730257971822"/>
+</exit_states>
+</element>
+<element height="46" id="Element@300432022:1743444996956" name="KYC_RetentionCheckFlag3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="189" x="493" y="1184">
+<exit_states>
+<exit_state name="done" target="Element@1666438544:1743444996956"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1666438544:1743444996956" name="CustomerRetentionCheck3" type="Subflow Call" width="192" x="648" y="1105">
+<subflow_call subflow_name="CustomerRetentionCheck" target="Element@31:1742397842229">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@285449121:1729664898821"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2028021349:1745584888748" name="FDS Mercer Handling" type="Subflow Call" width="162" x="-77" y="426">
+<subflow_call subflow_name="FDS_Mercer_Handling" target="Element@31:1743610419969">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1855329823:1729664898821"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1652742207:1745584888748" name="IS_FDS_BU" type="Decision" width="112" x="124" y="425">
+<exit_states>
+<exit_state name="Yes" target="Element@2028021349:1745584888748"/>
+<exit_state name="No" target="Element@1855329823:1729664898821"/>
+</exit_states>
+</element>
+<element height="52" id="Element@1731283626:1749649933980" name="CHECK_HT_TRANSFER" type="Decision" width="217" x="-26" y="553">
+<exit_states>
+<exit_state name="YES" target="Element@1783422640:1749649961520"/>
+<exit_state name="NO" target="Element@1649495864:1743444816513"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1783422640:1749649961520" name="Copy_of_Transfer_01" type="Subflow Call" width="157" x="32" y="637">
+<subflow_call subflow_name="Transfer" target="Element@31:1711272133644">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1655046171:1749649970693"/>
+</exit_states>
+</element>
+<element height="60" id="Element@1655046171:1749649970693" name="Copy_of_DISC_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="160" x="37" y="740">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

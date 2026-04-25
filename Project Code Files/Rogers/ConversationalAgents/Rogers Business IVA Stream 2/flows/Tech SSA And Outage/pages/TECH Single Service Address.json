@@ -1,0 +1,63 @@
+{
+  "name": "3076ea1f-88f3-4083-bbd3-238c8f5a22ca",
+  "displayName": "TECH Single Service Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.serviceAddress != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "osTSFromSingleService",
+        "value": true
+      } ]
+    },
+    "targetPage": "customer Identified",
+    "name": "b74a4429-c549-4efd-900f-800a632de42b"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechOutageStatus\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Single Service Address",
+    "name": "aab0969d-252e-47e4-ad6f-f195718a0dd2"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechTvSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Single Service Address",
+    "name": "a53ce0ff-98d5-4631-b15a-0b87e5e36ebe"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechInternetSupport\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Single Service Address",
+    "name": "75be6c6c-a02a-4daa-a799-e3bf0abef32c"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechHomeSecurity\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Single Service Address",
+    "name": "7945093c-bbe6-4efe-9300-beb2f02ffb03"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechBusinessPhone\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Single Service Address",
+    "name": "154eadcb-d29c-48aa-b7d2-31030a2af3dd"
+  }, {
+    "condition": "$session.params.invokedTSSFrom = \"TechHomePhone\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Single Service Address",
+    "name": "477b9e7c-2f0c-441c-bcea-4f7b2719c355"
+  } ]
+}

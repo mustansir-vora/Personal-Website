@@ -1,0 +1,119 @@
+{
+  "name": "a526c87d-cb7d-475c-a870-a8ae0aac81f0",
+  "displayName": "Check Change Entity",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.ptpChangeDetails",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.changeEntity = date",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change Details",
+    "name": "795ebdd8-26eb-4f23-a5ad-2486e8cd2da2"
+  }, {
+    "condition": "$session.params.changeEntity = amount",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeAmount",
+        "value": true
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change Details",
+    "name": "67f02938-b99f-4001-ab5c-cebc6217afa4"
+  }, {
+    "condition": "$session.params.changeEntity = amount_and_date",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeAmount",
+        "value": true
+      }, {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From Change Details",
+    "name": "019f5d4b-c581-4487-9f3d-3bed957832df"
+  }, {
+    "condition": "$session.params.changeEntity = method",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 1",
+    "name": "06448dd4-7e76-4c6d-906a-404816657a02"
+  }, {
+    "condition": "$session.params.changeEntity = credit_card",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeCC",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 1",
+    "name": "d2b0088a-9ce7-440e-8865-d3ec8f4e32f7"
+  }, {
+    "condition": "$session.params.changeEntity = bank",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangePB",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 1",
+    "name": "b6b39245-f2e9-45fc-8151-13d364b4638d"
+  }, {
+    "condition": "$session.params.changeEntity = amount_and_method",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeAM",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 2",
+    "name": "bc949376-8d05-4945-a97e-157133b3becf"
+  }, {
+    "condition": "$session.params.changeEntity = date_and_method",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeDM",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 2",
+    "name": "0d0c666c-34c1-4c67-bca9-f8b808f086bb"
+  }, {
+    "condition": "$session.params.changeEntity = all_of_them",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeAll",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 2",
+    "name": "ece2c19b-3688-4a6b-92bd-7bc389a3ed8a"
+  } ]
+}

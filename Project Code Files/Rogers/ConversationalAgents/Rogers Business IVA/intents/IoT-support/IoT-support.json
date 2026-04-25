@@ -1,0 +1,7 @@
+{
+  "name": "3b9f5a9b-1103-42c8-b1ee-f003b45c2b07",
+  "displayName": "IoT-support",
+  "priority": 500000,
+  "description": "Handle calls specific to T2 IoT",
+  "numTrainingPhrases": 14
+}

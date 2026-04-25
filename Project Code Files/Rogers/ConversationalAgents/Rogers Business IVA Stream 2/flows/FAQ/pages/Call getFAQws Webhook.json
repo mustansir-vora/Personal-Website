@@ -1,0 +1,101 @@
+{
+  "name": "e4b0105f-1155-44b4-903f-dbf5be76e761",
+  "displayName": "Call getFAQws Webhook",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "getFAQws"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = 0 AND $session.params.faqAvailable = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Intro Script Id",
+    "name": "10095cca-16a4-4c2c-b934-10bfc67be5b3"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, we are unable to process this request." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Désolé, nous ne sommes pas en mesure de traiter cette demande." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "ff053fef-fb4c-42d5-b987-e509b0d0ea78"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "NLU",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "name": "8fc1945c-76e0-46ef-8526-56572b856251"
+  }, {
+    "targetFlow": "NLU",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "name": "027c280a-79c2-400c-b88d-fe07c9b07859"
+  }, {
+    "targetFlow": "NLU",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "name": "3140115d-b4a4-4ba8-82e8-f73c3d909408"
+  }, {
+    "targetFlow": "NLU",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "name": "edee9f3f-bcc9-4d29-bfb4-982680c10f7c"
+  }, {
+    "targetFlow": "NLU",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "name": "6876fa38-496f-4439-b641-af5c4963d1c2"
+  }, {
+    "targetFlow": "NLU",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      } ]
+    },
+    "name": "80c01ee2-1845-43c8-b640-17af66ab91dc"
+  } ]
+}

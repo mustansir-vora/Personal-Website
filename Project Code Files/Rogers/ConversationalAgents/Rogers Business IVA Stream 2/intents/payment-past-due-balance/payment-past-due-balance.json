@@ -1,0 +1,10 @@
+{
+  "name": "71c041ba-c8f1-488a-b09f-07d991da6629",
+  "displayName": "payment-past-due-balance",
+  "parameters": [ {
+    "id": "e_paymentinput",
+    "entityType": "@e_PaymentInput"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

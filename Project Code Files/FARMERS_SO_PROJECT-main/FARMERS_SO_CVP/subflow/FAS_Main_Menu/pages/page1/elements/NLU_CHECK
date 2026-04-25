@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@252265230:1712387596744" name="NLU_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="NLU_CHECK" default_exit_state="NA">
+        <exit_state name="FAS_POLICY_MAINMENU" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FAS_POLICY_MAINMENU" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

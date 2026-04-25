@@ -1,0 +1,139 @@
+{
+  "name": "58e6ba95-44f0-4b1f-be85-f12a2573377b",
+  "displayName": "ID Type Disambig",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "If you have your account number, say \"account number.\" If not, just say \"phone number\"" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Si vous avez votre numéro de compte, dites “numéro de compte”. Sinon, dites simplement “numéro de téléphone”. " ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "IdTypeMn-Account",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLIDType",
+        "value": "account"
+      }, {
+        "parameter": "postNLInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Pre NLU",
+    "name": "aea42f2d-0777-46da-928e-afb74603dcbb"
+  }, {
+    "intent": "IdTypeMn-Phone",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLIDType",
+        "value": "phone"
+      }, {
+        "parameter": "postNLInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Pre NLU",
+    "name": "f9e3a75f-409f-4ffc-a524-f5daa236511c"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, I couldn't hear that.\nYou can say \"Account Number\" or \"Phone Number\"." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Je suis désolé, je ne vous ai pas entendu. Vous pouvez dire « numéro de compte » ou « numéro de téléphone »." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "bf156617-697a-459b-bdd9-0780c50cd21d"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, I didn't get that.\nYou can say \"Account Number\" or \"Phone Number\"" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Je suis désolé, je n’ai pas compris. Vous pouvez dire « numéro de compte » ou « numéro de téléphone »." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "8e4f1534-8d58-4ed4-886e-fc499d92e392"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I still couldn't hear that.\nTo provide your account number, say \"Account Number\" or Press 1. You can also say \"Phone Number\" or Press 2" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Je ne vous entends toujours pas. Pour fournir votre numéro de compte,… dites « numéro de compte » ou appuyez sur 1. Vous pouvez aussi dire « numéro de téléphone » ou appuyer sur 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "6755d2f0-d810-45c3-82a0-e5767d6b9306"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I still didn't get that.\nTo provide your account number, say \"Account Number\" or Press 1. You can also say \"Phone Number\" or Press 2." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Je n’ai toujours pas compris. Pour fournir votre numéro de compt…, dites « numéro de compte » ou appuyez sur 1. Vous pouvez aussi dire « numéro de téléphone » ou appuyer sur 2." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "dcd79c4c-616d-4fe3-ac94-8e911d18b02e"
+  }, {
+    "targetPage": "Call Pre NLU",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLIDType",
+        "value": "account"
+      }, {
+        "parameter": "postNLInvoked",
+        "value": false
+      } ]
+    },
+    "name": "1f6eab53-16e4-4447-87e6-f8fa7afc5954"
+  }, {
+    "targetPage": "Call Pre NLU",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLIDType",
+        "value": "account"
+      }, {
+        "parameter": "postNLInvoked",
+        "value": false
+      } ]
+    },
+    "name": "b14fc642-2d74-4f07-aed3-fa6094449c49"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

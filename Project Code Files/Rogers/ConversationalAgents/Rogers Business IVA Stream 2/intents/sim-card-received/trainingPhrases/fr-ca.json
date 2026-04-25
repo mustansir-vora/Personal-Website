@@ -1,0 +1,216 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "La carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " est arrivée et je veux m’assurer qu’elle est prête pour le service avant de l’utiliser."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je viens de recevoir la ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " et j’ai besoin d’aide pour l’ajouter à ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " compte.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu la ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " que j’ai commandée et je ne suis pas certain comment la configurer pour ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je viens de recevoir ma carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " et je veux transférer mon numéro depuis l’ancien appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " est arrivée et j’ai besoin de l’activer immédiatement pour ma ligne mobile."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu ma nouvelle carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " aujourd’hui et j’ai besoin de conseils pour l’insérer."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je viens de recevoir la ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " et je veux confirmer qu’elle fonctionnera avec ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " forfait existant.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu la ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " mais ",
+      "auto": true
+    }, {
+      "text": "mon",
+      "auto": true
+    }, {
+      "text": " téléphone ne la reconnaît pas correctement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je viens de recevoir mes "
+    }, {
+      "text": "SIM cards",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " pour mon téléphone et j’appelle pour vérifier les étapes d’activation."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " que j’ai commandée est arrivée et j’ai besoin d’aide pour la configurer sur mon appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je viens de recevoir la ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " et je veux m’assurer qu’elle est activée pour ",
+      "auto": true
+    }, {
+      "text": "le service",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu ma carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " par la poste et j’ai besoin d’aide pour transférer mon numéro."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai reçu la nouvelle ",
+      "auto": true
+    }, {
+      "text": "SIM",
+      "parameterId": "e_simtype",
+      "auto": true
+    }, {
+      "text": " pour ma ligne et je ne suis pas certain comment l’insérer correctement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Ma carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " est arrivée aujourd’hui et on m’a dit d’appeler pour la configurer."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je viens de recevoir ma carte "
+    }, {
+      "text": "SIM card",
+      "parameterId": "e_simtype"
+    }, {
+      "text": " et j’ai besoin d’aide pour l’activer sur mon téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

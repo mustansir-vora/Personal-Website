@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1708523624:1745499633135" name="BU_Check_02" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BU_Check_02" default_exit_state="Others">
+        <exit_state name="BW" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FLAG_BW_BU" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

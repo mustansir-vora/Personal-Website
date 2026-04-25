@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1249899084:1707802974686" name="Start" version="6.0.1">
+<element height="55" id="Element@31:1707802974686" name="FWS_ARC_Main" type="Subflow Start" width="173" x="329" y="-13">
+<exit_states>
+<exit_state name="next" target="Element@1851998201:1707803061179"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1851998201:1707803061179" name="SharedEntryMod" type="Subflow Call" width="183" x="324" y="75">
+<subflow_call subflow_name="Entry_Mod" target="Element@31:1710401897087">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@955732333:1714511995152">
+<bendpoint>
+<dim1 x="-133" y="14"/>
+<dim2 x="186" y="-68"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@219328203:1707803116458" name="SharedHoopCheck" type="Subflow Call" width="198" x="320" y="195">
+<subflow_call subflow_name="EntryHOOP" target="Element@31:1710401901505">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@533945153:1707803195601"/>
+</exit_states>
+</element>
+<element height="55" id="Element@533945153:1707803195601" name="FWSARC_ADM_001" type="Decision" width="205" x="318" y="285">
+<exit_states>
+<exit_state name="SU" target="Element@391684531:1715173925483"/>
+<exit_state name="ER" target="Element@391684531:1715173925483"/>
+</exit_states>
+</element>
+<element height="55" id="Element@878199878:1707804829378" name="FWSARC_HOST_001" type="Decision" width="210" x="346" y="553">
+<exit_states>
+<exit_state name="SU" target="Element@1365203383:1707805154174"/>
+<exit_state name="ER" target="Element@1365203383:1707805154174"/>
+</exit_states>
+</element>
+<element height="55" id="Element@210737338:1707805137395" name="MAIN_MENU" type="Page Entry" width="153" x="963" y="15">
+<exit_states>
+<exit_state name="next" target="Element@782334781:1731527517540"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1365203383:1707805154174" name="MAIN_MENU" type="Page Connector" width="153" x="355" y="664">
+<page_connector target="Element@210737338:1707805137395">MAIN_MENU<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@737034993:1714511951580" name="OneSpeciality" type="Subflow Call" width="157" x="76" y="334">
+<subflow_call subflow_name="OneSpecialtyMenu" target="Element@31:1714510050376">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@763673568:1714512314462"/>
+</exit_states>
+</element>
+<element height="55" id="Element@955732333:1714511995152" name="Main_Flow_Route" type="Decision" width="217" x="-12" y="157">
+<exit_states>
+<exit_state name="OTHERS" target="Element@219328203:1707803116458">
+<bendpoint>
+<dim1 x="168" y="71"/>
+<dim2 x="-155" y="33"/>
+</bendpoint>
+</exit_state>
+<exit_state name="OneSpeciality" target="Element@1204480230:1719584757317"/>
+<exit_state name="21st" target="Element@1390576101:1714512391983"/>
+<exit_state name="FDS" target="Element@1390576101:1714512391983"/>
+<exit_state name="FWS" target="Element@1762381442:1741280362598"/>
+<exit_state name="BW" target="Element@1390576101:1714512391983"/>
+</exit_states>
+</element>
+<element height="55" id="Element@763673568:1714512314462" name="MAIN_FLOW_RETURN" type="Subflow Return" width="222" x="2" y="412"/>
+<element height="55" id="Element@1390576101:1714512391983" name="SharedServiceMain" type="Subflow Call" width="199" x="-230" y="280">
+<subflow_call subflow_name="SharedServiceMainMenu" target="Element@31:1714512414276">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@763673568:1714512314462"/>
+</exit_states>
+</element>
+<element height="55" id="Element@209679172:1715173925483" name="Warhead3" type="Subflow Call" width="130" x="479" y="397">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710838177515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@792400593:1717661796835"/>
+</exit_states>
+</element>
+<element height="55" id="Element@391684531:1715173925483" name="SET_API_NAME3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="259" y="397">
+<exit_states>
+<exit_state name="done" target="Element@209679172:1715173925483"/>
+</exit_states>
+</element>
+<element height="55" id="Element@792400593:1717661796835" name="IVRProperty_isANIBypassed" type="Decision" width="239" x="604" y="472">
+<exit_states>
+<exit_state name="YES" target="Element@1365203383:1707805154174"/>
+<exit_state name="NO" target="Element@878199878:1707804829378"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1204480230:1719584757317" name="Lang_Check" type="Decision" width="129" x="66" y="245">
+<exit_states>
+<exit_state name="SPANISH" target="Element@1390576101:1714512391983"/>
+<exit_state name="ENGLISH" target="Element@737034993:1714511951580"/>
+</exit_states>
+</element>
+<element height="50" id="Element@782334781:1731527517540" name="FWSARC_MN_002_Call" type="Subflow Call" width="198" x="938" y="111">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1730966940024">
+<config>
+<argument_data>
+<data name="MenuID">FWSARC_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@463366172:1731527517540"/>
+</exit_states>
+</element>
+<element height="55" id="Element@463366172:1731527517540" name="FWSARC_MN_002_VALUE" type="Decision" width="251" x="921" y="202">
+<exit_states>
+<exit_state name="1" target="Element@115851743:1731527517540">
+<bendpoint>
+<dim1 x="-110" y="61"/>
+<dim2 x="-93" y="-62"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@115851743:1731527517540">
+<bendpoint>
+<dim1 x="-82" y="65"/>
+<dim2 x="-65" y="-58"/>
+</bendpoint>
+</exit_state>
+<exit_state name="3" target="Element@115851743:1731527517540">
+<bendpoint>
+<dim1 x="-53" y="62"/>
+<dim2 x="-36" y="-61"/>
+</bendpoint>
+</exit_state>
+<exit_state name="4" target="Element@115851743:1731527517540">
+<bendpoint>
+<dim1 x="-26" y="59"/>
+<dim2 x="-9" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="5" target="Element@115851743:1731527517540">
+<bendpoint>
+<dim1 x="19" y="62"/>
+<dim2 x="36" y="-61"/>
+</bendpoint>
+</exit_state>
+<exit_state name="6" target="Element@115851743:1731527517540">
+<bendpoint>
+<dim1 x="41" y="67"/>
+<dim2 x="58" y="-56"/>
+</bendpoint>
+</exit_state>
+<exit_state name="7" target="Element@115851743:1731527517540">
+<bendpoint>
+<dim1 x="68" y="66"/>
+<dim2 x="85" y="-57"/>
+</bendpoint>
+</exit_state>
+<exit_state name="8" target="Element@115851743:1731527517540">
+<bendpoint>
+<dim1 x="106" y="67"/>
+<dim2 x="123" y="-56"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1449955531:1731527517540"/>
+<exit_state name="NOINPUT" target="Element@700860780:1731527517540"/>
+<exit_state name="ER" target="Element@1449955531:1731527517540">
+<bendpoint>
+<dim1 x="-203" y="30"/>
+<dim2 x="161" y="30"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1449955531:1731527517540" name="SHARED_TRANSFER" type="Page Connector" width="209" x="578" y="202">
+<page_connector target="Element@2134058779:1707805192386">SHARED_TRANSFER<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@700860780:1731527517540" name="DISCONNECT" type="Page Connector" width="158" x="1274" y="202">
+<page_connector target="Element@1995416915:1707990516438">DISCONNECT<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@115851743:1731527517540" name="SHARED_TRANSFER" type="Page Connector" width="209" x="952" y="333">
+<page_connector target="Element@2134058779:1707805192386">SHARED_TRANSFER<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1762381442:1741280362598" name="Check_Cust_Agent" type="Decision" width="194" x="18" y="41">
+<exit_states>
+<exit_state name="LoopBackToFlow" target="Element@1132964652:1741280362598"/>
+<exit_state name="N" target="Element@219328203:1707803116458"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1132964652:1741280362598" name="SET_Return_MainMenu" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="227" x="-282" y="183">
+<exit_states>
+<exit_state name="done" target="Element@1390576101:1714512391983"/>
+</exit_states>
+</element>
+</page>

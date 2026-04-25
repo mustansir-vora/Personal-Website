@@ -1,0 +1,19 @@
+{
+  "name": "4e554db2-e146-441f-a415-0ede41136fcd",
+  "displayName": "Check Expiration Date Validity",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "validateCCExpirationDate"
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Valid Response",
+    "name": "6f18c855-e9bf-41da-9cba-1126297edabf"
+  } ]
+}

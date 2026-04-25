@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1609009200:1743444613082" name="BU_Check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.CustomerRetention_BUCheck</source>
+</config>
+</decision>

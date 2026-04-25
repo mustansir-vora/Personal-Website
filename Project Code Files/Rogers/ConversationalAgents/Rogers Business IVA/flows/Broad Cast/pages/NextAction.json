@@ -1,0 +1,64 @@
+{
+  "name": "42cc1772-c7ac-4033-a3fe-01ebb4afc628",
+  "displayName": "NextAction",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.nextAction = \"return\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Exit BroadCast",
+    "name": "e89e2924-fcce-4fe1-adde-8318acd89889"
+  }, {
+    "condition": "$session.params.nextAction = \"transfer\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "savedIntent",
+        "value": "$session.params.broadCastIntent"
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "c729f0a7-b02f-4ac5-af0f-e9131d287b3c"
+  }, {
+    "condition": "$session.params.nextAction = \"endCall\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "End Call",
+    "name": "ba29e3d5-b3e1-4976-9b95-513fc0fd497f"
+  }, {
+    "condition": "$session.params.nextAction = \"selfServe\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "$session.params.broadCastIntent"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA\", true, false)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "e75f7f6a-e77a-48c3-85e3-fa35393ade67"
+  }, {
+    "condition": "$session.params.nextAction = \"nlu\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "4acdbdd0-1f33-44e1-ba3f-b3a47390f549"
+  } ]
+}

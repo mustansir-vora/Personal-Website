@@ -1,0 +1,32 @@
+{
+  "name": "e98b6ba3-b747-4bda-b1f3-37bdcfece0ab",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, ensure you are calling from a different phone than the one you need help with. Many issues can be resolved by powering down and restarting your device."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "after customer is  not identified",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after condition chceks",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "completedSelfServe": "passive-techSupportWireless",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless",
+      "reportingVar_completedSSName": "passive-techSupportWireless",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true",
+      "wsStepCompleted": "true"
+    }
+  },
+  "displayName": "CustomerIdentified_False",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 189,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

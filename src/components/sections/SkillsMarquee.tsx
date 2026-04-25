@@ -123,7 +123,7 @@ export default function SkillsMarquee() {
   return (
     <section className="py-24 relative" id="skills">
       {/* Background glow for the section */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-96 bg-emerald-600/10 rounded-full mix-blend-screen filter blur-[100px] pointer-events-none z-0"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-96 bg-emerald-600/10 rounded-full filter blur-[100px] pointer-events-none z-0 transform-gpu"></div>
 
       <div className="max-w-6xl mx-auto px-6 md:px-8 relative z-10">
 

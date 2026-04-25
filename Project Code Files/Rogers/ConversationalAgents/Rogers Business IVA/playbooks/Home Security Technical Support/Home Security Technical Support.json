@@ -1,0 +1,197 @@
+{
+  "name": "0b0c67ea-80d4-4880-8225-aab52434aefe",
+  "displayName": "Home Security Technical Support",
+  "goal": "## Role\nHome Security Technical Support IVR Routing Agent — a deterministic call-routing and self-service handler operating within an Interactive Voice Response (IVR) system. It processes inbound home security technical support calls by evaluating caller identity and home security product availability to direct callers to the appropriate home security support path.\n## Core Objective\nTo accurately identify the caller, validate the home security product profile, retrieve account details, and route the call to the correct home security technical support destination — strictly following the defined step sequence, branching conditions, error handling rules, and variable assignments outlined in the playbook.\n\n##General rules\n1. No independent decision-making\nThe agent must not infer, assume, or improvise any routing logic, variable values, or branching paths not explicitly defined in the playbook. Every action must trace directly to a written instruction.\n2. No skipping or reordering steps\nSteps must be executed in the exact sequence specified. The agent may only jump to a different step when the playbook explicitly instructs it. It must never skip ahead or look ahead on its own.\n\n## Handling Exceptions\n- If a customer asks a question outside of instructions, do not answer using external knowledge. Revert to the next step or the approved \"No Match\" protocol.\n- If there is code block error , set the variable errorMessage value then return the call , Do not do anything on your own.\n- STRICT : DO NOT CALL End Block Flow Unless there is wrapUp event triggered. ",
+  "inputParameterDefinitions": [ {
+    "name": "customerIdentified",
+    "description": "It is a flag for customer identification",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "numberOfHomeSecurity",
+    "description": "numberOfSHM ",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "NUMBER"
+      }
+    },
+    "parameterType": {
+      "name": "numberOfHomeSecurity",
+      "openapiJsonSchema": {
+        "type": "number"
+      }
+    }
+  }, {
+    "name": "subscriptionsList",
+    "description": "list of all values",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionsList",
+      "openapiJsonSchema": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "subscriptionAccountDetails",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "hasHomeSecurityProfile",
+    "description": "flag for checking if the customer has home security profile or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "hasHomeSecurityProfile",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "customerNotIdentified",
+    "description": "it is flag to know whether the customer is identified or not",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "BOOLEAN"
+      }
+    },
+    "parameterType": {
+      "name": "customerNotIdentified",
+      "openapiJsonSchema": {
+        "type": "boolean"
+      }
+    }
+  }, {
+    "name": "subscriptionAccountDetails",
+    "description": "it is a object",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "subscriptionAccountDetails",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "errorMessage",
+    "description": "errorMessage",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "errorMessage",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "tokenCount": 554,
+  "referencedFlows": [ "End Call" ],
+  "handlers": [ {
+    "eventHandler": {
+      "event": "wrapUp",
+      "fulfillment": {
+        "nextActionOverride": {
+          "flowTransition": {
+            "targetFlow": "End Call",
+            "playbookOutput": {
+              "executionSummary": "User disconnected the call while call was being processed in the playbook. wrapUp event was invoked using detect Intent and post call processing is triggered.",
+              "state": "OK",
+              "actionParameters": {
+                "wrapUp": "true"
+              }
+            }
+          }
+        }
+      }
+    }
+  } ],
+  "instruction": {
+    "steps": [ {
+      "text": "Step 1. identify the caller",
+      "steps": [ {
+        "text": "if $customerIdentified is true goto Step 2"
+      }, {
+        "text": "otherwise",
+        "steps": [ {
+          "text": "set $customerNotIdentified as true"
+        }, {
+          "text": "set $subscriptionAccountDetails as `get_account_details`, return the call",
+          "steps": [ {
+            "text": "if $subscriptionAccountDetails.error =\"Code Block Error\"",
+            "steps": [ {
+              "text": "set $errorMessage as \"codeBlockError\" and return the call"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "text": "Step 2. validate home security product",
+      "steps": [ {
+        "text": "if $numberOfHomeSecurity is greater than 0",
+        "steps": [ {
+          "text": "set $hasHomeSecurityProfile as true"
+        }, {
+          "text": "set $subscriptionAccountDetails as `get_account_details`, return the call",
+          "steps": [ {
+            "text": "if $subscriptionAccountDetails.error =\"Code Block Error\"",
+            "steps": [ {
+              "text": "set $errorMessage as \"codeBlockError\" and return the call"
+            } ]
+          } ]
+        } ]
+      }, {
+        "text": "otherwise",
+        "steps": [ {
+          "text": "set $hasHomeSecurityProfile as false, return the call"
+        } ]
+      } ]
+    }, {
+      "text": "Step 3. When the wrapUp trigger is triggered then you have the ability to route the user to ${FLOW:End Call}"
+    } ]
+  },
+  "playbookType": "ROUTINE",
+  "codeBlock": {
+    "code": "@Action\r\ndef get_account_details() -\u003e dict:\r\n    \"\"\"Get linkedAccountNumber and linkedAccountSystem for Internet service\"\"\"\r\n    try:\r\n      subscriptions = state[\"$session.params.subscriptionsList\"]\r\n\r\n      result = {\r\n          \"linkedAccountNumber\": None,\r\n          \"linkedAccountSystem\": None\r\n      }\r\n\r\n      if not subscriptions:\r\n          return result\r\n\r\n      for item in subscriptions:\r\n          service_category = item.get(\"serviceCategory\", {}).get(\"english\", \"\").strip().lower()\r\n\r\n          if service_category == \"home security\":\r\n              result[\"linkedAccountNumber\"] = item.get(\"linkedAccountNumber\")\r\n              result[\"linkedAccountSystem\"] = item.get(\"linkedAccountSystem\")\r\n              return result\r\n\r\n      return result\r\n    except Exception as e:\r\n      error=\"Code Block Error\"\r\n      print(f\"Something went wrong with the code block execution: {e}\")\r\n      return {\"error\":error}"
+  },
+  "inlineActions": [ "get_account_details" ]
+}

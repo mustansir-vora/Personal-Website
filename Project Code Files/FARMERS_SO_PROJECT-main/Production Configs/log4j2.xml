@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+<Properties>
+	<Property name="log-path">C:/Servion/FARMERS_SO_CVP/logs</Property>
+</Properties>
+  <Appenders>
+    	<RollingFile name="FARMERS_SO_CVP_INFO" fileName="${log-path}/AppStart_Info.log"
+            filePattern="${log-path}/AppStart_Info-%d{yyyy-MM-dd}-%i.log" >
+            <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{ISO8601} (%c) - %m%n"/>
+             <Policies>
+                <SizeBasedTriggeringPolicy size="100MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="500"/>
+        </RollingFile>
+         
+        <RollingFile name="FARMERS_SO_CVP_ERROR" fileName="${log-path}/AppStart_Error.log"
+            filePattern="${log-path}/AppStart_Error-%d{yyyy-MM-dd}-%i.log" >
+            <LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{ISO8601} (%c) - %m%n"/>
+             <Policies>
+                <SizeBasedTriggeringPolicy size="100MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="500"/>
+        </RollingFile>
+		
+		<RollingFile name="ADMIN_API_INFO" fileName="${log-path}/AdminAPI_Info.log"
+            filePattern="${log-path}/AdminAPI_Info-%d{yyyy-MM-dd}-%i.log" >
+            <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{ISO8601} (%c) - %m%n"/>
+             <Policies>
+                <SizeBasedTriggeringPolicy size="100MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="500"/>
+        </RollingFile>
+		
+		<RollingFile name="FARMERS_API_INFO" fileName="${log-path}/FARMERSAPI_Info.log"
+            filePattern="${log-path}/FARMERSAPI_Info-%d{yyyy-MM-dd}-%i.log" >
+            <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{ISO8601} (%c) - %m%n"/>
+             <Policies>
+                <SizeBasedTriggeringPolicy size="100MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="500"/>
+        </RollingFile>
+		
+		<RollingFile name="FARMERS_REPORT_INFO" fileName="${log-path}/FARMERSREPORT_Info.log"
+            filePattern="${log-path}/FARMERSREPORT_Info-%d{yyyy-MM-dd}-%i.log" >
+            <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{ISO8601} (%c) - %m%n"/>
+             <Policies>
+                <SizeBasedTriggeringPolicy size="100MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="500"/>
+        </RollingFile>
+        
+    <Async name="ASYNC">
+      <AppenderRef ref="FARMERS_SO_CVP_INFO"/>
+      <AppenderRef ref="FARMERS_SO_CVP_ERROR"/>
+    </Async>
+  </Appenders>
+  <Loggers>
+    <Root level="INFO">
+	      <AppenderRef ref="ASYNC"/>
+    </Root>
+	<Logger name="com.farmers.AdminAPI" level="info" additivity="false">
+		<AppenderRef ref="ADMIN_API_INFO"/>
+	</Logger>
+	<Logger name="com.farmers.FarmersAPI" level="info" additivity="false">
+		<AppenderRef ref="FARMERS_API_INFO"/>
+	</Logger>
+	<Logger name="com.farmers.report" level="error" additivity="false">
+		<AppenderRef ref="FARMERS_REPORT_INFO"/>
+	</Logger>
+  </Loggers>
+</Configuration>

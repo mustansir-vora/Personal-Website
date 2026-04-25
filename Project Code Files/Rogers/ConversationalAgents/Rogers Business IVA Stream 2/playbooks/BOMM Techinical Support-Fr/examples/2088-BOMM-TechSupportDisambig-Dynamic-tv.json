@@ -1,0 +1,45 @@
+{
+  "name": "cf869bef-fe80-4fdf-992a-583288834b08",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire Internet,Télévision,Mobile"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Télévision"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Télévision"
+      },
+      "outputActionParameters": {
+        "result": "tv-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixFr": "Internet,Télévision,Mobile",
+      "serviceCategoryMixLength": "3"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Télévision",
+      "savedIntent": "tv-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-tv",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 193,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "4811ec33-ac6a-4cab-b986-e4588cc5745a",
+  "displayName": "Check Forced SS",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.GET_FIELD($session.params.forcedSelfServIntent, $session.params.savedIntent) != null AND $sys.func.GET_FIELD($session.params.forcedSelfServIntent, $session.params.savedIntent) = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "CheckForcedSS",
+        "value": false
+      } ]
+    },
+    "targetPage": "Agent Request Counter",
+    "name": "bd5d8bed-7488-4bf5-b19a-26321854a3b1"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "CheckForcedSS",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "agentRequest"
+      } ]
+    },
+    "targetPage": "Pre Transfer",
+    "name": "672d6e21-4401-48e3-80ca-765ffd15e16e"
+  } ]
+}

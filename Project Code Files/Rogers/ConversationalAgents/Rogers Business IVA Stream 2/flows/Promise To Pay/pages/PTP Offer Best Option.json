@@ -1,0 +1,41 @@
+{
+  "name": "89e5a333-7043-42a6-af1f-c6152cd5fc5d",
+  "displayName": "PTP Offer Best Option",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.api.response.ptp.currentBalance) \u003c= 0 AND $sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance) = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Zero Past Due Balance",
+    "name": "ca27ee1b-6c59-4cde-b264-1824a694d6fe"
+  }, {
+    "condition": "$sys.func.TO_NUMBER($session.params.api.response.ptp.currentBalance) \u003e 0 AND $sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance) = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "recomInstallAmount1",
+        "value": "$sys.func.DIVIDE($session.params.api.response.ptp.currentBalance, 2, 2)"
+      }, {
+        "parameter": "recomInstallAmount2",
+        "value": "$sys.func.MINUS($sys.func.TO_NUMBER($session.params.api.response.ptp.currentBalance), $sys.func.TO_NUMBER($session.params.recomInstallAmount1))"
+      }, {
+        "parameter": "ptpCurrentBalanceSplit",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check Pay method",
+    "name": "908dff26-168a-453d-8798-157f32d82978"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Pay method",
+    "name": "653b0363-6d68-46f1-bbd0-c41a9093b3ad"
+  } ]
+}

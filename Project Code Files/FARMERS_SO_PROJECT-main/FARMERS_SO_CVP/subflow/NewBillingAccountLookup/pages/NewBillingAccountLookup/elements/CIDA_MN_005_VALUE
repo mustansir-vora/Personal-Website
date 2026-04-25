@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@979425573:1759318280319" name="CIDA_MN_005_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.CIDA_MN_005_VALUE</source>
+</config>
+</decision>

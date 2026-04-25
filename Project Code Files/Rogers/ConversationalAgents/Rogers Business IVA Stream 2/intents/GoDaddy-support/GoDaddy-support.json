@@ -1,0 +1,7 @@
+{
+  "name": "8f9a874b-9d36-43eb-be24-9b48eda49dc5",
+  "displayName": "GoDaddy-support",
+  "priority": 500000,
+  "description": "Handle calls specific to T2 GoDaddy",
+  "numTrainingPhrases": 14
+}

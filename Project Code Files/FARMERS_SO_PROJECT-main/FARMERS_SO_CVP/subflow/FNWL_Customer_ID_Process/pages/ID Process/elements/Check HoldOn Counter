@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@156398551:1733398313221" name="Check HoldOn Counter" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check HoldOn Counter" default_exit_state="MAX TRIES EXCEDED">
+        <exit_state name="RETRY" conjugate="and">
+            <number operator="less">
+                <data>
+                    <element name="HoldOn Counter" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

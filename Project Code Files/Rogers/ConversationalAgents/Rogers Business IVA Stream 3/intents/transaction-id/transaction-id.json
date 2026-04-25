@@ -1,0 +1,7 @@
+{
+  "name": "63853391-4fff-40a4-93c2-da1ab204e8e5",
+  "displayName": "transaction-id",
+  "priority": 500000,
+  "description": "Covers inquiries about locating, confirming, or understanding a transaction ID or reference number.",
+  "numTrainingPhrases": 50
+}

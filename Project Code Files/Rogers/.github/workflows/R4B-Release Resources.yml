@@ -1,0 +1,54 @@
+name: R4B-Release Resources
+
+on:
+    push:
+        branches:
+            - Dev
+            - Qa
+            - Prod
+        paths:
+            - "ConversationalAgents/**"
+            - "CloudFunctions/**"
+            - "IvaConfigs/**"
+            - "CommonNodeModules/**"
+
+permissions:
+    contents: write
+
+jobs:
+    Init:
+        uses: ./.github/workflows/Sub_Init.yml
+
+    Plan:
+        needs: Init
+        uses: ./.github/workflows/Sub_Plan.yml
+        with:
+            safe_branch: ${{ needs.Init.outputs.safe_branch }}
+            runner_label: ${{ needs.Init.outputs.runner_label }}
+            environment: ${{ needs.Init.outputs.environment }}
+
+    Build:
+        needs: [Init, Plan]
+        uses: ./.github/workflows/Sub_Build.yml
+        secrets:
+            GH_APP_PRIVATE_KEY_CCT: ${{ secrets.GH_APP_PRIVATE_KEY_CCT }}
+        with:
+            safe_branch: ${{ needs.Init.outputs.safe_branch }}
+            runner_label: ${{ needs.Init.outputs.runner_label }}
+            environment: ${{ needs.Init.outputs.environment }}
+            build_gdf: ${{ needs.Plan.outputs.build_gdf }}
+            build_cf: ${{ needs.Plan.outputs.build_cf }}
+            build_iva: ${{ needs.Plan.outputs.build_iva }}
+            build_node: ${{ needs.Plan.outputs.build_node }}
+
+    Release:
+        needs: [Init, Plan, Build]
+        uses: ./.github/workflows/Sub_Release.yml
+        with:
+            runner_label: ${{ needs.Init.outputs.runner_label }}
+            environment: ${{ needs.Init.outputs.environment }}
+            common_tag: ${{ needs.Build.outputs.common_tag }}
+            tag_gdf: ${{ needs.Build.outputs.tag_gdf }}
+            tag_cf: ${{ needs.Build.outputs.tag_cf }}
+            tag_iva: ${{ needs.Build.outputs.tag_iva }}
+            tag_node: ${{ needs.Build.outputs.tag_node }}

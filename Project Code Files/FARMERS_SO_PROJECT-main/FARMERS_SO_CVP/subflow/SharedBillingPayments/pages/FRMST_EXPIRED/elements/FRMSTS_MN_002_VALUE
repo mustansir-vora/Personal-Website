@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@540369554:1721828581399" name="FRMSTS_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.FRMSTS_MN_002</source>
+</config>
+</decision>

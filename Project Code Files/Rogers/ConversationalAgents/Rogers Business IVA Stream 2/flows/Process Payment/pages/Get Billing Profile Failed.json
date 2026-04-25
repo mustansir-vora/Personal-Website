@@ -1,0 +1,35 @@
+{
+  "name": "252941de-2d19-40ce-8956-39a118f3f16a",
+  "displayName": "Get Billing Profile Failed",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I can’t access your account\ninformation right now." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Je ne peux pas accéder à vos renseignements de compte pour le moment." ]
+      },
+      "languageCode": "fr-ca"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "transferType",
+      "value": "systemError"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "65a28915-6790-4aaa-a9f7-28727f49a931"
+  } ]
+}

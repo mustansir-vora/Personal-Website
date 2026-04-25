@@ -1,0 +1,78 @@
+{
+  "name": "9794e298-0c0b-4e65-a45d-336b2d2b5eb9",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "À propos de quoi appelez-vous ? Vous pouvez dire « voix avantage », « téléphones mobiles », « Internet haute vitesse », « services de télévision » ou « téléphonie d’affaires »."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Je veux parler à l'agent"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "check_saved_intent",
+      "inputActionParameters": {
+        "counter": "0"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Nos spécialistes ne peuvent pas vous aider avec cette transaction, mais je peux vous aider ici, dans le système automatisé. Essayons encore.\nÀ propos de quoi appelez-vous ? Vous pouvez dire « voix avantage », « téléphones mobiles », « Internet haute vitesse », « services de télévision » ou « téléphonie d’affaires »."
+    }
+  }, {
+    "userUtterance": {
+      "text": "téléphones mobiles"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_product",
+      "inputActionParameters": {
+        "userResponse": "téléphones mobiles"
+      },
+      "outputActionParameters": {
+        "result": "Mobile"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Mobile"
+      },
+      "outputActionParameters": {
+        "result": "wireless-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "globalAgentRequestCounter": "0",
+      "heardBackOffMenu": "false",
+      "savedIntent": "technical-support",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "globalAgentRequestCounter": "1",
+      "heardBackOffMenu": "true",
+      "product": "Mobile",
+      "savedIntent": "wireless-support"
+    }
+  },
+  "displayName": "2086-BOMM-Bus-TechSupportDisambig-Agent-Counter1",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 428,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

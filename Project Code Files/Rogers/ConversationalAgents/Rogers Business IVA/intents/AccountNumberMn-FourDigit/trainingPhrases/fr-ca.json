@@ -1,0 +1,246 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "le numéro de compte est "
+    }, {
+      "text": "3456",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "mon numéro de compte se termine par "
+    }, {
+      "text": "9876",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "les quatre derniers chiffres sont "
+    }, {
+      "text": "4321",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "mon numéro se termine par "
+    }, {
+      "text": "7890",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "c'est "
+    }, {
+      "text": "2345",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "les quatre derniers chiffres de mon compte sont "
+    }, {
+      "text": "8765",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "c'est "
+    }, {
+      "text": "6543",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro de compte se termine par "
+    }, {
+      "text": "0987",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "les quatre derniers chiffres sont "
+    }, {
+      "text": "5432",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "il se termine par "
+    }, {
+      "text": "1000",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "c'est "
+    }, {
+      "text": "8901",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro est "
+    }, {
+      "text": "2222",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "les quatre derniers chiffres du compte sont "
+    }, {
+      "text": "4444",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le compte se termine par "
+    }, {
+      "text": "5555",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le compte se termine par "
+    }, {
+      "text": "6789",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "les quatre derniers chiffres du compte sont "
+    }, {
+      "text": "9012",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro est "
+    }, {
+      "text": "7890",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "il se termine par "
+    }, {
+      "text": "2345",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "les quatre derniers chiffres sont "
+    }, {
+      "text": "8901",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro de compte se termine par "
+    }, {
+      "text": "3456",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "c'est "
+    }, {
+      "text": "0123",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "les quatre derniers chiffres de mon compte sont "
+    }, {
+      "text": "5678",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "c'est "
+    }, {
+      "text": "9012",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "mon numéro se termine par "
+    }, {
+      "text": "4567",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "les quatre derniers chiffres sont "
+    }, {
+      "text": "6789",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "mon numéro de compte se termine par "
+    }, {
+      "text": "1234",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro de compte est "
+    }, {
+      "text": "5678",
+      "parameterId": "fourdigitaccount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

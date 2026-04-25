@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@150296156:1747940009792" name="SET_HT_FLAG" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">S_HOTEVENT</setting>
+</settings>
+</config>
+</action_element>

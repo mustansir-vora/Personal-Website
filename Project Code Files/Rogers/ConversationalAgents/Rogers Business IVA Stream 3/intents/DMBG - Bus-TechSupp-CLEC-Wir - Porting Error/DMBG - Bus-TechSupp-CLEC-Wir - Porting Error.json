@@ -1,0 +1,7 @@
+{
+  "name": "18c2873f-da3a-4a64-8db5-d867023e2be7",
+  "displayName": "DMBG - Bus-TechSupp-CLEC-Wir - Porting Error",
+  "priority": 500000,
+  "numTrainingPhrases": 6,
+  "dtmfPattern": "1"
+}

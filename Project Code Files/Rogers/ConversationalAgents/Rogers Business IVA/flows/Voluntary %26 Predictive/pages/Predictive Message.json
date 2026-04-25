@@ -1,0 +1,31 @@
+{
+  "name": "bb0a7841-24f3-4c47-8cef-f9dc2f1d15ea",
+  "displayName": "Predictive Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent != \"NA\" AND $session.params.action = \"transfer\" AND $session.params.savedIntent != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA\", true, false)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "53021c56-9276-4ab5-8b98-4dfa22e0f72b"
+  }, {
+    "condition": "$session.params.savedIntent = \"NA\" OR $session.params.systemOverride = \"NA\" OR $session.params.action != \"transfer\" OR $session.params.savedIntent = null OR $session.params.savedIntent = \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA\", true, false)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "0768a5f6-7083-479a-9b65-ecbba0b8f5f3"
+  } ]
+}

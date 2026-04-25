@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1841530048:1757057747791" name="FNWL_Return" version="6.0.1">
+<subflow_call subflow_name="FNWL_FLOW" target="Element@31:1736603020219">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

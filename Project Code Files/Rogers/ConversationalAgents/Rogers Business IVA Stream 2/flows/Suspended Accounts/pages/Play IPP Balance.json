@@ -1,0 +1,28 @@
+{
+  "name": "fd15e2b4-70a4-4135-a801-c7c21d24a1a7",
+  "displayName": "Play IPP Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You're on an Installment Payment Plan with $session.params.api.billingProfile.ippDetails.remainingInstallments installments remaining. Your balance for this bill is $ $session.params.api.billingProfile.ippDetails.ippCurrentBalance due by $sys.func.FORMAT_DATE($session.params.api.billingProfile.ippDetails.ippStatusUpdateDate, MMMM dd)" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Vous êtes inscrit à un plan de paiement par versements, avec $session.params.api.billingProfile.ippDetails.remainingInstallments versements restants. Le solde de cette facture est de $session.params.api.billingProfile.ippDetails.ippCurrentBalance, payable au plus tard le $session.params.api.billingProfile.ippDetails.ippStatusUpdateDate" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Reason",
+    "name": "21734262-f20b-45ba-a352-5eb9c5f6045a"
+  } ]
+}

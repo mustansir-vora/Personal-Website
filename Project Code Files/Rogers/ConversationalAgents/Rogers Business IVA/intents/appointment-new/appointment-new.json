@@ -1,0 +1,7 @@
+{
+  "name": "5e10b7dd-f4cd-4d8a-8daf-0a53e7a93e0a",
+  "displayName": "appointment-new",
+  "priority": 500000,
+  "description": "This intent is triggered when the user is calling to schedule an appointment for service/technician visit, etc...",
+  "numTrainingPhrases": 45
+}

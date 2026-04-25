@@ -1,0 +1,27 @@
+{
+  "name": "05ab6f30-3086-4c74-928a-36ad85fa363e",
+  "displayName": "Create Variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.subflowInputs.broadcastMessage.broadcastId",
+      "value": "cancelledAccount"
+    }, {
+      "parameter": "selfServiceAttempted",
+      "value": "true"
+    }, {
+      "parameter": "$session.params.attemptedSSName",
+      "value": "active-cancelledAccount"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Broadcast Message",
+    "name": "a7a109bb-6c40-4259-9b57-ffcce2f2f7a6"
+  } ]
+}

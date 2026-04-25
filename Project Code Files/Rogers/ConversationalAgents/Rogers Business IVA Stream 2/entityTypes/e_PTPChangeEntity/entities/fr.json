@@ -1,0 +1,42 @@
+{
+  "entities": [ {
+    "value": "date",
+    "synonyms": [ "change the date", "date" ],
+    "languageCode": "fr",
+    "dtmfPattern": "2"
+  }, {
+    "value": "amount",
+    "synonyms": [ "amount", "change the amount" ],
+    "languageCode": "fr",
+    "dtmfPattern": "1"
+  }, {
+    "value": "method",
+    "synonyms": [ "change the method", "change the payment method", "method" ],
+    "languageCode": "fr",
+    "dtmfPattern": "3"
+  }, {
+    "value": "amount_and_date",
+    "synonyms": [ "amount and date" ],
+    "languageCode": "fr"
+  }, {
+    "value": "credit_card",
+    "synonyms": [ "card", "credit card" ],
+    "languageCode": "fr"
+  }, {
+    "value": "bank",
+    "synonyms": [ "bank" ],
+    "languageCode": "fr"
+  }, {
+    "value": "amount_and_method",
+    "synonyms": [ "amount and method" ],
+    "languageCode": "fr"
+  }, {
+    "value": "date_and_method",
+    "synonyms": [ "date and method" ],
+    "languageCode": "fr"
+  }, {
+    "value": "all_of_them",
+    "synonyms": [ "all of them" ],
+    "languageCode": "fr"
+  } ]
+}

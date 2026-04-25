@@ -1,0 +1,25 @@
+{
+  "name": "cebbbc38-eacd-4b16-b89e-dc612c7ef76e",
+  "displayName": "Check If PTP Date Is Less Than Installment Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpDate \u003c= $session.params.installmentDate",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Return From Change PTP Date",
+    "name": "790f1d9a-52a5-4de5-ab5e-ad3a24a3ee0e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check If PTP Change Method",
+    "name": "7114fa57-2928-4b65-bf78-a4546c61e4c7"
+  } ]
+}

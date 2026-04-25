@@ -1,0 +1,185 @@
+{
+  "trainingPhrases": [ {
+    "id": "cf9ba7e3-8e10-491e-bb34-a8aa42c806d2",
+    "parts": [ {
+      "text": "That is correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ef0c45fa-1d90-46f6-a99e-9eabb1a2324a",
+    "parts": [ {
+      "text": "Indeed"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "fa5641a2-9152-4576-be5b-1bb574d11301",
+    "parts": [ {
+      "text": "I'm ready"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2013f102-744b-4671-aec4-6f5b177b092c",
+    "parts": [ {
+      "text": "Yup"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "e1b91c34-3f71-4c64-8ed1-0f5a302c6b34",
+    "parts": [ {
+      "text": "That's correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "68b2bb09-864a-46cc-8066-35e7f5b3fad8",
+    "parts": [ {
+      "text": "Absolutely"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1a9c80a4-2124-421c-ab3f-8532d3dd5989",
+    "parts": [ {
+      "text": "I am in agreement"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1473f375-14c3-4f6a-9c8c-632ba6f89042",
+    "parts": [ {
+      "text": "I concur"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b8a84ba9-4d6f-49c8-b7ac-530b04a76763",
+    "parts": [ {
+      "text": "sounds good to me"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b29f711b-14fa-421e-a717-92bdfb3670aa",
+    "parts": [ {
+      "text": "sounds good"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7edbcc35-cb1c-4844-a570-ea47a41af3f2",
+    "parts": [ {
+      "text": "definitely"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3a1edb04-1b5b-4fc6-8f38-1c9f8f32aed5",
+    "parts": [ {
+      "text": "of course"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8dcb4373-9a32-4720-93fa-09ae75f54d38",
+    "parts": [ {
+      "text": "I agree"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8bf1f4d2-b478-4781-a554-4a95aa32ee58",
+    "parts": [ {
+      "text": "you're right"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ca6385cc-5b3e-4e24-b9e0-f84ff7df8365",
+    "parts": [ {
+      "text": "continue please"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f28ffeca-17a8-4af7-a161-40d5e8fdd1b6",
+    "parts": [ {
+      "text": "exactly"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d2b49182-61d9-4585-932b-d7aa3d18a30b",
+    "parts": [ {
+      "text": "proceed"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8fe28221-7215-467e-9842-d5835a246dca",
+    "parts": [ {
+      "text": "affirmative"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "11e8f270-a0ba-4a40-879e-b311d86cb5f1",
+    "parts": [ {
+      "text": "correct"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0ccf78de-8ad0-49d0-aa9d-940c3f4f2e5d",
+    "parts": [ {
+      "text": "that's right"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5e244a8c-2fd7-451c-8624-20cb74ab893f",
+    "parts": [ {
+      "text": "yep"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "550482c9-b6a6-480b-b42b-1878f16468b1",
+    "parts": [ {
+      "text": "continue"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9f709f33-c8a4-4188-b4c3-a2a6ce017d3c",
+    "parts": [ {
+      "text": "go ahead"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9aea0698-7379-46de-87e4-ac432b43f4d4",
+    "parts": [ {
+      "text": "i'm there"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "89765515-f24c-4f73-8b9e-ec98a6b758e7",
+    "parts": [ {
+      "text": "yeah"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "cc47f7bf-2d04-4a7a-8374-d9da877633a3",
+    "parts": [ {
+      "text": "yes"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

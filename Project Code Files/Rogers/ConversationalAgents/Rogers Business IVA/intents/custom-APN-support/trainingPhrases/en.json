@@ -1,0 +1,57 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Our SIM cards are not authenticating on the custom APN."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We need assistance troubleshooting VPN integration with our "
+    }, {
+      "text": "APN"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you confirm if our custom APN is active and provisioned "
+    }, {
+      "text": "correctly"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re experiencing data connectivity issues after switching to a custom APN."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The "
+    }, {
+      "text": "APN"
+    }, {
+      "text": " settings we applied aren’t working—can you verify them?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We need help configuring the custom APN on multiple devices."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our IoT devices aren’t connecting to the network using the custom APN."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

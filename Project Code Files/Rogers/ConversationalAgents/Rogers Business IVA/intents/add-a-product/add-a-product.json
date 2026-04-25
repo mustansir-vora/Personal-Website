@@ -1,0 +1,7 @@
+{
+  "name": "9d210197-5d95-4e8e-ae3a-35b9371f1687",
+  "displayName": "add-a-product",
+  "priority": 500000,
+  "description": "Handles inquiries on adding new service or product in an existing business account",
+  "numTrainingPhrases": 16
+}

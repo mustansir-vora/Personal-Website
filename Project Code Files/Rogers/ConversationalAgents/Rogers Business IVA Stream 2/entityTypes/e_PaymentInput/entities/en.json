@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "name",
+    "synonyms": [ "name", "@e_AmountName" ],
+    "languageCode": "en"
+  }, {
+    "value": "amount",
+    "synonyms": [ "@sys.unit-currency", "amount" ],
+    "languageCode": "en"
+  } ]
+}

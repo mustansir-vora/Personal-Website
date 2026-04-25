@@ -1,0 +1,7 @@
+{
+  "name": "bf920e75-a8bf-4057-8daf-0fee1df66232",
+  "displayName": "reset-digital-box",
+  "priority": 500000,
+  "description": "Handles requests to reset the customer’s digital TV box.",
+  "numTrainingPhrases": 20
+}

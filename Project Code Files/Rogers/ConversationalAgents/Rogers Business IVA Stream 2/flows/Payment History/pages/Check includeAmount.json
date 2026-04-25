@@ -1,0 +1,25 @@
+{
+  "name": "f88399b1-58c3-48ae-838b-ec045cc83fe6",
+  "displayName": "Check includeAmount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.app.config.paymentHistoryIncludeAmount = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play dateOnlyMultiple",
+    "name": "92fcf0e4-938b-4989-9d37-254afa57fb5e"
+  }, {
+    "condition": "$session.params.app.config.paymentHistoryIncludeAmount = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play dateAndAmountMultiple",
+    "name": "c55b5664-089d-466b-b899-421162f824c2"
+  } ]
+}

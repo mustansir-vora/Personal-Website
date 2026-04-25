@@ -1,0 +1,28 @@
+{
+  "name": "65a05342-b6ff-4bc3-bbf5-6ecf83988bca",
+  "displayName": "Subscription Changed?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.changeSubscription = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "confirmSubscription"
+      } ]
+    },
+    "targetPage": "Start Reusable Phone Number",
+    "name": "ea261bf3-a6c3-4b1d-85fa-a00aff862a90"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Single Wireless Subscription 1?",
+    "name": "cac16da4-a8ee-4c99-a801-2a43acd5d738"
+  } ]
+}

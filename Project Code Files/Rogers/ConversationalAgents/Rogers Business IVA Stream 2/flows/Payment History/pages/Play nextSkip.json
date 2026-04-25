@@ -1,0 +1,23 @@
+{
+  "name": "a77cd677-4080-4ea3-ab48-e051169760cf",
+  "displayName": "Play nextSkip",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Prior to that" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get currentPaymentHistoryObject",
+    "name": "e82437d1-c315-463a-a5d7-2c437dfc52bc"
+  } ]
+}

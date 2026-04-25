@@ -1,0 +1,8 @@
+{
+  "name": "5c3e5e0e-54bd-48de-859f-efd810b9bcb0",
+  "displayName": "IdTypeMn-Account",
+  "priority": 500000,
+  "description": "To Check Id Type From The User",
+  "numTrainingPhrases": 57,
+  "dtmfPattern": "1"
+}

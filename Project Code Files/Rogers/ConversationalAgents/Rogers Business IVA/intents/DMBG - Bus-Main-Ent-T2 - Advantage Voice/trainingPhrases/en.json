@@ -1,0 +1,39 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Rogers"
+    }, {
+      "text": " Unison"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "techniacal support for "
+    }, {
+      "text": "Rogers"
+    }, {
+      "text": " Unison"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "technical support of advantage voice"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "unison"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "advantage voice"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

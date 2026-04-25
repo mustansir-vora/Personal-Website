@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1051173697:1732872008709" name="FNWL_MN_011_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.FNWL_MN_011</source>
+</config>
+</decision>

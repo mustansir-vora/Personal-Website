@@ -1,0 +1,53 @@
+{
+  "name": "b32a3e5b-7c8f-456d-af51-4091ae130d34",
+  "displayName": "Ani Confirm Id Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "StdErrorCount",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.idType = \"phone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "phoneRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Phone Number Collection",
+    "name": "86a18bc1-f7ec-4549-9697-caec36d19be2"
+  }, {
+    "condition": "$session.params.idType = \"account\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "accountNumberAskedFlag",
+        "value": true
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Number Collection",
+    "name": "1d34ffc4-be83-419f-8dee-4aa381f046ba"
+  }, {
+    "condition": "$session.params.idType = \"both\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Account Or Phone Number ",
+    "name": "8bb53c0b-840f-4703-80fa-7b8be871651f"
+  } ]
+}

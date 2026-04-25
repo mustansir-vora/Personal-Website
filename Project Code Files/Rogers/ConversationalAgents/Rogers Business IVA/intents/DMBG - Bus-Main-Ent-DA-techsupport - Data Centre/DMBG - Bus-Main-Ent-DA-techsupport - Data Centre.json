@@ -1,0 +1,7 @@
+{
+  "name": "e37c183c-a532-4c0f-9f8c-45513741fb02",
+  "displayName": "DMBG - Bus-Main-Ent-DA-techsupport - Data Centre",
+  "priority": 500000,
+  "numTrainingPhrases": 3,
+  "dtmfPattern": "4"
+}

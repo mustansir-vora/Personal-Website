@@ -1,0 +1,7 @@
+{
+  "name": "2e26056a-43b0-48c3-9607-a82934105cb6",
+  "displayName": "product-inquiry-phone",
+  "priority": 500000,
+  "description": "Handles calls for business sales for SMB account or unknown customers",
+  "numTrainingPhrases": 10
+}

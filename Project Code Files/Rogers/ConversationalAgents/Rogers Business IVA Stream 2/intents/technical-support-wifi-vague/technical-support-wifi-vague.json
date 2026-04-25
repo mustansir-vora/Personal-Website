@@ -1,0 +1,7 @@
+{
+  "name": "1853ec14-7ac6-4f30-986a-c7e134abdf36",
+  "displayName": "technical-support-wifi-vague",
+  "priority": 500000,
+  "description": "Handles broad or unclear inquiries about Wi-Fi support.",
+  "numTrainingPhrases": 40
+}

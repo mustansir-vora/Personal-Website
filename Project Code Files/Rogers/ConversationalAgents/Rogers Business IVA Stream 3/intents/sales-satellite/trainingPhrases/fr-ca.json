@@ -1,0 +1,90 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Vous offrez ",
+      "auto": true
+    }, {
+      "text": "un service",
+      "auto": true
+    }, {
+      "text": " satellite dans ",
+      "auto": true
+    }, {
+      "text": "ma région",
+      "auto": true
+    }, {
+      "text": ".?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je suis à la recherche de ",
+      "auto": true
+    }, {
+      "text": "DTH",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J'ai besoin d'",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " satellite dans ",
+      "auto": true
+    }, {
+      "text": "ma région",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais obtenir ",
+      "auto": true
+    }, {
+      "text": "Direct TV",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais obtenir ",
+      "auto": true
+    }, {
+      "text": "des services",
+      "auto": true
+    }, {
+      "text": " satellite.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je cherche ",
+      "auto": true
+    }, {
+      "text": "des services",
+      "auto": true
+    }, {
+      "text": " satellite pour notre emplacement éloigné.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

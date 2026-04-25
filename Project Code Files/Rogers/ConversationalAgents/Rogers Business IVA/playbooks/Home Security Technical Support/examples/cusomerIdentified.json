@@ -1,0 +1,40 @@
+{
+  "name": "6a55713f-6e0f-4c48-8af4-3daceda09ce3",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_account_details",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": {
+          "linkedAccountNumber": "Maestro",
+          "linkedAccountSystem": "220000183"
+        }
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcasrt",
+    "actionParameters": {
+      "customerIdentified": "true",
+      "numberOfHomeSecurity": "2"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after checks",
+    "actionParameters": {
+      "hasHomeSecurityProfile": "true",
+      "subscriptionAccountDetails": {
+        "linkedAccountNumber": "Maestro",
+        "linkedAccountSystem": "220000183"
+      }
+    }
+  },
+  "displayName": "cusomerIdentified",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 161,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "undetected"
+}

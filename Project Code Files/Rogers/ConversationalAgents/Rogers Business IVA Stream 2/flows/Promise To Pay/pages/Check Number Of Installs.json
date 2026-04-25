@@ -1,0 +1,38 @@
+{
+  "name": "f67fb7bd-0c8a-4c1d-ba55-b882edabc678",
+  "displayName": "Check Number Of Installs",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfInstalls = 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpConfirmation",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "f3c24609-3196-4d33-b49a-3a63aa628af5"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 1 AND $session.params.ptpRecapNoCounter \u003c 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Change One Install",
+    "name": "755255f1-2aef-4871-a739-49a0103833c9"
+  }, {
+    "condition": "$session.params.numberOfInstalls = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpConfirmation",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "57e6c0f8-8471-45a9-a2b7-d000bbe0775b"
+  } ]
+}

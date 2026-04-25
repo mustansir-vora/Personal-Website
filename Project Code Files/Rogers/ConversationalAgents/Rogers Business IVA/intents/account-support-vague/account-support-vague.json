@@ -1,0 +1,7 @@
+{
+  "name": "8ed68a99-2029-48f1-b046-ec3268d2740b",
+  "displayName": "account-support-vague",
+  "priority": 500000,
+  "description": "This intent is triggered when a vague query for account support is recognized",
+  "numTrainingPhrases": 57
+}

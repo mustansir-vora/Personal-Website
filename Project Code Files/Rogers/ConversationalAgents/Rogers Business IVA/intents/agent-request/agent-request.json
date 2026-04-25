@@ -1,0 +1,7 @@
+{
+  "name": "95976b5a-a752-4524-aef0-7640f34539ab",
+  "displayName": "agent-request",
+  "priority": 500000,
+  "description": "Handles calls where a user requests an agent at any point of the experience",
+  "numTrainingPhrases": 55
+}

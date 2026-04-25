@@ -1,0 +1,7 @@
+{
+  "name": "48b8724e-32b3-4a6f-86f6-324d57300a42",
+  "displayName": "device-support",
+  "priority": 500000,
+  "description": "Related to a phone or modem not working or have issue",
+  "numTrainingPhrases": 18
+}

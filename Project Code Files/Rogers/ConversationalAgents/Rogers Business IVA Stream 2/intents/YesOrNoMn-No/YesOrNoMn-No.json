@@ -1,0 +1,8 @@
+{
+  "name": "1d88b121-cecd-4d7b-ad37-877336ad9cfa",
+  "displayName": "YesOrNoMn-No",
+  "priority": 500000,
+  "description": "This Will Trigger When User Said No Related Inputs",
+  "numTrainingPhrases": 43,
+  "dtmfPattern": "2"
+}

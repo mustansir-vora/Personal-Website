@@ -1,0 +1,147 @@
+{
+  "name": "e2bffb20-8022-4306-b2ec-f04b84a9d29b",
+  "displayName": "Get Amount",
+  "form": {
+    "parameters": [ {
+      "displayName": "amountNumber",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter the amount, including cents, that\nyou'd like to pay." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "8135dc1a-6bb0-47e9-9e61-e0145222f7f6"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Say or enter the amount, including cents, that\nyou'd like to pay." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a8b46701-bf54-4e09-ba06-54669e345df4"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please enter the amount, including cents, that\nyou'd like to pay. For example, 25 dollars would be 2 5 0 0." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "618c3ca4-c79f-45de-bfe3-72c6084aa98d"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please enter the amount, including cents, that\nyou'd like to pay. For example, 25 dollars would be 2 5 0 0." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "c07eb94c-4e5c-4b47-a76e-a76ce59d21ff"
+        }, {
+          "targetPage": "Initialize Failure",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "0feca485-0f79-4e20-a691-32fe61dd865a"
+        }, {
+          "targetPage": "Initialize Failure",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "cfcb618d-b485-464d-837a-32bae20f7298"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 4,
+          "finishDigit": "#",
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 4
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 2
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "How much would you like to pay?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Quel montant souhaitez-vous payer ?" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Quel montant souhaitez-vous payer ?" ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "payment-current-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.api.billingProfile.balanceDetails.currentBalance"
+      }, {
+        "parameter": "amountNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "774cd1cf-2d2f-4e9f-b7a9-04a7ab2f75eb"
+  }, {
+    "intent": "payment-past-due-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$session.params.api.billingProfile.balanceDetails.pastDueBalance"
+      }, {
+        "parameter": "amountNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "a6cf6352-c18c-445a-b52c-cfb5a9f8dabb"
+  }, {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$sys.func.TO_NUMBER($session.params.amountNumber)"
+      }, {
+        "parameter": "amountNumber ",
+        "value": null
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "7ac0ff6e-4ac6-41cd-a907-a2824bad4f11"
+  } ]
+}

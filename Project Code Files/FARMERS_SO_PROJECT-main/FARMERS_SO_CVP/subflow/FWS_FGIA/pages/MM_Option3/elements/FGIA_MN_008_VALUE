@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@201128832:1731040649111" name="FGIA_MN_008_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.FGIA_MN_Common_VALUE</source>
+</config>
+</decision>

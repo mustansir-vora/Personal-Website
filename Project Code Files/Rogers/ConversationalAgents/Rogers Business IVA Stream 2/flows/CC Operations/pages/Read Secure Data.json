@@ -1,0 +1,32 @@
+{
+  "name": "f559f327-facb-498e-8d41-fc20cceecc5d",
+  "displayName": "Read Secure Data",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "readSecureData"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.consumerSemafone.readSecureData.validResponse = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Validation State",
+    "name": "1c2f3c47-dac9-4622-95bd-b09544a7f7a7"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "add4a0d8-fa90-4d86-a9a2-72419d181367"
+  } ]
+}

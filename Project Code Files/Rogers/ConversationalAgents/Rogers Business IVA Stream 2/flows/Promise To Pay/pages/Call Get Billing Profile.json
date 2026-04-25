@@ -1,0 +1,31 @@
+{
+  "name": "92ac6a53-7f0e-4963-9bbc-da3457034a7d",
+  "displayName": "Call Get Billing Profile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpWrapUp = true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "billingProfile"
+    },
+    "targetPage": "Return From Get Billing Profile",
+    "name": "b50e16e3-27b0-43d0-9acd-e8f561cd3f6e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+      "tag": "billingProfile",
+      "setParameterActions": [ {
+        "parameter": "ptpCallBillingProfile",
+        "value": true
+      } ]
+    },
+    "targetPage": "Return From Get Billing Profile",
+    "name": "f98dc613-f99a-461b-a465-63041d10d8a1"
+  } ]
+}

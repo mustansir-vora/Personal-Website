@@ -1,0 +1,32 @@
+{
+  "name": "c9c54b12-ceb2-4421-a0d6-8ebb3fef2591",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Is there an antenna fixed to the outside of your residence?"
+    }
+  }, {
+    "userUtterance": {
+      "text": " i want to go for main menu"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "userInput": "main menu"
+    }
+  },
+  "displayName": "11402-Antenna-Res-Main Menu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 131,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

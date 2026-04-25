@@ -1,0 +1,25 @@
+{
+  "name": "f4329c8e-95b9-47e2-8815-7f8f15c19295",
+  "displayName": "Check Past Due Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.balanceDetails.pastDueBalance \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play PastDueBalance",
+    "name": "d59f379a-557d-43e8-855d-a34412b89f8f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Bill Close Date",
+    "name": "1b98344e-8d64-4500-baf5-c3dcec4284ad"
+  } ]
+}

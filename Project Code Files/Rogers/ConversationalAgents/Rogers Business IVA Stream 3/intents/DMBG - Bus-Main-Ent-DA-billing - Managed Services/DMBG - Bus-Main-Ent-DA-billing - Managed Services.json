@@ -1,0 +1,7 @@
+{
+  "name": "1e39ca1f-6c4c-4487-966b-a489994d59dc",
+  "displayName": "DMBG - Bus-Main-Ent-DA-billing - Managed Services",
+  "priority": 500000,
+  "numTrainingPhrases": 6,
+  "dtmfPattern": "3"
+}

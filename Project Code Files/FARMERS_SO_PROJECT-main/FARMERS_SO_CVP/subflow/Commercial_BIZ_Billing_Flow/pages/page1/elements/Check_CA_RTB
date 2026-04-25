@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@847036394:1759319093224" name="Check_CA_RTB" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.Check_CA_RTB</source>
+</config>
+</decision>

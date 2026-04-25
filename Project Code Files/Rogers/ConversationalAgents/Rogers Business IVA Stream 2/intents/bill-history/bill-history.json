@@ -1,0 +1,7 @@
+{
+  "name": "ab35be26-988b-42a0-a8a6-a4859b57d9de",
+  "displayName": "bill-history",
+  "priority": 500000,
+  "description": "Handles requests to view or retrieve past billing statements",
+  "numTrainingPhrases": 50
+}

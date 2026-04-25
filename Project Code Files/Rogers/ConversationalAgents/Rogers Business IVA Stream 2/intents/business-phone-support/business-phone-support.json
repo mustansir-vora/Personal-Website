@@ -1,0 +1,7 @@
+{
+  "name": "7653581b-c8b2-4404-81e5-b1b078d6624d",
+  "displayName": "business-phone-support",
+  "priority": 500000,
+  "description": "Handles calls with Business phone issue for business customers.",
+  "numTrainingPhrases": 18
+}

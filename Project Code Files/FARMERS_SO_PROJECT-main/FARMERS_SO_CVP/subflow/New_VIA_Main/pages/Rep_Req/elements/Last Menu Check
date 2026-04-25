@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@273275656:1755108615626" name="Last Menu Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Last Menu Check" default_exit_state="VIA_MN_001">
+        <exit_state name="VIA_MN_ALPHANUM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_ALPHANUM" />
+            </string>
+        </exit_state>
+        <exit_state name="VIA_MN_001" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_001" />
+            </string>
+        </exit_state>
+        <exit_state name="SPECIALTY_VIA_MN_001" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="SPECIALTY_VIA_MN_001" />
+            </string>
+        </exit_state>
+        <exit_state name="VIA_MN_002" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_002" />
+            </string>
+        </exit_state>
+        <exit_state name="VIA_MN_005" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_005" />
+            </string>
+        </exit_state>
+        <exit_state name="VIA_MN_006" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_006" />
+            </string>
+        </exit_state>
+        <exit_state name="VIA_MN_007" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_007" />
+            </string>
+        </exit_state>
+        <exit_state name="VIA_MN_004" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_004" />
+            </string>
+        </exit_state>
+        <exit_state name="VIA_MN_008" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_008" />
+            </string>
+        </exit_state>
+        <exit_state name="VIA_MN_009" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="LAST_MENU_NAME_REP" />
+                </data>
+                <constant_string value="VIA_MN_009" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

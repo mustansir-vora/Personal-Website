@@ -1,0 +1,29 @@
+{
+  "name": "343a64cf-5fcf-4f61-ab44-3e79af06f594",
+  "displayName": "Predictive Intent",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.predictiveInd = true",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-callstart",
+      "tag": "getPredictiveTreatment"
+    },
+    "targetPage": "Check Predictive",
+    "name": "3011da5a-74df-4b38-934c-2ce59781af7d"
+  }, {
+    "condition": "$session.params.predictiveInd != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": "$sys.func.IF(\"$session.params.savedIntent = null OR $session.params.savedIntent = NA\", true, false)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "6726eae4-6210-41ce-9761-e8aa536aa248"
+  } ]
+}

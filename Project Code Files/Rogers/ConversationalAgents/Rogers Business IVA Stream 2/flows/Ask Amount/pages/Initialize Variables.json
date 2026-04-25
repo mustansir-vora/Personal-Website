@@ -1,0 +1,36 @@
+{
+  "name": "7def19b3-c537-4418-895a-1c2b75bfcc35",
+  "displayName": "Initialize Variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "getAmountFailure",
+      "value": false
+    }, {
+      "parameter": "getAmountCounter",
+      "value": 0
+    }, {
+      "parameter": "maxAmountToCompare",
+      "value": 10000
+    }, {
+      "parameter": "minAmountToCompare",
+      "value": 1
+    }, {
+      "parameter": "amountNameInvalidCounter",
+      "value": 0
+    }, {
+      "parameter": "paymentAmount",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call From",
+    "name": "418a8ceb-fd72-4cd3-9178-01ea3df005ec"
+  } ]
+}

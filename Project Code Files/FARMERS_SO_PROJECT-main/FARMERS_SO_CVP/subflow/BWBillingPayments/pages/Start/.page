@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@446535065:1708938520148" name="Start" version="6.0.1">
+<element height="55" id="Element@31:1708938520148" name="BWBillingPayments" type="Subflow Start" width="177" x="420" y="-203">
+<exit_states>
+<exit_state name="next" target="Element@1995522233:1716274087807"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@2107493153:1751909816512"/>
+</exit_states>
+</element>
+<element height="55" id="Element@826074415:1708938735463" name="BWBP_HOST_001" type="Decision" width="164" x="460" y="238">
+<exit_states>
+<exit_state name="SU" target="Element@1753074369:1722927556263"/>
+<exit_state name="ER" target="Element@958929522:1718026933521"/>
+</exit_states>
+</element>
+<element height="55" id="Element@348085952:1709109554632" name="Warhead1" type="Subflow Call" width="117" x="475" y="129">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1709109640867">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@826074415:1708938735463"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1222222935:1715067788318" name="Case_1_1A_2_3_5_13_14" type="Page Connector" width="205" x="157" y="329">
+<page_connector target="Element@389454163:1715067425209">Case_1_1A_2_3_5_13_14<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@2037782883:1715067823657" name="Case_10_11_12" type="Page Connector" width="172" x="300" y="520">
+<page_connector target="Element@1151515099:1715067574899">Case_10_11_12<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1530507714:1715067824562" name="Case_4_9" type="Page Connector" width="172" x="214" y="464">
+<page_connector target="Element@1805585130:1715067552361">Case_4_9<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@570913494:1715067824833" name="Case_8_19_22" type="Page Connector" width="172" x="161" y="400">
+<page_connector target="Element@801424544:1715067507339">Case_8_19_22<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1317224036:1715067906488" name="Case_15_15A" type="Page Connector" width="172" x="486" y="524">
+<page_connector target="Element@1385035113:1715067594525">Case_15_15A<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1780274420:1715067926324" name="Case_20" type="Page Connector" width="172" x="731" y="396">
+<page_connector target="Element@1310615445:1715067643615">Case_20<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1400348312:1715067926846" name="Case_18_21" type="Page Connector" width="172" x="696" y="447">
+<page_connector target="Element@445129021:1715067610172">Case_18_21<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@65601234:1715067927395" name="Case_17_17A" type="Page Connector" width="172" x="662" y="518">
+<page_connector target="Element@1504584381:1715067625507">Case_17_17A<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1814286391:1715071446497" name="Call_CaseList" type="Page Entry" width="134" x="641" y="205">
+<exit_states>
+<exit_state name="next" target="Element@1753074369:1722927556263"/>
+</exit_states>
+</element>
+<element height="50" id="Element@502771999:1715074199307" name="Call_BWBP_Host" type="Page Entry" width="158" x="601" y="134">
+<exit_states>
+<exit_state name="next" target="Element@826074415:1708938735463"/>
+</exit_states>
+</element>
+<element height="55" id="Element@924893932:1715171807107" name="SET_API_NAME1" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="443" y="12">
+<exit_states>
+<exit_state name="done" target="Element@348085952:1709109554632"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1995522233:1716274087807" name="Call_EPCBrandsTable" type="Decision" width="189" x="437" y="-98">
+<exit_states>
+<exit_state name="SU" target="Element@924893932:1715171807107"/>
+<exit_state name="ER" target="Element@924893932:1715171807107"/>
+</exit_states>
+</element>
+<element height="55" id="Element@958929522:1718026933521" name="Transfer" type="Page Connector" width="210" x="173" y="237">
+<page_connector target="Element@809124990:1715069334191">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1753074369:1722927556263" name="CASELIST_CHECK" type="Decision" width="164" x="463" y="329">
+<exit_states>
+<exit_state name="CL_1" target="Element@1222222935:1715067788318"/>
+<exit_state name="CL_2" target="Element@570913494:1715067824833"/>
+<exit_state name="CL_3" target="Element@1530507714:1715067824562"/>
+<exit_state name="CL_4" target="Element@2037782883:1715067823657"/>
+<exit_state name="CL_5" target="Element@1317224036:1715067906488"/>
+<exit_state name="CL_6" target="Element@65601234:1715067927395"/>
+<exit_state name="CL_7" target="Element@1400348312:1715067926846"/>
+<exit_state name="CL_8" target="Element@1780274420:1715067926324"/>
+<exit_state name="Others" target="Element@958929522:1718026933521"/>
+<exit_state name="CL_9" target="Element@1513249202:1722927629429"/>
+<exit_state name="CL_10" target="Element@2093112039:1722927629429"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1513249202:1722927629429" name="CASELIST_10" type="Page Connector" width="116" x="745" y="340">
+<page_connector target="Element@1296701890:1729664775242">CASELIST_10<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2093112039:1722927629429" name="CASELIST_10" type="Page Connector" width="182" x="722" y="284">
+<page_connector target="Element@1296701890:1729664775242">CASELIST_10<config/>
+</page_connector>
+</element>
+<element height="49" id="Element@2107493153:1751909816512" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="672" y="-212">
+<exit_states>
+<exit_state name="done" target="Element@1261462920:1751909816512"/>
+</exit_states>
+</element>
+<element height="48" id="Element@204826696:1751909816512" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="1080" y="-217">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1261462920:1751909816512" name="Shared_Transfer" type="Subflow Call" width="132" x="920" y="-214">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@204826696:1751909816512"/>
+</exit_states>
+</element>
+</page>

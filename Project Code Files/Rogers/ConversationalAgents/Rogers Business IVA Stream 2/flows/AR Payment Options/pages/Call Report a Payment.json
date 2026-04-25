@@ -1,0 +1,25 @@
+{
+  "name": "37ee366e-a9a4-4e62-8162-707d2967b821",
+  "displayName": "Call Report a Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Promise To Pay",
+    "name": "43ba1669-4ed8-44f8-85f6-4f015565f213"
+  }, {
+    "condition": "$session.params.subFlowReturnValue = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "49f6e697-69ce-408b-ab97-0d17928ee68b"
+  } ]
+}

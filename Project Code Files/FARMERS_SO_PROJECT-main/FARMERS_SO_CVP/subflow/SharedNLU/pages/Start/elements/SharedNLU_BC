@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@759608003:1711110365848" name="SharedNLU_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.nlu.SharedNLU_BC</source>
+</config>
+</decision>

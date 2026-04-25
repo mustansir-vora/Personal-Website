@@ -1,0 +1,51 @@
+{
+  "name": "97d31836-83da-4af1-9db6-e04b2f1c2513",
+  "displayName": "check Ticket Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ticketNumber != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE(\"$session.params.attemptedSSName\",\",active-outageNotification\")"
+      }, {
+        "parameter": "reportingVar_attemptedSSName",
+        "value": "$session.params.attemptedSSName"
+      }, {
+        "parameter": "retryCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Collect Yes or No Outage Notification",
+    "name": "fc72774b-c6e4-4de2-8b56-cecb4022daad"
+  }, {
+    "condition": "$session.params.ticketNumber = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "if you're done, feel free to hang up." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Si vous avez terminé, vous pouvez raccrocher." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      } ]
+    },
+    "targetPage": "heardOutage",
+    "name": "aae8e2da-9d9a-4fb4-830e-45e2444b2df4"
+  } ]
+}

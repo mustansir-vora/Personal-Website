@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1873533439:1707108591066" name="Start" version="6.0.1">
+<element height="46" id="Element@31:1707108591066" name="SharedIDCardsFlow" type="Subflow Start" width="153" x="497" y="-637">
+<exit_states>
+<exit_state name="next" target="Element@253537316:1711695007217"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@1524071172:1751910605535"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1030549040:1707208979377" name="SIDC_MN_005_VALUE" type="Decision" width="220" x="555" y="1531">
+<exit_states>
+<exit_state name="Main Menu" target="Element@1390343947:1711967236965"/>
+<exit_state name="Representative" target="Element@1617154723:1707470475653"/>
+<exit_state name="NOINPUT" target="Element@740111767:1711960954757">
+<bendpoint>
+<dim1 x="-131" y="52"/>
+<dim2 x="87" y="-92"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@1617154723:1707470475653">
+<bendpoint>
+<dim1 x="-56" y="66"/>
+<dim2 x="-76" y="-69"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1617154723:1707470475653">
+<bendpoint>
+<dim1 x="80" y="75"/>
+<dim2 x="60" y="-60"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@138461304:1707208979377" name="SIDC_PA_003" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="154" x="618" y="1323">
+<exit_states>
+<exit_state name="done" target="Element@30467092:1709535114805"/>
+</exit_states>
+</element>
+<element height="55" id="Element@472168978:1707208979377" name="SIDC_MN_001_VALUE" type="Decision" width="220" x="211" y="306">
+<exit_states>
+<exit_state name="Mail" target="Element@1456342118:1711957464859"/>
+<exit_state name="Fax" target="Element@1847180392:1709534926607"/>
+<exit_state name="NOINPUT" target="Element@538027713:1711957757403"/>
+<exit_state name="NOMATCH" target="Element@802814368:1710686938986">
+<bendpoint>
+<dim1 x="-122" y="78"/>
+<dim2 x="138" y="-23"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@802814368:1710686938986"/>
+<exit_state name="Email" target="Element@441572738:1707210298348"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1666080118:1707208979377" name="SIDC_PA_002" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="154" x="487" y="1326">
+<exit_states>
+<exit_state name="done" target="Element@30467092:1709535114805"/>
+</exit_states>
+</element>
+<element height="55" id="Element@499092874:1707208979378" name="FWS_Brands" skipped="true" type="Decision" width="179" x="889" y="325">
+<exit_states>
+<exit_state name="Yes"/>
+<exit_state name="No" target="Element@1880055240:1711964345758"/>
+</exit_states>
+</element>
+<element height="55" id="Element@949136397:1707208979377" name="Email_Available" type="Decision" width="170" x="521" y="496">
+<exit_states>
+<exit_state name="YES" target="Element@544824274:1709535023302"/>
+<exit_state name="NO" target="Element@1036495834:1709534822273"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1574561621:1707208979377" name="FWS_Brand" skipped="true" type="Decision" width="218" x="481" y="331">
+<exit_states>
+<exit_state name="Yes" target="Element@1036495834:1709534822273"/>
+<exit_state name="No" target="Element@949136397:1707208979377"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1149627411:1707208979377" name="Identified_Authenticated" type="Decision" width="242" x="424" y="-408">
+<exit_states>
+<exit_state name="YES" target="Element@369613790:1710312745462">
+<bendpoint>
+<dim1 x="-168" y="108"/>
+<dim2 x="-167" y="-120"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1379700180:1707470367353"/>
+</exit_states>
+</element>
+<element height="55" id="Element@441572738:1707210298348" name="SIDC_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="154" x="-59" y="133">
+<exit_states>
+<exit_state name="done" target="Element@802814368:1710686938986">
+<bendpoint>
+<dim1 x="-89" y="96"/>
+<dim2 x="-88" y="-97"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1516950318:1707210465047" name="SIDC_MN_002_VALUE" type="Decision" width="220" x="485" y="761">
+<exit_states>
+<exit_state name="Mail" target="Element@1170217203:1712268601793"/>
+<exit_state name="Fax" target="Element@1847180392:1709534926607"/>
+<exit_state name="Email" target="Element@469139185:1711609666971"/>
+<exit_state name="ER" target="Element@975982658:1711960388873"/>
+<exit_state name="NOINPUT" target="Element@1357536413:1711960388873"/>
+<exit_state name="NOMATCH" target="Element@975982658:1711960388873"/>
+</exit_states>
+</element>
+<element height="55" id="Element@663077075:1707210895293" name="SIDC_MN_003_VALUE" type="Decision" width="220" x="911" y="881">
+<exit_states>
+<exit_state name="Mail" target="Element@1170217203:1712268601793"/>
+<exit_state name="Email" target="Element@469139185:1711609666971"/>
+<exit_state name="NOINPUT" target="Element@789382047:1711961558271"/>
+<exit_state name="NOMATCH" target="Element@1938906185:1711961558271"/>
+<exit_state name="ER" target="Element@1938906185:1711961558271">
+<bendpoint>
+<dim1 x="-120" y="37"/>
+<dim2 x="-20" y="-78"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1371757685:1707211025647" name="Order_Entry" type="Page Entry" width="143" x="261" y="915">
+<exit_states>
+<exit_state name="next" target="Element@1170217203:1712268601793"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1011863633:1707211368337" name="FailingEntry" type="Page Entry" width="140" x="745" y="1427">
+<exit_states>
+<exit_state name="next" target="Element@138461304:1707208979377"/>
+</exit_states>
+</element>
+<element height="55" id="Element@997387092:1707211393929" name="FailingEntry" type="Page Connector" width="155" x="924" y="181">
+<page_connector target="Element@1011863633:1707211368337">FailingEntry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1379700180:1707470367353" name="SharedID_Auth" type="Subflow Call" width="168" x="505" y="-268">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1707470404104">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@369613790:1710312745462"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1617154723:1707470475653" name="Transfer" type="Subflow Call" width="111" x="607" y="1682">
+<subflow_call subflow_name="Transfer" target="Element@31:1710686990901">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@740111767:1711960954757"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1036495834:1709534822273" name="SIDC_MN_001_Call" type="Subflow Call" width="197" x="216" y="171">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709534909674">
+<config>
+<argument_data>
+<data name="MenuID">SIDC_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@472168978:1707208979377"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1847180392:1709534926607" name="SIDC_MN_004_Call" type="Subflow Call" width="197" x="217" y="424">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709534998800">
+<config>
+<argument_data>
+<data name="MenuID">SIDC_MN_004</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1281853229:1710610773292"/>
+</exit_states>
+</element>
+<element height="55" id="Element@544824274:1709535023302" name="SIDC_MN_002_Call" type="Subflow Call" width="217" x="484" y="646">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709535051428">
+<config>
+<argument_data>
+<data name="MenuID">SIDC_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1516950318:1707210465047"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1959113655:1709535062214" name="SIDC_MN_003_Call" type="Subflow Call" width="197" x="912" y="670">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709535074659">
+<config>
+<argument_data>
+<data name="MenuID">SIDC_MN_003</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@663077075:1707210895293"/>
+</exit_states>
+</element>
+<element height="55" id="Element@30467092:1709535114805" name="SIDC_MN_005_Call" type="Subflow Call" width="197" x="549" y="1431">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709535139763">
+<config>
+<argument_data>
+<data name="MenuID">SIDC_MN_005</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1030549040:1707208979377"/>
+</exit_states>
+</element>
+<element height="55" id="Element@369613790:1710312745462" name="Email_Check" type="Decision" width="194" x="502" y="-109">
+<exit_states>
+<exit_state name="YES" target="Element@1123432598:1710505009240"/>
+<exit_state name="NO" target="Element@787719076:1715177265576"/>
+</exit_states>
+</element>
+<element height="55" id="Element@989675995:1710312982974" name="SIDC_HOST_003" type="Decision" width="179" x="802" y="47">
+<exit_states>
+<exit_state name="SU" target="Element@1123432598:1710505009240"/>
+<exit_state name="ER" target="Element@1123432598:1710505009240">
+<bendpoint>
+<dim1 x="-133" y="22"/>
+<dim2 x="138" y="20"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@127089390:1710489668675" name="Warhead" type="Subflow Call" width="120" x="849" y="-54">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710489684260">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@989675995:1710312982974"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1123432598:1710505009240" name="SIDC_ADM_0001" type="Decision" width="184" x="506" y="56">
+<exit_states>
+<exit_state name="SU" target="Element@1346003089:1711607288774"/>
+<exit_state name="ER" target="Element@755922114:1711606376744"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1281853229:1710610773292" name="SIDC_MN_004_VALUE" type="Decision" width="220" x="215" y="554">
+<exit_states>
+<exit_state name="SU" target="Element@1456342118:1711957464859"/>
+<exit_state name="NOINPUT" target="Element@471907272:1711958018406"/>
+<exit_state name="NOMATCH" target="Element@257615779:1710687543719"/>
+<exit_state name="ER" target="Element@257615779:1710687543719">
+<bendpoint>
+<dim1 x="-153" y="22"/>
+<dim2 x="127" y="30"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@802814368:1710686938986" name="Transfer" type="Subflow Call" width="128" x="-47" y="326">
+<subflow_call subflow_name="Transfer" target="Element@31:1710686990901">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@538027713:1711957757403"/>
+</exit_states>
+</element>
+<element height="55" id="Element@257615779:1710687543719" name="Transfer1" type="Subflow Call" width="128" x="-48" y="546">
+<subflow_call subflow_name="Transfer" target="Element@31:1710687617692">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@471907272:1711958018406"/>
+</exit_states>
+</element>
+<element height="55" id="Element@755922114:1711606376744" name="FailingEntry" type="Page Connector" width="155" x="306" y="-66">
+<page_connector target="Element@1011863633:1707211368337">FailingEntry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1346003089:1711607288774" name="EMAIL_MAIL_FAX_ENABLED_Check" type="Decision" width="321" x="479" y="174">
+<exit_states>
+<exit_state name="EMF" target="Element@949136397:1707208979377"/>
+<exit_state name="EM" target="Element@1880055240:1711964345758"/>
+<exit_state name="OTHERS" target="Element@997387092:1707211393929"/>
+<exit_state name="FM" target="Element@1036495834:1709534822273"/>
+<exit_state name="M" target="Element@341470261:1711956943378"/>
+</exit_states>
+</element>
+<element height="55" id="Element@227987858:1711608394720" name="SIDC_HOST_004" type="Decision" width="179" x="514" y="1185">
+<exit_states>
+<exit_state name="SU" target="Element@1666080118:1707208979377"/>
+<exit_state name="ER" target="Element@138461304:1707208979377"/>
+</exit_states>
+</element>
+<element height="55" id="Element@469139185:1711609666971" name="SIDC_PA_004" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="154" x="792" y="760">
+<exit_states>
+<exit_state name="done" target="Element@1170217203:1712268601793"/>
+</exit_states>
+</element>
+<element height="55" id="Element@253537316:1711695007217" name="CHECK_ENTRYPOINT" type="Decision" width="218" x="501" y="-525">
+<exit_states>
+<exit_state name="CONT" target="Element@1149627411:1707208979377"/>
+<exit_state name="ER" target="Element@1149627411:1707208979377"/>
+<exit_state name="NLU" target="Element@369613790:1710312745462">
+<bendpoint>
+<dim1 x="101" y="211"/>
+<dim2 x="113" y="-126"/>
+</bendpoint>
+</exit_state>
+<exit_state name="INITIAL" target="Element@1149627411:1707208979377">
+<bendpoint>
+<dim1 x="-79" y="57"/>
+<dim2 x="-81" y="-56"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@341470261:1711956943378" name="Order_Entry" type="Page Connector" width="143" x="307" y="56">
+<page_connector target="Element@1371757685:1707211025647">Order_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1456342118:1711957464859" name="Order_Entry" type="Page Connector" width="143" x="-43" y="426">
+<page_connector target="Element@1371757685:1707211025647">Order_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@538027713:1711957757403" name="Disc" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="83" x="-20" y="232">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@471907272:1711958018406" name="Disc1" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="99" x="-37" y="666">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1357536413:1711960388873" name="Disc2" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="93" x="262" y="824">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@975982658:1711960388873" name="Transfer2" type="Subflow Call" width="121" x="255" y="713">
+<subflow_call subflow_name="Transfer" target="Element@31:1710687617692">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1357536413:1711960388873"/>
+</exit_states>
+</element>
+<element height="55" id="Element@740111767:1711960954757" name="Disc3" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="93" x="377" y="1694">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1273111642:1711961407566" name="Order_Entry" type="Page Connector" width="143" x="1123" y="489">
+<page_connector target="Element@1371757685:1707211025647">Order_Entry<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@789382047:1711961558271" name="Disc4" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="93" x="1048" y="1009">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1938906185:1711961558271" name="Transfer4" type="Subflow Call" width="121" x="873" y="1007">
+<subflow_call subflow_name="Transfer" target="Element@31:1710687617692">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@789382047:1711961558271"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1880055240:1711964345758" name="Email_Available1" type="Decision" width="180" x="907" y="491">
+<exit_states>
+<exit_state name="YES" target="Element@1959113655:1709535062214"/>
+<exit_state name="NO" target="Element@1273111642:1711961407566"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1257727480:1711967133793" name="Subflow Return_01" type="Subflow Return" width="198" x="292" y="1429"/>
+<element height="55" id="Element@1390343947:1711967236965" name="IS_SHARED_MM_OPTED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="241" x="277" y="1539">
+<exit_states>
+<exit_state name="done" target="Element@1257727480:1711967133793"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2122561313:1712268546104" name="Warhead1" type="Subflow Call" width="152" x="524" y="1041">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710312639648">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@227987858:1711608394720"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1170217203:1712268601793" name="SET_API_NAME" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="513" y="914">
+<exit_states>
+<exit_state name="done" target="Element@2122561313:1712268546104"/>
+</exit_states>
+</element>
+<element height="55" id="Element@787719076:1715177265576" name="SET_API_NAME3" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="179" x="804" y="-179">
+<exit_states>
+<exit_state name="done" target="Element@127089390:1710489668675"/>
+</exit_states>
+</element>
+<element height="49" id="Element@1524071172:1751910605535" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="765" y="-634">
+<exit_states>
+<exit_state name="done" target="Element@944958225:1751910605535"/>
+</exit_states>
+</element>
+<element height="48" id="Element@71549080:1751910605535" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="1173" y="-639">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@944958225:1751910605535" name="Shared_Transfer" type="Subflow Call" width="132" x="1013" y="-636">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@71549080:1751910605535"/>
+</exit_states>
+</element>
+</page>

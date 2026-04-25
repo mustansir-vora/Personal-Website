@@ -1,0 +1,141 @@
+{
+  "name": "d895401b-85f3-4243-82bc-52c1e379987b",
+  "displayName": "More Hold On Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "If you still need more time, say More Time." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Si vous avez encore besoin de temps, dites « plus de temps »." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "HoldOnMenu-Continue",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Enter Pin",
+    "name": "c7a2f108-61ca-494e-8dd6-ed76e6381413"
+  }, {
+    "intent": "MoreHoldOnMn-MoreTime",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfHolds",
+        "value": "$sys.func.ADD($session.params.numberOfHolds, 1)"
+      } ]
+    },
+    "targetPage": "Hold Menu",
+    "name": "af98cd1f-bd5f-4482-9816-2245f3ec0bc9"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry I couldn't hear that. If you still need more time, Say more time." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Désolé je n'ai pas entendu. Si vous avez encore besoin de temps, dites \"plus de temps\"" ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "a375d794-26f1-4279-b5d9-3cee2d7eb75a"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, I didn't get that. If you still need more time, Say more time." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Désolé je n'ai pas compris. Si vous avez encore besoin de temps, dites \"plus de temps\"." ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "5364652f-f8cd-409b-8ba8-8c921dba844d"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, I still couldn't hear that. If you still need more time, Say more time or Press 1" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Désolé, je n'ai toujours pas entendu. Si vous avez besoin de plus de temps, dites « Plus de temps » ou appuyez sur 9" ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "5cf44110-fbef-4a07-b558-2692fb7f0243"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, I still didn't get that. If you still need more time, Say more time or Press 1" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Je suis désolé, je n'ai toujours pas compris. Si vous avez besoin de plus de temps, dites « Plus de temps » ou appuyez sur 9" ]
+        },
+        "languageCode": "fr-ca"
+      } ]
+    },
+    "name": "83825089-d400-4a9d-a8b1-696c0d7d1790"
+  }, {
+    "targetPage": "End Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authFailure",
+        "value": true
+      }, {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "holdAuthFailure",
+        "value": true
+      } ]
+    },
+    "name": "de4a26f0-ce5e-44e4-940c-7a0aa0c1fedf"
+  }, {
+    "targetPage": "End Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authFailure",
+        "value": true
+      }, {
+        "parameter": "authResult",
+        "value": "Failure"
+      }, {
+        "parameter": "transferType",
+        "value": "customerError"
+      }, {
+        "parameter": "holdAuthFailure",
+        "value": true
+      } ]
+    },
+    "name": "9c5490ea-b230-481c-b86d-8758ab460482"
+  } ]
+}

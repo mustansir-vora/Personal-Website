@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1833717515:1736230106438" name="Global_Rep_Handling" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.RepHandlingcheck</source>
+</config>
+</decision>

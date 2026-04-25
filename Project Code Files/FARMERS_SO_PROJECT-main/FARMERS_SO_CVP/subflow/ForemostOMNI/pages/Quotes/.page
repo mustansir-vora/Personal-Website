@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1071485763:1708937108161" name="Quotes" version="6.0.1">
+<element height="55" id="Element@281649008:1708937175656" name="QUOTES" type="Page Entry" width="117" x="530" y="24">
+<exit_states>
+<exit_state name="next" target="Element@2045305203:1709113054545"/>
+</exit_states>
+</element>
+<element height="55" id="Element@663681123:1708937175656" name="FMOM_MN_004_VALUE" type="Decision" width="236" x="474" y="253">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@763328011:1708937175656"/>
+<exit_state name="Specialty Dwelling" target="Element@763328011:1708937175656"/>
+<exit_state name="Motorcycle" target="Element@763328011:1708937175656"/>
+<exit_state name="Motor Home" target="Element@763328011:1708937175656"/>
+<exit_state name="Boat or Watercraft" target="Element@763328011:1708937175656"/>
+<exit_state name="Representative" target="Element@735892048:1730256976822"/>
+<exit_state name="NI" target="Element@631764421:1710840596784"/>
+<exit_state name="NM" target="Element@627844839:1710840595050"/>
+<exit_state name="ER" target="Element@627844839:1710840595050">
+<bendpoint>
+<dim1 x="222" y="49"/>
+<dim2 x="-42" y="-77"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@763328011:1708937175656" name="STATE_DISAMBIGUATION" type="Subflow Call" width="251" x="470" y="426">
+<subflow_call subflow_name="StateDisambiguation" target="Element@31:1711718181920">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1407404452:1710840635972"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2045305203:1709113054545" name="FMOM_MN_004_Call" type="Subflow Call" width="213" x="486" y="144">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113060145">
+<config>
+<argument_data>
+<data name="MenuID">FMOM_MN_004</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@663681123:1708937175656"/>
+</exit_states>
+</element>
+<element height="55" id="Element@627844839:1710840595050" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="874" y="558">
+<page_connector target="Element@1802475520:1723485829141">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@631764421:1710840596784" name="HANGUP_ENTRY" type="Page Connector" width="181" x="52" y="356">
+<page_connector target="Element@1275769473:1723485829141">HANGUP_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1407404452:1710840635972" name="FMOM_ADM_004" type="Decision" width="190" x="503" y="538">
+<exit_states>
+<exit_state name="SU" target="Element@910343303:1711891698817"/>
+<exit_state name="ER" target="Element@910343303:1711891698817"/>
+</exit_states>
+</element>
+<element height="55" id="Element@910343303:1711891698817" name="GDF_RETURN_CHECK_1" type="Decision" width="234" x="497" y="654">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@627844839:1710840595050"/>
+<exit_state name="Specialty Dwelling" target="Element@627844839:1710840595050"/>
+<exit_state name="Motorcycle" target="Element@627844839:1710840595050"/>
+<exit_state name="Motor Home" target="Element@627844839:1710840595050"/>
+<exit_state name="Boat or Watercraft" target="Element@627844839:1710840595050"/>
+<exit_state name="Representative" target="Element@627844839:1710840595050"/>
+</exit_states>
+</element>
+<element height="55" id="Element@735892048:1730256976822" name="Copy_2_of_Global_Rep_Handling" type="Decision" width="223" x="796" y="157">
+<exit_states>
+<exit_state name="CONT" target="Element@763328011:1708937175656"/>
+<exit_state name="TR" target="Element@627844839:1710840595050"/>
+</exit_states>
+</element>
+</page>

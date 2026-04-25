@@ -1,0 +1,11 @@
+{
+  "name": "675b0ab3-c3ea-4c3c-8b94-b3287995d3b2",
+  "displayName": "promotions",
+  "parameters": [ {
+    "id": "e_PromoType",
+    "entityType": "@e_PromoType"
+  } ],
+  "priority": 500000,
+  "description": "Handles inquiries about current promotions, discounts, or special offers.",
+  "numTrainingPhrases": 87
+}

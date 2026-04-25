@@ -1,0 +1,213 @@
+{
+  "trainingPhrases": [ {
+    "id": "054ea1a8-55ab-4566-99ab-fe7a8d4b5c58",
+    "parts": [ {
+      "text": "I am not sure which ID is acceptable"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "19cf1852-acec-466c-975b-a876e441a919",
+    "parts": [ {
+      "text": "I'm not sure which one you are asking for"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d4452708-10ec-44b7-a6f2-70afb1fc92a1",
+    "parts": [ {
+      "text": "I don't have any of those IDs"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "49ba1129-0b05-4407-8e21-45bcb2daa258",
+    "parts": [ {
+      "text": "I don't have any of those options available"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5031bece-0bb3-4446-94b0-5d029a1c8821",
+    "parts": [ {
+      "text": "I do not have it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b89b1500-a7c1-4415-be7a-dfede55becb9",
+    "parts": [ {
+      "text": "I am unsure"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1d426070-7166-42df-afb5-d3fb6490999e",
+    "parts": [ {
+      "text": "I'm not sure"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9d71d41c-afbb-4c47-ad0c-b8128127ba73",
+    "parts": [ {
+      "text": "I don't know the ID type"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "18b5f089-6aa5-4273-b509-5c2004a19adf",
+    "parts": [ {
+      "text": "I'm unsure which ID I should use"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "47672f23-de4c-418e-b614-230bad491cda",
+    "parts": [ {
+      "text": "I'm not sure what my ID type is"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a89c49b8-6ecd-4385-800d-a49f0b2f62b9",
+    "parts": [ {
+      "text": "I'm not really sure"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b0e0cb95-20ad-4411-8198-84325b0a16fa",
+    "parts": [ {
+      "text": "I am not certain"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bebab568-010f-4baf-95d5-20b7fb44e9b0",
+    "parts": [ {
+      "text": "I do not know"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "72681456-dae1-41dc-ae1a-9f5971962035",
+    "parts": [ {
+      "text": "I don't have that information available"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c372f4d5-352e-4e32-9b95-275dfd2de965",
+    "parts": [ {
+      "text": "I don't have any of the options"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "6dc35a83-bddc-407c-b149-6928a235f4a0",
+    "parts": [ {
+      "text": "I don't have any of the requested information"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "84012b0f-7c82-4597-bffb-6620e0afeba8",
+    "parts": [ {
+      "text": "I don't know what my ID is"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "77fea810-9e84-48b8-a9cb-9ee5c5e3bdfd",
+    "parts": [ {
+      "text": "I don't have any identification on me"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7ba5ad1f-31a0-4889-b094-e0f3d7a78976",
+    "parts": [ {
+      "text": "I'm unsure which ID type to provide"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "21cace38-9622-482b-86e5-76209c0426aa",
+    "parts": [ {
+      "text": "I don't know which one you need"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c60e3d3c-43a4-4474-add0-4f08acb1cf94",
+    "parts": [ {
+      "text": "I don't have a valid ID"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "abcbca43-b1bf-41c2-8a54-d3421b6b8b70",
+    "parts": [ {
+      "text": "None of those apply to me"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3c15fb4d-127e-4f19-9078-2a040a946400",
+    "parts": [ {
+      "text": "I don't have any of those"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bc1fa8f7-ee21-469f-80d1-dc6a49094837",
+    "parts": [ {
+      "text": "I'm not sure what kind of ID is required"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "5111c14c-7283-4780-83d4-acb1fc283414",
+    "parts": [ {
+      "text": "I am not sure what ID to use"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "cfa3ebb5-b4c7-4bd9-a9e6-57d72edd8c3b",
+    "parts": [ {
+      "text": "i don't have mobile number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "88fe1303-ac2a-4c1d-9b17-7bb9d81d394a",
+    "parts": [ {
+      "text": "i don't have account numer"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "61186e9b-27d5-4352-ac93-f8483bd0b856",
+    "parts": [ {
+      "text": "I don't have them"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3e1c8952-23db-4c19-8349-cc947db539cf",
+    "parts": [ {
+      "text": "don't have one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "3f1c9165-5912-4d7a-a164-916bf76b73f9",
+    "parts": [ {
+      "text": "I don't know"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

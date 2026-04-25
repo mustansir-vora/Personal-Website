@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1526691480:1707385924599" name="Start" version="6.0.1">
+<element height="55" id="Element@31:1707385924599" name="FarmersSales" type="Subflow Start" width="201" x="72" y="26">
+<exit_states>
+<exit_state name="next" target="Element@1728684658:1712910100278"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2063371582:1707405450819" name="FSLS_MN_001_VALUE" type="Decision" width="218" x="65" y="544">
+<exit_states>
+<exit_state name="RV" target="Element@109604666:1707405533791">
+<bendpoint>
+<dim1 x="-186" y="167"/>
+<dim2 x="-188" y="-237"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@188111088:1710685074486">
+<bendpoint>
+<dim1 x="541" y="-73"/>
+<dim2 x="-46" y="-69"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@109604666:1707405533791"/>
+<exit_state name="NOINPUT" target="Element@421927457:1731526995657"/>
+<exit_state name="Watercraft" target="Element@109604666:1707405533791"/>
+<exit_state name="Motorcycle" target="Element@109604666:1707405533791">
+<bendpoint>
+<dim1 x="97" y="207"/>
+<dim2 x="95" y="-197"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Something Else" target="Element@109604666:1707405533791">
+<bendpoint>
+<dim1 x="181" y="162"/>
+<dim2 x="179" y="-242"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Home Owners" target="Element@109604666:1707405533791">
+<bendpoint>
+<dim1 x="257" y="123"/>
+<dim2 x="255" y="-281"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Auto" target="Element@109604666:1707405533791">
+<bendpoint>
+<dim1 x="-101" y="209"/>
+<dim2 x="-103" y="-195"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@188111088:1710685074486">
+<bendpoint>
+<dim1 x="536" y="87"/>
+<dim2 x="-39" y="55"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@109604666:1707405533791" name="Call_StateDisambig" type="Subflow Call" width="209" x="72" y="948">
+<subflow_call subflow_name="StateDisambiguation" target="Element@31:1707405560278">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@459645558:1713172609375"/>
+</exit_states>
+</element>
+<element height="55" id="Element@425503005:1709025385699" name="FSLS_MN_001_Call" type="Subflow Call" width="196" x="84" y="396">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709025451273">
+<config>
+<argument_data>
+<data name="MenuID">FSLS_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2063371582:1707405450819"/>
+</exit_states>
+</element>
+<element height="55" id="Element@188111088:1710685074486" name="Call_Transfer_01" type="Subflow Call" width="173" x="684" y="540">
+<subflow_call subflow_name="Transfer" target="Element@31:1710685088327">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@411102475:1712020755276"/>
+</exit_states>
+</element>
+<element height="55" id="Element@411102475:1712020755276" name="Subflow_Return_02" type="Subflow Return" width="200" x="924" y="576"/>
+<element height="55" id="Element@161614514:1712127516903" name="CheckEntryPoint_BC" type="Decision" width="205" x="72" y="108">
+<exit_states>
+<exit_state name="ER" target="Element@1965747228:1712397565413">
+<bendpoint>
+<dim1 x="-164" y="27"/>
+<dim2 x="68" y="-121"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NLU" target="Element@59668041:1712127532465">
+<bendpoint>
+<dim1 x="283" y="2"/>
+<dim2 x="-97" y="8"/>
+</bendpoint>
+</exit_state>
+<exit_state name="INITIAL" target="Element@1965747228:1712397565413"/>
+<exit_state name="CONT" target="Element@425503005:1709025385699"/>
+</exit_states>
+</element>
+<element height="55" id="Element@59668041:1712127532465" name="CheckNextAction_BC" type="Decision" width="212" x="444" y="108">
+<exit_states>
+<exit_state name="NA" target="Element@808127860:1712127675975"/>
+<exit_state name="FS_HOMEOWNER" target="Element@808127860:1712127675975">
+<bendpoint>
+<dim1 x="52" y="98"/>
+<dim2 x="56" y="-94"/>
+</bendpoint>
+</exit_state>
+<exit_state name="FARM_SLS_AUTO" target="Element@808127860:1712127675975">
+<bendpoint>
+<dim1 x="-116" y="99"/>
+<dim2 x="-112" y="-93"/>
+</bendpoint>
+</exit_state>
+<exit_state name="FARM_SLS_SOMETHINGELSE" target="Element@808127860:1712127675975">
+<bendpoint>
+<dim1 x="162" y="96"/>
+<dim2 x="166" y="-96"/>
+</bendpoint>
+</exit_state>
+<exit_state name="FARMERS_SALES" target="Element@425503005:1709025385699"/>
+</exit_states>
+</element>
+<element height="55" id="Element@763006093:1712127593403" name="SET_FlowName" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="-300" y="252">
+<exit_states>
+<exit_state name="done" target="Element@166173479:1712127593403"/>
+</exit_states>
+</element>
+<element height="55" id="Element@166173479:1712127593403" name="NLUReturn" type="Subflow Return" width="148" x="-288" y="360"/>
+<element height="55" id="Element@2038227191:1712127656880" name="NLU_StateDisambig" type="Page Entry" width="205" x="576" y="780">
+<exit_states>
+<exit_state name="next" target="Element@184530950:1713291573074"/>
+</exit_states>
+</element>
+<element height="55" id="Element@808127860:1712127675975" name="NLU_StateDisambig" type="Page Connector" width="205" x="444" y="300">
+<page_connector target="Element@2038227191:1712127656880">NLU_StateDisambig<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1965747228:1712397565413" name="CheckNLUInvokedFlag" type="Decision" width="227" x="-336" y="108">
+<exit_states>
+<exit_state name="YES" target="Element@425503005:1709025385699"/>
+<exit_state name="NO" target="Element@763006093:1712127593403"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1728684658:1712910100278" name="Skip_MainMenu" type="Decision" width="175" x="432" y="24">
+<exit_states>
+<exit_state name="Y" target="Element@1844426132:1712910159325"/>
+<exit_state name="N" target="Element@161614514:1712127516903"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1377276945:1712910134957" name="MENU_ENTRY" type="Page Entry" width="159" x="264" y="216">
+<exit_states>
+<exit_state name="next" target="Element@425503005:1709025385699"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1844426132:1712910159325" name="MENU_ENTRY" type="Page Connector" width="205" x="696" y="24">
+<page_connector target="Element@1377276945:1712910134957">MENU_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@459645558:1713172609375" name="Decision_01" type="Decision" width="144" x="120" y="1056">
+<exit_states>
+<exit_state name="RV" target="Element@679645411:1713186684017"/>
+<exit_state name="AUTO" target="Element@1380609364:1713184775721">
+<bendpoint>
+<dim1 x="-266" y="-101"/>
+<dim2 x="132" y="-103"/>
+</bendpoint>
+</exit_state>
+<exit_state name="HOMEOWNERS" target="Element@1380609364:1713184775721">
+<bendpoint>
+<dim1 x="-273" y="-49"/>
+<dim2 x="125" y="-51"/>
+</bendpoint>
+</exit_state>
+<exit_state name="MOTORCYCLE" target="Element@679645411:1713186684017">
+<bendpoint>
+<dim1 x="251" y="60"/>
+<dim2 x="-68" y="58"/>
+</bendpoint>
+</exit_state>
+<exit_state name="WATERCRAFT" target="Element@679645411:1713186684017">
+<bendpoint>
+<dim1 x="253" y="-63"/>
+<dim2 x="-66" y="-65"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SOMETHING_ELSE" target="Element@1380609364:1713184775721">
+<bendpoint>
+<dim1 x="-269" y="52"/>
+<dim2 x="129" y="50"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO_SELECTION" target="Element@1380609364:1713184775721">
+<bendpoint>
+<dim1 x="-268" y="100"/>
+<dim2 x="130" y="98"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1380609364:1713184775721" name="FSLS_ADM_005" type="Decision" width="245" x="-456" y="1056">
+<exit_states>
+<exit_state name="SU" target="Element@1240217210:1713184808791">
+<bendpoint>
+<dim1 x="-67" y="98"/>
+<dim2 x="-67" y="-106"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1240217210:1713184808791">
+<bendpoint>
+<dim1 x="62" y="100"/>
+<dim2 x="62" y="-104"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1240217210:1713184808791" name="CHECK_STATE_GROUP" type="Decision" width="224" x="-444" y="1260">
+<exit_states>
+<exit_state name="othr" target="Element@891669748:1713184808791"/>
+<exit_state name="AHOGNR" target="Element@722359966:1713184808791"/>
+<exit_state name="AHONOBIND" target="Element@1383273608:1713184808791"/>
+<exit_state name="AHNOPRODUCT" target="Element@891669748:1713184808791"/>
+<exit_state name="HI" target="Element@891669748:1713184808791"/>
+</exit_states>
+</element>
+<element height="55" id="Element@891669748:1713184808791" name="App_03" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="111" x="-108" y="1380">
+<exit_states>
+<exit_state name="done" target="Element@2055513946:1713184808791"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1383273608:1713184808791" name="App_02" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="111" x="-396" y="1380">
+<exit_states>
+<exit_state name="done" target="Element@2055513946:1713184808791"/>
+</exit_states>
+</element>
+<element height="55" id="Element@722359966:1713184808791" name="App_01" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="111" x="-684" y="1380">
+<exit_states>
+<exit_state name="done" target="Element@2055513946:1713184808791"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1641911954:1713184808791" name="Subflow_Return_04" type="Subflow Return" width="200" x="-444" y="1632"/>
+<element height="55" id="Element@2055513946:1713184808791" name="Call_transfer_03" type="Subflow Call" width="172" x="-420" y="1524">
+<subflow_call subflow_name="Transfer" target="Element@31:1711982583467">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1641911954:1713184808791"/>
+</exit_states>
+</element>
+<element height="90" id="Element@1704156303:1713184932730" type="Comment" width="249" x="-1044" y="1344">
+<comment><![CDATA[Will under one session Maintain below all Value
+Session Name - FarmersAHO
+
+Farmers Auto– Green/Neutral/Red
+Farmers Home – Green/Neutral/Red
+Farmers Other Insurance – Green/Neutral/Red]]></comment>
+</element>
+<element height="75" id="Element@1294900925:1713184942020" type="Comment" width="322" x="48" y="1356">
+<comment><![CDATA[Will under one session Maintain below all Value
+Session Name - FarmersNoBind
+
+Farmers No Bind – Auto/Home/Other Insurance
+Farmers No Bind – Auto/Home/Other Insurance w/o Website]]></comment>
+</element>
+<element height="55" id="Element@679645411:1713186684017" name="Call_Transfer_02" type="Subflow Call" width="215" x="396" y="1056">
+<subflow_call subflow_name="Transfer" target="Element@31:1713186694849">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@429446666:1713186721313"/>
+</exit_states>
+</element>
+<element height="55" id="Element@429446666:1713186721313" name="Subflow_Return_03" type="Subflow Return" width="233" x="708" y="1056"/>
+<element height="55" id="Element@184530950:1713291573074" name="PromoteToSession_01" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="224" x="366" y="929">
+<exit_states>
+<exit_state name="done" target="Element@109604666:1707405533791"/>
+</exit_states>
+</element>
+<element height="55" id="Element@421927457:1731526995657" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="217" x="-277" y="554">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

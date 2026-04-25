@@ -1,0 +1,107 @@
+{
+  "trainingPhrases": [ {
+    "id": "0b4eedcc-e3f4-4e0b-ba23-b9e482cca2fa",
+    "parts": [ {
+      "text": "salutations",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "86a4a3ec-915d-4b40-a2f1-aae7ec0a131f",
+    "parts": [ {
+      "text": "rebonjour",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "728825f0-5e2a-48fb-a1be-bc00e37148e1",
+    "parts": [ {
+      "text": "bonjour à toi",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "6bbcbee7-6c40-4202-89df-358ebba86685",
+    "parts": [ {
+      "text": "re bonjour",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "4cefc7f4-adf1-4377-b67f-179839970a14",
+    "parts": [ {
+      "text": "allo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "39224ea5-9195-4ce5-b997-2d5b675e5cd2",
+    "parts": [ {
+      "text": "coucou",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "ba5da2a0-ca6a-426d-89cc-d4ca912ddd82",
+    "parts": [ {
+      "text": "hey",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "2fbd94d6-bf98-4ae8-b1dc-930995b8b43e",
+    "parts": [ {
+      "text": "hé",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "af3da595-42e0-47c4-85ed-4776280e8afc",
+    "parts": [ {
+      "text": "resalut",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "35da1463-4b2e-4953-a4b8-2d19602698bb",
+    "parts": [ {
+      "text": "salut",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "14ee3831-38ac-4f65-a740-6dad45ab9861",
+    "parts": [ {
+      "text": "re salut",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "0563bb59-bd65-4124-8456-97c38f823d8e",
+    "parts": [ {
+      "text": "salut à tous",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  }, {
+    "id": "56826de1-e6f6-4142-acd9-d02e1164c107",
+    "parts": [ {
+      "text": "bonjour",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr"
+  } ]
+}

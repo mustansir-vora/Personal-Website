@@ -1,0 +1,40 @@
+{
+  "name": "2bdd1dc1-b7da-4a61-bcd1-e9c5981fbfdf",
+  "displayName": "Check Suspension Resolved",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.collectionSuspensionDetails.collectionSuspendedInd = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Subsequent Limited AR",
+    "name": "8f341734-7452-4f9a-b839-0fec956e359c"
+  }, {
+    "condition": "$session.params.api.billingProfile.collectionSuspensionDetails.collectionSuspendedInd = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fromAR",
+        "value": false
+      }, {
+        "parameter": "whatElseNLU",
+        "value": true
+      }, {
+        "parameter": "wasInARComp",
+        "value": false
+      }, {
+        "parameter": "$session.params.preRouteOverride",
+        "value": null
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "0ebd93d6-5574-4c5e-93b2-14ec51d75974"
+  } ]
+}

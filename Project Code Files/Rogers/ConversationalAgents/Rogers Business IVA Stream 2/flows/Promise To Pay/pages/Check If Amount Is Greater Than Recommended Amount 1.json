@@ -1,0 +1,28 @@
+{
+  "name": "d476ebc5-371d-4ee5-bd4d-f92d0a3305a0",
+  "displayName": "Check If Amount Is Greater Than Recommended Amount 1",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003e= $sys.func.TO_NUMBER($session.params.api.response.ptp.recomInstallAmount1)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "revisedTotalAmount",
+        "value": "$sys.func.ADD($sys.func.TO_NUMBER($session.params.collectedPtpAmount), $sys.func.TO_NUMBER($session.params.amount2))"
+      } ]
+    },
+    "targetPage": "Check Revised Total Amount",
+    "name": "b417aea4-65bf-4032-b0e6-8f147afac22e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Recommend Install 1",
+    "name": "950a3681-cad8-4a8b-bb32-83abafd42791"
+  } ]
+}

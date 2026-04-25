@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@933357805:1712474479234" name="SetTransferKey_21stSalesVanFF" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.SetTransferKey_21stSalesVanityFF</source>
+</config>
+</action>

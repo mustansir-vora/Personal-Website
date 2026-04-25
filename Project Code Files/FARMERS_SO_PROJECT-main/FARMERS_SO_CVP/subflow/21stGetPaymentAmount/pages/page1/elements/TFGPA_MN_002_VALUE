@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@789647396:1710919590015" name="TFGPA_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.TFGPA_MN_002_VALUE</source>
+</config>
+</decision>

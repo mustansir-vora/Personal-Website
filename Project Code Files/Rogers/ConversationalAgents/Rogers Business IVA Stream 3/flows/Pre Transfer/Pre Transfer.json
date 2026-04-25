@@ -1,0 +1,98 @@
+{
+  "name": "0a6589b4-5eac-4804-8b5a-ed29d5494cf5",
+  "displayName": "Pre Transfer",
+  "transitionRoutes": [ {
+    "condition": "$session.params.preTransferBroadCast = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransferBroadCast",
+        "value": false
+      } ]
+    },
+    "targetPage": "CalculateTermination",
+    "name": "e181df83-c2bf-43c5-aafa-362d06ce16fb"
+  }, {
+    "condition": "$session.params.preTransfer = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": false
+      } ]
+    },
+    "targetPage": "Pre Transfer",
+    "name": "6cc0da8f-d5e0-4713-8b3d-7faaa7ad1072"
+  }, {
+    "condition": "$session.params.savedIntent = null OR $session.params.savedIntent = \"\" OR $session.params.savedIntent = \"NA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "GlobalAgentRequest",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "d2d9c6c4-8fbe-4b26-b569-e8698a097314"
+  }, {
+    "condition": "$session.params.savedIntent != null AND $session.params.savedIntent != \"NA\" AND $session.params.savedIntent != \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequestCounter",
+        "value": "$sys.func.ADD($session.params.globalAgentRequestCounter,1)"
+      }, {
+        "parameter": "globalAgentRequest",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check Forced SS",
+    "name": "f61457a0-081e-443d-8ca6-555b2879ca28"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cefab242-d919-45b5-9d82-5deb69fdd9fe"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "9674066a-fee2-48fe-8185-3f250914d34c"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "270eec8b-60b4-4971-ba08-60d18dae8bb5"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,407 @@
+name: Sub Deploy GDF Agents
+
+on:
+  workflow_call:
+    inputs:
+      agents:
+        required: true
+        type: string
+
+      environment:
+        required: true
+        type: string
+
+      git_tag:
+        required: true
+        type: string
+
+      runner_label:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  Deploy-GDF-Agent:
+    name: Sub-Deploy IVA Agents - ${{ inputs.environment }}
+    runs-on: ${{ inputs.runner_label }}
+    environment: ${{ inputs.environment }}
+
+    env:
+      PROJECT_ID: ${{ vars.PROJECT_ID }}
+      REGION: ${{ vars.REGION }}
+      AGENT_DISPLAY_NAMES: ${{ vars.AGENT_DISPLAY_NAME }}
+      AGENT_IDS: ${{ vars.AGENT_ID }}
+
+    steps:
+      
+      - name: Validate Deploy Authorization
+        id: auth
+        run: |
+
+          USER="${{ github.actor }}"
+          ENV="${{inputs.environment}}"
+          ALLOWED="${{ vars.WORKFLOW_EXECUTORS }}"
+
+          echo "Triggered by: $USER"
+          echo "Environment: $ENV"
+
+          AUTH_STATUS="authorized"
+
+          if [ "$ENV" = "Prod" ]; then
+           if [[ ",$ALLOWED," != *",$USER,"* ]]; then
+             echo "❌ User $USER is not allowed to deploy in Prod"
+             AUTH_STATUS="unauthorized"
+            echo "auth_status=$AUTH_STATUS" >> $GITHUB_OUTPUT
+            exit 1
+           fi
+          fi
+          echo "✔ User authorized"
+          echo "auth_status=$AUTH_STATUS" >> $GITHUB_OUTPUT
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.git_tag }}
+
+      - name: Set GCP Project
+        run: |
+          gcloud config set project "${PROJECT_ID}"
+          gcloud config set billing/quota_project "${PROJECT_ID}"
+
+      - name: Deploy Agents
+        id: deploy
+        working-directory: ConversationalAgents
+        run: |
+
+          AGENTS="${{ inputs.agents }}"
+          SUCCESS=""
+          FAILED=""
+
+          if [ -z "$AGENTS" ]; then
+            echo "No agents to deploy."
+            exit 0
+          fi
+
+          IFS=',' read -ra NAME_ARRAY <<< "$AGENT_DISPLAY_NAMES"
+          IFS=',' read -ra ID_ARRAY <<< "$AGENT_IDS"
+          IFS=',' read -ra AGENT_ARRAY <<< "$AGENTS"
+
+          for AGENT in "${AGENT_ARRAY[@]}"; do
+           AGENT=$(echo "$AGENT" | xargs)
+
+
+            echo "---------------------------------------------"
+            echo "Deploying Agent: $AGENT"
+            echo "---------------------------------------------"
+
+            AGENT_ID=""
+
+            for i in "${!NAME_ARRAY[@]}"; do
+              if [ "$AGENT" = "${NAME_ARRAY[$i]}" ]; then
+                AGENT_ID="${ID_ARRAY[$i]}"
+                break
+              fi
+            done
+
+            if [ -z "$AGENT_ID" ]; then
+              echo "ERROR: Agent ID not configured for $AGENT"
+              exit 1
+            fi
+
+            # Refresh token
+           echo "--- Generating Access Token ---"
+           ACCESS_TOKEN=$(gcloud auth print-access-token)
+            if [ -z "$ACCESS_TOKEN" ]; then
+              echo "ERROR: Failed to generate access token."
+              exit 1
+            fi
+
+            # -----------------------------------
+              # STEP: Security Setup (Per Agent)
+            # -----------------------------------
+
+            SECURITY_DIR="$AGENT/securitySettings"
+            SECURITY_RESOURCE=""
+            
+          if [ -d "$SECURITY_DIR" ]; then
+
+          find "$AGENT/securitySettings" -name "*.json" -type f \
+           -exec sed -i "s/{{PROJECT_ID}}/${PROJECT_ID}/g" {} +
+
+          find "$AGENT/securitySettings" -name "*.json" -type f \
+            -exec sed -i "s/{{REGION}}/${REGION}/g" {} +
+            
+          echo "🔐 Security config found for $AGENT"
+
+           INSPECT_FILE="$SECURITY_DIR/dlpTemplates/inspect-template.json"
+           DEIDENTIFY_FILE="$SECURITY_DIR/dlpTemplates/deidentify-template.json"
+           SECURITY_FILE="$SECURITY_DIR/security.json"
+
+
+            echo "---------------------------------------------"
+            echo "Setting up inspect Template for $AGENT"
+            echo "---------------------------------------------"
+          # -------------------------------
+          # 1. UPSERT INSPECT TEMPLATE
+          # -------------------------------
+          if [ -f "$INSPECT_FILE" ]; then
+           TEMPLATE_ID=$(jq -r '.templateId' "$INSPECT_FILE")
+
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+          -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+          "https://dlp.googleapis.com/v2/projects/${PROJECT_ID}/locations/${REGION}/inspectTemplates/${TEMPLATE_ID}")
+
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "Updating inspect template..."
+            BODY=$(jq '{inspectTemplate: .inspectTemplate, updateMask: "displayName,description,inspectConfig"}' "$INSPECT_FILE")
+
+          curl -s -X PATCH \
+           "https://dlp.googleapis.com/v2/projects/${PROJECT_ID}/locations/${REGION}/inspectTemplates/${TEMPLATE_ID}" \
+            -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "x-goog-user-project: ${PROJECT_ID}" \
+            -d "$BODY"
+          else
+            echo "Creating inspect template..."
+            curl -s -X POST \
+           "https://dlp.googleapis.com/v2/projects/${PROJECT_ID}/locations/${REGION}/inspectTemplates" \
+           -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+           -H "Content-Type: application/json" \
+           -H "x-goog-user-project: ${PROJECT_ID}" \
+           -d @"$INSPECT_FILE"
+           fi
+          fi
+            echo "---------------------------------------------"
+            echo "Setting up deidentify templates for $AGENT"
+            echo "---------------------------------------------"
+          # -------------------------------
+          # 2. UPSERT DEIDENTIFY TEMPLATE
+          # -------------------------------
+          if [ -f "$DEIDENTIFY_FILE" ]; then
+          TEMPLATE_ID=$(jq -r '.templateId' "$DEIDENTIFY_FILE")
+
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+          -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+          -H "x-goog-user-project: ${PROJECT_ID}" \
+          "https://dlp.googleapis.com/v2/projects/${PROJECT_ID}/locations/${REGION}/deidentifyTemplates/${TEMPLATE_ID}")
+
+          if [ "$HTTP_CODE" = "200" ]; then
+          echo "Updating deidentify template..."
+          BODY=$(jq '{deidentifyTemplate: .deidentifyTemplate, updateMask: "displayName,description,deidentifyConfig"}' "$DEIDENTIFY_FILE")
+
+          curl -s -X PATCH \
+          "https://dlp.googleapis.com/v2/projects/${PROJECT_ID}/locations/${REGION}/deidentifyTemplates/${TEMPLATE_ID}" \
+          -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+          -H "Content-Type: application/json" \
+          -H "x-goog-user-project: ${PROJECT_ID}" \
+          -d "$BODY"
+          else
+          echo "Creating deidentify template..."
+          curl -s -X POST \
+           "https://dlp.googleapis.com/v2/projects/${PROJECT_ID}/locations/${REGION}/deidentifyTemplates" \
+           -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+          -H "x-goog-user-project: ${PROJECT_ID}" \
+           -H "Content-Type: application/json" \
+           -d @"$DEIDENTIFY_FILE"
+          fi
+          fi
+
+            echo "---------------------------------------------"
+            echo "Setting up security settings for $AGENT"
+            echo "---------------------------------------------"
+
+          # -------------------------------
+          # 3. CREATE / UPDATE SECURITY SETTINGS
+          # -------------------------------
+          if [ -f "$SECURITY_FILE" ]; then
+           DISPLAY_NAME=$(jq -r '.securitySettings.displayName' "$SECURITY_FILE")
+
+          RESPONSE=$(curl -s \
+           "https://${REGION}-dialogflow.googleapis.com/v3/projects/${PROJECT_ID}/locations/${REGION}/securitySettings" \
+            -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+            -H "x-goog-user-project: ${PROJECT_ID}")
+
+            echo "Security creation response: $RESPONSE"
+
+            EXISTING=$(echo "$RESPONSE" | jq -r --arg name "$DISPLAY_NAME" \
+            '.securitySettings[]? | select(.displayName==$name) | .name')
+
+          if [ -n "$EXISTING" ]; then
+            echo "Updating security settings..."
+            BODY=$(jq --arg name "$EXISTING" '.securitySettings + {name: $name}' "$SECURITY_FILE")
+
+            curl -s -X PATCH \
+            "https://${REGION}-dialogflow.googleapis.com/v3/${EXISTING}?updateMask=displayName,inspectTemplate,deidentifyTemplate,redactionStrategy,redactionScope" \
+            -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "x-goog-user-project: ${PROJECT_ID}" \
+            -d "$BODY"
+
+            SECURITY_RESOURCE="$EXISTING"
+          else
+            echo "Creating security settings..."
+            BODY=$(jq '.securitySettings' "$SECURITY_FILE")
+            RESPONSE=$(curl -s -X POST \
+              "https://${REGION}-dialogflow.googleapis.com/v3/projects/${PROJECT_ID}/locations/${REGION}/securitySettings" \
+              -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+              -H "Content-Type: application/json" \
+              -H "x-goog-user-project: ${PROJECT_ID}" \
+              -d "$BODY")
+
+            SECURITY_RESOURCE=$(echo "$RESPONSE" | jq -r '.name // empty')
+
+            if [ -z "$SECURITY_RESOURCE" ] && [ -n "$EXISTING" ]; then
+                 SECURITY_RESOURCE="$EXISTING"
+            fi
+           fi
+          fi
+          echo "✅ Final SECURITY_RESOURCE: $SECURITY_RESOURCE"
+          else
+           echo "No security config for $AGENT"
+          fi
+
+            echo "Agent ID resolved: $AGENT_ID"
+
+            zip -r agent.zip "$AGENT" \
+              -x ".git/*" \
+              -x ".github/*" \
+              -x "*.zip"
+
+            echo "--- Preparing Payload ---"
+            echo -n '{"restoreOption": "KEEP", "agentContent": "' > payload.json
+            base64 -w 0 agent.zip >> payload.json
+            echo -n '"}' >> payload.json
+
+            RESPONSE=$(curl -s -X POST \
+              "https://${REGION}-dialogflow.googleapis.com/v3/projects/${PROJECT_ID}/locations/${REGION}/agents/${AGENT_ID}:restore" \
+              -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              -H "x-goog-user-project: ${PROJECT_ID}" \
+              -d @payload.json)
+
+            echo "Restore API response: $RESPONSE"
+
+            if [[ "$RESPONSE" == *"\"error\":"* ]]; then
+              echo "Error submitting restore job:"
+              echo "$RESPONSE"
+              rm payload.json
+              exit 1
+            fi
+
+            OPERATION_NAME=$(echo "$RESPONSE" | grep -o '"name": *"[^"]*"' | cut -d'"' -f4)
+
+            echo "Restore operation started."
+            echo "Operation Name: $OPERATION_NAME"
+
+            sleep 10
+
+            STATUS_RESPONSE=$(curl -s -X GET \
+              "https://${REGION}-dialogflow.googleapis.com/v3/${OPERATION_NAME}" \
+              -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+              -H "x-goog-user-project: ${PROJECT_ID}")
+            echo "Operation status response: $STATUS_RESPONSE"
+
+            if [[ "$STATUS_RESPONSE" == *"\"error\":"* ]]; then
+             echo "❌ FAILURE: $AGENT restore failed."
+             ERROR_MSG=$(echo "$STATUS_RESPONSE" | grep -o '"message": *"[^"]*"' | cut -d'"' -f4)
+             echo "Error: $ERROR_MSG"
+             FAILED="${FAILED}| $AGENT | ❌ $ERROR_MSG |\n"
+
+           elif [[ "$STATUS_RESPONSE" == *"\"done\": true"* ]]; then
+             echo "✅ SUCCESS: $AGENT restore completed."
+
+             # -----------------------------------
+             # STEP: Attach Security to Agent
+             # -----------------------------------
+
+            echo "Resolved SECURITY_RESOURCE: $SECURITY_RESOURCE"
+
+           if [ -n "$SECURITY_RESOURCE" ] && [[ "$SECURITY_RESOURCE" == projects/* ]]; then
+             echo "---------------------------------------------"
+             echo "🔐 Attaching security settings to $AGENT"
+             echo "---------------------------------------------"
+
+           PATCH_BODY=$(jq -n \
+            --arg name "projects/${PROJECT_ID}/locations/${REGION}/agents/${AGENT_ID}" \
+            --arg securitySettings "$SECURITY_RESOURCE" \
+            '{name: $name, securitySettings: $securitySettings}')
+
+           PATCH_RESPONSE=$(curl -s -X PATCH \
+             "https://${REGION}-dialogflow.googleapis.com/v3/projects/${PROJECT_ID}/locations/${REGION}/agents/${AGENT_ID}?updateMask=securitySettings" \
+              -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+              -H "Content-Type: application/json" \
+              -H "x-goog-user-project: ${PROJECT_ID}" \
+              -d "$PATCH_BODY")
+
+             echo "Security patch response: $PATCH_RESPONSE"
+           else
+            echo "⚠️ Skipping security patch — invalid SECURITY_RESOURCE" 
+           fi
+
+             
+             SUCCESS="${SUCCESS}| $AGENT | ✅ Success |\n"
+
+           else
+            echo " Something went wrong with $AGENT deployment. Please check the operation status."
+            FAILED="${FAILED}| $AGENT | ❌ Unknown status |\n"
+            echo "Operation status response: $STATUS_RESPONSE"
+           fi
+
+            rm payload.json
+            rm agent.zip
+
+          done
+
+          echo "success<<EOF" >> $GITHUB_OUTPUT
+          printf "%b" "$SUCCESS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          echo "failed<<EOF" >> $GITHUB_OUTPUT
+          printf "%b" "$FAILED" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          if [ -n "$FAILED" ]; then
+           echo "One or more agent deployments failed."
+           exit 1
+          fi
+
+      - name: Deployment Summary
+        if: always()
+        run: |
+
+          SUCCESS="${{ steps.deploy.outputs.success }}"
+          FAILED="${{ steps.deploy.outputs.failed }}"
+          USER="${{ github.actor }}"
+          ENV="${{ inputs.environment }}"
+
+          AUTH_STATUS="${{ steps.auth.outputs.auth_status }}"
+
+          echo "## 🤖 Agents Deployment Results" >> $GITHUB_STEP_SUMMARY
+
+          if [[ "$AUTH_STATUS" == "authorized" ]]; then
+          
+          echo "| Agent | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
+
+          if [ -n "$SUCCESS" ]; then
+            echo "$SUCCESS" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -n "$FAILED" ]; then
+              echo "$FAILED" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          fi
+
+          
+
+          if [ -z "$SUCCESS" ] && [ -z "$FAILED" ]; then
+
+           if [[ "$AUTH_STATUS" == "unauthorized" ]]; then
+             echo "" >> $GITHUB_STEP_SUMMARY
+             echo "🚫 User **$USER** is not allowed to deploy to **$ENV**" >> $GITHUB_STEP_SUMMARY
+           else
+            echo "| No agents deployed | Something went wrong |" >> $GITHUB_STEP_SUMMARY
+           fi
+          fi

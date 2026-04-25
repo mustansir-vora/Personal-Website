@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1770693167:1714726602317" name="SET_ROUTE_TO_MAIN_MENU" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">MAIN_MENU</setting>
+<setting name="sessNames">S_ROUTE_TO</setting>
+</settings>
+</config>
+</action_element>

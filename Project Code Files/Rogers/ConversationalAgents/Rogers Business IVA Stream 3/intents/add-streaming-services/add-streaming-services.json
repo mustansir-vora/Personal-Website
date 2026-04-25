@@ -1,0 +1,13 @@
+{
+  "name": "0fd0f67a-83d2-42b1-82c4-2d974855568c",
+  "displayName": "add-streaming-services",
+  "parameters": [ {
+    "id": "e_StreamingService",
+    "entityType": "@e_streamingservice"
+  }, {
+    "id": "e_StreamingService1",
+    "entityType": "@e_streamingservice"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 30
+}

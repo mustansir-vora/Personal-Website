@@ -1,0 +1,90 @@
+{
+  "name": "32b2d439-1b58-4eaf-81a4-11efeacfb510",
+  "displayName": "Send SMS",
+  "transitionRoutes": [ {
+    "condition": "$session.params.smsId = null OR $session.params.smsId = \"NA\" OR $session.params.smsId = \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sendSMS",
+        "value": false
+      }, {
+        "parameter": "smsStatus",
+        "value": "bypass"
+      }, {
+        "parameter": "passiveSms",
+        "value": true
+      }, {
+        "parameter": "fromSms",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "75905580-d7d1-4989-a262-43093afab3b4"
+  }, {
+    "condition": "$session.params.smsId != null AND $session.params.smsId != \"NA\" AND $session.params.smsId != \"\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "smsStatus",
+        "value": "bypass"
+      }, {
+        "parameter": "passiveSms",
+        "value": true
+      }, {
+        "parameter": "fromSms",
+        "value": true
+      } ]
+    },
+    "targetPage": "Get SMS Parameters",
+    "name": "60a98829-cbcd-4bb8-886f-7a96d41abb12"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "fe30b24f-c1c8-405a-ac0c-d319274b5d8f"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "925ffa31-b080-40aa-b7d3-acca97910d6a"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "7d3a9158-11bf-4712-b442-c9dc09ea1e22"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true,
+    "playbackInterruptionSettings": {
+      "allowPlaybackInterruption": true
+    }
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

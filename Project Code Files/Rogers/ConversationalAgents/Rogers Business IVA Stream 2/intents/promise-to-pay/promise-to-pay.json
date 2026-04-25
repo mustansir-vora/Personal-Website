@@ -1,0 +1,7 @@
+{
+  "name": "9b39f0cd-96a5-4aae-a861-9786f830707c",
+  "displayName": "promise-to-pay",
+  "priority": 500000,
+  "description": "Handles setting up a promise to pay",
+  "numTrainingPhrases": 20
+}

@@ -1,0 +1,47 @@
+{
+  "name": "e64e7fa8-5be1-4339-a892-8e6b708adee4",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_service_category_mix_length",
+      "inputActionParameters": {
+        "service": "Business Phone"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_support_intent",
+      "inputActionParameters": {
+        "service": "Business Phone"
+      },
+      "outputActionParameters": {
+        "result": "wireless-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "If the serviceCategory contains one ",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "productLabelsMixEn": "Wireless Business Phone",
+      "serviceCategoryMixEn": "Business Phone"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "If the serviceCategory contains more than one value",
+    "actionParameters": {
+      "product": "Business Phone",
+      "savedIntent": "wireless-support",
+      "serviceCategoryMixLength": "1"
+    }
+  },
+  "displayName": "OneValue_WHP",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 201,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

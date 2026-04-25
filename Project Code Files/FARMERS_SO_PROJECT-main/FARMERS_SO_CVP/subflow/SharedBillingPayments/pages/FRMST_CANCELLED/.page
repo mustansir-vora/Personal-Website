@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@667867250:1721832754622" name="FRMST_CANCELLED" version="6.0.1">
+<element height="50" id="Element@1759817614:1721832754622" name="FRMST_CANCELLED" type="Page Entry" width="181" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1616032917:1721832811599"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1616032917:1721832811599" name="CHECK_CANCEL_TYPE" type="Decision" width="194" x="296" y="91">
+<exit_states>
+<exit_state name="EP" target="Element@895926050:1721836586822"/>
+<exit_state name="GEN" target="Element@910014652:1722492987419"/>
+<exit_state name="ER" target="Element@2109587855:1721836882924"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1982079379:1721836215792" name="FRMST_SBP_PA_004" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="228" x="63" y="277">
+<exit_states>
+<exit_state name="done" target="Element@103068594:1721836339666"/>
+</exit_states>
+</element>
+<element height="55" id="Element@103068594:1721836339666" name="FRMST_SBP_MN_007_Call" type="Subflow Call" width="271" x="65" y="401">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709026814985">
+<config>
+<argument_data>
+<data name="MenuID">SBP_MN_007</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1955893342:1721836339666"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1652426696:1721836339666" name="Foremost_Subflow Return_8" type="Subflow Return" width="271" x="-301" y="328"/>
+<element height="55" id="Element@523358671:1721836339666" name="FRMST_SET_ROUTE_TO_NEW_QUOTE" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="293" x="-95" y="600">
+<exit_states>
+<exit_state name="done" target="Element@1652426696:1721836339666"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1955893342:1721836339666" name="FRMST_SBP_MN_007_VALUE" type="Decision" width="294" x="51" y="474">
+<exit_states>
+<exit_state name="New Quote" target="Element@523358671:1721836339666"/>
+<exit_state name="NOINPUT" target="Element@1038126211:1721836468700"/>
+<exit_state name="NOMATCH" target="Element@1038126211:1721836468700">
+<bendpoint>
+<dim1 x="277" y="34"/>
+<dim2 x="-139" y="-88"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1038126211:1721836468700">
+<bendpoint>
+<dim1 x="178" y="90"/>
+<dim2 x="-238" y="-32"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@1038126211:1721836468700" name="FRMST_SBP_MN_005_ENTRY" type="Page Connector" width="236" x="496" y="598">
+<page_connector target="Element@1241808443:1721911227113">FRMST_SBP_MN_005_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@895926050:1721836586822" name="FRMST_SBP_PA_009" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="228" x="630" y="225">
+<exit_states>
+<exit_state name="done" target="Element@878279029:1721836786606"/>
+</exit_states>
+</element>
+<element height="50" id="Element@878279029:1721836786606" name="FROM_FRMST_CANCELLED" type="Page Connector" width="227" x="665" y="465">
+<page_connector target="Element@1303326914:1721836812900">FROM_FRMST_CANCELLED<config/>
+</page_connector>
+</element>
+<element height="52" id="Element@2109587855:1721836882924" name="CHECK_EXIT_STATE_6" type="Decision" width="210" x="36" y="95">
+<exit_states>
+<exit_state name="ER" target="Element@1544416559:1721836921435"/>
+<exit_state name="TRANSFER" target="Element@1544416559:1721836921435"/>
+<exit_state name="SELFSERVICE" target="Element@764353221:1721836944800"/>
+<exit_state name="OTHERS" target="Element@1544416559:1721836921435"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1544416559:1721836921435" name="FRMST_Transfer4" type="Subflow Call" width="161" x="-125" y="197">
+<subflow_call subflow_name="Transfer" target="Element@31:1707990320727">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1652426696:1721836339666"/>
+</exit_states>
+</element>
+<element height="55" id="Element@764353221:1721836944800" name="FRMST_EPCPaymentUS5" type="Subflow Call" width="228" x="-235" y="65">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1713010274500">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1652426696:1721836339666"/>
+</exit_states>
+</element>
+<element height="50" id="Element@910014652:1722492987419" name="FM_Lang_Check_BC_010" type="Decision" width="207" x="141" y="176">
+<exit_states>
+<exit_state name="Yes" target="Element@1982079379:1721836215792"/>
+<exit_state name="No" target="Element@1808621577:1722493006125"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1808621577:1722493006125" name="FRMST_SBP_PA_004_SP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="239" x="309" y="277">
+<exit_states>
+<exit_state name="done" target="Element@103068594:1721836339666"/>
+</exit_states>
+</element>
+</page>

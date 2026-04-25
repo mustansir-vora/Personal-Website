@@ -1,0 +1,97 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I’d like to see a breakdown of all recent payments and dates.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "When exactly was my last payment posted to my account?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need a record of all payments made ",
+      "auto": true
+    }, {
+      "text": "this year",
+      "auto": true
+    }, {
+      "text": " for my account.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think my payment history is showing an error. Can you review it?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you show me my past payment activity for the last ",
+      "auto": true
+    }, {
+      "text": "three",
+      "auto": true
+    }, {
+      "text": " billing cycles?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m trying to verify if my previous payments were applied ",
+      "auto": true
+    }, {
+      "text": "correctly",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you confirm the amount of my most recent bill payment?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to check when my last payment was processed.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you provide a detailed list of all payments I’ve made on my account?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to review my full account payment history for ",
+      "auto": true
+    }, {
+      "text": "the past few months",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

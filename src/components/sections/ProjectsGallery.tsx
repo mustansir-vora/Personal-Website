@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
 const GithubIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
   </svg>
 );
 
@@ -139,19 +139,6 @@ const projects: Project[] = [
     ]
   },
   {
-    id: 'news-scraper',
-    title: 'Multi-Source News Scraper',
-    client: 'Personal Project',
-    tags: ['Python', 'Web Scraping', 'BeautifulSoup', 'News Aggregation'],
-    shortDesc: 'A news scraper that aggregates articles from Microsoft Bing, Google News, and Inshorts into a unified, structured feed.',
-    githubUrl: 'https://github.com/mustansir-vora/News-Scraper',
-    bullets: [
-      'Scrapes news articles from multiple sources: Microsoft Bing News, Google News, and Inshorts.',
-      'Extracts article titles, summaries, source URLs, and publication timestamps into a unified data structure.',
-      'Enables quick, automated news aggregation without relying on expensive API subscriptions.',
-    ]
-  },
-  {
     id: 'gps-tracker',
     title: 'GPS-GSM Vehicle Tracking Device',
     client: 'B.E. Final Year Project',
@@ -192,22 +179,29 @@ export default function ProjectsGallery() {
 
             return (
               <motion.div
-                layout
                 key={project.id}
                 onClick={() => setExpandedId(isExpanded ? null : project.id)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setExpandedId(isExpanded ? null : project.id);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="glass p-6 md:p-8 rounded-3xl cursor-pointer hover:bg-white/10 transition-colors border border-white/10 hover:border-emerald-500/50"
+                className="glass p-6 md:p-8 rounded-3xl cursor-pointer hover:bg-white/10 transition-colors border border-white/10 hover:border-emerald-500/50 outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
               >
-                <motion.h3 layout className="text-xl md:text-2xl font-bold text-white mb-1">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
                   {project.title}
-                </motion.h3>
-                <motion.p layout className="text-lime-300 font-medium mb-1 text-sm">
+                </h3>
+                <p className="text-lime-300 font-medium mb-1 text-sm">
                   {project.client}
-                </motion.p>
+                </p>
 
-                <motion.div layout className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.slice(0, isExpanded ? project.tags.length : 4).map(tag => (
                     <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-white/80">
                       {tag}
@@ -218,62 +212,64 @@ export default function ProjectsGallery() {
                       +{project.tags.length - 4}
                     </span>
                   )}
-                </motion.div>
+                </div>
 
-                <motion.p layout className="text-white/80 text-sm">
+                <p className="text-white/80 text-sm">
                   {project.shortDesc}
-                </motion.p>
+                </p>
 
                 {/* Expandable Content Area */}
-                {isExpanded && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="mt-4 pt-4 border-t border-white/10 text-muted-foreground"
-                  >
-                    <h4 className="text-sm font-bold text-white mb-3 uppercase tracking-wider">Key Contributions</h4>
-                    <ul className="space-y-2 text-sm md:text-base">
-                      {project.bullets.map((bullet, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-emerald-400 mt-1 shrink-0">▸</span>
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <AnimatePresence initial={false}>
+                  {isExpanded && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="mt-4 pt-4 border-t border-white/10 text-muted-foreground"
+                    >
+                      <h4 className="text-sm font-bold text-white mb-3 uppercase tracking-wider">Key Contributions</h4>
+                      <ul className="space-y-2 text-sm md:text-base">
+                        {project.bullets.map((bullet, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1 shrink-0">▸</span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
 
-                    <div className="mt-5 flex flex-wrap gap-3">
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500/10 rounded-xl text-emerald-400 text-sm font-medium hover:bg-emerald-500/20 transition-colors border border-emerald-500/30 hover:border-emerald-500/50"
-                        >
-                          Try Live App
-                          <ExternalLink className="w-3.5 h-3.5" />
-                        </a>
-                      )}
-                      
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 glass rounded-xl text-white text-sm font-medium hover:bg-white/15 transition-colors border border-white/10 hover:border-emerald-500/50"
-                        >
-                          <GithubIcon className="w-4 h-4" />
-                          View Source
-                          {!project.liveUrl && <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />}
-                        </a>
-                      )}
-                    </div>
-                  </motion.div>
-                )}
+                      <div className="mt-5 flex flex-wrap gap-3">
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500/10 rounded-xl text-emerald-400 text-sm font-medium hover:bg-emerald-500/20 transition-colors border border-emerald-500/30 hover:border-emerald-500/50"
+                          >
+                            Try Live App
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </a>
+                        )}
 
-                <motion.div layout className="mt-4 flex items-center justify-between">
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 glass rounded-xl text-white text-sm font-medium hover:bg-white/15 transition-colors border border-white/10 hover:border-emerald-500/50"
+                          >
+                            <GithubIcon className="w-4 h-4" />
+                            View Source
+                            {!project.liveUrl && <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />}
+                          </a>
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <div className="mt-4 flex items-center justify-between">
                   <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
                     {isExpanded ? 'Show Less' : 'Click for Details'}
                   </span>
@@ -305,7 +301,7 @@ export default function ProjectsGallery() {
                       )}
                     </div>
                   )}
-                </motion.div>
+                </div>
               </motion.div>
             );
           })}

@@ -1,0 +1,31 @@
+{
+  "name": "5094e240-db8f-45be-9610-1119eec00346",
+  "displayName": "Return From Change PTP Method 2",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeDetails = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.ptpChangeDetails",
+        "value": false
+      } ]
+    },
+    "targetPage": "Return From Change Details",
+    "name": "bec7836e-c098-46db-89c8-1e96d08a4d36"
+  }, {
+    "condition": "$session.params.updateMultipleOptions1 = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": false
+      } ]
+    },
+    "targetPage": "Return From PTP Update Multiple Options 1",
+    "name": "4175ed25-593c-4295-9a09-9369b346b807"
+  } ]
+}

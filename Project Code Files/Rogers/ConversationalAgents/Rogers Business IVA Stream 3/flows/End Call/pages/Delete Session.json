@@ -1,0 +1,23 @@
+{
+  "name": "49520c00-4345-45f4-b03a-6df2aa26036b",
+  "displayName": "Delete Session",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callend",
+    "tag": "deleteSession",
+    "setParameterActions": [ {
+      "parameter": "reportingVar_callEndTime",
+      "value": "$sys.func.FORMAT_DATE($sys.func.NOW(),\"yyyy-MM-dd hh:mm:ss.SSS\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Transfer To Genesys",
+    "name": "a968abc9-7833-49f6-b6ae-f91d2fd69095"
+  } ]
+}

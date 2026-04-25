@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@591547076:1747936575906" name="CHECK_PURE_DTMF" version="6.0.1">
+<config>
+<source type="Class">com.farmers.NewSpeechflow.CheckMenuMode</source>
+</config>
+</decision>

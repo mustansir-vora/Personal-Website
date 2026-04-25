@@ -1,0 +1,285 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Pouvez-vous m’aider à solder complètement "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux payer mes versements restants."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je dois finaliser mes paiements d’appareil immédiatement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux payer le reste de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone "
+    }, {
+      "text": "en un"
+    }, {
+      "text": " seul versement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux régler "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " solde pour pouvoir changer ou upgrader."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux faire "
+    }, {
+      "text": "un"
+    }, {
+      "text": " paiement pour régler "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil complètement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quel est le montant exact pour solder "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux effacer toutes les charges d’appareil "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux payer le solde restant pour que le téléphone m’appartienne totalement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Comment payer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone en entier via "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux compléter l’achat de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux payer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil avant le prochain "
+    }, {
+      "text": "cycle"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux faire "
+    }, {
+      "text": "un"
+    }, {
+      "text": " seul paiement pour fermer le solde de l’appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quel est le montant final pour solder "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je compte payer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil en entier "
+    }, {
+      "text": "aujourd’hui"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux régler tous les paiements en suspens "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux éliminer tout solde restant "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quel est le montant pour racheter "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux payer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil pour changer de fournisseur."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quel montant dois-je pour posséder complètement "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux faire "
+    }, {
+      "text": "un"
+    }, {
+      "text": " paiement complet pour effacer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " solde d’appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux payer le reste du solde de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de régler "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil en entier."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Pouvez-vous me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " combien il reste à payer "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux payer immédiatement le solde de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appareil."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

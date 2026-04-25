@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subflow_start id="Element@31:1707108601185" name="SharedPolicyCHQA" version="6.0.1">
+<config>
+<local_events>
+<local_event>
+<name>NO_RESOURCE</name>
+<eventlist>error.noresource</eventlist>
+<type>VXML Event</type>
+</local_event>
+</local_events>
+</config>
+</subflow_start>

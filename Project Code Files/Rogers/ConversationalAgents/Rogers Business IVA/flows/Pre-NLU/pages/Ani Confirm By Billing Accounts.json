@@ -1,0 +1,36 @@
+{
+  "name": "5fa1e445-2ae4-4a44-8ef6-6ff2a84fdc78",
+  "displayName": "Ani Confirm By Billing Accounts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.aniMatch != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Account Exist Confirm",
+    "name": "d6b98153-85a4-4cfa-bfc8-a37edcd07523"
+  }, {
+    "condition": "$session.params.aniMatch = true AND $session.params.switchLanguage = true AND $session.params.postNLANIConfirm = null",
+    "triggerFulfillment": {
+      "webhook": "gcp-yul-crsrv-cct-iva-r4b-callstart",
+      "tag": "getAniIdentificationBySessionId"
+    },
+    "targetPage": "Ani Confirm Billing Account Check",
+    "name": "68824458-8395-47ea-a805-7262cb7ea3ff"
+  }, {
+    "condition": "$session.params.aniMatch = true AND $session.params.switchLanguage != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ani Confirm Billing Account Check",
+    "name": "0b7d1a43-7e18-4895-900b-8a172940c7b0"
+  } ]
+}

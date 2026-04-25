@@ -1,0 +1,325 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je veux parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " représentant qui peut traiter ma demande sans délai."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me connecter "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " spécialiste humain du soutien?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler immédiatement à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " des relations client."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me transférer "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " représentant en direct qui peut m’aider "
+    }, {
+      "text": "maintenant"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " professionnel qui peut m’aider avec "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " forfait."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me connecter à "
+    }, {
+      "text": "un conseiller"
+    }, {
+      "text": " qui peut répondre à toutes mes questions?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais parler "
+    }, {
+      "text": "à une"
+    }, {
+      "text": " vraie personne "
+    }, {
+      "text": "au service"
+    }, {
+      "text": " à la clientèle plutôt qu’utiliser "
+    }, {
+      "text": "un"
+    }, {
+      "text": " système automatisé."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me transférer "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " agent de soutien qui peut résoudre "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " problème?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " qui peut gérer mes questions de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me transférer "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " spécialiste des solutions client."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’"
+    }, {
+      "text": "une"
+    }, {
+      "text": " assistance immédiate d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " représentant en direct."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " agent de soutien technique en personne, pas "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " bot."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me connecter "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " opérateur qui peut m’aider "
+    }, {
+      "text": "aujourd’hui"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux rester en ligne pour parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " professionnel du soutien à la clientèle."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez transférer "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " appel à "
+    }, {
+      "text": "un conseiller"
+    }, {
+      "text": " humain qui peut m’aider."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " représentant du "
+    }, {
+      "text": "service"
+    }, {
+      "text": " fidélisation."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me connecter "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " agent de "
+    }, {
+      "text": "service"
+    }, {
+      "text": " à la clientèle, pas "
+    }, {
+      "text": "un"
+    }, {
+      "text": " assistant virtuel?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais parler à quelqu’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " qui peut m’aider à résoudre "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " problème."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai "
+    }, {
+      "text": "été"
+    }, {
+      "text": " déconnecté pendant que je parlais "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " représentant et je dois poursuivre la conversation."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me transférer immédiatement "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " agent de soutien en direct?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux parler à "
+    }, {
+      "text": "un conseiller"
+    }, {
+      "text": " qui peut répondre à mes questions."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Veuillez me transférer "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " spécialiste du "
+    }, {
+      "text": "service"
+    }, {
+      "text": " à la clientèle."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin de parler immédiatement "
+    }, {
+      "text": "à une"
+    }, {
+      "text": " vraie personne au sujet de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me connecter "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " agent humain pour obtenir de l’aide?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais parler "
+    }, {
+      "text": "à un"
+    }, {
+      "text": " représentant du "
+    }, {
+      "text": "service"
+    }, {
+      "text": " à la clientèle en direct "
+    }, {
+      "text": "aujourd’hui"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

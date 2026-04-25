@@ -1,0 +1,34 @@
+{
+  "name": "7cb882e4-e7a1-4fe2-93e9-29b80358ad3e",
+  "displayName": "Sorry Failed",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sorry. It looks like I’m having issues." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Désolé. Il semble que je rencontre des difficultés." ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "customeError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "51cba036-c486-4576-8554-375594a52b4e"
+  } ]
+}

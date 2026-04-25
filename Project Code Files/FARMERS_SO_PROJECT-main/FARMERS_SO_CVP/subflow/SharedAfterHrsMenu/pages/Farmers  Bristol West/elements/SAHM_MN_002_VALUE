@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@654278627:1707223933304" name="SAHM_MN_002_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.GET_SAHM_MN_002</source>
+</config>
+</decision>

@@ -1,0 +1,25 @@
+{
+  "name": "938d5879-b68e-47b2-93ff-19b32531dd40",
+  "displayName": "Check Pin Indicator",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.hasPinInd = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Enter Pin",
+    "name": "f18544a7-b85d-4790-adf6-18f2a6b5f570"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Auth Level 2",
+    "name": "1bf28653-7a1a-46b2-b7c4-965ff678fd6d"
+  } ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "b79761be-5c1e-4e97-bbe9-961acc9dcd96",
+  "displayName": "Start Broadcast Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.subflowReturnValue",
+        "value": null
+      }, {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId17"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "1f28f27b-78db-452e-a428-4441dae6cda5"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Payment History",
+    "name": "aba0ec26-aef7-4f07-bae2-521ba4ffcbb5"
+  } ]
+}

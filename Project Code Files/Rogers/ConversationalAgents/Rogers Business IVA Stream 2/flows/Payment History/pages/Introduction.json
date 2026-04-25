@@ -1,0 +1,27 @@
+{
+  "name": "6e72e012-73d4-4a23-a193-b73a42e90ce0",
+  "displayName": "Introduction",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Here are your most recent payments. To skip at any time, say ‘next’ (or press pound). You can also say ‘go back’ (or press star)." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "$session.params.paymentIndex",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get currentPaymentHistoryObject",
+    "name": "0e9b8698-ad82-4944-ab91-d26e2122da1f"
+  } ]
+}

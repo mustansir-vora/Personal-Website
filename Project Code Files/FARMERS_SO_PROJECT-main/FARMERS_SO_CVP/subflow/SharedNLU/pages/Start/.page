@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1855807693:1711109294718" name="Start" version="6.0.1">
+<element height="55" id="Element@31:1711109294718" name="SharedNLU" type="Subflow Start" width="138" x="231" y="-3">
+<exit_states>
+<exit_state name="next" target="Element@587826462:1711376045090"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1342220328:1711109454621" name="SharedNLU_Call" type="Subflow Call" width="173" x="219" y="155">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1711109924275">
+<config>
+<argument_data>
+<data name="MenuID">NLCL_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@759608003:1711110365848"/>
+</exit_states>
+</element>
+<element height="55" id="Element@759608003:1711110365848" name="SharedNLU_BC" type="Decision" width="166" x="221" y="239">
+<exit_states>
+<exit_state name="NOINPUT" target="Element@1511785560:1711111905443"/>
+<exit_state name="NOMATCH" target="Element@56801973:1711111906615"/>
+<exit_state name="done" target="Element@587625330:1711111956720"/>
+<exit_state name="NLU_FAILURE" target="Element@368479180:1711269196458"/>
+<exit_state name="ER" target="Element@56801973:1711111906615">
+<bendpoint>
+<dim1 x="112" y="-41"/>
+<dim2 x="-93" y="-38"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1511785560:1711111905443" name="DISC" type="Page Connector" width="89" x="44" y="173">
+<page_connector target="Element@437769865:1711111865840">DISC<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@56801973:1711111906615" name="Transfer" type="Page Connector" width="111" x="464" y="234">
+<page_connector target="Element@319010261:1711111797545">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@587625330:1711111956720" name="CheckAppTagDetails_BC" type="Decision" width="239" x="194" y="347">
+<exit_states>
+<exit_state name="ER" target="Element@56801973:1711111906615"/>
+<exit_state name="done" target="Element@202532352:1711119665619"/>
+</exit_states>
+</element>
+<element height="55" id="Element@851310908:1711119231473" name="CheckNextAction_BC" type="Decision" width="212" x="476" y="651">
+<exit_states>
+<exit_state name="ER" target="Element@1208370069:1711119864786">
+<bendpoint>
+<dim1 x="22" y="-50"/>
+<dim2 x="33" y="51"/>
+</bendpoint>
+</exit_state>
+<exit_state name="done" target="Element@1009412360:1711561218092">
+<bendpoint>
+<dim1 x="-47" y="-47"/>
+<dim2 x="-36" y="54"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@202532352:1711119665619" name="CheckIsAuthReq_BC" type="Decision" width="212" x="175" y="453">
+<exit_states>
+<exit_state name="ER" target="Element@56801973:1711111906615"/>
+<exit_state name="Y" target="Element@56801973:1711111906615">
+<bendpoint>
+<dim1 x="257" y="-97"/>
+<dim2 x="48" y="120"/>
+</bendpoint>
+</exit_state>
+<exit_state name="N" target="Element@1610190551:1711119710653"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1610190551:1711119710653" name="CheckIsImmediateTxf_BC" type="Decision" width="244" x="174" y="551">
+<exit_states>
+<exit_state name="ER" target="Element@1208370069:1711119864786">
+<bendpoint>
+<dim1 x="166" y="28"/>
+<dim2 x="-100" y="29"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Y" target="Element@1208370069:1711119864786">
+<bendpoint>
+<dim1 x="165" y="-40"/>
+<dim2 x="-101" y="-39"/>
+</bendpoint>
+</exit_state>
+<exit_state name="N" target="Element@228235761:1711119914493"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1208370069:1711119864786" name="Transfer" type="Page Connector" width="111" x="501" y="550">
+<page_connector target="Element@319010261:1711111797545">Transfer<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@228235761:1711119914493" name="CheckIsClarifierReq_BC" type="Decision" width="227" x="175" y="649">
+<exit_states>
+<exit_state name="ER" target="Element@1208370069:1711119864786"/>
+<exit_state name="AVL" target="Element@1726578439:1711120104664"/>
+<exit_state name="NA" target="Element@851310908:1711119231473"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1726578439:1711120104664" name="Clarifier" type="Page Connector" width="109" x="232" y="758">
+<page_connector target="Element@640342907:1711120089807">Clarifier<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@368479180:1711269196458" name="SetNextAction" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="164" x="10" y="353">
+<exit_states>
+<exit_state name="done" target="Element@104512655:1711269331025"/>
+</exit_states>
+</element>
+<element height="55" id="Element@104512655:1711269331025" name="NextAction" type="Page Connector" width="137" x="22" y="461">
+<page_connector target="Element@1668084430:1711195676780">NextAction<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@587826462:1711376045090" name="CheckNLUFlag_BC" type="Decision" width="191" x="218" y="67">
+<exit_states>
+<exit_state name="TRUE" target="Element@1342220328:1711109454621"/>
+<exit_state name="FALSE" target="Element@1254573418:1711376149185"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1254573418:1711376149185" name="NLU_Disabled" type="Page Connector" width="159" x="499" y="68">
+<page_connector target="Element@1983315886:1711376158088">NLU_Disabled<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1983315886:1711376158088" name="NLU_Disabled" type="Page Entry" width="159" x="21" y="253">
+<exit_states>
+<exit_state name="next" target="Element@368479180:1711269196458"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1009412360:1711561218092" name="NextAction" type="Page Connector" width="137" x="470" y="748">
+<page_connector target="Element@1668084430:1711195676780">NextAction<config/>
+</page_connector>
+</element>
+</page>

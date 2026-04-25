@@ -1,0 +1,7 @@
+{
+  "name": "07a779b2-c2f4-4dae-8062-042f5578f5c5",
+  "displayName": "unlock-device",
+  "priority": 500000,
+  "description": "Explains general unlocking eligibility requirements and steps",
+  "numTrainingPhrases": 10
+}

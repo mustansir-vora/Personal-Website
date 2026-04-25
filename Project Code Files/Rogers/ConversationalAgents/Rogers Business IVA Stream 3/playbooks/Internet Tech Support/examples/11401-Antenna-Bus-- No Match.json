@@ -1,0 +1,73 @@
+{
+  "name": "1c43a231-e798-44ee-9ce9-d1a808f367a4",
+  "actions": [ {
+    "agentUtterance": {
+      "text": " Is there an antenna fixed to the outside of your residence?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "i have one area somewhere around "
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If there's an antenna fixed to the outside of your business location, say yes or press 1. If not, say no or press 2\n"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I don't know "
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Okay,lets continue\nDo you access the internet using a SIM or a mobile phone?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "what was it "
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I'm sorry, I didn't get that. If you access the internet using a SIM or your mobile phone, say yes or press 1. Otherwise, say no or press 2\n"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I access internet using SIM"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "To troubleshoot your issue, you'll need to have access to your internet equipment"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "After broadcast flow completed",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "attemptedSSName": "passive-techSupportWireless",
+      "completedSSName": "passive-techSupportWireless",
+      "customerIdentified": "false",
+      "isOntarioAntennaOffered": "true",
+      "npaProvince": "Ontario",
+      "numberOfInternet": "0",
+      "productLabelsMixEn": "TV,Home Phone,Home Security",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once the savedIntent is set end the playbook",
+    "actionParameters": {
+      "attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "hasNoProfile": "true",
+      "reportingVar_attemptedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "reportingVar_completedSSName": "passive-techSupportWireless,passive-techSupportInternet",
+      "savedIntent": "5GHI-Support",
+      "selfServiceAttempted": "true",
+      "selfServiceCompleted": "true"
+    }
+  },
+  "displayName": "11401-Antenna-Bus-- No Match",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 524,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "348d8a8b-be1d-4f6f-a4a5-240f5692ed2b",
+  "displayName": "device-protection",
+  "priority": 500000,
+  "description": "Handles requests related to adding, managing, or inquiring about device protection or insurance plans.",
+  "numTrainingPhrases": 50
+}

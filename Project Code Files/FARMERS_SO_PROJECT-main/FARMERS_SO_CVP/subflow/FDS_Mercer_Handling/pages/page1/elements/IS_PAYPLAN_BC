@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1813875088:1745584777720" name="IS_PAYPLAN_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.PayplanCheck</source>
+</config>
+</decision>

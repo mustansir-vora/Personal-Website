@@ -1,0 +1,37 @@
+{
+  "name": "be496958-c100-41de-8b59-5172933624d6",
+  "displayName": "Call SMS",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.ptpCallSMS",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpCallSMS = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpCallSMS",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Send SMS",
+    "name": "671e22e8-7fb5-41d2-b96c-0fb950430ce6"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "interactionLabel",
+        "value": "MakePTP"
+      }, {
+        "parameter": "interactionNotes",
+        "value": "IVA"
+      } ]
+    },
+    "targetPage": "Create Interaction",
+    "name": "660eec7a-4855-4ba5-8954-f915b7b394d9"
+  } ]
+}

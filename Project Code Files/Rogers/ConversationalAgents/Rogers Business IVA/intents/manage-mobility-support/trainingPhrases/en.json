@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "The portal is down, and we can’t manage our devices."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our BYOD containerization isn’t working—employees can access corporate data outside the secure app."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We need help removing a lost or stolen device from the system."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The expense reports in Managed Mobility aren’t showing accurate usage."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m unable to push apps or updates to our fleet of smartphones."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our MDM policies aren’t syncing properly across devices."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We can’t enroll new devices in the Managed Mobility portal—can you check?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

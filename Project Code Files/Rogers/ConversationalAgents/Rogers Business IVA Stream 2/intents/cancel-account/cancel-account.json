@@ -1,0 +1,11 @@
+{
+  "name": "58b17ae2-b279-4a51-ad8f-6baa5ce1a326",
+  "displayName": "cancel-account",
+  "parameters": [ {
+    "id": "e_product",
+    "entityType": "@e_product"
+  } ],
+  "priority": 500000,
+  "description": "Handles requests to close or cancel a user’s account.",
+  "numTrainingPhrases": 128
+}

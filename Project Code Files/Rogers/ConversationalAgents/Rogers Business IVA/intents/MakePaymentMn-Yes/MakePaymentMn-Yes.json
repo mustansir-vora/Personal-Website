@@ -1,0 +1,8 @@
+{
+  "name": "ca561917-b0c2-4f70-a7ff-44935fa3cf15",
+  "displayName": "MakePaymentMn-Yes",
+  "priority": 500000,
+  "description": "This will trigger when user said yes i want to make payment / yeah/yup",
+  "numTrainingPhrases": 98,
+  "dtmfPattern": "1"
+}

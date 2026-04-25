@@ -1,0 +1,45 @@
+{
+  "name": "8c0476b3-feef-4b28-994f-3a689f242bcf",
+  "displayName": "Initalize variables",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.broadcastID",
+      "value": "paymentHistory"
+    }, {
+      "parameter": "$session.params.paymentHistoryRepeatCounter",
+      "value": 0
+    }, {
+      "parameter": "$session.params.selfServiceAttempted",
+      "value": true
+    }, {
+      "parameter": "attemptedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"active-cancelledAccount\")"
+    }, {
+      "parameter": "$session.params.subflowReturnValue",
+      "value": true
+    }, {
+      "parameter": "$session.params.app.config.paymentHistoryIncludeAmount",
+      "value": true
+    }, {
+      "parameter": "$session.params.paymentHistoryMaxPlaybackCounter",
+      "value": 0
+    }, {
+      "parameter": "$session.params.app.config.paymentHistoryMaxPlayback",
+      "value": 2
+    }, {
+      "parameter": "$session.params.paymentHistoryMaxRepeat",
+      "value": 2
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Broadcast Message",
+    "name": "d2abc3c2-108d-4a8a-9383-1ad14c068694"
+  } ]
+}

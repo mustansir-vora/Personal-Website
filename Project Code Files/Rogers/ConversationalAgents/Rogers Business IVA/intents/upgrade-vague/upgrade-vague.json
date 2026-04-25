@@ -1,0 +1,7 @@
+{
+  "name": "c37ef816-4079-4e54-b289-c422fc27a329",
+  "displayName": "upgrade-vague",
+  "priority": 500000,
+  "description": "Covers general or unclear inquiries about upgrading devices, plans, or services.",
+  "numTrainingPhrases": 60
+}

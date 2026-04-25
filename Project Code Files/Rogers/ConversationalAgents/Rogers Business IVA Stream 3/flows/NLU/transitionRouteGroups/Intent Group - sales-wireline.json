@@ -1,0 +1,44 @@
+{
+  "name": "e95b7f9f-b52d-4c87-bfa5-dd229290eacc",
+  "displayName": "Intent Group - sales-wireline",
+  "transitionRoutes": [ {
+    "intent": "product-inquiry-TV",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "product-inquiry-TV"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d165be5e-89dc-4162-8648-c0f2565a8b13"
+  }, {
+    "intent": "internet-sales-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "internet-sales-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "911504a1-1001-4a8e-8d35-bc1247bef810"
+  }, {
+    "intent": "product-inquiry-business-internet",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "product-inquiry-business-internet"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "ae911d87-41a0-4ff7-9ba6-855feb0916e4"
+  } ]
+}

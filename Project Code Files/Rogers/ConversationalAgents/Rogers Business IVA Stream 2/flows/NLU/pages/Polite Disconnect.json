@@ -1,0 +1,18 @@
+{
+  "name": "961f4f35-e1c6-4790-a980-7d3aaa7bbac0",
+  "displayName": "Polite Disconnect",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "End Call",
+    "name": "7179abe7-31c3-4c69-ae6c-08a57a11eff7"
+  } ]
+}

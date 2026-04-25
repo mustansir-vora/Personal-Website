@@ -1,0 +1,659 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "past due balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need help making a payment with my credit card online."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me how to make an online payment for my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want info on paying my bill online."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about how to make a payment online."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check my online payment options."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me if I can pay my bill with Visa or "
+    }, {
+      "text": "MasterCard"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to make a payment with my debit card."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know how to pay using my credit card."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling to check my next bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to talk about a payment on my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me with billing and payment?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling to ask about payment options."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you give me info about my payments?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check how to pay my bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m not sure about my payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need help with a payment question."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to ask about my last payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you tell me about my monthly payment?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling regarding payments on my account."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check my payment details."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need some info about my "
+    }, {
+      "text": "payment"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about a "
+    }, {
+      "text": "payment"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know about my "
+    }, {
+      "text": "next payment"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about my "
+    }, {
+      "text": "account payment"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about "
+    }, {
+      "text": "payments"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "payment."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "installment payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know about my "
+    }, {
+      "text": "installment payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about my "
+    }, {
+      "text": "installment payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "installment payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "installment payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my current "
+    }, {
+      "text": "deferred payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know about my current "
+    }, {
+      "text": "deferred payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about my "
+    }, {
+      "text": "deferred payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "deferred payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "deferred payment plan",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know about my "
+    }, {
+      "text": "balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about my "
+    }, {
+      "text": "balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " of "
+    }, {
+      "text": "50$",
+      "parameterId": "e_Amount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "balance",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "balance due",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know about my "
+    }, {
+      "text": "balance due",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about my "
+    }, {
+      "text": "balance due",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "balance due",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "balance due",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "current amount",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " of "
+    }, {
+      "text": "50$",
+      "parameterId": "e_Amount"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "current amount",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know about my "
+    }, {
+      "text": "current amount",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about my "
+    }, {
+      "text": "current amount",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "current amount",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "current amount",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "Outstanding bill",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "Outstanding bill.",
+      "parameterId": "e_AmountName"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "Outstanding bill",
+      "parameterId": "e_AmountName"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 2,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "minimum balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " that I owe."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know about my "
+    }, {
+      "text": "minimum amount",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " to pay."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling about my "
+    }, {
+      "text": "past due amount",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "late balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " of "
+    }, {
+      "text": "50"
+    }, {
+      "text": "$"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to talk about my "
+    }, {
+      "text": "late balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to check on my "
+    }, {
+      "text": "unpaid balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "overdue balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": " of "
+    }, {
+      "text": "50"
+    }, {
+      "text": "$"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have a question about my "
+    }, {
+      "text": "overdue balance",
+      "parameterId": "e_AmountName",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

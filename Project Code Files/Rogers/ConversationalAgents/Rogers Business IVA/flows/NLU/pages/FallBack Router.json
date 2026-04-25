@@ -1,0 +1,25 @@
+{
+  "name": "0eaabb3f-d4bb-4d2d-8f96-9bd76bb4e376",
+  "displayName": "FallBack Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fallbackReason = \"GlobalAgentRequest\" OR $session.params.fallbackReason = \"NLUMainMenu\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "BOMM-MM/GAR",
+    "name": "b0f26f65-9678-4e3f-a4db-b6dc64bc28ee"
+  }, {
+    "condition": "$session.params.fallbackReason = \"MainMenuAgentRequest\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "BOMM-MMAR",
+    "name": "9b87275a-efdf-48d9-b038-8a9c2ad63144"
+  } ]
+}

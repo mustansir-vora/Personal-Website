@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1092148552:1708938735463" name="AGENT_CUST_DNIS_CHECK" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.BW_BP_Agent_Cust_DNIS_Check_BC</source>
+</config>
+</decision>

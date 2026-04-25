@@ -1,0 +1,117 @@
+name: Sub Deploy Node Modules
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+
+      git_tag:
+        required: true
+        type: string
+
+      runner_label:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  Deploy-NodeModules:
+    name: Sub-Deploy Node Package - ${{ inputs.environment }}
+    runs-on: ${{ inputs.runner_label }}
+    environment: ${{ inputs.environment }}
+
+    env:
+      PROJECT_ID: ${{ vars.PROJECT_ID }}
+
+    steps:
+      - name: Validate Deploy Authorization
+        id: auth
+        run: |
+
+          USER="${{ github.actor }}"
+          ENV="${{inputs.environment}}"
+          ALLOWED="${{ vars.WORKFLOW_EXECUTORS }}"
+
+          echo "Triggered by: $USER"
+          echo "Environment: $ENV"
+
+          AUTH_STATUS="authorized"
+
+          if [ "$ENV" = "Prod" ]; then
+           if [[ ",$ALLOWED," != *",$USER,"* ]]; then
+             echo "❌ User $USER is not allowed to deploy in Prod"
+             AUTH_STATUS="unauthorized"
+            echo "auth_status=$AUTH_STATUS" >> $GITHUB_OUTPUT
+            exit 1
+           fi
+          fi
+          echo "✔ User authorized"
+          echo "auth_status=$AUTH_STATUS" >> $GITHUB_OUTPUT
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.git_tag }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set GCP Project
+        run: |
+          gcloud config set project "$PROJECT_ID"
+          gcloud config set billing/quota_project "$PROJECT_ID"
+
+      - name: Detect Package Version
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' CommonNodeModules/package.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Publish Node Package
+        id: publish
+        working-directory: CommonNodeModules
+        run: |
+
+          echo "Publishing NodeModules package..."
+
+          if npm run artifactregistry-login && npm publish; then
+            echo "status=Success" >> $GITHUB_OUTPUT
+          else
+            echo "status=Failed" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Publish Summary
+        if: always()
+        run: |
+
+          ENV="${{ inputs.environment }}"
+          PROJECT_ID="${{ vars.PROJECT_ID }}"
+          USER="${{ github.actor }}"
+          VERSION="${{ steps.version.outputs.version }}"
+          STATUS="${{ steps.publish.outputs.status }}"
+
+          echo "## 📦 Node Module Deployment Versions" >> $GITHUB_STEP_SUMMARY
+
+          if [ -n "$STATUS" ]; then
+            echo "| Attribute | Value |" >> $GITHUB_STEP_SUMMARY
+            echo "|-----------|--------|" >> $GITHUB_STEP_SUMMARY
+            echo "| Package Version | \`$VERSION\` |" >> $GITHUB_STEP_SUMMARY
+            echo "| Status | \`$STATUS\` |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          AUTH_STATUS="${{ steps.auth.outputs.auth_status }}"
+
+           if [ -z "$STATUS" ]; then
+              if [[ "$AUTH_STATUS" == "unauthorized" ]]; then
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "🚫 User **$USER** is not allowed to deploy to **$ENV**" >> $GITHUB_STEP_SUMMARY
+            else
+               echo "| No package published | No changes detected or step skipped |" >> $GITHUB_STEP_SUMMARY
+            fi
+           fi

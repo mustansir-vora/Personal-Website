@@ -1,0 +1,37 @@
+{
+  "name": "2c2d7b9b-7bf4-4145-8952-e8d412c82d9d",
+  "displayName": "heardOutage-PassiveCheck",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.heardOutage = true AND $session.params.passiveOutageMessage = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Exit Outage Status",
+    "name": "a77f839c-e109-41f0-9f10-ea6f74f0152c"
+  }, {
+    "condition": "$session.params.heardOutage = true AND $session.params.passiveOutageMessage != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": true
+      }, {
+        "parameter": "savedIntent",
+        "value": ""
+      }, {
+        "parameter": "heardOutage",
+        "value": false
+      }, {
+        "parameter": "isNluFlow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "69886fdc-fe2e-4361-b9b2-63113bd69e00"
+  } ]
+}

@@ -1,0 +1,129 @@
+{
+  "name": "435c1a84-8697-4723-8426-9e24ac5fd9f7",
+  "displayName": "DMBG - InternetSupportDmbg",
+  "form": {
+    "parameters": [ {
+      "displayName": "DMBG-InternetSupportDmbgResponse",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetFlow": "Global Error Handling",
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "LastStdError",
+              "value": "NI"
+            }, {
+              "parameter": "DMBG-InternetSupportDmbgResponse",
+              "value": null
+            } ]
+          },
+          "name": "55e3fc5f-ff33-4644-9616-c120595f33b0"
+        }, {
+          "targetFlow": "Global Error Handling",
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "LastStdError",
+              "value": "NM"
+            }, {
+              "parameter": "DMBG-InternetSupportDmbgResponse",
+              "value": null
+            } ]
+          },
+          "name": "57ab126d-bfa5-4357-ae5e-0214ecc9b78d"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Do you already have internet service?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Avez-vous déjà un service Internet?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.DMBG-InternetSupportDmbgResponse != null AND $session.params.DMBG-InternetSupportDmbgResponse = \"Yes\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "internet-existing"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "DMBG-InternetSupportDmbgResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "280978af-e03e-41f8-93e4-ad169caa61ff"
+  }, {
+    "condition": "$session.params.DMBG-InternetSupportDmbgResponse != null AND $session.params.DMBG-InternetSupportDmbgResponse = \"No\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Merci, continuons. " ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "product-inquiry-business-internet"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "fromDmbg",
+        "value": true
+      }, {
+        "parameter": "DMBG-InternetSupportDmbgResponse",
+        "value": null
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "a634f9dc-afa5-4ee3-a822-0811cf2ff656"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "791c0f5b-e194-4a52-8d08-afba30cdf48b"
+  }, {
+    "targetFlow": "Global Error Handling",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "61539fed-9249-44f8-98ca-3759b8d22d40"
+  } ],
+  "transitionRouteGroups": [ "Route Group - Global Actions" ]
+}

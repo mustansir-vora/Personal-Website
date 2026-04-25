@@ -1,0 +1,15 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "enterprise internet"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Enterprise cable internet"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

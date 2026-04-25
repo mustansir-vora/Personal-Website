@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2052221272:1707818099148" name="SPT_HOST_004" version="6.0.1">
+<config>
+<source type="Class">com.farmers.host.FWS_SRMCTI_API</source>
+</config>
+</decision>

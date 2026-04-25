@@ -1,0 +1,88 @@
+{
+  "name": "1e1ac0d4-78bf-4335-8088-38049f3a6edc",
+  "displayName": "High Risk Check Saved Intent",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = report-a-payment",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please note that reporting a payment will not hold collection activity. This will occur once the payment is received and your balance is updated. " ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Veuillez noter que le fait de signaler un paiement ne suspendra pas les activités de recouvrement. Cela se produira une fois le paiement reçu et votre solde mis à jour." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "passive-categoryNReportMsg"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-categoryNReportMsg"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "targetPage": "PTP Create New",
+    "name": "6ddd4475-3da3-4820-b773-8f955414daee"
+  }, {
+    "condition": "$session.params.savedIntent = payment-arrangement",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please note that reporting or arranging a payment will not hold collection activity. This will occur once payment is received and your balance is updated. " ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Veuillez noter que le fait de signaler ou de prendre une entente de paiement ne suspendra pas les activités de recouvrement. Cela se produira une fois le paiement reçu et votre solde mis à jour." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "passive-categoryNPtpMsg"
+      }, {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-categoryNPtpMsg"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "targetPage": "Category N Menu",
+    "name": "6e3e25e0-d882-48ec-8f4d-a3f1859dff2f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Category N Menu",
+    "name": "5756a52c-4ab0-4749-baa8-0023bc618e81"
+  } ]
+}

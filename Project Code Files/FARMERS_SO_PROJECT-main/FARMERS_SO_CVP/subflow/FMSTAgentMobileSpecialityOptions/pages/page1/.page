@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1272788949:1708930536739" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1708930536739" name="FMSTAgentMobileSpecialityOptions" type="Subflow Start" width="334" x="407" y="8">
+<exit_states>
+<exit_state name="next" target="Element@1657743889:1711547594676"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1072243781:1708930584177" name="SHARED_TRANSFER" type="Subflow Call" width="209" x="460" y="637">
+<subflow_call subflow_name="Transfer" target="Element@31:1711717908563">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1288482559:1711700093987"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1363287505:1708930584177" name="FMAMS_MN_001_VALUE" type="Decision" width="244" x="450" y="465">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@1072243781:1708930584177"/>
+<exit_state name="Specialty Dwelling" target="Element@1072243781:1708930584177"/>
+<exit_state name="NI" target="Element@2099620829:1708930584177"/>
+<exit_state name="NM" target="Element@1072243781:1708930584177"/>
+<exit_state name="ER" target="Element@1072243781:1708930584177"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2099620829:1708930584177" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="164" x="729" y="465">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@159424401:1709112352214" name="FMAMS_MN_001_Call" type="Subflow Call" width="221" x="455" y="358">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709112357008">
+<config>
+<argument_data>
+<data name="MenuID">FMAMS_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1363287505:1708930584177"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1657743889:1711547594676" name="FMST_COLLECT_PL_ONLY" type="Subflow Call" width="247" x="447" y="126">
+<subflow_call subflow_name="FmstCollectPolicyOnly" target="Element@31:1711790878120">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1711884767:1711547636465"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1711884767:1711547636465" name="PRODUCT_CODE_CHECK" type="Decision" width="245" x="449" y="241">
+<exit_states>
+<exit_state name="Yes" target="Element@1363287505:1708930584177">
+<bendpoint>
+<dim1 x="-170" y="-1"/>
+<dim2 x="-170" y="-225"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-170" y="224"/>
+<dim2 x="-170" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="No" target="Element@159424401:1709112352214"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1288482559:1711700093987" name="Subflow Return_01" type="Subflow Return" width="198" x="804" y="597"/>
+</page>

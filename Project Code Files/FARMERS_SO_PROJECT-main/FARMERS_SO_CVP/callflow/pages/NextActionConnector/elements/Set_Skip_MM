@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@191140206:1732556168885" name="Set_Skip_MM" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Y</setting>
+<setting name="sessNames">S_SKIP_MAIN_MENU</setting>
+</settings>
+</config>
+</action_element>

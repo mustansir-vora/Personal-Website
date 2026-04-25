@@ -1,0 +1,228 @@
+{
+  "name": "2b5cc2c9-94f6-4052-a82d-911ad9b802aa",
+  "displayName": "Phone Number Collection",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.phoneRetryCounter \u003e $session.params.maxPhoneRetries"
+      }, {
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.StdErrorCount = 0",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Please say or enter the 10 digit phone number associated with the account you are calling about." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Veuillez dire ou entrer le numéro de téléphone à 10 chiffres associé au compte pour lequel vous appelez." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I didn't get that. Please say or enter the 10 digit phone number associated with the account you are calling about." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Je suis désolé, je n’ai pas compris. Veuillez dire ou entrer le numéro à 10 chiffres associé au compte pour lequel vous appelez." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I couldn't hear that. Please say or enter the 10 digit phone number associated with the account you are calling about" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Je suis désolé, je ne vous ai pas entendu. Veuillez dire ou entrer le numéro de téléphone associé au compte pour lequel vous appelez." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I still couldn't hear that. Please say or enter the 10 digit phone number associated with the account you are calling about" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Je suis désolé, je ne vous entends toujours pas. Veuillez dire ou entrer le numéro de téléphone associé au compte pour lequel vous appelez." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I still didn't get that. Please say or enter the 10 digit phone number associated with the account you are calling about." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Je suis désolé, je ne comprends toujours pas. Veuillez dire ou entrer le numéro de téléphone associé au compte pour lequel vous appelez." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+            
+            } ]
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "PhoneNumberMn-Digit",
+    "condition": "$session.params.phoneNumber != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ani",
+        "value": "$sys.func.SUBSTITUTE($session.params.phoneNumber, \"\\s+\", \"\")"
+      }, {
+        "parameter": "ani",
+        "value": "$sys.func.SUBSTITUTE($session.params.ani, \"-\", \"\")"
+      }, {
+        "parameter": "reportingVar_inputedPhoneNumber",
+        "value": "$session.params.ani"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "callerIdType",
+        "value": "phone"
+      } ]
+    },
+    "targetPage": "Confirm Phone Number",
+    "name": "47a60d67-f57c-49c2-8173-29feb84cf0e2"
+  }, {
+    "intent": "PhoneNumberMn-Digit",
+    "condition": "$session.params.phoneNumber = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "phoneRetryCounter",
+        "value": "$sys.func.ADD($session.params.phoneRetryCounter,1)"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "0f5b8e4a-1b20-4316-91ac-c62e47082199"
+  }, {
+    "intent": "PhoneNumberMn-NewCustomer",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneRetryCounter",
+        "value": 0
+      }, {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "27ba0bea-9286-4ebb-98b6-ccb0e818cbf7"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "1dad3a71-81ea-45c6-ad9e-6038d62b7034"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "3d67bca9-8951-4a9f-85d8-633b5fde447b"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "2ee5a48e-869c-40f1-861b-5a0c19273992"
+  }, {
+    "condition": "$session.params.phoneRetryCounter \u003e $session.params.maxPhoneRetries",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Max Phone Retry",
+    "name": "7d640e0e-9bc0-434f-b298-1961b3d9f17a"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "phoneRetryCounter",
+        "value": "$sys.func.ADD($session.params.phoneRetryCounter,1)"
+      } ]
+    },
+    "name": "0dbfaf32-64fd-4390-9cf7-fcf8c0b6225d"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "phoneRetryCounter",
+        "value": "$sys.func.ADD($session.params.phoneRetryCounter,1)"
+      } ]
+    },
+    "name": "ef7e2f9f-397e-4ee3-bd0d-52f8d8c3a09a"
+  } ]
+}

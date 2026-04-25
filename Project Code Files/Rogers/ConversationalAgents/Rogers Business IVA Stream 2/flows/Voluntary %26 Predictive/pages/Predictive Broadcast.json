@@ -1,0 +1,21 @@
+{
+  "name": "ca082021-c5d4-4b17-83a4-401dace71a02",
+  "displayName": "Predictive Broadcast",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "broadCastId",
+        "value": "$session.params.broadCastId4"
+      } ]
+    },
+    "targetFlow": "Broad Cast",
+    "name": "9c65287d-e379-4ea0-8aa9-93da8f55e452"
+  } ]
+}

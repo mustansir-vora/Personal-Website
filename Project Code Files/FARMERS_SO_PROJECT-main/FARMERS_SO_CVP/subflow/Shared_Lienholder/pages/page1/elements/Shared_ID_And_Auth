@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@865442859:1707993094655" name="Shared_ID_And_Auth" version="6.0.1">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1712157488258">
+<config/>
+</subflow_call>
+</connector>

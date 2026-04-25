@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1028182887:1707392990326" name="SMM_MN_003_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.GET_SMM_MN_003</source>
+</config>
+</decision>

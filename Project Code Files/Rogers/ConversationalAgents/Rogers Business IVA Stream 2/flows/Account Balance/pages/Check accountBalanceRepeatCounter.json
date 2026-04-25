@@ -1,0 +1,25 @@
+{
+  "name": "1ce16555-fa13-40ed-b007-c026b656c021",
+  "displayName": "Check accountBalanceRepeatCounter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$flow.accountBalanceRepeatCounter = 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play accountBalanceOnline",
+    "name": "6a15532d-42f3-4cbc-bdef-3f98555d863d"
+  }, {
+    "condition": "$flow.accountBalanceRepeatCounter \u003c 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play repeat",
+    "name": "3a9b8ff6-d64d-4742-b263-06894216d616"
+  } ]
+}

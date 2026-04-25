@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1032711835:1708937808822" name="FMST_AGENT_MAIN_MENU" version="6.0.1">
+<subflow_call subflow_name="FmstAgentMainMenu" target="Element@31:1711718736470">
+<config>
+<input_data>
+<data name="RETURN_VALUE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

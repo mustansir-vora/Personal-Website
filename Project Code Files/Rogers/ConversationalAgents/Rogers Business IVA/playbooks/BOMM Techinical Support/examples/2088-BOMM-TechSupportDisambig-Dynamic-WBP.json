@@ -1,0 +1,46 @@
+{
+  "name": "d525f2d1-3a66-4c7b-b91f-c68d79f0be3c",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about?You can say Internet,Tv, Mobile,Business phone"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Business phone"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Business phone"
+      },
+      "outputActionParameters": {
+        "result": "wireless-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "productLabelMixEn": "Wireless Internet,TV,Tablet,Wireless Business Phone",
+      "serviceCategoryMixEn": "Internet,Tv, Mobile,Business phone",
+      "serviceCategoryMixLength": "4"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Business phone",
+      "savedIntent": "wireless-support"
+    }
+  },
+  "displayName": "2088-BOMM-TechSupportDisambig-Dynamic-WBP",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 215,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

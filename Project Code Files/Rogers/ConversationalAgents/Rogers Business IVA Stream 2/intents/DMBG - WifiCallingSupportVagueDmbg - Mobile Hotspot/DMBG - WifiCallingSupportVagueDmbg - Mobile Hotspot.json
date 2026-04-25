@@ -1,0 +1,7 @@
+{
+  "name": "0832ad32-dd8e-41b6-9693-dd93599ea34e",
+  "displayName": "DMBG - WifiCallingSupportVagueDmbg - Mobile Hotspot",
+  "priority": 500000,
+  "numTrainingPhrases": 2,
+  "dtmfPattern": "1"
+}

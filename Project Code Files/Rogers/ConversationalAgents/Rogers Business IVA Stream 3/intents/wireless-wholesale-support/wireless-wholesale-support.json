@@ -1,0 +1,7 @@
+{
+  "name": "9484db05-6450-4e48-bace-82b323feaa44",
+  "displayName": "wireless-wholesale-support",
+  "priority": 500000,
+  "description": "Handle calls specific to T2 wireless wholesale",
+  "numTrainingPhrases": 14
+}

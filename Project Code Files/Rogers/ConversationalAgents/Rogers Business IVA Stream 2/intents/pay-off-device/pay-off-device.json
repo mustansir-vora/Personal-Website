@@ -1,0 +1,7 @@
+{
+  "name": "ddb165ee-f19e-422b-811a-ef835e4bf127",
+  "displayName": "pay-off-device",
+  "priority": 500000,
+  "description": "Handles requests to pay off the remaining balance on a financed device.",
+  "numTrainingPhrases": 53
+}

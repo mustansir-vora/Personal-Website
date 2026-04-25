@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hotevent id="Element@1139303846:1741075926548" name="FAILURE_ASR_HT" version="6.0.1">
+<config>
+<event name="error.com.cisco.resource.failure.asr">
+<class>com.farmers.global.VXMLError_Event</class>
+<has_exit_state/>
+</event>
+</config>
+</hotevent>

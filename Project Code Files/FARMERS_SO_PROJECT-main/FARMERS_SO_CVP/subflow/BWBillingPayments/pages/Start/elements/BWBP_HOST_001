@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@826074415:1708938735463" name="BWBP_HOST_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.host.BW_BillPayments</source>
+</config>
+</decision>

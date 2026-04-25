@@ -1,0 +1,32 @@
+{
+  "name": "ef14d490-8907-436a-ae5b-4e967a31aeb8",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "is_ani_in_wireless_subscriptions",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "result": "false"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "after customer is identified",
+    "actionParameters": {
+      "customerIdentified": "false"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "after condition chceks",
+    "actionParameters": {
+      "aniNotFound": "true"
+    }
+  },
+  "displayName": "CustomerIdentified_Positive_Ani_NotFound",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 107,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@815819470:1708931034617" name="Quotes" version="6.0.1">
+<element height="55" id="Element@2091758442:1708931034617" name="QUOTES" type="Page Entry" width="117" x="185" y="229">
+<exit_states>
+<exit_state name="next" target="Element@394037890:1708931260863"/>
+</exit_states>
+</element>
+<element height="55" id="Element@646978045:1708931260863" name="FMAA_MN_004_VALUE" type="Decision" width="230" x="466" y="451">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@1119190008:1708931260863"/>
+<exit_state name="Specialty Dwelling" target="Element@1119190008:1708931260863"/>
+<exit_state name="Motorcycle" target="Element@1119190008:1708931260863"/>
+<exit_state name="Motor Home" target="Element@1119190008:1708931260863"/>
+<exit_state name="Off Road Vehicle" target="Element@1119190008:1708931260863"/>
+<exit_state name="NI" target="Element@1512942280:1710838288550"/>
+<exit_state name="NM" target="Element@21980093:1710997096685"/>
+<exit_state name="ER" target="Element@21980093:1710997096685"/>
+<exit_state name="Representative" target="Element@21980093:1710997096685"/>
+</exit_states>
+</element>
+<element height="55" id="Element@822424238:1708931260863" name="S_ID_AUTH_7" type="Subflow Call" width="167" x="480" y="130">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1711718098708">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@394037890:1708931260863"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1119190008:1708931260863" name="STATE_DISAMBIGUATION" type="Subflow Call" width="251" x="455" y="564">
+<subflow_call subflow_name="StateDisambiguation" target="Element@31:1711718103057">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1733663295:1710837970107"/>
+</exit_states>
+</element>
+<element height="55" id="Element@394037890:1708931260863" name="PRODUCT_CODE_CHECK_2" type="Decision" width="262" x="450" y="232">
+<exit_states>
+<exit_state name="YES" target="Element@1119190008:1708931260863">
+<bendpoint>
+<dim1 x="246" y="0"/>
+<dim2 x="247" y="-332"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="247" y="330"/>
+<dim2 x="248" y="-2"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@89938034:1709112559597"/>
+<exit_state name="ER" target="Element@89938034:1709112559597">
+<bendpoint>
+<dim1 x="45" y="60"/>
+<dim2 x="55" y="-53"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@89938034:1709112559597" name="FMAA_MN_004_Call" type="Subflow Call" width="207" x="468" y="345">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709112563037">
+<config>
+<argument_data>
+<data name="MenuID">FMAA_MN_004</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@646978045:1708931260863"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1733663295:1710837970107" name="FMAA_ADM_010" type="Decision" width="184" x="485" y="684">
+<exit_states>
+<exit_state name="SU" target="Element@691682087:1711890328572">
+<bendpoint>
+<dim1 x="3" y="98"/>
+<dim2 x="2" y="-99"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@691682087:1711890328572"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1512942280:1710838288550" name="HANGUP_ENTRY" type="Page Connector" width="181" x="218" y="452">
+<page_connector target="Element@1442140135:1710837788576">HANGUP_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@21980093:1710997096685" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="82" y="657">
+<page_connector target="Element@895034654:1710837811751">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@691682087:1711890328572" name="GDF_RETURN_CHECK" type="Decision" width="217" x="470" y="881">
+<exit_states>
+<exit_state name="Mobile Home" target="Element@21980093:1710997096685">
+<bendpoint>
+<dim1 x="-246" y="-74"/>
+<dim2 x="141" y="73"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Specialty Dwelling" target="Element@21980093:1710997096685">
+<bendpoint>
+<dim1 x="-474" y="-19"/>
+<dim2 x="-87" y="128"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motorcycle" target="Element@21980093:1710997096685">
+<bendpoint>
+<dim1 x="-249" y="-206"/>
+<dim2 x="138" y="-59"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Motor Home" target="Element@21980093:1710997096685">
+<bendpoint>
+<dim1 x="-296" y="17"/>
+<dim2 x="91" y="164"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Off Road Vehicle" target="Element@21980093:1710997096685">
+<bendpoint>
+<dim1 x="-173" y="-123"/>
+<dim2 x="214" y="24"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@21980093:1710997096685">
+<bendpoint>
+<dim1 x="-226" y="-19"/>
+<dim2 x="161" y="128"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1553387912:1713540511830" name="Entry_01" type="Page Entry" width="117" x="476" y="9">
+<exit_states>
+<exit_state name="next" target="Element@822424238:1708931260863"/>
+</exit_states>
+</element>
+</page>

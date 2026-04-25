@@ -1,0 +1,41 @@
+{
+  "name": "16ee39e5-5516-40d9-8f5d-f0ea6ea6e3ec",
+  "displayName": "Single Wireless Subscription 2?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numberOfWireless = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "confirmSubscription"
+      } ]
+    },
+    "targetPage": "Start Reusable Phone Number",
+    "name": "f411c6cf-3c4e-4dc2-ae61-a079fe9b27e4"
+  }, {
+    "condition": "$session.params.numberOfWireless = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "confirmSubscriptionResult",
+        "value": "different_phone"
+      } ]
+    },
+    "targetPage": "Confirm Subscription Router",
+    "name": "fa73cd1a-a50a-4ad6-b078-e11e7ab6223b"
+  }, {
+    "condition": "$session.params.numberOfWireless \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reusablePhoneNumberCalledFrom",
+        "value": "confirmSubscription"
+      } ]
+    },
+    "targetPage": "Start Reusable Phone Number",
+    "name": "6a2e747e-8c2a-4063-8043-ffb0956afe0e"
+  } ]
+}

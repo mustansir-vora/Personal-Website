@@ -1,0 +1,31 @@
+{
+  "name": "06a6028a-7bff-4f9b-98c2-15f8975c7e1d",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say 'advantage voice', 'mobile phones', 'high speed internet', 'television services', or 'business phone"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to go for main menu"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "true",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "userInputBMTS": "mainmenu"
+    }
+  },
+  "displayName": "2086-BOMM-Bus-TechSupportDisambig-Mainmenu",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 139,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

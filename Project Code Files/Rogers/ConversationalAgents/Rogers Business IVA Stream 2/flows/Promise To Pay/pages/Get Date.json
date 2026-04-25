@@ -1,0 +1,25 @@
+{
+  "name": "82d84a80-cff2-42a4-966c-46037399d840",
+  "displayName": "Get Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = payment-arrangement",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get PTP Date",
+    "name": "57211bb9-5e49-4390-9d98-21bc377b9c15"
+  }, {
+    "condition": "$session.params.savedIntent = report-a-payment",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Report Date",
+    "name": "a73e79f5-fa5a-41cf-9d35-2c73c5ceedfd"
+  } ]
+}

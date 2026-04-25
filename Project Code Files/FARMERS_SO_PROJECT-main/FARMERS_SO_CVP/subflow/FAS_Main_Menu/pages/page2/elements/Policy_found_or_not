@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@368964486:1710154377967" name="Policy_found_or_not" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Policy_found_or_not" default_exit_state="Policy_Not_Found">
+        <exit_state name="Policy_found" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_MULESOFT_POLICY_FOUND" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

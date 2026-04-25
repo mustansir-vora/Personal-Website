@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1017351741:1708931979363" name="ACH or Credit debit card" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Payment method is ACH or Credit debit card">
+        <exit_state name="ACH" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FROM_ACH1" />
+                </data>
+                <constant_string value="Yes" />
+            </string>
+        </exit_state>
+        <exit_state name="Credit/Debit Card" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FROM_CREDITORDEBIT" />
+                </data>
+                <constant_string value="Yes" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

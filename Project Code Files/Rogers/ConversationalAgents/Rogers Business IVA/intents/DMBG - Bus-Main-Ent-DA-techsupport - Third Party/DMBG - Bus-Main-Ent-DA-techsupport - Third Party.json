@@ -1,0 +1,7 @@
+{
+  "name": "a4e97560-eded-4eb8-84c5-77b75b13bb83",
+  "displayName": "DMBG - Bus-Main-Ent-DA-techsupport - Third Party",
+  "priority": 500000,
+  "numTrainingPhrases": 4,
+  "dtmfPattern": "2"
+}

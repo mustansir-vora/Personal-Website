@@ -1,0 +1,26 @@
+{
+  "name": "2d7e7556-839c-49c0-9827-92e3433aa0e0",
+  "displayName": "Start Enter Pin",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Pin",
+    "name": "ef99c914-07e0-48e3-a165-c9f104d5925a"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Collect Pin",
+    "event": "test",
+    "triggerFulfillment": {
+    
+    },
+    "name": "0ae353bb-f73c-44ad-81a0-b02d32547a58"
+  } ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "c63db169-a5ce-45a1-bf52-bb541ad0a543",
+  "displayName": "PTP Change 2nd Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.changeSecondAmount",
+      "value": false
+    }, {
+      "parameter": "updateSecondPaymentAmount",
+      "value": "$sys.func.MINUS($sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance), $sys.func.TO_NUMBER($session.params.firstPromiseAmount))"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpAmount = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.changeSecondAmount",
+        "value": true
+      } ]
+    },
+    "targetPage": "Call Ask Amount",
+    "name": "2d45f22f-6a15-48fd-a9d1-940e7dac8bbc"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Second Install Check Collected Amount",
+    "name": "473df992-606e-46c3-86b9-ebb1a8e54fb3"
+  } ]
+}

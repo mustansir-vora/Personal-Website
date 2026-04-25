@@ -1,0 +1,65 @@
+# Python-generated files
+__pycache__/
+*.py[ocd]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+.venv/
+localenv/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+scraper.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Pyre type checker
+.pyre/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Output files
+tender_data_*.csv
+tender_data_preview.csv
+
+# Lock and metadata files
+uv.lock
+python.lock
+
+# Misc
+*.log
+
+# Git
+.git/

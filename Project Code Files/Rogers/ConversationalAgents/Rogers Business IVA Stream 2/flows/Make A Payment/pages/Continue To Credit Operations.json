@@ -1,0 +1,25 @@
+{
+  "name": "923a9d92-6483-4d5f-9486-b67b05bb48d5",
+  "displayName": "Continue To Credit Operations",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "CC Operations",
+    "name": "c7605a77-f008-44ae-bc1e-3f814b078206"
+  }, {
+    "condition": "$session.params.validCCOperation = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Process Payment",
+    "name": "34f6855a-ab6b-4969-8991-659552da5744"
+  } ]
+}

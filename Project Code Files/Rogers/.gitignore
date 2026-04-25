@@ -1,0 +1,5 @@
+# Ignore everything in every node_modules
+node_modules/
+
+.env
+*.tar

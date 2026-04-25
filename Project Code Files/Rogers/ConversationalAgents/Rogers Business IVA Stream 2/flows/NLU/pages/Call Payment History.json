@@ -1,0 +1,15 @@
+{
+  "name": "0fdbc341-420b-4db2-ad19-041de516ba15",
+  "displayName": "Call Payment History",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Payment History",
+    "name": "5896ea58-6fc7-4feb-91bd-c655a27adf60"
+  } ]
+}

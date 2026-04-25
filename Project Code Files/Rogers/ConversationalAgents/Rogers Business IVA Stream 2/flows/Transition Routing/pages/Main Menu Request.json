@@ -1,0 +1,27 @@
+{
+  "name": "7741ae3e-c832-4f97-b759-42b90ba297d5",
+  "displayName": "Main Menu Request",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": false
+      }, {
+        "parameter": "returnToNLU",
+        "value": true
+      }, {
+        "parameter": "savedIntent",
+        "value": null
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "cd02d7f8-043c-458e-a494-51c076fcb662"
+  } ]
+}

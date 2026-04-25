@@ -1,0 +1,25 @@
+{
+  "name": "7d8aacdc-cefc-4925-a184-072c5d2bce01",
+  "displayName": "Is Change Entity Known",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.changeEntity != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Change Entity",
+    "name": "f6ad785f-7ebe-493d-91b7-859aebc8e93d"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check First Or Single Installment",
+    "name": "feb533ed-00bd-484f-b159-e05f197ff318"
+  } ]
+}

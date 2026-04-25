@@ -1,0 +1,18 @@
+{
+  "name": "1cd08670-123a-4d76-adcd-82222d9ff083",
+  "displayName": "Intent Group - self-serve-wireless-lost-stolen",
+  "transitionRoutes": [ {
+    "intent": "lost-or-stolen-device",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "lost-or-stolen-device"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "6c94cf8e-089f-4092-894b-9dae28864464"
+  } ]
+}

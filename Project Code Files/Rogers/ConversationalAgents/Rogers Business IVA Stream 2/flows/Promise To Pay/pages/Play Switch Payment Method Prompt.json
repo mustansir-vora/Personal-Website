@@ -1,0 +1,112 @@
+{
+  "name": "9555e7ac-2871-446a-9e93-7175ae41340d",
+  "displayName": "Play Switch Payment Method Prompt",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.collectedPtpMethod = CC",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "It looks like we need to revise your installment date to accommodate your switch from a bank payment to credit card." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Il semble que nous devions réviser la" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "date de votre versement afin de tenir" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "compte de votre changement de" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "paiement bancaire vers un paiement" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "par carte de crédit." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "It looks like we need to revise your installment date to accommodate your switch from a credit card payment to bank payment." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Il semble que nous devions réviser la" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "date de votre versement afin de tenir" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "compte de votre changement de" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "paiement par carte de crédit vers un" ]
+            },
+            "languageCode": "fr-ca"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "paiement bancaire." ]
+            },
+            "languageCode": "fr-ca"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "changePTPDate",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Offer Latest Install Days",
+    "name": "3255cae1-719b-41bf-9120-e3e72fdfeaf2"
+  } ]
+}

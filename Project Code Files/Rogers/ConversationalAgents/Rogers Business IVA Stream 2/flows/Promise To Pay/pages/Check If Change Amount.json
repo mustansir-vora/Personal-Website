@@ -1,0 +1,31 @@
+{
+  "name": "3b55afcc-78d8-4693-991d-22110c3da83d",
+  "displayName": "Check If Change Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpChangeAmount = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Change 1st Amount",
+    "name": "94b566ef-e8f6-4b6f-81d8-8dd986a5d7b6"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "promiseDate",
+        "value": "$session.params.collectedPtpDate"
+      }, {
+        "parameter": "promiseMethod",
+        "value": "$session.params.collectedPtpMethod"
+      } ]
+    },
+    "targetPage": "PTP Confirmation",
+    "name": "b543fb1d-1189-4f0b-b1cb-a31f26b8f90d"
+  } ]
+}

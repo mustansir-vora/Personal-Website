@@ -1,0 +1,27 @@
+{
+  "name": "78a14331-d2a5-4131-8cd1-1ad55b07d7c1",
+  "displayName": "Result",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.paymentAmount \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Increment Get Amount Counter",
+    "name": "c34e2e47-a328-4bba-a934-ed214c4d88d3"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Invalid Amount Name",
+    "name": "2abc8085-db91-4dc8-9912-dcb2914b8753",
+    "description": "Every other condition where No Input or Match. Wondering if this should be taken one notch up into the individual payment capturing area"
+  } ],
+  "description": "Max Error - 1538 Check happens a layer up in Get PTP Amount, Get Amount and Get Report Amount, where if there is no match we are pushing to initialize failure and sending back"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "28c552bd-0829-44d7-9673-978cf68e574f",
+  "displayName": "TwoAccountMn-Digit",
+  "priority": 500000,
+  "description": "This will trigger when user says last four digit of account number ",
+  "numTrainingPhrases": 64,
+  "dtmfPattern": "2"
+}

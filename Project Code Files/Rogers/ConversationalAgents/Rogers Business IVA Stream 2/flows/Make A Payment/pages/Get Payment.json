@@ -1,0 +1,25 @@
+{
+  "name": "6404e53c-3382-4c8c-8a7a-73ceee20c033",
+  "displayName": "Get Payment",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceAttempted",
+        "value": true
+      }, {
+        "parameter": "attemptedSSName",
+        "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.attemptedSSName, \", \"), \"active-makeAPayment\")"
+      } ]
+    },
+    "targetPage": "Initialize Get Payment ",
+    "name": "52117825-fa8a-435a-acd3-e36f7699b7df"
+  } ],
+  "description": "Get Payment Flow"
+}

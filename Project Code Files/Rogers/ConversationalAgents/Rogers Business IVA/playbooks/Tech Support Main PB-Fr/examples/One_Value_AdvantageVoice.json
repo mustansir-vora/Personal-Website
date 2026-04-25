@@ -1,0 +1,47 @@
+{
+  "name": "49384984-5a0b-4eb9-96eb-13a5a82660b8",
+  "actions": [ {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "get_service_category_mix_length",
+      "inputActionParameters": {
+        "service": "Voix Avantage"
+      },
+      "outputActionParameters": {
+        "result": "1"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_support_intent",
+      "inputActionParameters": {
+        "service": "Voix Avantage"
+      },
+      "outputActionParameters": {
+        "result": "wireless-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "If the serviceCategory contains one ",
+    "actionParameters": {
+      "heardBackOffMenu": "false",
+      "productLabelMixFr": "Voix Avantage",
+      "serviceCategoryMixFr": "Voix Avantage"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "If the serviceCategory contains more than one value",
+    "actionParameters": {
+      "product": "Voix Avantage",
+      "savedIntent": "wireless-support",
+      "serviceCategoryMixLength": "1"
+    }
+  },
+  "displayName": "One_Value_AdvantageVoice",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 210,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

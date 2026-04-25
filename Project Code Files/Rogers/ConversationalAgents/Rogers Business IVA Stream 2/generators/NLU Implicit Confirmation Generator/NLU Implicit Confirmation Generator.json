@@ -1,0 +1,26 @@
+{
+  "name": "658a6fa6-fef0-494d-8091-c62bbd1cb85d",
+  "displayName": "NLU Implicit Confirmation Generator",
+  "placeholders": [ {
+    "id": "savedUtterance",
+    "name": "savedUtterance"
+  }, {
+    "id": "savedIntent",
+    "name": "savedIntent"
+  }, {
+    "id": "implicitTriesCounter",
+    "name": "implicitTriesCounter"
+  }, {
+    "id": "erType",
+    "name": "erType"
+  } ],
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 128,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-2.5-flash"
+  }
+}

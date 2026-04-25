@@ -1,0 +1,32 @@
+{
+  "name": "b2d78578-081f-4919-99ff-4a3ceb71d03f",
+  "displayName": "Call From",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = payment-arrangement",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get PTP Amount",
+    "name": "57f8c9ad-92e8-467d-8cc2-d0c7e28cf5c6"
+  }, {
+    "condition": "$session.params.savedIntent = report-a-payment",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Report Amount",
+    "name": "d8ce750c-eb07-41d6-8f1d-7f3166276305"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Amount",
+    "name": "568104d3-2e89-4bbf-8211-70a19674ccd5"
+  } ]
+}

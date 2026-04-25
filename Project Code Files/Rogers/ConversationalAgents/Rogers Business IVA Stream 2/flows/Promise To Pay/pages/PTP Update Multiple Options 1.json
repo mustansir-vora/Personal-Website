@@ -1,0 +1,192 @@
+{
+  "name": "253e405a-f879-45ef-b057-0c27adc68c09",
+  "displayName": "PTP Update Multiple Options 1",
+  "form": {
+    "parameters": [ {
+      "displayName": "ptpUpdateMultipleSelection",
+      "required": true,
+      "entityType": "@e_PTPChangeFirstInstall",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Dites « payer maintenant » ou appuyez sur le \r\n1; « modifier le montant » ou appuyez sur le 2; « modifier la date » ou \r\nappuyez sur le 3; « modifier le mode de paiement » ou appuyez sur le 4; « \r\nentendre les détails du prochain versement » ou appuyez sur le 5; ou « \r\nmenu principal » ou appuyez sur le 9" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Say: pay now, or press 1. change the amount, or press 2. change the date, or press 3. change the payment method, or press 4. hear the next installment details, or press 5. or, main menu, or press 9. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "74d1fc74-f9f2-4159-aedc-f638159ec19e"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Dites « payer maintenant » ou appuyez sur le \r\n1; « modifier le montant » ou appuyez sur le 2; « modifier la date » ou \r\nappuyez sur le 3; « modifier le mode de paiement » ou appuyez sur le 4; « \r\nentendre les détails du prochain versement » ou appuyez sur le 5; ou « \r\nmenu principal » ou appuyez sur le 9" ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "Say: pay now, or press 1. change the amount, or press 2. change the date, or press 3. change the payment method, or press 4. hear the next installment details, or press 5. or, main menu, or press 9." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "fe93162d-e507-414b-94c1-89922a91fed4"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour payer maintenant, appuyez sur le 1. Pour \r\nmodifier le montant, appuyez sur le 2. Pour modifier la date, appuyez sur \r\nle 3. Pour modifier le mode de paiement, appuyez sur le 4. Pour entendre \r\nles détails du prochain versement, appuyez sur le 5. Pour revenir au menu \r\nprincipal, appuyez sur le 9. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To pay now, press 1. Change the amount, press 2. Change the date, press 3. Change the payment method, press 4. Hear the next installment details, press 5. Go back to the main menu, press 9." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "30e2b308-cb6a-4fa6-b696-5e9c31b5a07d"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Pour payer maintenant, appuyez sur le 1. Pour \r\nmodifier le montant, appuyez sur le 2. Pour modifier la date, appuyez sur \r\nle 3. Pour modifier le mode de paiement, appuyez sur le 4. Pour entendre \r\nles détails du prochain versement, appuyez sur le 5. Pour revenir au menu \r\nprincipal, appuyez sur le 9. " ]
+              },
+              "languageCode": "fr-ca"
+            }, {
+              "text": {
+                "text": [ "To pay now, press 1. Change the amount, press 2. Change the date, press 3. Change the payment method, press 4. Hear the next installment details, press 5. Go back to the main menu, press 9." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6a2ee164-5c5b-48ab-9a43-a276c7346b0f"
+        }, {
+          "targetPage": "PTP Fail",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "fdcb0f17-d3f1-4c97-baaf-87186218dd25"
+        }, {
+          "targetPage": "PTP Fail",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "606a7290-fd7d-4475-99d6-5bc7472ee2f5"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Que préférez-vous ? Vous pouvez payer \nmaintenant, modifier le montant, modifier la date, modifier le mode de \npaiement, entendre les détails du prochain versement ou revenir au menu \nprincipal." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Which do you prefer? You can pay now, change the amount, change the date, change the payment method, hear the next installment details, or go back to the main menu. " ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "$session.params.updateMultipleOptions1",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "change-ptp-date",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": "$sys.func.FORMAT_DATE($session.params.changePTPDate, \"yyyy-MM-dd\")"
+      } ]
+    },
+    "targetPage": "Return From PTP Update Multiple Options 1",
+    "name": "c0ac254e-a992-4fa3-a86c-27c1c2cf7dcb"
+  }, {
+    "intent": "change-ptp-amount",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Validate Amount",
+    "name": "0963d718-02e3-41b3-a5bd-c7705d65ab79"
+  }, {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "9aa8e93e-cb82-478a-8aea-064cdc9a328a"
+  }, {
+    "intent": "agent-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "isAgent",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP NLU Return",
+    "name": "d75b0f30-9d3f-45fc-a617-3210c0ddf975"
+  }, {
+    "condition": "$session.params.ptpUpdateMultipleSelection = pay_now",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "selfServiceCompleted",
+        "value": true
+      }, {
+        "parameter": "completedSSName",
+        "value": "passive-multipleInstallmentPtp"
+      } ]
+    },
+    "targetPage": "Go To Make A Payment",
+    "name": "6de479ec-6088-436c-a620-97a21d36af0d"
+  }, {
+    "condition": "$session.params.ptpUpdateMultipleSelection = next_installment",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fromUpdateMultiple",
+        "value": false
+      } ]
+    },
+    "targetPage": "PTP Update Multiple Second Install",
+    "name": "295ae9dd-52ce-4ae2-8a8a-0b8a1af37b03"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "changeEntity",
+        "value": "$session.params.ptpUpdateMultipleSelection"
+      } ]
+    },
+    "targetPage": "Check Update Multiple Change Entity",
+    "name": "723bb5cd-b900-4075-a023-58a0a1063f7c"
+  } ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "67ad0390-2b4f-413e-aac3-a70e63dd343f",
+  "displayName": "Method 1 Check Current Promise Method",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.promiseMethod = CC",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord. J’ai modifié le mode \r\nde paiement pour un paiement \r\npar banque. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay. I've switched that over to a bank payment for you. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "PB"
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 1",
+    "name": "e9891d47-e8d9-4839-a14d-e6a62aaccccf"
+  }, {
+    "condition": "$session.params.promiseMethod = PB",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord. J’ai modifié le mode \r\nde paiement pour un paiement \r\npar carte de crédit." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay. I've switched that over to a credit card payment for you." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "CC"
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 1",
+    "name": "1dbb0609-4203-4fd8-b158-bedcf6b0c0fe"
+  } ]
+}

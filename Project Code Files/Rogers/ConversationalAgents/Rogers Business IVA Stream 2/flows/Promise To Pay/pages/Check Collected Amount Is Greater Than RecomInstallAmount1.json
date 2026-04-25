@@ -1,0 +1,25 @@
+{
+  "name": "a980ffef-f0c2-4cf0-ab0e-b8321fdab0dc",
+  "displayName": "Check Collected Amount Is Greater Than RecomInstallAmount1",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003e= $sys.func.TO_NUMBER($session.params.api.response.ptp.recomInstallAmount1)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Offer Additional Payment",
+    "name": "baaa6ec6-23b3-4305-a59b-a12a57369626"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Best Offer Transition",
+    "name": "03efc10a-12fc-4191-b459-6ad2f4908b37"
+  } ]
+}

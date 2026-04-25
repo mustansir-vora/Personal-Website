@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@878298200:1708937663812" name="A" version="6.0.1">
+<element height="55" id="Element@1997540132:1708937851026" name="OSPM_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="165" x="530" y="328">
+<exit_states>
+<exit_state name="done" target="Element@1447335780:1709113498897"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1044912231:1708937851026" name="OSPM_ADM_011" type="Decision" width="185" x="522" y="1112">
+<exit_states>
+<exit_state name="ER" target="Element@1905266550:1711893654689"/>
+<exit_state name="SU" target="Element@1905266550:1711893654689"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1045503106:1708937851026" name="OSPM_MN_010_VALUE" type="Decision" width="231" x="513" y="996">
+<exit_states>
+<exit_state name="YES" target="Element@1044912231:1708937851026">
+<bendpoint>
+<dim1 x="18" y="74"/>
+<dim2 x="32" y="-42"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1044912231:1708937851026">
+<bendpoint>
+<dim1 x="-79" y="75"/>
+<dim2 x="-65" y="-41"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NI" target="Element@955025030:1731529131452"/>
+<exit_state name="NM" target="Element@1655034499:1710852378293">
+<bendpoint>
+<dim1 x="302" y="-78"/>
+<dim2 x="-123" y="130"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1346117522:1749650176405"/>
+<exit_state name="NO_SERV_LIC" target="Element@1044912231:1708937851026">
+<bendpoint>
+<dim1 x="163" y="85"/>
+<dim2 x="177" y="-31"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO_SERV_NON_LIC" target="Element@1044912231:1708937851026">
+<bendpoint>
+<dim1 x="-179" y="65"/>
+<dim2 x="-165" y="-51"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@1655034499:1710852378293">
+<bendpoint>
+<dim1 x="240" y="-60"/>
+<dim2 x="-201" y="-74"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1240884054:1708937851026" name="KYC_IDENTIFICATION_CHECK" type="Decision" width="279" x="480" y="136">
+<exit_states>
+<exit_state name="Yes" target="Element@1274037973:1709113500724">
+<bendpoint>
+<dim1 x="-171" y="0"/>
+<dim2 x="-171" y="-760"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-171" y="760"/>
+<dim2 x="-171" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="No" target="Element@1997540132:1708937851026"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1175452934:1708937851026" name="A" type="Page Entry" width="92" x="551" y="17">
+<exit_states>
+<exit_state name="next" target="Element@1240884054:1708937851026"/>
+</exit_states>
+</element>
+<element height="55" id="Element@688090421:1708937851026" name="OSPM_HOST_002" type="Decision" width="190" x="519" y="788">
+<exit_states>
+<exit_state name="ER" target="Element@1274037973:1709113500724"/>
+<exit_state name="SU" target="Element@1274037973:1709113500724"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1447335780:1709113498897" name="OSPM_MN_009_Call" type="Subflow Call" width="208" x="507" y="441">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113535236">
+<config>
+<argument_data>
+<data name="MenuID">OSPM_MN_009</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1576638794:1710852236181"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1274037973:1709113500724" name="OSPM_MN_010_Call" type="Subflow Call" width="208" x="509" y="894">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653752213">
+<config>
+<argument_data>
+<data name="MenuID">OSPM_MN_010</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1045503106:1708937851026"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1826983488:1709115691039" name="WARHEAD_CHECK_2" type="Subflow Call" width="214" x="507" y="694">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1709115695275">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@688090421:1708937851026"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1576638794:1710852236181" name="OSPM_MN_009_VALUE" type="Decision" width="231" x="502" y="558">
+<exit_states>
+<exit_state name="Successful" target="Element@1826983488:1709115691039"/>
+<exit_state name="NI" target="Element@1072345981:1731529059760"/>
+<exit_state name="NM" target="Element@1655034499:1710852378293">
+<bendpoint>
+<dim1 x="320" y="58"/>
+<dim2 x="-132" y="-394"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1655034499:1710852378293">
+<bendpoint>
+<dim1 x="270" y="113"/>
+<dim2 x="-182" y="-339"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Unsuccessful" target="Element@1274037973:1709113500724">
+<bendpoint>
+<dim1 x="108" y="48"/>
+<dim2 x="112" y="-288"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Representative" target="Element@521774967:1730259067458"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1655034499:1710852378293" name="S_TRANSFER_ENTRY" type="Page Connector" width="210" x="964" y="1010">
+<page_connector target="Element@1034481077:1710846981544">S_TRANSFER_ENTRY<config/>
+</page_connector>
+</element>
+<element height="55" id="Element@1905266550:1711893654689" name="GDF_RETURN_CHECK_3" type="Decision" width="234" x="516" y="1230">
+<exit_states>
+<exit_state name="YES" target="Element@1655034499:1710852378293"/>
+<exit_state name="NO" target="Element@1655034499:1710852378293"/>
+</exit_states>
+</element>
+<element height="55" id="Element@521774967:1730259067458" name="Copy_7_of_Global_Rep_Handling" type="Decision" width="223" x="828" y="507">
+<exit_states>
+<exit_state name="CONT" target="Element@1274037973:1709113500724"/>
+<exit_state name="TR" target="Element@1655034499:1710852378293"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1072345981:1731529059760" name="Disconnect" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="158" x="244" y="563">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1440276122:1731529059760" name="Disconnect Entry" type="Page Entry" width="160" x="43" y="563">
+<exit_states>
+<exit_state name="next" target="Element@1072345981:1731529059760"/>
+</exit_states>
+</element>
+<element height="55" id="Element@955025030:1731529131452" name="DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="82" x="337" y="1005">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="52" id="Element@1346117522:1749650176405" name="CHECK_HT_TRANSFER" type="Decision" width="169" x="790" y="837">
+<exit_states>
+<exit_state name="YES" target="Element@1655034499:1710852378293"/>
+<exit_state name="NO" target="Element@1655034499:1710852378293">
+<bendpoint>
+<dim1 x="22" y="89"/>
+<dim2 x="-173" y="-85"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

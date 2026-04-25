@@ -1,0 +1,199 @@
+{
+  "name": "d3de3714-9147-4ee9-bedf-036e930d883d",
+  "displayName": "Collect Phone Number",
+  "form": {
+    "parameters": [ {
+      "displayName": "phoneNumberCollection",
+      "required": true,
+      "entityType": "@PhoneNumber",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ " I'm sorry, i couldn't hear that, what number would you like to use?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "51f53d1f-da5c-4f45-8a65-83f27665e92f"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm sorry, i didn't get that, what number would you like to use?\n" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "58beb218-9dd3-497e-b0e6-86e44f6b7a6d"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm sorry, i  still couldn't hear that, tell me the number you would like to use, one digit at a time." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "4e24ec6b-b6dd-4041-a1a8-4420ffba6c77"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ " I'm sorry, i  still didn't get that, tell me the number you would like to use, one digit at a time." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6a3a7155-48a1-4e1e-9ff5-a14d9a4f05a8"
+        }, {
+          "targetPage": "Failure Exit -Reusable Phone",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "phoneNumberCollection",
+              "value": null
+            } ]
+          },
+          "name": "8f9d8166-facb-46e9-a58f-15306cfd9678"
+        }, {
+          "targetPage": "Failure Exit -Reusable Phone",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "phoneNumberCollection",
+              "value": null
+            } ]
+          },
+          "name": "2ab61335-8d0e-4c6c-8804-9866e252c31d"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.retryCount = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "What number would you like to use?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 1 AND $session.params.stdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i couldn't hear that, what number would you like to use?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 1 AND $session.params.stdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i didn't get that, what number would you like to use?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 2 AND $session.params.stdError = \"NI\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i  still couldn't hear that, tell me the number you would like to use, one digit at a time." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.retryCount = 2 AND $session.params.stdError = \"NM\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "I'm sorry, i  still didn't get that, tell me the number you would like to use, one digit at a time." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+      
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "PhoneNumberMn-Digit",
+    "condition": "$session.params.phoneNumber != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Got it",
+    "name": "987efc8d-45aa-4abb-89a7-27cf2ec8dabb"
+  }, {
+    "intent": "ReusablePhoneMn-Don't Know",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phoneNumber",
+        "value": null
+      } ]
+    },
+    "targetPage": "Failure Exit -Reusable Phone",
+    "name": "8febf24d-1f2d-41fa-880c-c86bb1359cde"
+  }, {
+    "condition": "$session.params.phoneNumberCollection != null AND $session.params.retryCount \u003c= 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Got it",
+    "name": "727fc3e6-313a-4fbc-9eb1-e7bd84728cc1"
+  }, {
+    "condition": "$session.params.retryCount \u003e 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Failure Exit -Reusable Phone",
+    "name": "d8530220-8d93-4b8e-92ee-1f02d04cdd08"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": "$sys.func.ADD($session.params.retryCount, 1)"
+      }, {
+        "parameter": "stdError",
+        "value": "NI"
+      } ]
+    },
+    "name": "7befd94e-8ecd-4f81-8162-4ed6bf6c6db9"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "retryCount",
+        "value": "$sys.func.ADD($session.params.retryCount, 1)"
+      }, {
+        "parameter": "stdError",
+        "value": "NM"
+      } ]
+    },
+    "name": "a2ac9777-cd45-4c0b-af87-bf0da2bc92cd"
+  } ],
+  "transitionRouteGroups": [ "Global_Menu_TS" ]
+}

@@ -1,0 +1,194 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "9045669011",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "9012334345",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "9053162277",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "6579875698",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro de portable est "
+    }, {
+      "text": "6578095674",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "5647889012",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "6574326179",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "7687090123",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "mon numéro est "
+    }, {
+      "text": "9057890123",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon numéro de portable est "
+    }, {
+      "text": "4356789012",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro de téléphone est "
+    }, {
+      "text": "3245678901",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "5467901234",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro est "
+    }, {
+      "text": "2134567890",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "numéro de portable "
+    }, {
+      "text": "1098765432",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "mon cellulaire est "
+    }, {
+      "text": "9876543210",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "mon numéro de contact est "
+    }, {
+      "text": "8765432109",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "numéro de cellulaire est "
+    }, {
+      "text": "7654321098",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "numéro de téléphone "
+    }, {
+      "text": "6543210987",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "numéro "
+    }, {
+      "text": "5432109876",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "numéro de contact "
+    }, {
+      "text": "4321098765",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "numéro de cellulaire "
+    }, {
+      "text": "3210987654",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "numéro de portable "
+    }, {
+      "text": "2109876543",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le numéro "
+    }, {
+      "text": "1098765432",
+      "parameterId": "phoneNumber"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

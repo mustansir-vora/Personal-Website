@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@463830237:1715078510035" name="POLICY_BALANCE_CHECK_4" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="POLICY_BALANCE_CHECK_4" default_exit_state="No">
+        <exit_state name="&gt;=0" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_POLICY_BALANCE_GR_THANEQ_ZERO" />
+                </data>
+                <constant_string value="True" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

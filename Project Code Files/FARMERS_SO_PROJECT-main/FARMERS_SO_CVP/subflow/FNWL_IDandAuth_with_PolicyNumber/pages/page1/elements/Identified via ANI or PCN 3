@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@163406106:1732881474952" name="Identified via ANI or PCN 3" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Identified via ANI or PCN 3">
+        <exit_state name="ANI" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FNWL_POLICY_FOUND_VIA_ANI" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+        <exit_state name="Policy" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FNWL_POLICY_FOUND_VIA_POLICY" />
+                </data>
+                <constant_string value="TRUE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

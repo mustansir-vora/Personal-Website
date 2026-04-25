@@ -1,0 +1,60 @@
+{
+  "name": "8c198a2b-3d01-496b-a27f-bc36a99b8be7",
+  "displayName": "Account Confirmed?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.customerIdentification = \"accountConfirmed\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Authentication",
+    "name": "7ac9d570-0ea2-4791-8a97-843956391a5f"
+  }, {
+    "condition": "$session.params.postNLANIConfirm = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLANIConfirm",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre-NLU",
+    "name": "5d8f6588-f799-4d1e-b8fa-9aa95e0c6265"
+  }, {
+    "condition": "$session.params.preNLANIConfirm = true AND $session.params.customerIdentified = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preNLANIConfirm",
+        "value": false
+      }, {
+        "parameter": "authInvoked",
+        "value": false
+      }, {
+        "parameter": "postNLANIConfirm",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Authentication",
+    "name": "d8a5569d-9f27-4bbc-bc28-0cf9c47af8d4"
+  }, {
+    "condition": "$session.params.preNLANIConfirm = true AND $session.params.customerIdentified != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preNLANIConfirm",
+        "value": false
+      }, {
+        "parameter": "postNLANIConfirm",
+        "value": false
+      } ]
+    },
+    "targetPage": "Check ID Type",
+    "name": "1a90ff9f-871b-40ba-9382-c86362bf8068"
+  } ]
+}

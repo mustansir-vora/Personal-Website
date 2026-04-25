@@ -1,0 +1,26 @@
+name: PreValidations
+on:
+  workflow_dispatch:
+  # push: {}
+  # pull_request: {}
+
+run-name: "[${{github.ref_name}}][${{github.actor}}] ${{ github.event.head_commit.message != null && github.event.head_commit.message || 'Manually Triggered' }}"
+
+env:
+  GLOBAL_VAR: 'GLOBAL_VAR Value'
+
+jobs:
+  PreValidations:
+    runs-on: ${{ github.ref_name == 'Prod' && vars.RUNNER_LABEL_PROD || vars.RUNNER_LABEL_DEFAULT }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: PreValidations
+        shell: bash
+        run: python3 -u .github/python/PreValidations.py
+
+
+
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@685750877:1708938326773" name="SCAH_ADM_001" version="6.0.1">
+<config>
+<source type="Class">com.farmers.adminHost.BrandsEPCBrands</source>
+</config>
+</decision>

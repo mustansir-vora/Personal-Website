@@ -1,0 +1,28 @@
+{
+  "name": "3d13c983-d507-4462-a90b-3c77d175bc41",
+  "displayName": "Play Bill Close Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Le paiement est exigible au plus tard le $session.params.api.billingProfile.billingPaymentDetails.billingCycle.billCloseDate" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Payment is due by  $session.params.api.billingProfile.billingPaymentDetails.billingCycle.billCloseDate" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Payment",
+    "name": "4cef27cb-7424-4ff5-b6ab-948399f5ad87"
+  } ]
+}

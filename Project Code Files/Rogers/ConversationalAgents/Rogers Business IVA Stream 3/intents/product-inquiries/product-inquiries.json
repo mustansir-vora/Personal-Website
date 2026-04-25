@@ -1,0 +1,11 @@
+{
+  "name": "c502023c-e28b-4d0e-a04c-bbc16f66fb1f",
+  "displayName": "product-inquiries",
+  "parameters": [ {
+    "id": "number",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "description": "Handles inquiries about any products or service",
+  "numTrainingPhrases": 18
+}

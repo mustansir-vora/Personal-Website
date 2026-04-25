@@ -1,0 +1,41 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "What is the minimum number of days for roaming package?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Looking for roaming  charges per day or per week."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have bundle roaming packages for specific countries or regions?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have roaming packages for certain number of days?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have executives going to "
+    }, {
+      "text": "europe"
+    }, {
+      "text": " "
+    }, {
+      "text": "next week"
+    }, {
+      "text": ", I would like roaming added."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

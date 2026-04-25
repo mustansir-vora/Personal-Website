@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1909028740:1712041737643" name="PromoteToSession_01" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Yes</setting>
+<setting name="sessNames">S_FROM_ACH1</setting>
+</settings>
+</config>
+</action_element>

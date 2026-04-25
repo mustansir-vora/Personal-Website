@@ -1,0 +1,7 @@
+{
+  "name": "3d490b56-2904-4437-8efc-3abda181dfcb",
+  "displayName": "cancel-order",
+  "priority": 500000,
+  "description": "Handles requests to cancel a product or service order before it is completed",
+  "numTrainingPhrases": 50
+}

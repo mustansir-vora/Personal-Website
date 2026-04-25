@@ -1,0 +1,38 @@
+{
+  "name": "cbe42362-229d-421e-8ece-4b96c4806453",
+  "displayName": "Existing PAP",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Votre compte est actuellement configuré pour les paiements automatiques." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Votre compte est actuellement configuré pour les paiements automatiques." ]
+      },
+      "languageCode": "fr"
+    }, {
+      "text": {
+        "text": [ "Your account is currently setup for\nautomatic payments" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your account is currently setup for\nautomatic payments" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Payment Status",
+    "name": "18948011-a7f3-463e-a05c-ff75b41fec3a"
+  } ]
+}

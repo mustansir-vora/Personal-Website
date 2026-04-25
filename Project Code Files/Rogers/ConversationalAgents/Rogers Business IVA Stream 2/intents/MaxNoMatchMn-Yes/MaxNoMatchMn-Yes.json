@@ -1,0 +1,8 @@
+{
+  "name": "4eac8d18-090d-4883-ae9e-527df4ca8553",
+  "displayName": "MaxNoMatchMn-Yes",
+  "priority": 500000,
+  "description": "this will trigger when user says yes/i need help/yeah/go ahead",
+  "numTrainingPhrases": 35,
+  "dtmfPattern": "1"
+}

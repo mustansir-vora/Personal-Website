@@ -1,0 +1,25 @@
+{
+  "name": "0a3f67b3-4cdb-4898-997c-4d377481ec18",
+  "displayName": "Check If PTP Method Is Bank",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Switch From Bank To Card",
+    "name": "16beff09-ca61-4128-840d-95146f9ece7a"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Fail",
+    "name": "2e9868ce-c3af-4e19-a93a-1be3fd0bacc5"
+  } ]
+}

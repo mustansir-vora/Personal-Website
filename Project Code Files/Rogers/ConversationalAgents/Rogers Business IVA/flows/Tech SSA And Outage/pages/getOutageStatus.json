@@ -1,0 +1,144 @@
+{
+  "name": "76de0390-2056-4ba0-b42d-1564882aba32",
+  "displayName": "getOutageStatus",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "getOutages"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"0\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ticketNumber",
+        "value": "$session.params.outages[0].ticketNumber"
+      }, {
+        "parameter": "outageMessage",
+        "value": "$session.params.outages[0].voiceScriptContent"
+      }, {
+        "parameter": "parentCaseId",
+        "value": "$session.params.outages[0].parentCaseId"
+      }, {
+        "parameter": "outageNumber",
+        "value": "$session.params.outages[0].outageNumber"
+      }, {
+        "parameter": "outageCode",
+        "value": "$session.params.outages[0].outageCode"
+      }, {
+        "parameter": "priority",
+        "value": "Medium"
+      }, {
+        "parameter": "postalCode",
+        "value": "$session.params.outages[0].postalCode"
+      } ]
+    },
+    "targetPage": "check Affected Outage",
+    "name": "9a70e339-6072-4bb9-bac3-db2c6cc8696f"
+  }, {
+    "condition": "$session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "check  Passive Message",
+    "name": "44935565-3639-4e7a-867e-ca97027a9399"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "c255cd81-ca82-4664-8541-756687f9b11c"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.bad-request",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "37141cbd-bb47-4add-b8a2-7a55b5795e1e"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.not-found",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "53735e50-0a5d-4c54-b90b-db4524a3c166"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.rejected",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "ea49a67b-75fe-422d-b1d6-5bbd853582ea"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "06666691-d965-4a8c-842b-370928fccb31"
+  }, {
+    "targetFlow": "Tech Wrapper",
+    "event": "webhook.error.unavailable",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "systemError"
+      }, {
+        "parameter": "isPreTransferFlow",
+        "value": true
+      } ]
+    },
+    "name": "e82dd04c-eacc-4877-a2c3-d1b15d860513"
+  } ]
+}

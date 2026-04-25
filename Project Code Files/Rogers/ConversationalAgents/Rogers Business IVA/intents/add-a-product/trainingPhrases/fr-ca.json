@@ -1,0 +1,135 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je me renseigne au sujet de "
+    }, {
+      "text": "la télévision"
+    }, {
+      "text": " satellite pour "
+    }, {
+      "text": "entreprises"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quels autres produits Internet avez-vous pour "
+    }, {
+      "text": "les entreprises"
+    }, {
+      "text": "? Pouvez-vous me donner plus d’informations "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " l’Internet par fibre?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai Internet avec "
+    }, {
+      "text": "Rogers"
+    }, {
+      "text": " et je cherche "
+    }, {
+      "text": "une"
+    }, {
+      "text": " solution de téléphonie pour "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais changer "
+    }, {
+      "text": "mon service"
+    }, {
+      "text": " Internet d’"
+    }, {
+      "text": "un"
+    }, {
+      "text": " autre fournisseur à "
+    }, {
+      "text": "Rogers"
+    }, {
+      "text": " afin d’avoir "
+    }, {
+      "text": "un"
+    }, {
+      "text": " seul fournisseur pour tous "
+    }, {
+      "text": "mes services"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ajoute "
+    }, {
+      "text": "un"
+    }, {
+      "text": " téléphone d’"
+    }, {
+      "text": "affaires"
+    }, {
+      "text": " et Internet dans "
+    }, {
+      "text": "mon bureau"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais installer "
+    }, {
+      "text": "la télévision"
+    }, {
+      "text": " dans "
+    }, {
+      "text": "mon entreprise"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ouvre "
+    }, {
+      "text": "un nouveau magasin"
+    }, {
+      "text": " et je voudrais que de "
+    }, {
+      "text": "nouveaux services"
+    }, {
+      "text": " soient installés au nouvel emplacement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais activer "
+    }, {
+      "text": "un"
+    }, {
+      "text": " téléphone sans-fil pour l’ajouter à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " compte Internet."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1901084291:1743444606337" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1743444606337" name="CustomerRetentionCheck" type="Subflow Start" width="186" x="287" y="28">
+<exit_states>
+<exit_state name="next" target="Element@1609009200:1743444613082"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1609009200:1743444613082" name="BU_Check" type="Decision" width="114" x="320" y="103">
+<exit_states>
+<exit_state name="FDS" target="Element@1435556346:1743444613082"/>
+<exit_state name="Others" target="Element@1179891655:1743444613082">
+<bendpoint>
+<dim1 x="-177" y="134"/>
+<dim2 x="-168" y="-122"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1179891655:1743444613082"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1179891655:1743444613082" name="Subflow Return_01" type="Subflow Return" width="148" x="295" y="369"/>
+<element height="46" id="Element@1435556346:1743444613082" name="CRC_HOST_001" type="Decision" width="131" x="459" y="215">
+<exit_states>
+<exit_state name="SU" target="Element@1179891655:1743444613082">
+<bendpoint>
+<dim1 x="-64" y="59"/>
+<dim2 x="-46" y="-114"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1179891655:1743444613082">
+<bendpoint>
+<dim1 x="77" y="50"/>
+<dim2 x="76" y="-50"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

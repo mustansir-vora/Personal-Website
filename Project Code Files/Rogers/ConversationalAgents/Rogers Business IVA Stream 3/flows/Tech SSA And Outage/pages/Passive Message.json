@@ -1,0 +1,53 @@
+{
+  "name": "47b9738b-2b07-46f6-a054-529305edfea2",
+  "displayName": "Passive Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.passiveOutageMessage = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Exit Outage Status",
+    "name": "d687eabe-8421-4243-af83-fdad85a3fc44"
+  }, {
+    "condition": "$session.params.passiveOutageMessage != true AND $session.params.heardNoOutage = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "a0c4537c-830d-4ce2-a4d8-725f85b1adfb"
+  }, {
+    "condition": "$session.params.passiveOutageMessage != true AND $session.params.heardNoOutage != true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "We have no reports of an outage in your area" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "heardNoOutage",
+        "value": true
+      }, {
+        "parameter": "transferType",
+        "value": "businessRules"
+      }, {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "ce2f8d1d-c15c-4f5c-ad64-b16e40441a5c"
+  } ]
+}

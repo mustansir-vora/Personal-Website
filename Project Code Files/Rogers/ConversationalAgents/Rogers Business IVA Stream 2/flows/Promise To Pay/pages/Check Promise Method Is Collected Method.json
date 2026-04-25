@@ -1,0 +1,38 @@
+{
+  "name": "117362e1-90fb-49ef-87e4-587de90cbf26",
+  "displayName": "Check Promise Method Is Collected Method",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.promiseMethod = $session.params.collectedPtpMethod",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Return From Change PTP Method 1",
+    "name": "03a801c8-5bff-49e0-b7ce-623921c6cdea"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      } ]
+    },
+    "targetPage": "Method 1 Check Current Promise Method",
+    "name": "01bd3e4d-3629-442c-a16e-d4ecb6bbe944"
+  } ]
+}

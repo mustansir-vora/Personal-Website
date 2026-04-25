@@ -1,0 +1,28 @@
+{
+  "name": "2d290e9b-ee7d-41f8-acbc-84b403965249",
+  "displayName": "Wireless Identification Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.wirelessIdentificationResult = \"Identified\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "authInvoked",
+        "value": false
+      } ]
+    },
+    "targetPage": "Call Authentication",
+    "name": "c5a977f3-a503-4cab-a520-52461ae2d786"
+  }, {
+    "condition": "$session.params.wirelessIdentificationResult = \"Unidentified\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ID Required?",
+    "name": "79d43bb2-ccd0-4e47-bf12-5f8cc2b7732f"
+  } ]
+}

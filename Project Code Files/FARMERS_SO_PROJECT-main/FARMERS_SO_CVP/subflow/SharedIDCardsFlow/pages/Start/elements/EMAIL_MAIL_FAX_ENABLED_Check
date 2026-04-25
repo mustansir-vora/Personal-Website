@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1346003089:1711607288774" name="EMAIL_MAIL_FAX_ENABLED_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="EMAIL_MAIL_FAX_ENABLED_Check" default_exit_state="OTHERS">
+        <exit_state name="EMF" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_EMAIL_MAIL_FAX_ENABLED" />
+                </data>
+                <constant_string value="EMF" />
+            </string>
+        </exit_state>
+        <exit_state name="FM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_EMAIL_MAIL_FAX_ENABLED" />
+                </data>
+                <constant_string value="FM" />
+            </string>
+        </exit_state>
+        <exit_state name="EM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_EMAIL_MAIL_FAX_ENABLED" />
+                </data>
+                <constant_string value="EM" />
+            </string>
+        </exit_state>
+        <exit_state name="M" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_EMAIL_MAIL_FAX_ENABLED" />
+                </data>
+                <constant_string value="M" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

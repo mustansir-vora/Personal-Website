@@ -1,0 +1,30 @@
+{
+  "name": "6d6b2d15-5070-47d6-a5d2-9cc2dab24a84",
+  "displayName": "Iterate Business Accounts",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "currentSubs",
+      "value": "$sys.func.GET($session.params.safeMaster, $session.params.idx)"
+    }, {
+      "parameter": "currentBiz",
+      "value": "$sys.func.GET($session.params.safeBiz, $session.params.idx)"
+    }, {
+      "parameter": "subscriptionsList",
+      "value": "$sys.func.APPEND($session.params.subscriptionsList, $sys.func.IF(\"$session.params.currentBiz = true\", $session.params.currentSubs, []))"
+    }, {
+      "parameter": "idx",
+      "value": "$sys.func.ADD($session.params.idx, 1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Business Accounts Router",
+    "name": "a089d6ca-eac5-47ea-a584-7ac76abd5f63"
+  } ]
+}

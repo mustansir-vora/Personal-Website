@@ -1,0 +1,7 @@
+{
+  "name": "3fed7f68-a82c-4595-918c-794d64e91cd9",
+  "displayName": "separate-lines-into-multiple-accounts",
+  "priority": 500000,
+  "description": "Seperating existing account into multiple accounts",
+  "numTrainingPhrases": 65
+}

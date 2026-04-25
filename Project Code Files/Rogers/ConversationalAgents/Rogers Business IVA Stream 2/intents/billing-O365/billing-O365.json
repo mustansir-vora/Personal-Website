@@ -1,0 +1,7 @@
+{
+  "name": "c91fb924-8abe-4d7a-9bb6-417254a96084",
+  "displayName": "billing-O365",
+  "priority": 500000,
+  "description": "Handles billing issues with O365",
+  "numTrainingPhrases": 12
+}

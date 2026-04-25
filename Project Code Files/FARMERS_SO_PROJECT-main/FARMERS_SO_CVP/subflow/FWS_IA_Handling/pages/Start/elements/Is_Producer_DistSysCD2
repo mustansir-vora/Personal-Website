@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1753165054:1718084526759" name="Is_Producer_DistSysCD2" version="6.0.1">
+<config>
+<source type="Class">com.farmers.fws.fgia.GetProducerDistSysCD</source>
+</config>
+</decision>

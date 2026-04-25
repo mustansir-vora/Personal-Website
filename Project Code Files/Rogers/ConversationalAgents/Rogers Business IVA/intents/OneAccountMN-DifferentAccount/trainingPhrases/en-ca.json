@@ -1,0 +1,269 @@
+{
+  "trainingPhrases": [ {
+    "id": "5651f012-84e1-48de-bc1a-d893e778ebb2",
+    "parts": [ {
+      "text": "it's not my account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9f954cf2-01df-49b3-8ddc-a918b3a1830e",
+    "parts": [ {
+      "text": "false"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "9d086be6-4a49-4ab4-9ac9-c35fc80a86d3",
+    "parts": [ {
+      "text": "wrong"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a61bc30a-8e89-4d73-8463-af6f5507c805",
+    "parts": [ {
+      "text": "incorrect"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "40b2418c-10c3-4ab8-ac40-8bd0a033a0b3",
+    "parts": [ {
+      "text": "not"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "dcac639a-ee31-4c3d-ad02-1774d65577a9",
+    "parts": [ {
+      "text": "i don't know"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "d1a6f39f-a241-4477-9c8d-6dc9c415df2c",
+    "parts": [ {
+      "text": "nope"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "2dbd6d5d-5024-4bad-b5df-788b72afb5ab",
+    "parts": [ {
+      "text": "no"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "ad001c79-4b4f-4b1e-9403-6c78cb158d1e",
+    "parts": [ {
+      "text": "Can I see my other account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "213cca70-4aaf-4bd6-bd14-1929d15d3c10",
+    "parts": [ {
+      "text": "I need to switch to another account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "7475eebf-1d9e-46e7-9f3f-d85e08d5a726",
+    "parts": [ {
+      "text": "I want to try accessing a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "319036af-eafc-4d85-b74b-688345ddd542",
+    "parts": [ {
+      "text": "I need to access my other account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "78289e32-f70a-49d6-8867-b437645ad6db",
+    "parts": [ {
+      "text": "I need to switch over to a different account now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f5ce7995-0846-47a1-bd0b-d99db83bafc4",
+    "parts": [ {
+      "text": "I want to access a different account associated with my profile"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "da3acf39-8821-40f7-aeac-4adf216fd235",
+    "parts": [ {
+      "text": "That's not the right one, show me another account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "11c78554-1ccd-420a-8885-ac0f42271667",
+    "parts": [ {
+      "text": "Can you show me a different account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "36cbe88d-2c42-4817-9402-f27430624561",
+    "parts": [ {
+      "text": "I need to switch to my other account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "12865533-0c7f-4c47-90f1-a996a4993aab",
+    "parts": [ {
+      "text": "I need to get into a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "c4d6e55b-7dea-45bc-a834-9dfc1cbea36a",
+    "parts": [ {
+      "text": "I want to access a different account please"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "f07dd60a-f915-456b-99ff-9435942abeec",
+    "parts": [ {
+      "text": "I have another account that I need to get into"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "461ab144-9b16-4f6d-91b8-2b4a5dcf3707",
+    "parts": [ {
+      "text": "Show me my other account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "b797d8f2-1583-48ea-ab42-e566482d1302",
+    "parts": [ {
+      "text": "That's the wrong account, please show me another one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "118009d1-6ffc-4b07-80be-5056a51e5be3",
+    "parts": [ {
+      "text": "That is not my account, I need a different one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "37da7ab0-65ea-40b4-a729-94ed3b1e59f2",
+    "parts": [ {
+      "text": "I need to go to a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "84959b6f-14df-4eb7-a09e-b7b8570687ca",
+    "parts": [ {
+      "text": "Take me to a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0a46b6e1-1af4-40d0-8fbe-0f6697f9f1e3",
+    "parts": [ {
+      "text": "I am looking for a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "db41d046-b80c-4f35-a9f2-e2d3e0a6a133",
+    "parts": [ {
+      "text": "Log me into a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "8d237f03-0a05-48a8-b897-ba7fdf94c1be",
+    "parts": [ {
+      "text": "I want to get into a different account than the one shown"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "fac8b423-ad97-4cb0-960b-21efb87db44d",
+    "parts": [ {
+      "text": "I would like to switch accounts"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "64b10c24-9e75-4e52-aed9-41867a65d356",
+    "parts": [ {
+      "text": "Let me try a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "4adff65f-f97e-4abc-a228-d5c9f182f18a",
+    "parts": [ {
+      "text": "I want to sign into a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "428f5ff3-bc1e-4585-8ec3-ece5d0194533",
+    "parts": [ {
+      "text": "I need to access another account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "44f7ca46-c85a-4f97-bf67-9fd7d1cb4e90",
+    "parts": [ {
+      "text": "I want to log into a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "0c0d8d97-9a8d-42d8-9778-59ed9419faa7",
+    "parts": [ {
+      "text": "Not this account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "467de71a-3658-4d69-9c3f-ace2f4b67c0b",
+    "parts": [ {
+      "text": "I want to use a different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "bb586348-7eb2-4efe-87f0-18eca8e8f7f5",
+    "parts": [ {
+      "text": "Different one"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "a8ef450e-fdf3-4113-89d2-d6a09e3189c6",
+    "parts": [ {
+      "text": "none of these"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  }, {
+    "id": "1c22d645-6c14-4024-9ca7-2883b94b43e3",
+    "parts": [ {
+      "text": "different account"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en-ca"
+  } ]
+}

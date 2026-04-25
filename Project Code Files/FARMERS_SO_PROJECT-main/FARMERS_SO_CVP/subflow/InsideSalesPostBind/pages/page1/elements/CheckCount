@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1851655748:1713750698879" name="CheckCount" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.Check_BindMessage_BC</source>
+</config>
+</decision>

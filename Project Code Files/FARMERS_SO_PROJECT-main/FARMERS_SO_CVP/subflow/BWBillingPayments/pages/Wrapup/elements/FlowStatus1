@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1127109554:1722927741423" name="FlowStatus1" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_01" default_exit_state="ER">
+        <exit_state name="SU" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PRODID_API_SUCCESS" />
+                </data>
+                <constant_string value="Yes" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

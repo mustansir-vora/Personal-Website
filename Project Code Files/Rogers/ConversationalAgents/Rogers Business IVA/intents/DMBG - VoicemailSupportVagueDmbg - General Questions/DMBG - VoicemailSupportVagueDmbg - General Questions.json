@@ -1,0 +1,7 @@
+{
+  "name": "deb78248-e02d-4717-8d36-c56fd0ff67b6",
+  "displayName": "DMBG - VoicemailSupportVagueDmbg - General Questions",
+  "priority": 500000,
+  "numTrainingPhrases": 2,
+  "dtmfPattern": "3"
+}

@@ -1,0 +1,407 @@
+{
+  "name": "9af6047d-1927-4220-9eae-ac5f44baf813",
+  "displayName": "Account Number Collection",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.accountRetryCounter \u003e $session.params.maxAccountRetries"
+      }, {
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.StdErrorCount = 0",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "“What is the account number you are calling about? If you need time, just say ‘hold on’\"." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Quel est le numéro de compte pour lequel vous appelez? Si vous avez besoin de temps, vous n’avez ka dire « attendez »." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NM\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I didn't get that. please say the account number. If you need time, just say ‘hold on’.”" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cspeak\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cbreak time=\"150ms\"/\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "If you are calling about a new business product, say business product." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003c/speak\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Je suis désolé, je n’ai pas compris. Veuillez dire le  numéro du compte dont vous appelez au sujet. Si vous appelez pour un nouveau produit d’affaires, dites « produit d'affaire »." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.StdErrorCount = 1 AND $session.params.LastStdError = \"NI\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I'm sorry, I couldn't hear that. Please say the account number you are calling about. If you need time, just say ‘hold on’.”" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cspeak\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cbreak time=\"150ms\"/\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "If you are calling about a new business product, say business product." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003c/speak\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Je suis désolé, je ne vous ai pas entendu. Veuillez dire le numéro du compte dont vous appelez au sujet. Si vous appelez pour un nouveau produit d’affaires, dites « produit d'affaire »." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NI\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I still couldn't hear that. Please say or enter the account number you are calling about. If you need time, just say ‘hold on’.”" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cspeak\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cbreak time=\"150ms\"/\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "If you are calling about a new business product, say business product." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003c/speak\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Je ne vous entends toujours pas. Veuillez dire ou entrer le numéro du compte dont vous appelez au sujet. Si vous appelez pour un nouveau produit d’affaires, dites « produit d'affaire »." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.StdErrorCount = 2 AND $session.params.LastStdError = \"NM\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I still didn't get that. Please say or enter the account number you are calling about. If you need time, just say ‘hold on’.”" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cspeak\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cbreak time=\"150ms\"/\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "If you are calling about a new business product, say business product." ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003c/speak\u003e" ]
+                  },
+                  "languageCode": "en"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "Je n’ai toujours pas compris. Veuillez dire ou entrer le numéro du compte dont vous appelez au sujet. Si vous appelez pour un nouveau produit d’affaires, dites « produit d'affaire »." ]
+                  },
+                  "languageCode": "fr-ca"
+                }
+              } ]
+            }, {
+            
+            } ]
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "AccountNumberCollectionMn-9-Digit",
+    "condition": "$session.params.accountnum != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "callerIdType",
+        "value": "account"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "userInputAccount",
+        "value": "$sys.func.SUBSTITUTE($session.params.accountnum, \"-\", \"\")"
+      }, {
+        "parameter": "userInputAccount",
+        "value": "$sys.func.SUBSTITUTE($session.params.userInputAccount, \"\\s+\", \"\")"
+      }, {
+        "parameter": "reportingVar_inputedAccountNumber",
+        "value": "$session.params.userInputAccount"
+      } ]
+    },
+    "targetPage": "Confirm Account Number",
+    "name": "bc7958b2-ff7d-4264-8fca-e56713f5ec06"
+  }, {
+    "intent": "AccountNumberCollectionMn-9-Digit",
+    "condition": "$session.params.accountnum = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": "$sys.func.ADD($session.params.accountRetryCounter,1)"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "7e677d08-98ba-46e4-9fe6-c061763e6150"
+  }, {
+    "intent": "AccountNumberCollectionMn-12-Digit",
+    "condition": "$session.params.accountnum != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reportingVar_inputedAccountNumber",
+        "value": "$session.params.userInputAccount"
+      }, {
+        "parameter": "userInputAccount",
+        "value": "$sys.func.SUBSTITUTE($session.params.userInputAccount, \"\\s+\", \"\")"
+      }, {
+        "parameter": "userInputAccount",
+        "value": "$sys.func.SUBSTITUTE($session.params.accountnum, \"-\", \"\")"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "callerIdType",
+        "value": "account"
+      } ]
+    },
+    "targetPage": "Confirm Account Number",
+    "name": "cfa80c39-c453-46f0-a6ff-66969972de91"
+  }, {
+    "intent": "AccountNumberCollectionMn-12-Digit",
+    "condition": "$session.params.accountnum = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": "$sys.func.ADD($session.params.accountRetryCounter,1)"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "8c5da997-5971-4338-b32e-9c01c6f910e3"
+  }, {
+    "intent": "AccountNumberMn-Don'tHave",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Max Account Retry",
+    "name": "ef3aa825-45d5-45d4-9422-9165b3a3c315"
+  }, {
+    "intent": "AccountNumberMn-BusinessProduct",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "status",
+        "value": "unidentifiedCustomer"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": 0
+      }, {
+        "parameter": "customerType",
+        "value": "UnidentifiedBusinessCustomer\""
+      } ]
+    },
+    "targetPage": "Exit Type",
+    "name": "32ffc909-c6ee-4c02-a90f-89dd4a61b186"
+  }, {
+    "intent": "RepeatMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "7dbe65e6-329c-42a5-a285-6e4c38c7a8ba"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "b7bf6282-81ce-415b-a2ff-f4eb356432c9"
+  }, {
+    "intent": "AccountNumberMn-HoldOn",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Hold On Menu",
+    "name": "fa051105-b55b-4bba-b6a6-b48e1218719e"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "3296b8c8-e1a2-455e-874b-a3478a662a81"
+  }, {
+    "condition": "$session.params.accountRetryCounter \u003e $session.params.maxAccountRetries",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "StdErrorCount",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Max Account Retry",
+    "name": "a31a7924-a5d2-4b03-b814-8987f65ba0ea"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Current Page",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NI"
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": "$sys.func.ADD($session.params.accountRetryCounter,1)"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "c0a938d1-0b91-41c0-91c2-2c41afaf7af2"
+  }, {
+    "targetPage": "Current Page",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "LastStdError",
+        "value": "NM"
+      }, {
+        "parameter": "accountRetryCounter",
+        "value": "$sys.func.ADD($session.params.accountRetryCounter,1)"
+      }, {
+        "parameter": "StdErrorCount",
+        "value": "$sys.func.ADD($session.params.StdErrorCount,1)"
+      } ]
+    },
+    "name": "7b3b2443-3a67-4d29-8e76-2f23f9d7e0cb"
+  } ],
+  "description": "Collect Account Number From User"
+}

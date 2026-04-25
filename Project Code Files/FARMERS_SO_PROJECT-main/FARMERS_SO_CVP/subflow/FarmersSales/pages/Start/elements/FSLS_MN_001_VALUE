@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2063371582:1707405450819" name="FSLS_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.GET_FSLS_MN_001</source>
+</config>
+</decision>

@@ -1,0 +1,333 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Je vérifie "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat de "
+    }, {
+      "text": "service"
+    }, {
+      "text": " et je veux connaître la "
+    }, {
+      "text": "date"
+    }, {
+      "text": " de fin."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider à comprendre les zones de couverture de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " téléphone et internet?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai "
+    }, {
+      "text": "une"
+    }, {
+      "text": " question "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat et j’ai besoin d’aide sans fournir "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux connaître vos règles de déconnexion ou vos politiques, mais je n’ai pas les informations de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je voudrais voir quelles sont mes options pour renouveler ou modifier "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’aider avec l’état de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat et mes options de couverture?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle concernant "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " forfait internet "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": "; je n’ai pas "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de compte, mais je veux savoir quand il "
+    }, {
+      "text": "se"
+    }, {
+      "text": " termine."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu fournir des détails "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " entente de "
+    }, {
+      "text": "service"
+    }, {
+      "text": " si je ne trouve pas "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux voir quels forfaits ou contrats sont disponibles pour moi."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quand est-ce que "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat expire et quelles sont mes options?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai des questions "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " les conditions de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat et les options de renouvellement."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " des informations "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " ma couverture téléphonique sans "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de compte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier la couverture réseau pour "
+    }, {
+      "text": "ma région"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’informations "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " vos politiques, mais je ne connais pas "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle au sujet de ma couverture et je n’ai pas les informations de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux savoir quand "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat "
+    }, {
+      "text": "mobile"
+    }, {
+      "text": " "
+    }, {
+      "text": "se"
+    }, {
+      "text": " termine."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Quelle est la durée de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat "
+    }, {
+      "text": "actuel"
+    }, {
+      "text": " et quelles options ai-je?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu m’expliquer les détails de ma zone de couverture?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai des questions concernant "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " entente de "
+    }, {
+      "text": "service"
+    }, {
+      "text": ", mais je n’ai pas "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’ai besoin d’aide pour comprendre les conditions de "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu vérifier mes informations de "
+    }, {
+      "text": "contrat"
+    }, {
+      "text": " si je te donne "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de téléphone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux revoir "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat de facturation mais je n’ai pas mes informations de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "J’appelle pour vérifier le montant restant à payer "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Peux-tu me "
+    }, {
+      "text": "dire"
+    }, {
+      "text": " combien de temps il reste à "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " contrat?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je veux vérifier des informations "
+    }, {
+      "text": "sur"
+    }, {
+      "text": " ma couverture cellulaire, mais je n’ai pas "
+    }, {
+      "text": "mon"
+    }, {
+      "text": " numéro de compte."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "8e08a7e0-0a0a-4713-9f93-1c7f3eb0d11e",
+  "displayName": "issue-internet",
+  "priority": 500000,
+  "description": "Related to internet or connectivity issue",
+  "numTrainingPhrases": 22
+}

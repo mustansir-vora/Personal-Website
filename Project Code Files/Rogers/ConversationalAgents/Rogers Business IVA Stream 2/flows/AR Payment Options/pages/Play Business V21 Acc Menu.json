@@ -1,0 +1,232 @@
+{
+  "name": "02417ac3-a133-450c-8f79-828733b4e051",
+  "displayName": "Play Business V21 Acc Menu",
+  "form": {
+    "parameters": [ {
+      "displayName": "dtmfOption",
+      "required": true,
+      "entityType": "@e_Dtmf1To4",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); ‘request a payment arrangement’ (3); or 'make a payment' (press 4)." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "c5f469b8-d520-4ea8-b06d-82652a0ff553"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); ‘request a payment arrangement’ (3); or 'make a payment' (press 4)." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "3269e81e-e095-4942-9abe-df4e6900df68"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To hear your account balance, press 1; report a payment, 2; request a payment arrangement, 3; or to make a payment, press 4." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6d058291-2efb-47ab-b460-974514d5aec0"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "o hear your account balance, press 1; report a payment, 2; request a payment arrangement, 3; or to make a payment, press 4." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2ede94ea-fa8f-430c-abeb-3a76ed3e29f2"
+        }, {
+          "targetPage": "Check Suspension Resolved",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "d11453ac-fe7c-4539-a221-b205f8e1e874"
+        }, {
+          "targetPage": "Check Suspension Resolved",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "fd29479e-e866-49c2-adf3-7cdb69d99bbf"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 5
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 5
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Which would you like? You can say ‘Account Balance’, ‘Report a payment’, ‘Payment Arrangement’, or ‘Make a Payment’." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "account-balance",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Account Balance",
+    "name": "f7128463-4a4f-47ca-8b9b-4a0b0a44d77f"
+  }, {
+    "intent": "report-a-payment",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Report a Payment",
+    "name": "a2c2dc5a-c6c4-46e8-a9d8-7f3e4f7b7e0a"
+  }, {
+    "intent": "payment-arrangement",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Payment Arrangement",
+    "name": "5bcd9022-5ec2-4d28-bb44-2afb05fd25f8"
+  }, {
+    "intent": "billing-last-bill-details",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Last Bill Details",
+    "name": "48f0984f-26e7-4aa1-a908-a668343b9f35"
+  }, {
+    "intent": "payment-history",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Payment History",
+    "name": "7c2547c7-2334-4ba3-b961-756b9fe3273a"
+  }, {
+    "intent": "agent-request",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "315b020d-0ada-445b-b2d6-73c0a37b17e1"
+  }, {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Suspension Resolved",
+    "name": "84f2c4da-8019-4395-9539-dae08eeb3394"
+  }, {
+    "condition": "$session.params.dtmfOption = 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Account Balance",
+    "name": "9b4b773c-428a-49cb-8bd7-5a0380f2d80f"
+  }, {
+    "condition": "$session.params.dtmfOption = 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Report a Payment",
+    "name": "d96199b8-3d62-42f2-b938-decd163715b1"
+  }, {
+    "condition": "$session.params.dtmfOption = 3",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Payment Arrangement",
+    "name": "368f94a6-f385-4172-8ecf-27c9311478a6"
+  }, {
+    "condition": "$session.params.dtmfOption = 4",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Make a Payment",
+    "name": "2aec90d1-84ca-4bb8-9c90-cb64bcbf3da8"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); ‘request a payment arrangement’ (3); or 'make a payment' (press 4)." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "70edb978-6436-44a1-9bc4-324b598434b1"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To hear your account balance, press 1; report a payment, 2; request a payment arrangement, 3; get last bill details, 4; hear payment history, 5, or to make a payment, press 6." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "19c24a90-0183-4d83-87fc-604e9d83a6a4"
+  }, {
+    "targetPage": "Check Suspension Resolved",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "ce0bd26d-77be-4003-b7e4-9b39336ec2a4"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can say hear account balance (or press 1); ‘report a payment' (2); ‘get last bill details’ (3); hear payment history (4), or 'make a payment' (press 5)." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1ffe303c-dd7a-4888-ac1e-84173803e1d3"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To hear account balance, press 1; report a payment, 2 get last bill details, 3 hear payment history, 4, or make a payment, press 5." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "771735d9-b7e6-405c-b5f7-ff800b0c0178"
+  }, {
+    "targetPage": "Check Suspension Resolved",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "d7670dc0-a32f-4690-b1ef-a26e46b07822"
+  } ]
+}

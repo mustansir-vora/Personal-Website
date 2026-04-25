@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1266877414:1708938030467" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1708938030467" name="SharedSpecialtyBillingAfterAgentHours" type="Subflow Start" width="256" x="405" y="29">
+<exit_states>
+<exit_state name="next" target="Element@226590572:1712682586013"/>
+<exit_state name="VXML Event-NO_RESOURCE" target="Element@221097962:1751910690841"/>
+</exit_states>
+</element>
+<element height="55" id="Element@435949659:1708938062911" name="S_ID_AUTH" type="Subflow Call" width="138" x="265" y="848">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1711718363453">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@412565387:1708938062911"/>
+</exit_states>
+</element>
+<element height="55" id="Element@412565387:1708938062911" name="S_BILLING_PAYMENTS" type="Subflow Call" width="222" x="227" y="942">
+<subflow_call subflow_name="SharedBillingPayments" target="Element@31:1711718367190">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1172024304:1721138134898"/>
+</exit_states>
+</element>
+<element height="55" id="Element@332010941:1708938062911" name="SSAAH_PA_001" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="172" x="478" y="1131">
+<exit_states>
+<exit_state name="done" target="Element@847257345:1708938062911"/>
+</exit_states>
+</element>
+<element height="55" id="Element@847257345:1708938062911" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="187" x="448" y="1203">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@210594252:1708938062911" name="BW_BILLING_PAYMENTS" type="Subflow Call" width="239" x="510" y="977">
+<subflow_call subflow_name="BWBillingPayments" target="Element@31:1711017068546">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@332010941:1708938062911"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2063324737:1708938062911" name="BWPROD_ID" type="Subflow Call" width="150" x="476" y="770">
+<subflow_call subflow_name="BWProdID" target="Element@31:1711017063149">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@210594252:1708938062911"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1258795250:1708938062911" name="SSAAH_MN_001_VALUE" type="Decision" width="238" x="435" y="515">
+<exit_states>
+<exit_state name="Representative" target="Element@332010941:1708938062911">
+<bendpoint>
+<dim1 x="-326" y="1"/>
+<dim2 x="-323" y="-436"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-482" y="220"/>
+<dim2 x="-487" y="-362"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-372" y="509"/>
+<dim2 x="-382" y="-107"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Billing" target="Element@64284139:1711822185872"/>
+<exit_state name="Claims" target="Element@2124928385:1712091676109"/>
+<exit_state name="NI" target="Element@847257345:1708938062911">
+<bendpoint>
+<dim1 x="455" y="0"/>
+<dim2 x="456" y="-563"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="455" y="563"/>
+<dim2 x="456" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NM" target="Element@1502479088:1708938062911">
+<bendpoint>
+<dim1 x="391" y="75"/>
+<dim2 x="182" y="-181"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1502479088:1708938062911">
+<bendpoint>
+<dim1 x="307" y="101"/>
+<dim2 x="98" y="-155"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1502479088:1708938062911" name="S_TRANSFER" type="Subflow Call" width="151" x="688" y="771">
+<subflow_call subflow_name="Transfer" target="Element@31:1711718358101">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1515347764:1711706756018"/>
+</exit_states>
+</element>
+<element height="55" id="Element@879099885:1709113736896" name="SSAAH_MN_001_Call" type="Subflow Call" width="215" x="441" y="397">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709113762975">
+<config>
+<argument_data>
+<data name="MenuID">SSAAH_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1258795250:1708938062911"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1463535592:1711016907181" name="SSAAH_ADM_001" type="Decision" width="192" x="453" y="233">
+<exit_states>
+<exit_state name="SU" target="Element@879099885:1709113736896"/>
+<exit_state name="ER" target="Element@879099885:1709113736896"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1485281097:1711016952404" name="SSAAH_ADM_002" type="Decision" width="192" x="243" y="770">
+<exit_states>
+<exit_state name="SU" target="Element@435949659:1708938062911"/>
+<exit_state name="ER" target="Element@435949659:1708938062911"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1515347764:1711706756018" name="Subflow Return_01" type="Subflow Return" width="198" x="671" y="904"/>
+<element height="55" id="Element@64284139:1711822185872" name="BILLING_BRAND_CHECK" type="Decision" width="238" x="265" y="624">
+<exit_states>
+<exit_state name="BW" target="Element@2063324737:1708938062911"/>
+<exit_state name="ER" target="Element@332010941:1708938062911"/>
+<exit_state name="Specialty" target="Element@1485281097:1711016952404"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2124928385:1712091676109" name="CLAIMS_BRAND_CHECK" type="Decision" width="240" x="525" y="657">
+<exit_states>
+<exit_state name="BW" target="Element@1502479088:1708938062911"/>
+<exit_state name="Specialty" target="Element@1502479088:1708938062911">
+<bendpoint>
+<dim1 x="-30" y="73"/>
+<dim2 x="-148" y="-41"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@332010941:1708938062911"/>
+</exit_states>
+</element>
+<element height="46" id="Element@226590572:1712682586013" name="SET_SELF_SERVICE_MENU_INVOKED" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="238" x="390" y="124">
+<exit_states>
+<exit_state name="done" target="Element@1463535592:1711016907181"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1172024304:1721138134898" name="Is_Route_To" type="Decision" width="141" x="295" y="1027">
+<exit_states>
+<exit_state name="MAIN_MENU" target="Element@1971369654:1721138168919"/>
+<exit_state name="OTHERS" target="Element@332010941:1708938062911"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1971369654:1721138168919" name="MAIN_MENU_ENTRY" type="Page Connector" width="160" x="201" y="1168">
+<page_connector target="Element@1271559143:1721138176144">MAIN_MENU_ENTRY<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1271559143:1721138176144" name="MAIN_MENU_ENTRY" type="Page Entry" width="160" x="189" y="31">
+<exit_states>
+<exit_state name="next" target="Element@31:1708938030467"/>
+</exit_states>
+</element>
+<element height="49" id="Element@221097962:1751910690841" name="SET_TRANSFER_REASON" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="195" x="783" y="23">
+<exit_states>
+<exit_state name="done" target="Element@1892321608:1751910690841"/>
+</exit_states>
+</element>
+<element height="48" id="Element@2009184212:1751910690841" name="Copy_2_of_DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="135" x="1191" y="18">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1892321608:1751910690841" name="Shared_Transfer" type="Subflow Call" width="132" x="1031" y="21">
+<subflow_call subflow_name="Transfer" target="Element@31:1730041507245">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2009184212:1751910690841"/>
+</exit_states>
+</element>
+</page>

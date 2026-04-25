@@ -1,0 +1,8 @@
+{
+  "name": "2cc498f6-2373-4e20-9f7c-f216d4fc85b4",
+  "displayName": "MakePaymentMn-No",
+  "priority": 500000,
+  "description": "This will trigger when user said No/Nope/ i don't want to make payment now",
+  "numTrainingPhrases": 42,
+  "dtmfPattern": "2"
+}

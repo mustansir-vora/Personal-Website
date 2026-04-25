@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@727977445:1712746688554" name="CHK_RENEWAL_CURRENT_BALANCE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.Chk_Renewal_Current_Balance</source>
+</config>
+</decision>

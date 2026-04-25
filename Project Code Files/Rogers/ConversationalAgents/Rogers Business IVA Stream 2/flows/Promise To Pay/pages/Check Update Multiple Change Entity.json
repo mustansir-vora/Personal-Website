@@ -1,0 +1,134 @@
+{
+  "name": "1b9ef3d3-5734-4b39-a6e9-23b7fe4fe363",
+  "displayName": "Check Update Multiple Change Entity",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.changeEntity = date",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From PTP Update Multiple Options 1",
+    "name": "6d06e7fd-3b9a-44ed-bc5e-e44f18c3bc7e"
+  }, {
+    "condition": "$session.params.changeEntity = amount",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeAmount",
+        "value": true
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From PTP Update Multiple Options 1",
+    "name": "4c6d5b88-ffb5-41dd-b0f4-8b0cf82bc572"
+  }, {
+    "condition": "$session.params.changeEntity = amount_and_date",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeAmount",
+        "value": true
+      }, {
+        "parameter": "ptpChangeDate",
+        "value": true
+      }, {
+        "parameter": "collectedPtpAmount",
+        "value": null
+      }, {
+        "parameter": "collectedPtpDate",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return From PTP Update Multiple Options 1",
+    "name": "744ad6b9-99d8-42c1-ad55-0137eed20499"
+  }, {
+    "condition": "$session.params.changeEntity = method",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeMethod",
+        "value": true
+      }, {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 1",
+    "name": "5015aa5c-ae0b-48fb-b708-f0b88c96018f"
+  }, {
+    "condition": "$session.params.changeEntity = credit_card",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeCC",
+        "value": true
+      }, {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 1",
+    "name": "62113e8f-6f77-4af9-8439-80971799a7d9"
+  }, {
+    "condition": "$session.params.changeEntity = bank",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": true
+      }, {
+        "parameter": "ptpChangePB",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 1",
+    "name": "8625e8da-b49f-474c-9053-a0bd11a89559"
+  }, {
+    "condition": "$session.params.changeEntity = amount_and_method",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeAM",
+        "value": true
+      }, {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 2",
+    "name": "b80346ea-ae48-4be8-a14d-cbc9c13f74d3"
+  }, {
+    "condition": "$session.params.changeEntity = date_and_method",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeDM",
+        "value": true
+      }, {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 2",
+    "name": "3a32a9cb-876a-4c27-ae1d-b42d01e8ebce"
+  }, {
+    "condition": "$session.params.changeEntity = all_of_them",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ptpChangeAll",
+        "value": true
+      }, {
+        "parameter": "$session.params.updateMultipleOptions1",
+        "value": true
+      } ]
+    },
+    "targetPage": "PTP Change Method 2",
+    "name": "bf2e7412-d345-45f2-a213-3f38fcaeca45"
+  } ]
+}

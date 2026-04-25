@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@1333107873:1712579471612" name="SetTransferKey" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.SetTransferKey_FMSTCollectPolicy</source>
+</config>
+</action>

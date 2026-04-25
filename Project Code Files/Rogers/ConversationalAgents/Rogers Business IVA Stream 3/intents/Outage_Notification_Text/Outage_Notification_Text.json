@@ -1,0 +1,7 @@
+{
+  "name": "76d53972-72bd-4b2f-ab2c-9891b2854a49",
+  "displayName": "Outage_Notification_Text",
+  "priority": 500000,
+  "numTrainingPhrases": 8,
+  "dtmfPattern": "1"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "1f8e73e7-5af9-4140-85e1-173573434a7c",
+  "displayName": "Check Account Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "completedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"active-cancelledAccount\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.balanceDetails.currentBalance \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Account Cancelled",
+    "name": "bf3bf70a-61c1-4a57-b7d6-5dd81bed711f"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Clear PreRoute Override",
+    "name": "f9a0df2b-697a-42e1-a16b-18f95ac5f822"
+  } ]
+}

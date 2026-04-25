@@ -1,0 +1,26 @@
+{
+  "name": "5ac19304-25b6-466e-92c1-25fdcebb52d7",
+  "displayName": "Get Payment History",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "paymentHistory"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.paymentHistory.returnCode = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Payments",
+    "name": "cdb0936f-903a-4729-848c-95994338b60a"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play PaymentHistory Failure",
+    "name": "5389cc5f-7010-4ab8-97c0-bd3a99ae7467"
+  } ]
+}

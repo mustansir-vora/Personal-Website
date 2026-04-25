@@ -1,0 +1,95 @@
+{
+  "name": "69a3b626-0355-4e12-b049-dfcbb02eed6a",
+  "displayName": "Invalid Amount Name",
+  "form": {
+    "parameters": [ {
+      "displayName": "amountNumber",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 5,
+          "finishDigit": "#",
+          "useSystemEntityRule": false,
+          "interdigitTimeoutDuration": {
+            "seconds": 5
+          },
+          "endpointingTimeoutDuration": {
+            "seconds": 5
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sorry, you can tell me the amount you'd like to pay or say 'current balance' or 'past due balance'." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Désolé, vous pouvez me dire le montant que vous souhaitez payer ou dire « solde courant » ou « solde en souffrance »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Désolé, vous pouvez me dire le montant que vous souhaitez payer ou dire « solde courant » ou « solde en souffrance »." ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "payment-current-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$sys.func.TO_NUMBER($session.params.api.billingProfile.balanceDetails.currentBalance)"
+      }, {
+        "parameter": "amountNameInvalidCounter",
+        "value": "$sys.func.ADD($session.params.amountNameInvalidCounter, 1)"
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "43e1e234-0877-44bb-b7e4-a746dd301817"
+  }, {
+    "intent": "payment-past-due-balance",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$sys.func.TO_NUMBER($session.params.api.billingProfile.balanceDetails.pastDueBalance)"
+      }, {
+        "parameter": "amountNameInvalidCounter",
+        "value": "$sys.func.ADD($session.params.amountNameInvalidCounter, 1)"
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "8caf996b-49e3-4485-9b70-51ced78de292"
+  }, {
+    "condition": "$session.params.amountNameInvalidCounter \u003e 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Initialize Failure",
+    "name": "dde9dbbe-4d55-48a8-be7a-66a13ceda8c3"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": "$sys.func.TO_NUMBER($session.params.amountNumber.amount )"
+      }, {
+        "parameter": "amountNameInvalidCounter",
+        "value": "$sys.func.ADD($session.params.amountNameInvalidCounter, 1)"
+      } ]
+    },
+    "targetPage": "Result",
+    "name": "91b3490f-3b94-4ef5-9252-eeb3b60f0aaa"
+  } ]
+}

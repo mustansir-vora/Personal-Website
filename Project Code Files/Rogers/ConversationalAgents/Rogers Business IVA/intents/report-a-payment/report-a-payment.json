@@ -1,0 +1,7 @@
+{
+  "name": "6298145d-2f9d-4047-819d-b6a90f89295a",
+  "displayName": "report-a-payment",
+  "priority": 500000,
+  "description": "Handles requests to report or verify a payment made.",
+  "numTrainingPhrases": 37
+}

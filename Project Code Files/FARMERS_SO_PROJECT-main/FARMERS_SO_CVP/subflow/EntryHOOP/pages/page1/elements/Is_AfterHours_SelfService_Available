@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@592278724:1708926179462" name="Is_AfterHours_SelfService_Available" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.IsAfterHoursSelfServiceAvailable</source>
+</config>
+</decision>

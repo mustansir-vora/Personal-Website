@@ -1,0 +1,55 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I lost my "
+    }, {
+      "text": "SIM card"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "SIM"
+    }, {
+      "text": " got damaged"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My "
+    }, {
+      "text": "SIM"
+    }, {
+      "text": " isn't workin anymore"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to get a new "
+    }, {
+      "text": "SIM"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need a new "
+    }, {
+      "text": "SIM card"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to get a new "
+    }, {
+      "text": "SIM card"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

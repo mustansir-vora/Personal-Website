@@ -1,0 +1,18 @@
+{
+  "name": "2a39f15b-e876-4ce0-bbe5-ed58a3fd2938",
+  "displayName": "Default Feilds",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ani Lookup",
+    "name": "63268931-ee03-4cd2-901c-a5b76ec789d3"
+  } ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "eae690e1-62f8-41ed-99fb-9939a5012508",
+  "displayName": "Check Account Status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.accountStatus = N",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.refreshGetBillingProfileInfo",
+        "value": true
+      } ]
+    },
+    "targetPage": "Get Billing Profile",
+    "name": "9461200c-ea85-494b-8add-741de139e9d4"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Set Variables",
+    "name": "8126cbb7-a6c0-4639-8b42-1880d2d10137"
+  } ]
+}

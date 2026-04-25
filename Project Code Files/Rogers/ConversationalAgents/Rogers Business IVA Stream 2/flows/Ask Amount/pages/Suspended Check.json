@@ -1,0 +1,48 @@
+{
+  "name": "35316ac8-7da3-4cd8-83b3-4fbba092ccee",
+  "displayName": "Suspended Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.paymentAmount n’est pas suffisant pour rétablir votre service." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "$session.params.paymentAmount is not sufficient to\nrestore your service." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "$session.params.paymentAmount n’est pas suffisant pour rétablir votre service." ]
+      },
+      "languageCode": "fr"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.savedIntent = \"report-a-payment\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "askAmountSuccess",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "9d9edc52-3040-4800-8116-0cfef24d6163"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "To restore your service, would you like\nto pay the required amount of\n${session.params.pastDueBalance} ?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Pay Past Due Suspended Check",
+    "name": "0a106ce6-d446-474d-b978-d97557306994"
+  } ]
+}

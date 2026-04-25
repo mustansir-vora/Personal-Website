@@ -1,0 +1,133 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I just want to reset everything and start voicemail setup again from scratch."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m having ongoing technical issues with voicemail access and playback."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The voicemail app keeps crashing when I try to play my messages."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My voicemail isn’t routing "
+    }, {
+      "text": "correctly"
+    }, {
+      "text": ". Messages are going to another number."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’ve set up voicemail before, but now it says “"
+    }, {
+      "text": "no"
+    }, {
+      "text": " mailbox found.”\r\nI can’t reset my voicemail password; it’s not accepting my verification details.\r\nI can’t access voicemail after changing my SIM card. Is it linked to my old line?\r\nMy voicemail stopped working completely after the phone update last night.\r\n\"I have voicemail notifications, but when I try to open them, it says there are no messages."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The voicemail system keeps saying my number isn’t registered."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m trying to record a new greeting, but voicemail isn’t giving me the option."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I forgot my voicemail PIN and can’t get in to check my messages."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My voicemail keeps looping back to the main menu instead of playing my messages."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "When someone calls me, it doesn’t go to voicemail. It just hangs up."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I "
+    }, {
+      "text": "no"
+    }, {
+      "text": " longer see voicemail on my phone; can you help me restore it?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Every time I try to access voicemail, it says “service unavailable.”\r\nI can’t log in to my voicemail. It keeps saying my passcode is incorrect.\r\n\"I’m getting notifications that I have new voicemails, but I can’t listen to any of them."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My voicemail language changed to "
+    }, {
+      "text": "French"
+    }, {
+      "text": ", and I can’t figure out how to switch it back to English."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I updated my phone recently, and now my voicemail won’t load or play messages."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’ve been trying to set up my voicemail, but the setup keeps failing."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m locked out of my voicemail and need help resetting the access code."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can’t seem to retrieve my voicemail messages anymore; it just gives an error."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My voicemail isn’t working properly; callers say they can’t leave me a message."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m having trouble accessing my voicemail. It keeps asking for a password I don’t have."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

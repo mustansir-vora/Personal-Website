@@ -1,0 +1,8 @@
+{
+  "name": "608cc094-0bd2-426d-9bb0-04b19b0a6491",
+  "displayName": "AccountExistConfirmMn-Yes",
+  "priority": 500000,
+  "description": "This will trigger when user says i have a business account and yes i have that ",
+  "numTrainingPhrases": 65,
+  "dtmfPattern": "1"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "8b8f1bf7-7ed7-4739-b1cb-49e364a2c94a",
+  "displayName": "Play Payment History",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Historique des paiements." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "OK. Payment history." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "savedIntent",
+      "value": "payment-history"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Call Payment History",
+    "name": "5ae7a720-b6d3-42a7-a975-b5ff175407cc"
+  } ]
+}

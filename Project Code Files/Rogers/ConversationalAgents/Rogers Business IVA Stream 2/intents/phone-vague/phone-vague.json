@@ -1,0 +1,7 @@
+{
+  "name": "139eb16e-5a89-4717-b4ec-a0e3c0a34b5a",
+  "displayName": "phone-vague",
+  "priority": 500000,
+  "description": "Captures unclear or unspecified phone-related requests.",
+  "numTrainingPhrases": 62
+}

@@ -1,0 +1,26 @@
+{
+  "name": "1e9a8825-a9ce-4ec0-bbad-ca7b168d5800",
+  "displayName": "Start Get Billing Profile ",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-selfserv",
+    "tag": "billingProfile"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.returnCode = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Playing Balance Details",
+    "name": "ea3aad55-0965-403c-8f3f-dc422bbff805"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Billing Profile Faliure",
+    "name": "1459628b-35ff-430f-afca-0ad3fbf6f377"
+  } ]
+}

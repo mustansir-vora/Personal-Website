@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subflow_return id="Element@1611910151:1711719469888" name="Subflow Return_02" version="6.0.1">
+<config>
+<return_data>
+<data name="RETURN_VALUE" type="String">MainMenu</data>
+</return_data>
+</config>
+</subflow_return>

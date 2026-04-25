@@ -1,0 +1,71 @@
+{
+  "name": "54c0b6f7-4b9f-43d5-9d60-d9e2e5bb9ee0",
+  "displayName": "Set Installment Date",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromUpdateSingle = true AND $session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.installmentDate",
+        "value": "$session.params.api.response.ptp.ccSingleInstallmentDate"
+      } ]
+    },
+    "targetPage": "Check If PTP Date Is Less Than Installment Date",
+    "name": "d6ed53f3-69d0-4ce8-a9bf-2c0d4113dcc6"
+  }, {
+    "condition": "$session.params.fromUpdateSingle = true AND $session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.installmentDate",
+        "value": "$session.params.api.response.ptp.pbSingleInstallmentDate"
+      } ]
+    },
+    "targetPage": "Check If PTP Date Is Less Than Installment Date",
+    "name": "30ccb43b-82bc-44ce-ba4e-7cab44ee6872"
+  }, {
+    "condition": "$session.params.installmentInFocus = first AND $session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.installmentDate",
+        "value": "$session.params.api.response.ptp.ccInstallmentDate1"
+      } ]
+    },
+    "targetPage": "Check If PTP Date Is Less Than Installment Date",
+    "name": "3b50ef43-f5ab-49e5-a3d7-c70f764b1f63"
+  }, {
+    "condition": "$session.params.installmentInFocus = first AND $session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.installmentDate",
+        "value": "$session.params.api.response.ptp.pbInstallmentDate1"
+      } ]
+    },
+    "targetPage": "Check If PTP Date Is Less Than Installment Date",
+    "name": "04e5d7a5-839b-49e8-bf3e-9a1e4dd17b38"
+  }, {
+    "condition": "$session.params.installmentInFocus = second AND $session.params.collectedPtpMethod = CC",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.installmentDate",
+        "value": "$session.params.api.response.ptp.ccInstallmentDate2"
+      } ]
+    },
+    "targetPage": "Check If PTP Date Is Less Than Installment Date",
+    "name": "4e2453bd-7946-4620-9606-32ca9f3dbbab"
+  }, {
+    "condition": "$session.params.installmentInFocus = second AND $session.params.collectedPtpMethod = PB",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.installmentDate",
+        "value": "$session.params.api.response.ptp.pbInstallmentDate2"
+      } ]
+    },
+    "targetPage": "Check If PTP Date Is Less Than Installment Date",
+    "name": "539838c5-a150-417e-a080-6a8e921346ce"
+  } ]
+}

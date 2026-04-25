@@ -1,0 +1,21 @@
+{
+  "name": "e5c7430d-6421-426e-8668-266482a78c0b",
+  "displayName": "Add paymentHistoryRepeatCounter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "$session.params.paymentHistoryRepeatCounter",
+      "value": "$sys.func.ADD($session.params.paymentHistoryRepeatCounter, 1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check maxRepeat",
+    "name": "ccf2efb9-1e05-49de-be35-97ecb8c435d9"
+  } ]
+}

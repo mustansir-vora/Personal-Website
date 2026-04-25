@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@323960563:1711800292660" name="PromoteToSession_01" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">BWProducerMainMenu</setting>
+<setting name="sessNames">INVOCATION_FLOW</setting>
+</settings>
+</config>
+</action_element>

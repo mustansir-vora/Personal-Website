@@ -1,0 +1,28 @@
+{
+  "name": "d65d2a23-37c0-4f3a-8884-1b771e4f5996",
+  "displayName": "Play Suspended",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "… et votre service a été suspendu." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "... and your service has been suspended." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Past Due Balance",
+    "name": "993c1cae-d48c-43e2-98e4-c94b68e464e9"
+  } ]
+}

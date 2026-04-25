@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@872983095:1707392684883" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1707392684883" name="KYC_NoOfPolicies" type="Subflow Start" width="188" x="259" y="-240">
+<exit_states>
+<exit_state name="next" target="Element@1555703515:1710872562852"/>
+</exit_states>
+</element>
+<element height="55" id="Element@758110036:1707816353943" name="KYCNP_HOST_001" type="Decision" width="193" x="235" y="36">
+<exit_states>
+<exit_state name="SU" target="Element@1969667870:1707816593267"/>
+<exit_state name="ER" target="Element@909727587:1708592552367"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1969667870:1707816593267" name="Policies_Found_Basedon_ANI" type="Decision" width="277" x="218" y="141">
+<exit_states>
+<exit_state name="ER" target="Element@909727587:1708592552367"/>
+<exit_state name="S_SINGLE_POLICY_FOUND" target="Element@2003092659:1709735120419"/>
+<exit_state name="S_MULTIPLE_POLICIES_SINGLE_PRODUCTTYPE_FOUND" target="Element@1281289828:1709735059149"/>
+<exit_state name="S_MULTIPLE_POLICIES_MULTIPLE_PRODUCTTYPE_FOUND" target="Element@691896786:1709735091610"/>
+</exit_states>
+</element>
+<element height="55" id="Element@810864185:1707816731593" name="KYCNP_MN_001_VALUE" type="Decision" width="234" x="-146" y="387">
+<exit_states>
+<exit_state name="YES" target="Element@1647806913:1707816888847"/>
+<exit_state name="NO" target="Element@854388492:1707816941126"/>
+<exit_state name="NOMATCH" target="Element@854388492:1707816941126">
+<bendpoint>
+<dim1 x="-151" y="56"/>
+<dim2 x="11" y="-62"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1186778685:1711272117453"/>
+<exit_state name="Representative" target="Element@973332194:1730257383822"/>
+<exit_state name="ER" target="Element@1810625839:1749648667493">
+<bendpoint>
+<dim1 x="178" y="-74"/>
+<dim2 x="-37" y="-82"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@891011457:1707816779075" name="KYCNP_MN_002_VALUE" type="Decision" width="234" x="858" y="488">
+<exit_states>
+<exit_state name="PolicyTypeSelected" target="Element@535247927:1707817079877"/>
+<exit_state name="AllOfThese" target="Element@1013780730:1707817145657">
+<bendpoint>
+<dim1 x="4" y="348"/>
+<dim2 x="367" y="-1"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NoneOfTheseSelected" target="Element@1863410047:1707816963363"/>
+<exit_state name="NOMATCH" target="Element@1863410047:1707816963363">
+<bendpoint>
+<dim1 x="194" y="48"/>
+<dim2 x="-133" y="86"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@2071221217:1711272419077"/>
+<exit_state name="Representative" target="Element@842535072:1730257538977"/>
+<exit_state name="ER" target="Element@513153201:1749648725164">
+<bendpoint>
+<dim1 x="191" y="13"/>
+<dim2 x="-136" y="51"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1887965916:1707816785098" name="KYCNP_MN_003_VALUE" type="Decision" width="234" x="296" y="482">
+<exit_states>
+<exit_state name="YES" target="Element@764057610:1709735195911"/>
+<exit_state name="NO" target="Element@764057610:1709735195911">
+<bendpoint>
+<dim1 x="39" y="141"/>
+<dim2 x="46" y="-143"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOMATCH" target="Element@854388492:1707816941126">
+<bendpoint>
+<dim1 x="-127" y="-64"/>
+<dim2 x="113" y="-74"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1239990837:1731528708423"/>
+<exit_state name="Representative" target="Element@381236800:1730257470523"/>
+<exit_state name="ER" target="Element@854388492:1707816941126">
+<bendpoint>
+<dim1 x="-178" y="42"/>
+<dim2 x="115" y="23"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1647806913:1707816888847" name="KYC_Brand_Auth" type="Subflow Call" width="178" x="-240" y="486">
+<subflow_call subflow_name="KYC_Brand_Authentication" target="Element@31:1729665011420">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@854388492:1707816941126"/>
+</exit_states>
+</element>
+<element height="55" id="Element@854388492:1707816941126" name="Subflow Return_01" type="Subflow Return" width="198" x="21" y="501"/>
+<element height="55" id="Element@1863410047:1707816963363" name="Subflow Return_02" type="Subflow Return" width="198" x="1203" y="450"/>
+<element height="55" id="Element@535247927:1707817079877" name="MoreThanOnePolicy" type="Decision" width="208" x="478" y="809">
+<exit_states>
+<exit_state name="NO" target="Element@1013780730:1707817145657"/>
+<exit_state name="YES" target="Element@1281289828:1709735059149"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1033987722:1707817092466" name="KYCNP_MN_004_VALUE" type="Decision" width="234" x="-70" y="755">
+<exit_states>
+<exit_state name="NoneOfThese" target="Element@1925678766:1707817346112"/>
+<exit_state name="One_To_Five_AllOfThese" target="Element@1013780730:1707817145657"/>
+<exit_state name="NOMATCH" target="Element@1925678766:1707817346112">
+<bendpoint>
+<dim1 x="-161" y="153"/>
+<dim2 x="-191" y="-142"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NOINPUT" target="Element@1239990837:1731528708423"/>
+<exit_state name="Representative" target="Element@876132335:1730257450854"/>
+<exit_state name="ER" target="Element@1925678766:1707817346112">
+<bendpoint>
+<dim1 x="-66" y="167"/>
+<dim2 x="-96" y="-128"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1013780730:1707817145657" name="KYCNP_BRANDCHECK" type="Decision" width="223" x="259" y="924">
+<exit_states>
+<exit_state name="SU" target="Element@417500741:1707817328487"/>
+<exit_state name="ER" target="Element@417500741:1707817328487"/>
+</exit_states>
+</element>
+<element height="55" id="Element@417500741:1707817328487" name="KYC_Brand_Auth1" type="Subflow Call" width="188" x="260" y="1041">
+<subflow_call subflow_name="KYC_Brand_Authentication" target="Element@31:1729664977545">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1925678766:1707817346112"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1925678766:1707817346112" name="Subflow Return_03" type="Subflow Return" width="198" x="-22" y="1050"/>
+<element height="55" id="Element@909727587:1708592552367" name="Tranfer" type="Subflow Call" width="103" x="617" y="41">
+<subflow_call subflow_name="Transfer" target="Element@31:1708592556483">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1438400171:1708592582134"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1438400171:1708592582134" name="DISC" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="89" x="624" y="152">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1281289828:1709735059149" name="KYCNP_MN_003_Call" type="Subflow Call" width="211" x="274" y="286">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709978196946">
+<config>
+<argument_data>
+<data name="MenuID">KYCNP_MN_003</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1887965916:1707816785098"/>
+</exit_states>
+</element>
+<element height="55" id="Element@691896786:1709735091610" name="KYCNP_MN_002_Call" type="Subflow Call" width="211" x="796" y="286">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653479008">
+<config>
+<argument_data>
+<data name="MenuID">KYCNP_MN_002</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@891011457:1707816779075"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2003092659:1709735120419" name="KYCNP_MN_001_Call" type="Subflow Call" width="211" x="-58" y="245">
+<subflow_call subflow_name="New_SpeechDynamicMenu" target="Element@31:1749653469005">
+<config>
+<argument_data>
+<data name="MenuID">KYCNP_MN_001</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@810864185:1707816731593"/>
+</exit_states>
+</element>
+<element height="55" id="Element@764057610:1709735195911" name="KYCNP_MN_004_Call" type="Subflow Call" width="211" x="256" y="757">
+<subflow_call subflow_name="SpeechDynamicMenu" target="Element@31:1709978219850">
+<config>
+<argument_data>
+<data name="MenuID">KYCNP_MN_004</data>
+</argument_data>
+<input_data>
+<data name="Return_Value"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1033987722:1707817092466"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1555703515:1710872562852" name="SET_API_NAME" src="com.servion.platform.vxml.cvp.elements.PromoteToSession" type="Action Element" width="169" x="275" y="-149">
+<exit_states>
+<exit_state name="done" target="Element@1434468075:1710872562852"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1434468075:1710872562852" name="Warhead" type="Subflow Call" width="120" x="293" y="-64">
+<subflow_call subflow_name="Warhead_Check" target="Element@31:1710838177515">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@758110036:1707816353943"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1186778685:1711272117453" name="DISC_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="251" x="-331" y="169">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@93840244:1711272120001" name="Transfer_01" type="Subflow Call" width="138" x="-396" y="297">
+<subflow_call subflow_name="Transfer" target="Element@31:1711272133644">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1186778685:1711272117453"/>
+</exit_states>
+</element>
+<element height="55" id="Element@738790354:1711272272424" name="DISC_02" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="151" x="5" y="622">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1871178838:1711272371744" name="Transfer_02" type="Subflow Call" width="211" x="-326" y="636">
+<subflow_call subflow_name="Transfer" target="Element@31:1711272133644">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@738790354:1711272272424"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2071221217:1711272419077" name="DISC_03" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="189" x="645" y="390">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1750924072:1711272481224" name="Transfer_03" type="Subflow Call" width="152" x="567" y="532">
+<subflow_call subflow_name="Transfer" target="Element@31:1711272133644">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2071221217:1711272419077"/>
+</exit_states>
+</element>
+<element height="55" id="Element@973332194:1730257383822" name="Global_Rep_Handling" type="Decision" width="214" x="-431" y="389">
+<exit_states>
+<exit_state name="CONT" target="Element@854388492:1707816941126"/>
+<exit_state name="TR" target="Element@93840244:1711272120001"/>
+</exit_states>
+</element>
+<element height="55" id="Element@876132335:1730257450854" name="Copy_of_Global_Rep_Handling" type="Decision" width="214" x="-360" y="800">
+<exit_states>
+<exit_state name="CONT" target="Element@1925678766:1707817346112"/>
+<exit_state name="TR" target="Element@1871178838:1711272371744"/>
+</exit_states>
+</element>
+<element height="55" id="Element@381236800:1730257470523" name="Copy_2_of_Global_Rep_Handling" type="Decision" width="223" x="497" y="291">
+<exit_states>
+<exit_state name="CONT" target="Element@854388492:1707816941126"/>
+<exit_state name="TR" target="Element@1750924072:1711272481224"/>
+</exit_states>
+</element>
+<element height="55" id="Element@842535072:1730257538977" name="Copy_3_of_Global_Rep_Handling" type="Decision" width="223" x="953" y="722">
+<exit_states>
+<exit_state name="CONT" target="Element@1863410047:1707816963363"/>
+<exit_state name="TR" target="Element@1750924072:1711272481224"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1239990837:1731528708423" name="DISC_04" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="104" x="221" y="601">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="52" id="Element@1810625839:1749648667493" name="CHECK_HT_TRANSFER" type="Decision" width="169" x="116" y="363">
+<exit_states>
+<exit_state name="YES" target="Element@93840244:1711272120001"/>
+<exit_state name="NO" target="Element@854388492:1707816941126"/>
+</exit_states>
+</element>
+<element height="52" id="Element@513153201:1749648725164" name="CHECK_HT_TRANSFER_02" type="Decision" width="217" x="1023" y="377">
+<exit_states>
+<exit_state name="YES" target="Element@1750924072:1711272481224"/>
+<exit_state name="NO" target="Element@1863410047:1707816963363"/>
+</exit_states>
+</element>
+</page>

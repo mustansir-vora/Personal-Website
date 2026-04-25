@@ -1,0 +1,7 @@
+{
+  "name": "f5786529-1a00-471a-b509-c003b975a938",
+  "displayName": "update-service",
+  "priority": 500000,
+  "description": "This handles calls fobusiness account.r updates in existing ",
+  "numTrainingPhrases": 20
+}

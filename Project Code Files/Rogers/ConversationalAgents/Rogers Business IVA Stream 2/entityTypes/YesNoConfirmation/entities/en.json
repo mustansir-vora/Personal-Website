@@ -1,0 +1,13 @@
+{
+  "entities": [ {
+    "value": "Yes",
+    "synonyms": [ "correct", "right", "yeah", "Yeah", "yes", " That's what I am calling about" ],
+    "languageCode": "en",
+    "dtmfPattern": "1"
+  }, {
+    "value": "No",
+    "synonyms": [ "No", "Nope", "That's not correct", "That's not what I am calling about", "wrong" ],
+    "languageCode": "en",
+    "dtmfPattern": "2"
+  } ]
+}

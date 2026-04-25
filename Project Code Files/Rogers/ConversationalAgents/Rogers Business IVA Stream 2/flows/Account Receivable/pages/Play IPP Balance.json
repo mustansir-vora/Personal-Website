@@ -1,0 +1,28 @@
+{
+  "name": "ba270723-c1c1-4863-abbb-a214323189df",
+  "displayName": "Play IPP Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You're on an Installment Payment Plan with $session.params.api.billingProfile.ippDetails.remainingInstallments installments remaining. Your balance for this bill is $$session.params.api.billingProfile.ippDetails.ippCurrentBalance due by \u003cssml:say-as type=\"date:md\"\u003e $session.params.api.billingProfile.ippDetails.ippStatusUpdateDate \u003c/ssml:say-as\u003e" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Vous êtes inscrit à un plan de paiement par versements, avec $session.params.api.billingProfile.ippDetails.remainingInstallments versements restants. Le solde de cette facture est de $session.params.api.billingProfile.ippDetails.ippCurrentBalance, payable au plus tard le $session.params.api.billingProfile.ippDetails.ippStatusUpdateDate\r\n" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AR Make Payment",
+    "name": "e7b3a9dd-b426-4ca5-bb1c-b850b5e083a7"
+  } ]
+}

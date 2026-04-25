@@ -1,0 +1,31 @@
+{
+  "name": "6422a97f-14c6-4e87-937f-e4368d4b16f5",
+  "displayName": "Intent Group - tech-support-advantage-wifi",
+  "transitionRoutes": [ {
+    "intent": "advantage-wifi-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "advantage-wifi-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "f5f453e3-b68f-46fd-a139-df08c9aaf104"
+  }, {
+    "intent": "meraki-or-security-support",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "meraki-or-security-support"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "9469c670-6f85-46dc-a02e-fb06f65352a6"
+  } ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "bc727901-7209-4374-b46e-54bb55c6e2d8",
+  "displayName": "Nullify Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "paymentAmount",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Ask Amount",
+    "name": "d436b7d9-7ddc-419b-9e17-1b6c531eb32a",
+    "description": "default condition when the user does not say card or amount"
+  }, {
+    "condition": "$session.params.getAmountFailure = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "paymentAmount",
+        "value": null
+      } ]
+    },
+    "targetPage": "Cant Continue Payment",
+    "name": "23e4392b-a55d-4255-8bbf-b5c7ebf2f68d"
+  }, {
+    "condition": "$session.params.getAmountFailure = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Payment",
+    "name": "64b417cf-238d-4f41-8f01-d594c63481b0"
+  } ]
+}

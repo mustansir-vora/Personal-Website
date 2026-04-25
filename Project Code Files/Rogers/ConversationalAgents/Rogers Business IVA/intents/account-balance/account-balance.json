@@ -1,0 +1,17 @@
+{
+  "name": "b111c935-d142-4139-96a4-1de40abb0b7e",
+  "displayName": "account-balance",
+  "parameters": [
+    {
+      "id": "e_AmountName",
+      "entityType": "@e_AmountName"
+    },
+    {
+      "id": "e_AmountName1",
+      "entityType": "@e_AmountName"
+    }
+  ],
+  "priority": 500000,
+  "description": "Caller wants to know their account or bill balance, the amount due, or the payment status. (current balance, ipp, past due balance).",
+  "numTrainingPhrases": 64
+}

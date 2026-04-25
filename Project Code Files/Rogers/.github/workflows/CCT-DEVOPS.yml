@@ -1,0 +1,59 @@
+name: CCT-DEVOPS
+on:
+  workflow_dispatch:
+    inputs:
+        input_command:
+            description: Command
+            default: 'prevalidations'
+            required: false
+  # push: {}
+  # pull_request: {}
+
+run-name: "[${{github.ref_name}}][${{github.actor}}][${{ inputs.input_command }}] ${{github.event.head_commit.message || 'Manually Triggered'}}"
+
+env:
+  current_repo: ${{github.repository}}  
+  current_branch: ${{github.ref_name}}
+  input_command: ${{ inputs.input_command }}
+  GIT_USER: ${{ vars.GIT_USER }}
+  GIT_EMAIL: ${{ vars.GIT_EMAIL }}
+  GH_APP_PRIVATE_KEY_CCT: ${{ secrets.GH_APP_PRIVATE_KEY_CCT }}
+
+jobs:
+  CCT-DEVOPS:
+    name: CCT-DEVOPS - ${{ inputs.input_command }}
+    runs-on: ${{ github.ref_name == 'Prod' && vars.RUNNER_LABEL_PROD || vars.RUNNER_LABEL_DEFAULT }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Generate GitHub App Token
+        id: generate-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: 3075548
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY_CCT }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+
+        # Git Credentials Helper
+      - name: Git Credentials Helper
+        uses: RogersCommunications/enterprise-actions-workflows/git/git-credentials@main
+        with:
+          git_service_token: ${{ steps.generate-token.outputs.token }}
+          git_user: $GIT_USER
+          git_user_email: $GIT_EMAIL
+          working_directory: .
+
+      # Configure Git
+      - name: Configure Git
+        run: |
+          git config user.name "$GIT_USER"
+          git config user.email "$GIT_EMAIL"
+
+          echo "Git user.name configured as: $(git config user.name)"
+          echo "Git user.email configured as: $(git config user.email)"
+      - name: CCT-DEVOPS
+        shell: bash
+        run: python3 -u .github/python/CCT-DEVOPS.py

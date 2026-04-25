@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@221791485:1755108110534" name="ContinuePolicyLoop_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.ContinuePolicyLoop_BC</source>
+</config>
+</decision>

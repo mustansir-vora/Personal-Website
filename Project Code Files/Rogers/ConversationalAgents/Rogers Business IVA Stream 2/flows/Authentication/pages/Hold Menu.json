@@ -1,0 +1,103 @@
+{
+  "name": "edb6358e-3c07-4e75-be1c-f83419a4d4ed",
+  "displayName": "Hold Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "D’accord. Quand vous serez prêt, dites « continue »." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Okay, when you are ready, say \"Continue\"" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "HoldOnMenu-Continue",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Enter Pin",
+    "name": "9481cca3-04e2-4dba-9c8e-e725c2d713e3"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Check Number of Holds",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "ad80ad9a-ea1f-4059-b49b-ac3473f70295"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je suis désolé, je n'ai pas compris. Quand vous serez prêt, dites « continuer »." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm Sorry, I didn't get that. When you are ready, say \"continue\"" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "02e032f3-99e6-4aa2-aaa1-aa3f1c323ce4"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Je suis désolé, je n'ai toujours pas compris. Lorsque vous serez prêt, dites « continuer » ou appuyez sur 1." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "I'm Sorry, I still didn't get that. When you are ready, say \"continue\" or Press 1" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "01234a11-903a-491c-b065-7b2ecec61d72"
+  }, {
+    "targetPage": "Check Number of Holds",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "1a111c4f-965d-431b-b2df-9e0fe0833f0c"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 20
+      },
+      "models": [ {
+        "key": "en",
+        "value": "telephony_short"
+      } ]
+    },
+    "dtmfSettings": {
+      "enabled": true,
+      "useSystemEntityRule": false,
+      "interdigitTimeoutDuration": {
+        "seconds": 5
+      },
+      "endpointingTimeoutDuration": {
+        "seconds": 5
+      }
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

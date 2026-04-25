@@ -1,0 +1,58 @@
+{
+  "name": "929efc90-872b-4b5f-ae86-2885b5aab755",
+  "displayName": "Play Dynamic Message",
+  "form": {
+    "parameters": [ {
+      "displayName": "DynamicConfirmationMenuResponse",
+      "required": true,
+      "entityType": "@YesNoConfirmation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "targetPage": "Check Confirmation Menu Response",
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "stdErrorType",
+              "value": "NI"
+            } ]
+          },
+          "name": "5b2974e2-e966-4cde-a3ef-af7759e4d607"
+        }, {
+          "targetPage": "Check Confirmation Menu Response",
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "stdErrorType",
+              "value": "NM"
+            } ]
+          },
+          "name": "c7710937-4a48-47bd-9c67-b81d9f857254"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.nluConfig.voiceScript" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "$session.params.nluConfig.voiceScript" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.DynamicConfirmationMenuResponse != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Confirmation Menu Response",
+    "name": "479e0b10-c73a-4eb8-ba3b-11dffc8d8d1c"
+  } ]
+}

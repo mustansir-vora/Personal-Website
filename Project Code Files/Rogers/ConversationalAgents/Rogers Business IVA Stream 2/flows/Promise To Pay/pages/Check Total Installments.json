@@ -1,0 +1,35 @@
+{
+  "name": "9e98f60b-32d0-42ea-9f89-294ffacd69b7",
+  "displayName": "Check Total Installments",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.response.ptp.totalInstallments = 1",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Update Single",
+    "name": "a6931c5a-a4d2-4205-9b3c-5684993a3cf3"
+  }, {
+    "condition": "$session.params.api.response.ptp.totalInstallments = 2",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Update Multiple",
+    "name": "cc191320-d26c-4891-b780-67e0b451e9d7"
+  }, {
+    "condition": "$session.params.api.response.ptp.totalInstallments \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "$session.params.api.response.ptp.paymentMethod"
+      } ]
+    },
+    "targetPage": "PTP Offer Best Option",
+    "name": "69480dec-8ba9-4a3d-9d74-a53e69522ae3"
+  } ]
+}

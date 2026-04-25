@@ -1,0 +1,28 @@
+{
+  "name": "dc8c7d82-492a-4eed-872c-9b9096437c09",
+  "displayName": "Play noAvailableCredit",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vous n'avez aucun crédit disponible" ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "You have no available credit" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start pendingPTPDetails subflow",
+    "name": "7842e96c-d67c-42d7-b065-e6c062ed6756"
+  } ]
+}

@@ -1,0 +1,183 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I want to switch to another provider and check if you have a better offer",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got an offer from "
+    }, {
+      "text": "Virgin",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " and I want to see if you can match it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got an offer from "
+    }, {
+      "text": "Fizz",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " and I want to see if you can match it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you match what "
+    }, {
+      "text": "Lucky Mobile",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " is offering"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you match what "
+    }, {
+      "text": "Fizz",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " is offering"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to know if you can match the price given to me by "
+    }, {
+      "text": "Koodo",
+      "parameterId": "e_Competitor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have an offer from "
+    }, {
+      "text": "Telus",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " that I was wondering if you will match"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you match the price from "
+    }, {
+      "text": "Videotron",
+      "parameterId": "e_Competitor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you match the price from "
+    }, {
+      "text": "Public Mobile",
+      "parameterId": "e_Competitor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to match an offer from "
+    }, {
+      "text": "Lucky Mobile",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " and speak to someone"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to match an offer from "
+    }, {
+      "text": "Bell",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " and speak to someone"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My contract is up and I’m wondering if you can offer me a lower deal because "
+    }, {
+      "text": "Telus",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " is offering something better"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I’m calling to see if I could match the same offer I was receiving on my Rogers bill",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm wondering if you could match what "
+    }, {
+      "text": "Virgin",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " has right now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm wondering if you could match what "
+    }, {
+      "text": "Freedom",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " has right now"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got an offer from "
+    }, {
+      "text": "Videotron",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " and I'm just calling to see if you can match it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got an offer from "
+    }, {
+      "text": "Bell",
+      "parameterId": "e_Competitor"
+    }, {
+      "text": " and I'm just calling to see if you can match it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Price match",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

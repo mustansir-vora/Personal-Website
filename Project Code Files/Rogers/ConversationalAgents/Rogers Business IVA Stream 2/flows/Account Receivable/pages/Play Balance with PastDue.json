@@ -1,0 +1,28 @@
+{
+  "name": "9f00d982-5e37-431d-8d0a-cf4292672e8d",
+  "displayName": "Play Balance with PastDue",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Our records show that your total balance of $ $session.params.api.billingProfile.balanceDetails.currentBalance includes a past due amount of $ $session.params.api.billingProfile.balanceDetails.pastDueBalance" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Selon nos dossiers, votre solde total de $session.params.api.billingProfile.balanceDetails.currentBalance comprend un montant en souffrance de $session.params.api.billingProfile.balanceDetails.pastDueBalance" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Payment Plan",
+    "name": "94e21284-cf2d-458e-bfde-d691d31e16f6"
+  } ]
+}

@@ -1,0 +1,43 @@
+{
+  "entities": [ {
+    "value": "Home Phone",
+    "synonyms": [ "Home Phone", "Téléphonie résidentielle" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "mobile",
+    "synonyms": [ "mobile", "sans fil" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "5G Home Internet",
+    "synonyms": [ "5G Home Internet", "Internet à maison 5G", "Internet à domicile 5G" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Home Phone",
+    "synonyms": [ "Home Phone", "téléphone résidentiel sans fil", "téléphone résidentiel" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Rocket Mobile Devices",
+    "synonyms": [ "Rocket Mobile Devices", "Centrales sans-fil et clés Internet", "clés Internet" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "High Speed Internet",
+    "synonyms": [ "High Speed Internet", "Internet sans fil à domicile" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "TV",
+    "synonyms": [ "TV", "Télévision", "Télé" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Home Security",
+    "synonyms": [ "Home Security", "Sécurité résidentielle", "Sécurité a la masion", "maison intelligente", "Autosurveillance", "l’Autosurveillance" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Smartwatch",
+    "synonyms": [ "montre intelligente", "Smartwatch" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Tablet",
+    "synonyms": [ "Tablet", "tablette", "ipad" ],
+    "languageCode": "fr-ca"
+  } ]
+}

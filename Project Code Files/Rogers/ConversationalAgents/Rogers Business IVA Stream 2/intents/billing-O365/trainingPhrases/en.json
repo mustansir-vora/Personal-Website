@@ -1,0 +1,47 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I need a detailed breakdown of my RBAM charges for accounting."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you explain the charges for "
+    }, {
+      "text": "Microsoft"
+    }, {
+      "text": " Teams Calling on my invoice?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I canceled my subscription in RBAM, but I’m still being billed."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Why did my bill increase after adding O365 through RBAM?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My RBAM invoice doesn’t match the number of licenses I have."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I was charged twice for my Office "
+    }, {
+      "text": "365"
+    }, {
+      "text": " subscription. I need to talk to an agent."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

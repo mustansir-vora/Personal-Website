@@ -1,0 +1,56 @@
+{
+  "name": "074630bc-bf9d-49f9-b216-93685064816d",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Which of the following are you calling about? You can say mobile phones,high speed internet,television services,home phone or home security."
+    }
+  }, {
+    "userUtterance": {
+      "text": "home phone"
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_product",
+      "inputActionParameters": {
+        "userResponse": "home phone"
+      },
+      "outputActionParameters": {
+        "result": "Home Phone"
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "inline-action",
+      "action": "set_saved_intent",
+      "inputActionParameters": {
+        "service": "Home Phone"
+      },
+      "outputActionParameters": {
+        "result": "home-phone-support"
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Start",
+    "actionParameters": {
+      "IsBusinessApp": "false",
+      "heardBackOffMenu": "false",
+      "serviceCategoryMixLength": "0"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "once Bomm completed",
+    "actionParameters": {
+      "completedBomm": "true",
+      "heardBackOffMenu": "true",
+      "product": "Home Phone",
+      "savedIntent": "home-phone-support"
+    }
+  },
+  "displayName": "2085-BOMM-TechSupportDisambig-Consumer-home phone",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 248,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

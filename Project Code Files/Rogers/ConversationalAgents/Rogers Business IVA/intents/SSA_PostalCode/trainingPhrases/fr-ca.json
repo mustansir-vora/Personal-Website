@@ -1,0 +1,172 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "le code postal est "
+    }, {
+      "text": "A1A3A6",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "oui, le code postal est "
+    }, {
+      "text": "K1A0B1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "M5V3L9",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "T2P4K8",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "le code est "
+    }, {
+      "text": "B3H2Y9",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "C'est "
+    }, {
+      "text": "V6B1A1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le code postal est "
+    }, {
+      "text": "T2P4K8",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "L4W5N6",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Bien sûr, le code postal est "
+    }, {
+      "text": "R3C1A5.",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le code postal est "
+    }, {
+      "text": "J9X3L9",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon code postal est "
+    }, {
+      "text": "N1R5C8",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "C'est "
+    }, {
+      "text": "G0A1A0",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "M3B1Z1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "N6C4R6",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon code est "
+    }, {
+      "text": "N6C4R6",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "V6T2A3",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "E3V3K7",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "m3b1z1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "f2e8s7",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "k1A0b1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La valeur du code postal est "
+    }, {
+      "text": "h4a1a1",
+      "parameterId": "postalCode"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

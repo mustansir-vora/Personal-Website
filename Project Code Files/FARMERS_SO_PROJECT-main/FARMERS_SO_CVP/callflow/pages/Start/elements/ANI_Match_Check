@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2067589569:1730194901336" name="ANI_Match_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ANI_Match_Check" default_exit_state="NOMATCH">
+        <exit_state name="MATCH" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ANI_EXIST" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

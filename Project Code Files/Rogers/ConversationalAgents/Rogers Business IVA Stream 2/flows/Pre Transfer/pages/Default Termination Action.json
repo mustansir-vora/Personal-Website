@@ -1,0 +1,24 @@
+{
+  "name": "69b13420-1702-4715-944b-a2b8344bd5b9",
+  "displayName": "Default Termination Action",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "endReason",
+        "value": "Transfer"
+      }, {
+        "parameter": "callActionType",
+        "value": "systemError"
+      } ]
+    },
+    "targetPage": "End Call Routing",
+    "name": "759fe78d-45b5-4403-915b-7a37ef61616b"
+  } ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@763482934:1708938914033" name="BWBM_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.BWBM_MN_001_VALUE</source>
+</config>
+</decision>

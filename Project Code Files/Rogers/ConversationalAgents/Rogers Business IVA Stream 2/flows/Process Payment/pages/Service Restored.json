@@ -1,0 +1,28 @@
+{
+  "name": "bd4e9170-a94f-4f75-8d36-fffb74997131",
+  "displayName": "Service Restored",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Votre service pourrait être rétabli dans un délai de 30 minutes." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Your service may be restored within 30 minutes." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check From",
+    "name": "064f4b5f-7561-41d5-87d2-bacbd57196dc"
+  } ]
+}

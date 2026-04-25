@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1576638794:1710852236181" name="OSPM_MN_009_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.OSPM_MN_009_VALUE</source>
+</config>
+</decision>

@@ -1,0 +1,28 @@
+{
+  "name": "47b7e2fc-ee1c-47b3-a96d-d12bf6061836",
+  "displayName": "Play Balance",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Our records show that your total balance is $ $session.params.api.billingProfile.balanceDetails.currentBalance" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Selon nos dossiers, votre solde total est de $session.params.api.billingProfile.balanceDetails.currentBalance" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Payment Plan",
+    "name": "5fc3cc2e-67fa-4aa8-b6fe-eeb45fff1b29"
+  } ]
+}

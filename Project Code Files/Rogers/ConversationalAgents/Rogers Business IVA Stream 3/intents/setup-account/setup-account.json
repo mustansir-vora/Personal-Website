@@ -1,0 +1,7 @@
+{
+  "name": "a1844ab0-01b6-4abf-803d-83f36dac0ddf",
+  "displayName": "setup-account",
+  "priority": 500000,
+  "description": "Handles calls about set up (PIN, online account)",
+  "numTrainingPhrases": 32
+}

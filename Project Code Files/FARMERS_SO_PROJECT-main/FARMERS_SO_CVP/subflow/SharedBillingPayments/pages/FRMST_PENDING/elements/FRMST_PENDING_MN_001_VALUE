@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@795512354:1721749105278" name="FRMST_PENDING_MN_001_VALUE" version="6.0.1">
+<config>
+<source type="Class">com.farmers.shared.bc.FRMST_PENDING_MN_001</source>
+</config>
+</decision>

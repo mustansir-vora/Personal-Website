@@ -1,0 +1,57 @@
+{
+  "name": "86166a3d-1517-4099-8ae0-f1e2127b1b29",
+  "displayName": "Intent Group - collection-payments",
+  "transitionRoutes": [ {
+    "intent": "auto-pay",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "auto-pay"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "cb4de238-b441-451a-98c1-641df6ceb550"
+  }, {
+    "intent": "change-payment-method",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "change-payment-method"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "c543c342-85a9-4a10-9c1a-1fb9f173e869"
+  }, {
+    "intent": "payment-program",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "payment-program"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "464c28ae-a6e6-4c89-9acc-a059c7c862d6"
+  }, {
+    "intent": "payment-vague",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "savedIntent",
+        "value": "payment-vague"
+      }, {
+        "parameter": "nluErrorCounter",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Get NLU Configuration",
+    "name": "d22ba58b-6529-46a9-b9e5-3720f68724e7"
+  } ]
+}

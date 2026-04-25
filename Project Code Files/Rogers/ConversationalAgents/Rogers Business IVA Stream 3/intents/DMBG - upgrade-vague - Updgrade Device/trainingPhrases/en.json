@@ -1,0 +1,15 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "updgrade device"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Upgrade my device"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

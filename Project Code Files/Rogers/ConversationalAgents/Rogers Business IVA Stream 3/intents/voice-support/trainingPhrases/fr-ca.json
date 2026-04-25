@@ -1,0 +1,95 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "J'ai autorisé l'identification vocale, mais le système dit que je l'ai désactivée.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Les appels sont coupés ou la qualité audio est mauvaise pendant les conférences.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "La messagerie vocale ne répond pas et ne transfère pas les appels vers l'e-",
+      "auto": true
+    }, {
+      "text": "mail. La",
+      "auto": true
+    }, {
+      "text": " norme automatique ou les groupes d'appels ne fonctionnent pas comme prévu.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous ne pouvons ni émettre ni recevoir d'appels ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " nos ",
+      "auto": true
+    }, {
+      "text": "lignes téléphoniques",
+      "auto": true
+    }, {
+      "text": " professionnelles.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons des problèmes avec le transfert d'appels et les conférences téléphoniques ",
+      "auto": true
+    }, {
+      "text": "sur",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Advantage Voice",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Notre fonction de messagerie vocale par courriel ne fonctionne pas. On a besoin que ce problème soit réglé rapidement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Nous avons des problèmes avec notre standard automatique et les paramètres de groupes d'appel. Les appels ne sont pas acheminés correctement.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je vous appelle de la companie. Nos téléphones Advantage Voice sont hors ",
+      "auto": true
+    }, {
+      "text": "service",
+      "auto": true
+    }, {
+      "text": " : nous ne pouvons ni émettre ni recevoir d'appels, ce qui perturbe nos opérations.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

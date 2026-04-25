@@ -1,0 +1,38 @@
+{
+  "name": "68302650-f59f-49e9-8a3a-d9b763874e5f",
+  "displayName": "Check Balance Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "selfServiceCompleted",
+      "value": "true"
+    }, {
+      "parameter": "completedSSName",
+      "value": "$sys.func.CONCATENATE($sys.func.CONCATENATE($session.params.completedSSName, \", \"), \"active-interceptBalance\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.balanceDetails.currentBalance = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play NoBalanceDue",
+    "name": "236c32eb-6fad-4e8a-bd66-acae5aecc340"
+  }, {
+    "condition": "$session.params.api.billingProfile.balanceDetails.currentBalance \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play CurrentBalance",
+    "name": "c05bfbe2-2499-4847-a2e4-d7ec7cdfc23e"
+  }, {
+    "condition": "$session.params.api.billingProfile.balanceDetails.currentBalance \u003c 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play CreditBalance",
+    "name": "f8bbf4a6-5daa-4c97-b7b7-0c2315c3019c"
+  } ]
+}

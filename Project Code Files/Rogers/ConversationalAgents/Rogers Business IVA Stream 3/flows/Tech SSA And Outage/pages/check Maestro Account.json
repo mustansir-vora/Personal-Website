@@ -1,0 +1,28 @@
+{
+  "name": "7821c589-1387-4a33-accd-9cd8291f5095",
+  "displayName": "check Maestro Account",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "subscriptionAccountName",
+      "value": "$sys.func.LOWER($sys.func.GET_FIELD($session.params.subscriptionAccountDetails, \"linkedAccountSystem\"))"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.subscriptionAccountName = \"maestro\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "getServiceAddress",
+    "name": "f8a287f6-214b-40df-8b3b-b234bc472fe0"
+  }, {
+    "condition": "$session.params.subscriptionAccountName != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "non Maestro Account",
+    "name": "0e15ecb6-5951-40ee-bed5-629b19afad71"
+  } ]
+}

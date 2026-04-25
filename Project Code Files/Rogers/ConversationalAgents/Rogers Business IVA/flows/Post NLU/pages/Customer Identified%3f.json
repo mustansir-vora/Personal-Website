@@ -1,0 +1,28 @@
+{
+  "name": "9e069219-21e4-440e-b744-b20f38d6d040",
+  "displayName": "Customer Identified?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.customerIdentified = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "postNLANIConfirm",
+        "value": false
+      } ]
+    },
+    "targetPage": "Account Confirmed?",
+    "name": "50b26a0c-91d6-44f5-b9be-3cbb0ff5ffca"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check ID Type",
+    "name": "a4dbe496-34af-4b98-b5ee-facbdf72b543"
+  } ]
+}

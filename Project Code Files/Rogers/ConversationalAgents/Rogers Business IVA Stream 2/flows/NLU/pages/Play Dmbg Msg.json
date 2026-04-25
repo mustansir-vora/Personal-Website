@@ -1,0 +1,28 @@
+{
+  "name": "a0d9ed03-71bd-455e-8877-ba30858f2a54",
+  "displayName": "Play Dmbg Msg",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Laissez-moi obtenir plus d’information pour m’assurer de vous diriger correctement." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "Let me get more information to make sure I can route you accordingly." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Disambig Router",
+    "name": "d5e80aae-3e19-4dc3-8150-38b3b7757681"
+  } ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1430747603:1723485325585" name="Agent or Cus check" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.Check_Agent_Customer_Other</source>
+</config>
+</decision>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1361109152:1733835824361" name="SET_LANG_EN" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">EN</setting>
+<setting name="sessNames">S_PREF_LANG</setting>
+</settings>
+</config>
+</action_element>

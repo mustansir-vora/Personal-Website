@@ -1,0 +1,31 @@
+{
+  "name": "4fd7677a-de9f-433e-a9d9-4caebf747092",
+  "displayName": "Failure Exit -Reusable Phone",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Je ne suis paas en mesure d’envoyer une notification. Si vous avez terminé, vous pouvez raccrocher." ]
+      },
+      "languageCode": "fr-ca"
+    }, {
+      "text": {
+        "text": [ "I'm unable to send a notification. if you're done, feel free to hang up." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.phoneNumberCollection = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "techOutMes",
+        "value": true
+      } ]
+    },
+    "targetPage": "heardOutage",
+    "name": "a1e14a90-c30b-442e-a965-bca2dd1d867f"
+  } ]
+}

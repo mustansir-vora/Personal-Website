@@ -1,0 +1,12 @@
+{
+  "name": "f3dc84b7-bc1a-4bb9-8243-2c9454d33008",
+  "displayName": "PhoneNumberMn-Digit",
+  "parameters": [ {
+    "id": "phoneNumber",
+    "entityType": "@PhoneNumber"
+  } ],
+  "priority": 500000,
+  "description": "To Collect Mobile Number From The User",
+  "numTrainingPhrases": 43,
+  "dtmfPattern": "dtmf_digits_[0-9]{10}$"
+}

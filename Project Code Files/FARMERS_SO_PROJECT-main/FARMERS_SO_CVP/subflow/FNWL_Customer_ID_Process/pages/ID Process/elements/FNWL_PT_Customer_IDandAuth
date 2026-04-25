@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@214406088:1732861526715" name="FNWL_PT_Customer_IDandAuth" version="6.0.1">
+<subflow_call subflow_name="FNWL_PT_Customer_IDandAuth" target="Element@31:1733810775959">
+<config/>
+</subflow_call>
+</connector>

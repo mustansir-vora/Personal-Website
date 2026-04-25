@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@857537119:1707993775860" name="page1" version="6.0.1">
+<element height="55" id="Element@31:1707993775860" name="Payments_Direct_Entry" type="Subflow Start" width="226" x="230" y="30">
+<exit_states>
+<exit_state name="next" target="Element@475028854:1707993831698"/>
+</exit_states>
+</element>
+<element height="55" id="Element@475028854:1707993831698" name="Shared_ID_And_Auth" type="Subflow Call" width="215" x="233" y="125">
+<subflow_call subflow_name="SharedIDAuth" target="Element@31:1712157461212">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1673084858:1707993851906"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1360506602:1707993833730" name="Shared_Billing_and_Payments" type="Subflow Call" width="279" x="577" y="228">
+<subflow_call subflow_name="SharedBillingPayments" target="Element@31:1712157465400">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1682394649:1709450525290">
+<bendpoint>
+<dim1 x="3" y="208"/>
+<dim2 x="354" y="-8"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@243893773:1707993835730" name="EPC_Payments" type="Subflow Call" width="163" x="262" y="339">
+<subflow_call subflow_name="EPC_PaymentUS" target="Element@31:1712157470106">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1682394649:1709450525290"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1673084858:1707993851906" name="BU_EQUALTO_FWS" type="Decision" width="198" x="244" y="229">
+<exit_states>
+<exit_state name="YES" target="Element@1360506602:1707993833730"/>
+<exit_state name="NO" target="Element@243893773:1707993835730"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1682394649:1709450525290" name="Subflow Return_01" type="Subflow Return" width="198" x="253" y="429"/>
+</page>

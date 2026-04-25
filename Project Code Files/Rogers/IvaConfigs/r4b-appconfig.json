@@ -1,0 +1,187 @@
+{
+    "timeOutMs": "14000",
+    "apiAttempts": "2",
+    "tokenrefreshTimeMin": "55",
+    "broadCastId1": "preNlu1",
+    "broadCastId2": "preNlu2",
+    "broadCastId3": "cancelledAccount",
+    "broadCastId4": "preNlu3",
+    "broadCastId5": "preTransfer",
+    "broadCastId6": "techSupport",
+    "broadCastId7": "techSupportTv",
+    "broadCastId8": "techSupportInternet",
+    "broadCastId9": "techSupportSecurity",
+    "broadCastId10": "techSupportBusinessPhone",
+    "broadCastId11": "techSupportWireless",
+    "broadCastId12": "techSupportHomePhone",
+    "broadCastId13": "techSupportOutage",
+    "broadCastId14": "Faq",
+    "broadCastId15": "accountBalance",
+    "broadCastId16": "accountCancelled",
+    "broadCastId17": "paymentHistory",
+    "broadCastId18": "makeAPayment",
+    "broadCastId19": "ptp",
+    "broadCastId20": "lastInvoice",
+    "broadCastId21": "accountsReceivable",
+    "loadTestEnv": "qa1",
+    "pbSingleInstallmentDays": 6,
+    "ccSingleInstallmentDays": 6,
+    "pbInstallment1Days": 6,
+    "pbInstallment2Days": 10,
+    "ccInstallment1Days": 10,
+    "ccInstallment2Days": 14,
+    "pbCollectedDays": 11,
+    "ccCollectedDays": 11,
+    "pbOffsetDays": 5,
+    "ccOffsetDays": 1,
+    "isAntennaOffered": true,
+    "isSSAEnabled": true,
+    "isSuperSystem": true,
+    "isQuebecAntennaOffered": true,
+    "isOntarioAntennaOffered": true,
+    "forcedSelfServIntent": {
+        "payment-arrangement": true,
+        "promise-to-pay": true,
+        "order-tracking": true
+    },
+    "scope": {
+        "qa1": "api://f483184c-4847-4ba1-8deb-bab5f1cfb0c6/.default",
+        "qa2": "api://f483184c-4847-4ba1-8deb-bab5f1cfb0c6/.default",
+        "qa3": "api://f483184c-4847-4ba1-8deb-bab5f1cfb0c6/.default",
+        "qa4": "api://f483184c-4847-4ba1-8deb-bab5f1cfb0c6/.default",
+        "prod": "api://534be341-7094-4678-b59e-40ba31d54899/.default"
+    },
+    "getToken": {
+        "qa1": "https://login.microsoftonline.com/0ab4cbbf-4bc7-4826-b52c-a14fed5286b9/oauth2/v2.0/token",
+        "qa2": "https://login.microsoftonline.com/0ab4cbbf-4bc7-4826-b52c-a14fed5286b9/oauth2/v2.0/token",
+        "qa3": "https://login.microsoftonline.com/0ab4cbbf-4bc7-4826-b52c-a14fed5286b9/oauth2/v2.0/token",
+        "qa4": "https://login.microsoftonline.com/0ab4cbbf-4bc7-4826-b52c-a14fed5286b9/oauth2/v2.0/token",
+        "prod": "https://login.microsoftonline.com/0ab4cbbf-4bc7-4826-b52c-a14fed5286b9/oauth2/v2.0/token"
+    },
+    "getCallStartParams": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-config/ivr-r4b-config-ms/config/${dnis}/start/params?ani=+1${ani}",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-config/ivr-r4b-config-ms/config/${dnis}/start/params?ani=+1${ani}",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-config/ivr-r4b-config-ms/config/${dnis}/start/params?ani=+1${ani}",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-config/ivr-r4b-config-ms/config/${dnis}/start/params?ani=+1${ani}",
+        "prod": "https://ivr.rogers.com/r4b/r4b-config/ivr-r4b-config-ms/config/${dnis}/start/params?ani=+1${ani}"
+    },
+    "getAniIdentification": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-identification/ivr-r4b-identification-ms/caller/profile",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-identification/ivr-r4b-identification-ms/caller/profile",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-identification/ivr-r4b-identification-ms/caller/profile",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-identification/ivr-r4b-identification-ms/caller/profile",
+        "prod": "https://ivr.rogers.com/r4b/r4b-identification/ivr-r4b-identification-ms/caller/profile"
+    },
+    "getBroadcastMessage": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-config/ivr-r4b-config-ms/config/broadcast/params",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-config/ivr-r4b-config-ms/config/broadcast/params",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-config/ivr-r4b-config-ms/config/broadcast/params",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-config/ivr-r4b-config-ms/config/broadcast/params",
+        "prod": "https://ivr.rogers.com/r4b/r4b-config/ivr-r4b-config-ms/config/broadcast/params"
+    },
+    "getBillingProfile": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-account/ivr-r4b-account-ms/accounts/billing/profile?accountNumber=${accountNumber}&maestroInd=${maestroInd}&lob=${lob}&accountBrand=${accountBrand}&sessionId=${sessionId}",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-account/ivr-r4b-account-ms/accounts/billing/profile?accountNumber=${accountNumber}&maestroInd=${maestroInd}&lob=${lob}&accountBrand=${accountBrand}&sessionId=${sessionId}",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-account/ivr-r4b-account-ms/accounts/billing/profile?accountNumber=${accountNumber}&maestroInd=${maestroInd}&lob=${lob}&accountBrand=${accountBrand}&sessionId=${sessionId}",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-account/ivr-r4b-account-ms/accounts/billing/profile?accountNumber=${accountNumber}&maestroInd=${maestroInd}&lob=${lob}&accountBrand=${accountBrand}&sessionId=${sessionId}",
+        "prod": "https://ivr.rogers.com/r4b/r4b-account/ivr-r4b-account-ms/accounts/billing/profile?accountNumber=${accountNumber}&maestroInd=${maestroInd}&lob=${lob}&accountBrand=${accountBrand}&sessionId=${sessionId}"
+    },
+    "getPredictiveTreatment": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-config/ivr-r4b-config-ms/config/predictive/params",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-config/ivr-r4b-config-ms/config/predictive/params",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-config/ivr-r4b-config-ms/config/predictive/params",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-config/ivr-r4b-config-ms/config/predictive/params",
+        "prod": "https://ivr.rogers.com/r4b/r4b-config/ivr-r4b-config-ms/config/predictive/params"
+    },
+    "calculateTermination": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-termination/ivr-r4b-termination-ms/call/predictive/routing",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-termination/ivr-r4b-termination-ms/call/predictive/routing",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-termination/ivr-r4b-termination-ms/call/predictive/routing",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-termination/ivr-r4b-termination-ms/call/predictive/routing",
+        "prod": "https://ivr.rogers.com/r4b/r4b-termination/ivr-r4b-termination-ms/call/predictive/routing"
+    },
+    "getTerminationAction": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-termination/ivr-r4b-termination-ms/call/termination/action",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-termination/ivr-r4b-termination-ms/call/termination/action",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-termination/ivr-r4b-termination-ms/call/termination/action",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-termination/ivr-r4b-termination-ms/call/termination/action",
+        "prod": "https://ivr.rogers.com/r4b/r4b-termination/ivr-r4b-termination-ms/call/termination/action"
+    },
+    "getSmsParameters": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/${smsId}/params",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/${smsId}/params",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/${smsId}/params",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/${smsId}/params",
+        "prod": "https://ivr.rogers.com/r4b/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/${smsId}/params"
+    },
+    "sendSmsMessage": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/send",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/send",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/send",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/send",
+        "prod": "https://ivr.rogers.com/r4b/r4b-notification/ivr-r4b-notification-ms/notifications/brands/${brand}/language/${language}/sms/send"
+    },
+    "saveCallHistory": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-caller/ivr-r4b-caller-ms/caller/history",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-caller/ivr-r4b-caller-ms/caller/history",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-caller/ivr-r4b-caller-ms/caller/history",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-caller/ivr-r4b-caller-ms/caller/history",
+        "prod": "https://ivr.rogers.com/r4b/r4b-caller/ivr-r4b-caller-ms/caller/history"
+    },
+    "deleteSession": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-cache-mgmt/ivr-r4b-cache-mgmt-sys-ms/sessions?",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-cache-mgmt/ivr-r4b-cache-mgmt-sys-ms/sessions?",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-cache-mgmt/ivr-r4b-cache-mgmt-sys-ms/sessions?",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-cache-mgmt/ivr-r4b-cache-mgmt-sys-ms/sessions?",
+        "prod": "https://ivr.rogers.com/r4b/r4b-cache-mgmt/ivr-r4b-cache-mgmt-sys-ms/sessions?"
+    },
+    "getAuthenticationAttributes": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/brands/${brand}/authentication/attributes",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/brands/${brand}/authentication/attributes",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/brands/${brand}/authentication/attributes",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/brands/${brand}/authentication/attributes",
+        "prod": "https://ivr.rogers.com/r4b/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/brands/${brand}/authentication/attributes"
+    },
+    "authenticateCustomer": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/authenticate",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/authenticate",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/authenticate",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/authenticate",
+        "prod": "https://ivr.rogers.com/r4b/r4b-auth/ivr-r4b-auth-ms/accounts/${accountNumber}/authenticate"
+    },
+    "getServiceAddress": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-address/ivr-r4b-address-ms/accounts/address/service",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-address/ivr-r4b-address-ms/accounts/address/service",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-address/ivr-r4b-address-ms/accounts/address/service",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-address/ivr-r4b-address-ms/accounts/address/service",
+        "prod": "https://ivr.rogers.com/r4b/r4b-address/ivr-r4b-address-ms/accounts/address/service"
+    },
+    "getOutages": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-outage/ivr-r4b-outage-ms/services/outages",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-outage/ivr-r4b-outage-ms/services/outages",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-outage/ivr-r4b-outage-ms/services/outages",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-outage/ivr-r4b-outage-ms/services/outages",
+        "prod": "https://ivr.rogers.com/r4b/r4b-outage/ivr-r4b-outage-ms/services/outages"
+    },
+    "createOutageNotification": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-outage/ivr-r4b-outage-ms/services/outages/notification",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-outage/ivr-r4b-outage-ms/services/outages/notification",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-outage/ivr-r4b-outage-ms/services/outages/notification",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-outage/ivr-r4b-outage-ms/services/outages/notification",
+        "prod": "https://ivr.rogers.com/r4b/r4b-outage/ivr-r4b-outage-ms/services/outages/notification"
+    },
+    "getFAQws": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-caller/ivr-r4b-caller-ms/caller/language/${language}/faq/${faqIntentId}",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-caller/ivr-r4b-caller-ms/caller/language/${language}/faq/${faqIntentId}",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-caller/ivr-r4b-caller-ms/caller/language/${language}/faq/${faqIntentId}",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-caller/ivr-r4b-caller-ms/caller/language/${language}/faq/${faqIntentId}",
+        "prod": "https://ivr.rogers.com/r4b/r4b-caller/ivr-r4b-caller-ms/caller/language/${language}/faq/${faqIntentId}"
+    },
+    "createInteraction": {
+        "qa1": "https://ivr.npe.rogers.com/qa1/r4b-interaction/ivr-r4b-interaction-ms/customers/accounts/${accountNumber}/interaction",
+        "qa2": "https://ivr.npe.rogers.com/qa2/r4b-interaction/ivr-r4b-interaction-ms/customers/accounts/${accountNumber}/interaction",
+        "qa3": "https://ivr.npe.rogers.com/qa3/r4b-interaction/ivr-r4b-interaction-ms/customers/accounts/${accountNumber}/interaction",
+        "qa4": "https://ivr.npe.rogers.com/qa4/r4b-interaction/ivr-r4b-interaction-ms/customers/accounts/${accountNumber}/interaction",
+        "prod": "https://ivr.rogers.com/r4b/r4b-interaction/ivr-r4b-interaction-ms/customers/accounts/${accountNumber}/interaction"
+    }
+}

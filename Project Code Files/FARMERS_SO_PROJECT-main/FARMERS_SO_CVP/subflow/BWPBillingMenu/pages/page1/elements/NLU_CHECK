@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@462554948:1711830547141" name="NLU_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="NLU_CHECK" default_exit_state="Policy Status">
+        <exit_state name="REFUND" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="REFUND" />
+            </string>
+        </exit_state>
+        <exit_state name="BM_PROD_BILLING_COMMISSIONS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="BM_PROD_BILLING_COMMISSIONS" />
+            </string>
+        </exit_state>
+        <exit_state name="OTHER_BILLING" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="OTHER_BILLING" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,259 @@
+{
+  "name": "41df8303-c4ab-4f87-8a82-e1b63f859ddb",
+  "displayName": "Broad Cast",
+  "transitionRoutes": [ {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC1",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "87551236-9c49-4d23-9171-eba14203da28"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC2",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "66236575-20ea-4005-8f27-bcf24ca89539"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId3",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC3",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "981826a1-70f7-4323-a0c3-d5b520c50e9b"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId4",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC4",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "78db8d13-7fa8-4629-b1be-f0e9ba2207fb"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId5",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC5",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "9b09e351-c681-42ce-a7a4-7af97da1671b"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId6",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC6",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "3db6b672-b8e7-4ed0-b504-6b8ab326c4b8"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId7",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC7",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "0b463dda-901d-4054-a8c3-a067bc06fde7"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId8",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC8",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "f11941c8-1527-4ebe-86f5-1d923d3bb397"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId9",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC9",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "6fa7b4a2-8b1a-4e76-a33c-7a16c8cd9014"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId10",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC10",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "af718d4b-48fd-4d19-af81-b95d3d428ee8"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId11",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC11",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "3b40557a-caa9-4089-8085-05c45f2b86ad"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId12",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC12",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "7159cf43-f095-4037-b71a-00b593fa334d"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId13",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC13",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "64ff4994-d253-4079-80f4-1de15338dea3"
+  }, {
+    "condition": "$session.params.broadCastId = $session.params.broadCastId14",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC14",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "477dc044-d830-4200-bdfd-2f735d408496"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId15",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC15",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "a622cd04-3416-4967-b1b8-48a68f81401b"
+  }, {
+    "condition": "$session.params.broadCastId = $session.params.broadCastId17",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC17",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "96d5103f-61e6-44d9-8ec7-a7f03ffcc2f8"
+  }, {
+    "condition": "$session.params.broadCastId = $session.params.broadCastId18",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC18",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "ebfef79b-66ba-43da-95ba-76b9e4ac9eca"
+  }, {
+    "condition": "$session.params.broadCastId = $session.params.broadCastId19",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC19",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "d9942731-0289-47d3-a144-f7a0be3309ed"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId20",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC20",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "519955d7-9e3c-43b9-8f41-ccc4fb7a73d0"
+  }, {
+    "condition": "$session.params.broadcastId = $session.params.broadcastId16",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC16",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "a08be4fc-91f7-4873-ab28-8c902a701a8f"
+  }, {
+    "condition": "$session.params.broadCastId = $session.params.broadCastId21",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "BC21",
+        "value": true
+      } ]
+    },
+    "targetPage": "Check BroadCast Id",
+    "name": "2cb05d88-23a6-4bba-a68b-58d66c44c1cf"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "53a22cdb-400f-4dd2-92ac-3cb99a8f9c03"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "69110034-a07c-4ede-bb77-abd13fa89c78"
+  }, {
+    "targetFlow": "End Call",
+    "event": "wrapUp",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "wrapUp",
+        "value": true
+      } ]
+    },
+    "name": "f7bed85b-c9ac-4437-ba55-4ed460bc4b96"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true,
+    "playbackInterruptionSettings": {
+      "allowPlaybackInterruption": true
+    }
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ],
+  "multiLanguageSettings": {
+    "enableMultiLanguageDetection": true,
+    "supportedResponseLanguageCodes": [ "fr", "fr-ca", "en" ]
+  }
+}

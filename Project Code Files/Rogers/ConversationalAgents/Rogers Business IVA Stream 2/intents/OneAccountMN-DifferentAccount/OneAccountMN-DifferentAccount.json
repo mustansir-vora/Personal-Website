@@ -1,0 +1,8 @@
+{
+  "name": "235984f5-8a3d-4232-bd41-51d7378e2b87",
+  "displayName": "OneAccountMN-DifferentAccount",
+  "priority": 500000,
+  "description": "This will trigger when user says i want different account",
+  "numTrainingPhrases": 84,
+  "dtmfPattern": "2"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "6fdbddd3-bd1e-4437-98c7-1bed36a5c86f",
+  "displayName": "Global_Menu_TS",
+  "transitionRoutes": [ {
+    "intent": "Main Menu",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "mainMenuRequest",
+        "value": true
+      }, {
+        "parameter": "returnToNLU",
+        "value": false
+      }, {
+        "parameter": "mainMenuRequestCounter",
+        "value": "$sys.func.ADD($session.params.mainMenuRequestCounter, 1)"
+      } ]
+    },
+    "targetFlow": "NLU",
+    "name": "5dfaf003-8101-4e95-87d9-d1b0c196791e"
+  }, {
+    "intent": "AgentRequestMn",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Pre Transfer",
+    "name": "07d668f2-cc8d-425a-837b-16af8bd3c05a"
+  }, {
+    "condition": "$session.params.globalAgentRequest = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "globalAgentRequest",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "068601ac-62ee-4473-bbf2-0f5fda225409"
+  } ]
+}

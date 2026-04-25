@@ -1,0 +1,7 @@
+{
+  "name": "f49d7096-816c-4d48-9ccc-24e6ba33c4cf",
+  "displayName": "PhoneNumberMn-NewCustomer",
+  "priority": 500000,
+  "description": "this will be triggerd when user says related to phone number entries",
+  "numTrainingPhrases": 95
+}

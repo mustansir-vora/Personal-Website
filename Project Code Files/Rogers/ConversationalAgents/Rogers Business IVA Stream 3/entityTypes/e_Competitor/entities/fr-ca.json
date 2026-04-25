@@ -1,0 +1,39 @@
+{
+  "entities": [ {
+    "value": "Bell",
+    "synonyms": [ "Bell" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Fizz",
+    "synonyms": [ "Fizz" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Freedom",
+    "synonyms": [ "Freedom" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Koodo",
+    "synonyms": [ "Koodo" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Lucky Mobile",
+    "synonyms": [ "Lucky Mobile" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Public Mobile",
+    "synonyms": [ "Public Mobile" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Telus",
+    "synonyms": [ "Telus" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Videotron",
+    "synonyms": [ "Videotron" ],
+    "languageCode": "fr-ca"
+  }, {
+    "value": "Virgin",
+    "synonyms": [ "Virgin" ],
+    "languageCode": "fr-ca"
+  } ]
+}

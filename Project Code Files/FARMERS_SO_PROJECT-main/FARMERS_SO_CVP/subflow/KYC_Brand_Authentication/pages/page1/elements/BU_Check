@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@159527831:1729664898821" name="BU_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BU_Check" default_exit_state="Others">
+        <exit_state name="BW" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FINAL_BRAND" />
+                </data>
+                <constant_string value="BW" />
+            </string>
+        </exit_state>
+        <exit_state name="FDS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FINAL_BRAND" />
+                </data>
+                <constant_string value="PLA" />
+            </string>
+        </exit_state>
+        <exit_state name="FDS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FINAL_BRAND" />
+                </data>
+                <constant_string value="GWPC" />
+            </string>
+        </exit_state>
+        <exit_state name="FM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FINAL_BRAND" />
+                </data>
+                <constant_string value="FM" />
+            </string>
+        </exit_state>
+        <exit_state name="FWS" conjugate="and">
+            <string operator="equal">
+                <constant_string value="S_FINAL_BRAND" />
+                <constant_string value="FWS-ARS" />
+            </string>
+        </exit_state>
+        <exit_state name="FWS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FINAL_BRAND" />
+                </data>
+                <constant_string value="FWS-A360" />
+            </string>
+        </exit_state>
+        <exit_state name="21" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_FINAL_BRAND" />
+                </data>
+                <constant_string value="21C" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,34 @@
+{
+  "name": "7ab7539c-273a-432f-a6c0-676cee9d9fdd",
+  "displayName": "Check If Collected Amount Meets Recommended Amount",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003e= $sys.func.TO_NUMBER($session.params.recomInstallAmount1)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numberOfInstalls",
+        "value": 2
+      }, {
+        "parameter": "$session.params.ptpCheckAmountAndDate",
+        "value": true
+      }, {
+        "parameter": "installmentInFocus",
+        "value": "first"
+      } ]
+    },
+    "targetPage": "PTP Offer Latest Install Days",
+    "name": "28c3ac23-ea18-4980-b9d8-2928abd75498"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Best Offer Transition",
+    "name": "20c45587-2d5c-42ff-a895-1c0ee6d02452"
+  } ]
+}

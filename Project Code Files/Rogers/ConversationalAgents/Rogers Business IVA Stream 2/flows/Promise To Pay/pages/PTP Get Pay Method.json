@@ -1,0 +1,158 @@
+{
+  "name": "5d4aea23-572d-4b8c-a58d-162f1924777c",
+  "displayName": "PTP Get Pay Method",
+  "form": {
+    "parameters": [ {
+      "displayName": "ptpPaymentMethod",
+      "required": true,
+      "entityType": "@e_ptpPaymentMethod",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "You can say 'pay by credit card', or press 1. Or 'pay through my bank', or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Vous pouvez dire « payer par carte de crédit \r\n» ou appuyer sur le 1. Ou « payer par l’entremise de ma banque » ou \r\nappuyer sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "ddd3af95-9169-4013-b7bc-13f797a24d2c"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "You can say 'pay by credit card', or press 1. Or 'pay through my bank', or press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Vous pouvez dire « payer par carte de crédit \r\n» ou appuyer sur le 1. Ou « payer par l’entremise de ma banque » ou \r\nappuyer sur le 2." ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "e771555c-e412-45cf-87a2-b8bcdfd10ced"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "If you prefer payment by credit card, press 1. Through your bank, press 2. " ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Si vous préférez payer par carte de crédit, \r\nappuyez sur le 1. Par l’entremise de votre banque, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "013edb6e-251e-410a-a646-d376c13e4b25"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "If you prefer payment by credit card, press 1. Through your bank, press 2." ]
+              },
+              "languageCode": "en"
+            }, {
+              "text": {
+                "text": [ "Si vous préférez payer par carte de crédit, \r\nappuyez sur le 1. Par l’entremise de votre banque, appuyez sur le 2. " ]
+              },
+              "languageCode": "fr-ca"
+            } ]
+          },
+          "name": "41186773-65de-4460-b94e-0656460af20b"
+        }, {
+          "targetPage": "Check If Default To Credit Card",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "b5158037-3798-43da-afc1-c34a3e28c5bb"
+        }, {
+          "targetPage": "Check If Default To Credit Card",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "c9ab0045-6c56-439b-94e3-03185a29cd61"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You can pay by credit card or through your bank. Which do you use?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ " Vous pouvez payer par carte de crédit ou par votre banque. Que choisissez-vous ?" ]
+      },
+      "languageCode": "fr-ca"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ptpPaymentMethod = creditcard",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Merci." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "CC"
+      }, {
+        "parameter": "ptpPaymentMethod",
+        "value": null
+      } ]
+    },
+    "targetPage": "Check If Amount Exists",
+    "name": "1fa0f6f3-7655-4146-a7bc-00f2232c08ce"
+  }, {
+    "condition": "$session.params.ptpPaymentMethod = bank",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Merci." ]
+        },
+        "languageCode": "fr-ca"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "PB"
+      }, {
+        "parameter": "ptpPaymentMethod",
+        "value": null
+      } ]
+    },
+    "targetPage": "Check If Amount Exists",
+    "name": "ca0fb132-155a-4a6d-aa37-fcea5e8cba0d"
+  } ],
+  "transitionRouteGroups": [ "PTP Global Handling" ]
+}

@@ -1,0 +1,68 @@
+{
+  "name": "e557a15c-10cd-4956-aa83-34b13708c965",
+  "displayName": "Agent Request Router",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.mainMenuRetryFlag = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fallbackReason",
+        "value": "MainMenuAgentRequest"
+      }, {
+        "parameter": "mainMenuRetryFlag",
+        "value": false
+      } ]
+    },
+    "targetPage": "FallBack Router",
+    "name": "d9dc1827-3593-4713-a769-f99c6d732ae5"
+  }, {
+    "condition": "$session.params.agentRequestCounter = null OR $session.params.agentRequestCounter = 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": null
+      }, {
+        "parameter": "savedIntent",
+        "value": null
+      }, {
+        "parameter": "AgentRequest1stAttempt",
+        "value": true
+      }, {
+        "parameter": "agentRequestCounter",
+        "value": "$sys.func.ADD($session.params.agentRequestCounter, 1)"
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "6dde8dcd-fd02-4e40-85a0-199bd7170ddd"
+  }, {
+    "condition": "$session.params.agentRequestCounter \u003e 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "returnToNLU",
+        "value": null
+      }, {
+        "parameter": "savedIntent",
+        "value": null
+      }, {
+        "parameter": "AgentRequest2ndAttempt",
+        "value": true
+      }, {
+        "parameter": "mainMenuRetryFlag",
+        "value": true
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetPage": "NLU Router",
+    "name": "269e8437-75f3-4259-9464-e2b3f296901d"
+  } ]
+}

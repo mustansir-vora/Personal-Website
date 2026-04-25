@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2080386801:1711105507885" name="IS_INTENT_MAKE_A_PAYMENT_BC" version="6.0.1">
+<config>
+<source type="Class">com.farmers.bc.IS_INTENT_MAKE_A_PAYMENT</source>
+</config>
+</decision>

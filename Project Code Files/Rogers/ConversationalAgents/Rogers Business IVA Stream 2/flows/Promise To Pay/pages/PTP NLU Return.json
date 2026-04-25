@@ -1,0 +1,44 @@
+{
+  "name": "034abef5-a92f-4a48-83bc-10be7da1127e",
+  "displayName": "PTP NLU Return",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fromAR = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Go to Payment Options",
+    "name": "9b1e9e97-545d-4936-9f16-be4eff55c9a0"
+  }, {
+    "condition": "$session.params.isAgent = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "preTransfer",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "bd11a1c1-a6d0-4ebd-9627-455dcf1be454"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "whatElseNLU",
+        "value": true
+      }, {
+        "parameter": "savedIntent",
+        "value": null
+      }, {
+        "parameter": "mainMenuRequest",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Transition Routing",
+    "name": "f91052e9-0f09-44f6-ab97-65625e125d7b"
+  } ]
+}

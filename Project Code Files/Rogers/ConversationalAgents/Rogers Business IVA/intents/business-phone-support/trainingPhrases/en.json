@@ -1,0 +1,61 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Our phone terminals show error lights or won’t register."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Calls are dropping or audio is poor."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Call forwarding and hunt group settings aren’t working."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Voicemail isn’t picking up or forwarding messages."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "None of our phones are working—calls aren’t going through."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We need help setting up hunt groups and auto attendant for our business lines."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our phone system isn’t ringing for incoming calls. Can you check if there’s an outage?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We’re having trouble with call forwarding and voicemail. Customers can’t leave messages."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Our business "
+    }, {
+      "text": "phone lines"
+    }, {
+      "text": " are down—we can’t make or receive calls, and this is affecting our operations."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

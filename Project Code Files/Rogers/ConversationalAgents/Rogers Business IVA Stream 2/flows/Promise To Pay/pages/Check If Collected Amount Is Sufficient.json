@@ -1,0 +1,25 @@
+{
+  "name": "b4a33839-62aa-4354-a188-62d559c07a8c",
+  "displayName": "Check If Collected Amount Is Sufficient",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.TO_NUMBER($session.params.collectedPtpAmount) \u003e= $sys.func.TO_NUMBER($session.params.api.response.ptp.pastDueBalance)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Check Date",
+    "name": "778cf3d4-7301-4127-b3ab-34820c0bee99"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Check Amount And Date",
+    "name": "f8031c46-2c34-41db-8b83-d2e513a3009a"
+  } ]
+}

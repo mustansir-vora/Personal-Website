@@ -1,0 +1,35 @@
+{
+  "name": "ca37d995-d329-4afd-b6ca-c2af485b7f0c",
+  "displayName": "PTP Confirmation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.skipRecapPreamble = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PTP Recap",
+    "name": "26d4af3c-d317-427f-a559-4bc0ae702dc5"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Parfait. Récapitulons." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Great. Let's recap." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "PTP Recap",
+    "name": "63a07af9-d460-452f-b654-5fbd550bdf9e"
+  } ]
+}

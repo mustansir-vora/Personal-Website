@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1733663295:1710837970107" name="FMAA_ADM_010" version="6.0.1">
+<config>
+<source type="Class">com.farmers.adminHost.BrandsStateGroup</source>
+</config>
+</decision>

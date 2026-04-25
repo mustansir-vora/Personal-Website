@@ -1,0 +1,7 @@
+{
+  "name": "69930e84-afe0-4f14-9460-fea79bfe477b",
+  "displayName": "call-history",
+  "priority": 500000,
+  "description": "Handles requests to view, retrieve, or manage recent call records.",
+  "numTrainingPhrases": 50
+}

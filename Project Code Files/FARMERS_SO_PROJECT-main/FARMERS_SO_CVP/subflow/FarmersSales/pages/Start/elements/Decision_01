@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@459645558:1713172609375" name="Decision_01" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_01" default_exit_state="SOMETHING_ELSE">
+        <exit_state name="RV" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FSLS_MN_001_EXITSTATE" />
+                </data>
+                <constant_string value="RVV" />
+            </string>
+        </exit_state>
+        <exit_state name="AUTO" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FSLS_MN_001_EXITSTATE" />
+                </data>
+                <constant_string value="Auto" />
+            </string>
+        </exit_state>
+        <exit_state name="HOMEOWNERS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FSLS_MN_001_EXITSTATE" />
+                </data>
+                <constant_string value="Homeowners" />
+            </string>
+        </exit_state>
+        <exit_state name="MOTORCYCLE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FSLS_MN_001_EXITSTATE" />
+                </data>
+                <constant_string value="Motorcycle" />
+            </string>
+        </exit_state>
+        <exit_state name="WATERCRAFT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FSLS_MN_001_EXITSTATE" />
+                </data>
+                <constant_string value="Watercraft" />
+            </string>
+        </exit_state>
+        <exit_state name="SOMETHING_ELSE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FSLS_MN_001_EXITSTATE" />
+                </data>
+                <constant_string value="Something Else" />
+            </string>
+        </exit_state>
+        <exit_state name="NO_SELECTION" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="FSLS_MN_001_EXITSTATE" />
+                </data>
+                <constant_string value="No_Selection" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

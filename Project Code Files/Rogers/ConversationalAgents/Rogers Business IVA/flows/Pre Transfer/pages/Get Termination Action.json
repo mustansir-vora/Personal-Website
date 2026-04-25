@@ -1,0 +1,82 @@
+{
+  "name": "0d7e28c6-8ac1-453f-aef0-ceff96d63fb5",
+  "displayName": "Get Termination Action",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "gcp-yul-crsrv-cct-iva-r4b-callend",
+    "tag": "getTerminationAction",
+    "setParameterActions": [ {
+      "parameter": "profileClassification",
+      "value": "$sys.func.IF(\"$session.params.profileClassification = null OR $session.params.profileClassification = NA\", \"business_unknown\", \"$session.params.profileClassification\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.returnCode = \"1\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Default Termination Action",
+    "name": "0b42d70b-c5ac-4b18-b70f-ddad6d682f7b"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.terminationActionFound != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Default Termination Action",
+    "name": "6459d9f9-ab49-4d3b-90d6-5dff9a25143e"
+  }, {
+    "condition": "$session.params.returnCode = \"0\" AND $session.params.terminationActionFound = true",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.mwInstance = \"prod\""
+        }, {
+          "condition": "$session.params.mwInstance = $session.params.loadTestEnv",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.itmActionId = null OR $session.params.itmActionId = \"NA\""
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cspeak\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003cbreak time=\"250ms\"/\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "$session.params.itmActionId ." ]
+                    },
+                    "languageCode": "en"
+                  }
+                }, {
+                  "message": {
+                    "text": {
+                      "text": [ "\u003c/speak\u003e" ]
+                    },
+                    "languageCode": "en"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        }, {
+        
+        } ]
+      } ]
+    },
+    "targetPage": "Primary Termination Action",
+    "name": "e986915b-e909-4d17-b198-30f41d9209db"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "40711a86-148d-447c-abec-a6321ddb2523",
+  "displayName": "custom-APN-support",
+  "priority": 500000,
+  "description": "Handle calls specific to T2 custom APN",
+  "numTrainingPhrases": 14
+}

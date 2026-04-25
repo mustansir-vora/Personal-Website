@@ -1,0 +1,7 @@
+{
+  "name": "5b1c26e7-90e0-4326-a468-ff73a09fb720",
+  "displayName": "eligibility-HUP",
+  "priority": 500000,
+  "description": "Handles request specific to HUP for business",
+  "numTrainingPhrases": 12
+}

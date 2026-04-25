@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@90667404:1707819511695" name="Hoop Check" version="6.0.1">
+<subflow_call subflow_name="ExitHOOP" target="Element@31:1708930927650">
+<config/>
+</subflow_call>
+</connector>

@@ -1,0 +1,114 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Mon numéro de compte est "
+    }, {
+      "text": "123456789876",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "mon numéro de compte est "
+    }, {
+      "text": "123456789890",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "12345678989",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon numéro de compte est "
+    }, {
+      "text": "987654321676",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le numéro de compte est "
+    }, {
+      "text": "234567890566",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon numéro de compte commence par "
+    }, {
+      "text": "567812345567",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le numéro de compte6 que je recherche est "
+    }, {
+      "text": "87654321045",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "C'est quelque chose comme "
+    }, {
+      "text": "345678901563",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Je pense que mon numéro de compte est "
+    }, {
+      "text": "456789012678",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Le numéro de compte que je recherche est "
+    }, {
+      "text": "678901231908",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "Mon numéro de compte est "
+    }, {
+      "text": "789012345890",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "123475869567",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  }, {
+    "parts": [ {
+      "text": "123457683123",
+      "parameterId": "accountnum"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "fr-ca"
+  } ]
+}

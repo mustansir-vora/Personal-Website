@@ -1,0 +1,32 @@
+{
+  "name": "91368826-08aa-4346-97c0-c46a02512aa9",
+  "displayName": "Check Account Type",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.api.billingProfile.systemOfRecords = \"SS\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play SS Account Menu",
+    "name": "cf9db72a-b340-411e-93f7-d441c2ce4f9a"
+  }, {
+    "condition": "$session.params.api.billingProfile.systemOfRecords = \"Shaw\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play Shaw Account Menu",
+    "name": "af47944a-6b80-4b19-bcb2-ebac1c812801"
+  }, {
+    "condition": "$session.params.api.billingProfile.systemOfRecords = \"V21\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Play V21 Account Menu",
+    "name": "2ff20d39-a7b3-421d-aa13-7b2d7105e730"
+  } ]
+}

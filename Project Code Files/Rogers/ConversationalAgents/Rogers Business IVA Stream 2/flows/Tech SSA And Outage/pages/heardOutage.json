@@ -1,0 +1,60 @@
+{
+  "name": "da24bb88-efea-4df5-9a4d-7f78c79ba57c",
+  "displayName": "heardOutage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.techOutMes = true AND $session.params.passiveOutageMessage = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "heardOutage",
+        "value": true
+      }, {
+        "parameter": "techOutMes",
+        "value": false
+      } ]
+    },
+    "targetPage": "Exit Outage Status",
+    "name": "5d203d18-1fa8-4f9e-af15-3b40da2e66a2"
+  }, {
+    "condition": "$session.params.techOutMes = true AND $session.params.passiveOutageMessage != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "heardOutage",
+        "value": false
+      }, {
+        "parameter": "returnToNLU",
+        "value": true
+      }, {
+        "parameter": "techOutMes",
+        "value": false
+      }, {
+        "parameter": "savedIntent",
+        "value": ""
+      }, {
+        "parameter": "isNluFlow",
+        "value": true
+      } ]
+    },
+    "targetFlow": "Tech Wrapper",
+    "name": "a21e36e6-bf69-4aab-9ec7-5acd85f5be4a"
+  }, {
+    "condition": "$session.params.heardOutage = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "heardOutage-PassiveCheck",
+    "name": "c36adf52-b597-4ce4-8142-2d5d271b7a6b"
+  }, {
+    "condition": "$session.params.heardOutage != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Tech Outage Message",
+    "name": "85ed34cb-0d02-41a9-a07f-620031b0ec31"
+  } ]
+}

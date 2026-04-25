@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1082066671:1711683588132" name="NLU_CHECK" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="NLU_CHECK">
+        <exit_state name="CLAIMS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FOREMOST_CLAIMS" />
+            </string>
+        </exit_state>
+        <exit_state name="POLICY_SERVICE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FMST_AGENT_POLICY_SERVICE" />
+            </string>
+        </exit_state>
+        <exit_state name="SCHEDULES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="SCHEDULES" />
+            </string>
+        </exit_state>
+        <exit_state name="FOREMOST_STAR" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FOREMOST_STAR" />
+            </string>
+        </exit_state>
+        <exit_state name="FMST_AGENT_MM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FMST_AGENT_MM" />
+            </string>
+        </exit_state>
+        <exit_state name="FMST_BILLING" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FMST_BILLING" />
+            </string>
+        </exit_state>
+        <exit_state name="FMST_DIRECT_MOBILEHOME" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FMST_DIRECT_MOBILEHOME" />
+            </string>
+        </exit_state>
+        <exit_state name="FMST_AGENT_OTHERPROD" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FMST_AGENT_OTHERPROD" />
+            </string>
+        </exit_state>
+        <exit_state name="FMST_REPRESENTATIVE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NEXT_ACTION" />
+                </data>
+                <constant_string value="FMST_REP" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

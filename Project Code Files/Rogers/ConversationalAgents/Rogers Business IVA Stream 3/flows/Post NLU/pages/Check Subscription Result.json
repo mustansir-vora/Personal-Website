@@ -1,0 +1,31 @@
+{
+  "name": "9d09d059-8cad-4526-bfa0-c7858616ace8",
+  "displayName": "Check Subscription Result",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.confirmSubscriptionResult = \"different_account\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identifySubscriptionResult",
+        "value": "DifferentAccount"
+      } ]
+    },
+    "targetPage": "Identify subscription Router",
+    "name": "8928ef7b-9646-478b-8eee-e4f7c56d47ea"
+  }, {
+    "condition": "$session.params.confirmSubscriptionResult = \"different_phone\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identifySubscriptionResult",
+        "value": "DifferentPhone"
+      } ]
+    },
+    "targetPage": "Identify subscription Router",
+    "name": "03fd6815-0090-4f36-8932-e41c2eee9d64"
+  } ]
+}

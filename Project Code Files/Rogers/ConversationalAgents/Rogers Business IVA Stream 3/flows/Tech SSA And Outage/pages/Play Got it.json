@@ -1,0 +1,26 @@
+{
+  "name": "02c9ec78-43f2-4a03-b41d-d7f9321ea220",
+  "displayName": "Play Got it",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Got it" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "communicationValue",
+        "value": "$session.params.phonenumbercollection"
+      } ]
+    },
+    "targetPage": "createOutageNotification",
+    "name": "47fce5dc-6049-4ba2-88af-2e1df11ab9b5"
+  } ]
+}

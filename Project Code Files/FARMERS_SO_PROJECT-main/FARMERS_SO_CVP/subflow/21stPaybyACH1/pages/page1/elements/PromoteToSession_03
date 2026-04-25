@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@80028794:1712652804742" name="PromoteToSession_03" version="6.0.1">
+<config>
+<settings>
+<setting name="srcValues">Checking</setting>
+<setting name="sessNames">S_BANK_ACCOUNT_TYPE</setting>
+</settings>
+</config>
+</action_element>

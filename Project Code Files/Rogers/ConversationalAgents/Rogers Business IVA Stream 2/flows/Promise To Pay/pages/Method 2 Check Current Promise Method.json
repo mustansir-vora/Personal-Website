@@ -1,0 +1,53 @@
+{
+  "name": "2b6f6997-6d1e-4ef6-b3f3-1b62dc0950fe",
+  "displayName": "Method 2 Check Current Promise Method",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.promiseMethod = CC",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord. J’ai modifié le mode \r\nde paiement pour un paiement \r\npar banque. " ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay. I've switched that over to a bank payment for you." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "PB"
+      } ]
+    },
+    "targetPage": "Method 2 Check Change Type",
+    "name": "34e909b3-31e8-40bf-8d0b-f96768bd80b7"
+  }, {
+    "condition": "$session.params.promiseMethod = PB",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "D’accord. J’ai modifié le mode \r\nde paiement pour un paiement \r\npar carte de crédit." ]
+        },
+        "languageCode": "fr-ca"
+      }, {
+        "text": {
+          "text": [ "Okay. I've switched that over to a credit card payment for you." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "collectedPtpMethod",
+        "value": "CC"
+      } ]
+    },
+    "targetPage": "Method 2 Check Change Type",
+    "name": "d3278ac6-c313-4f08-91d9-d94939c2090b"
+  } ]
+}

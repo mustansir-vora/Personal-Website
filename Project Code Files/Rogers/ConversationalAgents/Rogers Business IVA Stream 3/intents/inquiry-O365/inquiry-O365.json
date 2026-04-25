@@ -1,0 +1,7 @@
+{
+  "name": "a76d2fff-75dc-4d7a-a514-25aa505dcb77",
+  "displayName": "inquiry-O365",
+  "priority": 500000,
+  "description": "Handles inquiries about RBAM/O365",
+  "numTrainingPhrases": 16
+}
