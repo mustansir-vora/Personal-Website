@@ -6,24 +6,24 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Malya Barth",
+    name: "Ralyea Daphne",
     title: "Client, Conduent",
-    content: "I want you both to know how much I appreciate the Servion team that I've been working closely with. Most recently, Mustansir has been an incredible resource. They were able to really understand the client and see through to the core issues. Their responses were thoughtful and thorough. Mustansir came up with a great idea for 'hidden' intents that I think will address the client concern but will safeguard our environment as well. Thank you for your partnership!!",
+    content: "I want you both to know how much I appreciate the Servion team that I've been working closely with. Most recently, Mustansir has been an incredible resource. They were able to really understand the client and see through to the core issues. Their responses were thoughtful and thorough. Mustansir came up with a great idea for 'hidden' intents that I think will address the client concern but will safeguard our containment as well. Thank you for your partnership!!",
   },
   {
     name: "Deepak Krishna",
-    title: "Director",
-    content: "Mustansir is a once in a generation find for us who can be groomed well to lead more complex integrations and lead teams in immediate future. He should continue on this path and build on his success. Despite being a junior he was able clearly articulate and communicate with peers and leads and delivers work well. Very good feedback both from internal team and customer too.",
+    title: "Director - Servion",
+    content: "Mustansir is a once in a generation find for us who can be groomed well to lead more complex integrations and lead teams in immediate future. He should continue on this path and build on his success. Despite being a junior he was able to clearly articulate and communicate with peers and leads and delivers work well. Very good feedback both from internal team and customer too.",
   },
   {
-    name: "Parthiban",
-    title: "Senior Technical Architect",
-    content: "Mustansir proactively engages with customers to de-escalate issues and rebuild trust. He played a pivotal role in the successful delivery of the Farmers project, demonstrating remarkable independence. He consistently owns assigned tasks and projects, ensuring their successful delivery. He consistently delivers high-quality code, demonstrating a strong understanding of coding principles and a focus on future adaptability and reusability.",
+    name: "Pavithra N",
+    title: "Senior Technical Architect - Servion",
+    content: "Mustansir proactively engages with customers to de-escalate issues and rebuild trust. He played a pivotal role in the successful delivery of the Farmers Insurance project, demonstrating remarkable independence. He consistently owns assigned tasks and projects, ensuring their successful delivery. He consistently delivers high-quality code, demonstrating a strong understanding of coding principles and a focus on future adaptability and reusability.",
   },
   {
-    name: "Venkatesh Ramachandran",
-    title: "Senior Director",
-    content: "Thanks for your great effort on this project. You being in the project, shares how much of an PM effort will reduce when we have strong, flexible and owning of deliverables technical member in the team. Overall, the project exemplifies outstanding collaboration. At the beginning of the project, entire Farmers team were having big doubt on the deliverables. At the end, we are the only team able to deliver without any hiccups. This means alot.",
+    name: "Vengatesh Ramachandran",
+    title: "Senior Director - Servion",
+    content: "Thanks for your great effort on this project. You being in the project, shows how much of a PM effort will reduce when we have strong, flexible and owners of deliverables technical member in the team. Overall, the project exemplifies outstanding collaboration. At the beginning of the project, entire Farmers (Client) team were having big doubts on the deliverables. At the end, we are the only team able to deliver without any hiccups. This means a lot.",
   }
 ];
 
