@@ -3,12 +3,13 @@
 import React, { useState, useRef } from 'react';
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
+import { assetPath } from '@/lib/basePath';
 
 const experiences = [
   {
     id: 'rogers',
-    role: 'Software Developer — Agentic AI & IVR Integration',
-    company: 'Rogers & Shaw Communications Inc. | Servion Global Solutions',
+    role: 'Agentic AI & IVR Integration',
+    company: 'Rogers & Shaw Communications Inc.',
     period: 'Nov 2025 – Present',
     shortDesc: 'Architecting AI-driven IVR systems powered by Dialogflow CX, RAG pipelines, and automated cloud deployments.',
     bullets: [
@@ -22,8 +23,8 @@ const experiences = [
   },
   {
     id: 'new-jersey',
-    role: 'Software Developer — Cloud Migration & IVR',
-    company: 'State of New Jersey – Conduent | Servion Global Solutions',
+    role: 'Cloud Migration & IVR',
+    company: 'State of New Jersey – Conduent',
     period: 'Aug 2025 – Feb 2026',
     shortDesc: 'Led end-to-end migration from on-premise phone systems to modern cloud IVR with Genesys Cloud.',
     bullets: [
@@ -38,8 +39,8 @@ const experiences = [
   },
   {
     id: 'farmers',
-    role: 'Software Developer — Conversational AI & Data Analytics',
-    company: 'Farmers Insurance Group | Servion Global Solutions',
+    role: 'Conversational AI & Data Analytics',
+    company: 'Farmers Insurance Group',
     period: 'Jan 2024 – Sep 2025',
     shortDesc: 'Engineered Dialogflow CX IVR connectors, middleware, and advanced reporting pipelines. Maintained a perfect 5/5 CSAT score.',
     bullets: [
@@ -51,8 +52,8 @@ const experiences = [
   },
   {
     id: 'adcb',
-    role: 'Software Developer — Voice Biometrics & IVR',
-    company: 'ADCB Bank | Servion Global Solutions',
+    role: 'Voice Biometrics & IVR',
+    company: 'ADCB Bank',
     period: 'Jun 2023 – Jan 2024',
     shortDesc: 'Implemented real-time voice biometric authentication and built a high-performance IVR on Genesys PureCloud & AWS.',
     bullets: [
@@ -63,7 +64,7 @@ const experiences = [
   },
   {
     id: 'fis',
-    role: 'Graduate Engineer Trainee — IVR Development',
+    role: 'IVR Development',
     company: 'FIS EBT California | Servion Global Solutions',
     period: 'Dec 2022 – May 2024',
     shortDesc: 'Developed and maintained reusable IVR components using the Nuance State Engine framework.',
@@ -76,10 +77,11 @@ const experiences = [
 
 export default function ExperienceTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: timelineRef,
     offset: ["start center", "end center"]
   });
 
@@ -92,23 +94,73 @@ export default function ExperienceTimeline() {
   return (
     <section className="py-24 relative" id="experience" ref={containerRef}>
       <div className="max-w-5xl mx-auto px-8">
-        
-        <div className="text-center mb-20">
-          <motion.h2 
+
+        {/* Overarching Servion Banner */}
+        <div className="mb-24 text-center">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold tracking-tight inline-block px-8 py-3 glass rounded-full"
+            className="text-3xl md:text-5xl font-bold tracking-tight inline-block px-8 py-3 glass rounded-full mb-6"
           >
             Experience
           </motion.h2>
-          <p className="mt-6 text-xl text-muted-foreground">Building Future-Ready Digital Solutions</p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="glass rounded-3xl p-8 md:p-12 border border-white/10 relative overflow-hidden max-w-3xl mx-auto mt-8 shadow-2xl"
+          >
+            {/* Ambient background glow */}
+            <div className="absolute top-0 right-0 w-60 h-60 bg-emerald-500/10 blur-3xl rounded-full -mr-20 -mt-20" />
+            <div className="absolute bottom-0 left-0 w-60 h-60 bg-lime-400/10 blur-3xl rounded-full -ml-20 -mb-20" />
+
+            <div className="flex flex-col items-center text-center relative z-10">
+              <div className="p-2 rounded-2xl bg-white/5 mb-6 border border-white/10 shadow-inner flex items-center justify-center w-28 h-16">
+                <img
+                  src={assetPath('/Assets/SERVION.svg')}
+                  alt="Servion Global Solutions"
+                  className="w-full h-full object-contain brightness-0 invert opacity-90"
+                />
+              </div>
+
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                Servion Global Solutions
+              </h3>
+
+              <p className="text-lime-400 font-semibold text-lg md:text-xl mb-4">
+                Software Developer
+              </p>
+
+              <div className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-1.5 rounded-full text-sm text-muted-foreground font-medium mb-6">
+                November 2022 – Present
+              </div>
+
+              <p className="text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed">
+                Driving modern Conversational AI advancements, building scalable API workflows, and executing digital transformations for tier-1 global enterprise organizations.
+              </p>
+            </div>
+          </motion.div>
         </div>
 
-        <div className="relative">
+        {/* Sub-heading for clients handled */}
+        <div className="text-center mb-16">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl font-bold text-white/90 tracking-wide"
+          >
+            Clients Handled
+          </motion.h3>
+          <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-lime-400 mx-auto mt-4 rounded-full" />
+        </div>
+
+        <div className="relative" ref={timelineRef}>
           {/* Scroll Progress Line */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-white/10 rounded-full transform md:-translate-x-1/2 origin-top">
-            <motion.div 
+            <motion.div
               className="absolute top-0 left-0 w-full bg-emerald-500 rounded-full origin-top"
               style={{ scaleY, height: '100%' }}
             />
@@ -121,13 +173,13 @@ export default function ExperienceTimeline() {
 
               return (
                 <div key={exp.id} className={`relative flex flex-col md:flex-row items-center ${isEven ? 'md:flex-row-reverse' : ''}`}>
-                  
+
                   {/* Timeline Dot */}
                   <div className="absolute left-[-8px] md:left-1/2 w-5 h-5 bg-black border-4 border-emerald-500 rounded-full transform md:-translate-x-1/2 z-10 shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
 
                   {/* Content Card */}
                   <div className={`w-full md:w-1/2 pl-8 md:pl-0 ${isEven ? 'md:pr-16 text-left md:text-right' : 'md:pl-16 text-left'}`}>
-                    <motion.div 
+                    <motion.div
                       onClick={() => setExpandedId(isExpanded ? null : exp.id)}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
@@ -146,10 +198,10 @@ export default function ExperienceTimeline() {
                         <Briefcase className="w-5 h-5 text-lime-300 hidden md:block" />
                         <h3 className="text-xl md:text-2xl font-bold text-white">{exp.role}</h3>
                       </div>
-                      
+
                       <p className="text-lime-300 font-medium mb-1">{exp.company}</p>
                       <p className="text-sm text-muted-foreground mb-4">{exp.period}</p>
-                      
+
                       <p className="text-white/80">
                         {exp.shortDesc}
                       </p>
@@ -157,7 +209,7 @@ export default function ExperienceTimeline() {
                       {/* Expandable Content Area */}
                       <AnimatePresence initial={false}>
                         {isExpanded && (
-                          <motion.div 
+                          <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
