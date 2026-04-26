@@ -160,7 +160,7 @@ export default function ProjectsGallery() {
 
   return (
     <section className="py-24 relative" id="projects">
-      <div className="max-w-5xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-8">
 
         <div className="text-center mb-16">
           <motion.h2
@@ -173,7 +173,7 @@ export default function ProjectsGallery() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => {
             const isExpanded = expandedId === project.id;
 

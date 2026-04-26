@@ -8,7 +8,7 @@ import ProjectsGallery from '@/components/sections/ProjectsGallery';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center overflow-x-hidden">
+    <main className="min-h-screen w-full">
       <HeroSection />
       <AboutSection />
       <SkillsMarquee />
