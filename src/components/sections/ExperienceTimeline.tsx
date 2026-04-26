@@ -94,9 +94,9 @@ export default function ExperienceTimeline() {
   return (
     <section className="py-24 relative" id="experience" ref={containerRef}>
       <div className="max-w-7xl mx-auto px-8">
-        
+
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -110,49 +110,49 @@ export default function ExperienceTimeline() {
           {/* Left Column */}
           <div className="lg:col-span-4 mb-12 lg:mb-0">
             <div className="lg:sticky lg:top-32 z-20">
-              <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="glass rounded-3xl p-6 md:p-8 border border-white/10 relative overflow-hidden shadow-2xl max-w-md mx-auto lg:mx-0"
-            >
-              {/* Ambient background glow */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-500/10 blur-3xl rounded-full -mr-10 -mt-10" />
-              <div className="absolute bottom-0 left-0 w-40 h-40 bg-lime-400/10 blur-3xl rounded-full -ml-10 -mb-10" />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="glass rounded-3xl p-6 md:p-8 border border-white/10 relative overflow-hidden shadow-2xl max-w-md mx-auto lg:mx-0"
+              >
+                {/* Ambient background glow */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-500/10 blur-3xl rounded-full -mr-10 -mt-10" />
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-lime-400/10 blur-3xl rounded-full -ml-10 -mb-10" />
 
-              <div className="flex flex-col items-center text-center relative z-10">
-                <div className="p-2 rounded-2xl bg-white/5 mb-4 border border-white/10 shadow-inner flex items-center justify-center w-28 h-16">
-                  <img 
-                    src={assetPath('/Assets/SERVION.svg')} 
-                    alt="Servion Global Solutions" 
-                    className="w-full h-full object-contain brightness-0 invert opacity-90"
-                  />
+                <div className="flex flex-col items-center text-center relative z-10">
+                  <div className="p-2 rounded-2xl bg-white/5 mb-4 border border-white/10 shadow-inner flex items-center justify-center w-28 h-16">
+                    <img
+                      src={assetPath('/Assets/SERVION.svg')}
+                      alt="Servion Global Solutions"
+                      className="w-full h-full object-contain brightness-0 invert opacity-90"
+                    />
+                  </div>
+
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                    Servion Global Solutions
+                  </h3>
+
+                  <p className="text-lime-400 font-semibold text-base md:text-lg mb-3">
+                    Software Developer
+                  </p>
+
+                  <div className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 px-3 py-1 rounded-full text-xs text-muted-foreground font-medium mb-4">
+                    November 2022 – Present
+                  </div>
+
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                    Driving modern Conversational AI advancements, building scalable Agentic AI workflows, developing high-concurrency backend systems, and delivering top-rated (5/5 CSAT) digital transformations for tier-1 global enterprises
+                  </p>
                 </div>
-                
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                  Servion Global Solutions
-                </h3>
-                
-                <p className="text-lime-400 font-semibold text-base md:text-lg mb-3">
-                  Software Developer
-                </p>
-                
-                <div className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 px-3 py-1 rounded-full text-xs text-muted-foreground font-medium mb-4">
-                  November 2022 – Present
-                </div>
-                
-                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                  Driving modern Conversational AI advancements, building scalable API workflows, and executing digital transformations for tier-1 global enterprise organizations.
-                </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
-        </div>
 
           {/* Right Column - Clients Handled Timeline */}
           <div className="lg:col-span-8">
             <div className="mb-12 flex flex-col items-center lg:items-start">
-              <motion.h3 
+              <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -166,7 +166,7 @@ export default function ExperienceTimeline() {
             <div className="relative" ref={timelineRef}>
               {/* Scroll Progress Line */}
               <div className="absolute left-0 md:left-1/2 lg:left-0 top-0 bottom-0 w-1 bg-white/10 rounded-full transform md:-translate-x-1/2 lg:translate-x-0 origin-top">
-                <motion.div 
+                <motion.div
                   className="absolute top-0 left-0 w-full bg-emerald-500 rounded-full origin-top"
                   style={{ scaleY, height: '100%' }}
                 />
@@ -179,7 +179,7 @@ export default function ExperienceTimeline() {
 
                   return (
                     <div key={exp.id} className={`relative flex flex-col md:flex-row lg:flex-row items-center ${isEven ? 'md:flex-row-reverse lg:flex-row' : ''}`}>
-                      
+
                       {/* Timeline Dot */}
                       <div className="absolute left-[-8px] md:left-1/2 lg:left-[-8px] w-5 h-5 bg-black border-4 border-emerald-500 rounded-full transform md:-translate-x-1/2 lg:translate-x-0 z-10 shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
 
@@ -200,52 +200,52 @@ export default function ExperienceTimeline() {
                           viewport={{ once: true, margin: "-50px" }}
                           className="glass p-6 md:p-8 rounded-3xl cursor-pointer hover:bg-white/10 transition-colors border border-white/10 hover:border-emerald-500/50 outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                         >
-                      <div className="flex items-center gap-3 mb-2 justify-start">
-                        <Briefcase className="w-5 h-5 text-lime-300" />
-                        <h3 className="text-xl md:text-2xl font-bold text-white">{exp.role}</h3>
+                          <div className="flex items-center gap-3 mb-2 justify-start">
+                            <Briefcase className="w-5 h-5 text-lime-300" />
+                            <h3 className="text-xl md:text-2xl font-bold text-white">{exp.role}</h3>
+                          </div>
+                          <p className="text-lime-300 font-medium mb-1">{exp.company}</p>
+                          <p className="text-sm text-muted-foreground mb-4">{exp.period}</p>
+
+                          <p className="text-white/80">
+                            {exp.shortDesc}
+                          </p>
+
+                          {/* Expandable Content Area */}
+                          <AnimatePresence initial={false}>
+                            {isExpanded && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="mt-4 pt-4 border-t border-white/10 text-muted-foreground"
+                              >
+                                <ul className="space-y-2 text-sm md:text-base">
+                                  {exp.bullets.map((bullet, i) => (
+                                    <li key={i} className="flex items-start gap-2">
+                                      <span className="text-emerald-400 mt-1 shrink-0">▸</span>
+                                      <span>{bullet}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+
+                          <div className="mt-4 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+                            {isExpanded ? 'Show Less' : 'Click for Details'}
+                          </div>
+
+                        </motion.div>
                       </div>
-                      <p className="text-lime-300 font-medium mb-1">{exp.company}</p>
-                      <p className="text-sm text-muted-foreground mb-4">{exp.period}</p>
-
-                      <p className="text-white/80">
-                        {exp.shortDesc}
-                      </p>
-
-                      {/* Expandable Content Area */}
-                      <AnimatePresence initial={false}>
-                        {isExpanded && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="mt-4 pt-4 border-t border-white/10 text-muted-foreground"
-                          >
-                            <ul className="space-y-2 text-sm md:text-base">
-                              {exp.bullets.map((bullet, i) => (
-                                <li key={i} className="flex items-start gap-2">
-                                  <span className="text-emerald-400 mt-1 shrink-0">▸</span>
-                                  <span>{bullet}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-
-                      <div className="mt-4 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
-                        {isExpanded ? 'Show Less' : 'Click for Details'}
-                      </div>
-
-                    </motion.div>
-                  </div>
-                </div>
-              );
-            })}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
   );
 }

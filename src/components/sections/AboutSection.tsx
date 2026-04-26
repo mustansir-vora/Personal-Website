@@ -10,20 +10,20 @@ const contentMap: Record<Tab, React.ReactNode> = {
   Summary: (
     <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
       <p>
-        I'm an <strong className="text-white">Efficient & Efficacious professional</strong> with a track record of successfully completing projects and resolving challenging technical issues. With more than three years of experience, I am an excellent communicator with both technical and non-technical teams, ensuring a cooperative approach to each project.
+        I’m a <strong className="text-white">technical problem-solver</strong> with over three years of experience getting projects across the finish line. I pride myself on being able to translate complex tech talk into plain English so that everyone—from devs to stakeholders—is on the same page. I love a fast-paced environment and I’m always looking for ways to learn something new or help the team tackle a tough challenge.
       </p>
       <p>
-        My commitment to continuous learning and adaptability allows me to thrive in fast-paced environments. I am a dependable team player who consistently delivers excellent work, and I approach every challenge with a <strong className="text-white">proactive, problem-solving mindset</strong>.
+        I am a <strong className="text-white">dependable team player</strong> who consistently delivers excellent work, and I approach every challenge with a <strong className="text-white">proactive, problem-solving mindset</strong>.
       </p>
     </div>
   ),
   Journey: (
     <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
       <p>
-        My journey into tech began not with a clear path, but with a <strong className="text-white">formidable challenge</strong>. The initial months were a crucible, forging my sense of adaptability and a passion for rapid, continuous learning.
+        I didn't start with a <strong className="text-white">perfect roadmap;</strong> I started with a steep learning curve. Those first few months were a real test, but they taught me how to adapt and pick up new skills on the fly.
       </p>
       <p>
-        It taught me that a person's true measure isn't just their knowledge, but their ability to acquire and master new skills efficiently. This foundation has been my launchpad, enabling me to turn challenges into opportunities and lead <strong className="text-white">complex, high-stakes client integrations</strong>.
+        I’ve realized that what matters most isn't just what you already know, but how fast you can master what comes next. That mindset has been my biggest asset, helping me take on <strong className="text-white">tough challenges and lead major client integrations</strong> with confidence.
       </p>
     </div>
   ),

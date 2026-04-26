@@ -15,11 +15,10 @@ export default function Home() {
       <ExperienceTimeline />
       <TestimonialsSection />
       <ProjectsGallery />
-      
+
       {/* Footer / Contact Section */}
       <footer className="w-full py-12 mt-12 border-t border-white/10 text-center text-muted-foreground">
         <p>© {new Date().getFullYear()} Mustansir Vora. Building intelligent digital experiences.</p>
-        <p className="text-sm mt-2">Next.js + Tailwind CSS + Framer Motion</p>
       </footer>
     </main>
   );
