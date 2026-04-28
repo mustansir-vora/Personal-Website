@@ -6,7 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # Project Context
 
-This is a personal portfolio website built with Next.js.
+This is a personal portfolio website built with Next.js 16.
 - **Static Export**: The app is configured for static export (`output: 'export'` in `next.config.ts`). **CRITICAL: You cannot use features that require a Node.js server (like Server Actions, dynamic API routes, or `next/image` optimization without `unoptimized: true`).**
 - **Routing**: Next.js App Router (`src/app`).
 - **Styling**: Tailwind CSS v4. Do not create custom CSS files; use Tailwind utility classes.

@@ -6,12 +6,12 @@ Build a stunning, futuristic, and accessible personal portfolio website using **
 
 ## 🛠️ Technical Stack
 
-- **Framework**: Next.js 14+ (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS (custom config with gradients, blurs, glassmorphism)
+- **Styling**: Tailwind CSS v4
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **Fonts**: Inter (primary), Orbitron (headlines), Space Mono (code/tech)
+- **Fonts**: Outfit (sans)
 - **Deployment**: Vercel (optimized for static export or serverless)
 
 ### Directory Structure & Architecture
@@ -77,9 +77,9 @@ Use linear and radial gradients with `mix-blend-mode: screen` or `overlay` for:
 - Project card highlights
 
 ### 5. Typography
-- **Headings**: Orbitron (large, spaced, futuristic)
-- **Body**: Inter (clean, readable)
-- **Code/Tech**: Space Mono (for tech stack, version numbers, code snippets)
+- **Headings**: Outfit (clean, readable)
+- **Body**: Outfit
+- **Code/Tech**: Outfit
 
 ---
 
@@ -133,7 +133,7 @@ gap: 2rem;           // desktop gap
 ### 5. Skills Section
 - **Layout**: Tech stack badges/tags (clean, rounded)
 - **Organization**: Categories (Frontend, Backend, Tools, AI/ML)
-- **Visuals**: Orbitron font for category headers, Space Mono for tags, glow on hover
+- **Visuals**: Outfit font, glow on hover
 
 ### 6. Contact Section
 - **Form**: Clean fields (Name, Email, Message)

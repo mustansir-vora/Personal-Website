@@ -4,7 +4,7 @@ A stunning, futuristic, and accessible personal portfolio website built with mod
 
 ## 🛠️ Technical Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Framework**: [Next.js](https://nextjs.org/) v16 (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (using glassmorphism, gradients, and custom utility configurations)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
@@ -16,7 +16,7 @@ A stunning, futuristic, and accessible personal portfolio website built with mod
 The visual aesthetic is "Tech-Futurism meets Elegance". It heavily utilizes:
 - **Glassmorphism**: Blurred, semi-transparent backgrounds for cards and interactive elements.
 - **Gradients**: Subtle radial and linear gradients for backgrounds and text.
-- **Typography**: Orbitron (Headings), Inter (Body text), Space Mono (Code/Tech details).
+- **Typography**: Outfit (Primary sans font used across the website).
 
 ## 🚀 Getting Started
 
