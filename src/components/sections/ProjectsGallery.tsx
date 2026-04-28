@@ -93,6 +93,20 @@ const projects: Project[] = [
   },
   // ── Personal Projects ──
   {
+    id: 'ridetrust-ml',
+    title: 'RideTrust Econometrics Analysis',
+    client: 'Personal Project',
+    tags: ['Python', 'Pandas', 'Statsmodels', 'Jupyter', 'Econometrics'],
+    shortDesc: 'Applied OLS and Logistic regressions to survey data to quantify how safety fears and service guarantees impact consumer trust and adoption propensity.',
+    githubUrl: 'https://github.com/mustansir-vora/RideTrust_ML_Model',
+    bullets: [
+      'Engineered an Ordinary Least Squares (OLS) regression model (R² ~0.746) to estimate the monetary "Trust Premium" users are willing to pay based on safety perceptions.',
+      'Developed a Logistic (Logit) regression model to predict the likelihood of high adoption intent, identifying verified drivers and zero-cancellation policies as key statistical drivers.',
+      'Performed comprehensive data preparation, cleaning, and feature engineering on raw survey datasets using pandas and numpy.',
+      'Documented the full methodology, from raw data processing to empirical econometric interpretations, ensuring reproducibility via a structured Jupyter Notebook.'
+    ]
+  },
+  {
     id: 'ai-resume',
     title: 'AI Resume Optimizer',
     client: 'Personal Project',
